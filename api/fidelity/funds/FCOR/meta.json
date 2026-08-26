@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCOR",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004643/000003540226004643-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004643/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FCOR?period1=0&period2=1787720779&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FCOR?period1=0&period2=1787724529&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -41,8 +41,8 @@
    "mo1Text": "0.71%",
    "qtd": -0.83,
    "qtdText": "-0.83%",
-   "ytd": -0.14,
-   "ytdText": "-0.14%",
+   "ytd": -0.13,
+   "ytdText": "-0.13%",
    "yr1": 2.18,
    "yr1Text": "2.18%",
    "yr3": 5.75,
