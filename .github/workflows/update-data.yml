@@ -172,14 +172,14 @@ jobs:
       - name: Generate api/fidelity static data
         run: bun ./scripts/update-data.ts
 
-      - name: Commit updated data
+      - name: Commit updated data and learned ticker mappings
         run: |
-          if git diff --quiet -- api/fidelity; then
-            echo "api/fidelity is already up to date"
+          if git diff --quiet -- api/fidelity scripts/held-tickers.ts; then
+            echo "Fidelity data and ticker mappings are already up to date"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add api/fidelity
-          git commit -m "Update Fidelity ETF data"
+          git add api/fidelity scripts/held-tickers.ts
+          git commit -m "Update Fidelity ETF data and ticker mappings"
           git push

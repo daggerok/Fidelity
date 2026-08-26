@@ -2,6 +2,10 @@
 
 Fidelity ETF holdings to Watchlist. A single-file client-side tool that reads the generated `./api/fidelity` static feed (SEC EDGAR N-PORT-P holdings, Yahoo Finance daily history and distributions) into a searchable ETF/category catalog with per-fund tabs, watchlist aggregation, ticker copy and CSV/TXT export — the same look and feel as the sibling applications.
 
+## Shared UI contract
+
+The common interaction and data-state rules are documented in [`docs/ui-contract.md`](./docs/ui-contract.md). New provider-specific behavior should preserve this contract.
+
 ## Sibling applications
 
 | Application | Data provider | Repository |
