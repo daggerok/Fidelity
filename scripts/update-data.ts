@@ -9,6 +9,7 @@
 
 import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
 import { FIDELITY_FUNDS, FIDELITY_TRUSTS } from './fidelity-funds';
+import { HELD_TICKERS } from './held-tickers';
 
 // ---------------------------------------------------------------------------
 // Constants and small helpers
@@ -18,6 +19,9 @@ type JsonRecord = Record<string, any>;
 
 const SEC_DATA_HOST = 'https://data.sec.gov';
 const EDGAR_ARCHIVES = 'https://www.sec.gov/Archives/edgar/data';
+// Yahoo symbol-search endpoint used to resolve holding names that the static
+// name -> ticker seed (scripts/held-tickers.ts) does not cover yet.
+const YAHOO_SEARCH_URL = 'https://query1.finance.yahoo.com/v1/finance/search';
 // SEC requires a declared User-Agent for automated access:
 // https://www.sec.gov/os/accessing-edgar-data
 // SEC's WAF accepts the strict "Company Name contact@domain" shape: no
@@ -299,6 +303,10 @@ const USAGE = `
 Fidelity ETF static data updater (Bun, no dependencies).
 
   bun ./scripts/update-data.ts            update ./api/fidelity from SEC EDGAR + Yahoo
+  ./scripts/update-data.ts --backfill-tickers
+                                          offline: stamp real exchange tickers from
+                                          scripts/held-tickers.ts into already
+                                          generated holdings data (no network)
   ./scripts/update-data.ts -h | --help    print this help
 
 Environment variables (all optional; strict "min:max" ranges; AND logic):
@@ -334,6 +342,14 @@ Environment variables (all optional; strict "min:max" ranges; AND logic):
   SKIP_YAHOO           1/true to update EDGAR holdings only.
   REFRESH_CATALOG      0/false to skip scanning EDGAR submissions for N-PORT
                        filings newer than the seed accessions (default on).
+
+Holding tickers: N-PORT positions publish no exchange tickers, so the
+updater fills the holdings Ticker column from the name -> ticker seed in
+scripts/held-tickers.ts (SEC EDGAR company tickers + exchange symbol
+directories). Names the seed does not cover yet are resolved live through
+the Yahoo Finance symbol search with a strict name match; new mappings are
+written back to scripts/held-tickers.ts (commit it with the data update).
+Bond / private positions have no exchange ticker and keep "-".
 
 AUM and return filters are evaluated against fresh Yahoo data and the
 previously published catalog values before the heavier N-PORT downloads.
@@ -416,6 +432,252 @@ async function fetchJson(url: string, label: string, headers: Record<string, str
   } catch {
     throw new Error(`${label}: response is not valid JSON`);
   }
+}
+
+// ---------------------------------------------------------------------------
+// Holding ticker resolution
+//
+// N-PORT positions publish no exchange tickers — only the issuer name and a
+// CUSIP/ISIN. The holdings feed still needs real tickers (the Watchlist
+// "Copy Tickers" action, exports, deduplication), so the updater resolves
+// them from the name -> ticker seed in scripts/held-tickers.ts and, for names
+// the seed does not cover yet (new IPOs, foreign listings), from the Yahoo
+// Finance symbol search with a STRICT name match so a fuzzy hit can never
+// pin the wrong security. Positions that genuinely have no exchange ticker
+// (bonds, private CLO/ABS debt, SPVs) stay "-"; the app then falls back to
+// the CUSIP/ISIN Identifier, the same convention as SPDR bond rows.
+// ---------------------------------------------------------------------------
+
+// Same normalization the seed was generated with: upper-case, strip
+// punctuation and legal-form suffixes (INC, CORP, LTD, HOLDINGS, COMMON
+// STOCK, ...), leading/trailing fillers (THE, OF, AND, DE, ...). "3M Co" ->
+// "3M", "DigitalOcean Holdings, Inc." and "DIGITAL OCEAN HOLDINGS INC" ->
+// "DIGITAL OCEAN".
+const HOLDING_NAME_SUFFIXES = new Set([
+  'STOCK', 'COMMON', 'PREFERRED', 'PFD', 'SHARES', 'ORDINARY', 'DEPOSITARY', 'ADS', 'ADR',
+  'INC', 'INCORPORATED', 'CORP', 'CORPORATION', 'CO', 'COMPANY', 'LTD', 'LIMITED', 'PLC',
+  'PUBLIC', 'SA', 'SAS', 'SARL', 'SRL', 'SL', 'KG', 'AG', 'BA', 'BV', 'NV', 'OY', 'SE',
+  'AS', 'AB', 'AD', 'K K', 'KABUSHIKI', 'KAISHA', 'PTY', 'PT', 'SFC', 'ANONIMA', 'GMBH',
+  'HOLDINGS', 'HLDGS', 'DEL', 'NEW', 'DELISTED', 'REPR', 'GROUP',
+]);
+const HOLDING_NAME_PHRASES = new Set([
+  'COMMON STOCK', 'PREFERRED STOCK', 'DEPOSITARY SHARES', 'AMERICAN DEPOSITARY SHARES',
+  'ORDINARY SHARES', 'LIABILITY CO', 'CLASS A', 'CLASS B', 'CLASS C', 'CLASS D',
+  'S A', 'N V', 'B V', 'PRIVATE LTD', 'PUBLIC LTD',
+]);
+const HOLDING_NAME_FILLERS = new Set([
+  'THE', 'OF', 'AND', 'FOR', 'DE', 'LA', 'LE', 'VAN', 'VON', 'DER', 'DEN', 'DI', 'Y',
+  'E', 'DU', 'DA', 'LOS', 'LAS', 'EL', 'AL', 'DEL',
+]);
+
+export function normalizeHoldingName(raw: unknown): string {
+  let text = String(raw ?? '').toUpperCase().replace(/&/g, ' AND ');
+  text = text.replace(/[^A-Z0-9]+/g, ' ');
+  let tokens = text.split(' ').filter(Boolean);
+  let changed = true;
+  while (changed && tokens.length) {
+    changed = false;
+    if (tokens.length >= 2 && HOLDING_NAME_PHRASES.has(`${tokens[tokens.length - 2]} ${tokens[tokens.length - 1]}`)) {
+      tokens = tokens.slice(0, -2);
+      changed = true;
+      continue;
+    }
+    if (HOLDING_NAME_SUFFIXES.has(tokens[tokens.length - 1])) {
+      tokens.pop();
+      changed = true;
+      continue;
+    }
+    while (tokens.length && HOLDING_NAME_FILLERS.has(tokens[tokens.length - 1])) {
+      tokens.pop();
+      changed = true;
+    }
+  }
+  while (tokens.length && HOLDING_NAME_FILLERS.has(tokens[0])) tokens.shift();
+  return tokens.join(' ');
+}
+
+export function normalizeHoldingNameCore(raw: unknown): string {
+  return normalizeHoldingName(raw).replace(/ /g, '');
+}
+
+// Holding tickers keep their class-share markers (SCE^L, BF/A, BRK-B): they
+// are the real exchange symbols, unlike fund tickers which sanitizeTicker
+// upper-cases and strips everything but letters/digits.
+export function cleanHoldingTicker(raw: unknown): string {
+  const symbol = String(raw ?? '').trim().toUpperCase();
+  return /^[A-Z0-9][A-Z0-9.^/-]*$/.test(symbol) ? symbol : '';
+}
+
+export function yahooSearchUrl(name: string): string {
+  return `${YAHOO_SEARCH_URL}?q=${encodeURIComponent(name)}&quotesCount=10&newsCount=0&enableFuzzyQuery=false`;
+}
+
+// Strict matcher for Yahoo search payloads: the quote's long name must
+// normalize to the same name (or token-core) as the filed holding name. Only
+// EQUITY/ETF quotes are accepted, and single/two-word holdings may additionally
+// match by token containment (e.g. "BULLISH" -> "Bullish BLCM Inc").
+export function pickSearchTicker(name: string, payload: JsonRecord): string | null {
+  const matches: unknown[] = Array.isArray(payload?.quoteMatches) ? payload.quoteMatches : [];
+  const norm = normalizeHoldingName(name);
+  if (!norm) return null;
+  const core = norm.replace(/ /g, '');
+  const tokens = norm.split(' ');
+  for (const match of matches) {
+    if (!match || typeof match !== 'object') continue;
+    const record = match as JsonRecord;
+    const quoteType = String(record.quoteType || '').toUpperCase();
+    if (quoteType !== 'EQUITY' && quoteType !== 'ETF') continue;
+    const symbol = cleanHoldingTicker(record.symbol);
+    if (!symbol) continue;
+    const longName = String(record.longname || record.shortname || '');
+    const candidate = normalizeHoldingName(longName);
+    if (!candidate) continue;
+    if (candidate === norm || candidate.replace(/ /g, '') === core) return symbol;
+    if (tokens.length <= 2 && tokens.every((token) => candidate.includes(token))) return symbol;
+  }
+  return null;
+}
+
+export type TickerSearchFn = (name: string) => Promise<string | null>;
+
+// Memoized name -> ticker lookup over the seed plus live Yahoo searches.
+// Unknown names are searched at most once per run (hits are learned into the
+// index, misses are cached) and can never throw: resolution degrades to "-".
+export class TickerResolver {
+  private readonly byName = new Map<string, string>();
+  private readonly byNorm = new Map<string, string>();
+  private readonly byNormCore = new Map<string, string>();
+  private readonly inFlight = new Map<string, Promise<string | null>>();
+  private readonly missed = new Map<string, true>();
+  readonly fresh: Array<{ name: string; ticker: string }> = [];
+  private readonly search: TickerSearchFn | null;
+
+  constructor(seed: Record<string, string>, search: TickerSearchFn | null = null) {
+    this.search = search;
+    for (const [name, ticker] of Object.entries(seed)) this.learn(name, ticker, false);
+  }
+
+  get size(): number {
+    return this.byName.size;
+  }
+
+  private indexName(name: string, symbol: string): void {
+    const norm = normalizeHoldingName(name);
+    if (!norm) return;
+    const core = norm.replace(/ /g, '');
+    const put = (map: Map<string, string>, key: string): void => {
+      const existing = map.get(key);
+      if (existing === undefined) map.set(key, symbol);
+      else if (existing !== symbol) map.delete(key); // two tickers share the key: ambiguous
+    };
+    put(this.byNorm, norm);
+    if (core) put(this.byNormCore, core);
+  }
+
+  // Records a name -> ticker mapping (seed entries and learned hits).
+  private learn(name: string, rawTicker: string, isFresh: boolean): void {
+    const symbol = cleanHoldingTicker(rawTicker);
+    if (!name || !symbol) return;
+    this.byName.set(name, symbol);
+    this.indexName(name, symbol);
+    if (isFresh) this.fresh.push({ name, ticker: symbol });
+  }
+
+  lookup(name: string): string | null {
+    const exact = this.byName.get(name);
+    if (exact) return exact;
+    const norm = normalizeHoldingName(name);
+    if (!norm) return null;
+    return this.byNorm.get(norm) ?? this.byNormCore.get(norm.replace(/ /g, '')) ?? null;
+  }
+
+  async resolve(name: string): Promise<string> {
+    const known = this.lookup(name);
+    if (known) return known;
+    const norm = normalizeHoldingName(name);
+    if (!norm || !this.search || this.missed.has(norm)) return '-';
+    const inflight = this.inFlight.get(norm) ?? (async () => {
+      let symbol: string | null = null;
+      try {
+        symbol = await this.search(name);
+      } catch {
+        symbol = null; // offline/throttled: keep "-" instead of failing the fund
+      }
+      if (symbol) this.learn(name, symbol, true);
+      else this.missed.set(norm, true);
+      this.inFlight.delete(norm);
+      return symbol;
+    })();
+    this.inFlight.set(norm, inflight);
+    const symbol = await inflight;
+    return symbol ?? '-';
+  }
+
+  freshEntries(): Record<string, string> {
+    const out: Record<string, string> = {};
+    for (const { name, ticker } of this.fresh) out[name] = ticker;
+    return out;
+  }
+}
+
+async function attachHoldingTickers(nport: ParsedNport, resolver: TickerResolver): Promise<number> {
+  let resolved = 0;
+  for (const holding of nport.holdings) {
+    if (holding.Ticker !== '-') continue;
+    const symbol = await resolver.resolve(holding.Name);
+    if (symbol !== '-') {
+      holding.Ticker = symbol;
+      resolved += 1;
+    }
+  }
+  return resolved;
+}
+
+// ---------------------------------------------------------------------------
+// Seed file persistence (scripts/held-tickers.ts grows with live resolutions)
+// ---------------------------------------------------------------------------
+
+const HELD_TICKERS_FILE = new URL('held-tickers.ts', import.meta.url);
+
+export function formatHeldTickersSeed(entries: Record<string, string>): string {
+  const rows = Object.entries(entries)
+    .map(([name, ticker]) => [name, cleanHoldingTicker(ticker)] as const)
+    .filter(([name, ticker]) => name && ticker)
+    .sort((a, b) => {
+      const ka = a[0].toLowerCase();
+      const kb = b[0].toLowerCase();
+      if (ka !== kb) return ka < kb ? -1 : 1;
+      return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
+    });
+  const lines = [
+    '// N-PORT holding name -> exchange ticker (GENERATED FILE: do not edit by hand).',
+    '//',
+    '// Seeded 2026-08-26 from public data:',
+    '//   - SEC EDGAR company_tickers.json (CIK/ticker/title directory, all US-listed and FPI ADRs)',
+    '//   - Nasdaq Trader, NYSE and NYSE American daily symbol directories (incl. ETFs)',
+    '// Keys are the holding names exactly as filed in N-PORT positions (case preserved).',
+    '// scripts/update-data.ts extends this file with tickers it resolves live through the',
+    '// Yahoo Finance search API (strict name match only) and commits it with the generated',
+    '// api/fidelity data. Positions without an exchange ticker (bonds, private debt) are',
+    '// intentionally absent: their rows keep Ticker "-" and the app falls back to CUSIP/ISIN.',
+    '',
+    'export const HELD_TICKERS: Record<string, string> = {',
+  ];
+  for (const [name, ticker] of rows) lines.push(`  ${JSON.stringify(name)}: ${JSON.stringify(ticker)},`);
+  lines.push('};', '');
+  return lines.join('\n');
+}
+
+async function writeTextIfChanged(file: URL, value: string): Promise<boolean> {
+  let previous: string | null = null;
+  try {
+    previous = await readFile(file, 'utf8');
+  } catch {
+    // First write.
+  }
+  if (previous === value) return false;
+  await writeFile(file, value, 'utf8');
+  return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -936,6 +1198,7 @@ async function processFund(
   accession: string | null,
   config: UpdaterConfig,
   previous: JsonRecord,
+  resolver: TickerResolver,
 ): Promise<JsonRecord | null> {
   const ticker = seed.ticker;
   const nportUrl = accession && !seed.catalogOnly ? nportUrlFor(seed.trustCik, accession) : null;
@@ -984,6 +1247,17 @@ async function processFund(
       }
     } catch (error) {
       console.warn(`[nport   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous holdings`);
+    }
+  }
+
+  // Fill the Ticker column with real exchange tickers (seed + Yahoo search);
+  // bonds / private positions stay "-" and keep their CUSIP/ISIN Identifier.
+  if (nport) {
+    try {
+      const resolved = await attachHoldingTickers(nport, resolver);
+      if (resolved) console.log(`[ticker   ] ${ticker}: resolved ${resolved}/${nport.holdings.length} holding tickers`);
+    } catch (error) {
+      console.warn(`[ticker   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping "-" tickers`);
     }
   }
 
@@ -1100,6 +1374,70 @@ async function processFund(
 }
 
 // ---------------------------------------------------------------------------
+// --backfill-tickers: offline re-stamp of already generated holdings data
+//
+// Applies the name -> ticker seed to the committed api/fidelity holdings
+// pages without touching the network. Used right after the seed gains new
+// entries (or when this fix lands) so previously generated feeds pick up
+// real tickers before the next full EDGAR/Yahoo run.
+// ---------------------------------------------------------------------------
+
+async function backfillTickers(): Promise<void> {
+  console.log('Fidelity ETF static data updater — holdings ticker backfill (offline, seed only)');
+  const resolver = new TickerResolver(HELD_TICKERS);
+  console.log(`[ticker  ] ${resolver.size} known holding names in scripts/held-tickers.ts`);
+
+  const fundsDir = new URL('funds/', API_ROOT);
+  let fundDirs: string[] = [];
+  try {
+    fundDirs = await readdir(fundsDir);
+  } catch {
+    console.log('[done    ] no api/fidelity/funds directory yet — nothing to backfill');
+    return;
+  }
+
+  let funds = 0;
+  let pages = 0;
+  let rowsFilled = 0;
+  let rowsScanned = 0;
+  for (const dir of fundDirs) {
+    let firstPage: JsonRecord;
+    try {
+      firstPage = JSON.parse(await readFile(new URL(`funds/${dir}/holdings/001.json`, API_ROOT), 'utf8')) as JsonRecord;
+    } catch {
+      continue; // no holdings sheet (e.g. catalog-only FBTC/FETH)
+    }
+    const headers = Array.isArray(firstPage.headers) ? (firstPage.headers as string[]) : [];
+    if (!headers.length) continue;
+    const pageSize = parsePositiveInt(String(firstPage.pageSize), HOLDINGS_PAGE_SIZE_FALLBACK);
+
+    const rows = (await readPreviousSheet(dir, 'holdings')) as JsonRecord[];
+    rowsScanned += rows.length;
+    if (!rows.length) continue;
+
+    let changed = false;
+    for (const row of rows) {
+      if (String(row.Ticker ?? '-') !== '-') continue;
+      const symbol = resolver.lookup(String(row.Name ?? ''));
+      if (symbol) {
+        row.Ticker = symbol;
+        rowsFilled += 1;
+        changed = true;
+      }
+    }
+    if (changed) {
+      const manifest = await writePages(new URL(`funds/${dir}/`, API_ROOT), dir, 'holdings', headers, rows, pageSize);
+      pages += manifest.pages.length;
+      funds += 1;
+    }
+  }
+
+  console.log('');
+  console.log(`[done    ] ${funds} funds rewritten (${pages} holdings pages), ${rowsFilled} of ${rowsScanned} holding rows gained a ticker`);
+  console.log(`[cursor  ] rows still "-" have no exchange ticker (bonds / private debt) or are not in the seed yet (a live run resolves them via Yahoo search)`);
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
@@ -1114,6 +1452,16 @@ async function main(): Promise<void> {
 
   const seedFunds = FIDELITY_FUNDS.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
   console.log(`[seed    ] ${seedFunds.length} Fidelity ETFs across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants`);
+  console.log(`[ticker  ] ${Object.keys(HELD_TICKERS).length} known holding names in scripts/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
+
+  // Unknown holding names are resolved through the Yahoo symbol search
+  // (strict name match). Every search is globally paced like the rest of the
+  // run's requests and cached for the whole run.
+  const searchHoldingTicker = async (name: string): Promise<string | null> => {
+    const payload = await fetchJson(yahooSearchUrl(name), `[ticker   ] ${name}`, yahooHeaders(), config);
+    return pickSearchTicker(name, payload);
+  };
+  const resolver = new TickerResolver(HELD_TICKERS, config.skipYahoo ? null : searchHoldingTicker);
 
   // accession per seriesId: seed baseline, refreshed from EDGAR submissions.
   const accessionBySeries = new Map<string, NportAccession>();
@@ -1189,7 +1537,7 @@ async function main(): Promise<void> {
       const entry = accessionBySeries.get(seriesKeyOf(seed)) || null;
       processed += 1;
       try {
-        const row = await processFund(seed, entry ? entry.accession : null, config, previous);
+        const row = await processFund(seed, entry ? entry.accession : null, config, previous, resolver);
         if (row) {
           results.push(row);
           lastProcessedTicker = seed.ticker;
@@ -1228,11 +1576,22 @@ async function main(): Promise<void> {
       site: 'https://digital.fidelity.com/prgw/digital/research/etfs',
       catalog: 'SEC EDGAR N-PORT-P filings of the Fidelity ETF trusts',
       history: 'Yahoo Finance public chart API (adjusted close)',
+      holdingTickers: 'scripts/held-tickers.ts seed (SEC EDGAR company tickers + exchange symbol directories) extended live by the Yahoo Finance symbol search',
       trusts: FIDELITY_TRUSTS,
     },
     counts,
     funds,
   });
+
+  // Persist tickers learned from live searches so the next run (and the
+  // --backfill-tickers mode) can serve them without re-querying Yahoo.
+  if (resolver.fresh.length) {
+    const merged: Record<string, string> = { ...HELD_TICKERS, ...resolver.freshEntries() };
+    const seedChanged = await writeTextIfChanged(HELD_TICKERS_FILE, formatHeldTickersSeed(merged));
+    if (seedChanged) {
+      console.log(`[ticker  ] ${resolver.fresh.length} new name -> ticker mappings added to scripts/held-tickers.ts`);
+    }
+  }
 
   await writeUpdateState(lastProcessedTicker);
 
@@ -1257,6 +1616,11 @@ async function main(): Promise<void> {
 if (import.meta.main) {
   if (process.argv.includes('-h') || process.argv.includes('--help')) {
     console.log(USAGE.trim());
+  } else if (process.argv.includes('--backfill-tickers')) {
+    await backfillTickers().catch((error) => {
+      console.error(error instanceof Error ? error.stack : String(error));
+      process.exitCode = 1;
+    });
   } else {
     await main().catch((error) => {
       console.error(error instanceof Error ? error.stack : String(error));

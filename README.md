@@ -30,6 +30,10 @@ bun test scripts/update-data.test.ts
 ./scripts/update-data.ts
 ```
 
+`./scripts/update-data.ts --backfill-tickers` re-stamps real exchange tickers from the
+`scripts/held-tickers.ts` seed into already generated holdings data without any network
+access (use it right after the ticker seed grows).
+
 Run `./scripts/update-data.ts -h` (or `--help`) to print every configuration variable with its default and usage examples.
 
 The **Update Fidelity ETF data** GitHub Actions workflow exposes the same settings as manual inputs. All supplied filters use **AND** logic.
@@ -43,6 +47,7 @@ Fidelity publishes no public fund-data API (the retired `screener.fidelity.com` 
 | Catalog + holdings + net assets | SEC EDGAR **Form N-PORT-P** filings of the Fidelity ETF trusts: [Fidelity Covington Trust](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000945908&type=NPORT-P) (equity ETFs), [Fidelity Merrimack Street Trust](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562565&type=NPORT-P) (bond ETFs), plus the Fidelity Wise Origin Bitcoin Fund (FBTC) and Fidelity Ethereum Fund (FETH) registrants |
 | History (daily close / adjusted close), NAV, distributions, inception | Yahoo Finance public chart API (`/v8/finance/chart/{TICKER}?range=max&interval=1d&events=div`) |
 | Ticker ↔ series seed (`scripts/fidelity-funds.ts`) | EDGAR submissions + N-CEN verified once against Yahoo (instrumentType, longName, firstTradeDate, expense ratio) |
+| Holding tickers (`scripts/held-tickers.ts`) | Name → ticker seed: SEC EDGAR `company_tickers.json` + Nasdaq / NYSE / NYSE American symbol directories, extended live by the Yahoo Finance symbol search (strict name match; new mappings are written back into the seed) |
 
 Each N-PORT document provides the fund's legal name, series ID, report period and every position (`name`, `cusip`/`identifier`, `balance`, `valUSD`, `pctVal`, `assetCat`). Net Assets are the sum of reported position values. SEC access requires a **declared User-Agent** (see `SEC_UA`); the updater keeps at most 10 requests/second with `REQUEST_SLEEP` and bounded retries.
 
@@ -54,7 +59,7 @@ Known value limitations (documented honestly, like the sibling feeds):
 - **Dividend Yield** is *indicated*: latest distribution × inferred payments per year ÷ market price.
 - **Expense Ratio** comes from the verified seed (Yahoo fund profiles at build time); 8 funds (mostly 2026 launches) have no published profile yet and show `—`.
 - **FBTC / FETH file no N-PORT** (commodity-fund registrants): they are full catalog entries with history and distributions, but no holdings.
-- N-PORT positions publish **no exchange tickers**; rows are identified by CUSIP/ISIN (`Identifier`), and the Watchlist deduplicates by `Ticker` when present, falling back to `Identifier` — the same convention as SPDR bond funds.
+- N-PORT positions publish **no exchange tickers**, so the updater resolves them: each holding name is matched against the `scripts/held-tickers.ts` seed (SEC EDGAR company tickers + exchange symbol directories), and names the seed does not cover yet are resolved live through the Yahoo Finance symbol search with a strict name match — new mappings are persisted into the seed. Positions without an exchange ticker (bonds, private CLO/ABS debt, SPVs) keep `Ticker: "-"` and are identified by CUSIP/ISIN (`Identifier`); the Watchlist deduplicates by `Ticker` when present, falling back to `Identifier` — the same convention as SPDR bond funds.
 - **Fidelity mutual funds are out of scope** (FNILX and the ZERO funds are not ETFs).
 
 ### Update controls

@@ -15,7 +15,7 @@
  "rows": [
   {
    "Name": "BANK OF AMERICA CORPORATION",
-   "Ticker": "-",
+   "Ticker": "BAC",
    "Identifier": "06055H202",
    "Weight": "0.2116892641",
    "Market Value": "175740",
@@ -24,7 +24,7 @@
   },
   {
    "Name": "BARCLAYS PLC",
-   "Ticker": "-",
+   "Ticker": "BCS",
    "Identifier": "06738EDC6",
    "Weight": "0.2537356135",
    "Market Value": "210646",
@@ -60,7 +60,7 @@
   },
   {
    "Name": "JPMORGAN CHASE and CO",
-   "Ticker": "-",
+   "Ticker": "JPM",
    "Identifier": "48128B523",
    "Weight": "0.3148489332",
    "Market Value": "261381",
@@ -87,7 +87,7 @@
   },
   {
    "Name": "ALLSTATE CORP",
-   "Ticker": "-",
+   "Ticker": "ALL",
    "Identifier": "020002838",
    "Weight": "0.2438028169",
    "Market Value": "202400",
@@ -96,7 +96,7 @@
   },
   {
    "Name": "BRIGHTHOUSE FINANCIAL INC",
-   "Ticker": "-",
+   "Ticker": "BHF",
    "Identifier": "10922N889",
    "Weight": "0.052968812",
    "Market Value": "43973.6",
@@ -150,7 +150,7 @@
   },
   {
    "Name": "VISTRA CORP",
-   "Ticker": "-",
+   "Ticker": "VST",
    "Identifier": "92840MAB8",
    "Weight": "0.1214239211",
    "Market Value": "100803.6",
@@ -159,7 +159,7 @@
   },
   {
    "Name": "PUBLIC STORAGE",
-   "Ticker": "-",
+   "Ticker": "PSA",
    "Identifier": "74460W594",
    "Weight": "0.0374533646",
    "Market Value": "31093",
@@ -168,7 +168,7 @@
   },
   {
    "Name": "CITIGROUP INC",
-   "Ticker": "-",
+   "Ticker": "C",
    "Identifier": "172967PR6",
    "Weight": "0.9849807139",
    "Market Value": "817710.39",
@@ -195,7 +195,7 @@
   },
   {
    "Name": "SEMPRA",
-   "Ticker": "-",
+   "Ticker": "SRE",
    "Identifier": "816851BM0",
    "Weight": "0.8450860914",
    "Market Value": "701572.8",
@@ -204,7 +204,7 @@
   },
   {
    "Name": "NAVIENT CORP",
-   "Ticker": "-",
+   "Ticker": "NAVI",
    "Identifier": "63938C405",
    "Weight": "0.0330922573",
    "Market Value": "27472.5",
@@ -222,7 +222,7 @@
   },
   {
    "Name": "CITIGROUP INC",
-   "Ticker": "-",
+   "Ticker": "C",
    "Identifier": "172967NB3",
    "Weight": "0.1067048079",
    "Market Value": "88584.1",
@@ -231,7 +231,7 @@
   },
   {
    "Name": "MORGAN STANLEY",
-   "Ticker": "-",
+   "Ticker": "MS",
    "Identifier": "61763E207",
    "Weight": "0.0182852113",
    "Market Value": "15180",
@@ -240,7 +240,7 @@
   },
   {
    "Name": "SEMPRA",
-   "Ticker": "-",
+   "Ticker": "SRE",
    "Identifier": "816851604",
    "Weight": "0.1470008121",
    "Market Value": "122037",
@@ -249,7 +249,7 @@
   },
   {
    "Name": "CITIGROUP INC",
-   "Ticker": "-",
+   "Ticker": "C",
    "Identifier": "172967PM7",
    "Weight": "0.337141581",
    "Market Value": "279887.89",
@@ -276,7 +276,7 @@
   },
   {
    "Name": "SOUTHERN COMPANY",
-   "Ticker": "-",
+   "Ticker": "SO",
    "Identifier": "842587EB9",
    "Weight": "0.1664556866",
    "Market Value": "138188.03",
@@ -285,7 +285,7 @@
   },
   {
    "Name": "PUBLIC STORAGE",
-   "Ticker": "-",
+   "Ticker": "PSA",
    "Identifier": "74460W628",
    "Weight": "0.0346551731",
    "Market Value": "28770",
@@ -303,7 +303,7 @@
   },
   {
    "Name": "WELLS FARGO and CO",
-   "Ticker": "-",
+   "Ticker": "WFC",
    "Identifier": "94988U128",
    "Weight": "0.2085670462",
    "Market Value": "173148",
@@ -312,7 +312,7 @@
   },
   {
    "Name": "PARAMOUNT GLOBAL",
-   "Ticker": "-",
+   "Ticker": "PARA",
    "Identifier": "92556HAE7",
    "Weight": "0.1277962209",
    "Market Value": "106093.75",
@@ -348,7 +348,7 @@
   },
   {
    "Name": "US BANCORP DEL",
-   "Ticker": "-",
+   "Ticker": "USB",
    "Identifier": "902973BC9",
    "Weight": "0.9702161647",
    "Market Value": "805453.17",
@@ -375,7 +375,7 @@
   },
   {
    "Name": "GOLDMAN SACHS GROUP INC (THE)",
-   "Ticker": "-",
+   "Ticker": "GS",
    "Identifier": "38148BAC2",
    "Weight": "0.0955705235",
    "Market Value": "79340.65",
@@ -384,7 +384,7 @@
   },
   {
    "Name": "AMERICAN HOMES 4 RENT",
-   "Ticker": "-",
+   "Ticker": "AMH",
    "Identifier": "02665T868",
    "Weight": "0.0293309003",
    "Market Value": "24349.9",
@@ -402,7 +402,7 @@
   },
   {
    "Name": "UNUM GROUP",
-   "Ticker": "-",
+   "Ticker": "UNM",
    "Identifier": "91529Y601",
    "Weight": "0.0978945402",
    "Market Value": "81270",
@@ -411,7 +411,7 @@
   },
   {
    "Name": "TELEPHONE and DATA SYSTEMS INC",
-   "Ticker": "-",
+   "Ticker": "TDS",
    "Identifier": "879433761",
    "Weight": "0.0828435708",
    "Market Value": "68775",
@@ -420,7 +420,7 @@
   },
   {
    "Name": "ARCH CAPITAL GROUP LTD",
-   "Ticker": "-",
+   "Ticker": "ACGL",
    "Identifier": "03939A107",
    "Weight": "0.0477728247",
    "Market Value": "39660",
@@ -429,7 +429,7 @@
   },
   {
    "Name": "DTE ENERGY CO",
-   "Ticker": "-",
+   "Ticker": "DTE",
    "Identifier": "233331792",
    "Weight": "0.7783754252",
    "Market Value": "646191",
@@ -438,7 +438,7 @@
   },
   {
    "Name": "M and T BANK CORP",
-   "Ticker": "-",
+   "Ticker": "MTB",
    "Identifier": "55261FAH7",
    "Weight": "0.0601723421",
    "Market Value": "49953.82",
@@ -456,7 +456,7 @@
   },
   {
    "Name": "CMS ENERGY CORP",
-   "Ticker": "-",
+   "Ticker": "CMS",
    "Identifier": "125896BV1",
    "Weight": "0.4524786107",
    "Market Value": "375638.28",
@@ -483,7 +483,7 @@
   },
   {
    "Name": "JPMORGAN CHASE and CO",
-   "Ticker": "-",
+   "Ticker": "JPM",
    "Identifier": "48128AAJ2",
    "Weight": "0.3147974745",
    "Market Value": "261338.28",
@@ -492,7 +492,7 @@
   },
   {
    "Name": "PUBLIC STORAGE",
-   "Ticker": "-",
+   "Ticker": "PSA",
    "Identifier": "74460W446",
    "Weight": "0.064841431",
    "Market Value": "53830",
@@ -501,7 +501,7 @@
   },
   {
    "Name": "SCORPIO TANKERS INC",
-   "Ticker": "-",
+   "Ticker": "STNG",
    "Identifier": "80918TAF6",
    "Weight": "0.1389808558",
    "Market Value": "115379",
@@ -528,7 +528,7 @@
   },
   {
    "Name": "BANK OF AMERICA CORPORATION",
-   "Ticker": "-",
+   "Ticker": "BAC",
    "Identifier": "06055HAB9",
    "Weight": "0.5355589979",
    "Market Value": "444609.88",
@@ -555,7 +555,7 @@
   },
   {
    "Name": "PUBLIC STORAGE",
-   "Ticker": "-",
+   "Ticker": "PSA",
    "Identifier": "74460W669",
    "Weight": "0.0629189542",
    "Market Value": "52234",
@@ -573,7 +573,7 @@
   },
   {
    "Name": "F and G ANNUITIES and LIFE INC",
-   "Ticker": "-",
+   "Ticker": "FG",
    "Identifier": "30190A609",
    "Weight": "0.0549423621",
    "Market Value": "45612",
@@ -600,7 +600,7 @@
   },
   {
    "Name": "BANK OF AMERICA CORPORATION",
-   "Ticker": "-",
+   "Ticker": "BAC",
    "Identifier": "06055H806",
    "Weight": "0.1235203363",
    "Market Value": "102544",
@@ -609,7 +609,7 @@
   },
   {
    "Name": "ENBRIDGE INC",
-   "Ticker": "-",
+   "Ticker": "ENB",
    "Identifier": "29250NBS3",
    "Weight": "0.1273279484",
    "Market Value": "105705",
@@ -627,7 +627,7 @@
   },
   {
    "Name": "FORD MOTOR CO",
-   "Ticker": "-",
+   "Ticker": "F",
    "Identifier": "345370811",
    "Weight": "0.0639476479",
    "Market Value": "53088",
@@ -636,7 +636,7 @@
   },
   {
    "Name": "KKR and CO INC",
-   "Ticker": "-",
+   "Ticker": "KKR",
    "Identifier": "48251W609",
    "Weight": "0.0970308711",
    "Market Value": "80553",
@@ -654,7 +654,7 @@
   },
   {
    "Name": "STATE STREET CORP",
-   "Ticker": "-",
+   "Ticker": "STT",
    "Identifier": "857477855",
    "Weight": "0.0263798502",
    "Market Value": "21900",
@@ -663,7 +663,7 @@
   },
   {
    "Name": "ENBRIDGE INC",
-   "Ticker": "-",
+   "Ticker": "ENB",
    "Identifier": "29250NBC8",
    "Weight": "0.1531117707",
    "Market Value": "127110.19",
@@ -690,7 +690,7 @@
   },
   {
    "Name": "PG and E CORP",
-   "Ticker": "-",
+   "Ticker": "PCG",
    "Identifier": "69331C306",
    "Weight": "0.0635766437",
    "Market Value": "52780",
@@ -699,7 +699,7 @@
   },
   {
    "Name": "AKAMAI TECHNOLOGIES INC",
-   "Ticker": "-",
+   "Ticker": "AKAM",
    "Identifier": "00971TAR2",
    "Weight": "0.0852273938",
    "Market Value": "70754",
@@ -717,7 +717,7 @@
   },
   {
    "Name": "TELEPHONE and DATA SYSTEMS INC",
-   "Ticker": "-",
+   "Ticker": "TDS",
    "Identifier": "879433787",
    "Weight": "0.0398046645",
    "Market Value": "33045",
@@ -726,7 +726,7 @@
   },
   {
    "Name": "AFFILIATED MANAGERS GROUP INC",
-   "Ticker": "-",
+   "Ticker": "AMG",
    "Identifier": "008252850",
    "Weight": "0.0651437754",
    "Market Value": "54081",
@@ -735,7 +735,7 @@
   },
   {
    "Name": "CMS ENERGY CORP",
-   "Ticker": "-",
+   "Ticker": "CMS",
    "Identifier": "125896845",
    "Weight": "0.1294202681",
    "Market Value": "107442",
@@ -744,7 +744,7 @@
   },
   {
    "Name": "JPMORGAN CHASE and CO",
-   "Ticker": "-",
+   "Ticker": "JPM",
    "Identifier": "48128BAQ4",
    "Weight": "0.1823243711",
    "Market Value": "151361.88",
