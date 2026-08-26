@@ -337,11 +337,11 @@
     const COLUMN_TOOLTIPS: Record<string, string> = {
       '#': 'Row index in current table view.',
       Use: 'Use / Multi-ETF Selection — Check this box to include this ETF\'s underlying holdings in the combined Watchlist tab.',
-      Ticker: 'Ticker Symbol — Unique stock market identifier for the fund or security.',
+      Ticker: 'Ticker Symbol — Unique stock market identifier. For holdings: the exchange ticker resolved from public SEC / exchange data at data-build time. "—" when the position has no exchange ticker (bond, private debt) — then the Identifier is the key.',
       'Fund Name': 'Fund Name — Official legal name of the Fidelity exchange-traded fund (ETF), as filed on Form N-PORT.',
       Category: 'Category — Fidelity ETF mandate family (Sector, US Equity, Factor, International, Thematic, Bond, Digital Assets).',
       Name: 'Security Name — Full registered legal name of the company or underlying financial asset.',
-      Identifier: 'CUSIP / ISIN — Security identifier from the N-PORT filing; N-PORT positions publish no exchange ticker, so rows are identified by CUSIP/ISIN.',
+      Identifier: 'CUSIP / ISIN — Security identifier from the N-PORT filing. Positions without an exchange ticker (bonds, private debt) are identified in the Watchlist by this.',
       SEDOL: 'SEDOL — Stock Exchange Daily Official List identifier.',
       TER: 'Gross Expense Ratio — Total annual fund operating expenses as a % of assets.',
       NAV: 'NAV (Net Asset Value) — Per-share dollar value of the fund.',
@@ -1186,9 +1186,9 @@
       const sedolIndex = entry.headers.findIndex(header => /^sedol$/i.test(header));
       return entry.rows
         .map(row => {
-          // N-PORT rows carry no ticker symbols — Ticker column is '-' and the
-          // CUSIP/ISIN Identifier is the stable key. Fall back to it (same as
-          // for bond rows) instead of keeping the '-' placeholder.
+          // Holding rows carry the exchange ticker resolved at data-build
+          // time; bond / private positions have no ticker ("-") and the
+          // CUSIP/ISIN Identifier is the stable key for those rows.
           const rawTicker = tickerIndex >= 0 ? (row[tickerIndex] || '').trim() : '';
           const identifier = identifierIndex >= 0 ? (row[identifierIndex] || '').trim() : '';
           const weight = weightIndex >= 0 ? numberOrNull(row[weightIndex]) : null;

@@ -15,7 +15,14 @@ import {
   deriveCatalogMetrics,
   formatEdgarDate,
   epochToIsoDate,
+  normalizeHoldingName,
+  normalizeHoldingNameCore,
+  pickSearchTicker,
+  yahooSearchUrl,
+  TickerResolver,
+  formatHeldTickersSeed,
 } from './update-data';
+import { HELD_TICKERS } from './held-tickers';
 
 // ---------------------------------------------------------------------------
 // Range parsers (same contract as daggerok/iShares and daggerok/SPDR)
@@ -385,5 +392,158 @@ describe('date formatting', () => {
 
   test('epoch days convert to ISO', () => {
     expect(epochToIsoDate(1_782_000_000)).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Holding ticker resolution (N-PORT rows carry no exchange tickers)
+// ---------------------------------------------------------------------------
+
+describe('normalizeHoldingName', () => {
+  test('strips legal-form suffixes and fillers', () => {
+    expect(normalizeHoldingName('DIGITAL OCEAN HOLDINGS INC')).toBe('DIGITAL OCEAN');
+    expect(normalizeHoldingName('DigitalOcean Holdings, Inc.')).toBe('DIGITALOCEAN');
+    expect(normalizeHoldingName('3M Co')).toBe('3M');
+    expect(normalizeHoldingName('Brown-Forman Corp')).toBe('BROWN FORMAN');
+    expect(normalizeHoldingName('A.O. Smith Corporation')).toBe('A O SMITH');
+    expect(normalizeHoldingName('BECTON DICKINSON and CO')).toBe('BECTON DICKINSON');
+    expect(normalizeHoldingName('Acushnet Holdings Inc. Class A Common Stock')).toBe('ACUSHNET');
+    expect(normalizeHoldingName('ABN AMRO BANK N.V.')).toBe('ABN AMRO BANK');
+    expect(normalizeHoldingName('US TREASURY N/B')).toBe('US TREASURY N B');
+  });
+
+  test('core form drops the remaining spaces', () => {
+    expect(normalizeHoldingNameCore('DIGITAL OCEAN HOLDINGS')).toBe('DIGITALOCEAN');
+    expect(normalizeHoldingNameCore('DigitalOcean Holdings, Inc.')).toBe('DIGITALOCEAN');
+  });
+
+  test('empty and junk names normalize to empty', () => {
+    expect(normalizeHoldingName('')).toBe('');
+    expect(normalizeHoldingName(null)).toBe('');
+    expect(normalizeHoldingName('---')).toBe('');
+  });
+});
+
+describe('held-tickers seed', () => {
+  test('covers the filed names with their real exchange tickers', () => {
+    expect(Object.keys(HELD_TICKERS).length).toBeGreaterThan(1000);
+    expect(HELD_TICKERS['DIGITALOCEAN HOLDINGS INC']).toBe('DOCN');
+    expect(HELD_TICKERS['DigitalOcean Holdings Inc']).toBe('DOCN');
+    expect(HELD_TICKERS['ROBINHOOD MARKETS INC']).toBe('HOOD');
+    expect(HELD_TICKERS['CIRCLE INTERNET GROUP INC']).toBe('CRCL');
+    expect(HELD_TICKERS['3M CO']).toBe('MMM');
+  });
+
+  test('never maps a name to an empty ticker', () => {
+    for (const [name, ticker] of Object.entries(HELD_TICKERS)) {
+      expect(name.length > 0, `empty name key: ${ticker}`).toBe(true);
+      expect(ticker.length > 0, `empty ticker for ${name}`).toBe(true);
+    }
+  });
+});
+
+describe('TickerResolver', () => {
+  test('resolves from the seed by exact and normalized name', () => {
+    const resolver = new TickerResolver({ 'DIGITALOCEAN HOLDINGS INC': 'DOCN', '3M CO': 'MMM' });
+    expect(resolver.lookup('DIGITALOCEAN HOLDINGS INC')).toBe('DOCN');
+    expect(resolver.lookup('DigitalOcean Holdings Inc')).toBe('DOCN'); // normalized match
+    expect(resolver.lookup('DIGITAL OCEAN HOLDINGS')).toBe('DOCN'); // token-core match
+    expect(resolver.lookup('3M Company')).toBe('MMM');
+    expect(resolver.lookup('NOBODY HERE INC')).toBeNull();
+  });
+
+  test('learned hits are memoized: one search per unknown name', async () => {
+    const seen: string[] = [];
+    const resolver = new TickerResolver({}, async (name) => {
+      seen.push(name);
+      return name === 'BULLISH' ? 'BLSH' : null;
+    });
+    expect(await resolver.resolve('BULLISH')).toBe('BLSH');
+    expect(await resolver.resolve('Bullish')).toBe('BLSH'); // learned, no re-query
+    expect(seen).toEqual(['BULLISH']);
+    expect(await resolver.resolve('SOME PRIVATE CLO 7 LTD')).toBe('-');
+    expect(await resolver.resolve('SOME PRIVATE CLO 7 LTD')).toBe('-'); // miss cached
+    expect(seen).toEqual(['BULLISH', 'SOME PRIVATE CLO 7 LTD']);
+    expect(resolver.freshEntries()).toEqual({ BULLISH: 'BLSH' });
+  });
+
+  test('search failures degrade to "-" and are not retried', async () => {
+    let calls = 0;
+    const resolver = new TickerResolver({}, async () => {
+      calls += 1;
+      throw new Error('offline');
+    });
+    expect(await resolver.resolve('SOME PRIVATE LLC')).toBe('-');
+    expect(await resolver.resolve('SOME PRIVATE LLC')).toBe('-');
+    expect(calls).toBe(1);
+  });
+
+  test('without a search function only seed lookups work', async () => {
+    const resolver = new TickerResolver({ 'ROBINHOOD MARKETS INC': 'HOOD' });
+    expect(await resolver.resolve('ROBINHOOD MARKETS INC')).toBe('HOOD');
+    expect(await resolver.resolve('UNKNOWN NAME INC')).toBe('-');
+  });
+
+  test('keeps class-share markers in the real exchange symbol', () => {
+    const resolver = new TickerResolver({ 'SCE TRUST VI': 'SCE^L', 'BERKSHIRE HATHAWAY INC': 'BRK-B' });
+    expect(resolver.lookup('SCE TRUST VI')).toBe('SCE^L');
+    expect(resolver.lookup('Berkshire Hathaway Inc')).toBe('BRK-B');
+    expect(formatHeldTickersSeed({ 'SCE TRUST VI': 'sce^l' })).toContain('"SCE^L"');
+  });
+
+  test('ambiguous normalized keys fall back safely', () => {
+    const resolver = new TickerResolver({ 'ACME INC': 'ACME', 'ACME CO': 'ACMX' });
+    // "ACME" normalizes to the same key for both tickers -> ambiguous, no guess.
+    expect(resolver.lookup('ACME')).toBeNull();
+    expect(resolver.lookup('ACME INC')).toBe('ACME');
+  });
+});
+
+describe('pickSearchTicker', () => {
+  const docnPayload = {
+    quoteMatches: [
+      { symbol: 'WRONG', longname: 'Something Else Inc', quoteType: 'EQUITY' },
+      { symbol: 'DOCN', longname: 'DigitalOcean Holdings, Inc.', quoteType: 'EQUITY' },
+      { symbol: 'DOCNW', longname: 'DigitalOcean Holdings, Inc. Warrant', quoteType: 'EQUITY' },
+    ],
+  };
+
+  test('matches by normalized name, not by list position', () => {
+    expect(pickSearchTicker('DIGITAL OCEAN HOLDINGS INC', docnPayload)).toBe('DOCN');
+    expect(pickSearchTicker('DigitalOcean Holdings, Inc.', docnPayload)).toBe('DOCN');
+  });
+
+  test('ignores non-equity quotes and non-matching names', () => {
+    const payload = { quoteMatches: [{ symbol: 'EURUSD=X', longname: 'Euro US Dollar', quoteType: 'CURRENCY' }] };
+    expect(pickSearchTicker('DIGITAL OCEAN HOLDINGS INC', payload)).toBeNull();
+    expect(pickSearchTicker('SOMETHING ENTIRELY DIFFERENT LTD', docnPayload)).toBeNull();
+    expect(pickSearchTicker('BULLISH', {})).toBeNull();
+  });
+
+  test('short single/two-word names may match by token containment', () => {
+    const payload = { quoteMatches: [{ symbol: 'BLSH', longname: 'Bullish BLCM Inc', quoteType: 'EQUITY' }] };
+    expect(pickSearchTicker('BULLISH', payload)).toBe('BLSH');
+  });
+
+  test('builds the strict-match search URL', () => {
+    expect(yahooSearchUrl('DIGITAL OCEAN')).toBe(
+      'https://query1.finance.yahoo.com/v1/finance/search?q=DIGITAL%20OCEAN&quotesCount=10&newsCount=0&enableFuzzyQuery=false',
+    );
+  });
+});
+
+describe('formatHeldTickersSeed', () => {
+  test('is deterministic and case-insensitively sorted', () => {
+    const a = formatHeldTickersSeed({ B: 'BB', A: 'AA', 'a10 networks inc': 'A' });
+    expect(a).toBe(formatHeldTickersSeed({ 'a10 networks inc': 'A', B: 'BB', A: 'AA' }));
+    expect(a.indexOf('"A"')).toBeLessThan(a.indexOf('"a10 networks inc"'));
+    expect(a.indexOf('"a10 networks inc"')).toBeLessThan(a.indexOf('"B"'));
+  });
+
+  test('drops empty names and tickers', () => {
+    const out = formatHeldTickersSeed({ '': 'XX', 'VALID INC': '', GOOD: 'GD' });
+    expect(out).not.toContain('XX');
+    expect(out).not.toContain('"VALID INC"');
+    expect(out).toContain('"GOOD": "GD"');
   });
 });
