@@ -1,0 +1,139 @@
+{
+ "ticker": "FELG",
+ "name": "Fidelity Enhanced Large Cap Growth ETF",
+ "category": "US Equity",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FELG",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005384/000003540226005384-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005384/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FELG?period1=0&period2=1787720799&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.18%",
+  "value": 0.18
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$43.72",
+  "value": 43.72,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$5,684.87 M",
+  "value": 5684866518.519997,
+  "asOfDate": "Jun 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 3.6,
+   "mo1Text": "3.60%",
+   "qtd": 0.39,
+   "qtdText": "0.39%",
+   "ytd": 5.05,
+   "ytdText": "5.05%",
+   "yr1": 12.27,
+   "yr1Text": "12.27%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 22.61,
+   "sinceInceptionText": "22.61%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/28/2023",
+    "0.029"
+   ],
+   [
+    "03/15/2024",
+    "0.025"
+   ],
+   [
+    "06/21/2024",
+    "0.046"
+   ],
+   [
+    "09/20/2024",
+    "0.037"
+   ],
+   [
+    "12/20/2024",
+    "0.047"
+   ],
+   [
+    "03/21/2025",
+    "0.04"
+   ],
+   [
+    "06/20/2025",
+    "0.044"
+   ],
+   [
+    "09/19/2025",
+    "0.035"
+   ],
+   [
+    "12/19/2025",
+    "0.039"
+   ],
+   [
+    "03/20/2026",
+    "0.034"
+   ],
+   [
+    "06/18/2026",
+    "0.046"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 150,
+  "asOf": "Jun 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 692,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000081805",
+  "seriesName": "Fidelity Enhanced Large Cap Growth ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-005384"
+ }
+}

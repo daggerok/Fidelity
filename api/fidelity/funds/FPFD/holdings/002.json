@@ -1,0 +1,764 @@
+{
+ "ticker": "FPFD",
+ "page": 2,
+ "pageSize": 250,
+ "totalRows": 333,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "BANK OF AMERICA CORPORATION",
+   "Ticker": "-",
+   "Identifier": "06055H202",
+   "Weight": "0.2116892641",
+   "Market Value": "175740",
+   "Shares Held": "8700",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BARCLAYS PLC",
+   "Ticker": "-",
+   "Identifier": "06738EDC6",
+   "Weight": "0.2537356135",
+   "Market Value": "210646",
+   "Shares Held": "200000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BROOKFIELD INFRASTRUCTURE FINANCE ULC",
+   "Ticker": "-",
+   "Identifier": "11276B208",
+   "Weight": "0.0334566366",
+   "Market Value": "27775",
+   "Shares Held": "1100",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ALGONQUIN PWR and UTILS CORP",
+   "Ticker": "-",
+   "Identifier": "015857808",
+   "Weight": "0.0942447253",
+   "Market Value": "78240",
+   "Shares Held": "3000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ACRISURE LLC / ACRISURE FINANCE INC",
+   "Ticker": "-",
+   "Identifier": "00489LAH6",
+   "Weight": "0.4743771748",
+   "Market Value": "393818.01",
+   "Shares Held": "420000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "-",
+   "Identifier": "48128B523",
+   "Weight": "0.3148489332",
+   "Market Value": "261381",
+   "Shares Held": "15100",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PRUDENTIAL FINL INC",
+   "Ticker": "-",
+   "Identifier": "744320BK7",
+   "Weight": "0.2454224674",
+   "Market Value": "203744.6",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ATHENE HOLDING LTD",
+   "Ticker": "-",
+   "Identifier": "04686J408",
+   "Weight": "0.0785854534",
+   "Market Value": "65240",
+   "Shares Held": "4000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ALLSTATE CORP",
+   "Ticker": "-",
+   "Identifier": "020002838",
+   "Weight": "0.2438028169",
+   "Market Value": "202400",
+   "Shares Held": "10000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BRIGHTHOUSE FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "10922N889",
+   "Weight": "0.052968812",
+   "Market Value": "43973.6",
+   "Shares Held": "4000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "NEXTERA ENERGY CAP HLDGS INC",
+   "Ticker": "-",
+   "Identifier": "65339KDE7",
+   "Weight": "0.3242961719",
+   "Market Value": "269223.9",
+   "Shares Held": "263000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HUNTINGTON BANCSHARES INC/OH",
+   "Ticker": "-",
+   "Identifier": "446150823",
+   "Weight": "0.0620239666",
+   "Market Value": "51491",
+   "Shares Held": "3100",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "REGIONS FINL CORP NEW",
+   "Ticker": "-",
+   "Identifier": "7591EP886",
+   "Weight": "0.0710304571",
+   "Market Value": "58968",
+   "Shares Held": "3600",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "TRANSCANADA TRUST",
+   "Ticker": "-",
+   "Identifier": "89356BAE8",
+   "Weight": "0.15341173",
+   "Market Value": "127359.21",
+   "Shares Held": "128000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEXTERA ENERGY CAP HLDGS INC",
+   "Ticker": "-",
+   "Identifier": "65339KDF4",
+   "Weight": "0.174693608",
+   "Market Value": "145026.98",
+   "Shares Held": "140000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VISTRA CORP",
+   "Ticker": "-",
+   "Identifier": "92840MAB8",
+   "Weight": "0.1214239211",
+   "Market Value": "100803.6",
+   "Shares Held": "100000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "-",
+   "Identifier": "74460W594",
+   "Weight": "0.0374533646",
+   "Market Value": "31093",
+   "Shares Held": "1700",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CITIGROUP INC",
+   "Ticker": "-",
+   "Identifier": "172967PR6",
+   "Weight": "0.9849807139",
+   "Market Value": "817710.39",
+   "Shares Held": "810000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "NIPPON LIFE INS CO",
+   "Ticker": "-",
+   "Identifier": "654579AK7",
+   "Weight": "0.2033769251",
+   "Market Value": "168839.27",
+   "Shares Held": "190000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BROOKFIELD RENEWABLE PARTNERS LP",
+   "Ticker": "-",
+   "Identifier": "BMG162582313",
+   "Weight": "0.0518823958",
+   "Market Value": "43071.68",
+   "Shares Held": "2395",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SEMPRA",
+   "Ticker": "-",
+   "Identifier": "816851BM0",
+   "Weight": "0.8450860914",
+   "Market Value": "701572.8",
+   "Shares Held": "710000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NAVIENT CORP",
+   "Ticker": "-",
+   "Identifier": "63938C405",
+   "Weight": "0.0330922573",
+   "Market Value": "27472.5",
+   "Shares Held": "1500",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ARES FINANCE CO III LLC",
+   "Ticker": "-",
+   "Identifier": "04018VAA1",
+   "Weight": "0.0899069865",
+   "Market Value": "74638.9",
+   "Shares Held": "75000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CITIGROUP INC",
+   "Ticker": "-",
+   "Identifier": "172967NB3",
+   "Weight": "0.1067048079",
+   "Market Value": "88584.1",
+   "Shares Held": "89000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "MORGAN STANLEY",
+   "Ticker": "-",
+   "Identifier": "61763E207",
+   "Weight": "0.0182852113",
+   "Market Value": "15180",
+   "Shares Held": "600",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SEMPRA",
+   "Ticker": "-",
+   "Identifier": "816851604",
+   "Weight": "0.1470008121",
+   "Market Value": "122037",
+   "Shares Held": "5700",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CITIGROUP INC",
+   "Ticker": "-",
+   "Identifier": "172967PM7",
+   "Weight": "0.337141581",
+   "Market Value": "279887.89",
+   "Shares Held": "270000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SUMITOMO LIFE INS CO",
+   "Ticker": "-",
+   "Identifier": "86564CAC4",
+   "Weight": "0.2426232883",
+   "Market Value": "201420.78",
+   "Shares Held": "220000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PNC FINANCIAL SERVICES GRP INC",
+   "Ticker": "-",
+   "Identifier": "693475BF1",
+   "Weight": "0.2440526425",
+   "Market Value": "202607.4",
+   "Shares Held": "200000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SOUTHERN COMPANY",
+   "Ticker": "-",
+   "Identifier": "842587EB9",
+   "Weight": "0.1664556866",
+   "Market Value": "138188.03",
+   "Shares Held": "135000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "-",
+   "Identifier": "74460W628",
+   "Weight": "0.0346551731",
+   "Market Value": "28770",
+   "Shares Held": "1500",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "TRANSCANADA TRUST",
+   "Ticker": "-",
+   "Identifier": "89356BAC2",
+   "Weight": "0.1936384239",
+   "Market Value": "160754.57",
+   "Shares Held": "161000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WELLS FARGO and CO",
+   "Ticker": "-",
+   "Identifier": "94988U128",
+   "Weight": "0.2085670462",
+   "Market Value": "173148",
+   "Shares Held": "9400",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PARAMOUNT GLOBAL",
+   "Ticker": "-",
+   "Identifier": "92556HAE7",
+   "Weight": "0.1277962209",
+   "Market Value": "106093.75",
+   "Shares Held": "125000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NIPPON LIFE INS CO",
+   "Ticker": "-",
+   "Identifier": "654579AG6",
+   "Weight": "0.1133705383",
+   "Market Value": "94117.85",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PRUDENTIAL FINL INC",
+   "Ticker": "-",
+   "Identifier": "744320BH4",
+   "Weight": "0.2217381079",
+   "Market Value": "184082.34",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NIPPON LIFE INS CO",
+   "Ticker": "-",
+   "Identifier": "654579AP6",
+   "Weight": "0.5072428425",
+   "Market Value": "421102.4",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "US BANCORP DEL",
+   "Ticker": "-",
+   "Identifier": "902973BC9",
+   "Weight": "0.9702161647",
+   "Market Value": "805453.17",
+   "Shares Held": "815000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "MEIJI YASUDA LIFE INSURANCE CO",
+   "Ticker": "-",
+   "Identifier": "585270AC5",
+   "Weight": "0.2415112632",
+   "Market Value": "200497.6",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VODAFONE GRP PLC",
+   "Ticker": "-",
+   "Identifier": "92857WBX7",
+   "Weight": "0.2030131481",
+   "Market Value": "168537.27",
+   "Shares Held": "215000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GOLDMAN SACHS GROUP INC (THE)",
+   "Ticker": "-",
+   "Identifier": "38148BAC2",
+   "Weight": "0.0955705235",
+   "Market Value": "79340.65",
+   "Shares Held": "79000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AMERICAN HOMES 4 RENT",
+   "Ticker": "-",
+   "Identifier": "02665T868",
+   "Weight": "0.0293309003",
+   "Market Value": "24349.9",
+   "Shares Held": "1000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "NEXTERA ENERGY CAP HLDGS INC",
+   "Ticker": "-",
+   "Identifier": "65339KBK5",
+   "Weight": "0.2817411491",
+   "Market Value": "233895.61",
+   "Shares Held": "234000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UNUM GROUP",
+   "Ticker": "-",
+   "Identifier": "91529Y601",
+   "Weight": "0.0978945402",
+   "Market Value": "81270",
+   "Shares Held": "3500",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "TELEPHONE and DATA SYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "879433761",
+   "Weight": "0.0828435708",
+   "Market Value": "68775",
+   "Shares Held": "3500",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ARCH CAPITAL GROUP LTD",
+   "Ticker": "-",
+   "Identifier": "03939A107",
+   "Weight": "0.0477728247",
+   "Market Value": "39660",
+   "Shares Held": "2000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "DTE ENERGY CO",
+   "Ticker": "-",
+   "Identifier": "233331792",
+   "Weight": "0.7783754252",
+   "Market Value": "646191",
+   "Shares Held": "26300",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "M and T BANK CORP",
+   "Ticker": "-",
+   "Identifier": "55261FAH7",
+   "Weight": "0.0601723421",
+   "Market Value": "49953.82",
+   "Shares Held": "50000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CITIZENS FINANCIAL GRP INC",
+   "Ticker": "-",
+   "Identifier": "174610808",
+   "Weight": "0.1587223793",
+   "Market Value": "131768",
+   "Shares Held": "5200",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CMS ENERGY CORP",
+   "Ticker": "-",
+   "Identifier": "125896BV1",
+   "Weight": "0.4524786107",
+   "Market Value": "375638.28",
+   "Shares Held": "409000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BROOKFIELD PROPERTY PARTNERS LP",
+   "Ticker": "-",
+   "Identifier": "BMG162491499",
+   "Weight": "0.031801572",
+   "Market Value": "26401",
+   "Shares Held": "1700",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "KKR GROUP FINANCE CO IX LLC",
+   "Ticker": "-",
+   "Identifier": "48253M104",
+   "Weight": "0.097870449",
+   "Market Value": "81250",
+   "Shares Held": "5000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "-",
+   "Identifier": "48128AAJ2",
+   "Weight": "0.3147974745",
+   "Market Value": "261338.28",
+   "Shares Held": "255000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "-",
+   "Identifier": "74460W446",
+   "Weight": "0.064841431",
+   "Market Value": "53830",
+   "Shares Held": "3500",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SCORPIO TANKERS INC",
+   "Ticker": "-",
+   "Identifier": "80918TAF6",
+   "Weight": "0.1389808558",
+   "Market Value": "115379",
+   "Shares Held": "110000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BROOKFIELD BRP HOLDINGS CANADA INC",
+   "Ticker": "-",
+   "Identifier": "11259P307",
+   "Weight": "0.0636946905",
+   "Market Value": "52878",
+   "Shares Held": "2100",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PRUDENTIAL FINL INC",
+   "Ticker": "-",
+   "Identifier": "744320AW2",
+   "Weight": "0.1477855343",
+   "Market Value": "122688.46",
+   "Shares Held": "125000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BANK OF AMERICA CORPORATION",
+   "Ticker": "-",
+   "Identifier": "06055HAB9",
+   "Weight": "0.5355589979",
+   "Market Value": "444609.88",
+   "Shares Held": "440000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "LIBERTY MUTUAL GROUP INC",
+   "Ticker": "-",
+   "Identifier": "53079EBL7",
+   "Weight": "0.0958067376",
+   "Market Value": "79536.75",
+   "Shares Held": "125000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AERCAP IRELAND CAPITAL DAC / AERCAP GLOBAL AVIATION TRUST",
+   "Ticker": "-",
+   "Identifier": "00774MBK0",
+   "Weight": "0.1872844455",
+   "Market Value": "155479.63",
+   "Shares Held": "150000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "-",
+   "Identifier": "74460W669",
+   "Weight": "0.0629189542",
+   "Market Value": "52234",
+   "Shares Held": "2600",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ALLIANZ SE",
+   "Ticker": "-",
+   "Identifier": "018820AC4",
+   "Weight": "0.1757255058",
+   "Market Value": "145883.64",
+   "Shares Held": "140000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "F and G ANNUITIES and LIFE INC",
+   "Ticker": "-",
+   "Identifier": "30190A609",
+   "Weight": "0.0549423621",
+   "Market Value": "45612",
+   "Shares Held": "2100",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BROOKFIELD INFRASTRUCTURE PARTNERS LP",
+   "Ticker": "-",
+   "Identifier": "BMG162522756",
+   "Weight": "0.0164169397",
+   "Market Value": "13629",
+   "Shares Held": "825",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "TRANSCANADA TRUST",
+   "Ticker": "-",
+   "Identifier": "89356BAB4",
+   "Weight": "0.1557286157",
+   "Market Value": "129282.64",
+   "Shares Held": "129000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BANK OF AMERICA CORPORATION",
+   "Ticker": "-",
+   "Identifier": "06055H806",
+   "Weight": "0.1235203363",
+   "Market Value": "102544",
+   "Shares Held": "6032",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ENBRIDGE INC",
+   "Ticker": "-",
+   "Identifier": "29250NBS3",
+   "Weight": "0.1273279484",
+   "Market Value": "105705",
+   "Shares Held": "100000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BELL TELEPHONE CO OF CANADA OR BELL CANADA/THE",
+   "Ticker": "-",
+   "Identifier": "0778FPAQ2",
+   "Weight": "0.1741635778",
+   "Market Value": "144586.96",
+   "Shares Held": "140000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FORD MOTOR CO",
+   "Ticker": "-",
+   "Identifier": "345370811",
+   "Weight": "0.0639476479",
+   "Market Value": "53088",
+   "Shares Held": "2400",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "KKR and CO INC",
+   "Ticker": "-",
+   "Identifier": "48251W609",
+   "Weight": "0.0970308711",
+   "Market Value": "80553",
+   "Shares Held": "3300",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BROOKFIELD OAKTREE HOLDINGS LLC",
+   "Ticker": "-",
+   "Identifier": "674001409",
+   "Weight": "0.1763535149",
+   "Market Value": "146405",
+   "Shares Held": "7000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "STATE STREET CORP",
+   "Ticker": "-",
+   "Identifier": "857477855",
+   "Weight": "0.0263798502",
+   "Market Value": "21900",
+   "Shares Held": "1000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ENBRIDGE INC",
+   "Ticker": "-",
+   "Identifier": "29250NBC8",
+   "Weight": "0.1531117707",
+   "Market Value": "127110.19",
+   "Shares Held": "126000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ENSTAR GROUP LTD",
+   "Ticker": "-",
+   "Identifier": "29359U109",
+   "Weight": "0.1033511941",
+   "Market Value": "85800",
+   "Shares Held": "3900",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ALLIANZ SE",
+   "Ticker": "-",
+   "Identifier": "018820AD2",
+   "Weight": "0.2088807736",
+   "Market Value": "173408.45",
+   "Shares Held": "175000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PG and E CORP",
+   "Ticker": "-",
+   "Identifier": "69331C306",
+   "Weight": "0.0635766437",
+   "Market Value": "52780",
+   "Shares Held": "1300",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AKAMAI TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "00971TAR2",
+   "Weight": "0.0852273938",
+   "Market Value": "70754",
+   "Shares Held": "68000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ATHENE HOLDING LTD",
+   "Ticker": "-",
+   "Identifier": "04686J838",
+   "Weight": "0.395439978",
+   "Market Value": "328286",
+   "Shares Held": "13100",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "TELEPHONE and DATA SYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "879433787",
+   "Weight": "0.0398046645",
+   "Market Value": "33045",
+   "Shares Held": "1500",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AFFILIATED MANAGERS GROUP INC",
+   "Ticker": "-",
+   "Identifier": "008252850",
+   "Weight": "0.0651437754",
+   "Market Value": "54081",
+   "Shares Held": "2700",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CMS ENERGY CORP",
+   "Ticker": "-",
+   "Identifier": "125896845",
+   "Weight": "0.1294202681",
+   "Market Value": "107442",
+   "Shares Held": "4700",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "-",
+   "Identifier": "48128BAQ4",
+   "Weight": "0.1823243711",
+   "Market Value": "151361.88",
+   "Shares Held": "145000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SBL HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "78397DAC2",
+   "Weight": "0.0372341588",
+   "Market Value": "30911.02",
+   "Shares Held": "34000",
+   "Asset Category": "EP"
+  }
+ ]
+}

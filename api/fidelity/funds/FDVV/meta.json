@@ -1,0 +1,257 @@
+{
+ "ticker": "FDVV",
+ "name": "Fidelity High Dividend ETF",
+ "category": "US Equity",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDVV",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004078/000003540226004078-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004078/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDVV?period1=0&period2=1787720796&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.15%",
+  "value": 0.15
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$63.30",
+  "value": 63.3,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$9,456.10 M",
+  "value": 9456097022.860004,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 1.44,
+   "mo1Text": "1.44%",
+   "qtd": 4.32,
+   "qtdText": "4.32%",
+   "ytd": 13.52,
+   "ytdText": "13.52%",
+   "yr1": 18.37,
+   "yr1Text": "18.37%",
+   "yr3": 20.4,
+   "yr3Text": "20.40%",
+   "yr5": 14.28,
+   "yr5Text": "14.28%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 13.64,
+   "sinceInceptionText": "13.64%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/16/2016",
+    "0.267"
+   ],
+   [
+    "12/28/2016",
+    "0.006"
+   ],
+   [
+    "03/17/2017",
+    "0.244"
+   ],
+   [
+    "06/16/2017",
+    "0.24"
+   ],
+   [
+    "09/15/2017",
+    "0.256"
+   ],
+   [
+    "12/15/2017",
+    "0.301"
+   ],
+   [
+    "03/16/2018",
+    "0.253"
+   ],
+   [
+    "06/15/2018",
+    "0.316"
+   ],
+   [
+    "09/21/2018",
+    "0.289"
+   ],
+   [
+    "12/21/2018",
+    "0.247"
+   ],
+   [
+    "03/15/2019",
+    "0.368"
+   ],
+   [
+    "06/21/2019",
+    "0.326"
+   ],
+   [
+    "09/20/2019",
+    "0.331"
+   ],
+   [
+    "12/20/2019",
+    "0.251"
+   ],
+   [
+    "03/20/2020",
+    "0.313"
+   ],
+   [
+    "06/19/2020",
+    "0.244"
+   ],
+   [
+    "09/18/2020",
+    "0.241"
+   ],
+   [
+    "12/18/2020",
+    "0.227"
+   ],
+   [
+    "03/19/2021",
+    "0.278"
+   ],
+   [
+    "06/18/2021",
+    "0.267"
+   ],
+   [
+    "09/17/2021",
+    "0.336"
+   ],
+   [
+    "12/17/2021",
+    "0.207"
+   ],
+   [
+    "03/18/2022",
+    "0.339"
+   ],
+   [
+    "06/17/2022",
+    "0.376"
+   ],
+   [
+    "09/16/2022",
+    "0.383"
+   ],
+   [
+    "12/16/2022",
+    "0.185"
+   ],
+   [
+    "03/17/2023",
+    "0.504"
+   ],
+   [
+    "06/16/2023",
+    "0.361"
+   ],
+   [
+    "09/15/2023",
+    "0.307"
+   ],
+   [
+    "12/15/2023",
+    "0.42"
+   ],
+   [
+    "03/15/2024",
+    "0.372"
+   ],
+   [
+    "06/21/2024",
+    "0.319"
+   ],
+   [
+    "09/20/2024",
+    "0.3"
+   ],
+   [
+    "12/20/2024",
+    "0.479"
+   ],
+   [
+    "03/21/2025",
+    "0.419"
+   ],
+   [
+    "06/20/2025",
+    "0.447"
+   ],
+   [
+    "09/19/2025",
+    "0.377"
+   ],
+   [
+    "12/19/2025",
+    "0.393"
+   ],
+   [
+    "03/20/2026",
+    "0.44"
+   ],
+   [
+    "06/18/2026",
+    "0.519"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 99,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2499,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000054749",
+  "seriesName": "Fidelity High Dividend ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004078"
+ }
+}

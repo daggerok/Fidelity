@@ -1,0 +1,172 @@
+{
+ "ticker": "FRNW",
+ "name": "Fidelity Clean Energy ETF",
+ "category": "Thematic",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FRNW",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005377/000003540226005377-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005377/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FRNW?period1=0&period2=1787720844&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.39%",
+  "value": 0.39
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$22.49",
+  "value": 22.49,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$162.10 M",
+  "value": 162102960.78,
+  "asOfDate": "Jun 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 0.67,
+   "mo1Text": "0.67%",
+   "qtd": -6.33,
+   "qtdText": "-6.33%",
+   "ytd": 11.44,
+   "ytdText": "11.44%",
+   "yr1": 27.22,
+   "yr1Text": "27.22%",
+   "yr3": 9.68,
+   "yr3Text": "9.68%",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": -1.45,
+   "sinceInceptionText": "-1.45%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/17/2021",
+    "0.01"
+   ],
+   [
+    "03/18/2022",
+    "0.016"
+   ],
+   [
+    "06/17/2022",
+    "0.089"
+   ],
+   [
+    "09/16/2022",
+    "0.032"
+   ],
+   [
+    "12/16/2022",
+    "0.013"
+   ],
+   [
+    "03/17/2023",
+    "0.026"
+   ],
+   [
+    "06/16/2023",
+    "0.099"
+   ],
+   [
+    "09/15/2023",
+    "0.07"
+   ],
+   [
+    "12/15/2023",
+    "0.03"
+   ],
+   [
+    "03/15/2024",
+    "0.015"
+   ],
+   [
+    "06/21/2024",
+    "0.098"
+   ],
+   [
+    "09/20/2024",
+    "0.064"
+   ],
+   [
+    "12/20/2024",
+    "0.016"
+   ],
+   [
+    "03/21/2025",
+    "0.014"
+   ],
+   [
+    "06/20/2025",
+    "0.118"
+   ],
+   [
+    "09/19/2025",
+    "0.081"
+   ],
+   [
+    "12/19/2025",
+    "0.041"
+   ],
+   [
+    "03/20/2026",
+    "0.015"
+   ],
+   [
+    "06/18/2026",
+    "0.139"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 53,
+  "asOf": "Jun 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1225,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000073597",
+  "seriesName": "Fidelity Clean Energy ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-005377"
+ }
+}

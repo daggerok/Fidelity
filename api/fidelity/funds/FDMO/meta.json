@@ -1,0 +1,261 @@
+{
+ "ticker": "FDMO",
+ "name": "Fidelity Momentum Factor ETF",
+ "category": "Factor",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDMO",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004099/000003540226004099-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004099/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDMO?period1=0&period2=1787720792&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.15%",
+  "value": 0.15
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$94.52",
+  "value": 94.52,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$844.67 M",
+  "value": 844668560.19,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 1.24,
+   "mo1Text": "1.24%",
+   "qtd": -2.06,
+   "qtdText": "-2.06%",
+   "ytd": 12.92,
+   "ytdText": "12.92%",
+   "yr1": 20.02,
+   "yr1Text": "20.02%",
+   "yr3": 26.34,
+   "yr3Text": "26.34%",
+   "yr5": 14.2,
+   "yr5Text": "14.20%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 15.35,
+   "sinceInceptionText": "15.35%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/16/2016",
+    "0.115"
+   ],
+   [
+    "03/17/2017",
+    "0.081"
+   ],
+   [
+    "06/16/2017",
+    "0.098"
+   ],
+   [
+    "09/15/2017",
+    "0.095"
+   ],
+   [
+    "12/15/2017",
+    "0.068"
+   ],
+   [
+    "03/16/2018",
+    "0.098"
+   ],
+   [
+    "06/15/2018",
+    "0.084"
+   ],
+   [
+    "09/21/2018",
+    "0.086"
+   ],
+   [
+    "12/21/2018",
+    "0.094"
+   ],
+   [
+    "03/15/2019",
+    "0.099"
+   ],
+   [
+    "06/21/2019",
+    "0.117"
+   ],
+   [
+    "09/20/2019",
+    "0.111"
+   ],
+   [
+    "12/20/2019",
+    "0.108"
+   ],
+   [
+    "12/30/2019",
+    "0.016"
+   ],
+   [
+    "03/20/2020",
+    "0.098"
+   ],
+   [
+    "06/19/2020",
+    "0.099"
+   ],
+   [
+    "09/18/2020",
+    "0.088"
+   ],
+   [
+    "12/18/2020",
+    "0.056"
+   ],
+   [
+    "03/19/2021",
+    "0.056"
+   ],
+   [
+    "06/18/2021",
+    "0.075"
+   ],
+   [
+    "09/17/2021",
+    "0.105"
+   ],
+   [
+    "12/17/2021",
+    "0.084"
+   ],
+   [
+    "03/18/2022",
+    "0.118"
+   ],
+   [
+    "06/17/2022",
+    "0.107"
+   ],
+   [
+    "09/16/2022",
+    "0.155"
+   ],
+   [
+    "12/16/2022",
+    "0.128"
+   ],
+   [
+    "03/17/2023",
+    "0.144"
+   ],
+   [
+    "06/16/2023",
+    "0.117"
+   ],
+   [
+    "09/15/2023",
+    "0.089"
+   ],
+   [
+    "12/15/2023",
+    "0.097"
+   ],
+   [
+    "12/28/2023",
+    "0.012"
+   ],
+   [
+    "03/15/2024",
+    "0.091"
+   ],
+   [
+    "06/21/2024",
+    "0.1"
+   ],
+   [
+    "09/20/2024",
+    "0.126"
+   ],
+   [
+    "12/20/2024",
+    "0.307"
+   ],
+   [
+    "03/21/2025",
+    "0.097"
+   ],
+   [
+    "06/20/2025",
+    "0.119"
+   ],
+   [
+    "09/19/2025",
+    "0.149"
+   ],
+   [
+    "12/19/2025",
+    "0.149"
+   ],
+   [
+    "03/20/2026",
+    "0.121"
+   ],
+   [
+    "06/18/2026",
+    "0.15"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 127,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2499,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000054752",
+  "seriesName": "Fidelity Momentum Factor ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004099"
+ }
+}

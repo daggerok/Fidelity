@@ -1,0 +1,119 @@
+{
+ "ticker": "FCLO",
+ "name": "Fidelity CLO ETF",
+ "category": "Bond",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCLO",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004622/000003540226004622-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004622/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FCLO?period1=0&period2=1787720776&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0%",
+  "value": 0
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$50.47",
+  "value": 50.465,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$28.10 M",
+  "value": 28098825.58,
+  "asOfDate": "May 31 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 0.66,
+   "mo1Text": "0.66%",
+   "qtd": 1.12,
+   "qtdText": "1.12%",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "paymentsPerYear": 12,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "02/26/2026",
+    "0.071"
+   ],
+   [
+    "03/30/2026",
+    "0.2"
+   ],
+   [
+    "04/29/2026",
+    "0.26"
+   ],
+   [
+    "05/28/2026",
+    "0.251"
+   ],
+   [
+    "06/29/2026",
+    "0.244"
+   ],
+   [
+    "07/30/2026",
+    "0.261"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 53,
+  "asOf": "May 31 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 134,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000099376",
+  "seriesName": "Fidelity CLO ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004622"
+ }
+}

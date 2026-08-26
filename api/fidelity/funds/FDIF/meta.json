@@ -1,0 +1,135 @@
+{
+ "ticker": "FDIF",
+ "name": "Fidelity Disruptors ETF",
+ "category": "US Equity",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDIF",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004651/000003540226004651-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004651/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDIF?period1=0&period2=1787720787&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.5%",
+  "value": 0.5
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$41.79",
+  "value": 41.787,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$106.98 M",
+  "value": 106982490.42,
+  "asOfDate": "May 31 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 9.39,
+   "mo1Text": "9.39%",
+   "qtd": 3.16,
+   "qtdText": "3.16%",
+   "ytd": 16.86,
+   "ytdText": "16.86%",
+   "yr1": 20.95,
+   "yr1Text": "20.95%",
+   "yr3": 21.55,
+   "yr3Text": "21.55%",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 18.06,
+   "sinceInceptionText": "18.06%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "09/15/2023",
+    "0.055"
+   ],
+   [
+    "06/21/2024",
+    "0.041"
+   ],
+   [
+    "09/20/2024",
+    "0.026"
+   ],
+   [
+    "12/20/2024",
+    "0.043"
+   ],
+   [
+    "03/21/2025",
+    "0.028"
+   ],
+   [
+    "06/20/2025",
+    "0.047"
+   ],
+   [
+    "09/19/2025",
+    "0.021"
+   ],
+   [
+    "12/19/2025",
+    "0.033"
+   ],
+   [
+    "03/20/2026",
+    "0.016"
+   ],
+   [
+    "06/18/2026",
+    "0.034"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 7,
+  "asOf": "May 31 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 799,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000079690",
+  "seriesName": "Fidelity Disruptors ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004651"
+ }
+}

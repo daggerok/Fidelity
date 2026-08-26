@@ -1,0 +1,136 @@
+{
+ "ticker": "FENI",
+ "name": "Fidelity Enhanced International ETF",
+ "category": "International",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FENI",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005399/000003540226005399-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005399/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FENI?period1=0&period2=1787720805&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.28%",
+  "value": 0.28
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$41.89",
+  "value": 41.89,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$10,386.22 M",
+  "value": 10386219565.60001,
+  "asOfDate": "Jun 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 5.15,
+   "mo1Text": "5.15%",
+   "qtd": 5.17,
+   "qtdText": "5.17%",
+   "ytd": 16.43,
+   "ytdText": "16.43%",
+   "yr1": 25.5,
+   "yr1Text": "25.50%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 23.72,
+   "sinceInceptionText": "23.72%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "03/15/2024",
+    "0.234"
+   ],
+   [
+    "06/21/2024",
+    "0.277"
+   ],
+   [
+    "09/20/2024",
+    "0.161"
+   ],
+   [
+    "12/20/2024",
+    "0.159"
+   ],
+   [
+    "03/21/2025",
+    "0.22"
+   ],
+   [
+    "06/20/2025",
+    "0.344"
+   ],
+   [
+    "09/19/2025",
+    "0.169"
+   ],
+   [
+    "12/19/2025",
+    "0.362"
+   ],
+   [
+    "03/20/2026",
+    "0.274"
+   ],
+   [
+    "06/18/2026",
+    "0.371"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 395,
+  "asOf": "Jun 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 692,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000081802",
+  "seriesName": "Fidelity Enhanced International ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-005399"
+ }
+}

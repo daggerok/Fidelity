@@ -1,0 +1,80 @@
+{
+ "ticker": "FELC",
+ "page": 2,
+ "pageSize": 250,
+ "totalRows": 257,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "LAS VEGAS SANDS CORP",
+   "Ticker": "-",
+   "Identifier": "517834107",
+   "Weight": "0.0000111373",
+   "Market Value": "877.61",
+   "Shares Held": "19",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LINDE PLC",
+   "Ticker": "-",
+   "Identifier": "IE000S9YS762",
+   "Weight": "0.0713021945",
+   "Market Value": "5618563.38",
+   "Shares Held": "10827",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MAXLINEAR INC",
+   "Ticker": "-",
+   "Identifier": "57776J100",
+   "Weight": "0.0826515677",
+   "Market Value": "6512886.1",
+   "Shares Held": "50870",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ALPHABET INC",
+   "Ticker": "-",
+   "Identifier": "02079K305",
+   "Weight": "3.6899548874",
+   "Market Value": "290765880.99",
+   "Shares Held": "813627",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UBER TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "90353T100",
+   "Weight": "0.6597927199",
+   "Market Value": "51991207.84",
+   "Shares Held": "720499",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NEWMONT CORP",
+   "Ticker": "-",
+   "Identifier": "651639106",
+   "Weight": "0.0001066761",
+   "Market Value": "8406",
+   "Shares Held": "90",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LAMAR ADVERTISING CO",
+   "Ticker": "-",
+   "Identifier": "512816109",
+   "Weight": "0.0101249332",
+   "Market Value": "797837.7",
+   "Shares Held": "5115",
+   "Asset Category": "EC"
+  }
+ ]
+}

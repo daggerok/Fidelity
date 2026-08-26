@@ -1,0 +1,245 @@
+{
+ "ticker": "FQAL",
+ "name": "Fidelity Quality Factor ETF",
+ "category": "Factor",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FQAL",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004131/000003540226004131-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004131/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FQAL?period1=0&period2=1787720841&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.15%",
+  "value": 0.15
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$84.64",
+  "value": 84.64,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$1,362.61 M",
+  "value": 1362606539.41,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 3.8,
+   "mo1Text": "3.80%",
+   "qtd": 4.04,
+   "qtdText": "4.04%",
+   "ytd": 12.73,
+   "ytdText": "12.73%",
+   "yr1": 17.97,
+   "yr1Text": "17.97%",
+   "yr3": 20.34,
+   "yr3Text": "20.34%",
+   "yr5": 11.54,
+   "yr5Text": "11.54%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 14.54,
+   "sinceInceptionText": "14.54%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/16/2016",
+    "0.112"
+   ],
+   [
+    "03/17/2017",
+    "0.084"
+   ],
+   [
+    "06/16/2017",
+    "0.131"
+   ],
+   [
+    "09/15/2017",
+    "0.147"
+   ],
+   [
+    "12/15/2017",
+    "0.124"
+   ],
+   [
+    "03/16/2018",
+    "0.129"
+   ],
+   [
+    "06/15/2018",
+    "0.146"
+   ],
+   [
+    "09/21/2018",
+    "0.111"
+   ],
+   [
+    "12/21/2018",
+    "0.133"
+   ],
+   [
+    "03/15/2019",
+    "0.141"
+   ],
+   [
+    "06/21/2019",
+    "0.152"
+   ],
+   [
+    "09/20/2019",
+    "0.151"
+   ],
+   [
+    "12/20/2019",
+    "0.139"
+   ],
+   [
+    "03/20/2020",
+    "0.17"
+   ],
+   [
+    "06/19/2020",
+    "0.153"
+   ],
+   [
+    "09/18/2020",
+    "0.152"
+   ],
+   [
+    "12/18/2020",
+    "0.155"
+   ],
+   [
+    "03/19/2021",
+    "0.166"
+   ],
+   [
+    "06/18/2021",
+    "0.151"
+   ],
+   [
+    "09/17/2021",
+    "0.192"
+   ],
+   [
+    "03/18/2022",
+    "0.183"
+   ],
+   [
+    "09/16/2022",
+    "0.181"
+   ],
+   [
+    "12/16/2022",
+    "0.131"
+   ],
+   [
+    "03/17/2023",
+    "0.198"
+   ],
+   [
+    "06/16/2023",
+    "0.18"
+   ],
+   [
+    "09/15/2023",
+    "0.18"
+   ],
+   [
+    "12/15/2023",
+    "0.177"
+   ],
+   [
+    "03/15/2024",
+    "0.159"
+   ],
+   [
+    "06/21/2024",
+    "0.18"
+   ],
+   [
+    "09/20/2024",
+    "0.202"
+   ],
+   [
+    "12/20/2024",
+    "0.242"
+   ],
+   [
+    "03/21/2025",
+    "0.2"
+   ],
+   [
+    "06/20/2025",
+    "0.211"
+   ],
+   [
+    "09/19/2025",
+    "0.215"
+   ],
+   [
+    "12/19/2025",
+    "0.219"
+   ],
+   [
+    "03/20/2026",
+    "0.262"
+   ],
+   [
+    "06/18/2026",
+    "0.252"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 127,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2498,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000054753",
+  "seriesName": "Fidelity Quality Factor ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004131"
+ }
+}

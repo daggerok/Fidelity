@@ -1,0 +1,253 @@
+{
+ "ticker": "FDLO",
+ "name": "Fidelity Low Volatility Factor ETF",
+ "category": "Factor",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDLO",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004112/000003540226004112-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004112/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDLO?period1=0&period2=1787720791&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.15%",
+  "value": 0.15
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$73.00",
+  "value": 73.0005,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$1,424.51 M",
+  "value": 1424510601.9200006,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 4.14,
+   "mo1Text": "4.14%",
+   "qtd": 5.86,
+   "qtdText": "5.86%",
+   "ytd": 10.26,
+   "ytdText": "10.26%",
+   "yr1": 14.88,
+   "yr1Text": "14.88%",
+   "yr3": 15.04,
+   "yr3Text": "15.04%",
+   "yr5": 9.67,
+   "yr5Text": "9.67%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 13.02,
+   "sinceInceptionText": "13.02%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/16/2016",
+    "0.133"
+   ],
+   [
+    "12/28/2016",
+    "0.009"
+   ],
+   [
+    "03/17/2017",
+    "0.107"
+   ],
+   [
+    "06/16/2017",
+    "0.127"
+   ],
+   [
+    "09/15/2017",
+    "0.131"
+   ],
+   [
+    "12/15/2017",
+    "0.129"
+   ],
+   [
+    "03/16/2018",
+    "0.119"
+   ],
+   [
+    "06/15/2018",
+    "0.138"
+   ],
+   [
+    "09/21/2018",
+    "0.132"
+   ],
+   [
+    "12/21/2018",
+    "0.14"
+   ],
+   [
+    "03/15/2019",
+    "0.154"
+   ],
+   [
+    "06/21/2019",
+    "0.141"
+   ],
+   [
+    "09/20/2019",
+    "0.141"
+   ],
+   [
+    "12/20/2019",
+    "0.162"
+   ],
+   [
+    "03/20/2020",
+    "0.167"
+   ],
+   [
+    "06/19/2020",
+    "0.143"
+   ],
+   [
+    "09/18/2020",
+    "0.142"
+   ],
+   [
+    "12/18/2020",
+    "0.136"
+   ],
+   [
+    "03/19/2021",
+    "0.147"
+   ],
+   [
+    "06/18/2021",
+    "0.141"
+   ],
+   [
+    "09/17/2021",
+    "0.158"
+   ],
+   [
+    "03/18/2022",
+    "0.161"
+   ],
+   [
+    "06/17/2022",
+    "0.169"
+   ],
+   [
+    "09/16/2022",
+    "0.176"
+   ],
+   [
+    "12/16/2022",
+    "0.182"
+   ],
+   [
+    "03/17/2023",
+    "0.21"
+   ],
+   [
+    "06/16/2023",
+    "0.17"
+   ],
+   [
+    "09/15/2023",
+    "0.181"
+   ],
+   [
+    "12/15/2023",
+    "0.155"
+   ],
+   [
+    "03/15/2024",
+    "0.229"
+   ],
+   [
+    "06/21/2024",
+    "0.202"
+   ],
+   [
+    "09/20/2024",
+    "0.199"
+   ],
+   [
+    "12/20/2024",
+    "0.22"
+   ],
+   [
+    "03/21/2025",
+    "0.244"
+   ],
+   [
+    "06/20/2025",
+    "0.232"
+   ],
+   [
+    "09/19/2025",
+    "0.219"
+   ],
+   [
+    "12/19/2025",
+    "0.22"
+   ],
+   [
+    "03/20/2026",
+    "0.279"
+   ],
+   [
+    "06/18/2026",
+    "0.264"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 127,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2499,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000054751",
+  "seriesName": "Fidelity Low Volatility Factor ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004112"
+ }
+}

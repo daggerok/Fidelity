@@ -1,0 +1,99 @@
+{
+ "ticker": "FDTX",
+ "name": "Fidelity Disruptive Technology ETF",
+ "category": "Thematic",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDTX",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004627/000003540226004627-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004627/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDTX?period1=0&period2=1787720794&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.5%",
+  "value": 0.5
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$53.80",
+  "value": 53.8,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$257.58 M",
+  "value": 257575900.58999997,
+  "asOfDate": "May 31 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 7.26,
+   "mo1Text": "7.26%",
+   "qtd": -4.34,
+   "qtdText": "-4.34%",
+   "ytd": 32.06,
+   "ytdText": "32.06%",
+   "yr1": 38.55,
+   "yr1Text": "38.55%",
+   "yr3": 30.12,
+   "yr3Text": "30.12%",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 26.22,
+   "sinceInceptionText": "26.22%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Unknown",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "06/20/2025",
+    "0.002"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 40,
+  "asOf": "May 31 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 804,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000079689",
+  "seriesName": "Fidelity Disruptive Technology ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004627"
+ }
+}

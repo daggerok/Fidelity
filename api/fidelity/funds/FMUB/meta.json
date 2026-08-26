@@ -1,0 +1,165 @@
+{
+ "ticker": "FMUB",
+ "name": "Fidelity Municipal Bond Opportunities ETF",
+ "category": "Bond",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMUB",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004110/000003540226004110-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004110/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMUB?period1=0&period2=1787720834&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.3%",
+  "value": 0.3
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$50.55",
+  "value": 50.55,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$197.42 M",
+  "value": 197415237.02000004,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 0.18,
+   "mo1Text": "0.18%",
+   "qtd": -1.4,
+   "qtdText": "-1.40%",
+   "ytd": 1.11,
+   "ytdText": "1.11%",
+   "yr1": 4.72,
+   "yr1Text": "4.72%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 5.6,
+   "sinceInceptionText": "5.60%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "paymentsPerYear": 12,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "04/29/2025",
+    "0.106"
+   ],
+   [
+    "05/29/2025",
+    "0.161"
+   ],
+   [
+    "06/27/2025",
+    "0.115"
+   ],
+   [
+    "07/30/2025",
+    "0.144"
+   ],
+   [
+    "08/28/2025",
+    "0.134"
+   ],
+   [
+    "09/29/2025",
+    "0.143"
+   ],
+   [
+    "10/30/2025",
+    "0.146"
+   ],
+   [
+    "11/26/2025",
+    "0.146"
+   ],
+   [
+    "12/05/2025",
+    "0.097"
+   ],
+   [
+    "12/30/2025",
+    "0.146"
+   ],
+   [
+    "01/29/2026",
+    "0.139"
+   ],
+   [
+    "02/26/2026",
+    "0.131"
+   ],
+   [
+    "03/30/2026",
+    "0.139"
+   ],
+   [
+    "04/29/2026",
+    "0.141"
+   ],
+   [
+    "05/28/2026",
+    "0.133"
+   ],
+   [
+    "06/29/2026",
+    "0.152"
+   ],
+   [
+    "07/30/2026",
+    "0.142"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json",
+   "holdings/003.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 524,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 348,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000089370",
+  "seriesName": "Fidelity Municipal Bond Opportunities ETF",
+  "trustCik": "0001562565",
+  "trustName": "Fidelity Merrimack Street Trust",
+  "accession": "0000035402-26-004110"
+ }
+}

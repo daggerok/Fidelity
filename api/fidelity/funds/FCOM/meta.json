@@ -1,0 +1,298 @@
+{
+ "ticker": "FCOM",
+ "name": "Fidelity MSCI Communication Services Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCOM",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063883/000141036826063883-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063883/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FCOM?period1=0&period2=1787720778&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$71.36",
+  "value": 71.36,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$1,760.80 M",
+  "value": 1760797104.9099998,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 5.06,
+   "mo1Text": "5.06%",
+   "qtd": 0.06,
+   "qtdText": "0.06%",
+   "ytd": -2.13,
+   "ytdText": "-2.13%",
+   "yr1": 6.42,
+   "yr1Text": "6.42%",
+   "yr3": 22.63,
+   "yr3Text": "22.63%",
+   "yr5": 6.15,
+   "yr5Text": "6.15%",
+   "yr10": 11.04,
+   "yr10Text": "11.04%",
+   "sinceInception": 10.51,
+   "sinceInceptionText": "10.51%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.064"
+   ],
+   [
+    "03/21/2014",
+    "0.242"
+   ],
+   [
+    "06/20/2014",
+    "0.117"
+   ],
+   [
+    "09/19/2014",
+    "0.19"
+   ],
+   [
+    "12/19/2014",
+    "0.167"
+   ],
+   [
+    "03/20/2015",
+    "0.217"
+   ],
+   [
+    "06/19/2015",
+    "0.237"
+   ],
+   [
+    "09/18/2015",
+    "0.271"
+   ],
+   [
+    "12/18/2015",
+    "0.055"
+   ],
+   [
+    "06/17/2016",
+    "0.218"
+   ],
+   [
+    "09/16/2016",
+    "0.227"
+   ],
+   [
+    "12/16/2016",
+    "0.162"
+   ],
+   [
+    "12/28/2016",
+    "0.007"
+   ],
+   [
+    "03/17/2017",
+    "0.22"
+   ],
+   [
+    "06/16/2017",
+    "0.288"
+   ],
+   [
+    "09/15/2017",
+    "0.337"
+   ],
+   [
+    "12/15/2017",
+    "1.486"
+   ],
+   [
+    "03/16/2018",
+    "0.248"
+   ],
+   [
+    "06/15/2018",
+    "0.212"
+   ],
+   [
+    "09/21/2018",
+    "0.215"
+   ],
+   [
+    "12/21/2018",
+    "0.118"
+   ],
+   [
+    "03/15/2019",
+    "0.076"
+   ],
+   [
+    "06/21/2019",
+    "0.077"
+   ],
+   [
+    "09/20/2019",
+    "0.072"
+   ],
+   [
+    "12/20/2019",
+    "0.081"
+   ],
+   [
+    "03/20/2020",
+    "0.089"
+   ],
+   [
+    "06/19/2020",
+    "0.081"
+   ],
+   [
+    "09/18/2020",
+    "0.073"
+   ],
+   [
+    "12/18/2020",
+    "0.068"
+   ],
+   [
+    "03/19/2021",
+    "0.077"
+   ],
+   [
+    "06/18/2021",
+    "0.088"
+   ],
+   [
+    "09/17/2021",
+    "0.121"
+   ],
+   [
+    "03/18/2022",
+    "0.065"
+   ],
+   [
+    "06/17/2022",
+    "0.087"
+   ],
+   [
+    "09/16/2022",
+    "0.088"
+   ],
+   [
+    "12/16/2022",
+    "0.083"
+   ],
+   [
+    "03/17/2023",
+    "0.08"
+   ],
+   [
+    "06/16/2023",
+    "0.063"
+   ],
+   [
+    "09/15/2023",
+    "0.097"
+   ],
+   [
+    "12/15/2023",
+    "0.104"
+   ],
+   [
+    "03/15/2024",
+    "0.108"
+   ],
+   [
+    "06/21/2024",
+    "0.115"
+   ],
+   [
+    "09/20/2024",
+    "0.155"
+   ],
+   [
+    "12/20/2024",
+    "0.133"
+   ],
+   [
+    "03/21/2025",
+    "0.138"
+   ],
+   [
+    "06/20/2025",
+    "0.152"
+   ],
+   [
+    "09/19/2025",
+    "0.197"
+   ],
+   [
+    "12/19/2025",
+    "0.156"
+   ],
+   [
+    "03/20/2026",
+    "0.174"
+   ],
+   [
+    "06/18/2026",
+    "0.175"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 91,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042579",
+  "seriesName": "Fidelity MSCI Communication Services Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063883"
+ }
+}

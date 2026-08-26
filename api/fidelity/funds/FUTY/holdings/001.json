@@ -1,0 +1,602 @@
+{
+ "ticker": "FUTY",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 65,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Clearway Energy Inc",
+   "Ticker": "-",
+   "Identifier": "18539C105",
+   "Weight": "0.0872591709",
+   "Market Value": "2142951.72",
+   "Shares Held": "53004",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hawaiian Electric Industries Inc",
+   "Ticker": "-",
+   "Identifier": "419870100",
+   "Weight": "0.1625120946",
+   "Market Value": "3991048.38",
+   "Shares Held": "264834",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "New Jersey Resources Corp",
+   "Ticker": "-",
+   "Identifier": "646025106",
+   "Weight": "0.3543532103",
+   "Market Value": "8702372.64",
+   "Shares Held": "154544",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "American Electric Power Co Inc",
+   "Ticker": "-",
+   "Identifier": "025537101",
+   "Weight": "4.568598904",
+   "Market Value": "112197798.55",
+   "Shares Held": "818305",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vistra Corp",
+   "Ticker": "-",
+   "Identifier": "92840M102",
+   "Weight": "3.3364866011",
+   "Market Value": "81939005.68",
+   "Shares Held": "519127",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "American Water Works Co Inc",
+   "Ticker": "-",
+   "Identifier": "030420103",
+   "Weight": "1.5637154984",
+   "Market Value": "38402459.96",
+   "Shares Held": "299038",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dominion Energy Inc",
+   "Ticker": "-",
+   "Identifier": "25746U109",
+   "Weight": "3.4361285509",
+   "Market Value": "84386059.5",
+   "Shares Held": "1308311",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Southwest Gas Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "844895102",
+   "Weight": "0.3594611226",
+   "Market Value": "8827815.15",
+   "Shares Held": "93863",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NextEra Energy Inc",
+   "Ticker": "-",
+   "Identifier": "65339F101",
+   "Weight": "12.5749998132",
+   "Market Value": "308822754.08",
+   "Shares Held": "3155116",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WEC Energy Group Inc",
+   "Ticker": "-",
+   "Identifier": "92939U106",
+   "Weight": "2.3935003525",
+   "Market Value": "58780706.3",
+   "Shares Held": "498395",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Xcel Energy Inc",
+   "Ticker": "-",
+   "Identifier": "98389B100",
+   "Weight": "3.0612314788",
+   "Market Value": "75179161.05",
+   "Shares Held": "906319",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Atmos Energy Corp",
+   "Ticker": "-",
+   "Identifier": "049560105",
+   "Weight": "1.9170918971",
+   "Market Value": "47080843.6",
+   "Shares Held": "247820",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "XPLR Infrastructure LP",
+   "Ticker": "-",
+   "Identifier": "65341B106",
+   "Weight": "0.0577701688",
+   "Market Value": "1418746.95",
+   "Shares Held": "137077",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PPL Corp",
+   "Ticker": "-",
+   "Identifier": "69351T106",
+   "Weight": "1.7278676097",
+   "Market Value": "42433784.64",
+   "Shares Held": "1133381",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Exelon Corp",
+   "Ticker": "-",
+   "Identifier": "30161N101",
+   "Weight": "2.8987153249",
+   "Market Value": "71188012.98",
+   "Shares Held": "1547902",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Clearway Energy Inc",
+   "Ticker": "-",
+   "Identifier": "18539C204",
+   "Weight": "0.2132984696",
+   "Market Value": "5238284.04",
+   "Shares Held": "129789",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Southern Co/The",
+   "Ticker": "-",
+   "Identifier": "842587107",
+   "Weight": "6.6427982784",
+   "Market Value": "163136961.4",
+   "Shares Held": "1687042",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NRG Energy Inc",
+   "Ticker": "-",
+   "Identifier": "629377508",
+   "Weight": "1.9583015492",
+   "Market Value": "48092889.6",
+   "Shares Held": "309120",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Edison International",
+   "Ticker": "-",
+   "Identifier": "281020107",
+   "Weight": "1.6681638453",
+   "Market Value": "40967551.54",
+   "Shares Held": "589546",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Talen Energy Corp",
+   "Ticker": "-",
+   "Identifier": "87422Q109",
+   "Weight": "0.9022952209",
+   "Market Value": "22158990",
+   "Shares Held": "59500",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Oklo Inc",
+   "Ticker": "-",
+   "Identifier": "02156V109",
+   "Weight": "0.50100149",
+   "Market Value": "12303830",
+   "Shares Held": "169708",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Constellation Energy Corp",
+   "Ticker": "-",
+   "Identifier": "21037T109",
+   "Weight": "6.0144224684",
+   "Market Value": "147705013",
+   "Shares Held": "471901",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0010779943",
+   "Market Value": "26473.89",
+   "Shares Held": "40",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "American States Water Co",
+   "Ticker": "-",
+   "Identifier": "029899101",
+   "Weight": "0.1814614315",
+   "Market Value": "4456415.1",
+   "Shares Held": "59190",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Pinnacle West Capital Corp",
+   "Ticker": "-",
+   "Identifier": "723484101",
+   "Weight": "0.7744937342",
+   "Market Value": "19020381.04",
+   "Shares Held": "183382",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Northwestern Energy Group Inc",
+   "Ticker": "-",
+   "Identifier": "668074305",
+   "Weight": "0.2766882837",
+   "Market Value": "6795040.88",
+   "Shares Held": "93932",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Spire Inc",
+   "Ticker": "-",
+   "Identifier": "84857L101",
+   "Weight": "0.3353190057",
+   "Market Value": "8234921.7",
+   "Shares Held": "90315",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Entergy Corp",
+   "Ticker": "-",
+   "Identifier": "29364G103",
+   "Weight": "3.2852031981",
+   "Market Value": "80679563.77",
+   "Shares Held": "684247",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Black Hills Corp",
+   "Ticker": "-",
+   "Identifier": "092113109",
+   "Weight": "0.3549457953",
+   "Market Value": "8716925.62",
+   "Shares Held": "115778",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Middlesex Water Co",
+   "Ticker": "-",
+   "Identifier": "596680108",
+   "Weight": "0.0585487943",
+   "Market Value": "1437868.8",
+   "Shares Held": "28260",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sempra",
+   "Ticker": "-",
+   "Identifier": "816851109",
+   "Weight": "3.8731938564",
+   "Market Value": "95119714.64",
+   "Shares Held": "999997",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CMS Energy Corp",
+   "Ticker": "-",
+   "Identifier": "125896100",
+   "Weight": "1.456960301",
+   "Market Value": "35780715.66",
+   "Shares Held": "466259",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Portland General Electric Co",
+   "Ticker": "-",
+   "Identifier": "736508847",
+   "Weight": "0.3648563541",
+   "Market Value": "8960313.78",
+   "Shares Held": "172546",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Consolidated Edison Inc",
+   "Ticker": "-",
+   "Identifier": "209115104",
+   "Weight": "2.5105062854",
+   "Market Value": "61654192.98",
+   "Shares Held": "553002",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Northwest Natural Holding Co",
+   "Ticker": "-",
+   "Identifier": "66765N105",
+   "Weight": "0.1374740779",
+   "Market Value": "3376153",
+   "Shares Held": "63701",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "OGE Energy Corp",
+   "Ticker": "-",
+   "Identifier": "670837103",
+   "Weight": "0.6276098828",
+   "Market Value": "15413138.4",
+   "Shares Held": "315843",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Alliant Energy Corp",
+   "Ticker": "-",
+   "Identifier": "018802108",
+   "Weight": "1.1775873977",
+   "Market Value": "28919744.63",
+   "Shares Held": "393841",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MGE Energy Inc",
+   "Ticker": "-",
+   "Identifier": "55277P104",
+   "Weight": "0.182587",
+   "Market Value": "4484057.34",
+   "Shares Held": "55897",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Evergy Inc",
+   "Ticker": "-",
+   "Identifier": "30034W106",
+   "Weight": "1.1897826742",
+   "Market Value": "29219241.96",
+   "Shares Held": "352719",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PG&E Corp",
+   "Ticker": "-",
+   "Identifier": "69331C108",
+   "Weight": "2.2789612067",
+   "Market Value": "55967800.14",
+   "Shares Held": "3367497",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "H2O America",
+   "Ticker": "-",
+   "Identifier": "784305104",
+   "Weight": "0.1290711635",
+   "Market Value": "3169790.28",
+   "Shares Held": "56412",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TXNM Energy Inc",
+   "Ticker": "-",
+   "Identifier": "69349H107",
+   "Weight": "0.3606467726",
+   "Market Value": "8856932.9",
+   "Shares Held": "149965",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Essential Utilities Inc",
+   "Ticker": "-",
+   "Identifier": "29670G102",
+   "Weight": "0.6746406549",
+   "Market Value": "16568142.2",
+   "Shares Held": "433721",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CenterPoint Energy Inc",
+   "Ticker": "-",
+   "Identifier": "15189T107",
+   "Weight": "1.7778938661",
+   "Market Value": "43662352.95",
+   "Shares Held": "1000283",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hallador Energy Co",
+   "Ticker": "-",
+   "Identifier": "40609P105",
+   "Weight": "0.0341478929",
+   "Market Value": "838620",
+   "Shares Held": "54000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NiSource Inc",
+   "Ticker": "-",
+   "Identifier": "65473P105",
+   "Weight": "1.437339542",
+   "Market Value": "35298859.84",
+   "Shares Held": "731128",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FirstEnergy Corp",
+   "Ticker": "-",
+   "Identifier": "337932107",
+   "Weight": "1.6269435305",
+   "Market Value": "39955243.68",
+   "Shares Held": "840809",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Eversource Energy",
+   "Ticker": "-",
+   "Identifier": "30040W108",
+   "Weight": "1.6548774784",
+   "Market Value": "40641258.7",
+   "Shares Held": "574841",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Duke Energy Corp",
+   "Ticker": "-",
+   "Identifier": "26441C204",
+   "Weight": "6.2852703544",
+   "Market Value": "154356622.65",
+   "Shares Held": "1191483",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ameren Corp",
+   "Ticker": "-",
+   "Identifier": "023608102",
+   "Weight": "1.9178938261",
+   "Market Value": "47100537.75",
+   "Shares Held": "414435",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ONE Gas Inc",
+   "Ticker": "-",
+   "Identifier": "68235P108",
+   "Weight": "0.3334296649",
+   "Market Value": "8188522.38",
+   "Shares Held": "91779",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "California Water Service Group",
+   "Ticker": "-",
+   "Identifier": "130788102",
+   "Weight": "0.1567948109",
+   "Market Value": "3850640.64",
+   "Shares Held": "91161",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Unitil Corp",
+   "Ticker": "-",
+   "Identifier": "913259107",
+   "Weight": "0.0588203812",
+   "Market Value": "1444538.56",
+   "Shares Held": "27536",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MDU Resources Group Inc",
+   "Ticker": "-",
+   "Identifier": "552690109",
+   "Weight": "0.2724914575",
+   "Market Value": "6691973.25",
+   "Shares Held": "297025",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.1569316012",
+   "Market Value": "3854000",
+   "Shares Held": "3854000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "IDACORP Inc",
+   "Ticker": "-",
+   "Identifier": "451107106",
+   "Weight": "0.4983467587",
+   "Market Value": "12238633.86",
+   "Shares Held": "82839",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UGI Corp",
+   "Ticker": "-",
+   "Identifier": "902681105",
+   "Weight": "0.4838403993",
+   "Market Value": "11882379.87",
+   "Shares Held": "329243",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chesapeake Utilities Corp",
+   "Ticker": "-",
+   "Identifier": "165303108",
+   "Weight": "0.1864545659",
+   "Market Value": "4579038.84",
+   "Shares Held": "36307",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AES Corp/The",
+   "Ticker": "-",
+   "Identifier": "00130H105",
+   "Weight": "0.6419741857",
+   "Market Value": "15765903.7",
+   "Shares Held": "1091066",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Avista Corp",
+   "Ticker": "-",
+   "Identifier": "05379B107",
+   "Weight": "0.208322706",
+   "Market Value": "5116086.9",
+   "Shares Held": "124479",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ormat Technologies Inc",
+   "Ticker": "-",
+   "Identifier": "686688102",
+   "Weight": "0.4142552794",
+   "Market Value": "10173475.8",
+   "Shares Held": "88542",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DTE Energy Co",
+   "Ticker": "-",
+   "Identifier": "233331107",
+   "Weight": "1.965415865",
+   "Market Value": "48267606.31",
+   "Shares Held": "318199",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Otter Tail Corp",
+   "Ticker": "-",
+   "Identifier": "689648103",
+   "Weight": "0.2096434895",
+   "Market Value": "5148523.32",
+   "Shares Held": "57693",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "National Fuel Gas Co",
+   "Ticker": "-",
+   "Identifier": "636180101",
+   "Weight": "0.4753748641",
+   "Market Value": "11674479.28",
+   "Shares Held": "138356",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Public Service Enterprise Group Inc",
+   "Ticker": "-",
+   "Identifier": "744573106",
+   "Weight": "2.5429630527",
+   "Market Value": "62451281.52",
+   "Shares Held": "764772",
+   "Asset Category": "EC"
+  }
+ ]
+}

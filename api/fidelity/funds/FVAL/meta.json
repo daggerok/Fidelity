@@ -1,0 +1,257 @@
+{
+ "ticker": "FVAL",
+ "name": "Fidelity Value Factor ETF",
+ "category": "Factor",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FVAL",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004222/000003540226004222-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004222/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FVAL?period1=0&period2=1787720856&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.15%",
+  "value": 0.15
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$82.46",
+  "value": 82.46,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$1,214.96 M",
+  "value": 1214957926.27,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 4.06,
+   "mo1Text": "4.06%",
+   "qtd": 5.81,
+   "qtdText": "5.81%",
+   "ytd": 15.03,
+   "ytdText": "15.03%",
+   "yr1": 24.86,
+   "yr1Text": "24.86%",
+   "yr3": 21.1,
+   "yr3Text": "21.10%",
+   "yr5": 12.52,
+   "yr5Text": "12.52%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 14.62,
+   "sinceInceptionText": "14.62%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/16/2016",
+    "0.12"
+   ],
+   [
+    "12/28/2016",
+    "0.004"
+   ],
+   [
+    "03/17/2017",
+    "0.108"
+   ],
+   [
+    "06/16/2017",
+    "0.133"
+   ],
+   [
+    "09/15/2017",
+    "0.147"
+   ],
+   [
+    "12/15/2017",
+    "0.143"
+   ],
+   [
+    "03/16/2018",
+    "0.137"
+   ],
+   [
+    "06/15/2018",
+    "0.149"
+   ],
+   [
+    "09/21/2018",
+    "0.148"
+   ],
+   [
+    "12/21/2018",
+    "0.179"
+   ],
+   [
+    "03/15/2019",
+    "0.163"
+   ],
+   [
+    "06/21/2019",
+    "0.172"
+   ],
+   [
+    "09/20/2019",
+    "0.172"
+   ],
+   [
+    "12/20/2019",
+    "0.166"
+   ],
+   [
+    "03/20/2020",
+    "0.181"
+   ],
+   [
+    "06/19/2020",
+    "0.174"
+   ],
+   [
+    "09/18/2020",
+    "0.162"
+   ],
+   [
+    "12/18/2020",
+    "0.136"
+   ],
+   [
+    "03/19/2021",
+    "0.159"
+   ],
+   [
+    "06/18/2021",
+    "0.158"
+   ],
+   [
+    "09/17/2021",
+    "0.2"
+   ],
+   [
+    "12/17/2021",
+    "0.216"
+   ],
+   [
+    "03/18/2022",
+    "0.199"
+   ],
+   [
+    "06/17/2022",
+    "0.193"
+   ],
+   [
+    "09/16/2022",
+    "0.218"
+   ],
+   [
+    "12/16/2022",
+    "0.175"
+   ],
+   [
+    "03/17/2023",
+    "0.242"
+   ],
+   [
+    "06/16/2023",
+    "0.207"
+   ],
+   [
+    "09/15/2023",
+    "0.2"
+   ],
+   [
+    "12/15/2023",
+    "0.247"
+   ],
+   [
+    "03/15/2024",
+    "0.249"
+   ],
+   [
+    "06/21/2024",
+    "0.248"
+   ],
+   [
+    "09/20/2024",
+    "0.247"
+   ],
+   [
+    "12/20/2024",
+    "0.238"
+   ],
+   [
+    "03/21/2025",
+    "0.278"
+   ],
+   [
+    "06/20/2025",
+    "0.232"
+   ],
+   [
+    "09/19/2025",
+    "0.278"
+   ],
+   [
+    "12/19/2025",
+    "0.377"
+   ],
+   [
+    "03/20/2026",
+    "0.301"
+   ],
+   [
+    "06/18/2026",
+    "0.297"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 127,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2499,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000054754",
+  "seriesName": "Fidelity Value Factor ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004222"
+ }
+}

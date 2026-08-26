@@ -1,0 +1,494 @@
+{
+ "ticker": "FCLD",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 53,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "DIGITAL REALTY TRUST INC",
+   "Ticker": "-",
+   "Identifier": "253868103",
+   "Weight": "3.0994658905",
+   "Market Value": "3421896.9",
+   "Shares Held": "19055",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EQUINIX INC",
+   "Ticker": "-",
+   "Identifier": "29444U700",
+   "Weight": "3.8984777532",
+   "Market Value": "4304028.31",
+   "Shares Held": "4129",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COMMVAULT SYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "204166102",
+   "Weight": "1.5211198284",
+   "Market Value": "1679358.77",
+   "Shares Held": "11849",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DOCUSIGN INC",
+   "Ticker": "-",
+   "Identifier": "256163106",
+   "Weight": "1.4406361306",
+   "Market Value": "1590502.52",
+   "Shares Held": "35806",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "INTAPP INC",
+   "Ticker": "-",
+   "Identifier": "45827U109",
+   "Weight": "0.8255609466",
+   "Market Value": "911442.34",
+   "Shares Held": "36154",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TRADE DESK INC (THE)",
+   "Ticker": "-",
+   "Identifier": "88339J105",
+   "Weight": "1.3705734464",
+   "Market Value": "1513151.36",
+   "Shares Held": "83692",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DROPBOX INC",
+   "Ticker": "-",
+   "Identifier": "26210C104",
+   "Weight": "1.2618463235",
+   "Market Value": "1393113.58",
+   "Shares Held": "50714",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AMAZON.COM INC",
+   "Ticker": "-",
+   "Identifier": "023135106",
+   "Weight": "1.9859005443",
+   "Market Value": "2192489.66",
+   "Shares Held": "9199",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LIVERAMP HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "53815P108",
+   "Weight": "0.9793652988",
+   "Market Value": "1081246.64",
+   "Shares Held": "28726",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "OVH GROUPE SAS",
+   "Ticker": "-",
+   "Identifier": "FR0014005HJ9",
+   "Weight": "0.4571398856",
+   "Market Value": "504695.2",
+   "Shares Held": "30698",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ELASTIC NV",
+   "Ticker": "-",
+   "Identifier": "NL0013056914",
+   "Weight": "1.1942908766",
+   "Market Value": "1318530.48",
+   "Shares Held": "23124",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MICROSOFT CORP",
+   "Ticker": "-",
+   "Identifier": "594918104",
+   "Weight": "4.1463638107",
+   "Market Value": "4577701.44",
+   "Shares Held": "12272",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SERVICENOW INC",
+   "Ticker": "-",
+   "Identifier": "81762P102",
+   "Weight": "3.6053735099",
+   "Market Value": "3980433.04",
+   "Shares Held": "40093",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ATLASSIAN CORP PLC",
+   "Ticker": "-",
+   "Identifier": "049468101",
+   "Weight": "1.537934222",
+   "Market Value": "1697922.33",
+   "Shares Held": "21827",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DATADOG INC",
+   "Ticker": "-",
+   "Identifier": "23804L103",
+   "Weight": "3.8748794824",
+   "Market Value": "4277975.16",
+   "Shares Held": "16431",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NIQ GLOBAL INTELLIGENCE PLC",
+   "Ticker": "-",
+   "Identifier": "IE000JMT8VI3",
+   "Weight": "0.5896363982",
+   "Market Value": "650975.05",
+   "Shares Held": "69623",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NICE LTD",
+   "Ticker": "-",
+   "Identifier": "IL0002730112",
+   "Weight": "1.2652726499",
+   "Market Value": "1396896.34",
+   "Shares Held": "15553",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "APPIAN CORP",
+   "Ticker": "-",
+   "Identifier": "03782L101",
+   "Weight": "0.6663026201",
+   "Market Value": "735616.7",
+   "Shares Held": "32123",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WESTERN DIGITAL CORP",
+   "Ticker": "-",
+   "Identifier": "958102105",
+   "Weight": "5.2808774313",
+   "Market Value": "5830236.16",
+   "Shares Held": "9128",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "APPLOVIN CORP",
+   "Ticker": "-",
+   "Identifier": "03831W108",
+   "Weight": "4.3228756953",
+   "Market Value": "4772575.49",
+   "Shares Held": "9263",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DIGITALOCEAN HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "25402D102",
+   "Weight": "1.6307096106",
+   "Market Value": "1800348.95",
+   "Shares Held": "11465",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "JFROG LTD",
+   "Ticker": "-",
+   "Identifier": "IL0011684185",
+   "Weight": "1.6551430596",
+   "Market Value": "1827324.16",
+   "Shares Held": "20107",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "IONOS SE",
+   "Ticker": "-",
+   "Identifier": "DE000A3E00M1",
+   "Weight": "0.7716564044",
+   "Market Value": "851930.22",
+   "Shares Held": "27355",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HUBSPOT INC",
+   "Ticker": "-",
+   "Identifier": "443573100",
+   "Weight": "1.4357420787",
+   "Market Value": "1585099.35",
+   "Shares Held": "8685",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SNOWFLAKE INC",
+   "Ticker": "-",
+   "Identifier": "833445109",
+   "Weight": "3.8452962996",
+   "Market Value": "4245314.5",
+   "Shares Held": "16681",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EVERPURE INC",
+   "Ticker": "-",
+   "Identifier": "74624M102",
+   "Weight": "2.3047633028",
+   "Market Value": "2544523.05",
+   "Shares Held": "32295",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHICAGO MERCANTILE EXCH INC",
+   "Ticker": "-",
+   "Identifier": "-",
+   "Weight": "0.0017624011",
+   "Market Value": "1945.74",
+   "Shares Held": "3",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "UIPATH INC",
+   "Ticker": "-",
+   "Identifier": "90364P105",
+   "Weight": "1.1858436808",
+   "Market Value": "1309204.54",
+   "Shares Held": "120442",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KINGSOFT CLOUD HOLDINGS LTD",
+   "Ticker": "-",
+   "Identifier": "KYG5264S1012",
+   "Weight": "0.6570505534",
+   "Market Value": "725402.16",
+   "Shares Held": "1226000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MONDAY.COM LTD",
+   "Ticker": "-",
+   "Identifier": "IL0011762130",
+   "Weight": "0.9378988839",
+   "Market Value": "1035466.56",
+   "Shares Held": "14304",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GITLAB INC",
+   "Ticker": "-",
+   "Identifier": "37637K108",
+   "Weight": "1.2025584483",
+   "Market Value": "1327658.11",
+   "Shares Held": "43487",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NUTANIX INC",
+   "Ticker": "-",
+   "Identifier": "67059N108",
+   "Weight": "1.7609834983",
+   "Market Value": "1944174.96",
+   "Shares Held": "38151",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ZOOMINFO TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "98980F104",
+   "Weight": "0.6462291242",
+   "Market Value": "713455",
+   "Shares Held": "243500",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+   "Ticker": "-",
+   "Identifier": "IE00BKVD2N49",
+   "Weight": "4.9586109817",
+   "Market Value": "5474445",
+   "Shares Held": "5673",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MONGODB INC",
+   "Ticker": "-",
+   "Identifier": "60937P106",
+   "Weight": "2.2134154776",
+   "Market Value": "2443672.5",
+   "Shares Held": "7275",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BOX INC",
+   "Ticker": "-",
+   "Identifier": "10316T104",
+   "Weight": "1.1470807483",
+   "Market Value": "1266409.18",
+   "Shares Held": "47717",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SALESFORCE INC",
+   "Ticker": "-",
+   "Identifier": "79466L302",
+   "Weight": "3.9490376065",
+   "Market Value": "4359847.8",
+   "Shares Held": "27830",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "0.098086921",
+   "Market Value": "108290.7",
+   "Shares Held": "108269.044",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "SANDISK CORP/DE",
+   "Ticker": "-",
+   "Identifier": "80004C200",
+   "Weight": "6.1475655531",
+   "Market Value": "6787084.05",
+   "Shares Held": "2985",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PEGASYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "705573103",
+   "Weight": "0.9205769308",
+   "Market Value": "1016342.64",
+   "Shares Held": "33912",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KINGDEE INTERNATIONAL SOFTWARE GROUP CO LTD",
+   "Ticker": "-",
+   "Identifier": "KYG525681477",
+   "Weight": "0.7962538256",
+   "Market Value": "879086.46",
+   "Shares Held": "1164500",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TWILIO INC",
+   "Ticker": "-",
+   "Identifier": "90138F102",
+   "Weight": "2.3118093655",
+   "Market Value": "2552302.1",
+   "Shares Held": "12370",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ZETA GLOBAL HOLDINGS CORP",
+   "Ticker": "-",
+   "Identifier": "98956A105",
+   "Weight": "1.0571671713",
+   "Market Value": "1167142.08",
+   "Shares Held": "59306",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A303",
+   "Weight": "4.7503143123",
+   "Market Value": "5244479.66",
+   "Shares Held": "5243955.263",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "ZOOM COMMUNICATIONS INC",
+   "Ticker": "-",
+   "Identifier": "98980L101",
+   "Weight": "1.9766366301",
+   "Market Value": "2182262.04",
+   "Shares Held": "25284",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WORKDAY INC",
+   "Ticker": "-",
+   "Identifier": "98138H101",
+   "Weight": "2.0877404501",
+   "Market Value": "2304923.76",
+   "Shares Held": "18828",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COREWEAVE INC",
+   "Ticker": "-",
+   "Identifier": "21873S108",
+   "Weight": "2.1630468604",
+   "Market Value": "2388064.14",
+   "Shares Held": "23991",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NETAPP INC",
+   "Ticker": "-",
+   "Identifier": "64110D104",
+   "Weight": "2.2827924364",
+   "Market Value": "2520266.6",
+   "Shares Held": "16285",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HON HAI PRECISION INDUSTRY CO LTD",
+   "Ticker": "-",
+   "Identifier": "TW0002317005",
+   "Weight": "1.7841674498",
+   "Market Value": "1969770.69",
+   "Shares Held": "250000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FIVE9 INC",
+   "Ticker": "-",
+   "Identifier": "338307101",
+   "Weight": "0.7868116913",
+   "Market Value": "868662.08",
+   "Shares Held": "40744",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DYNATRACE INC",
+   "Ticker": "-",
+   "Identifier": "268150109",
+   "Weight": "1.8294177364",
+   "Market Value": "2019728.27",
+   "Shares Held": "45997",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TERADATA CORP DEL",
+   "Ticker": "-",
+   "Identifier": "88076W103",
+   "Weight": "1.0832872715",
+   "Market Value": "1195979.4",
+   "Shares Held": "34516",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RINGCENTRAL INC",
+   "Ticker": "-",
+   "Identifier": "76680R206",
+   "Weight": "0.9746518854",
+   "Market Value": "1076042.9",
+   "Shares Held": "27605",
+   "Asset Category": "EC"
+  }
+ ]
+}

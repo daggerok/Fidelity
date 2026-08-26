@@ -1,0 +1,2267 @@
+{
+ "ticker": "FDIS",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 251,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Revolve Group Inc",
+   "Ticker": "-",
+   "Identifier": "76156B107",
+   "Weight": "0.0509482085",
+   "Market Value": "902915.1",
+   "Shares Held": "35478",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Victoria's Secret & Co",
+   "Ticker": "-",
+   "Identifier": "926400102",
+   "Weight": "0.0849999353",
+   "Market Value": "1506387.12",
+   "Shares Held": "29064",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BJ's Restaurants Inc",
+   "Ticker": "-",
+   "Identifier": "09180C106",
+   "Weight": "0.0381915243",
+   "Market Value": "676838.4",
+   "Shares Held": "17626",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Penn Entertainment Inc",
+   "Ticker": "-",
+   "Identifier": "707569109",
+   "Weight": "0.0858891143",
+   "Market Value": "1522145.34",
+   "Shares Held": "87179",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Laureate Education Inc",
+   "Ticker": "-",
+   "Identifier": "518613203",
+   "Weight": "0.0856224805",
+   "Market Value": "1517420",
+   "Shares Held": "50421",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sonos Inc",
+   "Ticker": "-",
+   "Identifier": "83570H108",
+   "Weight": "0.0565787514",
+   "Market Value": "1002700.79",
+   "Shares Held": "67613",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hyatt Hotels Corp",
+   "Ticker": "-",
+   "Identifier": "448579102",
+   "Weight": "0.1376984719",
+   "Market Value": "2440321.91",
+   "Shares Held": "14563",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Pursuit Attractions and Hospitality Inc",
+   "Ticker": "-",
+   "Identifier": "92552R406",
+   "Weight": "0.0513326086",
+   "Market Value": "909727.52",
+   "Shares Held": "21619",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Champion Homes Inc",
+   "Ticker": "-",
+   "Identifier": "830830105",
+   "Weight": "0.0869051035",
+   "Market Value": "1540150.92",
+   "Shares Held": "20204",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Camping World Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "13462K109",
+   "Weight": "0.0280366152",
+   "Market Value": "496870.92",
+   "Shares Held": "60668",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "General Motors Co",
+   "Ticker": "-",
+   "Identifier": "37045V100",
+   "Weight": "1.0919792157",
+   "Market Value": "19352290.32",
+   "Shares Held": "251688",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Krispy Kreme Inc",
+   "Ticker": "-",
+   "Identifier": "50101L106",
+   "Weight": "0.0213178049",
+   "Market Value": "377798.72",
+   "Shares Held": "95888",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Meritage Homes Corp",
+   "Ticker": "-",
+   "Identifier": "59001A102",
+   "Weight": "0.0990709023",
+   "Market Value": "1755755.82",
+   "Shares Held": "26073",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Genuine Parts Co",
+   "Ticker": "-",
+   "Identifier": "372460105",
+   "Weight": "0.2498049937",
+   "Market Value": "4427097.78",
+   "Shares Held": "41286",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chipotle Mexican Grill Inc",
+   "Ticker": "-",
+   "Identifier": "169656105",
+   "Weight": "0.6947477893",
+   "Market Value": "12312469.62",
+   "Shares Held": "362238",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Pool Corp",
+   "Ticker": "-",
+   "Identifier": "73278L105",
+   "Weight": "0.1344999874",
+   "Market Value": "2383637.68",
+   "Shares Held": "11174",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Rush Street Interactive Inc",
+   "Ticker": "-",
+   "Identifier": "782011100",
+   "Weight": "0.0979983941",
+   "Market Value": "1736748.6",
+   "Shares Held": "61806",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kontoor Brands Inc",
+   "Ticker": "-",
+   "Identifier": "50050N103",
+   "Weight": "0.0950828782",
+   "Market Value": "1685079.2",
+   "Shares Held": "22970",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "McDonald's Corp",
+   "Ticker": "-",
+   "Identifier": "580135101",
+   "Weight": "3.0903443434",
+   "Market Value": "54767746.55",
+   "Shares Held": "186545",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Goodyear Tire & Rubber Co/The",
+   "Ticker": "-",
+   "Identifier": "382550101",
+   "Weight": "0.0560580427",
+   "Market Value": "993472.68",
+   "Shares Held": "140321",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "United Parks & Resorts Inc",
+   "Ticker": "-",
+   "Identifier": "81282V100",
+   "Weight": "0.0492702382",
+   "Market Value": "873177.75",
+   "Shares Held": "24771",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Valvoline Inc",
+   "Ticker": "-",
+   "Identifier": "92047W101",
+   "Weight": "0.0890535201",
+   "Market Value": "1578225.62",
+   "Shares Held": "47494",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hilton Worldwide Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "43300A203",
+   "Weight": "1.147689808",
+   "Market Value": "20339605.41",
+   "Shares Held": "62763",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DR Horton Inc",
+   "Ticker": "-",
+   "Identifier": "23331A109",
+   "Weight": "0.6292712613",
+   "Market Value": "11152080.52",
+   "Shares Held": "72482",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Target Hospitality Corp",
+   "Ticker": "-",
+   "Identifier": "87615L107",
+   "Weight": "0.0301453979",
+   "Market Value": "534243.22",
+   "Shares Held": "36743",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tractor Supply Co",
+   "Ticker": "-",
+   "Identifier": "892356106",
+   "Weight": "0.29693622",
+   "Market Value": "5262367.5",
+   "Shares Held": "149925",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Warby Parker Inc",
+   "Ticker": "-",
+   "Identifier": "93403J106",
+   "Weight": "0.0644183206",
+   "Market Value": "1141635.32",
+   "Shares Held": "51611",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Groupon Inc",
+   "Ticker": "-",
+   "Identifier": "399473206",
+   "Weight": "0.0220091164",
+   "Market Value": "390050.29",
+   "Shares Held": "27449",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Expedia Group Inc",
+   "Ticker": "-",
+   "Identifier": "30212P303",
+   "Weight": "0.4716338031",
+   "Market Value": "8358395.61",
+   "Shares Held": "33653",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cava Group Inc",
+   "Ticker": "-",
+   "Identifier": "148929102",
+   "Weight": "0.1790433255",
+   "Market Value": "3173044.29",
+   "Shares Held": "33969",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Planet Fitness Inc",
+   "Ticker": "-",
+   "Identifier": "72703H101",
+   "Weight": "0.1066172869",
+   "Market Value": "1889494.47",
+   "Shares Held": "28341",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ollie's Bargain Outlet Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "681116109",
+   "Weight": "0.10513166",
+   "Market Value": "1863165.87",
+   "Shares Held": "21537",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "eBay Inc",
+   "Ticker": "-",
+   "Identifier": "278642103",
+   "Weight": "0.7355037053",
+   "Market Value": "13034754.72",
+   "Shares Held": "125964",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NIKE Inc",
+   "Ticker": "-",
+   "Identifier": "654106103",
+   "Weight": "0.7942876827",
+   "Market Value": "14076537",
+   "Shares Held": "317325",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Aramark",
+   "Ticker": "-",
+   "Identifier": "03852U106",
+   "Weight": "0.2175598283",
+   "Market Value": "3855642.03",
+   "Shares Held": "84387",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "H&R Block Inc",
+   "Ticker": "-",
+   "Identifier": "093671105",
+   "Weight": "0.0943813716",
+   "Market Value": "1672646.95",
+   "Shares Held": "52715",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "QuantumScape Corp",
+   "Ticker": "-",
+   "Identifier": "74767V109",
+   "Weight": "0.0789208413",
+   "Market Value": "1398652.11",
+   "Shares Held": "191859",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Burlington Stores Inc",
+   "Ticker": "-",
+   "Identifier": "122017106",
+   "Weight": "0.3327543603",
+   "Market Value": "5897144.28",
+   "Shares Held": "18428",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Polaris Inc",
+   "Ticker": "-",
+   "Identifier": "731068102",
+   "Weight": "0.0870227254",
+   "Market Value": "1542235.44",
+   "Shares Held": "23272",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Under Armour Inc",
+   "Ticker": "-",
+   "Identifier": "904311206",
+   "Weight": "0.0386479153",
+   "Market Value": "684926.66",
+   "Shares Held": "112838",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Live Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "530909100",
+   "Weight": "0.0585225332",
+   "Market Value": "1037148.91",
+   "Shares Held": "11371",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Build-A-Bear Workshop Inc",
+   "Ticker": "-",
+   "Identifier": "120076104",
+   "Weight": "0.0020239423",
+   "Market Value": "35868.74",
+   "Shares Held": "971",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gentherm Inc",
+   "Ticker": "-",
+   "Identifier": "37253A103",
+   "Weight": "0.0465863271",
+   "Market Value": "825612.9",
+   "Shares Held": "27429",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Capri Holdings Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0674397984",
+   "Market Value": "1195182.6",
+   "Shares Held": "61260",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Caesars Entertainment Inc",
+   "Ticker": "-",
+   "Identifier": "12769G100",
+   "Weight": "0.130342489",
+   "Market Value": "2309957.6",
+   "Shares Held": "83092",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Red Rock Resorts Inc",
+   "Ticker": "-",
+   "Identifier": "75700L108",
+   "Weight": "0.0701605464",
+   "Market Value": "1243400.28",
+   "Shares Held": "23043",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lithia Motors Inc",
+   "Ticker": "-",
+   "Identifier": "536797103",
+   "Weight": "0.137233183",
+   "Market Value": "2432075.96",
+   "Shares Held": "8383",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Under Armour Inc",
+   "Ticker": "-",
+   "Identifier": "904311107",
+   "Weight": "0.0422119117",
+   "Market Value": "748088.57",
+   "Shares Held": "118933",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Marriott International Inc/MD",
+   "Ticker": "-",
+   "Identifier": "571903202",
+   "Weight": "1.2531645284",
+   "Market Value": "22208851.07",
+   "Shares Held": "61403",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "National Vision Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "63845R107",
+   "Weight": "0.0547645746",
+   "Market Value": "970549.56",
+   "Shares Held": "41798",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Buckle Inc/The",
+   "Ticker": "-",
+   "Identifier": "118440106",
+   "Weight": "0.060921739",
+   "Market Value": "1079668.15",
+   "Shares Held": "19415",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Carvana Co",
+   "Ticker": "-",
+   "Identifier": "146869102",
+   "Weight": "0.8000548173",
+   "Market Value": "14178743.4",
+   "Shares Held": "35823",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Levi Strauss & Co",
+   "Ticker": "-",
+   "Identifier": "52736R102",
+   "Weight": "0.067523095",
+   "Market Value": "1196658.8",
+   "Shares Held": "53710",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Winnebago Industries Inc",
+   "Ticker": "-",
+   "Identifier": "974637100",
+   "Weight": "0.0377673025",
+   "Market Value": "669320.25",
+   "Shares Held": "20525",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lear Corp",
+   "Ticker": "-",
+   "Identifier": "521865204",
+   "Weight": "0.1295459221",
+   "Market Value": "2295840.67",
+   "Shares Held": "18059",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vail Resorts Inc",
+   "Ticker": "-",
+   "Identifier": "91879Q109",
+   "Weight": "0.0991478148",
+   "Market Value": "1757118.88",
+   "Shares Held": "13816",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Wayfair Inc",
+   "Ticker": "-",
+   "Identifier": "94419L101",
+   "Weight": "0.1218197676",
+   "Market Value": "2158916.1",
+   "Shares Held": "33770",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Churchill Downs Inc",
+   "Ticker": "-",
+   "Identifier": "171484108",
+   "Weight": "0.1333106541",
+   "Market Value": "2362560.06",
+   "Shares Held": "23394",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dutch Bros Inc",
+   "Ticker": "-",
+   "Identifier": "26701L100",
+   "Weight": "0.1449998968",
+   "Market Value": "2569719.33",
+   "Shares Held": "44683",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Frontdoor Inc",
+   "Ticker": "-",
+   "Identifier": "35905A109",
+   "Weight": "0.1142631884",
+   "Market Value": "2024996.78",
+   "Shares Held": "29506",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tri Pointe Homes Inc",
+   "Ticker": "-",
+   "Identifier": "87265H109",
+   "Weight": "0.0945567374",
+   "Market Value": "1675754.82",
+   "Shares Held": "35738",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Latham Group Inc",
+   "Ticker": "-",
+   "Identifier": "51819L107",
+   "Weight": "0.0162794042",
+   "Market Value": "288507.1",
+   "Shares Held": "47530",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fox Factory Holding Corp",
+   "Ticker": "-",
+   "Identifier": "35138V102",
+   "Weight": "0.0426567731",
+   "Market Value": "755972.5",
+   "Shares Held": "42590",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Somnigroup International Inc",
+   "Ticker": "-",
+   "Identifier": "88023U101",
+   "Weight": "0.2532945045",
+   "Market Value": "4488939.64",
+   "Shares Held": "59174",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Asbury Automotive Group Inc",
+   "Ticker": "-",
+   "Identifier": "043436104",
+   "Weight": "0.0865689243",
+   "Market Value": "1534193.08",
+   "Shares Held": "7532",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Group 1 Automotive Inc",
+   "Ticker": "-",
+   "Identifier": "398905109",
+   "Weight": "0.1040069518",
+   "Market Value": "1843233.55",
+   "Shares Held": "5165",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dream Finders Homes Inc",
+   "Ticker": "-",
+   "Identifier": "26154D100",
+   "Weight": "0.0240515648",
+   "Market Value": "426247",
+   "Shares Held": "29195",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Papa John's International Inc",
+   "Ticker": "-",
+   "Identifier": "698813102",
+   "Weight": "0.0575006017",
+   "Market Value": "1019038.02",
+   "Shares Held": "28158",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cheesecake Factory Inc/The",
+   "Ticker": "-",
+   "Identifier": "163072101",
+   "Weight": "0.0787302218",
+   "Market Value": "1395273.91",
+   "Shares Held": "22193",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Live Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "530909308",
+   "Weight": "0.0960970178",
+   "Market Value": "1703052",
+   "Shares Held": "18195",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Oxford Industries Inc",
+   "Ticker": "-",
+   "Identifier": "691497309",
+   "Weight": "0.0348623738",
+   "Market Value": "617838.48",
+   "Shares Held": "14422",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Udemy Inc",
+   "Ticker": "-",
+   "Identifier": "902685106",
+   "Weight": "0.0223329873",
+   "Market Value": "395790",
+   "Shares Held": "83500",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lennar Corp",
+   "Ticker": "-",
+   "Identifier": "526057104",
+   "Weight": "0.2990431519",
+   "Market Value": "5299707",
+   "Shares Held": "58690",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Boot Barn Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "099406100",
+   "Weight": "0.1072396008",
+   "Market Value": "1900523.25",
+   "Shares Held": "11085",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "American Eagle Outfitters Inc",
+   "Ticker": "-",
+   "Identifier": "02553E106",
+   "Weight": "0.065592061",
+   "Market Value": "1162436.6",
+   "Shares Held": "66730",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "First Watch Restaurant Group Inc",
+   "Ticker": "-",
+   "Identifier": "33748L101",
+   "Weight": "0.0394113447",
+   "Market Value": "698456.32",
+   "Shares Held": "53236",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dorman Products Inc",
+   "Ticker": "-",
+   "Identifier": "258278100",
+   "Weight": "0.0732302851",
+   "Market Value": "1297802.85",
+   "Shares Held": "11535",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Toll Brothers Inc",
+   "Ticker": "-",
+   "Identifier": "889478103",
+   "Weight": "0.2294327692",
+   "Market Value": "4066056.84",
+   "Shares Held": "28606",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Shoe Carnival Inc",
+   "Ticker": "-",
+   "Identifier": "824889109",
+   "Weight": "0.0189806275",
+   "Market Value": "336378.76",
+   "Shares Held": "18163",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hovnanian Enterprises Inc",
+   "Ticker": "-",
+   "Identifier": "442487401",
+   "Weight": "0.029794145",
+   "Market Value": "528018.24",
+   "Shares Held": "4696",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lowe's Cos Inc",
+   "Ticker": "-",
+   "Identifier": "548661107",
+   "Weight": "1.992569382",
+   "Market Value": "35312742.78",
+   "Shares Held": "147882",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Green Brick Partners Inc",
+   "Ticker": "-",
+   "Identifier": "392709101",
+   "Weight": "0.0618985294",
+   "Market Value": "1096979.04",
+   "Shares Held": "16266",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hasbro Inc",
+   "Ticker": "-",
+   "Identifier": "418056107",
+   "Weight": "0.2211345175",
+   "Market Value": "3918993.44",
+   "Shares Held": "40891",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Royal Caribbean Cruises Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "1.0293986541",
+   "Market Value": "18243224.16",
+   "Shares Held": "69166",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ralph Lauren Corp",
+   "Ticker": "-",
+   "Identifier": "751212101",
+   "Weight": "0.238753155",
+   "Market Value": "4231234.72",
+   "Shares Held": "11798",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Upbound Group Inc",
+   "Ticker": "-",
+   "Identifier": "76009N100",
+   "Weight": "0.0490504108",
+   "Market Value": "869281.92",
+   "Shares Held": "43992",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Phinia Inc",
+   "Ticker": "-",
+   "Identifier": "71880K101",
+   "Weight": "0.074009646",
+   "Market Value": "1311614.85",
+   "Shares Held": "18179",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0009012158",
+   "Market Value": "15971.54",
+   "Shares Held": "2",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Kohl's Corp",
+   "Ticker": "-",
+   "Identifier": "500255104",
+   "Weight": "0.048532581",
+   "Market Value": "860104.83",
+   "Shares Held": "60699",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Service Corp International/US",
+   "Ticker": "-",
+   "Identifier": "817565104",
+   "Weight": "0.202659416",
+   "Market Value": "3591573.72",
+   "Shares Held": "44324",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Century Communities Inc",
+   "Ticker": "-",
+   "Identifier": "156504300",
+   "Weight": "0.0482622158",
+   "Market Value": "855313.36",
+   "Shares Held": "15268",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Aptiv PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.217466529",
+   "Market Value": "3853988.56",
+   "Shares Held": "63956",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Biglari Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "08986R309",
+   "Weight": "0.0021288818",
+   "Market Value": "37728.5",
+   "Shares Held": "122",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hilton Grand Vacations Inc",
+   "Ticker": "-",
+   "Identifier": "43283X105",
+   "Weight": "0.0755322085",
+   "Market Value": "1338598.03",
+   "Shares Held": "28499",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Best Buy Co Inc",
+   "Ticker": "-",
+   "Identifier": "086516101",
+   "Weight": "0.2094801802",
+   "Market Value": "3712452.77",
+   "Shares Held": "61373",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Wingstop Inc",
+   "Ticker": "-",
+   "Identifier": "974155103",
+   "Weight": "0.089897717",
+   "Market Value": "1593186.66",
+   "Shares Held": "9711",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Williams-Sonoma Inc",
+   "Ticker": "-",
+   "Identifier": "969904101",
+   "Weight": "0.3490617294",
+   "Market Value": "6186146.98",
+   "Shares Held": "34138",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Wendy's Co/The",
+   "Ticker": "-",
+   "Identifier": "95058W100",
+   "Weight": "0.0510325738",
+   "Market Value": "904410.24",
+   "Shares Held": "129944",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sweetgreen Inc",
+   "Ticker": "-",
+   "Identifier": "87043Q108",
+   "Weight": "0.0420675725",
+   "Market Value": "745530.56",
+   "Shares Held": "108362",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coursera Inc",
+   "Ticker": "-",
+   "Identifier": "22266M104",
+   "Weight": "0.0459737852",
+   "Market Value": "814757.3",
+   "Shares Held": "136934",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "La-Z-Boy Inc",
+   "Ticker": "-",
+   "Identifier": "505336107",
+   "Weight": "0.0528425022",
+   "Market Value": "936486.18",
+   "Shares Held": "26957",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Duolingo Inc",
+   "Ticker": "-",
+   "Identifier": "26603R106",
+   "Weight": "0.090684472",
+   "Market Value": "1607129.7",
+   "Shares Held": "14597",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Shake Shack Inc",
+   "Ticker": "-",
+   "Identifier": "819047101",
+   "Weight": "0.0966079359",
+   "Market Value": "1712106.6",
+   "Shares Held": "16710",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cavco Industries Inc",
+   "Ticker": "-",
+   "Identifier": "149568107",
+   "Weight": "0.0885136542",
+   "Market Value": "1568658",
+   "Shares Held": "3094",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "O'Reilly Automotive Inc",
+   "Ticker": "-",
+   "Identifier": "67103H107",
+   "Weight": "1.2761880913",
+   "Market Value": "22616879.6",
+   "Shares Held": "227534",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RealReal Inc/The",
+   "Ticker": "-",
+   "Identifier": "88339P101",
+   "Weight": "0.0532561147",
+   "Market Value": "943816.31",
+   "Shares Held": "79379",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GigaCloud Technology Inc",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0605485441",
+   "Market Value": "1073054.31",
+   "Shares Held": "24119",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Patrick Industries Inc",
+   "Ticker": "-",
+   "Identifier": "703343103",
+   "Weight": "0.0664562532",
+   "Market Value": "1177752",
+   "Shares Held": "12664",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Garmin Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.6463637727",
+   "Market Value": "11454997.68",
+   "Shares Held": "45612",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Signet Jewelers Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0803430496",
+   "Market Value": "1423856.79",
+   "Shares Held": "15993",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dick's Sporting Goods Inc",
+   "Ticker": "-",
+   "Identifier": "253393102",
+   "Weight": "0.2606052792",
+   "Market Value": "4618502.76",
+   "Shares Held": "20353",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Universal Technical Institute Inc",
+   "Ticker": "-",
+   "Identifier": "913915104",
+   "Weight": "0.0719588047",
+   "Market Value": "1275269.4",
+   "Shares Held": "33980",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mister Car Wash Inc",
+   "Ticker": "-",
+   "Identifier": "60646V105",
+   "Weight": "0.0400453399",
+   "Market Value": "709692.12",
+   "Shares Held": "100239",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Covista Inc",
+   "Ticker": "-",
+   "Identifier": "00737L103",
+   "Weight": "0.101097465",
+   "Market Value": "1791671",
+   "Shares Held": "15550",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Marriott Vacations Worldwide Corp",
+   "Ticker": "-",
+   "Identifier": "57164Y107",
+   "Weight": "0.0745486655",
+   "Market Value": "1321167.47",
+   "Shares Held": "18347",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Airbnb Inc",
+   "Ticker": "-",
+   "Identifier": "009066101",
+   "Weight": "0.926181023",
+   "Market Value": "16413979.12",
+   "Shares Held": "116942",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Newell Brands Inc",
+   "Ticker": "-",
+   "Identifier": "651229106",
+   "Weight": "0.0554711658",
+   "Market Value": "983071.92",
+   "Shares Held": "240949",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Etsy Inc",
+   "Ticker": "-",
+   "Identifier": "29786A106",
+   "Weight": "0.1345416515",
+   "Market Value": "2384376.06",
+   "Shares Held": "37059",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ThredUp Inc",
+   "Ticker": "-",
+   "Identifier": "88556E102",
+   "Weight": "0.0239432933",
+   "Market Value": "424328.19",
+   "Shares Held": "98911",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Darden Restaurants Inc",
+   "Ticker": "-",
+   "Identifier": "237194105",
+   "Weight": "0.3727890108",
+   "Market Value": "6606646.96",
+   "Shares Held": "32941",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Brunswick Corp/DE",
+   "Ticker": "-",
+   "Identifier": "117043109",
+   "Weight": "0.107661021",
+   "Market Value": "1907991.75",
+   "Shares Held": "24015",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Serve Robotics Inc",
+   "Ticker": "-",
+   "Identifier": "81758H106",
+   "Weight": "0.0306782563",
+   "Market Value": "543686.65",
+   "Shares Held": "57655",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TJX Cos Inc/The",
+   "Ticker": "-",
+   "Identifier": "872540109",
+   "Weight": "2.587935708",
+   "Market Value": "45863952.75",
+   "Shares Held": "292593",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Texas Roadhouse Inc",
+   "Ticker": "-",
+   "Identifier": "882681109",
+   "Weight": "0.1870593546",
+   "Market Value": "3315106.08",
+   "Shares Held": "20592",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DoorDash Inc",
+   "Ticker": "-",
+   "Identifier": "25809K105",
+   "Weight": "0.9704727712",
+   "Market Value": "17198927",
+   "Shares Held": "101980",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Callaway Golf Co",
+   "Ticker": "-",
+   "Identifier": "131193104",
+   "Weight": "0.0705904881",
+   "Market Value": "1251019.8",
+   "Shares Held": "81766",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cracker Barrel Old Country Store Inc",
+   "Ticker": "-",
+   "Identifier": "22410J106",
+   "Weight": "0.0380706048",
+   "Market Value": "674695.44",
+   "Shares Held": "21542",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Accel Entertainment Inc",
+   "Ticker": "-",
+   "Identifier": "00436Q106",
+   "Weight": "0.0426058743",
+   "Market Value": "755070.46",
+   "Shares Held": "60454",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Academy Sports & Outdoors Inc",
+   "Ticker": "-",
+   "Identifier": "00402L107",
+   "Weight": "0.085743321",
+   "Market Value": "1519561.56",
+   "Shares Held": "27709",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LGI Homes Inc",
+   "Ticker": "-",
+   "Identifier": "50187T106",
+   "Weight": "0.0441503878",
+   "Market Value": "782442.66",
+   "Shares Held": "15978",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Arhaus Inc",
+   "Ticker": "-",
+   "Identifier": "04035M102",
+   "Weight": "0.0222619465",
+   "Market Value": "394531",
+   "Shares Held": "53315",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Norwegian Cruise Line Holdings Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.148314667",
+   "Market Value": "2628464.4",
+   "Shares Held": "144580",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tesla Inc",
+   "Ticker": "-",
+   "Identifier": "88160R101",
+   "Weight": "15.506238656",
+   "Market Value": "274804893.66",
+   "Shares Held": "720082",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Winmark Corp",
+   "Ticker": "-",
+   "Identifier": "974250102",
+   "Weight": "0.0457518541",
+   "Market Value": "810824.19",
+   "Shares Held": "2131",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Home Depot Inc/The",
+   "Ticker": "-",
+   "Identifier": "437076102",
+   "Weight": "4.4407498989",
+   "Market Value": "78699924",
+   "Shares Held": "239355",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Crocs Inc",
+   "Ticker": "-",
+   "Identifier": "227046109",
+   "Weight": "0.113504746",
+   "Market Value": "2011555.5",
+   "Shares Held": "19725",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dillard's Inc",
+   "Ticker": "-",
+   "Identifier": "254067101",
+   "Weight": "0.0591632167",
+   "Market Value": "1048503.24",
+   "Shares Held": "1842",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0052510203",
+   "Market Value": "93059.71",
+   "Shares Held": "10",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Bright Horizons Family Solutions Inc",
+   "Ticker": "-",
+   "Identifier": "109194100",
+   "Weight": "0.107855495",
+   "Market Value": "1911438.26",
+   "Shares Held": "23566",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Grand Canyon Education Inc",
+   "Ticker": "-",
+   "Identifier": "38526M106",
+   "Weight": "0.1058845038",
+   "Market Value": "1876507.93",
+   "Shares Held": "11099",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mattel Inc",
+   "Ticker": "-",
+   "Identifier": "577081102",
+   "Weight": "0.1001894814",
+   "Market Value": "1775579.52",
+   "Shares Held": "117744",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BorgWarner Inc",
+   "Ticker": "-",
+   "Identifier": "099724106",
+   "Weight": "0.2115052307",
+   "Market Value": "3748341.15",
+   "Shares Held": "65795",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AutoNation Inc",
+   "Ticker": "-",
+   "Identifier": "05329W102",
+   "Weight": "0.1213842081",
+   "Market Value": "2151197.02",
+   "Shares Held": "10129",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lindblad Expeditions Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "535219109",
+   "Weight": "0.0408780101",
+   "Market Value": "724448.88",
+   "Shares Held": "39096",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Autoliv Inc",
+   "Ticker": "-",
+   "Identifier": "052800109",
+   "Weight": "0.1555308801",
+   "Market Value": "2756351.68",
+   "Shares Held": "23776",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ford Motor Co",
+   "Ticker": "-",
+   "Identifier": "345370860",
+   "Weight": "0.7246971463",
+   "Market Value": "12843238.56",
+   "Shares Held": "1063182",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Domino's Pizza Inc",
+   "Ticker": "-",
+   "Identifier": "25754A201",
+   "Weight": "0.192403339",
+   "Market Value": "3409813.32",
+   "Shares Held": "10046",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Wynn Resorts Ltd",
+   "Ticker": "-",
+   "Identifier": "983134107",
+   "Weight": "0.1639569375",
+   "Market Value": "2905680.08",
+   "Shares Held": "27128",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "OneSpaWorld Holdings Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0777847841",
+   "Market Value": "1378518.66",
+   "Shares Held": "55901",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHARPLINK INC",
+   "Ticker": "-",
+   "Identifier": "820014405",
+   "Weight": "0.0117850732",
+   "Market Value": "208857.6",
+   "Shares Held": "29008",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Macy's Inc",
+   "Ticker": "-",
+   "Identifier": "55616P104",
+   "Weight": "0.1071662804",
+   "Market Value": "1899223.85",
+   "Shares Held": "97147",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DraftKings Inc",
+   "Ticker": "-",
+   "Identifier": "26142V105",
+   "Weight": "0.1874920003",
+   "Market Value": "3322773.52",
+   "Shares Held": "142486",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "G-III Apparel Group Ltd",
+   "Ticker": "-",
+   "Identifier": "36237H101",
+   "Weight": "0.0527101441",
+   "Market Value": "934140.5",
+   "Shares Held": "29950",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "YETI Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "98585X104",
+   "Weight": "0.0737689543",
+   "Market Value": "1307349.26",
+   "Shares Held": "33131",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sonic Automotive Inc",
+   "Ticker": "-",
+   "Identifier": "83545G102",
+   "Weight": "0.0631387644",
+   "Market Value": "1118958.75",
+   "Shares Held": "14209",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MGM Resorts International",
+   "Ticker": "-",
+   "Identifier": "552953101",
+   "Weight": "0.1572566305",
+   "Market Value": "2786935.8",
+   "Shares Held": "71570",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Taylor Morrison Home Corp",
+   "Ticker": "-",
+   "Identifier": "87724P106",
+   "Weight": "0.1185173079",
+   "Market Value": "2100389.2",
+   "Shares Held": "34580",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Graham Holdings Co",
+   "Ticker": "-",
+   "Identifier": "384637104",
+   "Weight": "0.0896882342",
+   "Market Value": "1589474.16",
+   "Shares Held": "1416",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ross Stores Inc",
+   "Ticker": "-",
+   "Identifier": "778296103",
+   "Weight": "1.1278180334",
+   "Market Value": "19987433.55",
+   "Shares Held": "87745",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Perdoceo Education Corp",
+   "Ticker": "-",
+   "Identifier": "71363P106",
+   "Weight": "0.0781556599",
+   "Market Value": "1385091.4",
+   "Shares Held": "40810",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lululemon Athletica Inc",
+   "Ticker": "-",
+   "Identifier": "550021109",
+   "Weight": "0.2435322631",
+   "Market Value": "4315931.1",
+   "Shares Held": "31343",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CarMax Inc",
+   "Ticker": "-",
+   "Identifier": "143130102",
+   "Weight": "0.1144971383",
+   "Market Value": "2029142.89",
+   "Shares Held": "51619",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Bath & Body Works Inc",
+   "Ticker": "-",
+   "Identifier": "070830104",
+   "Weight": "0.086027703",
+   "Market Value": "1524601.44",
+   "Shares Held": "78426",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Carter's Inc",
+   "Ticker": "-",
+   "Identifier": "146229109",
+   "Weight": "0.0500664169",
+   "Market Value": "887287.8",
+   "Shares Held": "24565",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Columbia Sportswear Co",
+   "Ticker": "-",
+   "Identifier": "198516106",
+   "Weight": "0.0571689558",
+   "Market Value": "1013160.52",
+   "Shares Held": "16631",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kura Sushi USA Inc",
+   "Ticker": "-",
+   "Identifier": "501270102",
+   "Weight": "0.0212452897",
+   "Market Value": "376513.59",
+   "Shares Held": "6837",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LCI Industries",
+   "Ticker": "-",
+   "Identifier": "50189K103",
+   "Weight": "0.0693770992",
+   "Market Value": "1229515.86",
+   "Shares Held": "10313",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Bloomin' Brands Inc",
+   "Ticker": "-",
+   "Identifier": "094235108",
+   "Weight": "0.0268920619",
+   "Market Value": "476586.9",
+   "Shares Held": "78129",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Boyd Gaming Corp",
+   "Ticker": "-",
+   "Identifier": "103304101",
+   "Weight": "0.1063630625",
+   "Market Value": "1884989.05",
+   "Shares Held": "21679",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Malibu Boats Inc",
+   "Ticker": "-",
+   "Identifier": "56117J100",
+   "Weight": "0.0283009321",
+   "Market Value": "501555.2",
+   "Shares Held": "19592",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Penske Automotive Group Inc",
+   "Ticker": "-",
+   "Identifier": "70959W103",
+   "Weight": "0.0858847773",
+   "Market Value": "1522068.48",
+   "Shares Held": "8874",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Advance Auto Parts Inc",
+   "Ticker": "-",
+   "Identifier": "00751Y106",
+   "Weight": "0.0890255044",
+   "Market Value": "1577729.12",
+   "Shares Held": "26512",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LKQ Corp",
+   "Ticker": "-",
+   "Identifier": "501889208",
+   "Weight": "0.1529674454",
+   "Market Value": "2710921.94",
+   "Shares Held": "85843",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Global Business Travel Group I",
+   "Ticker": "-",
+   "Identifier": "37890B100",
+   "Weight": "0.0356849899",
+   "Market Value": "632417.06",
+   "Shares Held": "107921",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Savers Value Village Inc",
+   "Ticker": "-",
+   "Identifier": "80517M109",
+   "Weight": "0.0188809103",
+   "Market Value": "334611.55",
+   "Shares Held": "39599",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Travel + Leisure Co",
+   "Ticker": "-",
+   "Identifier": "894164102",
+   "Weight": "0.0921253359",
+   "Market Value": "1632665",
+   "Shares Held": "25250",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Beazer Homes USA Inc",
+   "Ticker": "-",
+   "Identifier": "07556Q881",
+   "Weight": "0.0348807914",
+   "Market Value": "618164.88",
+   "Shares Held": "28632",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Starbucks Corp",
+   "Ticker": "-",
+   "Identifier": "855244109",
+   "Weight": "1.7826241476",
+   "Market Value": "31592048.22",
+   "Shares Held": "299934",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sturm Ruger & Co Inc",
+   "Ticker": "-",
+   "Identifier": "864159108",
+   "Weight": "0.036395971",
+   "Market Value": "645017.22",
+   "Shares Held": "14869",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Yum! Brands Inc",
+   "Ticker": "-",
+   "Identifier": "988498101",
+   "Weight": "0.6888685146",
+   "Market Value": "12208275.85",
+   "Shares Held": "76469",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Garrett Motion Inc",
+   "Ticker": "-",
+   "Identifier": "366505105",
+   "Weight": "0.1083028883",
+   "Market Value": "1919367.06",
+   "Shares Held": "74946",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Abercrombie & Fitch Co",
+   "Ticker": "-",
+   "Identifier": "002896207",
+   "Weight": "0.0891680447",
+   "Market Value": "1580255.25",
+   "Shares Held": "18515",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PulteGroup Inc",
+   "Ticker": "-",
+   "Identifier": "745867101",
+   "Weight": "0.3821062729",
+   "Market Value": "6771769.48",
+   "Shares Held": "55343",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Figs Inc",
+   "Ticker": "-",
+   "Identifier": "30260D103",
+   "Weight": "0.0712199467",
+   "Market Value": "1262175.2",
+   "Shares Held": "84370",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sally Beauty Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "79546E104",
+   "Weight": "0.0517745353",
+   "Market Value": "917559.44",
+   "Shares Held": "64708",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Carnival Corp",
+   "Ticker": "-",
+   "Identifier": "143658300",
+   "Weight": "0.4497849681",
+   "Market Value": "7971185.86",
+   "Shares Held": "300686",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ulta Beauty Inc",
+   "Ticker": "-",
+   "Identifier": "90384S303",
+   "Weight": "0.3785545656",
+   "Market Value": "6708825.36",
+   "Shares Held": "12482",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.1438872068",
+   "Market Value": "2550000",
+   "Shares Held": "2550000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "RH",
+   "Ticker": "-",
+   "Identifier": "74967X103",
+   "Weight": "0.0511690624",
+   "Market Value": "906829.12",
+   "Shares Held": "6872",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Driven Brands Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "26210V102",
+   "Weight": "0.0409399838",
+   "Market Value": "725547.19",
+   "Shares Held": "53467",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Six Flags Entertainment Corp",
+   "Ticker": "-",
+   "Identifier": "83001C108",
+   "Weight": "0.0685034634",
+   "Market Value": "1214033.1",
+   "Shares Held": "64645",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gentex Corp",
+   "Ticker": "-",
+   "Identifier": "371901109",
+   "Weight": "0.1072003071",
+   "Market Value": "1899826.88",
+   "Shares Held": "82208",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AutoZone Inc",
+   "Ticker": "-",
+   "Identifier": "053332102",
+   "Weight": "0.9409401229",
+   "Market Value": "16675543.06",
+   "Shares Held": "4502",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ADT Inc",
+   "Ticker": "-",
+   "Identifier": "00090Q103",
+   "Weight": "0.0931495848",
+   "Market Value": "1650816.96",
+   "Shares Held": "219232",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Five Below Inc",
+   "Ticker": "-",
+   "Identifier": "33829M101",
+   "Weight": "0.2303647633",
+   "Market Value": "4082573.84",
+   "Shares Held": "17324",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ethan Allen Interiors Inc",
+   "Ticker": "-",
+   "Identifier": "297602104",
+   "Weight": "0.0296747874",
+   "Market Value": "525902.96",
+   "Shares Held": "24644",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Peloton Interactive Inc",
+   "Ticker": "-",
+   "Identifier": "70614W100",
+   "Weight": "0.0729802797",
+   "Market Value": "1293372.2",
+   "Shares Held": "237316",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NVR Inc",
+   "Ticker": "-",
+   "Identifier": "62944T105",
+   "Weight": "0.2815414061",
+   "Market Value": "4989537.3",
+   "Shares Held": "790",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Leggett & Platt Inc",
+   "Ticker": "-",
+   "Identifier": "524660107",
+   "Weight": "0.0536525703",
+   "Market Value": "950842.38",
+   "Shares Held": "87474",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PVH Corp",
+   "Ticker": "-",
+   "Identifier": "693656100",
+   "Weight": "0.1074595298",
+   "Market Value": "1904420.88",
+   "Shares Held": "20827",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tapestry Inc",
+   "Ticker": "-",
+   "Identifier": "876030107",
+   "Weight": "0.4709691723",
+   "Market Value": "8346616.88",
+   "Shares Held": "57547",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Petco Health & Wellness Co Inc",
+   "Ticker": "-",
+   "Identifier": "71601V105",
+   "Weight": "0.0163287604",
+   "Market Value": "289381.8",
+   "Shares Held": "101895",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Life Time Group Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "53190C102",
+   "Weight": "0.0886586056",
+   "Market Value": "1571226.86",
+   "Shares Held": "58606",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Choice Hotels International Inc",
+   "Ticker": "-",
+   "Identifier": "169905106",
+   "Weight": "0.0717960688",
+   "Market Value": "1272385.36",
+   "Shares Held": "12842",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Monarch Casino & Resort Inc",
+   "Ticker": "-",
+   "Identifier": "609027107",
+   "Weight": "0.0662692309",
+   "Market Value": "1174437.55",
+   "Shares Held": "9895",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Strategic Education Inc",
+   "Ticker": "-",
+   "Identifier": "86272C103",
+   "Weight": "0.062951048",
+   "Market Value": "1115632",
+   "Shares Held": "14230",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GameStop Corp",
+   "Ticker": "-",
+   "Identifier": "36467W109",
+   "Weight": "0.1939169551",
+   "Market Value": "3436637.95",
+   "Shares Held": "137741",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MarineMax Inc",
+   "Ticker": "-",
+   "Identifier": "567908108",
+   "Weight": "0.032059258",
+   "Market Value": "568161.06",
+   "Shares Held": "19769",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chewy Inc",
+   "Ticker": "-",
+   "Identifier": "16679L109",
+   "Weight": "0.1203842292",
+   "Market Value": "2133475.18",
+   "Shares Held": "83929",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Rivian Automotive Inc",
+   "Ticker": "-",
+   "Identifier": "76954A103",
+   "Weight": "0.226806233",
+   "Market Value": "4019508.8",
+   "Shares Held": "245092",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MercadoLibre Inc",
+   "Ticker": "-",
+   "Identifier": "58733R102",
+   "Weight": "1.219685726",
+   "Market Value": "21615532.54",
+   "Shares Held": "12058",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Murphy USA Inc",
+   "Ticker": "-",
+   "Identifier": "626755102",
+   "Weight": "0.2074332143",
+   "Market Value": "3676176",
+   "Shares Held": "6252",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Versigent PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0420692563",
+   "Market Value": "745560.4",
+   "Shares Held": "21320",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Matthews International Corp",
+   "Ticker": "-",
+   "Identifier": "577128101",
+   "Weight": "0.0484056494",
+   "Market Value": "857855.32",
+   "Shares Held": "30058",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Harley-Davidson Inc",
+   "Ticker": "-",
+   "Identifier": "412822108",
+   "Weight": "0.081349303",
+   "Market Value": "1441689.83",
+   "Shares Held": "60347",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Visteon Corp",
+   "Ticker": "-",
+   "Identifier": "92839U206",
+   "Weight": "0.082082721",
+   "Market Value": "1454687.62",
+   "Shares Held": "13022",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gap Inc/The",
+   "Ticker": "-",
+   "Identifier": "364760108",
+   "Weight": "0.1186000087",
+   "Market Value": "2101854.84",
+   "Shares Held": "85476",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Urban Outfitters Inc",
+   "Ticker": "-",
+   "Identifier": "917047102",
+   "Weight": "0.094526415",
+   "Market Value": "1675217.44",
+   "Shares Held": "23816",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Installed Building Products Inc",
+   "Ticker": "-",
+   "Identifier": "45780R101",
+   "Weight": "0.127958862",
+   "Market Value": "2267714.45",
+   "Shares Held": "7859",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mobileye Global Inc",
+   "Ticker": "-",
+   "Identifier": "60741F104",
+   "Weight": "0.0531788992",
+   "Market Value": "942447.88",
+   "Shares Held": "108452",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Deckers Outdoor Corp",
+   "Ticker": "-",
+   "Identifier": "243537107",
+   "Weight": "0.2501107354",
+   "Market Value": "4432516.2",
+   "Shares Held": "43371",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Legacy Housing Corp",
+   "Ticker": "-",
+   "Identifier": "52472M101",
+   "Weight": "0.0151654154",
+   "Market Value": "268764.75",
+   "Shares Held": "12357",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Wolverine World Wide Inc",
+   "Ticker": "-",
+   "Identifier": "978097103",
+   "Weight": "0.0531059433",
+   "Market Value": "941154.94",
+   "Shares Held": "55297",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Solid Power Inc",
+   "Ticker": "-",
+   "Identifier": "83422N105",
+   "Weight": "0.0320691151",
+   "Market Value": "568335.75",
+   "Shares Held": "164735",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Wyndham Hotels & Resorts Inc",
+   "Ticker": "-",
+   "Identifier": "98311A105",
+   "Weight": "0.1258523087",
+   "Market Value": "2230381.66",
+   "Shares Held": "27407",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Las Vegas Sands Corp",
+   "Ticker": "-",
+   "Identifier": "517834107",
+   "Weight": "0.2782050251",
+   "Market Value": "4930409.24",
+   "Shares Held": "90284",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Navan Inc",
+   "Ticker": "-",
+   "Identifier": "639193101",
+   "Weight": "0.0049048779",
+   "Market Value": "86925.3",
+   "Shares Held": "4970",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Adient PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0526944406",
+   "Market Value": "933862.2",
+   "Shares Held": "44364",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Standard Motor Products Inc",
+   "Ticker": "-",
+   "Identifier": "853666105",
+   "Weight": "0.0401339908",
+   "Market Value": "711263.21",
+   "Shares Held": "19033",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Booking Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "09857L108",
+   "Weight": "2.026147466",
+   "Market Value": "35907820.8",
+   "Shares Held": "213280",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Thor Industries Inc",
+   "Ticker": "-",
+   "Identifier": "885160101",
+   "Weight": "0.0824062956",
+   "Market Value": "1460422.08",
+   "Shares Held": "18477",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Acushnet Holdings Corp",
+   "Ticker": "-",
+   "Identifier": "005098108",
+   "Weight": "0.0756106846",
+   "Market Value": "1339988.8",
+   "Shares Held": "13840",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "XPEL Inc",
+   "Ticker": "-",
+   "Identifier": "98379L100",
+   "Weight": "0.049070415",
+   "Market Value": "869636.44",
+   "Shares Held": "18262",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Steven Madden Ltd",
+   "Ticker": "-",
+   "Identifier": "556269108",
+   "Weight": "0.0732476819",
+   "Market Value": "1298111.16",
+   "Shares Held": "34561",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VF Corp",
+   "Ticker": "-",
+   "Identifier": "918204108",
+   "Weight": "0.1254297571",
+   "Market Value": "2222893.11",
+   "Shares Held": "117427",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dave & Buster's Entertainment Inc",
+   "Ticker": "-",
+   "Identifier": "238337109",
+   "Weight": "0.0179477121",
+   "Market Value": "318073.21",
+   "Shares Held": "28223",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dauch Corporation",
+   "Ticker": "-",
+   "Identifier": "024061103",
+   "Weight": "0.0469253722",
+   "Market Value": "831621.53",
+   "Shares Held": "145643",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Flutter Entertainment PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.2897241638",
+   "Market Value": "5134553.89",
+   "Shares Held": "47573",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cricut Inc",
+   "Ticker": "-",
+   "Identifier": "22658D100",
+   "Weight": "0.0122026824",
+   "Market Value": "216258.56",
+   "Shares Held": "50176",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Whirlpool Corp",
+   "Ticker": "-",
+   "Identifier": "963320106",
+   "Weight": "0.0771392948",
+   "Market Value": "1367079.16",
+   "Shares Held": "24386",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Amazon.com Inc",
+   "Ticker": "-",
+   "Identifier": "023135106",
+   "Weight": "28.8025881353",
+   "Market Value": "510445656.44",
+   "Shares Held": "1925774",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gold.com Inc",
+   "Ticker": "-",
+   "Identifier": "00181T107",
+   "Weight": "0.0389702288",
+   "Market Value": "690638.77",
+   "Shares Held": "15283",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lucid Group Inc",
+   "Ticker": "-",
+   "Identifier": "549498202",
+   "Weight": "0.0443152097",
+   "Market Value": "785363.67",
+   "Shares Held": "123291",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dana Inc",
+   "Ticker": "-",
+   "Identifier": "235825205",
+   "Weight": "0.0981024161",
+   "Market Value": "1738592.1",
+   "Shares Held": "47698",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TopBuild Corp",
+   "Ticker": "-",
+   "Identifier": "89055F103",
+   "Weight": "0.2116550963",
+   "Market Value": "3750997.1",
+   "Shares Held": "8473",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "M/I Homes Inc",
+   "Ticker": "-",
+   "Identifier": "55305B101",
+   "Weight": "0.0817925845",
+   "Market Value": "1449545.76",
+   "Shares Held": "11024",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Stride Inc",
+   "Ticker": "-",
+   "Identifier": "86333M108",
+   "Weight": "0.1030414207",
+   "Market Value": "1826122.2",
+   "Shares Held": "18795",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mohawk Industries Inc",
+   "Ticker": "-",
+   "Identifier": "608190104",
+   "Weight": "0.1095911799",
+   "Market Value": "1942198.44",
+   "Shares Held": "18399",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Floor & Decor Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "339750101",
+   "Weight": "0.1011985246",
+   "Market Value": "1793462",
+   "Shares Held": "37055",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KB Home",
+   "Ticker": "-",
+   "Identifier": "48666K109",
+   "Weight": "0.0785601161",
+   "Market Value": "1392259.26",
+   "Shares Held": "26274",
+   "Asset Category": "EC"
+  }
+ ]
+}

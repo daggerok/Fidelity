@@ -1,0 +1,92 @@
+{
+ "ticker": "FBTC",
+ "name": "Fidelity Wise Origin Bitcoin Fund",
+ "category": "Digital Assets",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBTC",
+  "edgarFiling": null,
+  "nportDoc": null,
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBTC?period1=0&period2=1787720773&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.25%",
+  "value": 0.25
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$68.72",
+  "value": 68.72,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "—",
+  "source": "previous run"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 23.09,
+   "mo1Text": "23.09%",
+   "qtd": 31.57,
+   "qtdText": "31.57%",
+   "ytd": -9.85,
+   "ytdText": "-9.85%",
+   "yr1": -29.11,
+   "yr1Text": "-29.11%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 21.92,
+   "sinceInceptionText": "21.92%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "None",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": []
+ },
+ "holdings": {
+  "pages": [],
+  "pageSize": 250,
+  "totalRows": 0,
+  "asOf": "—"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 657,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": null,
+  "seriesName": "Fidelity Wise Origin Bitcoin Fund",
+  "trustCik": "0001852317",
+  "trustName": "Fidelity Wise Origin Bitcoin Fund",
+  "accession": null
+ }
+}

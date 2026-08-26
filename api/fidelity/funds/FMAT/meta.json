@@ -1,0 +1,302 @@
+{
+ "ticker": "FMAT",
+ "name": "Fidelity MSCI Materials Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMAT",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063875/000141036826063875-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063875/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMAT?period1=0&period2=1787720829&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$61.55",
+  "value": 61.55,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$602.78 M",
+  "value": 602781535.1100001,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 6.21,
+   "mo1Text": "6.21%",
+   "qtd": 5.27,
+   "qtdText": "5.27%",
+   "ytd": 16.72,
+   "ytdText": "16.72%",
+   "yr1": 17.44,
+   "yr1Text": "17.44%",
+   "yr3": 12.42,
+   "yr3Text": "12.42%",
+   "yr5": 7.1,
+   "yr5Text": "7.10%",
+   "yr10": 10.2,
+   "yr10Text": "10.20%",
+   "sinceInception": 9.04,
+   "sinceInceptionText": "9.04%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.1"
+   ],
+   [
+    "12/27/2013",
+    "0.002"
+   ],
+   [
+    "03/21/2014",
+    "0.125"
+   ],
+   [
+    "06/20/2014",
+    "0.085"
+   ],
+   [
+    "09/19/2014",
+    "0.116"
+   ],
+   [
+    "12/19/2014",
+    "0.127"
+   ],
+   [
+    "03/20/2015",
+    "0.127"
+   ],
+   [
+    "06/19/2015",
+    "0.128"
+   ],
+   [
+    "09/18/2015",
+    "0.156"
+   ],
+   [
+    "12/18/2015",
+    "0.107"
+   ],
+   [
+    "12/29/2015",
+    "0.006"
+   ],
+   [
+    "06/17/2016",
+    "0.121"
+   ],
+   [
+    "09/16/2016",
+    "0.134"
+   ],
+   [
+    "12/16/2016",
+    "0.113"
+   ],
+   [
+    "03/17/2017",
+    "0.133"
+   ],
+   [
+    "06/16/2017",
+    "0.135"
+   ],
+   [
+    "09/15/2017",
+    "0.123"
+   ],
+   [
+    "12/15/2017",
+    "0.144"
+   ],
+   [
+    "03/16/2018",
+    "0.144"
+   ],
+   [
+    "06/15/2018",
+    "0.159"
+   ],
+   [
+    "09/21/2018",
+    "0.148"
+   ],
+   [
+    "12/21/2018",
+    "0.168"
+   ],
+   [
+    "03/15/2019",
+    "0.128"
+   ],
+   [
+    "06/21/2019",
+    "0.191"
+   ],
+   [
+    "09/20/2019",
+    "0.162"
+   ],
+   [
+    "12/20/2019",
+    "0.168"
+   ],
+   [
+    "03/20/2020",
+    "0.205"
+   ],
+   [
+    "06/19/2020",
+    "0.149"
+   ],
+   [
+    "09/18/2020",
+    "0.169"
+   ],
+   [
+    "12/18/2020",
+    "0.173"
+   ],
+   [
+    "03/19/2021",
+    "0.163"
+   ],
+   [
+    "06/18/2021",
+    "0.178"
+   ],
+   [
+    "09/17/2021",
+    "0.197"
+   ],
+   [
+    "12/17/2021",
+    "0.186"
+   ],
+   [
+    "03/18/2022",
+    "0.201"
+   ],
+   [
+    "09/16/2022",
+    "0.2"
+   ],
+   [
+    "12/16/2022",
+    "0.206"
+   ],
+   [
+    "03/17/2023",
+    "0.199"
+   ],
+   [
+    "06/16/2023",
+    "0.211"
+   ],
+   [
+    "09/15/2023",
+    "0.208"
+   ],
+   [
+    "12/15/2023",
+    "0.214"
+   ],
+   [
+    "03/15/2024",
+    "0.207"
+   ],
+   [
+    "06/21/2024",
+    "0.187"
+   ],
+   [
+    "09/20/2024",
+    "0.21"
+   ],
+   [
+    "12/20/2024",
+    "0.205"
+   ],
+   [
+    "03/21/2025",
+    "0.22"
+   ],
+   [
+    "06/20/2025",
+    "0.224"
+   ],
+   [
+    "09/19/2025",
+    "0.216"
+   ],
+   [
+    "12/19/2025",
+    "0.21"
+   ],
+   [
+    "03/20/2026",
+    "0.198"
+   ],
+   [
+    "06/18/2026",
+    "0.211"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 106,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042578",
+  "seriesName": "Fidelity MSCI Materials Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063875"
+ }
+}
