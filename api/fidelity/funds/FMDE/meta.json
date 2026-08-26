@@ -1,0 +1,140 @@
+{
+ "ticker": "FMDE",
+ "name": "Fidelity Enhanced Mid Cap Core ETF",
+ "category": "US Equity",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMDE",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005387/000003540226005387-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005387/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMDE?period1=0&period2=1787720832&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.23%",
+  "value": 0.23
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$42.26",
+  "value": 42.26,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$7,439.42 M",
+  "value": 7439418111.57,
+  "asOfDate": "Jun 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 4.17,
+   "mo1Text": "4.17%",
+   "qtd": 4.5,
+   "qtdText": "4.50%",
+   "ytd": 16.81,
+   "ytdText": "16.81%",
+   "yr1": 19.28,
+   "yr1Text": "19.28%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 22.15,
+   "sinceInceptionText": "22.15%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/28/2023",
+    "0.026"
+   ],
+   [
+    "03/15/2024",
+    "0.093"
+   ],
+   [
+    "06/21/2024",
+    "0.077"
+   ],
+   [
+    "09/20/2024",
+    "0.098"
+   ],
+   [
+    "12/20/2024",
+    "0.098"
+   ],
+   [
+    "03/21/2025",
+    "0.111"
+   ],
+   [
+    "06/20/2025",
+    "0.108"
+   ],
+   [
+    "09/19/2025",
+    "0.121"
+   ],
+   [
+    "12/19/2025",
+    "0.106"
+   ],
+   [
+    "03/20/2026",
+    "0.107"
+   ],
+   [
+    "06/18/2026",
+    "0.104"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 427,
+  "asOf": "Jun 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 692,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000081803",
+  "seriesName": "Fidelity Enhanced Mid Cap Core ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-005387"
+ }
+}

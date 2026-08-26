@@ -1,0 +1,26 @@
+{
+ "ticker": "FDIS",
+ "page": 2,
+ "pageSize": 250,
+ "totalRows": 251,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Brinker International Inc",
+   "Ticker": "-",
+   "Identifier": "109641100",
+   "Weight": "0.1321367388",
+   "Market Value": "2341755.68",
+   "Shares Held": "15382",
+   "Asset Category": "EC"
+  }
+ ]
+}

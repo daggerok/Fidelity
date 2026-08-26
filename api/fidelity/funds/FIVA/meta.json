@@ -1,0 +1,229 @@
+{
+ "ticker": "FIVA",
+ "name": "Fidelity International Value Factor ETF",
+ "category": "Factor",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIVA",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004084/000003540226004084-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004084/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FIVA?period1=0&period2=1787720822&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.18%",
+  "value": 0.18
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$40.38",
+  "value": 40.38,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$529.68 M",
+  "value": 529675576.4200002,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 4.77,
+   "mo1Text": "4.77%",
+   "qtd": 5.62,
+   "qtdText": "5.62%",
+   "ytd": 20.22,
+   "ytdText": "20.22%",
+   "yr1": 35.19,
+   "yr1Text": "35.19%",
+   "yr3": 24.45,
+   "yr3Text": "24.45%",
+   "yr5": 14.39,
+   "yr5Text": "14.39%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 9,
+   "sinceInceptionText": "9.00%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "03/16/2018",
+    "0.143"
+   ],
+   [
+    "06/15/2018",
+    "0.293"
+   ],
+   [
+    "09/21/2018",
+    "0.118"
+   ],
+   [
+    "12/21/2018",
+    "0.097"
+   ],
+   [
+    "03/15/2019",
+    "0.2"
+   ],
+   [
+    "06/21/2019",
+    "0.374"
+   ],
+   [
+    "09/20/2019",
+    "0.176"
+   ],
+   [
+    "12/20/2019",
+    "0.077"
+   ],
+   [
+    "03/20/2020",
+    "0.167"
+   ],
+   [
+    "06/19/2020",
+    "0.115"
+   ],
+   [
+    "09/18/2020",
+    "0.135"
+   ],
+   [
+    "12/18/2020",
+    "0.12"
+   ],
+   [
+    "03/19/2021",
+    "0.212"
+   ],
+   [
+    "06/18/2021",
+    "0.22"
+   ],
+   [
+    "09/17/2021",
+    "0.218"
+   ],
+   [
+    "12/17/2021",
+    "0.267"
+   ],
+   [
+    "03/18/2022",
+    "0.217"
+   ],
+   [
+    "09/16/2022",
+    "0.188"
+   ],
+   [
+    "12/16/2022",
+    "0.082"
+   ],
+   [
+    "03/17/2023",
+    "0.219"
+   ],
+   [
+    "06/16/2023",
+    "0.352"
+   ],
+   [
+    "09/15/2023",
+    "0.159"
+   ],
+   [
+    "12/15/2023",
+    "0.157"
+   ],
+   [
+    "03/15/2024",
+    "0.236"
+   ],
+   [
+    "06/21/2024",
+    "0.296"
+   ],
+   [
+    "09/20/2024",
+    "0.21"
+   ],
+   [
+    "12/20/2024",
+    "0.111"
+   ],
+   [
+    "03/21/2025",
+    "0.256"
+   ],
+   [
+    "06/20/2025",
+    "0.342"
+   ],
+   [
+    "09/19/2025",
+    "0.176"
+   ],
+   [
+    "12/19/2025",
+    "0.142"
+   ],
+   [
+    "03/20/2026",
+    "0.307"
+   ],
+   [
+    "06/18/2026",
+    "0.388"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 109,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 2157,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000059463",
+  "seriesName": "Fidelity International Value Factor ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004084"
+ }
+}

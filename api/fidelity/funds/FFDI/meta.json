@@ -1,0 +1,127 @@
+{
+ "ticker": "FFDI",
+ "name": "Fidelity Fundamental Developed International ETF",
+ "category": "International",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFDI",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004054/000003540226004054-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004054/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FFDI?period1=0&period2=1787720810&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.55%",
+  "value": 0.55
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$33.19",
+  "value": 33.1889,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$22.04 M",
+  "value": 22041930.15999999,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 4.18,
+   "mo1Text": "4.18%",
+   "qtd": 2.15,
+   "qtdText": "2.15%",
+   "ytd": 10.98,
+   "ytdText": "10.98%",
+   "yr1": 14.18,
+   "yr1Text": "14.18%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 19.93,
+   "sinceInceptionText": "19.93%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2024",
+    "0.007"
+   ],
+   [
+    "12/30/2024",
+    "0.089"
+   ],
+   [
+    "03/21/2025",
+    "0.047"
+   ],
+   [
+    "06/20/2025",
+    "0.289"
+   ],
+   [
+    "09/19/2025",
+    "0.032"
+   ],
+   [
+    "12/19/2025",
+    "0.284"
+   ],
+   [
+    "03/20/2026",
+    "0.062"
+   ],
+   [
+    "06/18/2026",
+    "0.269"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 101,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 439,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000087781",
+  "seriesName": "Fidelity Fundamental Developed International ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004054"
+ }
+}

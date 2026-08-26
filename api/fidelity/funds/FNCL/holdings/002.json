@@ -1,0 +1,1241 @@
+{
+ "ticker": "FNCL",
+ "page": 2,
+ "pageSize": 250,
+ "totalRows": 386,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Perella Weinberg Partners",
+   "Ticker": "-",
+   "Identifier": "71367G102",
+   "Weight": "0.0189004151",
+   "Market Value": "418506.96",
+   "Shares Held": "18404",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Merchants Bancorp/IN",
+   "Ticker": "-",
+   "Identifier": "58844R108",
+   "Weight": "0.0116692916",
+   "Market Value": "258390.08",
+   "Shares Held": "5552",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cincinnati Financial Corp",
+   "Ticker": "-",
+   "Identifier": "172062101",
+   "Weight": "0.302363965",
+   "Market Value": "6695166.4",
+   "Shares Held": "40924",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Goldman Sachs Group Inc/The",
+   "Ticker": "-",
+   "Identifier": "38141G104",
+   "Weight": "3.2819815873",
+   "Market Value": "72672062.13",
+   "Shares Held": "78669",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Preferred Bank/Los Angeles CA",
+   "Ticker": "-",
+   "Identifier": "740367404",
+   "Weight": "0.0083423961",
+   "Market Value": "184723.5",
+   "Shares Held": "1950",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HBT Financial Inc",
+   "Ticker": "-",
+   "Identifier": "404111106",
+   "Weight": "0.0035404039",
+   "Market Value": "78394.24",
+   "Shares Held": "2824",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Goosehead Insurance Inc",
+   "Ticker": "-",
+   "Identifier": "38267D109",
+   "Weight": "0.0129073909",
+   "Market Value": "285804.99",
+   "Shares Held": "6381",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Affirm Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "00827B106",
+   "Weight": "0.2096389327",
+   "Market Value": "4641980.2",
+   "Shares Held": "72215",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Stellar Bancorp Inc",
+   "Ticker": "-",
+   "Identifier": "858927106",
+   "Weight": "0.0209828241",
+   "Market Value": "464617.2",
+   "Shares Held": "12370",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FactSet Research Systems Inc",
+   "Ticker": "-",
+   "Identifier": "303075105",
+   "Weight": "0.0996335867",
+   "Market Value": "2206160.52",
+   "Shares Held": "9694",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity National Information Services Inc",
+   "Ticker": "-",
+   "Identifier": "31620M106",
+   "Weight": "0.288156122",
+   "Market Value": "6380565.84",
+   "Shares Held": "137128",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cathay General Bancorp",
+   "Ticker": "-",
+   "Identifier": "149150104",
+   "Weight": "0.0460912466",
+   "Market Value": "1020586.45",
+   "Shares Held": "18215",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Erie Indemnity Co",
+   "Ticker": "-",
+   "Identifier": "29530P102",
+   "Weight": "0.0661553488",
+   "Market Value": "1464860.63",
+   "Shares Held": "6691",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Skyward Specialty Insurance Group Inc",
+   "Ticker": "-",
+   "Identifier": "830940102",
+   "Weight": "0.0193887801",
+   "Market Value": "429320.7",
+   "Shares Held": "9446",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Atlantic Union Bankshares Corp",
+   "Ticker": "-",
+   "Identifier": "04911A107",
+   "Weight": "0.0642487314",
+   "Market Value": "1422642.9",
+   "Shares Held": "37786",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Flywire Corp",
+   "Ticker": "-",
+   "Identifier": "302492103",
+   "Weight": "0.017821964",
+   "Market Value": "394627.1",
+   "Shares Held": "29210",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Charles Schwab Corp/The",
+   "Ticker": "-",
+   "Identifier": "808513105",
+   "Weight": "1.8306529646",
+   "Market Value": "40535671.04",
+   "Shares Held": "442336",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MetLife Inc",
+   "Ticker": "-",
+   "Identifier": "59156R108",
+   "Weight": "0.5295857811",
+   "Market Value": "11726479.8",
+   "Shares Held": "146398",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Seacoast Banking Corp of Florida",
+   "Ticker": "-",
+   "Identifier": "811707801",
+   "Weight": "0.0367033521",
+   "Market Value": "812712.75",
+   "Shares Held": "25825",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Aflac Inc",
+   "Ticker": "-",
+   "Identifier": "001055102",
+   "Weight": "0.6765403114",
+   "Market Value": "14980455.63",
+   "Shares Held": "131789",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Business First Bancshares Inc",
+   "Ticker": "-",
+   "Identifier": "12326C105",
+   "Weight": "0.0100900254",
+   "Market Value": "223420.8",
+   "Shares Held": "8160",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Northwest Bancshares Inc",
+   "Ticker": "-",
+   "Identifier": "667340103",
+   "Weight": "0.0244524626",
+   "Market Value": "541444.5",
+   "Shares Held": "39150",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Capital City Bank Group Inc",
+   "Ticker": "-",
+   "Identifier": "139674105",
+   "Weight": "0.0064325578",
+   "Market Value": "142434.45",
+   "Shares Held": "3085",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cullen/Frost Bankers Inc",
+   "Ticker": "-",
+   "Identifier": "229899109",
+   "Weight": "0.1028587717",
+   "Market Value": "2277574.95",
+   "Shares Held": "15715",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Voya Financial Inc",
+   "Ticker": "-",
+   "Identifier": "929089100",
+   "Weight": "0.0957599305",
+   "Market Value": "2120387.16",
+   "Shares Held": "25871",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ARMOUR Residential REIT Inc",
+   "Ticker": "-",
+   "Identifier": "042315705",
+   "Weight": "0.0233394142",
+   "Market Value": "516798.56",
+   "Shares Held": "29464",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KKR & Co Inc",
+   "Ticker": "-",
+   "Identifier": "48251W104",
+   "Weight": "0.7714079065",
+   "Market Value": "17081084.04",
+   "Shares Held": "163706",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Globe Life Inc",
+   "Ticker": "-",
+   "Identifier": "37959E102",
+   "Weight": "0.1488037311",
+   "Market Value": "3294922.2",
+   "Shares Held": "21354",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "National Bank Holdings Corp",
+   "Ticker": "-",
+   "Identifier": "633707104",
+   "Weight": "0.0186360322",
+   "Market Value": "412652.8",
+   "Shares Held": "9664",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Brown & Brown Inc",
+   "Ticker": "-",
+   "Identifier": "115236101",
+   "Weight": "0.2052779095",
+   "Market Value": "4545415.2",
+   "Shares Held": "75568",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WaFd Inc",
+   "Ticker": "-",
+   "Identifier": "938824109",
+   "Weight": "0.0331670077",
+   "Market Value": "734408.4",
+   "Shares Held": "20746",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Central Pacific Financial Corp",
+   "Ticker": "-",
+   "Identifier": "154760409",
+   "Weight": "0.0099752501",
+   "Market Value": "220879.36",
+   "Shares Held": "6637",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Aon PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.7513579733",
+   "Market Value": "16637123.6",
+   "Shares Held": "53384",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hancock Whitney Corp",
+   "Ticker": "-",
+   "Identifier": "410120109",
+   "Weight": "0.0686815556",
+   "Market Value": "1520797.77",
+   "Shares Held": "22527",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Rocket Cos Inc",
+   "Ticker": "-",
+   "Identifier": "77311W101",
+   "Weight": "0.1600923056",
+   "Market Value": "3544882.16",
+   "Shares Held": "242468",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Blackstone Inc",
+   "Ticker": "-",
+   "Identifier": "09260D107",
+   "Weight": "1.0985302727",
+   "Market Value": "24324469.26",
+   "Shares Held": "193697",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Piper Sandler Cos",
+   "Ticker": "-",
+   "Identifier": "724078209",
+   "Weight": "0.0745400824",
+   "Market Value": "1650521.6",
+   "Shares Held": "18928",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WEX Inc",
+   "Ticker": "-",
+   "Identifier": "96208T104",
+   "Weight": "0.0594117025",
+   "Market Value": "1315537.83",
+   "Shares Held": "8751",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Allstate Corp/The",
+   "Ticker": "-",
+   "Identifier": "020002101",
+   "Weight": "0.6742174403",
+   "Market Value": "14929020.9",
+   "Shares Held": "68715",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Palomar Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "69753M105",
+   "Weight": "0.0374741054",
+   "Market Value": "829779.34",
+   "Shares Held": "6893",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Federated Hermes Inc",
+   "Ticker": "-",
+   "Identifier": "314211103",
+   "Weight": "0.0502046438",
+   "Market Value": "1111668.33",
+   "Shares Held": "19137",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Renasant Corp",
+   "Ticker": "-",
+   "Identifier": "75970E107",
+   "Weight": "0.046925302",
+   "Market Value": "1039054.72",
+   "Shares Held": "26048",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LPL Financial Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "50212V100",
+   "Weight": "0.3167504611",
+   "Market Value": "7013722.83",
+   "Shares Held": "20991",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "S&T Bancorp Inc",
+   "Ticker": "-",
+   "Identifier": "783859101",
+   "Weight": "0.0207887573",
+   "Market Value": "460320.03",
+   "Shares Held": "10431",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Citizens Financial Group Inc",
+   "Ticker": "-",
+   "Identifier": "174610105",
+   "Weight": "0.3358180081",
+   "Market Value": "7435930.55",
+   "Shares Held": "114311",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Euronet Worldwide Inc",
+   "Ticker": "-",
+   "Identifier": "298736109",
+   "Weight": "0.0366398852",
+   "Market Value": "811307.42",
+   "Shares Held": "11209",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PRA Group Inc",
+   "Ticker": "-",
+   "Identifier": "69354N106",
+   "Weight": "0.0096655332",
+   "Market Value": "214021.38",
+   "Shares Held": "9822",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Texas Capital Bancshares Inc",
+   "Ticker": "-",
+   "Identifier": "88224Q107",
+   "Weight": "0.0533543927",
+   "Market Value": "1181412.4",
+   "Shares Held": "11732",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Bank of New York Mellon Corp/The",
+   "Ticker": "-",
+   "Identifier": "064058100",
+   "Weight": "1.0931655923",
+   "Market Value": "24205680.54",
+   "Shares Held": "180142",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Morgan Stanley",
+   "Ticker": "-",
+   "Identifier": "617446448",
+   "Weight": "2.6800146269",
+   "Market Value": "59342864.76",
+   "Shares Held": "311364",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PROG Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "74319R101",
+   "Weight": "0.0177946598",
+   "Market Value": "394022.51",
+   "Shares Held": "10997",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.2501497419",
+   "Market Value": "5539000.48",
+   "Shares Held": "5539000.48",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Fulton Financial Corp",
+   "Ticker": "-",
+   "Identifier": "360271100",
+   "Weight": "0.0479094404",
+   "Market Value": "1060846.24",
+   "Shares Held": "49136",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Credit Acceptance Corp",
+   "Ticker": "-",
+   "Identifier": "225310101",
+   "Weight": "0.0337705153",
+   "Market Value": "747771.71",
+   "Shares Held": "1481",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Republic Bancorp Inc/KY",
+   "Ticker": "-",
+   "Identifier": "760281204",
+   "Weight": "0.0071855938",
+   "Market Value": "159108.73",
+   "Shares Held": "2101",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coastal Financial Corp/WA",
+   "Ticker": "-",
+   "Identifier": "19046P209",
+   "Weight": "0.0120451105",
+   "Market Value": "266711.74",
+   "Shares Held": "3527",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Virtus Investment Partners Inc",
+   "Ticker": "-",
+   "Identifier": "92828Q109",
+   "Weight": "0.0121868256",
+   "Market Value": "269849.7",
+   "Shares Held": "1854",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "1st Source Corp",
+   "Ticker": "-",
+   "Identifier": "336901103",
+   "Weight": "0.0149864426",
+   "Market Value": "331840.89",
+   "Shares Held": "4513",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ally Financial Inc",
+   "Ticker": "-",
+   "Identifier": "02005N100",
+   "Weight": "0.1462202937",
+   "Market Value": "3237717.82",
+   "Shares Held": "72938",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "QCR Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "74727A104",
+   "Weight": "0.0175509072",
+   "Market Value": "388625.16",
+   "Shares Held": "4298",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HA Sustainable Infrastructure Capital Inc",
+   "Ticker": "-",
+   "Identifier": "41068X100",
+   "Weight": "0.0627656539",
+   "Market Value": "1389803.5",
+   "Shares Held": "33130",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Webster Financial Corp",
+   "Ticker": "-",
+   "Identifier": "947890109",
+   "Weight": "0.1390192397",
+   "Market Value": "3078266.76",
+   "Shares Held": "42541",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ameriprise Financial Inc",
+   "Ticker": "-",
+   "Identifier": "03076C106",
+   "Weight": "0.522954872",
+   "Market Value": "11579653.31",
+   "Shares Held": "24389",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Arbor Realty Trust Inc",
+   "Ticker": "-",
+   "Identifier": "038923108",
+   "Weight": "0.0151169599",
+   "Market Value": "334730.9",
+   "Shares Held": "42371",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BrightSpire Capital Inc",
+   "Ticker": "-",
+   "Identifier": "10949T109",
+   "Weight": "0.0107511992",
+   "Market Value": "238061",
+   "Shares Held": "41045",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hippo Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "433539202",
+   "Weight": "0.0048872138",
+   "Market Value": "108216.3",
+   "Shares Held": "4110",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Blackstone Mortgage Trust Inc",
+   "Ticker": "-",
+   "Identifier": "09257W100",
+   "Weight": "0.036604829",
+   "Market Value": "810531.18",
+   "Shares Held": "42682",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "White Mountains Insurance Group Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0670320569",
+   "Market Value": "1484273.35",
+   "Shares Held": "665",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hartford Insurance Group Inc/The",
+   "Ticker": "-",
+   "Identifier": "416515104",
+   "Weight": "0.4553034586",
+   "Market Value": "10081665.71",
+   "Shares Held": "73691",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kinsale Capital Group Inc",
+   "Ticker": "-",
+   "Identifier": "49714P108",
+   "Weight": "0.0847653937",
+   "Market Value": "1876938",
+   "Shares Held": "5800",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Regions Financial Corp",
+   "Ticker": "-",
+   "Identifier": "7591EP100",
+   "Weight": "0.2995870615",
+   "Market Value": "6633678.15",
+   "Shares Held": "232353",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Beacon Financial Corp",
+   "Ticker": "-",
+   "Identifier": "084680107",
+   "Weight": "0.0298316792",
+   "Market Value": "660555.09",
+   "Shares Held": "23153",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NCR Atleos Corp",
+   "Ticker": "-",
+   "Identifier": "63001N106",
+   "Weight": "0.0397787218",
+   "Market Value": "880809.86",
+   "Shares Held": "19847",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EVERTEC Inc",
+   "Ticker": "-",
+   "Identifier": "30040P103",
+   "Weight": "0.0230236159",
+   "Market Value": "509805.92",
+   "Shares Held": "17264",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Moelis & Co",
+   "Ticker": "-",
+   "Identifier": "60786M105",
+   "Weight": "0.0463929956",
+   "Market Value": "1027268",
+   "Shares Held": "15775",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Donnelley Financial Solutions Inc",
+   "Ticker": "-",
+   "Identifier": "25787G100",
+   "Weight": "0.0148927736",
+   "Market Value": "329766.8",
+   "Shares Held": "6556",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Commerce Bancshares Inc/MO",
+   "Ticker": "-",
+   "Identifier": "200525103",
+   "Weight": "0.0800843314",
+   "Market Value": "1773286.46",
+   "Shares Held": "34082",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Federal Agricultural Mortgage Corp",
+   "Ticker": "-",
+   "Identifier": "313148306",
+   "Weight": "0.0201878186",
+   "Market Value": "447013.6",
+   "Shares Held": "2572",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "First Community Bankshares Inc",
+   "Ticker": "-",
+   "Identifier": "31983A103",
+   "Weight": "0.0072910835",
+   "Market Value": "161444.56",
+   "Shares Held": "3788",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cboe Global Markets Inc",
+   "Ticker": "-",
+   "Identifier": "12503M108",
+   "Weight": "0.3702820564",
+   "Market Value": "8199058.98",
+   "Shares Held": "27322",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Jefferies Financial Group Inc",
+   "Ticker": "-",
+   "Identifier": "47233W109",
+   "Weight": "0.0896445687",
+   "Market Value": "1984976.3",
+   "Shares Held": "41165",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "First Financial Corp",
+   "Ticker": "-",
+   "Identifier": "320218100",
+   "Weight": "0.0097751375",
+   "Market Value": "216448.32",
+   "Shares Held": "3296",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Encore Capital Group Inc",
+   "Ticker": "-",
+   "Identifier": "292554102",
+   "Weight": "0.0223608352",
+   "Market Value": "495130.14",
+   "Shares Held": "5982",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Prudential Financial Inc",
+   "Ticker": "-",
+   "Identifier": "744320102",
+   "Weight": "0.4043324539",
+   "Market Value": "8953028.05",
+   "Shares Held": "91255",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Metrocity Bankshares Inc",
+   "Ticker": "-",
+   "Identifier": "59165J105",
+   "Weight": "0.0061328253",
+   "Market Value": "135797.55",
+   "Shares Held": "4245",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Nasdaq Inc",
+   "Ticker": "-",
+   "Identifier": "631103108",
+   "Weight": "0.4962235487",
+   "Market Value": "10987748.59",
+   "Shares Held": "119549",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Oscar Health Inc",
+   "Ticker": "-",
+   "Identifier": "687793109",
+   "Weight": "0.0438558344",
+   "Market Value": "971088.3",
+   "Shares Held": "52605",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Enova International Inc",
+   "Ticker": "-",
+   "Identifier": "29357K103",
+   "Weight": "0.0512222062",
+   "Market Value": "1134199.95",
+   "Shares Held": "6695",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Metropolitan Bank Holding Corp",
+   "Ticker": "-",
+   "Identifier": "591774104",
+   "Weight": "0.0120578443",
+   "Market Value": "266993.7",
+   "Shares Held": "3022",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Peoples Bancorp Inc/OH",
+   "Ticker": "-",
+   "Identifier": "709789101",
+   "Weight": "0.0163760408",
+   "Market Value": "362610.4",
+   "Shares Held": "10541",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Columbia Financial Inc",
+   "Ticker": "-",
+   "Identifier": "197641103",
+   "Weight": "0.0064083386",
+   "Market Value": "141898.17",
+   "Shares Held": "7379",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Glacier Bancorp Inc",
+   "Ticker": "-",
+   "Identifier": "37637Q105",
+   "Weight": "0.0761775876",
+   "Market Value": "1686780.45",
+   "Shares Held": "34389",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fifth Third Bancorp",
+   "Ticker": "-",
+   "Identifier": "316773100",
+   "Weight": "0.543899246",
+   "Market Value": "12043419.12",
+   "Shares Held": "237262",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Westamerica BanCorp",
+   "Ticker": "-",
+   "Identifier": "957090103",
+   "Weight": "0.0149337549",
+   "Market Value": "330674.24",
+   "Shares Held": "6032",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Trupanion Inc",
+   "Ticker": "-",
+   "Identifier": "898202106",
+   "Weight": "0.0092156141",
+   "Market Value": "204058.94",
+   "Shares Held": "8506",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Orrstown Financial Services Inc",
+   "Ticker": "-",
+   "Identifier": "687380105",
+   "Weight": "0.0072442185",
+   "Market Value": "160406.84",
+   "Shares Held": "4366",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TPG Inc",
+   "Ticker": "-",
+   "Identifier": "872657101",
+   "Weight": "0.0731362145",
+   "Market Value": "1619436.12",
+   "Shares Held": "37126",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Travelers Cos Inc/The",
+   "Ticker": "-",
+   "Identifier": "89417E109",
+   "Weight": "0.8068259582",
+   "Market Value": "17865336.72",
+   "Shares Held": "58548",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Heritage Insurance Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "42727J102",
+   "Weight": "0.0089617531",
+   "Market Value": "198437.76",
+   "Shares Held": "6768",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Enact Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "29249E109",
+   "Weight": "0.0161597451",
+   "Market Value": "357821.02",
+   "Shares Held": "8374",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dave Inc",
+   "Ticker": "-",
+   "Identifier": "23834J201",
+   "Weight": "0.0356466729",
+   "Market Value": "789314.98",
+   "Shares Held": "2902",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Accelerant Holdings",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0061117109",
+   "Market Value": "135330.02",
+   "Shares Held": "10402",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Jefferson Capital Inc",
+   "Ticker": "-",
+   "Identifier": "47248R103",
+   "Weight": "0.0048546577",
+   "Market Value": "107495.42",
+   "Shares Held": "5183",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Root Inc/OH",
+   "Ticker": "-",
+   "Identifier": "77664L207",
+   "Weight": "0.0070908734",
+   "Market Value": "157011.36",
+   "Shares Held": "2882",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Toast Inc",
+   "Ticker": "-",
+   "Identifier": "888787108",
+   "Weight": "0.1567220992",
+   "Market Value": "3470256.56",
+   "Shares Held": "121678",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "T Rowe Price Group Inc",
+   "Ticker": "-",
+   "Identifier": "74144T108",
+   "Weight": "0.2664188041",
+   "Market Value": "5899242.08",
+   "Shares Held": "57341",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "United Fire Group Inc",
+   "Ticker": "-",
+   "Identifier": "910340108",
+   "Weight": "0.0116465591",
+   "Market Value": "257886.72",
+   "Shares Held": "6396",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "StepStone Group Inc",
+   "Ticker": "-",
+   "Identifier": "85914M107",
+   "Weight": "0.0456307593",
+   "Market Value": "1010390",
+   "Shares Held": "19100",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Bank of Hawaii Corp",
+   "Ticker": "-",
+   "Identifier": "062540109",
+   "Weight": "0.0381485883",
+   "Market Value": "844714.24",
+   "Shares Held": "10624",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Valley National Bancorp",
+   "Ticker": "-",
+   "Identifier": "919794107",
+   "Weight": "0.0827974023",
+   "Market Value": "1833361.28",
+   "Shares Held": "135104",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "S&P Global Inc",
+   "Ticker": "-",
+   "Identifier": "78409V104",
+   "Weight": "1.581974295",
+   "Market Value": "35029244.13",
+   "Shares Held": "81231",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Independent Bank Corp",
+   "Ticker": "-",
+   "Identifier": "453836108",
+   "Weight": "0.0488803672",
+   "Market Value": "1082345.22",
+   "Shares Held": "13878",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Morningstar Inc",
+   "Ticker": "-",
+   "Identifier": "617700109",
+   "Weight": "0.0496695772",
+   "Market Value": "1099820.49",
+   "Shares Held": "6519",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Arthur J Gallagher & Co",
+   "Ticker": "-",
+   "Identifier": "363576109",
+   "Weight": "0.6260211944",
+   "Market Value": "13861824",
+   "Shares Held": "67160",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ProAssurance Corp",
+   "Ticker": "-",
+   "Identifier": "74267C106",
+   "Weight": "0.0144277453",
+   "Market Value": "319469.8",
+   "Shares Held": "12934",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Global Payments Inc",
+   "Ticker": "-",
+   "Identifier": "37940X102",
+   "Weight": "0.2045504078",
+   "Market Value": "4529306.32",
+   "Shares Held": "62942",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "JPMorgan Chase & Co",
+   "Ticker": "-",
+   "Identifier": "46625H100",
+   "Weight": "10.1044494832",
+   "Market Value": "223740189",
+   "Shares Held": "714300",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Genworth Financial Inc",
+   "Ticker": "-",
+   "Identifier": "37247D106",
+   "Weight": "0.0436238116",
+   "Market Value": "965950.68",
+   "Shares Held": "109892",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FNB Corp/PA",
+   "Ticker": "-",
+   "Identifier": "302520101",
+   "Weight": "0.0766560243",
+   "Market Value": "1697374.35",
+   "Shares Held": "95091",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TriCo Bancshares",
+   "Ticker": "-",
+   "Identifier": "896095106",
+   "Weight": "0.0182166478",
+   "Market Value": "403366.48",
+   "Shares Held": "8024",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DigitalBridge Group Inc",
+   "Ticker": "-",
+   "Identifier": "25401T603",
+   "Weight": "0.0341125204",
+   "Market Value": "755344.64",
+   "Shares Held": "48544",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Loews Corp",
+   "Ticker": "-",
+   "Identifier": "540424108",
+   "Weight": "0.2383029194",
+   "Market Value": "5276679.38",
+   "Shares Held": "46858",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Capitol Federal Financial Inc",
+   "Ticker": "-",
+   "Identifier": "14057J101",
+   "Weight": "0.0105529708",
+   "Market Value": "233671.68",
+   "Shares Held": "30426",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TPG RE Finance Trust Inc",
+   "Ticker": "-",
+   "Identifier": "87266M107",
+   "Weight": "0.0089930825",
+   "Market Value": "199131.48",
+   "Shares Held": "23538",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coinbase Global Inc",
+   "Ticker": "-",
+   "Identifier": "19260Q107",
+   "Weight": "0.4837998576",
+   "Market Value": "10712654.04",
+   "Shares Held": "57052",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Old Republic International Corp",
+   "Ticker": "-",
+   "Identifier": "680223104",
+   "Weight": "0.1127807398",
+   "Market Value": "2497274.5",
+   "Shares Held": "62510",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "American Express Co",
+   "Ticker": "-",
+   "Identifier": "025816109",
+   "Weight": "2.1074873062",
+   "Market Value": "46665541.65",
+   "Shares Held": "144453",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Upstart Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "91680M107",
+   "Weight": "0.0335984467",
+   "Market Value": "743961.64",
+   "Shares Held": "23558",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hanover Insurance Group Inc/The",
+   "Ticker": "-",
+   "Identifier": "410867105",
+   "Weight": "0.0815257051",
+   "Market Value": "1805202.42",
+   "Shares Held": "9618",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RenaissanceRe Holdings Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.1681333162",
+   "Market Value": "3722932.16",
+   "Shares Held": "12128",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Capital One Financial Corp",
+   "Ticker": "-",
+   "Identifier": "14040H105",
+   "Weight": "1.4423306984",
+   "Market Value": "31937152.4",
+   "Shares Held": "166948",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "American International Group Inc",
+   "Ticker": "-",
+   "Identifier": "026874784",
+   "Weight": "0.4781506902",
+   "Market Value": "10587566",
+   "Shares Held": "141545",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CVB Financial Corp",
+   "Ticker": "-",
+   "Identifier": "126600105",
+   "Weight": "0.0413917978",
+   "Market Value": "916527.78",
+   "Shares Held": "44994",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Provident Financial Services Inc",
+   "Ticker": "-",
+   "Identifier": "74386T105",
+   "Weight": "0.0303458554",
+   "Market Value": "671940.36",
+   "Shares Held": "29627",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Annaly Capital Management Inc",
+   "Ticker": "-",
+   "Identifier": "035710839",
+   "Weight": "0.1832445605",
+   "Market Value": "4057536.5",
+   "Shares Held": "177185",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SEI Investments Co",
+   "Ticker": "-",
+   "Identifier": "784117103",
+   "Weight": "0.1096297791",
+   "Market Value": "2427503.6",
+   "Shares Held": "26770",
+   "Asset Category": "EC"
+  }
+ ]
+}

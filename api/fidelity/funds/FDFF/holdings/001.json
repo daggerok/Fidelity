@@ -1,0 +1,440 @@
+{
+ "ticker": "FDFF",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 47,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "BLUE OWL CAPITAL INC",
+   "Ticker": "-",
+   "Identifier": "09581B103",
+   "Weight": "1.3934673441",
+   "Market Value": "584397.44",
+   "Shares Held": "56848",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LONDON STOCK EXCHANGE GROUP PLC",
+   "Ticker": "-",
+   "Identifier": "GB00B0SWJX34",
+   "Weight": "2.6160733833",
+   "Market Value": "1097138.44",
+   "Shares Held": "9030",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BULLISH",
+   "Ticker": "-",
+   "Identifier": "KYG169101204",
+   "Weight": "0.291843652",
+   "Market Value": "122394.46",
+   "Shares Held": "3506",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BANKINTER SA",
+   "Ticker": "-",
+   "Identifier": "ES0113679I37",
+   "Weight": "4.8459538506",
+   "Market Value": "2032313.88",
+   "Shares Held": "120455",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TRADEWEB MARKETS INC",
+   "Ticker": "-",
+   "Identifier": "892672106",
+   "Weight": "1.2238912586",
+   "Market Value": "513280",
+   "Shares Held": "5120",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ROBINHOOD MARKETS INC",
+   "Ticker": "-",
+   "Identifier": "770700102",
+   "Weight": "2.4733915261",
+   "Market Value": "1037300",
+   "Shares Held": "11000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ETORO GROUP LTD",
+   "Ticker": "-",
+   "Identifier": "VGG320891077",
+   "Weight": "0.8968894894",
+   "Market Value": "376140.8",
+   "Shares Held": "8960",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AFFIRM HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "00827B106",
+   "Weight": "1.7693196331",
+   "Market Value": "742023.75",
+   "Shares Held": "10075",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VISA INC",
+   "Ticker": "-",
+   "Identifier": "92826C839",
+   "Weight": "4.2800427279",
+   "Market Value": "1794980",
+   "Shares Held": "5500",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CAPITAL ONE FINANCIAL CORP",
+   "Ticker": "-",
+   "Identifier": "14040H105",
+   "Weight": "5.3620838737",
+   "Market Value": "2248770.38",
+   "Shares Held": "11966",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "APOLLO GLOBAL MANAGEMENT, INC",
+   "Ticker": "-",
+   "Identifier": "03769M106",
+   "Weight": "4.4160236802",
+   "Market Value": "1852008.19",
+   "Shares Held": "14389",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BITMINE IMMERSION TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "09175A206",
+   "Weight": "0.7615944007",
+   "Market Value": "319400.25",
+   "Shares Held": "16575",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FIGURE TECHNOLOGY SOLUTIONS INC",
+   "Ticker": "-",
+   "Identifier": "349381103",
+   "Weight": "0.6143924342",
+   "Market Value": "257666.15",
+   "Shares Held": "7289",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NU HOLDINGS LTD/CAYMAN ISLANDS",
+   "Ticker": "-",
+   "Identifier": "KYG6683N1034",
+   "Weight": "1.780320777",
+   "Market Value": "746637.45",
+   "Shares Held": "56865",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "REMITLY GLOBAL INC",
+   "Ticker": "-",
+   "Identifier": "75960P104",
+   "Weight": "1.6230484373",
+   "Market Value": "680680",
+   "Shares Held": "34000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FINECOBANK SPA",
+   "Ticker": "-",
+   "Identifier": "IT0000072170",
+   "Weight": "4.468561802",
+   "Market Value": "1874041.82",
+   "Shares Held": "76655",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EQUIFAX INC",
+   "Ticker": "-",
+   "Identifier": "294429105",
+   "Weight": "3.3859004842",
+   "Market Value": "1419991.35",
+   "Shares Held": "8565",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DBS GROUP HOLDINGS LTD",
+   "Ticker": "-",
+   "Identifier": "SG1L01001701",
+   "Weight": "5.748179504",
+   "Market Value": "2410692.58",
+   "Shares Held": "48960",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MARKETAXESS HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "57060D108",
+   "Weight": "0.6068149573",
+   "Market Value": "254488.28",
+   "Shares Held": "1957",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HISCOX LTD",
+   "Ticker": "-",
+   "Identifier": "BMG4593F1389",
+   "Weight": "3.6766449756",
+   "Market Value": "1541924.84",
+   "Shares Held": "65464",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BLACKROCK INC",
+   "Ticker": "-",
+   "Identifier": "09290D101",
+   "Weight": "5.9310533416",
+   "Market Value": "2487386.88",
+   "Shares Held": "2376",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BILL HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "090043100",
+   "Weight": "0.4753468417",
+   "Market Value": "199352.7",
+   "Shares Held": "5385",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PATHWARD FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "59100U108",
+   "Weight": "1.1824666598",
+   "Market Value": "495907.2",
+   "Shares Held": "6030",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CORPAY INC",
+   "Ticker": "-",
+   "Identifier": "219948106",
+   "Weight": "1.7987181316",
+   "Market Value": "754353",
+   "Shares Held": "2085",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TOAST INC",
+   "Ticker": "-",
+   "Identifier": "888787108",
+   "Weight": "3.5427378284",
+   "Market Value": "1485766.37",
+   "Shares Held": "57079",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VERISK ANALYTICS INC",
+   "Ticker": "-",
+   "Identifier": "92345Y106",
+   "Weight": "0.7218514363",
+   "Market Value": "302732.7",
+   "Shares Held": "1730",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "INTERCONTINENTAL EXCHANGE INC",
+   "Ticker": "-",
+   "Identifier": "45866F104",
+   "Weight": "2.9225661514",
+   "Market Value": "1225676.5",
+   "Shares Held": "8290",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ARES MANAGEMENT CORP",
+   "Ticker": "-",
+   "Identifier": "03990B101",
+   "Weight": "1.2167224052",
+   "Market Value": "510273.5",
+   "Shares Held": "3971",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NEPTUNE INSURANCE HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "64073B103",
+   "Weight": "1.0508253853",
+   "Market Value": "440699",
+   "Shares Held": "15700",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PENNYMAC FINANCIAL SERVICES INC",
+   "Ticker": "-",
+   "Identifier": "70932M107",
+   "Weight": "0.8527315462",
+   "Market Value": "357621.68",
+   "Shares Held": "4264",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "1.0680504482",
+   "Market Value": "447922.91",
+   "Shares Held": "447833.342",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "AMERICAN HOMES 4 RENT",
+   "Ticker": "-",
+   "Identifier": "02665T306",
+   "Weight": "0.8255146539",
+   "Market Value": "346207.36",
+   "Shares Held": "10792",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "STRATEGY INC",
+   "Ticker": "-",
+   "Identifier": "594972408",
+   "Weight": "0.8258283762",
+   "Market Value": "346338.93",
+   "Shares Held": "2177",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BLOCK INC",
+   "Ticker": "-",
+   "Identifier": "852234103",
+   "Weight": "4.1252216282",
+   "Market Value": "1730050.56",
+   "Shares Held": "22848",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VIRTU FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "928254101",
+   "Weight": "1.5132879626",
+   "Market Value": "634648.25",
+   "Shares Held": "12655",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WISE GROUP PLC",
+   "Ticker": "-",
+   "Identifier": "JE00BQKY0816",
+   "Weight": "1.2688438918",
+   "Market Value": "532132.4",
+   "Shares Held": "42306",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CBOE GLOBAL MARKETS INC",
+   "Ticker": "-",
+   "Identifier": "12503M108",
+   "Weight": "2.6326337804",
+   "Market Value": "1104083.6",
+   "Shares Held": "3310",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ALLY FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "02005N100",
+   "Weight": "1.5570013487",
+   "Market Value": "652980.93",
+   "Shares Held": "15253",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BALDWIN INSURANCE GROUP INC/THE",
+   "Ticker": "-",
+   "Identifier": "05589G102",
+   "Weight": "1.5953359606",
+   "Market Value": "669057.84",
+   "Shares Held": "34452",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UWM HOLDINGS CORP",
+   "Ticker": "-",
+   "Identifier": "91823B109",
+   "Weight": "0.7438482874",
+   "Market Value": "311957.82",
+   "Shares Held": "101947",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHIME FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "16935C109",
+   "Weight": "2.7734327793",
+   "Market Value": "1163132.4",
+   "Shares Held": "62534",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MERCADOLIBRE INC",
+   "Ticker": "-",
+   "Identifier": "58733R102",
+   "Weight": "0.7803366662",
+   "Market Value": "327260.45",
+   "Shares Held": "193",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WEALTHFRONT CORP",
+   "Ticker": "-",
+   "Identifier": "947002101",
+   "Weight": "1.8240386219",
+   "Market Value": "764972",
+   "Shares Held": "62600",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MSCI INC",
+   "Ticker": "-",
+   "Identifier": "55354G100",
+   "Weight": "1.1788025686",
+   "Market Value": "494370.54",
+   "Shares Held": "783",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A303",
+   "Weight": "2.2787835882",
+   "Market Value": "955684.61",
+   "Shares Held": "955589.054",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "MASTERCARD INC",
+   "Ticker": "-",
+   "Identifier": "57636Q104",
+   "Weight": "4.1190160932",
+   "Market Value": "1727448.06",
+   "Shares Held": "3497",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DEFINITY FINANCIAL CORP",
+   "Ticker": "-",
+   "Identifier": "24477T100",
+   "Weight": "1.1086713676",
+   "Market Value": "464958.66",
+   "Shares Held": "9705",
+   "Asset Category": "EC"
+  }
+ ]
+}

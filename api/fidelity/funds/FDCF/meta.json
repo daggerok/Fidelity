@@ -1,0 +1,103 @@
+{
+ "ticker": "FDCF",
+ "name": "Fidelity Disruptive Communications ETF",
+ "category": "Thematic",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDCF",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004620/000003540226004620-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004620/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDCF?period1=0&period2=1787720781&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.5%",
+  "value": 0.5
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$50.61",
+  "value": 50.606,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$108.58 M",
+  "value": 108577322.48,
+  "asOfDate": "May 31 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 5.82,
+   "mo1Text": "5.82%",
+   "qtd": 0.13,
+   "qtdText": "0.13%",
+   "ytd": 5.27,
+   "ytdText": "5.27%",
+   "yr1": 7.83,
+   "yr1Text": "7.83%",
+   "yr3": 26.56,
+   "yr3Text": "26.56%",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 24.05,
+   "sinceInceptionText": "24.05%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Annually",
+  "paymentsPerYear": 1,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "06/21/2024",
+    "0.026"
+   ],
+   [
+    "06/20/2025",
+    "0.016"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 40,
+  "asOf": "May 31 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 804,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000079686",
+  "seriesName": "Fidelity Disruptive Communications ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004620"
+ }
+}

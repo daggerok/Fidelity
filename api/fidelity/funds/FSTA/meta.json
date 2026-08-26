@@ -1,0 +1,302 @@
+{
+ "ticker": "FSTA",
+ "name": "Fidelity MSCI Consumer Staples Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSTA",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063877/000141036826063877-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063877/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FSTA?period1=0&period2=1787720849&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$54.43",
+  "value": 54.43,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$1,436.24 M",
+  "value": 1436244282.51,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 2.81,
+   "mo1Text": "2.81%",
+   "qtd": 3.52,
+   "qtdText": "3.52%",
+   "ytd": 11.9,
+   "ytdText": "11.90%",
+   "yr1": 9.45,
+   "yr1Text": "9.45%",
+   "yr3": 9.43,
+   "yr3Text": "9.43%",
+   "yr5": 7.06,
+   "yr5Text": "7.06%",
+   "yr10": 7.87,
+   "yr10Text": "7.87%",
+   "sinceInception": 8.72,
+   "sinceInceptionText": "8.72%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.112"
+   ],
+   [
+    "12/27/2013",
+    "0.005"
+   ],
+   [
+    "03/21/2014",
+    "0.149"
+   ],
+   [
+    "06/20/2014",
+    "0.18"
+   ],
+   [
+    "09/19/2014",
+    "0.154"
+   ],
+   [
+    "12/19/2014",
+    "0.177"
+   ],
+   [
+    "03/20/2015",
+    "0.268"
+   ],
+   [
+    "06/19/2015",
+    "0.181"
+   ],
+   [
+    "09/18/2015",
+    "0.224"
+   ],
+   [
+    "12/18/2015",
+    "0.192"
+   ],
+   [
+    "06/17/2016",
+    "0.195"
+   ],
+   [
+    "09/16/2016",
+    "0.195"
+   ],
+   [
+    "12/16/2016",
+    "0.21"
+   ],
+   [
+    "03/17/2017",
+    "0.162"
+   ],
+   [
+    "06/16/2017",
+    "0.25"
+   ],
+   [
+    "09/15/2017",
+    "0.211"
+   ],
+   [
+    "12/15/2017",
+    "0.206"
+   ],
+   [
+    "03/16/2018",
+    "0.231"
+   ],
+   [
+    "06/15/2018",
+    "0.228"
+   ],
+   [
+    "09/21/2018",
+    "0.223"
+   ],
+   [
+    "12/21/2018",
+    "0.237"
+   ],
+   [
+    "03/15/2019",
+    "0.218"
+   ],
+   [
+    "06/21/2019",
+    "0.228"
+   ],
+   [
+    "09/20/2019",
+    "0.231"
+   ],
+   [
+    "12/20/2019",
+    "0.25"
+   ],
+   [
+    "03/20/2020",
+    "0.248"
+   ],
+   [
+    "06/19/2020",
+    "0.231"
+   ],
+   [
+    "09/18/2020",
+    "0.235"
+   ],
+   [
+    "12/18/2020",
+    "0.289"
+   ],
+   [
+    "03/19/2021",
+    "0.251"
+   ],
+   [
+    "06/18/2021",
+    "0.242"
+   ],
+   [
+    "09/17/2021",
+    "0.254"
+   ],
+   [
+    "12/17/2021",
+    "0.256"
+   ],
+   [
+    "03/18/2022",
+    "0.249"
+   ],
+   [
+    "09/16/2022",
+    "0.251"
+   ],
+   [
+    "12/16/2022",
+    "0.259"
+   ],
+   [
+    "03/17/2023",
+    "0.261"
+   ],
+   [
+    "06/16/2023",
+    "0.269"
+   ],
+   [
+    "09/15/2023",
+    "0.283"
+   ],
+   [
+    "12/15/2023",
+    "0.276"
+   ],
+   [
+    "12/28/2023",
+    "0.096"
+   ],
+   [
+    "03/15/2024",
+    "0.279"
+   ],
+   [
+    "06/21/2024",
+    "0.285"
+   ],
+   [
+    "09/20/2024",
+    "0.273"
+   ],
+   [
+    "12/20/2024",
+    "0.274"
+   ],
+   [
+    "03/21/2025",
+    "0.277"
+   ],
+   [
+    "06/20/2025",
+    "0.296"
+   ],
+   [
+    "09/19/2025",
+    "0.276"
+   ],
+   [
+    "12/19/2025",
+    "0.302"
+   ],
+   [
+    "03/20/2026",
+    "0.29"
+   ],
+   [
+    "06/18/2026",
+    "0.296"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 95,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042572",
+  "seriesName": "Fidelity MSCI Consumer Staples Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063877"
+ }
+}

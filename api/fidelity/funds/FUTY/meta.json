@@ -1,0 +1,294 @@
+{
+ "ticker": "FUTY",
+ "name": "Fidelity MSCI Utilities Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FUTY",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063880/000141036826063880-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063880/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FUTY?period1=0&period2=1787720853&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$55.93",
+  "value": 55.93,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$2,455.14 M",
+  "value": 2455135149.270001,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": -6.03,
+   "mo1Text": "-6.03%",
+   "qtd": -3.12,
+   "qtdText": "-3.12%",
+   "ytd": 2.66,
+   "ytdText": "2.66%",
+   "yr1": 4.42,
+   "yr1Text": "4.42%",
+   "yr3": 14.34,
+   "yr3Text": "14.34%",
+   "yr5": 7.83,
+   "yr5Text": "7.83%",
+   "yr10": 9.03,
+   "yr10Text": "9.03%",
+   "sinceInception": 9.67,
+   "sinceInceptionText": "9.67%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.213"
+   ],
+   [
+    "03/21/2014",
+    "0.203"
+   ],
+   [
+    "06/20/2014",
+    "0.209"
+   ],
+   [
+    "09/19/2014",
+    "0.3"
+   ],
+   [
+    "12/19/2014",
+    "0.216"
+   ],
+   [
+    "03/20/2015",
+    "0.475"
+   ],
+   [
+    "06/19/2015",
+    "0.241"
+   ],
+   [
+    "09/18/2015",
+    "0.239"
+   ],
+   [
+    "12/18/2015",
+    "0.253"
+   ],
+   [
+    "06/17/2016",
+    "0.261"
+   ],
+   [
+    "09/16/2016",
+    "0.281"
+   ],
+   [
+    "12/16/2016",
+    "0.278"
+   ],
+   [
+    "03/17/2017",
+    "0.245"
+   ],
+   [
+    "06/16/2017",
+    "0.272"
+   ],
+   [
+    "09/15/2017",
+    "0.257"
+   ],
+   [
+    "12/15/2017",
+    "0.27"
+   ],
+   [
+    "03/16/2018",
+    "0.269"
+   ],
+   [
+    "06/15/2018",
+    "0.291"
+   ],
+   [
+    "09/21/2018",
+    "0.276"
+   ],
+   [
+    "12/21/2018",
+    "0.249"
+   ],
+   [
+    "03/15/2019",
+    "0.301"
+   ],
+   [
+    "06/21/2019",
+    "0.289"
+   ],
+   [
+    "09/20/2019",
+    "0.289"
+   ],
+   [
+    "12/20/2019",
+    "0.314"
+   ],
+   [
+    "03/20/2020",
+    "0.336"
+   ],
+   [
+    "06/19/2020",
+    "0.302"
+   ],
+   [
+    "09/18/2020",
+    "0.321"
+   ],
+   [
+    "12/18/2020",
+    "0.288"
+   ],
+   [
+    "03/19/2021",
+    "0.32"
+   ],
+   [
+    "06/18/2021",
+    "0.317"
+   ],
+   [
+    "09/17/2021",
+    "0.31"
+   ],
+   [
+    "12/17/2021",
+    "0.303"
+   ],
+   [
+    "03/18/2022",
+    "0.32"
+   ],
+   [
+    "09/16/2022",
+    "0.346"
+   ],
+   [
+    "12/16/2022",
+    "0.295"
+   ],
+   [
+    "03/17/2023",
+    "0.357"
+   ],
+   [
+    "06/16/2023",
+    "0.317"
+   ],
+   [
+    "09/15/2023",
+    "0.384"
+   ],
+   [
+    "12/15/2023",
+    "0.293"
+   ],
+   [
+    "03/15/2024",
+    "0.385"
+   ],
+   [
+    "06/21/2024",
+    "0.349"
+   ],
+   [
+    "09/20/2024",
+    "0.366"
+   ],
+   [
+    "12/20/2024",
+    "0.342"
+   ],
+   [
+    "03/21/2025",
+    "0.378"
+   ],
+   [
+    "06/20/2025",
+    "0.369"
+   ],
+   [
+    "09/19/2025",
+    "0.373"
+   ],
+   [
+    "12/19/2025",
+    "0.352"
+   ],
+   [
+    "03/20/2026",
+    "0.386"
+   ],
+   [
+    "06/18/2026",
+    "0.401"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 65,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042571",
+  "seriesName": "Fidelity MSCI Utilities Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063880"
+ }
+}

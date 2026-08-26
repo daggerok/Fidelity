@@ -1,0 +1,196 @@
+{
+ "ticker": "FBCV",
+ "name": "Fidelity Blue Chip Value ETF",
+ "category": "US Equity",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBCV",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004033/000003540226004033-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004033/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBCV?period1=0&period2=1787720772&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.57%",
+  "value": 0.57
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$43.18",
+  "value": 43.18,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$156.49 M",
+  "value": 156487803.60999998,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 5.67,
+   "mo1Text": "5.67%",
+   "qtd": 7.76,
+   "qtdText": "7.76%",
+   "ytd": 21.9,
+   "ytdText": "21.90%",
+   "yr1": 31.4,
+   "yr1Text": "31.40%",
+   "yr3": 17.92,
+   "yr3Text": "17.92%",
+   "yr5": 10.83,
+   "yr5Text": "10.83%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 14.33,
+   "sinceInceptionText": "14.33%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "06/19/2020",
+    "0.014"
+   ],
+   [
+    "09/18/2020",
+    "0.049"
+   ],
+   [
+    "12/18/2020",
+    "0.043"
+   ],
+   [
+    "03/19/2021",
+    "0.065"
+   ],
+   [
+    "06/18/2021",
+    "0.08"
+   ],
+   [
+    "09/17/2021",
+    "0.093"
+   ],
+   [
+    "12/17/2021",
+    "0.684"
+   ],
+   [
+    "03/18/2022",
+    "0.087"
+   ],
+   [
+    "06/17/2022",
+    "0.108"
+   ],
+   [
+    "09/16/2022",
+    "0.098"
+   ],
+   [
+    "12/16/2022",
+    "0.274"
+   ],
+   [
+    "03/17/2023",
+    "0.097"
+   ],
+   [
+    "06/16/2023",
+    "0.136"
+   ],
+   [
+    "09/15/2023",
+    "0.129"
+   ],
+   [
+    "12/15/2023",
+    "0.129"
+   ],
+   [
+    "03/15/2024",
+    "0.128"
+   ],
+   [
+    "06/21/2024",
+    "0.148"
+   ],
+   [
+    "09/20/2024",
+    "0.145"
+   ],
+   [
+    "12/20/2024",
+    "0.131"
+   ],
+   [
+    "03/21/2025",
+    "0.14"
+   ],
+   [
+    "06/20/2025",
+    "0.155"
+   ],
+   [
+    "09/19/2025",
+    "0.127"
+   ],
+   [
+    "12/19/2025",
+    "0.629"
+   ],
+   [
+    "03/20/2026",
+    "0.141"
+   ],
+   [
+    "06/18/2026",
+    "0.12"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 127,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1563,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000068175",
+  "seriesName": "Fidelity Blue Chip Value ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004033"
+ }
+}

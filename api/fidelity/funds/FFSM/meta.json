@@ -1,0 +1,184 @@
+{
+ "ticker": "FFSM",
+ "name": "Fidelity Fundamental Small-Mid Cap ETF",
+ "category": "US Equity",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFSM",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004079/000003540226004079-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004079/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FFSM?period1=0&period2=1787720817&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "—",
+  "value": null
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$37.03",
+  "value": 37.03,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$1,263.14 M",
+  "value": 1263142681.7000005,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 0.27,
+   "mo1Text": "0.27%",
+   "qtd": -1.78,
+   "qtdText": "-1.78%",
+   "ytd": 20.94,
+   "ytdText": "20.94%",
+   "yr1": 28.74,
+   "yr1Text": "28.74%",
+   "yr3": 20.52,
+   "yr3Text": "20.52%",
+   "yr5": 10.22,
+   "yr5Text": "10.22%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 11.91,
+   "sinceInceptionText": "11.91%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "03/19/2021",
+    "0.01"
+   ],
+   [
+    "06/18/2021",
+    "0.016"
+   ],
+   [
+    "09/17/2021",
+    "0.035"
+   ],
+   [
+    "12/17/2021",
+    "0.029"
+   ],
+   [
+    "03/18/2022",
+    "0.017"
+   ],
+   [
+    "06/17/2022",
+    "0.026"
+   ],
+   [
+    "09/16/2022",
+    "0.041"
+   ],
+   [
+    "12/16/2022",
+    "0.033"
+   ],
+   [
+    "03/17/2023",
+    "0.035"
+   ],
+   [
+    "06/16/2023",
+    "0.027"
+   ],
+   [
+    "09/15/2023",
+    "0.03"
+   ],
+   [
+    "12/15/2023",
+    "0.04"
+   ],
+   [
+    "03/15/2024",
+    "0.032"
+   ],
+   [
+    "06/21/2024",
+    "0.036"
+   ],
+   [
+    "09/20/2024",
+    "0.038"
+   ],
+   [
+    "12/20/2024",
+    "0.06"
+   ],
+   [
+    "03/21/2025",
+    "0.045"
+   ],
+   [
+    "06/20/2025",
+    "0.045"
+   ],
+   [
+    "09/19/2025",
+    "0.043"
+   ],
+   [
+    "12/19/2025",
+    "0.04"
+   ],
+   [
+    "03/20/2026",
+    "0.04"
+   ],
+   [
+    "06/18/2026",
+    "0.039"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 203,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1395,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000070236",
+  "seriesName": "Fidelity Fundamental Small-Mid Cap ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004079"
+ }
+}

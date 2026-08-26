@@ -1,0 +1,575 @@
+{
+ "ticker": "FDIG",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 62,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "CORE SCIENTIFIC INC",
+   "Ticker": "-",
+   "Identifier": "21874A106",
+   "Weight": "2.5172644831",
+   "Market Value": "6621258.96",
+   "Shares Held": "258744",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CIRCLE INTERNET GROUP INC",
+   "Ticker": "-",
+   "Identifier": "172573107",
+   "Weight": "3.2107667333",
+   "Market Value": "8445404.98",
+   "Shares Held": "134846",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BULLISH",
+   "Ticker": "-",
+   "Identifier": "KYG169101204",
+   "Weight": "1.0409952379",
+   "Market Value": "2738170.38",
+   "Shares Held": "116866",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "OSL GROUP LTD",
+   "Ticker": "-",
+   "Identifier": "KYG1106B1095",
+   "Weight": "0.6767324233",
+   "Market Value": "1780035.69",
+   "Shares Held": "1210679",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BIT DIGITAL INC",
+   "Ticker": "-",
+   "Identifier": "KYG1144A1058",
+   "Weight": "1.2617721866",
+   "Market Value": "3318888.6",
+   "Shares Held": "1843827",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GEMINI SPACE STATION INC",
+   "Ticker": "-",
+   "Identifier": "36866J105",
+   "Weight": "0.6764996054",
+   "Market Value": "1779423.3",
+   "Shares Held": "417705",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "STONECO LTD",
+   "Ticker": "-",
+   "Identifier": "KYG851581069",
+   "Weight": "1.4475510534",
+   "Market Value": "3807550",
+   "Shares Held": "351250",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ROBINHOOD MARKETS INC",
+   "Ticker": "-",
+   "Identifier": "770700102",
+   "Weight": "2.4443435556",
+   "Market Value": "6429452.2",
+   "Shares Held": "64115",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ETORO GROUP LTD",
+   "Ticker": "-",
+   "Identifier": "VGG320891077",
+   "Weight": "1.3340040927",
+   "Market Value": "3508883",
+   "Shares Held": "88900",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KLARNA GROUP PLC",
+   "Ticker": "-",
+   "Identifier": "GB00BMHVL512",
+   "Weight": "1.8708352602",
+   "Market Value": "4920930.96",
+   "Shares Held": "243129",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "STRIVE INC",
+   "Ticker": "-",
+   "Identifier": "862945300",
+   "Weight": "1.0669849144",
+   "Market Value": "2806532.04",
+   "Shares Held": "257244",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VISA INC",
+   "Ticker": "-",
+   "Identifier": "92826C839",
+   "Weight": "1.7303594436",
+   "Market Value": "4551431.94",
+   "Shares Held": "13266",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HIVE DIGITAL TECHNOLOGIES LTD",
+   "Ticker": "-",
+   "Identifier": "433921103",
+   "Weight": "1.2542584479",
+   "Market Value": "3299124.92",
+   "Shares Held": "906353",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CERES INC/JAPAN",
+   "Ticker": "-",
+   "Identifier": "JP3423570005",
+   "Weight": "0.4993992359",
+   "Market Value": "1313589.29",
+   "Shares Held": "102100",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BITMINE IMMERSION TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "09175A206",
+   "Weight": "2.7643938334",
+   "Market Value": "7271292.93",
+   "Shares Held": "546303",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MARA HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "565788106",
+   "Weight": "3.421030444",
+   "Market Value": "8998469.82",
+   "Shares Held": "647838",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WEX INC",
+   "Ticker": "-",
+   "Identifier": "96208T104",
+   "Weight": "1.4460665718",
+   "Market Value": "3803645.31",
+   "Shares Held": "26959",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "APPLIED DIGITAL CORP",
+   "Ticker": "-",
+   "Identifier": "038169207",
+   "Weight": "3.6723285764",
+   "Market Value": "9659469.1",
+   "Shares Held": "258967",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DIGI POWER X INC",
+   "Ticker": "-",
+   "Identifier": "25380B102",
+   "Weight": "0.9433065638",
+   "Market Value": "2481216.05",
+   "Shares Held": "455269",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "METAPLANET INC",
+   "Ticker": "-",
+   "Identifier": "JP3481200008",
+   "Weight": "0.9869569563",
+   "Market Value": "2596031.38",
+   "Shares Held": "2109600",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MONEX GROUP INC",
+   "Ticker": "-",
+   "Identifier": "JP3869970008",
+   "Weight": "0.6463389113",
+   "Market Value": "1700090.45",
+   "Shares Held": "442800",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FORWARD INDUSTRIES INC/NEW",
+   "Ticker": "-",
+   "Identifier": "349932103",
+   "Weight": "0.5648616381",
+   "Market Value": "1485777.6",
+   "Shares Held": "352080",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NEXI SPA",
+   "Ticker": "-",
+   "Identifier": "IT0005366767",
+   "Weight": "1.4920444475",
+   "Market Value": "3924582.71",
+   "Shares Held": "969136",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CANAAN INC",
+   "Ticker": "-",
+   "Identifier": "134748102",
+   "Weight": "0.4428698761",
+   "Market Value": "1164897.91",
+   "Shares Held": "4057464",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HUT 8 CORP",
+   "Ticker": "-",
+   "Identifier": "44812J104",
+   "Weight": "3.196756007",
+   "Market Value": "8408552.02",
+   "Shares Held": "72836",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHICAGO MERCANTILE EXCH INC",
+   "Ticker": "-",
+   "Identifier": "-",
+   "Weight": "-0.0004353735",
+   "Market Value": "-1145.18",
+   "Shares Held": "4",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "PAYPAL HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "70450Y103",
+   "Weight": "1.6310415004",
+   "Market Value": "4290192.08",
+   "Shares Held": "99356",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TWENTY ONE CAPITAL INC",
+   "Ticker": "-",
+   "Identifier": "90138L109",
+   "Weight": "0.5878675319",
+   "Market Value": "1546290.9",
+   "Shares Held": "312382",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CORPAY INC",
+   "Ticker": "-",
+   "Identifier": "219948106",
+   "Weight": "1.5067437429",
+   "Market Value": "3963246.84",
+   "Shares Held": "11892",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHARPLINK INC",
+   "Ticker": "-",
+   "Identifier": "820014405",
+   "Weight": "1.0536028979",
+   "Market Value": "2771332.8",
+   "Shares Held": "577361",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GALAXY DIGITAL INC",
+   "Ticker": "-",
+   "Identifier": "36317J209",
+   "Weight": "2.0139499306",
+   "Market Value": "5297371.06",
+   "Shares Held": "193759",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FISERV INC",
+   "Ticker": "-",
+   "Identifier": "337738108",
+   "Weight": "1.4085978425",
+   "Market Value": "3705089.85",
+   "Shares Held": "75537",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TOAST INC",
+   "Ticker": "-",
+   "Identifier": "888787108",
+   "Weight": "1.7812764545",
+   "Market Value": "4685360.94",
+   "Shares Held": "168417",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BAKKT INC",
+   "Ticker": "-",
+   "Identifier": "05759B305",
+   "Weight": "0.7195467828",
+   "Market Value": "1892651.97",
+   "Shares Held": "242337",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SOLUNA HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "583543301",
+   "Weight": "0.8072508694",
+   "Market Value": "2123343.45",
+   "Shares Held": "1572847",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PAGSEGURO DIGITAL LTD",
+   "Ticker": "-",
+   "Identifier": "KYG687071012",
+   "Weight": "1.1880051933",
+   "Market Value": "3124856.4",
+   "Shares Held": "345288",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COINBASE GLOBAL INC",
+   "Ticker": "-",
+   "Identifier": "19260Q107",
+   "Weight": "4.6291238768",
+   "Market Value": "12176165.1",
+   "Shares Held": "83290",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHICAGO MERCANTILE EXCH INC",
+   "Ticker": "-",
+   "Identifier": "-",
+   "Weight": "0.0045090386",
+   "Market Value": "11860.3",
+   "Shares Held": "4",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "ADYEN NV",
+   "Ticker": "-",
+   "Identifier": "NL0012969182",
+   "Weight": "1.449198343",
+   "Market Value": "3811882.93",
+   "Shares Held": "4064",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COINCHECK GROUP BV",
+   "Ticker": "-",
+   "Identifier": "NL0015002BV9",
+   "Weight": "0.1527542948",
+   "Market Value": "401795.58",
+   "Shares Held": "180989",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "0.2208934584",
+   "Market Value": "581024.68",
+   "Shares Held": "580908.494",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "BITDEER TECHNOLOGIES GROUP",
+   "Ticker": "-",
+   "Identifier": "KYG114481008",
+   "Weight": "1.619273485",
+   "Market Value": "4259238.21",
+   "Shares Held": "268383",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BLOCK INC",
+   "Ticker": "-",
+   "Identifier": "852234103",
+   "Weight": "3.3739362027",
+   "Market Value": "8874596",
+   "Shares Held": "116771",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KEEL INFRASTRUCTURE CORP",
+   "Ticker": "-",
+   "Identifier": "486917107",
+   "Weight": "2.2134231691",
+   "Market Value": "5822053.3",
+   "Shares Held": "1014295",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHIME FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "16935C109",
+   "Weight": "1.7521068076",
+   "Market Value": "4608634.88",
+   "Shares Held": "225031",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FLYWIRE CORP",
+   "Ticker": "-",
+   "Identifier": "302492103",
+   "Weight": "1.2674152615",
+   "Market Value": "3333731.8",
+   "Shares Held": "189740",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CLEANSPARK INC",
+   "Ticker": "-",
+   "Identifier": "18452B209",
+   "Weight": "2.517605538",
+   "Market Value": "6622156.05",
+   "Shares Held": "455131",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHOPIFY INC",
+   "Ticker": "-",
+   "Identifier": "82509L107",
+   "Weight": "1.588557661",
+   "Market Value": "4178445.18",
+   "Shares Held": "36535",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TERAWULF INC",
+   "Ticker": "-",
+   "Identifier": "88080T104",
+   "Weight": "3.5544822839",
+   "Market Value": "9349493.4",
+   "Shares Held": "378522",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CIPHER DIGITAL INC",
+   "Ticker": "-",
+   "Identifier": "17253J106",
+   "Weight": "3.4626892111",
+   "Market Value": "9108046.5",
+   "Shares Held": "371757",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RIOT PLATFORMS INC",
+   "Ticker": "-",
+   "Identifier": "767292105",
+   "Weight": "3.126996748",
+   "Market Value": "8225061.52",
+   "Shares Held": "300404",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GLOBAL PAYMENTS INC",
+   "Ticker": "-",
+   "Identifier": "37940X102",
+   "Weight": "1.727919203",
+   "Market Value": "4545013.28",
+   "Shares Held": "62638",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A303",
+   "Weight": "14.3176566648",
+   "Market Value": "37660290.81",
+   "Shares Held": "37656525.162",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "GMO INTERNET GROUP INC",
+   "Ticker": "-",
+   "Identifier": "JP3152750000",
+   "Weight": "0.6558983027",
+   "Market Value": "1725234.89",
+   "Shares Held": "83900",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DANAL CO LTD",
+   "Ticker": "-",
+   "Identifier": "KR7064260003",
+   "Weight": "0.758836304",
+   "Market Value": "1995996.73",
+   "Shares Held": "718327",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BITGO HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "091947101",
+   "Weight": "0.6176363715",
+   "Market Value": "1624593.04",
+   "Shares Held": "313628",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MASTERCARD INC",
+   "Ticker": "-",
+   "Identifier": "57636Q104",
+   "Weight": "1.7216074386",
+   "Market Value": "4528411.2",
+   "Shares Held": "8817",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SBI HLDGS INC JAPAN",
+   "Ticker": "-",
+   "Identifier": "JP3436120004",
+   "Weight": "1.3580950634",
+   "Market Value": "3572250.42",
+   "Shares Held": "220000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHIFT4 PAYMENTS INC",
+   "Ticker": "-",
+   "Identifier": "82452J109",
+   "Weight": "1.9549280556",
+   "Market Value": "5142123.52",
+   "Shares Held": "105718",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ZETRIX AI BERHAD",
+   "Ticker": "-",
+   "Identifier": "MYQ0138OO006",
+   "Weight": "0.8159442507",
+   "Market Value": "2146209.99",
+   "Shares Held": "11514699",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "IREN LTD",
+   "Ticker": "-",
+   "Identifier": "AU0000185993",
+   "Weight": "4.4395325394",
+   "Market Value": "11677475.61",
+   "Shares Held": "255357",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ZIP CO LTD",
+   "Ticker": "-",
+   "Identifier": "AU0000218307",
+   "Weight": "1.6027708669",
+   "Market Value": "4215830.73",
+   "Shares Held": "1878150",
+   "Asset Category": "EC"
+  }
+ ]
+}

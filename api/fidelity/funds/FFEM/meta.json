@@ -1,0 +1,123 @@
+{
+ "ticker": "FFEM",
+ "name": "Fidelity Fundamental Emerging Markets ETF",
+ "category": "International",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFEM",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004060/000003540226004060-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004060/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FFEM?period1=0&period2=1787720810&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.6%",
+  "value": 0.6
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$42.55",
+  "value": 42.55,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$39.36 M",
+  "value": 39360836.64000001,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 5.72,
+   "mo1Text": "5.72%",
+   "qtd": 0.24,
+   "qtdText": "0.24%",
+   "ytd": 28.14,
+   "ytdText": "28.14%",
+   "yr1": 46.41,
+   "yr1Text": "46.41%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 37.64,
+   "sinceInceptionText": "37.64%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2024",
+    "0.039"
+   ],
+   [
+    "03/21/2025",
+    "0.072"
+   ],
+   [
+    "06/20/2025",
+    "0.167"
+   ],
+   [
+    "09/19/2025",
+    "0.094"
+   ],
+   [
+    "12/19/2025",
+    "0.197"
+   ],
+   [
+    "03/20/2026",
+    "0.085"
+   ],
+   [
+    "06/18/2026",
+    "0.169"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 113,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 439,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000087783",
+  "seriesName": "Fidelity Fundamental Emerging Markets ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004060"
+ }
+}

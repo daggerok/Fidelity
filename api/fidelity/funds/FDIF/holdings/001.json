@@ -1,0 +1,80 @@
+{
+ "ticker": "FDIF",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 7,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "Fidelity Covington Trust",
+   "Ticker": "-",
+   "Identifier": "316092170",
+   "Weight": "21.4151808574",
+   "Market Value": "22839488.22",
+   "Shares Held": "572992.68",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Covington Trust",
+   "Ticker": "-",
+   "Identifier": "316092154",
+   "Weight": "15.4470508941",
+   "Market Value": "16474422.48",
+   "Shares Held": "490456.162",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Covington Trust",
+   "Ticker": "-",
+   "Identifier": "316092162",
+   "Weight": "21.4095341271",
+   "Market Value": "22833465.93",
+   "Shares Held": "450319.8092",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "0.105973278",
+   "Market Value": "113021.48",
+   "Shares Held": "112998.881",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Fidelity Covington Trust",
+   "Ticker": "-",
+   "Identifier": "316092139",
+   "Weight": "24.9383595377",
+   "Market Value": "26596990.83",
+   "Shares Held": "492536.8673",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A303",
+   "Weight": "0.3139213314",
+   "Market Value": "334800",
+   "Shares Held": "334766.528",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Fidelity Covington Trust",
+   "Ticker": "-",
+   "Identifier": "316092147",
+   "Weight": "16.680869555",
+   "Market Value": "17790301.48",
+   "Shares Held": "706946.2141",
+   "Asset Category": "EC"
+  }
+ ]
+}

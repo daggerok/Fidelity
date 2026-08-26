@@ -1,0 +1,467 @@
+{
+ "ticker": "FLTB",
+ "page": 5,
+ "pageSize": 250,
+ "totalRows": 1050,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "VOC ESCROW LTD",
+   "Ticker": "-",
+   "Identifier": "91832VAA2",
+   "Weight": "0.0049762463",
+   "Market Value": "19967.08",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TRANSDIGM INC",
+   "Ticker": "-",
+   "Identifier": "893647CA3",
+   "Weight": "0.0140478643",
+   "Market Value": "56366.75",
+   "Shares Held": "55000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MORGAN STANLEY PRIVATE BANK NA",
+   "Ticker": "-",
+   "Identifier": "61776NVE0",
+   "Weight": "0.1795423038",
+   "Market Value": "720409.59",
+   "Shares Held": "720000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "XCEL ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "98389BBF6",
+   "Weight": "0.0234580935",
+   "Market Value": "94125.09",
+   "Shares Held": "95000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AERCAP IRELAND CAPITAL DAC / AERCAP GLOBAL AVIATION TRUST",
+   "Ticker": "-",
+   "Identifier": "00774MBD6",
+   "Weight": "0.3748121819",
+   "Market Value": "1503925.73",
+   "Shares Held": "1490000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OAK-EAGLE ACQUIRECO INC",
+   "Ticker": "-",
+   "Identifier": "67123SAB5",
+   "Weight": "0.008749306",
+   "Market Value": "35106.4",
+   "Shares Held": "35000",
+   "Asset Category": "LON"
+  },
+  {
+   "Name": "GLOBAL PARTNERS LP / GLP FIN CORP",
+   "Ticker": "-",
+   "Identifier": "37954FAJ3",
+   "Weight": "0.0072987237",
+   "Market Value": "29285.97",
+   "Shares Held": "29000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CELANESE US HLDGS LLC",
+   "Ticker": "-",
+   "Identifier": "15089QAZ7",
+   "Weight": "0.0127789378",
+   "Market Value": "51275.21",
+   "Shares Held": "50000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VIRGIN MEDIA BRISTOL LLC",
+   "Ticker": "-",
+   "Identifier": "XAG9368PBE34",
+   "Weight": "0.0142970494",
+   "Market Value": "57366.6",
+   "Shares Held": "60000",
+   "Asset Category": "LON"
+  },
+  {
+   "Name": "TRUIST FINANCIAL CORP",
+   "Ticker": "-",
+   "Identifier": "89788MAU6",
+   "Weight": "0.0201720944",
+   "Market Value": "80940.09",
+   "Shares Held": "80000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHENIERE ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "16411RAK5",
+   "Weight": "0.0137002512",
+   "Market Value": "54971.96",
+   "Shares Held": "55000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VOLKSWAGEN GROUP AMER FIN LLC",
+   "Ticker": "-",
+   "Identifier": "928668BV3",
+   "Weight": "0.052545177",
+   "Market Value": "210836.38",
+   "Shares Held": "210000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LBM ACQUISITION LLC",
+   "Ticker": "-",
+   "Identifier": "05552BAA4",
+   "Weight": "0.0023029234",
+   "Market Value": "9240.43",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FLASH COMPUTE LLC",
+   "Ticker": "-",
+   "Identifier": "33853QAA9",
+   "Weight": "0.0318595322",
+   "Market Value": "127835.68",
+   "Shares Held": "124000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TELUS CORPORATION",
+   "Ticker": "-",
+   "Identifier": "87971MCL5",
+   "Weight": "0.0222251597",
+   "Market Value": "89177.97",
+   "Shares Held": "88000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NISOURCE INC",
+   "Ticker": "-",
+   "Identifier": "65473PBA2",
+   "Weight": "0.0251579033",
+   "Market Value": "100945.54",
+   "Shares Held": "101000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW FORTRESS ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "US64439HAC34",
+   "Weight": "0.0234021131",
+   "Market Value": "93900.47",
+   "Shares Held": "144562.34",
+   "Asset Category": "LON"
+  },
+  {
+   "Name": "EQUITABLE FINANCIAL LIFE GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "29449WAL1",
+   "Weight": "0.1110129181",
+   "Market Value": "445436.92",
+   "Shares Held": "451000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WAND NEWCO 3 INC",
+   "Ticker": "-",
+   "Identifier": "933940AA6",
+   "Weight": "0.0082488995",
+   "Market Value": "33098.53",
+   "Shares Held": "32000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "-",
+   "Identifier": "48128BAR2",
+   "Weight": "0.031400691",
+   "Market Value": "125994.59",
+   "Shares Held": "125000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CROSSCOUNTRY INTERMEDIATE HOLDCO LLC",
+   "Ticker": "-",
+   "Identifier": "22757VAA8",
+   "Weight": "0.0134932644",
+   "Market Value": "54141.43",
+   "Shares Held": "55000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MERCHANTS FLEET FUNDING LLC",
+   "Ticker": "-",
+   "Identifier": "588926AL9",
+   "Weight": "0.0735667962",
+   "Market Value": "295185.17",
+   "Shares Held": "295000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "BROWN and BROWN INC",
+   "Ticker": "-",
+   "Identifier": "115236AJ0",
+   "Weight": "0.0272190833",
+   "Market Value": "109215.98",
+   "Shares Held": "109000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CNH INDUSTRIAL CAPITAL LLC",
+   "Ticker": "-",
+   "Identifier": "12592BAS3",
+   "Weight": "0.0201836508",
+   "Market Value": "80986.46",
+   "Shares Held": "80000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ACCENDRA HEALTH INC",
+   "Ticker": "-",
+   "Identifier": "690732AG7",
+   "Weight": "0.0042110035",
+   "Market Value": "16896.56",
+   "Shares Held": "28000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CLYDESDALE ACQUISITION HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "18972FAC6",
+   "Weight": "0.043883687",
+   "Market Value": "176082.34",
+   "Shares Held": "180829.104",
+   "Asset Category": "LON"
+  },
+  {
+   "Name": "FTAI MRE 2026-1 CAYMAN LTD",
+   "Ticker": "-",
+   "Identifier": "30345KAA4",
+   "Weight": "0.0624177837",
+   "Market Value": "250450",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "MEXICO UNITED MEXICAN STATES",
+   "Ticker": "-",
+   "Identifier": "91087BAH3",
+   "Weight": "0.0466544584",
+   "Market Value": "187200",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "INGERSOLL RAND INC",
+   "Ticker": "-",
+   "Identifier": "45687VAC0",
+   "Weight": "0.0753734153",
+   "Market Value": "302434.19",
+   "Shares Held": "300000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "EXELON CORP",
+   "Ticker": "-",
+   "Identifier": "30161NBB6",
+   "Weight": "0.2965236131",
+   "Market Value": "1189794.55",
+   "Shares Held": "1204000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WELLS FARGO and CO",
+   "Ticker": "-",
+   "Identifier": "95000U3T8",
+   "Weight": "0.1541786922",
+   "Market Value": "618638.65",
+   "Shares Held": "614000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DOMINION ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "25746UDW6",
+   "Weight": "0.3407915639",
+   "Market Value": "1367418.74",
+   "Shares Held": "1350000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BROADCOM INC",
+   "Ticker": "-",
+   "Identifier": "11135FBX8",
+   "Weight": "0.0623782197",
+   "Market Value": "250291.25",
+   "Shares Held": "246000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AMERICAN AIRLINES INC",
+   "Ticker": "-",
+   "Identifier": "02376CBX2",
+   "Weight": "0.0197384247",
+   "Market Value": "79200",
+   "Shares Held": "80000",
+   "Asset Category": "LON"
+  },
+  {
+   "Name": "USA COMPRESSION PARTNERS LP / USA COMPRESSION FIN CORP",
+   "Ticker": "-",
+   "Identifier": "91740PAH1",
+   "Weight": "0.012758686",
+   "Market Value": "51193.95",
+   "Shares Held": "51000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "USB AUTO OWNER TRUST 2025-1",
+   "Ticker": "-",
+   "Identifier": "90367VAC3",
+   "Weight": "0.0375038219",
+   "Market Value": "150483.27",
+   "Shares Held": "150000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "BAE SYSTEMS PLC",
+   "Ticker": "-",
+   "Identifier": "05523RAH0",
+   "Weight": "0.0501651466",
+   "Market Value": "201286.56",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UBS GROUP AG",
+   "Ticker": "-",
+   "Identifier": "225401BE7",
+   "Weight": "0.1804848983",
+   "Market Value": "724191.73",
+   "Shares Held": "700000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GUARDIAN LIFE GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "40139LAH6",
+   "Weight": "0.0864863353",
+   "Market Value": "347024.54",
+   "Shares Held": "358000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MOSAIC CO",
+   "Ticker": "-",
+   "Identifier": "61945CAH6",
+   "Weight": "0.4305196963",
+   "Market Value": "1727450.92",
+   "Shares Held": "1700000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AXALTA COATING SYSTEMS DUTCH HOLDING B BV",
+   "Ticker": "-",
+   "Identifier": "05455JAA5",
+   "Weight": "0.028024112",
+   "Market Value": "112446.14",
+   "Shares Held": "108000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "COMSTOCK RESOURCES INC",
+   "Ticker": "-",
+   "Identifier": "205768AS3",
+   "Weight": "0.0323229415",
+   "Market Value": "129695.1",
+   "Shares Held": "132000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MORGAN STANLEY BK NA SALT LAKE",
+   "Ticker": "-",
+   "Identifier": "61778EUR0",
+   "Weight": "0.0624822501",
+   "Market Value": "250708.67",
+   "Shares Held": "250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HESS CORP",
+   "Ticker": "-",
+   "Identifier": "42809HAG2",
+   "Weight": "0.3841223034",
+   "Market Value": "1541282.39",
+   "Shares Held": "1540000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CNY3",
+   "Weight": "0.3918578469",
+   "Market Value": "1572321.09",
+   "Shares Held": "1595000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FIESTA PURCHASER INC",
+   "Ticker": "-",
+   "Identifier": "31659AAB2",
+   "Weight": "0.016269576",
+   "Market Value": "65281.32",
+   "Shares Held": "65000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "IHS HOLDING LTD",
+   "Ticker": "-",
+   "Identifier": "44963HAC9",
+   "Weight": "0.0069287254",
+   "Market Value": "27801.36",
+   "Shares Held": "27000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA BUYER/ATLANTI",
+   "Ticker": "-",
+   "Identifier": "13005HAA8",
+   "Weight": "0.0242821926",
+   "Market Value": "97431.77",
+   "Shares Held": "98000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WILLIAMS SCOTSMAN INC",
+   "Ticker": "-",
+   "Identifier": "96949VAN3",
+   "Weight": "0.0228157324",
+   "Market Value": "91547.63",
+   "Shares Held": "89000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MERCEDES-BENZ AUTO LEASE TR 2024-B",
+   "Ticker": "-",
+   "Identifier": "58769GAD5",
+   "Weight": "0.0587078172",
+   "Market Value": "235563.84",
+   "Shares Held": "235385.07",
+   "Asset Category": "ABS-CBDO"
+  }
+ ]
+}

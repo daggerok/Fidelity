@@ -1,0 +1,92 @@
+{
+ "ticker": "FETH",
+ "name": "Fidelity Ethereum Fund",
+ "category": "Digital Assets",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FETH",
+  "edgarFiling": null,
+  "nportDoc": null,
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FETH?period1=0&period2=1787720808&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.25%",
+  "value": 0.25
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$24.54",
+  "value": 24.535,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "—",
+  "source": "previous run"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 32.26,
+   "mo1Text": "32.26%",
+   "qtd": 52.49,
+   "qtdText": "52.49%",
+   "ytd": -17.14,
+   "ytdText": "-17.14%",
+   "yr1": -46.59,
+   "yr1Text": "-46.59%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": -15.24,
+   "sinceInceptionText": "-15.24%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "None",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": []
+ },
+ "holdings": {
+  "pages": [],
+  "pageSize": 250,
+  "totalRows": 0,
+  "asOf": "—"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 525,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": null,
+  "seriesName": "Fidelity Ethereum Fund",
+  "trustCik": "0002000046",
+  "trustName": "Fidelity Ethereum Fund",
+  "accession": null
+ }
+}

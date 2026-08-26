@@ -1,0 +1,142 @@
+{
+ "ticker": "FESM",
+ "name": "Fidelity Enhanced Small Cap Core ETF",
+ "category": "US Equity",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FESM",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005400/000003540226005400-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005400/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FESM?period1=0&period2=1787720808&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.28%",
+  "value": 0.28
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$47.77",
+  "value": 47.77,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$6,031.35 M",
+  "value": 6031347285.929998,
+  "asOfDate": "Jun 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 2.25,
+   "mo1Text": "2.25%",
+   "qtd": -0.73,
+   "qtdText": "-0.73%",
+   "ytd": 27.06,
+   "ytdText": "27.06%",
+   "yr1": 36.48,
+   "yr1Text": "36.48%",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 27.42,
+   "sinceInceptionText": "27.42%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/28/2023",
+    "0.018"
+   ],
+   [
+    "03/15/2024",
+    "0.069"
+   ],
+   [
+    "06/21/2024",
+    "0.053"
+   ],
+   [
+    "09/20/2024",
+    "0.07"
+   ],
+   [
+    "12/20/2024",
+    "0.158"
+   ],
+   [
+    "03/21/2025",
+    "0.16"
+   ],
+   [
+    "06/20/2025",
+    "0.014"
+   ],
+   [
+    "09/19/2025",
+    "0.052"
+   ],
+   [
+    "12/19/2025",
+    "0.084"
+   ],
+   [
+    "03/20/2026",
+    "0.091"
+   ],
+   [
+    "06/18/2026",
+    "0.114"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json",
+   "holdings/003.json",
+   "holdings/004.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 786,
+  "asOf": "Jun 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 692,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000081807",
+  "seriesName": "Fidelity Enhanced Small Cap Core ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-005400"
+ }
+}

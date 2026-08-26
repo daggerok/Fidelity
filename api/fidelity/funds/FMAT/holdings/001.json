@@ -1,0 +1,971 @@
+{
+ "ticker": "FMAT",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 106,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "FMC Corp",
+   "Ticker": "-",
+   "Identifier": "302491303",
+   "Weight": "0.1231945559",
+   "Market Value": "743130.84",
+   "Shares Held": "48318",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Eightco Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "22890A302",
+   "Weight": "0.0040857517",
+   "Market Value": "24645.96",
+   "Shares Held": "31233",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sensient Technologies Corp",
+   "Ticker": "-",
+   "Identifier": "81725T100",
+   "Weight": "0.262992204",
+   "Market Value": "1586414.4",
+   "Shares Held": "13960",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Albemarle Corp",
+   "Ticker": "-",
+   "Identifier": "012653101",
+   "Weight": "1.4833272697",
+   "Market Value": "8947686.3",
+   "Shares Held": "45489",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dow Inc",
+   "Ticker": "-",
+   "Identifier": "260557103",
+   "Weight": "1.8439538945",
+   "Market Value": "11123048.39",
+   "Shares Held": "274711",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HB Fuller Co",
+   "Ticker": "-",
+   "Identifier": "359694106",
+   "Weight": "0.2097471637",
+   "Market Value": "1265231.12",
+   "Shares Held": "20906",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cabot Corp",
+   "Ticker": "-",
+   "Identifier": "127055101",
+   "Weight": "0.2604215084",
+   "Market Value": "1570907.52",
+   "Shares Held": "20412",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Metallus Inc",
+   "Ticker": "-",
+   "Identifier": "887399103",
+   "Weight": "0.0463762582",
+   "Market Value": "279749.6",
+   "Shares Held": "14540",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Avient Corp",
+   "Ticker": "-",
+   "Identifier": "05368V106",
+   "Weight": "0.2175191162",
+   "Market Value": "1312112.88",
+   "Shares Held": "35386",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ivanhoe Electric Inc / US",
+   "Ticker": "-",
+   "Identifier": "46578C108",
+   "Weight": "0.0764822214",
+   "Market Value": "461353.97",
+   "Shares Held": "35959",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Royal Gold Inc",
+   "Ticker": "-",
+   "Identifier": "780287108",
+   "Weight": "1.2621968014",
+   "Market Value": "7613789.12",
+   "Shares Held": "32624",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ashland Inc",
+   "Ticker": "-",
+   "Identifier": "044186104",
+   "Weight": "0.1561818905",
+   "Market Value": "942116.14",
+   "Shares Held": "17689",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ecovyst Inc",
+   "Ticker": "-",
+   "Identifier": "27923Q109",
+   "Weight": "0.103020674",
+   "Market Value": "621438.5",
+   "Shares Held": "43825",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ball Corp",
+   "Ticker": "-",
+   "Identifier": "058498106",
+   "Weight": "0.9963895984",
+   "Market Value": "6010394.16",
+   "Shares Held": "98402",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Air Products and Chemicals Inc",
+   "Ticker": "-",
+   "Identifier": "009158106",
+   "Weight": "4.2795196562",
+   "Market Value": "25814801.75",
+   "Shares Held": "86035",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Olin Corp",
+   "Ticker": "-",
+   "Identifier": "680665205",
+   "Weight": "0.2082351513",
+   "Market Value": "1256110.4",
+   "Shares Held": "44105",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hawkins Inc",
+   "Ticker": "-",
+   "Identifier": "420261109",
+   "Weight": "0.2124710877",
+   "Market Value": "1281662.3",
+   "Shares Held": "7654",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Amrize Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "1.7153028552",
+   "Market Value": "10347003.1",
+   "Shares Held": "192395",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mosaic Co/The",
+   "Ticker": "-",
+   "Identifier": "61945C103",
+   "Weight": "0.4732369877",
+   "Market Value": "2854647.25",
+   "Shares Held": "122675",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Celanese Corp",
+   "Ticker": "-",
+   "Identifier": "150870103",
+   "Weight": "0.4753623297",
+   "Market Value": "2867467.68",
+   "Shares Held": "42318",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PPG Industries Inc",
+   "Ticker": "-",
+   "Identifier": "693506107",
+   "Weight": "1.5599666037",
+   "Market Value": "9409988",
+   "Shares Held": "86728",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kaiser Aluminum Corp",
+   "Ticker": "-",
+   "Identifier": "483007704",
+   "Weight": "0.1769799322",
+   "Market Value": "1067573.52",
+   "Shares Held": "6264",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Balchem Corp",
+   "Ticker": "-",
+   "Identifier": "057665200",
+   "Weight": "0.335635903",
+   "Market Value": "2024613.74",
+   "Shares Held": "12527",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Nucor Corp",
+   "Ticker": "-",
+   "Identifier": "670346105",
+   "Weight": "3.3037354409",
+   "Market Value": "19928702.82",
+   "Shares Held": "88458",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Graphic Packaging Holding Co",
+   "Ticker": "-",
+   "Identifier": "388689101",
+   "Weight": "0.1803128009",
+   "Market Value": "1087677.96",
+   "Shares Held": "114132",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Perpetua Resources Corp",
+   "Ticker": "-",
+   "Identifier": "714266103",
+   "Weight": "0.1525967229",
+   "Market Value": "920489.79",
+   "Shares Held": "33339",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Axalta Coating Systems Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.3887568786",
+   "Market Value": "2345048.64",
+   "Shares Held": "82456",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Corteva Inc",
+   "Ticker": "-",
+   "Identifier": "22052L104",
+   "Weight": "3.5075304938",
+   "Market Value": "21158029.78",
+   "Shares Held": "261178",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vulcan Materials Co",
+   "Ticker": "-",
+   "Identifier": "929160109",
+   "Weight": "2.5548122476",
+   "Market Value": "15411068.76",
+   "Shares Held": "51074",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Scotts Miracle-Gro Co/The",
+   "Ticker": "-",
+   "Identifier": "810186106",
+   "Weight": "0.186057338",
+   "Market Value": "1122330",
+   "Shares Held": "17900",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Crown Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "228368106",
+   "Weight": "0.7266615479",
+   "Market Value": "4383347.97",
+   "Shares Held": "44587",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Eastman Chemical Co",
+   "Ticker": "-",
+   "Identifier": "277432100",
+   "Weight": "0.5341766369",
+   "Market Value": "3222245.74",
+   "Shares Held": "44086",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Westlake Corp",
+   "Ticker": "-",
+   "Identifier": "960413102",
+   "Weight": "0.2841784673",
+   "Market Value": "1714213.6",
+   "Shares Held": "14870",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Knife River Corp",
+   "Ticker": "-",
+   "Identifier": "498894104",
+   "Weight": "0.3360364817",
+   "Market Value": "2027030.1",
+   "Shares Held": "21902",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chemours Co/The",
+   "Ticker": "-",
+   "Identifier": "163851108",
+   "Weight": "0.2588099879",
+   "Market Value": "1561186.55",
+   "Shares Held": "57929",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "United States Lime & Minerals Inc",
+   "Ticker": "-",
+   "Identifier": "911922102",
+   "Weight": "0.078983108",
+   "Market Value": "476439.75",
+   "Shares Held": "4425",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.000675672",
+   "Market Value": "4075.77",
+   "Shares Held": "1",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Packaging Corp of America",
+   "Ticker": "-",
+   "Identifier": "695156109",
+   "Weight": "1.2304516444",
+   "Market Value": "7422296.85",
+   "Shares Held": "34773",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Worthington Steel Inc",
+   "Ticker": "-",
+   "Identifier": "982104101",
+   "Weight": "0.0815148823",
+   "Market Value": "491711.85",
+   "Shares Held": "12795",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Materion Corp",
+   "Ticker": "-",
+   "Identifier": "576690101",
+   "Weight": "0.2440166333",
+   "Market Value": "1471950.48",
+   "Shares Held": "8008",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Newmont Corp",
+   "Ticker": "-",
+   "Identifier": "651639106",
+   "Weight": "7.7676242739",
+   "Market Value": "46855651.29",
+   "Shares Held": "421781",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Constellium SE",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.2490712763",
+   "Market Value": "1502440.96",
+   "Shares Held": "48032",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DuPont de Nemours Inc",
+   "Ticker": "-",
+   "Identifier": "26614N102",
+   "Weight": "1.2257829933",
+   "Market Value": "7394134.74",
+   "Shares Held": "161939",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Linde PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "14.9936429028",
+   "Market Value": "90444243.78",
+   "Shares Held": "180477",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Greif Inc",
+   "Ticker": "-",
+   "Identifier": "397624107",
+   "Weight": "0.1030701918",
+   "Market Value": "621737.2",
+   "Shares Held": "9530",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Solstice Advanced Materials Inc",
+   "Ticker": "-",
+   "Identifier": "83443Q103",
+   "Weight": "0.8334152433",
+   "Market Value": "5027304.7",
+   "Shares Held": "61346",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Huntsman Corp",
+   "Ticker": "-",
+   "Identifier": "447011107",
+   "Weight": "0.1520741749",
+   "Market Value": "917337.69",
+   "Shares Held": "63837",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "USA Rare Earth Inc",
+   "Ticker": "-",
+   "Identifier": "91733P107",
+   "Weight": "0.1264236096",
+   "Market Value": "762609.05",
+   "Shares Held": "29365",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Eagle Materials Inc",
+   "Ticker": "-",
+   "Identifier": "26969P108",
+   "Weight": "0.4316327198",
+   "Market Value": "2603683.12",
+   "Shares Held": "12392",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Steel Dynamics Inc",
+   "Ticker": "-",
+   "Identifier": "858119100",
+   "Weight": "2.032521464",
+   "Market Value": "12260520.54",
+   "Shares Held": "53619",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tronox Holdings PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0760622649",
+   "Market Value": "458820.72",
+   "Shares Held": "45928",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ASP Isotopes Inc",
+   "Ticker": "-",
+   "Identifier": "00218A105",
+   "Weight": "0.0358109242",
+   "Market Value": "216017.68",
+   "Shares Held": "41068",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Martin Marietta Materials Inc",
+   "Ticker": "-",
+   "Identifier": "573284106",
+   "Weight": "2.3923619939",
+   "Market Value": "14431140.77",
+   "Shares Held": "23311",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hycroft Mining Holding Corp",
+   "Ticker": "-",
+   "Identifier": "44862P208",
+   "Weight": "0.1118671017",
+   "Market Value": "674801.68",
+   "Shares Held": "18508",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NewMarket Corp",
+   "Ticker": "-",
+   "Identifier": "651587107",
+   "Weight": "0.3458645259",
+   "Market Value": "2086314.56",
+   "Shares Held": "3088",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coeur Mining Inc",
+   "Ticker": "-",
+   "Identifier": "192108504",
+   "Weight": "1.1914912796",
+   "Market Value": "7187281.2",
+   "Shares Held": "399960",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Compass Minerals International Inc",
+   "Ticker": "-",
+   "Identifier": "20451N101",
+   "Weight": "0.0611629088",
+   "Market Value": "368945.23",
+   "Shares Held": "13813",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PureCycle Technologies Inc",
+   "Ticker": "-",
+   "Identifier": "74623V103",
+   "Weight": "0.0648640776",
+   "Market Value": "391271.32",
+   "Shares Held": "52309",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ecolab Inc",
+   "Ticker": "-",
+   "Identifier": "278865100",
+   "Weight": "4.256229582",
+   "Market Value": "25674312",
+   "Shares Held": "98520",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "American Battery Technology Co",
+   "Ticker": "-",
+   "Identifier": "02451V309",
+   "Weight": "0.0282125542",
+   "Market Value": "170183",
+   "Shares Held": "50350",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Innospec Inc",
+   "Ticker": "-",
+   "Identifier": "45768S105",
+   "Weight": "0.121428436",
+   "Market Value": "732477.3",
+   "Shares Held": "9605",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Trilogy Metals Inc",
+   "Ticker": "-",
+   "Identifier": "89621C105",
+   "Weight": "0.0301448265",
+   "Market Value": "181838.8",
+   "Shares Held": "41140",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Silgan Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "827048109",
+   "Weight": "0.2329877664",
+   "Market Value": "1405422.45",
+   "Shares Held": "34659",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AptarGroup Inc",
+   "Ticker": "-",
+   "Identifier": "038336103",
+   "Weight": "0.5200275228",
+   "Market Value": "3136895.84",
+   "Shares Held": "25363",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MP Materials Corp",
+   "Ticker": "-",
+   "Identifier": "553368101",
+   "Weight": "0.5995323152",
+   "Market Value": "3616482.48",
+   "Shares Held": "54762",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "United States Antimony Corp",
+   "Ticker": "-",
+   "Identifier": "911549103",
+   "Weight": "0.0905741504",
+   "Market Value": "546358.92",
+   "Shares Held": "45492",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Freeport-McMoRan Inc",
+   "Ticker": "-",
+   "Identifier": "35671D857",
+   "Weight": "5.3160771412",
+   "Market Value": "32067495.54",
+   "Shares Held": "554993",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "-0.0012002309",
+   "Market Value": "-7240",
+   "Shares Held": "10",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Sherwin-Williams Co/The",
+   "Ticker": "-",
+   "Identifier": "824348106",
+   "Weight": "4.8526424392",
+   "Market Value": "29271977.37",
+   "Shares Held": "91017",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Louisiana-Pacific Corp",
+   "Ticker": "-",
+   "Identifier": "546347105",
+   "Weight": "0.2898766762",
+   "Market Value": "1748586.18",
+   "Shares Held": "24222",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "International Paper Co",
+   "Ticker": "-",
+   "Identifier": "460146103",
+   "Weight": "0.9777440282",
+   "Market Value": "5897920.86",
+   "Shares Held": "193883",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TriMas Corp",
+   "Ticker": "-",
+   "Identifier": "896215209",
+   "Weight": "0.0768486681",
+   "Market Value": "463564.44",
+   "Shares Held": "12522",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Perimeter Solutions Inc",
+   "Ticker": "-",
+   "Identifier": "71385M107",
+   "Weight": "0.2732597979",
+   "Market Value": "1648350.3",
+   "Shares Held": "54401",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Avery Dennison Corp",
+   "Ticker": "-",
+   "Identifier": "053611109",
+   "Weight": "0.8118270336",
+   "Market Value": "4897080.89",
+   "Shares Held": "29873",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Century Aluminum Co",
+   "Ticker": "-",
+   "Identifier": "156431108",
+   "Weight": "0.2133354031",
+   "Market Value": "1286876",
+   "Shares Held": "21650",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Amcor PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "1.1262531941",
+   "Market Value": "6793753.8",
+   "Shares Held": "178595",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cleveland-Cliffs Inc",
+   "Ticker": "-",
+   "Identifier": "185899101",
+   "Weight": "0.3723316128",
+   "Market Value": "2245968.6",
+   "Shares Held": "220193",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LyondellBasell Industries NV",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "1.2307781851",
+   "Market Value": "7424266.6",
+   "Shares Held": "99521",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "International Flavors & Fragrances Inc",
+   "Ticker": "-",
+   "Identifier": "459506101",
+   "Weight": "1.1519708927",
+   "Market Value": "6948887.4",
+   "Shares Held": "98987",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.1556653038",
+   "Market Value": "939000",
+   "Shares Held": "939000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "CF Industries Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "125269100",
+   "Weight": "1.2412438006",
+   "Market Value": "7487397",
+   "Shares Held": "60285",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Quaker Chemical Corp",
+   "Ticker": "-",
+   "Identifier": "747316107",
+   "Weight": "0.1203871628",
+   "Market Value": "726196.16",
+   "Shares Held": "5344",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hecla Mining Co",
+   "Ticker": "-",
+   "Identifier": "422704106",
+   "Weight": "0.7737086075",
+   "Market Value": "4667143.96",
+   "Shares Held": "258998",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sonoco Products Co",
+   "Ticker": "-",
+   "Identifier": "835495102",
+   "Weight": "0.3157610179",
+   "Market Value": "1904725",
+   "Shares Held": "38125",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Koppers Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "50060P106",
+   "Weight": "0.0517196778",
+   "Market Value": "311982.03",
+   "Shares Held": "7641",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Commercial Metals Co",
+   "Ticker": "-",
+   "Identifier": "201723103",
+   "Weight": "0.4900226791",
+   "Market Value": "2955901.44",
+   "Shares Held": "42864",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RPM International Inc",
+   "Ticker": "-",
+   "Identifier": "749685103",
+   "Weight": "0.8361767458",
+   "Market Value": "5043962.56",
+   "Shares Held": "49504",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Warrior Met Coal Inc",
+   "Ticker": "-",
+   "Identifier": "93627C101",
+   "Weight": "0.3026243665",
+   "Market Value": "1825482.45",
+   "Shares Held": "20317",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Minerals Technologies Inc",
+   "Ticker": "-",
+   "Identifier": "603158106",
+   "Weight": "0.1437446936",
+   "Market Value": "867092.82",
+   "Shares Held": "12053",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Smurfit Westrock PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "1.2844498512",
+   "Market Value": "7748023.36",
+   "Shares Held": "201824",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "McEwen Inc",
+   "Ticker": "-",
+   "Identifier": "58039P305",
+   "Weight": "0.0688945657",
+   "Market Value": "415583.92",
+   "Shares Held": "19169",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Alcoa Corp",
+   "Ticker": "-",
+   "Identifier": "013872106",
+   "Weight": "1.0584479905",
+   "Market Value": "6384741.1",
+   "Shares Held": "100090",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "O-I Glass Inc",
+   "Ticker": "-",
+   "Identifier": "67098H104",
+   "Weight": "0.0900764724",
+   "Market Value": "543356.84",
+   "Shares Held": "59644",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ramaco Resources Inc",
+   "Ticker": "-",
+   "Identifier": "75134P600",
+   "Weight": "0.036791594",
+   "Market Value": "221933.25",
+   "Shares Held": "14945",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sylvamo Corp",
+   "Ticker": "-",
+   "Identifier": "871332102",
+   "Weight": "0.0919887087",
+   "Market Value": "554891.78",
+   "Shares Held": "12986",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Alpha Metallurgical Resources Inc",
+   "Ticker": "-",
+   "Identifier": "020764106",
+   "Weight": "0.1310243565",
+   "Market Value": "790361.55",
+   "Shares Held": "4239",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SunCoke Energy Inc",
+   "Ticker": "-",
+   "Identifier": "86722A103",
+   "Weight": "0.0369040527",
+   "Market Value": "222611.62",
+   "Shares Held": "32641",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Greif Inc",
+   "Ticker": "-",
+   "Identifier": "397624206",
+   "Weight": "0.0214960423",
+   "Market Value": "129667.84",
+   "Shares Held": "1616",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CRH PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "5.0857106708",
+   "Market Value": "30677885.2",
+   "Shares Held": "259060",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TMC the metals co Inc",
+   "Ticker": "-",
+   "Identifier": "87261Y106",
+   "Weight": "0.0686201438",
+   "Market Value": "413928.56",
+   "Shares Held": "78994",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ryerson Holding Corp",
+   "Ticker": "-",
+   "Identifier": "783754104",
+   "Weight": "0.0820802557",
+   "Market Value": "495122.28",
+   "Shares Held": "17868",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Reliance Inc",
+   "Ticker": "-",
+   "Identifier": "759509102",
+   "Weight": "1.2147488696",
+   "Market Value": "7327575",
+   "Shares Held": "20214",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Stepan Co",
+   "Ticker": "-",
+   "Identifier": "858586100",
+   "Weight": "0.069038096",
+   "Market Value": "416449.72",
+   "Shares Held": "8324",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ingevity Corp",
+   "Ticker": "-",
+   "Identifier": "45688C107",
+   "Weight": "0.1757927812",
+   "Market Value": "1060412.42",
+   "Shares Held": "13918",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Element Solutions Inc",
+   "Ticker": "-",
+   "Identifier": "28618M106",
+   "Weight": "0.6274007993",
+   "Market Value": "3784589.99",
+   "Shares Held": "88861",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NioCorp Developments Ltd",
+   "Ticker": "-",
+   "Identifier": "654484609",
+   "Weight": "0.0557127962",
+   "Market Value": "336069.21",
+   "Shares Held": "56293",
+   "Asset Category": "EC"
+  }
+ ]
+}

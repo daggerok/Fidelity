@@ -1,0 +1,917 @@
+{
+ "ticker": "FENY",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 100,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "EQT Corp",
+   "Ticker": "-",
+   "Identifier": "26884L109",
+   "Weight": "1.4766884076",
+   "Market Value": "29937443.44",
+   "Shares Held": "498293",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Peabody Energy Corp",
+   "Ticker": "-",
+   "Identifier": "704551100",
+   "Weight": "0.1524943463",
+   "Market Value": "3091573.58",
+   "Shares Held": "115963",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Plains GP Holdings LP",
+   "Ticker": "-",
+   "Identifier": "72651A207",
+   "Weight": "0.2240415661",
+   "Market Value": "4542076.5",
+   "Shares Held": "185770",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EXPRO GROUP HOLDINGS NV",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.1095283967",
+   "Market Value": "2220509.19",
+   "Shares Held": "121939",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "REX American Resources Corp",
+   "Ticker": "-",
+   "Identifier": "761624105",
+   "Weight": "0.1050579159",
+   "Market Value": "2129877.5",
+   "Shares Held": "43915",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NextDecade Corp",
+   "Ticker": "-",
+   "Identifier": "65342K105",
+   "Weight": "0.0878023302",
+   "Market Value": "1780048.71",
+   "Shares Held": "227337",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Excelerate Energy Inc",
+   "Ticker": "-",
+   "Identifier": "30069T101",
+   "Weight": "0.064169534",
+   "Market Value": "1300932.4",
+   "Shares Held": "37276",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Core Natural Resources Inc",
+   "Ticker": "-",
+   "Identifier": "218937100",
+   "Weight": "0.2118477425",
+   "Market Value": "4294866.66",
+   "Shares Held": "47859",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Oceaneering International Inc",
+   "Ticker": "-",
+   "Identifier": "675232102",
+   "Weight": "0.1838395469",
+   "Market Value": "3727046.28",
+   "Shares Held": "99282",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Uranium Energy Corp",
+   "Ticker": "-",
+   "Identifier": "916896103",
+   "Weight": "0.3098713802",
+   "Market Value": "6282135.67",
+   "Shares Held": "421903",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Valero Energy Corp",
+   "Ticker": "-",
+   "Identifier": "91913Y100",
+   "Weight": "3.0527704322",
+   "Market Value": "61889929.98",
+   "Shares Held": "245031",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Marathon Petroleum Corp",
+   "Ticker": "-",
+   "Identifier": "56585A102",
+   "Weight": "2.9399539076",
+   "Market Value": "59602759.37",
+   "Shares Held": "240053",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SLB Ltd",
+   "Ticker": "-",
+   "Identifier": "806857108",
+   "Weight": "3.3058123263",
+   "Market Value": "67019940.72",
+   "Shares Held": "1178269",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Talos Energy Inc",
+   "Ticker": "-",
+   "Identifier": "87484T108",
+   "Weight": "0.1220257441",
+   "Market Value": "2473872.48",
+   "Shares Held": "155394",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Permian Resources Corp",
+   "Ticker": "-",
+   "Identifier": "71424F105",
+   "Weight": "0.6307960995",
+   "Market Value": "12788359.72",
+   "Shares Held": "591506",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Crescent Energy Co",
+   "Ticker": "-",
+   "Identifier": "44952J104",
+   "Weight": "0.2023454444",
+   "Market Value": "4102223.1",
+   "Shares Held": "304998",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BKV Corp",
+   "Ticker": "-",
+   "Identifier": "05603J108",
+   "Weight": "0.0564070916",
+   "Market Value": "1143561.57",
+   "Shares Held": "36269",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EOG Resources Inc",
+   "Ticker": "-",
+   "Identifier": "26875P101",
+   "Weight": "2.972267309",
+   "Market Value": "60257860.76",
+   "Shares Held": "428668",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Williams Cos Inc/The",
+   "Ticker": "-",
+   "Identifier": "969457100",
+   "Weight": "3.6189966809",
+   "Market Value": "73369241.53",
+   "Shares Held": "961463",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CVR Energy Inc",
+   "Ticker": "-",
+   "Identifier": "12662P108",
+   "Weight": "0.0938358549",
+   "Market Value": "1902368.56",
+   "Shares Held": "57404",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Transocean Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.2987693541",
+   "Market Value": "6057060.24",
+   "Shares Held": "888132",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cheniere Energy Inc",
+   "Ticker": "-",
+   "Identifier": "16411R208",
+   "Weight": "2.3562300893",
+   "Market Value": "47768713.2",
+   "Shares Held": "173736",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Bristow Group Inc",
+   "Ticker": "-",
+   "Identifier": "11040G103",
+   "Weight": "0.0507503539",
+   "Market Value": "1028880.46",
+   "Shares Held": "20942",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "California Resources Corp",
+   "Ticker": "-",
+   "Identifier": "13057Q305",
+   "Weight": "0.216735821",
+   "Market Value": "4393964.46",
+   "Shares Held": "64371",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coterra Energy Inc",
+   "Ticker": "-",
+   "Identifier": "127097103",
+   "Weight": "1.0904093895",
+   "Market Value": "22106267.82",
+   "Shares Held": "615602",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Phillips 66",
+   "Ticker": "-",
+   "Identifier": "718546104",
+   "Weight": "2.8164032321",
+   "Market Value": "57097971.4",
+   "Shares Held": "318716",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Range Resources Corp",
+   "Ticker": "-",
+   "Identifier": "75281A109",
+   "Weight": "0.4363889958",
+   "Market Value": "8847073.5",
+   "Shares Held": "203381",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dorian LPG Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0988119499",
+   "Market Value": "2003250.75",
+   "Shares Held": "51965",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Baker Hughes Co",
+   "Ticker": "-",
+   "Identifier": "05722G100",
+   "Weight": "2.6826023566",
+   "Market Value": "54385377.38",
+   "Shares Held": "780614",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Patterson-UTI Energy Inc",
+   "Ticker": "-",
+   "Identifier": "703481101",
+   "Weight": "0.2216907842",
+   "Market Value": "4494418.24",
+   "Shares Held": "367792",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Seadrill Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.1530673449",
+   "Market Value": "3103190.19",
+   "Shares Held": "62451",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DT Midstream Inc",
+   "Ticker": "-",
+   "Identifier": "23345M107",
+   "Weight": "0.616096827",
+   "Market Value": "12490356",
+   "Shares Held": "84400",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Solaris Energy Infrastructure Inc",
+   "Ticker": "-",
+   "Identifier": "83418M103",
+   "Weight": "0.1722477368",
+   "Market Value": "3492041.28",
+   "Shares Held": "47292",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Archrock Inc",
+   "Ticker": "-",
+   "Identifier": "03957W106",
+   "Weight": "0.2885487895",
+   "Market Value": "5849855",
+   "Shares Held": "150964",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NOV Inc",
+   "Ticker": "-",
+   "Identifier": "62955J103",
+   "Weight": "0.3264861852",
+   "Market Value": "6618973.68",
+   "Shares Held": "323508",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ProPetro Holding Corp",
+   "Ticker": "-",
+   "Identifier": "74347M108",
+   "Weight": "0.1118275734",
+   "Market Value": "2267121.24",
+   "Shares Held": "132348",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Targa Resources Corp",
+   "Ticker": "-",
+   "Identifier": "87612G101",
+   "Weight": "2.1905440851",
+   "Market Value": "44409700.32",
+   "Shares Held": "170754",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Occidental Petroleum Corp",
+   "Ticker": "-",
+   "Identifier": "674599105",
+   "Weight": "1.7657946546",
+   "Market Value": "35798599.98",
+   "Shares Held": "590931",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cactus Inc",
+   "Ticker": "-",
+   "Identifier": "127203107",
+   "Weight": "0.1806682885",
+   "Market Value": "3662754.2",
+   "Shares Held": "65735",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chevron Corp",
+   "Ticker": "-",
+   "Identifier": "166764100",
+   "Weight": "14.4775453938",
+   "Market Value": "293508565.61",
+   "Shares Held": "1518331",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Helmerich & Payne Inc",
+   "Ticker": "-",
+   "Identifier": "423452101",
+   "Weight": "0.1943674497",
+   "Market Value": "3940482.3",
+   "Shares Held": "97585",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kimbell Royalty Partners LP",
+   "Ticker": "-",
+   "Identifier": "49435R102",
+   "Weight": "0.0899903483",
+   "Market Value": "1824407.2",
+   "Shares Held": "118468",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Innovex International Inc",
+   "Ticker": "-",
+   "Identifier": "457651107",
+   "Weight": "0.0788745293",
+   "Market Value": "1599052.14",
+   "Shares Held": "57582",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sunococorp LLC",
+   "Ticker": "-",
+   "Identifier": "86765Q106",
+   "Weight": "0.1453724769",
+   "Market Value": "2947189.32",
+   "Shares Held": "44199",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Viper Energy Inc",
+   "Ticker": "-",
+   "Identifier": "64361Q101",
+   "Weight": "0.4021524578",
+   "Market Value": "8152983.66",
+   "Shares Held": "165107",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gulfport Energy Corp",
+   "Ticker": "-",
+   "Identifier": "402635502",
+   "Weight": "0.1498846513",
+   "Market Value": "3038666.28",
+   "Shares Held": "15782",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Exxon Mobil Corp",
+   "Ticker": "-",
+   "Identifier": "30231G102",
+   "Weight": "21.0280485481",
+   "Market Value": "426309308.59",
+   "Shares Held": "2762323",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SM Energy Co",
+   "Ticker": "-",
+   "Identifier": "78454L100",
+   "Weight": "0.3289751341",
+   "Market Value": "6669433.05",
+   "Shares Held": "214935",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "International Seaways Inc",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.1777134805",
+   "Market Value": "3602850.3",
+   "Shares Held": "43434",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PBF Energy Inc",
+   "Ticker": "-",
+   "Identifier": "69318G106",
+   "Weight": "0.1880275422",
+   "Market Value": "3811951.04",
+   "Shares Held": "87914",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sable Offshore Corp",
+   "Ticker": "-",
+   "Identifier": "78574H104",
+   "Weight": "0.1121556201",
+   "Market Value": "2273771.85",
+   "Shares Held": "158451",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Texas Pacific Land Corp",
+   "Ticker": "-",
+   "Identifier": "88262P102",
+   "Weight": "1.0350654535",
+   "Market Value": "20984259.99",
+   "Shares Held": "47297",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Select Water Solutions Inc",
+   "Ticker": "-",
+   "Identifier": "81617J301",
+   "Weight": "0.1237632948",
+   "Market Value": "2509098.48",
+   "Shares Held": "149976",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WaterBridge Infrastructure LLC",
+   "Ticker": "-",
+   "Identifier": "940923105",
+   "Weight": "0.0800012065",
+   "Market Value": "1621893.68",
+   "Shares Held": "53812",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0094871141",
+   "Market Value": "192335.73",
+   "Shares Held": "46",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Core Laboratories Inc",
+   "Ticker": "-",
+   "Identifier": "21867A105",
+   "Weight": "0.0528504783",
+   "Market Value": "1071457.05",
+   "Shares Held": "73137",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Riley Exploration Permian Inc",
+   "Ticker": "-",
+   "Identifier": "76665T102",
+   "Weight": "0.0588561453",
+   "Market Value": "1193212.13",
+   "Shares Held": "32989",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tidewater Inc",
+   "Ticker": "-",
+   "Identifier": "88642R109",
+   "Weight": "0.0850014297",
+   "Market Value": "1723265.03",
+   "Shares Held": "19291",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Comstock Resources Inc",
+   "Ticker": "-",
+   "Identifier": "205768302",
+   "Weight": "0.0908499402",
+   "Market Value": "1841834.02",
+   "Shares Held": "105731",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kosmos Energy Ltd",
+   "Ticker": "-",
+   "Identifier": "500688106",
+   "Weight": "0.1435409408",
+   "Market Value": "2910057.92",
+   "Shares Held": "944824",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Noble Corp PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.2898762894",
+   "Market Value": "5876767.89",
+   "Shares Held": "115163",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Northern Oil & Gas Inc",
+   "Ticker": "-",
+   "Identifier": "665531307",
+   "Weight": "0.1329466957",
+   "Market Value": "2695276.92",
+   "Shares Held": "99237",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Valaris Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.2921063439",
+   "Market Value": "5921978.6",
+   "Shares Held": "58070",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Helix Energy Solutions Group Inc",
+   "Ticker": "-",
+   "Identifier": "42330P107",
+   "Weight": "0.0976950312",
+   "Market Value": "1980607.05",
+   "Shares Held": "191363",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Murphy Oil Corp",
+   "Ticker": "-",
+   "Identifier": "626717102",
+   "Weight": "0.2620782616",
+   "Market Value": "5313208.32",
+   "Shares Held": "127232",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Antero Midstream Corp",
+   "Ticker": "-",
+   "Identifier": "03676B102",
+   "Weight": "0.3347723261",
+   "Market Value": "6786961.64",
+   "Shares Held": "310474",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Diversified Energy Co",
+   "Ticker": "-",
+   "Identifier": "25520W107",
+   "Weight": "0.0846635563",
+   "Market Value": "1716415.2",
+   "Shares Held": "103088",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TechnipFMC PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "1.253146685",
+   "Market Value": "25405500.45",
+   "Shares Held": "336185",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kinder Morgan Inc",
+   "Ticker": "-",
+   "Identifier": "49456B101",
+   "Weight": "2.5651384436",
+   "Market Value": "52003988.57",
+   "Shares Held": "1582111",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RPC Inc",
+   "Ticker": "-",
+   "Identifier": "749660106",
+   "Weight": "0.0731929318",
+   "Market Value": "1483867.04",
+   "Shares Held": "188308",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HF Sinclair Corp",
+   "Ticker": "-",
+   "Identifier": "403949100",
+   "Weight": "0.4503648595",
+   "Market Value": "9130411.29",
+   "Shares Held": "135849",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "APA Corp",
+   "Ticker": "-",
+   "Identifier": "03743Q108",
+   "Weight": "0.6063744545",
+   "Market Value": "12293250.79",
+   "Shares Held": "301823",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Centrus Energy Corp",
+   "Ticker": "-",
+   "Identifier": "15643U104",
+   "Weight": "0.1776265142",
+   "Market Value": "3601087.2",
+   "Shares Held": "17070",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chord Energy Corp",
+   "Ticker": "-",
+   "Identifier": "674215207",
+   "Weight": "0.3679829525",
+   "Market Value": "7460252.8",
+   "Shares Held": "51238",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vitesse Energy Inc",
+   "Ticker": "-",
+   "Identifier": "92852X103",
+   "Weight": "0.0504501935",
+   "Market Value": "1022795.2",
+   "Shares Held": "54520",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Par Pacific Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "69888T207",
+   "Weight": "0.1786659564",
+   "Market Value": "3622160.19",
+   "Shares Held": "55157",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TETRA Technologies Inc",
+   "Ticker": "-",
+   "Identifier": "88162F105",
+   "Weight": "0.0764056278",
+   "Market Value": "1548999.2",
+   "Shares Held": "162710",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Atlas Energy Solutions Inc",
+   "Ticker": "-",
+   "Identifier": "642045108",
+   "Weight": "0.0831675412",
+   "Market Value": "1686085.94",
+   "Shares Held": "97013",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Calumet Inc",
+   "Ticker": "-",
+   "Identifier": "131428104",
+   "Weight": "0.1277062495",
+   "Market Value": "2589035.44",
+   "Shares Held": "79127",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Devon Energy Corp",
+   "Ticker": "-",
+   "Identifier": "25179M103",
+   "Weight": "1.2341500604",
+   "Market Value": "25020374.94",
+   "Shares Held": "487062",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Magnolia Oil & Gas Corp",
+   "Ticker": "-",
+   "Identifier": "559663109",
+   "Weight": "0.2440038987",
+   "Market Value": "4946780.16",
+   "Shares Held": "163584",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Delek US Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "24665A103",
+   "Weight": "0.1526873389",
+   "Market Value": "3095486.19",
+   "Shares Held": "66441",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kinetik Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "02215L209",
+   "Weight": "0.1312774849",
+   "Market Value": "2661436.4",
+   "Shares Held": "52660",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.24662901",
+   "Market Value": "5000000",
+   "Shares Held": "5000000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Kodiak Gas Services Inc",
+   "Ticker": "-",
+   "Identifier": "50012A108",
+   "Weight": "0.2760209236",
+   "Market Value": "5595873",
+   "Shares Held": "82535",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Weatherford International PLC",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.3425180954",
+   "Market Value": "6943994.45",
+   "Shares Held": "62927",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Diamondback Energy Inc",
+   "Ticker": "-",
+   "Identifier": "25278X109",
+   "Weight": "1.5219267003",
+   "Market Value": "30854575.87",
+   "Shares Held": "150049",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Antero Resources Corp",
+   "Ticker": "-",
+   "Identifier": "03674X106",
+   "Weight": "0.4818592593",
+   "Market Value": "9768908.76",
+   "Shares Held": "248826",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hess Midstream LP",
+   "Ticker": "-",
+   "Identifier": "428103105",
+   "Weight": "0.2207963624",
+   "Market Value": "4476285.3",
+   "Shares Held": "114483",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Matador Resources Co",
+   "Ticker": "-",
+   "Identifier": "576485205",
+   "Weight": "0.3334537586",
+   "Market Value": "6760229.84",
+   "Shares Held": "106561",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ovintiv Inc",
+   "Ticker": "-",
+   "Identifier": "69047Q102",
+   "Weight": "0.716742651",
+   "Market Value": "14530785.55",
+   "Shares Held": "236081",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Nabors Industries Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0923336707",
+   "Market Value": "1871914.23",
+   "Shares Held": "18243",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Energy Inc",
+   "Ticker": "-",
+   "Identifier": "53115L104",
+   "Weight": "0.253377933",
+   "Market Value": "5136823.38",
+   "Shares Held": "152022",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CNX Resources Corp",
+   "Ticker": "-",
+   "Identifier": "12653C108",
+   "Weight": "0.2431193031",
+   "Market Value": "4928846.43",
+   "Shares Held": "126673",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Expand Energy Corp",
+   "Ticker": "-",
+   "Identifier": "165167735",
+   "Weight": "0.9690244127",
+   "Market Value": "19645385.85",
+   "Shares Held": "192319",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Halliburton Co",
+   "Ticker": "-",
+   "Identifier": "406216101",
+   "Weight": "1.4251565318",
+   "Market Value": "28892718.9",
+   "Shares Held": "683043",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "World Kinect Corp",
+   "Ticker": "-",
+   "Identifier": "981475106",
+   "Weight": "0.0921031589",
+   "Market Value": "1867240.98",
+   "Shares Held": "69234",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Granite Ridge Resources Inc",
+   "Ticker": "-",
+   "Identifier": "387432107",
+   "Weight": "0.0531542374",
+   "Market Value": "1077615.27",
+   "Shares Held": "178709",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ONEOK Inc",
+   "Ticker": "-",
+   "Identifier": "682680103",
+   "Weight": "2.2735820444",
+   "Market Value": "46093159.2",
+   "Shares Held": "498520",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ConocoPhillips",
+   "Ticker": "-",
+   "Identifier": "20825C104",
+   "Weight": "6.0872129927",
+   "Market Value": "123408292.32",
+   "Shares Held": "981144",
+   "Asset Category": "EC"
+  }
+ ]
+}

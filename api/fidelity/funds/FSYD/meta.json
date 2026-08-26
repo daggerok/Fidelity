@@ -1,0 +1,309 @@
+{
+ "ticker": "FSYD",
+ "name": "Fidelity Sustainable High Yield ETF",
+ "category": "Bond",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSYD",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004717/000003540226004717-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004717/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FSYD?period1=0&period2=1787720851&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.55%",
+  "value": 0.55
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$48.63",
+  "value": 48.625,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$126.10 M",
+  "value": 126103635.49999993,
+  "asOfDate": "May 31 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 1.19,
+   "mo1Text": "1.19%",
+   "qtd": 0.62,
+   "qtdText": "0.62%",
+   "ytd": 4.13,
+   "ytdText": "4.13%",
+   "yr1": 7.03,
+   "yr1Text": "7.03%",
+   "yr3": 9.44,
+   "yr3Text": "9.44%",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 5.89,
+   "sinceInceptionText": "5.89%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "paymentsPerYear": 12,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "03/29/2022",
+    "0.301"
+   ],
+   [
+    "04/27/2022",
+    "0.209"
+   ],
+   [
+    "05/26/2022",
+    "0.205"
+   ],
+   [
+    "06/28/2022",
+    "0.226"
+   ],
+   [
+    "07/27/2022",
+    "0.222"
+   ],
+   [
+    "08/29/2022",
+    "0.223"
+   ],
+   [
+    "09/28/2022",
+    "0.22"
+   ],
+   [
+    "10/27/2022",
+    "0.227"
+   ],
+   [
+    "11/28/2022",
+    "0.238"
+   ],
+   [
+    "12/28/2022",
+    "0.28"
+   ],
+   [
+    "01/27/2023",
+    "0.217"
+   ],
+   [
+    "02/24/2023",
+    "0.248"
+   ],
+   [
+    "03/29/2023",
+    "0.253"
+   ],
+   [
+    "04/26/2023",
+    "0.249"
+   ],
+   [
+    "05/26/2023",
+    "0.258"
+   ],
+   [
+    "06/28/2023",
+    "0.265"
+   ],
+   [
+    "07/27/2023",
+    "0.263"
+   ],
+   [
+    "08/29/2023",
+    "0.265"
+   ],
+   [
+    "09/27/2023",
+    "0.249"
+   ],
+   [
+    "10/27/2023",
+    "0.274"
+   ],
+   [
+    "11/28/2023",
+    "0.254"
+   ],
+   [
+    "12/27/2023",
+    "0.321"
+   ],
+   [
+    "01/29/2024",
+    "0.22"
+   ],
+   [
+    "02/27/2024",
+    "0.238"
+   ],
+   [
+    "03/26/2024",
+    "0.226"
+   ],
+   [
+    "04/26/2024",
+    "0.263"
+   ],
+   [
+    "05/30/2024",
+    "0.274"
+   ],
+   [
+    "06/27/2024",
+    "0.266"
+   ],
+   [
+    "07/30/2024",
+    "0.259"
+   ],
+   [
+    "08/29/2024",
+    "0.259"
+   ],
+   [
+    "09/27/2024",
+    "0.242"
+   ],
+   [
+    "10/30/2024",
+    "0.274"
+   ],
+   [
+    "11/27/2024",
+    "0.255"
+   ],
+   [
+    "12/30/2024",
+    "0.291"
+   ],
+   [
+    "01/30/2025",
+    "0.243"
+   ],
+   [
+    "02/27/2025",
+    "0.247"
+   ],
+   [
+    "03/28/2025",
+    "0.276"
+   ],
+   [
+    "04/29/2025",
+    "0.286"
+   ],
+   [
+    "05/29/2025",
+    "0.267"
+   ],
+   [
+    "06/27/2025",
+    "0.235"
+   ],
+   [
+    "07/30/2025",
+    "0.291"
+   ],
+   [
+    "08/28/2025",
+    "0.282"
+   ],
+   [
+    "09/29/2025",
+    "0.241"
+   ],
+   [
+    "10/30/2025",
+    "0.256"
+   ],
+   [
+    "11/26/2025",
+    "0.249"
+   ],
+   [
+    "12/30/2025",
+    "0.271"
+   ],
+   [
+    "01/29/2026",
+    "0.232"
+   ],
+   [
+    "02/26/2026",
+    "0.202"
+   ],
+   [
+    "03/30/2026",
+    "0.302"
+   ],
+   [
+    "04/29/2026",
+    "0.278"
+   ],
+   [
+    "05/28/2026",
+    "0.244"
+   ],
+   [
+    "06/29/2026",
+    "0.257"
+   ],
+   [
+    "07/30/2026",
+    "0.263"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 402,
+  "asOf": "May 31 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1133,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000075296",
+  "seriesName": "Fidelity Sustainable High Yield ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004717"
+ }
+}

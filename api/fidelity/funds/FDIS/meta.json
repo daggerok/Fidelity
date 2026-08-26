@@ -1,0 +1,303 @@
+{
+ "ticker": "FDIS",
+ "name": "Fidelity MSCI Consumer Discretionary Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDIS",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063882/000141036826063882-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063882/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDIS?period1=0&period2=1787720790&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$102.91",
+  "value": 102.91,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$1,771.87 M",
+  "value": 1771868777.6100004,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 6.51,
+   "mo1Text": "6.51%",
+   "qtd": -0.46,
+   "qtdText": "-0.46%",
+   "ytd": 1.14,
+   "ytdText": "1.14%",
+   "yr1": 2.79,
+   "yr1Text": "2.79%",
+   "yr3": 13.79,
+   "yr3Text": "13.79%",
+   "yr5": 5.63,
+   "yr5Text": "5.63%",
+   "yr10": 13.57,
+   "yr10Text": "13.57%",
+   "sinceInception": 12.6,
+   "sinceInceptionText": "12.60%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.076"
+   ],
+   [
+    "03/21/2014",
+    "0.08"
+   ],
+   [
+    "06/20/2014",
+    "0.063"
+   ],
+   [
+    "09/19/2014",
+    "0.056"
+   ],
+   [
+    "12/19/2014",
+    "0.096"
+   ],
+   [
+    "03/20/2015",
+    "0.079"
+   ],
+   [
+    "06/19/2015",
+    "0.091"
+   ],
+   [
+    "09/18/2015",
+    "0.106"
+   ],
+   [
+    "12/18/2015",
+    "0.106"
+   ],
+   [
+    "06/17/2016",
+    "0.11"
+   ],
+   [
+    "09/16/2016",
+    "0.105"
+   ],
+   [
+    "12/16/2016",
+    "0.148"
+   ],
+   [
+    "12/28/2016",
+    "0.035"
+   ],
+   [
+    "03/17/2017",
+    "0.094"
+   ],
+   [
+    "06/16/2017",
+    "0.114"
+   ],
+   [
+    "09/15/2017",
+    "0.119"
+   ],
+   [
+    "12/15/2017",
+    "0.065"
+   ],
+   [
+    "03/16/2018",
+    "0.113"
+   ],
+   [
+    "06/15/2018",
+    "0.111"
+   ],
+   [
+    "09/21/2018",
+    "0.129"
+   ],
+   [
+    "12/21/2018",
+    "0.14"
+   ],
+   [
+    "03/15/2019",
+    "0.137"
+   ],
+   [
+    "06/21/2019",
+    "0.136"
+   ],
+   [
+    "09/20/2019",
+    "0.138"
+   ],
+   [
+    "12/20/2019",
+    "0.139"
+   ],
+   [
+    "03/20/2020",
+    "0.151"
+   ],
+   [
+    "06/19/2020",
+    "0.082"
+   ],
+   [
+    "09/18/2020",
+    "0.089"
+   ],
+   [
+    "12/18/2020",
+    "0.102"
+   ],
+   [
+    "03/19/2021",
+    "0.1"
+   ],
+   [
+    "06/18/2021",
+    "0.11"
+   ],
+   [
+    "09/17/2021",
+    "0.13"
+   ],
+   [
+    "12/17/2021",
+    "0.169"
+   ],
+   [
+    "03/18/2022",
+    "0.138"
+   ],
+   [
+    "06/17/2022",
+    "0.143"
+   ],
+   [
+    "09/16/2022",
+    "0.144"
+   ],
+   [
+    "12/16/2022",
+    "0.139"
+   ],
+   [
+    "03/17/2023",
+    "0.174"
+   ],
+   [
+    "06/16/2023",
+    "0.146"
+   ],
+   [
+    "09/15/2023",
+    "0.144"
+   ],
+   [
+    "12/15/2023",
+    "0.151"
+   ],
+   [
+    "03/15/2024",
+    "0.17"
+   ],
+   [
+    "06/21/2024",
+    "0.169"
+   ],
+   [
+    "09/20/2024",
+    "0.165"
+   ],
+   [
+    "12/20/2024",
+    "0.172"
+   ],
+   [
+    "03/21/2025",
+    "0.21"
+   ],
+   [
+    "06/20/2025",
+    "0.195"
+   ],
+   [
+    "09/19/2025",
+    "0.171"
+   ],
+   [
+    "12/19/2025",
+    "0.187"
+   ],
+   [
+    "03/20/2026",
+    "0.187"
+   ],
+   [
+    "06/18/2026",
+    "0.2"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 251,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042570",
+  "seriesName": "Fidelity MSCI Consumer Discretionary Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063882"
+ }
+}

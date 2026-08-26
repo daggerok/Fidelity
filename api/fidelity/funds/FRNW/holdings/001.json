@@ -1,0 +1,494 @@
+{
+ "ticker": "FRNW",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 53,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "EDP S.A.",
+   "Ticker": "-",
+   "Identifier": "PTEDP0AM0009",
+   "Weight": "3.7241214475",
+   "Market Value": "5728337.98",
+   "Shares Held": "1093725",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RENOVA INC",
+   "Ticker": "-",
+   "Identifier": "JP3981200003",
+   "Weight": "0.8424011662",
+   "Market Value": "1295757.58",
+   "Shares Held": "213800",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SMA SOLAR TECHNOLOGY AG",
+   "Ticker": "-",
+   "Identifier": "DE000A0DJ6J9",
+   "Weight": "1.3645307785",
+   "Market Value": "2098882.54",
+   "Shares Held": "29163",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VERBUND AG",
+   "Ticker": "-",
+   "Identifier": "AT0000746409",
+   "Weight": "2.3166479841",
+   "Market Value": "3563402.22",
+   "Shares Held": "56057",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GE VERNOVA INC",
+   "Ticker": "-",
+   "Identifier": "36828A101",
+   "Weight": "5.9859235497",
+   "Market Value": "9207377.82",
+   "Shares Held": "7837",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ORSTED A/S",
+   "Ticker": "-",
+   "Identifier": "DK0060094928",
+   "Weight": "2.9196023738",
+   "Market Value": "4490849.56",
+   "Shares Held": "200008",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ORMAT TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "686688102",
+   "Weight": "2.2258290425",
+   "Market Value": "3423707.1",
+   "Shares Held": "31439",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHINA POWER INTERNATIONAL DEVELOPMENT LTD",
+   "Ticker": "-",
+   "Identifier": "HK2380027329",
+   "Weight": "1.2506977406",
+   "Market Value": "1923787.79",
+   "Shares Held": "5506000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SOLAREDGE TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "83417M104",
+   "Weight": "1.8055489094",
+   "Market Value": "2777244.12",
+   "Shares Held": "47523",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LANDIS+GYR GROUP AG",
+   "Ticker": "-",
+   "Identifier": "CH0371153492",
+   "Weight": "1.3169031092",
+   "Market Value": "2025623.01",
+   "Shares Held": "37736",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NORDEX SE",
+   "Ticker": "-",
+   "Identifier": "DE000A0D6554",
+   "Weight": "2.8138694203",
+   "Market Value": "4328214.13",
+   "Shares Held": "81942",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHICAGO MERCANTILE EXCH INC",
+   "Ticker": "-",
+   "Identifier": "-",
+   "Weight": "0.0024437715",
+   "Market Value": "3758.94",
+   "Shares Held": "13",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "XINYI SOLAR HOLDINGS LTD",
+   "Ticker": "-",
+   "Identifier": "KYG9829N1025",
+   "Weight": "1.2153333712",
+   "Market Value": "1869391.32",
+   "Shares Held": "7116437",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BORALEX INC",
+   "Ticker": "-",
+   "Identifier": "09950M300",
+   "Weight": "1.7625974738",
+   "Market Value": "2711177.44",
+   "Shares Held": "103959",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "E.ON SE",
+   "Ticker": "-",
+   "Identifier": "DE000ENAG999",
+   "Weight": "2.140391867",
+   "Market Value": "3292290.06",
+   "Shares Held": "159758",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BLOOM ENERGY CORP",
+   "Ticker": "-",
+   "Identifier": "093712107",
+   "Weight": "4.5096873699",
+   "Market Value": "6936673.2",
+   "Shares Held": "22916",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHOALS TECHNOLOGIES GROUP INC",
+   "Ticker": "-",
+   "Identifier": "82489W107",
+   "Weight": "1.3498025521",
+   "Market Value": "2076228",
+   "Shares Held": "209720",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EDP RENEWABLES SA",
+   "Ticker": "-",
+   "Identifier": "ES0127797019",
+   "Weight": "1.9478632161",
+   "Market Value": "2996147.95",
+   "Shares Held": "184941",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SOLARIA ENERGIA Y MEDIO AMBIENTE SA",
+   "Ticker": "-",
+   "Identifier": "ES0165386014",
+   "Weight": "1.534206362",
+   "Market Value": "2359872.71",
+   "Shares Held": "103697",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "T1 ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "35834F104",
+   "Weight": "1.4685272742",
+   "Market Value": "2258847",
+   "Shares Held": "238275",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CLEARWAY ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "18539C204",
+   "Weight": "1.9829076472",
+   "Market Value": "3050052.3",
+   "Shares Held": "89235",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ARRAY TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "04271T100",
+   "Weight": "1.2156102259",
+   "Market Value": "1869817.17",
+   "Shares Held": "252337",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CGN POWER CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100001T80",
+   "Weight": "1.7014365228",
+   "Market Value": "2617101.4",
+   "Shares Held": "7658000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GRENERGY RENOVABLES SA",
+   "Ticker": "-",
+   "Identifier": "ES0105079000",
+   "Weight": "1.3388139735",
+   "Market Value": "2059325.68",
+   "Shares Held": "15690",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VESTAS WIND SYSTEMS AS",
+   "Ticker": "-",
+   "Identifier": "DK0061539921",
+   "Weight": "4.7257215706",
+   "Market Value": "7268970.88",
+   "Shares Held": "257446",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SUNRUN INC",
+   "Ticker": "-",
+   "Identifier": "86771W105",
+   "Weight": "1.8680414543",
+   "Market Value": "2873368.38",
+   "Shares Held": "214751",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MERCURY NZ LTD",
+   "Ticker": "-",
+   "Identifier": "NZMRPE0001S2",
+   "Weight": "1.8378890584",
+   "Market Value": "2826988.82",
+   "Shares Held": "720240",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ERG SPA",
+   "Ticker": "-",
+   "Identifier": "IT0001157020",
+   "Weight": "1.5052021996",
+   "Market Value": "2315259.33",
+   "Shares Held": "84660",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VERBIO SE",
+   "Ticker": "-",
+   "Identifier": "DE000A0JL9W6",
+   "Weight": "0.8914003664",
+   "Market Value": "1371126.76",
+   "Shares Held": "40244",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RENEW ENERGY GLOBAL PLC",
+   "Ticker": "-",
+   "Identifier": "GB00BNQMPN80",
+   "Weight": "1.2340544159",
+   "Market Value": "1898187.5",
+   "Shares Held": "303710",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AMERESCO INC",
+   "Ticker": "-",
+   "Identifier": "02361E108",
+   "Weight": "1.1196310994",
+   "Market Value": "1722184.8",
+   "Shares Held": "62398",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ITRON INC",
+   "Ticker": "-",
+   "Identifier": "465741106",
+   "Weight": "2.271693469",
+   "Market Value": "3494254.46",
+   "Shares Held": "40382",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ENPHASE ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "29355A107",
+   "Weight": "2.1225257854",
+   "Market Value": "3264808.96",
+   "Shares Held": "66304",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FLAT GLASS GROUP CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100002375",
+   "Weight": "0.9311565214",
+   "Market Value": "1432278.55",
+   "Shares Held": "1755000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "JINKOSOLAR HOLDING CO LTD",
+   "Ticker": "-",
+   "Identifier": "47759T100",
+   "Weight": "0.8786577312",
+   "Market Value": "1351526.4",
+   "Shares Held": "80448",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BROOKFIELD RENEWABLE CORP",
+   "Ticker": "-",
+   "Identifier": "11285B108",
+   "Weight": "2.3098629676",
+   "Market Value": "3552965.7",
+   "Shares Held": "95614",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "0.0291028055",
+   "Market Value": "44765.11",
+   "Shares Held": "44756.157",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "WEST HOLDINGS CORP",
+   "Ticker": "-",
+   "Identifier": "JP3154750008",
+   "Weight": "0.8703017261",
+   "Market Value": "1338673.43",
+   "Shares Held": "91300",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CANADIAN SOLAR INC",
+   "Ticker": "-",
+   "Identifier": "136635109",
+   "Weight": "1.0460059347",
+   "Market Value": "1608936.66",
+   "Shares Held": "100433",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MERIDIAN ENERGY LTD",
+   "Ticker": "-",
+   "Identifier": "NZMELE0002S7",
+   "Weight": "2.1740760404",
+   "Market Value": "3344102.1",
+   "Shares Held": "1010087",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NEXTPOWER INC",
+   "Ticker": "-",
+   "Identifier": "65290E101",
+   "Weight": "3.3115365285",
+   "Market Value": "5093711.56",
+   "Shares Held": "42754",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHINA LONGYUAN POWER GROUP CORP LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100000HD4",
+   "Weight": "1.4918235041",
+   "Market Value": "2294680.6",
+   "Shares Held": "3599000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A303",
+   "Weight": "5.7210941051",
+   "Market Value": "8800024.68",
+   "Shares Held": "8799144.769",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "ENLIGHT RENEWABLE ENERGY LTD",
+   "Ticker": "-",
+   "Identifier": "IL0007200111",
+   "Weight": "3.1493507918",
+   "Market Value": "4844242.06",
+   "Shares Held": "54879",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FIRST SOLAR INC",
+   "Ticker": "-",
+   "Identifier": "336433107",
+   "Weight": "3.6776812855",
+   "Market Value": "5656905.04",
+   "Shares Held": "23974",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GOLDWIND SCIENCE and TECHNOLOGY CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100000PP1",
+   "Weight": "1.4491315713",
+   "Market Value": "2229013.08",
+   "Shares Held": "1661600",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VINCI SA",
+   "Ticker": "-",
+   "Identifier": "FR0000125486",
+   "Weight": "2.218439217",
+   "Market Value": "3412340.28",
+   "Shares Held": "23354",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PLUG POWER INC",
+   "Ticker": "-",
+   "Identifier": "72919P202",
+   "Weight": "1.4867730209",
+   "Market Value": "2286912.09",
+   "Shares Held": "843879",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NORTHLAND POWER INC",
+   "Ticker": "-",
+   "Identifier": "666511100",
+   "Weight": "2.122722831",
+   "Market Value": "3265112.05",
+   "Shares Held": "207358",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ACCIONA SA",
+   "Ticker": "-",
+   "Identifier": "ES0125220311",
+   "Weight": "2.9566541817",
+   "Market Value": "4547841.6",
+   "Shares Held": "14350",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CS WIND CORP",
+   "Ticker": "-",
+   "Identifier": "KR7112610001",
+   "Weight": "1.0950456116",
+   "Market Value": "1684368.1",
+   "Shares Held": "61330",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHINA DATANG CORPORATION RENEWABLE POWER CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100000X69",
+   "Weight": "0.765541317",
+   "Market Value": "1177533.94",
+   "Shares Held": "7447000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CADELER A/S",
+   "Ticker": "-",
+   "Identifier": "DK0061412772",
+   "Weight": "1.3899689669",
+   "Market Value": "2138010.84",
+   "Shares Held": "389985",
+   "Asset Category": "EC"
+  }
+ ]
+}

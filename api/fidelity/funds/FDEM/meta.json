@@ -1,0 +1,224 @@
+{
+ "ticker": "FDEM",
+ "name": "Fidelity Emerging Markets Multifactor ETF",
+ "category": "Factor",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDEM",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004045/000003540226004045-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004045/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDEM?period1=0&period2=1787720782&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.25%",
+  "value": 0.25
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$36.27",
+  "value": 36.2699,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$511.49 M",
+  "value": 511494169,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 5.71,
+   "mo1Text": "5.71%",
+   "qtd": 2.05,
+   "qtdText": "2.05%",
+   "ytd": 19.33,
+   "ytdText": "19.33%",
+   "yr1": 28.39,
+   "yr1Text": "28.39%",
+   "yr3": 21.76,
+   "yr3Text": "21.76%",
+   "yr5": 10.6,
+   "yr5Text": "10.60%",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": 8.73,
+   "sinceInceptionText": "8.73%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "03/15/2019",
+    "0.025"
+   ],
+   [
+    "06/21/2019",
+    "0.225"
+   ],
+   [
+    "09/20/2019",
+    "0.226"
+   ],
+   [
+    "12/20/2019",
+    "0.138"
+   ],
+   [
+    "03/20/2020",
+    "0.105"
+   ],
+   [
+    "06/19/2020",
+    "0.187"
+   ],
+   [
+    "09/18/2020",
+    "0.107"
+   ],
+   [
+    "12/18/2020",
+    "0.102"
+   ],
+   [
+    "03/19/2021",
+    "0.088"
+   ],
+   [
+    "06/18/2021",
+    "0.268"
+   ],
+   [
+    "09/17/2021",
+    "0.175"
+   ],
+   [
+    "12/17/2021",
+    "0.158"
+   ],
+   [
+    "12/30/2021",
+    "0.007"
+   ],
+   [
+    "03/18/2022",
+    "0.102"
+   ],
+   [
+    "06/17/2022",
+    "0.374"
+   ],
+   [
+    "09/16/2022",
+    "0.248"
+   ],
+   [
+    "12/16/2022",
+    "0.124"
+   ],
+   [
+    "03/17/2023",
+    "0.114"
+   ],
+   [
+    "06/16/2023",
+    "0.39"
+   ],
+   [
+    "09/15/2023",
+    "0.42"
+   ],
+   [
+    "12/15/2023",
+    "0.119"
+   ],
+   [
+    "12/28/2023",
+    "0.016"
+   ],
+   [
+    "03/15/2024",
+    "0.119"
+   ],
+   [
+    "06/21/2024",
+    "0.355"
+   ],
+   [
+    "09/20/2024",
+    "0.241"
+   ],
+   [
+    "12/20/2024",
+    "0.308"
+   ],
+   [
+    "03/21/2025",
+    "0.152"
+   ],
+   [
+    "06/20/2025",
+    "0.343"
+   ],
+   [
+    "09/19/2025",
+    "0.277"
+   ],
+   [
+    "12/19/2025",
+    "0.225"
+   ],
+   [
+    "03/20/2026",
+    "0.157"
+   ],
+   [
+    "06/18/2026",
+    "0.404"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 210,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 1882,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000064787",
+  "seriesName": "Fidelity Emerging Markets Multifactor ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0000035402-26-004045"
+ }
+}

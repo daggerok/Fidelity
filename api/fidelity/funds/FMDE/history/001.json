@@ -1,0 +1,4166 @@
+{
+ "ticker": "FMDE",
+ "page": 1,
+ "pageSize": 1000,
+ "totalRows": 692,
+ "headers": [
+  "Date",
+  "Close",
+  "Adj Close",
+  "Volume"
+ ],
+ "rows": [
+  {
+   "Date": "Nov 20 2023",
+   "Close": "25.09",
+   "Adj Close": "24.31625",
+   "Volume": "30700"
+  },
+  {
+   "Date": "Nov 21 2023",
+   "Close": "24.993999",
+   "Adj Close": "24.223209",
+   "Volume": "156200"
+  },
+  {
+   "Date": "Nov 22 2023",
+   "Close": "25.1",
+   "Adj Close": "24.325939",
+   "Volume": "46500"
+  },
+  {
+   "Date": "Nov 24 2023",
+   "Close": "25.201",
+   "Adj Close": "24.423828",
+   "Volume": "22600"
+  },
+  {
+   "Date": "Nov 27 2023",
+   "Close": "25.219999",
+   "Adj Close": "24.44224",
+   "Volume": "82100"
+  },
+  {
+   "Date": "Nov 28 2023",
+   "Close": "25.139999",
+   "Adj Close": "24.364708",
+   "Volume": "51000"
+  },
+  {
+   "Date": "Nov 29 2023",
+   "Close": "25.253",
+   "Adj Close": "24.474222",
+   "Volume": "79800"
+  },
+  {
+   "Date": "Nov 30 2023",
+   "Close": "25.451",
+   "Adj Close": "24.666117",
+   "Volume": "48900"
+  },
+  {
+   "Date": "Dec 01 2023",
+   "Close": "25.9",
+   "Adj Close": "25.101269",
+   "Volume": "103200"
+  },
+  {
+   "Date": "Dec 04 2023",
+   "Close": "25.91",
+   "Adj Close": "25.110962",
+   "Volume": "70100"
+  },
+  {
+   "Date": "Dec 05 2023",
+   "Close": "25.771999",
+   "Adj Close": "24.977215",
+   "Volume": "34700"
+  },
+  {
+   "Date": "Dec 06 2023",
+   "Close": "25.725",
+   "Adj Close": "24.931669",
+   "Volume": "60800"
+  },
+  {
+   "Date": "Dec 07 2023",
+   "Close": "25.846001",
+   "Adj Close": "25.048937",
+   "Volume": "52000"
+  },
+  {
+   "Date": "Dec 08 2023",
+   "Close": "26.02",
+   "Adj Close": "25.217569",
+   "Volume": "95400"
+  },
+  {
+   "Date": "Dec 11 2023",
+   "Close": "26.245001",
+   "Adj Close": "25.435633",
+   "Volume": "100700"
+  },
+  {
+   "Date": "Dec 12 2023",
+   "Close": "26.360001",
+   "Adj Close": "25.547085",
+   "Volume": "77600"
+  },
+  {
+   "Date": "Dec 13 2023",
+   "Close": "26.870001",
+   "Adj Close": "26.041361",
+   "Volume": "83900"
+  },
+  {
+   "Date": "Dec 14 2023",
+   "Close": "27.249001",
+   "Adj Close": "26.408672",
+   "Volume": "89800"
+  },
+  {
+   "Date": "Dec 15 2023",
+   "Close": "27.01",
+   "Adj Close": "26.17704",
+   "Volume": "82900"
+  },
+  {
+   "Date": "Dec 18 2023",
+   "Close": "27.16",
+   "Adj Close": "26.322414",
+   "Volume": "93500"
+  },
+  {
+   "Date": "Dec 19 2023",
+   "Close": "27.433001",
+   "Adj Close": "26.586992",
+   "Volume": "119000"
+  },
+  {
+   "Date": "Dec 20 2023",
+   "Close": "26.98",
+   "Adj Close": "26.147961",
+   "Volume": "107900"
+  },
+  {
+   "Date": "Dec 21 2023",
+   "Close": "27.33",
+   "Adj Close": "26.487173",
+   "Volume": "55300"
+  },
+  {
+   "Date": "Dec 22 2023",
+   "Close": "27.389999",
+   "Adj Close": "26.545322",
+   "Volume": "52100"
+  },
+  {
+   "Date": "Dec 26 2023",
+   "Close": "27.565001",
+   "Adj Close": "26.714924",
+   "Volume": "73100"
+  },
+  {
+   "Date": "Dec 27 2023",
+   "Close": "27.525999",
+   "Adj Close": "26.677126",
+   "Volume": "99900"
+  },
+  {
+   "Date": "Dec 28 2023",
+   "Close": "27.6",
+   "Adj Close": "26.774134",
+   "Volume": "64400"
+  },
+  {
+   "Date": "Dec 29 2023",
+   "Close": "27.299999",
+   "Adj Close": "26.48311",
+   "Volume": "72600"
+  },
+  {
+   "Date": "Jan 02 2024",
+   "Close": "27.190001",
+   "Adj Close": "26.376404",
+   "Volume": "147400"
+  },
+  {
+   "Date": "Jan 03 2024",
+   "Close": "26.84",
+   "Adj Close": "26.036877",
+   "Volume": "65300"
+  },
+  {
+   "Date": "Jan 04 2024",
+   "Close": "26.809999",
+   "Adj Close": "26.007772",
+   "Volume": "105300"
+  },
+  {
+   "Date": "Jan 05 2024",
+   "Close": "26.860001",
+   "Adj Close": "26.056278",
+   "Volume": "55600"
+  },
+  {
+   "Date": "Jan 08 2024",
+   "Close": "27.219999",
+   "Adj Close": "26.405506",
+   "Volume": "111500"
+  },
+  {
+   "Date": "Jan 09 2024",
+   "Close": "27.160999",
+   "Adj Close": "26.348272",
+   "Volume": "49700"
+  },
+  {
+   "Date": "Jan 10 2024",
+   "Close": "27.280001",
+   "Adj Close": "26.463711",
+   "Volume": "94000"
+  },
+  {
+   "Date": "Jan 11 2024",
+   "Close": "27.219999",
+   "Adj Close": "26.405506",
+   "Volume": "86800"
+  },
+  {
+   "Date": "Jan 12 2024",
+   "Close": "27.200001",
+   "Adj Close": "26.386103",
+   "Volume": "69100"
+  },
+  {
+   "Date": "Jan 16 2024",
+   "Close": "27.07",
+   "Adj Close": "26.259991",
+   "Volume": "132800"
+  },
+  {
+   "Date": "Jan 17 2024",
+   "Close": "26.82",
+   "Adj Close": "26.017475",
+   "Volume": "79600"
+  },
+  {
+   "Date": "Jan 18 2024",
+   "Close": "27.030001",
+   "Adj Close": "26.221191",
+   "Volume": "81700"
+  },
+  {
+   "Date": "Jan 19 2024",
+   "Close": "27.25",
+   "Adj Close": "26.434608",
+   "Volume": "86500"
+  },
+  {
+   "Date": "Jan 22 2024",
+   "Close": "27.459999",
+   "Adj Close": "26.638321",
+   "Volume": "89500"
+  },
+  {
+   "Date": "Jan 23 2024",
+   "Close": "27.42",
+   "Adj Close": "26.599522",
+   "Volume": "89900"
+  },
+  {
+   "Date": "Jan 24 2024",
+   "Close": "27.257",
+   "Adj Close": "26.441395",
+   "Volume": "71500"
+  },
+  {
+   "Date": "Jan 25 2024",
+   "Close": "27.440001",
+   "Adj Close": "26.618925",
+   "Volume": "61900"
+  },
+  {
+   "Date": "Jan 26 2024",
+   "Close": "27.459999",
+   "Adj Close": "26.638321",
+   "Volume": "48800"
+  },
+  {
+   "Date": "Jan 29 2024",
+   "Close": "27.73",
+   "Adj Close": "26.900244",
+   "Volume": "162700"
+  },
+  {
+   "Date": "Jan 30 2024",
+   "Close": "27.719999",
+   "Adj Close": "26.890543",
+   "Volume": "62000"
+  },
+  {
+   "Date": "Jan 31 2024",
+   "Close": "27.309999",
+   "Adj Close": "26.492809",
+   "Volume": "67200"
+  },
+  {
+   "Date": "Feb 01 2024",
+   "Close": "27.66",
+   "Adj Close": "26.832338",
+   "Volume": "74500"
+  },
+  {
+   "Date": "Feb 02 2024",
+   "Close": "27.847",
+   "Adj Close": "27.013744",
+   "Volume": "88500"
+  },
+  {
+   "Date": "Feb 05 2024",
+   "Close": "27.559999",
+   "Adj Close": "26.735329",
+   "Volume": "112900"
+  },
+  {
+   "Date": "Feb 06 2024",
+   "Close": "27.73",
+   "Adj Close": "26.900244",
+   "Volume": "90900"
+  },
+  {
+   "Date": "Feb 07 2024",
+   "Close": "27.969999",
+   "Adj Close": "27.133064",
+   "Volume": "70500"
+  },
+  {
+   "Date": "Feb 08 2024",
+   "Close": "28.17",
+   "Adj Close": "27.327076",
+   "Volume": "86200"
+  },
+  {
+   "Date": "Feb 09 2024",
+   "Close": "28.327999",
+   "Adj Close": "27.480349",
+   "Volume": "50600"
+  },
+  {
+   "Date": "Feb 12 2024",
+   "Close": "28.42",
+   "Adj Close": "27.569599",
+   "Volume": "82000"
+  },
+  {
+   "Date": "Feb 13 2024",
+   "Close": "27.915001",
+   "Adj Close": "27.079708",
+   "Volume": "81300"
+  },
+  {
+   "Date": "Feb 14 2024",
+   "Close": "28.33",
+   "Adj Close": "27.482292",
+   "Volume": "223700"
+  },
+  {
+   "Date": "Feb 15 2024",
+   "Close": "28.65",
+   "Adj Close": "27.792715",
+   "Volume": "53300"
+  },
+  {
+   "Date": "Feb 16 2024",
+   "Close": "28.42",
+   "Adj Close": "27.569599",
+   "Volume": "138700"
+  },
+  {
+   "Date": "Feb 20 2024",
+   "Close": "28.309999",
+   "Adj Close": "27.462887",
+   "Volume": "105900"
+  },
+  {
+   "Date": "Feb 21 2024",
+   "Close": "28.25",
+   "Adj Close": "27.404682",
+   "Volume": "41100"
+  },
+  {
+   "Date": "Feb 22 2024",
+   "Close": "28.639999",
+   "Adj Close": "27.783016",
+   "Volume": "81200"
+  },
+  {
+   "Date": "Feb 23 2024",
+   "Close": "28.868",
+   "Adj Close": "28.00419",
+   "Volume": "65900"
+  },
+  {
+   "Date": "Feb 26 2024",
+   "Close": "28.809999",
+   "Adj Close": "27.947926",
+   "Volume": "80000"
+  },
+  {
+   "Date": "Feb 27 2024",
+   "Close": "28.985001",
+   "Adj Close": "28.117691",
+   "Volume": "47500"
+  },
+  {
+   "Date": "Feb 28 2024",
+   "Close": "29.025",
+   "Adj Close": "28.156496",
+   "Volume": "36100"
+  },
+  {
+   "Date": "Feb 29 2024",
+   "Close": "29.184999",
+   "Adj Close": "28.311705",
+   "Volume": "30500"
+  },
+  {
+   "Date": "Mar 01 2024",
+   "Close": "29.374001",
+   "Adj Close": "28.495052",
+   "Volume": "56300"
+  },
+  {
+   "Date": "Mar 04 2024",
+   "Close": "29.469999",
+   "Adj Close": "28.588175",
+   "Volume": "70200"
+  },
+  {
+   "Date": "Mar 05 2024",
+   "Close": "29.139999",
+   "Adj Close": "28.268053",
+   "Volume": "70600"
+  },
+  {
+   "Date": "Mar 06 2024",
+   "Close": "29.389999",
+   "Adj Close": "28.510572",
+   "Volume": "54300"
+  },
+  {
+   "Date": "Mar 07 2024",
+   "Close": "29.645",
+   "Adj Close": "28.757944",
+   "Volume": "97200"
+  },
+  {
+   "Date": "Mar 08 2024",
+   "Close": "29.610001",
+   "Adj Close": "28.723991",
+   "Volume": "58200"
+  },
+  {
+   "Date": "Mar 11 2024",
+   "Close": "29.57",
+   "Adj Close": "28.685186",
+   "Volume": "37400"
+  },
+  {
+   "Date": "Mar 12 2024",
+   "Close": "29.726",
+   "Adj Close": "28.836517",
+   "Volume": "48300"
+  },
+  {
+   "Date": "Mar 13 2024",
+   "Close": "29.790001",
+   "Adj Close": "28.898605",
+   "Volume": "74700"
+  },
+  {
+   "Date": "Mar 14 2024",
+   "Close": "29.511999",
+   "Adj Close": "28.628918",
+   "Volume": "76600"
+  },
+  {
+   "Date": "Mar 15 2024",
+   "Close": "29.42",
+   "Adj Close": "28.629894",
+   "Volume": "37700"
+  },
+  {
+   "Date": "Mar 18 2024",
+   "Close": "29.497",
+   "Adj Close": "28.704826",
+   "Volume": "54400"
+  },
+  {
+   "Date": "Mar 19 2024",
+   "Close": "29.711",
+   "Adj Close": "28.913082",
+   "Volume": "210300"
+  },
+  {
+   "Date": "Mar 20 2024",
+   "Close": "30.040001",
+   "Adj Close": "29.233246",
+   "Volume": "51200"
+  },
+  {
+   "Date": "Mar 21 2024",
+   "Close": "30.360001",
+   "Adj Close": "29.544651",
+   "Volume": "61100"
+  },
+  {
+   "Date": "Mar 22 2024",
+   "Close": "30.200001",
+   "Adj Close": "29.38895",
+   "Volume": "81900"
+  },
+  {
+   "Date": "Mar 25 2024",
+   "Close": "30.15",
+   "Adj Close": "29.340292",
+   "Volume": "65200"
+  },
+  {
+   "Date": "Mar 26 2024",
+   "Close": "30.17",
+   "Adj Close": "29.359749",
+   "Volume": "81500"
+  },
+  {
+   "Date": "Mar 27 2024",
+   "Close": "30.559999",
+   "Adj Close": "29.739279",
+   "Volume": "155800"
+  },
+  {
+   "Date": "Mar 28 2024",
+   "Close": "30.540001",
+   "Adj Close": "29.71982",
+   "Volume": "66900"
+  },
+  {
+   "Date": "Apr 01 2024",
+   "Close": "30.41",
+   "Adj Close": "29.593306",
+   "Volume": "126200"
+  },
+  {
+   "Date": "Apr 02 2024",
+   "Close": "30.076",
+   "Adj Close": "29.268278",
+   "Volume": "4330700"
+  },
+  {
+   "Date": "Apr 03 2024",
+   "Close": "30.209999",
+   "Adj Close": "29.39868",
+   "Volume": "128300"
+  },
+  {
+   "Date": "Apr 04 2024",
+   "Close": "29.860001",
+   "Adj Close": "29.058081",
+   "Volume": "92200"
+  },
+  {
+   "Date": "Apr 05 2024",
+   "Close": "30.198999",
+   "Adj Close": "29.387972",
+   "Volume": "62900"
+  },
+  {
+   "Date": "Apr 08 2024",
+   "Close": "30.24",
+   "Adj Close": "29.427872",
+   "Volume": "66600"
+  },
+  {
+   "Date": "Apr 09 2024",
+   "Close": "30.219999",
+   "Adj Close": "29.408413",
+   "Volume": "71000"
+  },
+  {
+   "Date": "Apr 10 2024",
+   "Close": "29.77",
+   "Adj Close": "28.970495",
+   "Volume": "85700"
+  },
+  {
+   "Date": "Apr 11 2024",
+   "Close": "29.85",
+   "Adj Close": "29.048346",
+   "Volume": "53800"
+  },
+  {
+   "Date": "Apr 12 2024",
+   "Close": "29.4",
+   "Adj Close": "28.610432",
+   "Volume": "85700"
+  },
+  {
+   "Date": "Apr 15 2024",
+   "Close": "28.99",
+   "Adj Close": "28.211441",
+   "Volume": "98500"
+  },
+  {
+   "Date": "Apr 16 2024",
+   "Close": "28.865",
+   "Adj Close": "28.0898",
+   "Volume": "127000"
+  },
+  {
+   "Date": "Apr 17 2024",
+   "Close": "28.75",
+   "Adj Close": "27.977884",
+   "Volume": "168600"
+  },
+  {
+   "Date": "Apr 18 2024",
+   "Close": "28.66",
+   "Adj Close": "27.890305",
+   "Volume": "95400"
+  },
+  {
+   "Date": "Apr 19 2024",
+   "Close": "28.565001",
+   "Adj Close": "27.797861",
+   "Volume": "302600"
+  },
+  {
+   "Date": "Apr 22 2024",
+   "Close": "28.780001",
+   "Adj Close": "28.007082",
+   "Volume": "67700"
+  },
+  {
+   "Date": "Apr 23 2024",
+   "Close": "29.110001",
+   "Adj Close": "28.32822",
+   "Volume": "49200"
+  },
+  {
+   "Date": "Apr 24 2024",
+   "Close": "29.15",
+   "Adj Close": "28.367146",
+   "Volume": "51300"
+  },
+  {
+   "Date": "Apr 25 2024",
+   "Close": "29.07",
+   "Adj Close": "28.289295",
+   "Volume": "49800"
+  },
+  {
+   "Date": "Apr 26 2024",
+   "Close": "29.209999",
+   "Adj Close": "28.425529",
+   "Volume": "54100"
+  },
+  {
+   "Date": "Apr 29 2024",
+   "Close": "29.371",
+   "Adj Close": "28.582212",
+   "Volume": "75300"
+  },
+  {
+   "Date": "Apr 30 2024",
+   "Close": "28.905001",
+   "Adj Close": "28.128729",
+   "Volume": "40200"
+  },
+  {
+   "Date": "May 01 2024",
+   "Close": "28.806",
+   "Adj Close": "28.032381",
+   "Volume": "40100"
+  },
+  {
+   "Date": "May 02 2024",
+   "Close": "28.962",
+   "Adj Close": "28.184193",
+   "Volume": "94200"
+  },
+  {
+   "Date": "May 03 2024",
+   "Close": "29.190001",
+   "Adj Close": "28.406076",
+   "Volume": "51000"
+  },
+  {
+   "Date": "May 06 2024",
+   "Close": "29.530001",
+   "Adj Close": "28.736944",
+   "Volume": "105600"
+  },
+  {
+   "Date": "May 07 2024",
+   "Close": "29.559999",
+   "Adj Close": "28.766134",
+   "Volume": "169400"
+  },
+  {
+   "Date": "May 08 2024",
+   "Close": "29.559999",
+   "Adj Close": "28.766134",
+   "Volume": "63700"
+  },
+  {
+   "Date": "May 09 2024",
+   "Close": "29.889999",
+   "Adj Close": "29.087271",
+   "Volume": "88200"
+  },
+  {
+   "Date": "May 10 2024",
+   "Close": "29.860001",
+   "Adj Close": "29.058081",
+   "Volume": "94300"
+  },
+  {
+   "Date": "May 13 2024",
+   "Close": "29.799999",
+   "Adj Close": "28.999689",
+   "Volume": "73000"
+  },
+  {
+   "Date": "May 14 2024",
+   "Close": "30",
+   "Adj Close": "29.194317",
+   "Volume": "97200"
+  },
+  {
+   "Date": "May 15 2024",
+   "Close": "30.33",
+   "Adj Close": "29.515457",
+   "Volume": "81900"
+  },
+  {
+   "Date": "May 16 2024",
+   "Close": "30.129999",
+   "Adj Close": "29.320826",
+   "Volume": "78200"
+  },
+  {
+   "Date": "May 17 2024",
+   "Close": "30.16",
+   "Adj Close": "29.350019",
+   "Volume": "56700"
+  },
+  {
+   "Date": "May 20 2024",
+   "Close": "30.18",
+   "Adj Close": "29.369482",
+   "Volume": "57700"
+  },
+  {
+   "Date": "May 21 2024",
+   "Close": "30.16",
+   "Adj Close": "29.350019",
+   "Volume": "56600"
+  },
+  {
+   "Date": "May 22 2024",
+   "Close": "29.9",
+   "Adj Close": "29.097004",
+   "Volume": "97800"
+  },
+  {
+   "Date": "May 23 2024",
+   "Close": "29.6",
+   "Adj Close": "28.805059",
+   "Volume": "52300"
+  },
+  {
+   "Date": "May 24 2024",
+   "Close": "29.83",
+   "Adj Close": "29.028883",
+   "Volume": "36900"
+  },
+  {
+   "Date": "May 28 2024",
+   "Close": "29.59",
+   "Adj Close": "28.795328",
+   "Volume": "80000"
+  },
+  {
+   "Date": "May 29 2024",
+   "Close": "29.311001",
+   "Adj Close": "28.523821",
+   "Volume": "57300"
+  },
+  {
+   "Date": "May 30 2024",
+   "Close": "29.389999",
+   "Adj Close": "28.600698",
+   "Volume": "61900"
+  },
+  {
+   "Date": "May 31 2024",
+   "Close": "29.67",
+   "Adj Close": "28.87318",
+   "Volume": "60300"
+  },
+  {
+   "Date": "Jun 03 2024",
+   "Close": "29.427",
+   "Adj Close": "28.636707",
+   "Volume": "65300"
+  },
+  {
+   "Date": "Jun 04 2024",
+   "Close": "29.219999",
+   "Adj Close": "28.435266",
+   "Volume": "67900"
+  },
+  {
+   "Date": "Jun 05 2024",
+   "Close": "29.549999",
+   "Adj Close": "28.756401",
+   "Volume": "98400"
+  },
+  {
+   "Date": "Jun 06 2024",
+   "Close": "29.49",
+   "Adj Close": "28.698015",
+   "Volume": "65000"
+  },
+  {
+   "Date": "Jun 07 2024",
+   "Close": "29.299999",
+   "Adj Close": "28.513115",
+   "Volume": "48800"
+  },
+  {
+   "Date": "Jun 10 2024",
+   "Close": "29.497",
+   "Adj Close": "28.704826",
+   "Volume": "61700"
+  },
+  {
+   "Date": "Jun 11 2024",
+   "Close": "29.370001",
+   "Adj Close": "28.581234",
+   "Volume": "41900"
+  },
+  {
+   "Date": "Jun 12 2024",
+   "Close": "29.690001",
+   "Adj Close": "28.892645",
+   "Volume": "123700"
+  },
+  {
+   "Date": "Jun 13 2024",
+   "Close": "29.549999",
+   "Adj Close": "28.756401",
+   "Volume": "73900"
+  },
+  {
+   "Date": "Jun 14 2024",
+   "Close": "29.27",
+   "Adj Close": "28.483923",
+   "Volume": "58100"
+  },
+  {
+   "Date": "Jun 17 2024",
+   "Close": "29.43",
+   "Adj Close": "28.639624",
+   "Volume": "69000"
+  },
+  {
+   "Date": "Jun 18 2024",
+   "Close": "29.6",
+   "Adj Close": "28.805059",
+   "Volume": "61700"
+  },
+  {
+   "Date": "Jun 20 2024",
+   "Close": "29.483999",
+   "Adj Close": "28.692177",
+   "Volume": "76600"
+  },
+  {
+   "Date": "Jun 21 2024",
+   "Close": "29.51",
+   "Adj Close": "28.792671",
+   "Volume": "42300"
+  },
+  {
+   "Date": "Jun 24 2024",
+   "Close": "29.610001",
+   "Adj Close": "28.890244",
+   "Volume": "161600"
+  },
+  {
+   "Date": "Jun 25 2024",
+   "Close": "29.52",
+   "Adj Close": "28.802429",
+   "Volume": "64900"
+  },
+  {
+   "Date": "Jun 26 2024",
+   "Close": "29.379999",
+   "Adj Close": "28.665834",
+   "Volume": "51100"
+  },
+  {
+   "Date": "Jun 27 2024",
+   "Close": "29.399",
+   "Adj Close": "28.684372",
+   "Volume": "49100"
+  },
+  {
+   "Date": "Jun 28 2024",
+   "Close": "29.450001",
+   "Adj Close": "28.734133",
+   "Volume": "104100"
+  },
+  {
+   "Date": "Jul 01 2024",
+   "Close": "29.26",
+   "Adj Close": "28.54875",
+   "Volume": "88500"
+  },
+  {
+   "Date": "Jul 02 2024",
+   "Close": "29.296",
+   "Adj Close": "28.583872",
+   "Volume": "62600"
+  },
+  {
+   "Date": "Jul 03 2024",
+   "Close": "29.379999",
+   "Adj Close": "28.665834",
+   "Volume": "29500"
+  },
+  {
+   "Date": "Jul 05 2024",
+   "Close": "29.25",
+   "Adj Close": "28.538992",
+   "Volume": "74700"
+  },
+  {
+   "Date": "Jul 08 2024",
+   "Close": "29.290001",
+   "Adj Close": "28.578018",
+   "Volume": "149800"
+  },
+  {
+   "Date": "Jul 09 2024",
+   "Close": "29.219999",
+   "Adj Close": "28.509722",
+   "Volume": "252300"
+  },
+  {
+   "Date": "Jul 10 2024",
+   "Close": "29.440001",
+   "Adj Close": "28.724373",
+   "Volume": "65300"
+  },
+  {
+   "Date": "Jul 11 2024",
+   "Close": "29.879999",
+   "Adj Close": "29.153675",
+   "Volume": "182100"
+  },
+  {
+   "Date": "Jul 12 2024",
+   "Close": "30.160999",
+   "Adj Close": "29.427847",
+   "Volume": "94500"
+  },
+  {
+   "Date": "Jul 15 2024",
+   "Close": "30.23",
+   "Adj Close": "29.495169",
+   "Volume": "75300"
+  },
+  {
+   "Date": "Jul 16 2024",
+   "Close": "30.799999",
+   "Adj Close": "30.051317",
+   "Volume": "88200"
+  },
+  {
+   "Date": "Jul 17 2024",
+   "Close": "30.48",
+   "Adj Close": "29.739092",
+   "Volume": "87500"
+  },
+  {
+   "Date": "Jul 18 2024",
+   "Close": "30.23",
+   "Adj Close": "29.495169",
+   "Volume": "143000"
+  },
+  {
+   "Date": "Jul 19 2024",
+   "Close": "30.110001",
+   "Adj Close": "29.378088",
+   "Volume": "56800"
+  },
+  {
+   "Date": "Jul 22 2024",
+   "Close": "30.42",
+   "Adj Close": "29.680553",
+   "Volume": "63600"
+  },
+  {
+   "Date": "Jul 23 2024",
+   "Close": "30.360001",
+   "Adj Close": "29.622009",
+   "Volume": "50200"
+  },
+  {
+   "Date": "Jul 24 2024",
+   "Close": "29.780001",
+   "Adj Close": "29.056108",
+   "Volume": "71300"
+  },
+  {
+   "Date": "Jul 25 2024",
+   "Close": "29.870001",
+   "Adj Close": "29.143921",
+   "Volume": "113900"
+  },
+  {
+   "Date": "Jul 26 2024",
+   "Close": "30.309999",
+   "Adj Close": "29.573223",
+   "Volume": "66400"
+  },
+  {
+   "Date": "Jul 29 2024",
+   "Close": "30.34",
+   "Adj Close": "29.602499",
+   "Volume": "80900"
+  },
+  {
+   "Date": "Jul 30 2024",
+   "Close": "30.410999",
+   "Adj Close": "29.67177",
+   "Volume": "73900"
+  },
+  {
+   "Date": "Jul 31 2024",
+   "Close": "30.620001",
+   "Adj Close": "29.87569",
+   "Volume": "158100"
+  },
+  {
+   "Date": "Aug 01 2024",
+   "Close": "30.17",
+   "Adj Close": "29.436626",
+   "Volume": "70900"
+  },
+  {
+   "Date": "Aug 02 2024",
+   "Close": "29.450001",
+   "Adj Close": "28.734133",
+   "Volume": "167400"
+  },
+  {
+   "Date": "Aug 05 2024",
+   "Close": "28.709999",
+   "Adj Close": "28.012117",
+   "Volume": "103500"
+  },
+  {
+   "Date": "Aug 06 2024",
+   "Close": "28.99",
+   "Adj Close": "28.285311",
+   "Volume": "108500"
+  },
+  {
+   "Date": "Aug 07 2024",
+   "Close": "28.789",
+   "Adj Close": "28.089197",
+   "Volume": "30100"
+  },
+  {
+   "Date": "Aug 08 2024",
+   "Close": "29.48",
+   "Adj Close": "28.763401",
+   "Volume": "59100"
+  },
+  {
+   "Date": "Aug 09 2024",
+   "Close": "29.549999",
+   "Adj Close": "28.831699",
+   "Volume": "34000"
+  },
+  {
+   "Date": "Aug 12 2024",
+   "Close": "29.375999",
+   "Adj Close": "28.66193",
+   "Volume": "37200"
+  },
+  {
+   "Date": "Aug 13 2024",
+   "Close": "29.84",
+   "Adj Close": "29.114651",
+   "Volume": "97200"
+  },
+  {
+   "Date": "Aug 14 2024",
+   "Close": "29.84",
+   "Adj Close": "29.114651",
+   "Volume": "62800"
+  },
+  {
+   "Date": "Aug 15 2024",
+   "Close": "30.32",
+   "Adj Close": "29.582981",
+   "Volume": "85400"
+  },
+  {
+   "Date": "Aug 16 2024",
+   "Close": "30.41",
+   "Adj Close": "29.670794",
+   "Volume": "47300"
+  },
+  {
+   "Date": "Aug 19 2024",
+   "Close": "30.67",
+   "Adj Close": "29.924475",
+   "Volume": "76900"
+  },
+  {
+   "Date": "Aug 20 2024",
+   "Close": "30.531",
+   "Adj Close": "29.788853",
+   "Volume": "266400"
+  },
+  {
+   "Date": "Aug 21 2024",
+   "Close": "30.888",
+   "Adj Close": "30.137173",
+   "Volume": "87400"
+  },
+  {
+   "Date": "Aug 22 2024",
+   "Close": "30.76",
+   "Adj Close": "30.012287",
+   "Volume": "88700"
+  },
+  {
+   "Date": "Aug 23 2024",
+   "Close": "31.306",
+   "Adj Close": "30.545015",
+   "Volume": "120100"
+  },
+  {
+   "Date": "Aug 26 2024",
+   "Close": "31.27",
+   "Adj Close": "30.509888",
+   "Volume": "54600"
+  },
+  {
+   "Date": "Aug 27 2024",
+   "Close": "31.290001",
+   "Adj Close": "30.529404",
+   "Volume": "58900"
+  },
+  {
+   "Date": "Aug 28 2024",
+   "Close": "31.09",
+   "Adj Close": "30.334269",
+   "Volume": "97500"
+  },
+  {
+   "Date": "Aug 29 2024",
+   "Close": "31.280001",
+   "Adj Close": "30.51965",
+   "Volume": "101600"
+  },
+  {
+   "Date": "Aug 30 2024",
+   "Close": "31.485001",
+   "Adj Close": "30.719666",
+   "Volume": "36600"
+  },
+  {
+   "Date": "Sep 03 2024",
+   "Close": "30.889",
+   "Adj Close": "30.138151",
+   "Volume": "51200"
+  },
+  {
+   "Date": "Sep 04 2024",
+   "Close": "30.798",
+   "Adj Close": "30.049364",
+   "Volume": "37400"
+  },
+  {
+   "Date": "Sep 05 2024",
+   "Close": "30.6",
+   "Adj Close": "29.856174",
+   "Volume": "54900"
+  },
+  {
+   "Date": "Sep 06 2024",
+   "Close": "30.23",
+   "Adj Close": "29.495169",
+   "Volume": "62800"
+  },
+  {
+   "Date": "Sep 09 2024",
+   "Close": "30.440001",
+   "Adj Close": "29.700068",
+   "Volume": "34200"
+  },
+  {
+   "Date": "Sep 10 2024",
+   "Close": "30.35",
+   "Adj Close": "29.612255",
+   "Volume": "43900"
+  },
+  {
+   "Date": "Sep 11 2024",
+   "Close": "30.58",
+   "Adj Close": "29.836664",
+   "Volume": "75200"
+  },
+  {
+   "Date": "Sep 12 2024",
+   "Close": "30.822001",
+   "Adj Close": "30.072781",
+   "Volume": "40800"
+  },
+  {
+   "Date": "Sep 13 2024",
+   "Close": "31.190001",
+   "Adj Close": "30.431835",
+   "Volume": "75300"
+  },
+  {
+   "Date": "Sep 16 2024",
+   "Close": "31.42",
+   "Adj Close": "30.656246",
+   "Volume": "59500"
+  },
+  {
+   "Date": "Sep 17 2024",
+   "Close": "31.48",
+   "Adj Close": "30.714783",
+   "Volume": "149300"
+  },
+  {
+   "Date": "Sep 18 2024",
+   "Close": "31.51",
+   "Adj Close": "30.744059",
+   "Volume": "277700"
+  },
+  {
+   "Date": "Sep 19 2024",
+   "Close": "31.91",
+   "Adj Close": "31.134331",
+   "Volume": "243700"
+  },
+  {
+   "Date": "Sep 20 2024",
+   "Close": "31.77",
+   "Adj Close": "31.093227",
+   "Volume": "73100"
+  },
+  {
+   "Date": "Sep 23 2024",
+   "Close": "31.950001",
+   "Adj Close": "31.269392",
+   "Volume": "230700"
+  },
+  {
+   "Date": "Sep 24 2024",
+   "Close": "32",
+   "Adj Close": "31.318327",
+   "Volume": "255400"
+  },
+  {
+   "Date": "Sep 25 2024",
+   "Close": "31.780001",
+   "Adj Close": "31.103014",
+   "Volume": "93700"
+  },
+  {
+   "Date": "Sep 26 2024",
+   "Close": "31.940001",
+   "Adj Close": "31.259605",
+   "Volume": "209100"
+  },
+  {
+   "Date": "Sep 27 2024",
+   "Close": "32.080002",
+   "Adj Close": "31.396626",
+   "Volume": "132400"
+  },
+  {
+   "Date": "Sep 30 2024",
+   "Close": "32.16",
+   "Adj Close": "31.474916",
+   "Volume": "125800"
+  },
+  {
+   "Date": "Oct 01 2024",
+   "Close": "31.969999",
+   "Adj Close": "31.288965",
+   "Volume": "84500"
+  },
+  {
+   "Date": "Oct 02 2024",
+   "Close": "31.979",
+   "Adj Close": "31.297773",
+   "Volume": "65200"
+  },
+  {
+   "Date": "Oct 03 2024",
+   "Close": "31.879999",
+   "Adj Close": "31.200884",
+   "Volume": "92800"
+  },
+  {
+   "Date": "Oct 04 2024",
+   "Close": "32.18",
+   "Adj Close": "31.494493",
+   "Volume": "111000"
+  },
+  {
+   "Date": "Oct 07 2024",
+   "Close": "31.931999",
+   "Adj Close": "31.251776",
+   "Volume": "84200"
+  },
+  {
+   "Date": "Oct 08 2024",
+   "Close": "32.078999",
+   "Adj Close": "31.395643",
+   "Volume": "118000"
+  },
+  {
+   "Date": "Oct 09 2024",
+   "Close": "32.27",
+   "Adj Close": "31.582577",
+   "Volume": "72300"
+  },
+  {
+   "Date": "Oct 10 2024",
+   "Close": "32.132",
+   "Adj Close": "31.447517",
+   "Volume": "79300"
+  },
+  {
+   "Date": "Oct 11 2024",
+   "Close": "32.5",
+   "Adj Close": "31.807673",
+   "Volume": "121100"
+  },
+  {
+   "Date": "Oct 14 2024",
+   "Close": "32.709999",
+   "Adj Close": "32.013206",
+   "Volume": "137500"
+  },
+  {
+   "Date": "Oct 15 2024",
+   "Close": "32.700001",
+   "Adj Close": "32.003418",
+   "Volume": "71200"
+  },
+  {
+   "Date": "Oct 16 2024",
+   "Close": "32.894001",
+   "Adj Close": "32.193287",
+   "Volume": "87700"
+  },
+  {
+   "Date": "Oct 17 2024",
+   "Close": "32.880001",
+   "Adj Close": "32.179585",
+   "Volume": "57900"
+  },
+  {
+   "Date": "Oct 18 2024",
+   "Close": "33",
+   "Adj Close": "32.297028",
+   "Volume": "110200"
+  },
+  {
+   "Date": "Oct 21 2024",
+   "Close": "32.700001",
+   "Adj Close": "32.003418",
+   "Volume": "103000"
+  },
+  {
+   "Date": "Oct 22 2024",
+   "Close": "32.490002",
+   "Adj Close": "31.797892",
+   "Volume": "77000"
+  },
+  {
+   "Date": "Oct 23 2024",
+   "Close": "32.355",
+   "Adj Close": "31.665766",
+   "Volume": "68700"
+  },
+  {
+   "Date": "Oct 24 2024",
+   "Close": "32.474998",
+   "Adj Close": "31.783207",
+   "Volume": "75700"
+  },
+  {
+   "Date": "Oct 25 2024",
+   "Close": "32.330002",
+   "Adj Close": "31.6413",
+   "Volume": "76300"
+  },
+  {
+   "Date": "Oct 28 2024",
+   "Close": "32.560001",
+   "Adj Close": "31.866398",
+   "Volume": "79400"
+  },
+  {
+   "Date": "Oct 29 2024",
+   "Close": "32.529999",
+   "Adj Close": "31.837032",
+   "Volume": "83400"
+  },
+  {
+   "Date": "Oct 30 2024",
+   "Close": "32.514999",
+   "Adj Close": "31.822353",
+   "Volume": "64500"
+  },
+  {
+   "Date": "Oct 31 2024",
+   "Close": "32.272999",
+   "Adj Close": "31.58551",
+   "Volume": "978400"
+  },
+  {
+   "Date": "Nov 01 2024",
+   "Close": "32.247002",
+   "Adj Close": "31.560064",
+   "Volume": "74400"
+  },
+  {
+   "Date": "Nov 04 2024",
+   "Close": "32.324001",
+   "Adj Close": "31.635431",
+   "Volume": "93700"
+  },
+  {
+   "Date": "Nov 05 2024",
+   "Close": "32.82",
+   "Adj Close": "32.120857",
+   "Volume": "133500"
+  },
+  {
+   "Date": "Nov 06 2024",
+   "Close": "33.785",
+   "Adj Close": "33.065304",
+   "Volume": "245600"
+  },
+  {
+   "Date": "Nov 07 2024",
+   "Close": "34.040001",
+   "Adj Close": "33.314873",
+   "Volume": "182900"
+  },
+  {
+   "Date": "Nov 08 2024",
+   "Close": "34.439999",
+   "Adj Close": "33.706352",
+   "Volume": "796900"
+  },
+  {
+   "Date": "Nov 11 2024",
+   "Close": "34.720001",
+   "Adj Close": "33.980389",
+   "Volume": "138700"
+  },
+  {
+   "Date": "Nov 12 2024",
+   "Close": "34.529999",
+   "Adj Close": "33.79443",
+   "Volume": "219900"
+  },
+  {
+   "Date": "Nov 13 2024",
+   "Close": "34.380001",
+   "Adj Close": "33.647629",
+   "Volume": "122400"
+  },
+  {
+   "Date": "Nov 14 2024",
+   "Close": "34.09",
+   "Adj Close": "33.363804",
+   "Volume": "89800"
+  },
+  {
+   "Date": "Nov 15 2024",
+   "Close": "33.82",
+   "Adj Close": "33.099556",
+   "Volume": "119600"
+  },
+  {
+   "Date": "Nov 18 2024",
+   "Close": "33.939999",
+   "Adj Close": "33.216999",
+   "Volume": "108800"
+  },
+  {
+   "Date": "Nov 19 2024",
+   "Close": "33.970001",
+   "Adj Close": "33.246368",
+   "Volume": "86900"
+  },
+  {
+   "Date": "Nov 20 2024",
+   "Close": "34.068001",
+   "Adj Close": "33.34227",
+   "Volume": "83400"
+  },
+  {
+   "Date": "Nov 21 2024",
+   "Close": "34.57",
+   "Adj Close": "33.833576",
+   "Volume": "177000"
+  },
+  {
+   "Date": "Nov 22 2024",
+   "Close": "34.970001",
+   "Adj Close": "34.225067",
+   "Volume": "68800"
+  },
+  {
+   "Date": "Nov 25 2024",
+   "Close": "35.240002",
+   "Adj Close": "34.489311",
+   "Volume": "157100"
+  },
+  {
+   "Date": "Nov 26 2024",
+   "Close": "35.220001",
+   "Adj Close": "34.469738",
+   "Volume": "118100"
+  },
+  {
+   "Date": "Nov 27 2024",
+   "Close": "35.18",
+   "Adj Close": "34.430584",
+   "Volume": "163100"
+  },
+  {
+   "Date": "Nov 29 2024",
+   "Close": "35.259998",
+   "Adj Close": "34.508881",
+   "Volume": "133800"
+  },
+  {
+   "Date": "Dec 02 2024",
+   "Close": "35.169998",
+   "Adj Close": "34.420795",
+   "Volume": "238600"
+  },
+  {
+   "Date": "Dec 03 2024",
+   "Close": "35.150002",
+   "Adj Close": "34.40123",
+   "Volume": "388300"
+  },
+  {
+   "Date": "Dec 04 2024",
+   "Close": "35.285",
+   "Adj Close": "34.533344",
+   "Volume": "112300"
+  },
+  {
+   "Date": "Dec 05 2024",
+   "Close": "35.130001",
+   "Adj Close": "34.381653",
+   "Volume": "95100"
+  },
+  {
+   "Date": "Dec 06 2024",
+   "Close": "35.230999",
+   "Adj Close": "34.480499",
+   "Volume": "279900"
+  },
+  {
+   "Date": "Dec 09 2024",
+   "Close": "34.830002",
+   "Adj Close": "34.088043",
+   "Volume": "118200"
+  },
+  {
+   "Date": "Dec 10 2024",
+   "Close": "34.5",
+   "Adj Close": "33.765064",
+   "Volume": "111400"
+  },
+  {
+   "Date": "Dec 11 2024",
+   "Close": "34.630001",
+   "Adj Close": "33.892307",
+   "Volume": "157500"
+  },
+  {
+   "Date": "Dec 12 2024",
+   "Close": "34.48",
+   "Adj Close": "33.745502",
+   "Volume": "111200"
+  },
+  {
+   "Date": "Dec 13 2024",
+   "Close": "34.240002",
+   "Adj Close": "33.510612",
+   "Volume": "122700"
+  },
+  {
+   "Date": "Dec 16 2024",
+   "Close": "34.32",
+   "Adj Close": "33.588905",
+   "Volume": "90600"
+  },
+  {
+   "Date": "Dec 17 2024",
+   "Close": "34",
+   "Adj Close": "33.275726",
+   "Volume": "161600"
+  },
+  {
+   "Date": "Dec 18 2024",
+   "Close": "32.82",
+   "Adj Close": "32.120857",
+   "Volume": "159200"
+  },
+  {
+   "Date": "Dec 19 2024",
+   "Close": "32.818001",
+   "Adj Close": "32.118904",
+   "Volume": "115200"
+  },
+  {
+   "Date": "Dec 20 2024",
+   "Close": "33.220001",
+   "Adj Close": "32.609718",
+   "Volume": "228500"
+  },
+  {
+   "Date": "Dec 23 2024",
+   "Close": "33.18",
+   "Adj Close": "32.570454",
+   "Volume": "211600"
+  },
+  {
+   "Date": "Dec 24 2024",
+   "Close": "33.446999",
+   "Adj Close": "32.832546",
+   "Volume": "71600"
+  },
+  {
+   "Date": "Dec 26 2024",
+   "Close": "33.560001",
+   "Adj Close": "32.94347",
+   "Volume": "148600"
+  },
+  {
+   "Date": "Dec 27 2024",
+   "Close": "33.209999",
+   "Adj Close": "32.599903",
+   "Volume": "140500"
+  },
+  {
+   "Date": "Dec 30 2024",
+   "Close": "32.922001",
+   "Adj Close": "32.317192",
+   "Volume": "168100"
+  },
+  {
+   "Date": "Dec 31 2024",
+   "Close": "32.849998",
+   "Adj Close": "32.24651",
+   "Volume": "3531100"
+  },
+  {
+   "Date": "Jan 02 2025",
+   "Close": "32.810001",
+   "Adj Close": "32.207253",
+   "Volume": "117700"
+  },
+  {
+   "Date": "Jan 03 2025",
+   "Close": "33.27",
+   "Adj Close": "32.658798",
+   "Volume": "3449100"
+  },
+  {
+   "Date": "Jan 06 2025",
+   "Close": "33.259998",
+   "Adj Close": "32.648979",
+   "Volume": "3241100"
+  },
+  {
+   "Date": "Jan 07 2025",
+   "Close": "33.040001",
+   "Adj Close": "32.433025",
+   "Volume": "288500"
+  },
+  {
+   "Date": "Jan 08 2025",
+   "Close": "33.150002",
+   "Adj Close": "32.541004",
+   "Volume": "195000"
+  },
+  {
+   "Date": "Jan 10 2025",
+   "Close": "32.66",
+   "Adj Close": "32.060005",
+   "Volume": "350400"
+  },
+  {
+   "Date": "Jan 13 2025",
+   "Close": "32.77",
+   "Adj Close": "32.167988",
+   "Volume": "201800"
+  },
+  {
+   "Date": "Jan 14 2025",
+   "Close": "33.200001",
+   "Adj Close": "32.590084",
+   "Volume": "131600"
+  },
+  {
+   "Date": "Jan 15 2025",
+   "Close": "33.650002",
+   "Adj Close": "33.031818",
+   "Volume": "143900"
+  },
+  {
+   "Date": "Jan 16 2025",
+   "Close": "33.98",
+   "Adj Close": "33.355751",
+   "Volume": "122000"
+  },
+  {
+   "Date": "Jan 17 2025",
+   "Close": "34.130001",
+   "Adj Close": "33.503006",
+   "Volume": "169600"
+  },
+  {
+   "Date": "Jan 21 2025",
+   "Close": "34.619999",
+   "Adj Close": "33.984001",
+   "Volume": "228900"
+  },
+  {
+   "Date": "Jan 22 2025",
+   "Close": "34.509998",
+   "Adj Close": "33.876019",
+   "Volume": "1303700"
+  },
+  {
+   "Date": "Jan 23 2025",
+   "Close": "34.549999",
+   "Adj Close": "33.915287",
+   "Volume": "611100"
+  },
+  {
+   "Date": "Jan 24 2025",
+   "Close": "34.529999",
+   "Adj Close": "33.895649",
+   "Volume": "249600"
+  },
+  {
+   "Date": "Jan 27 2025",
+   "Close": "34.220001",
+   "Adj Close": "33.591351",
+   "Volume": "216400"
+  },
+  {
+   "Date": "Jan 28 2025",
+   "Close": "34.43",
+   "Adj Close": "33.797489",
+   "Volume": "193900"
+  },
+  {
+   "Date": "Jan 29 2025",
+   "Close": "34.330002",
+   "Adj Close": "33.699326",
+   "Volume": "183200"
+  },
+  {
+   "Date": "Jan 30 2025",
+   "Close": "34.639999",
+   "Adj Close": "34.003632",
+   "Volume": "185600"
+  },
+  {
+   "Date": "Jan 31 2025",
+   "Close": "34.450001",
+   "Adj Close": "33.817123",
+   "Volume": "184700"
+  },
+  {
+   "Date": "Feb 03 2025",
+   "Close": "34.139999",
+   "Adj Close": "33.512817",
+   "Volume": "193400"
+  },
+  {
+   "Date": "Feb 04 2025",
+   "Close": "34.240002",
+   "Adj Close": "33.610977",
+   "Volume": "172200"
+  },
+  {
+   "Date": "Feb 05 2025",
+   "Close": "34.5",
+   "Adj Close": "33.866196",
+   "Volume": "1968800"
+  },
+  {
+   "Date": "Feb 06 2025",
+   "Close": "34.5",
+   "Adj Close": "33.866196",
+   "Volume": "438300"
+  },
+  {
+   "Date": "Feb 07 2025",
+   "Close": "34.32",
+   "Adj Close": "33.689507",
+   "Volume": "171000"
+  },
+  {
+   "Date": "Feb 10 2025",
+   "Close": "34.349998",
+   "Adj Close": "33.718956",
+   "Volume": "197100"
+  },
+  {
+   "Date": "Feb 11 2025",
+   "Close": "34.119999",
+   "Adj Close": "33.493179",
+   "Volume": "122000"
+  },
+  {
+   "Date": "Feb 12 2025",
+   "Close": "33.919998",
+   "Adj Close": "33.296852",
+   "Volume": "201500"
+  },
+  {
+   "Date": "Feb 13 2025",
+   "Close": "34.25",
+   "Adj Close": "33.6208",
+   "Volume": "217500"
+  },
+  {
+   "Date": "Feb 14 2025",
+   "Close": "34.23",
+   "Adj Close": "33.601162",
+   "Volume": "939200"
+  },
+  {
+   "Date": "Feb 18 2025",
+   "Close": "34.560001",
+   "Adj Close": "33.925098",
+   "Volume": "737900"
+  },
+  {
+   "Date": "Feb 19 2025",
+   "Close": "34.380001",
+   "Adj Close": "33.748405",
+   "Volume": "689200"
+  },
+  {
+   "Date": "Feb 20 2025",
+   "Close": "34.049999",
+   "Adj Close": "33.424473",
+   "Volume": "711400"
+  },
+  {
+   "Date": "Feb 21 2025",
+   "Close": "33.32",
+   "Adj Close": "32.707882",
+   "Volume": "1534500"
+  },
+  {
+   "Date": "Feb 24 2025",
+   "Close": "33.16",
+   "Adj Close": "32.550819",
+   "Volume": "251100"
+  },
+  {
+   "Date": "Feb 25 2025",
+   "Close": "33.09",
+   "Adj Close": "32.482113",
+   "Volume": "336700"
+  },
+  {
+   "Date": "Feb 26 2025",
+   "Close": "33.200001",
+   "Adj Close": "32.590084",
+   "Volume": "192900"
+  },
+  {
+   "Date": "Feb 27 2025",
+   "Close": "32.849998",
+   "Adj Close": "32.24651",
+   "Volume": "159300"
+  },
+  {
+   "Date": "Feb 28 2025",
+   "Close": "33.290001",
+   "Adj Close": "32.678436",
+   "Volume": "385900"
+  },
+  {
+   "Date": "Mar 03 2025",
+   "Close": "32.619999",
+   "Adj Close": "32.020741",
+   "Volume": "266700"
+  },
+  {
+   "Date": "Mar 04 2025",
+   "Close": "32.049999",
+   "Adj Close": "31.461212",
+   "Volume": "1774100"
+  },
+  {
+   "Date": "Mar 05 2025",
+   "Close": "32.400002",
+   "Adj Close": "31.804781",
+   "Volume": "301300"
+  },
+  {
+   "Date": "Mar 06 2025",
+   "Close": "31.719999",
+   "Adj Close": "31.137274",
+   "Volume": "524500"
+  },
+  {
+   "Date": "Mar 07 2025",
+   "Close": "32.02",
+   "Adj Close": "31.431765",
+   "Volume": "3591500"
+  },
+  {
+   "Date": "Mar 10 2025",
+   "Close": "31.24",
+   "Adj Close": "30.666092",
+   "Volume": "450600"
+  },
+  {
+   "Date": "Mar 11 2025",
+   "Close": "31.030001",
+   "Adj Close": "30.459951",
+   "Volume": "496700"
+  },
+  {
+   "Date": "Mar 12 2025",
+   "Close": "31.1",
+   "Adj Close": "30.528664",
+   "Volume": "205600"
+  },
+  {
+   "Date": "Mar 13 2025",
+   "Close": "30.530001",
+   "Adj Close": "29.969135",
+   "Volume": "649000"
+  },
+  {
+   "Date": "Mar 14 2025",
+   "Close": "31.299999",
+   "Adj Close": "30.724991",
+   "Volume": "314500"
+  },
+  {
+   "Date": "Mar 17 2025",
+   "Close": "31.809999",
+   "Adj Close": "31.225622",
+   "Volume": "320500"
+  },
+  {
+   "Date": "Mar 18 2025",
+   "Close": "31.559999",
+   "Adj Close": "30.980209",
+   "Volume": "218200"
+  },
+  {
+   "Date": "Mar 19 2025",
+   "Close": "31.969999",
+   "Adj Close": "31.382681",
+   "Volume": "230200"
+  },
+  {
+   "Date": "Mar 20 2025",
+   "Close": "31.91",
+   "Adj Close": "31.323782",
+   "Volume": "136700"
+  },
+  {
+   "Date": "Mar 21 2025",
+   "Close": "31.690001",
+   "Adj Close": "31.216413",
+   "Volume": "127800"
+  },
+  {
+   "Date": "Mar 24 2025",
+   "Close": "32.400002",
+   "Adj Close": "31.915798",
+   "Volume": "358600"
+  },
+  {
+   "Date": "Mar 25 2025",
+   "Close": "32.369999",
+   "Adj Close": "31.886248",
+   "Volume": "212700"
+  },
+  {
+   "Date": "Mar 26 2025",
+   "Close": "32.119999",
+   "Adj Close": "31.639982",
+   "Volume": "219500"
+  },
+  {
+   "Date": "Mar 27 2025",
+   "Close": "31.799999",
+   "Adj Close": "31.324768",
+   "Volume": "206600"
+  },
+  {
+   "Date": "Mar 28 2025",
+   "Close": "31.290001",
+   "Adj Close": "30.822392",
+   "Volume": "375000"
+  },
+  {
+   "Date": "Mar 31 2025",
+   "Close": "31.34",
+   "Adj Close": "30.871645",
+   "Volume": "2758300"
+  },
+  {
+   "Date": "Apr 01 2025",
+   "Close": "31.57",
+   "Adj Close": "31.098204",
+   "Volume": "354700"
+  },
+  {
+   "Date": "Apr 02 2025",
+   "Close": "31.950001",
+   "Adj Close": "31.472528",
+   "Volume": "235000"
+  },
+  {
+   "Date": "Apr 03 2025",
+   "Close": "30.16",
+   "Adj Close": "29.709276",
+   "Volume": "366500"
+  },
+  {
+   "Date": "Apr 04 2025",
+   "Close": "28.43",
+   "Adj Close": "28.005131",
+   "Volume": "548100"
+  },
+  {
+   "Date": "Apr 07 2025",
+   "Close": "28.15",
+   "Adj Close": "27.729315",
+   "Volume": "1154100"
+  },
+  {
+   "Date": "Apr 08 2025",
+   "Close": "27.66",
+   "Adj Close": "27.246639",
+   "Volume": "303900"
+  },
+  {
+   "Date": "Apr 09 2025",
+   "Close": "29.9",
+   "Adj Close": "29.453161",
+   "Volume": "301400"
+  },
+  {
+   "Date": "Apr 10 2025",
+   "Close": "29.129999",
+   "Adj Close": "28.69467",
+   "Volume": "306200"
+  },
+  {
+   "Date": "Apr 11 2025",
+   "Close": "29.559999",
+   "Adj Close": "29.118244",
+   "Volume": "406100"
+  },
+  {
+   "Date": "Apr 14 2025",
+   "Close": "29.940001",
+   "Adj Close": "29.492563",
+   "Volume": "228600"
+  },
+  {
+   "Date": "Apr 15 2025",
+   "Close": "30",
+   "Adj Close": "29.551668",
+   "Volume": "228700"
+  },
+  {
+   "Date": "Apr 16 2025",
+   "Close": "29.67",
+   "Adj Close": "29.226599",
+   "Volume": "232600"
+  },
+  {
+   "Date": "Apr 17 2025",
+   "Close": "29.860001",
+   "Adj Close": "29.413761",
+   "Volume": "466600"
+  },
+  {
+   "Date": "Apr 21 2025",
+   "Close": "29.110001",
+   "Adj Close": "28.674969",
+   "Volume": "461100"
+  },
+  {
+   "Date": "Apr 22 2025",
+   "Close": "29.879999",
+   "Adj Close": "29.43346",
+   "Volume": "426200"
+  },
+  {
+   "Date": "Apr 23 2025",
+   "Close": "30.299999",
+   "Adj Close": "29.847183",
+   "Volume": "171600"
+  },
+  {
+   "Date": "Apr 24 2025",
+   "Close": "31.07",
+   "Adj Close": "30.605677",
+   "Volume": "341600"
+  },
+  {
+   "Date": "Apr 25 2025",
+   "Close": "31.09",
+   "Adj Close": "30.625378",
+   "Volume": "220500"
+  },
+  {
+   "Date": "Apr 28 2025",
+   "Close": "31.23",
+   "Adj Close": "30.763288",
+   "Volume": "192200"
+  },
+  {
+   "Date": "Apr 29 2025",
+   "Close": "31.42",
+   "Adj Close": "30.950449",
+   "Volume": "229500"
+  },
+  {
+   "Date": "Apr 30 2025",
+   "Close": "31.450001",
+   "Adj Close": "30.980001",
+   "Volume": "633900"
+  },
+  {
+   "Date": "May 01 2025",
+   "Close": "31.43",
+   "Adj Close": "30.960297",
+   "Volume": "402700"
+  },
+  {
+   "Date": "May 02 2025",
+   "Close": "32.07",
+   "Adj Close": "31.590733",
+   "Volume": "224100"
+  },
+  {
+   "Date": "May 05 2025",
+   "Close": "32.009998",
+   "Adj Close": "31.531628",
+   "Volume": "168300"
+  },
+  {
+   "Date": "May 06 2025",
+   "Close": "31.76",
+   "Adj Close": "31.285366",
+   "Volume": "466700"
+  },
+  {
+   "Date": "May 07 2025",
+   "Close": "31.870001",
+   "Adj Close": "31.393723",
+   "Volume": "372500"
+  },
+  {
+   "Date": "May 08 2025",
+   "Close": "32.279999",
+   "Adj Close": "31.797592",
+   "Volume": "345900"
+  },
+  {
+   "Date": "May 09 2025",
+   "Close": "32.25",
+   "Adj Close": "31.768044",
+   "Volume": "175600"
+  },
+  {
+   "Date": "May 12 2025",
+   "Close": "33.23",
+   "Adj Close": "32.733398",
+   "Volume": "337400"
+  },
+  {
+   "Date": "May 13 2025",
+   "Close": "33.419998",
+   "Adj Close": "32.920559",
+   "Volume": "255600"
+  },
+  {
+   "Date": "May 14 2025",
+   "Close": "33.290001",
+   "Adj Close": "32.792503",
+   "Volume": "282400"
+  },
+  {
+   "Date": "May 15 2025",
+   "Close": "33.529999",
+   "Adj Close": "33.028912",
+   "Volume": "177100"
+  },
+  {
+   "Date": "May 16 2025",
+   "Close": "33.830002",
+   "Adj Close": "33.324432",
+   "Volume": "190800"
+  },
+  {
+   "Date": "May 19 2025",
+   "Close": "33.73",
+   "Adj Close": "33.225925",
+   "Volume": "199100"
+  },
+  {
+   "Date": "May 20 2025",
+   "Close": "33.630001",
+   "Adj Close": "33.127419",
+   "Volume": "381300"
+  },
+  {
+   "Date": "May 21 2025",
+   "Close": "32.970001",
+   "Adj Close": "32.477283",
+   "Volume": "211300"
+  },
+  {
+   "Date": "May 22 2025",
+   "Close": "32.919998",
+   "Adj Close": "32.428028",
+   "Volume": "318400"
+  },
+  {
+   "Date": "May 23 2025",
+   "Close": "32.75",
+   "Adj Close": "32.260567",
+   "Volume": "311000"
+  },
+  {
+   "Date": "May 27 2025",
+   "Close": "33.369999",
+   "Adj Close": "32.871307",
+   "Volume": "153700"
+  },
+  {
+   "Date": "May 28 2025",
+   "Close": "33.18",
+   "Adj Close": "32.684147",
+   "Volume": "327800"
+  },
+  {
+   "Date": "May 29 2025",
+   "Close": "33.189999",
+   "Adj Close": "32.693993",
+   "Volume": "312800"
+  },
+  {
+   "Date": "May 30 2025",
+   "Close": "33.189999",
+   "Adj Close": "32.693993",
+   "Volume": "166700"
+  },
+  {
+   "Date": "Jun 02 2025",
+   "Close": "33.360001",
+   "Adj Close": "32.861454",
+   "Volume": "326000"
+  },
+  {
+   "Date": "Jun 03 2025",
+   "Close": "33.610001",
+   "Adj Close": "33.107719",
+   "Volume": "599700"
+  },
+  {
+   "Date": "Jun 04 2025",
+   "Close": "33.529999",
+   "Adj Close": "33.028912",
+   "Volume": "147500"
+  },
+  {
+   "Date": "Jun 05 2025",
+   "Close": "33.419998",
+   "Adj Close": "32.920559",
+   "Volume": "218700"
+  },
+  {
+   "Date": "Jun 06 2025",
+   "Close": "33.720001",
+   "Adj Close": "33.21608",
+   "Volume": "163100"
+  },
+  {
+   "Date": "Jun 09 2025",
+   "Close": "33.740002",
+   "Adj Close": "33.235779",
+   "Volume": "147300"
+  },
+  {
+   "Date": "Jun 10 2025",
+   "Close": "33.720001",
+   "Adj Close": "33.21608",
+   "Volume": "139500"
+  },
+  {
+   "Date": "Jun 11 2025",
+   "Close": "33.650002",
+   "Adj Close": "33.147121",
+   "Volume": "189100"
+  },
+  {
+   "Date": "Jun 12 2025",
+   "Close": "33.689999",
+   "Adj Close": "33.186523",
+   "Volume": "649800"
+  },
+  {
+   "Date": "Jun 13 2025",
+   "Close": "33.23",
+   "Adj Close": "32.733398",
+   "Volume": "195300"
+  },
+  {
+   "Date": "Jun 16 2025",
+   "Close": "33.669998",
+   "Adj Close": "33.166824",
+   "Volume": "237300"
+  },
+  {
+   "Date": "Jun 17 2025",
+   "Close": "33.330002",
+   "Adj Close": "32.831905",
+   "Volume": "521500"
+  },
+  {
+   "Date": "Jun 18 2025",
+   "Close": "33.41",
+   "Adj Close": "32.910706",
+   "Volume": "148100"
+  },
+  {
+   "Date": "Jun 20 2025",
+   "Close": "33.32",
+   "Adj Close": "32.928497",
+   "Volume": "261300"
+  },
+  {
+   "Date": "Jun 23 2025",
+   "Close": "33.66",
+   "Adj Close": "33.264503",
+   "Volume": "509300"
+  },
+  {
+   "Date": "Jun 24 2025",
+   "Close": "34.23",
+   "Adj Close": "33.827801",
+   "Volume": "272700"
+  },
+  {
+   "Date": "Jun 25 2025",
+   "Close": "33.700001",
+   "Adj Close": "33.304031",
+   "Volume": "246800"
+  },
+  {
+   "Date": "Jun 26 2025",
+   "Close": "34.060001",
+   "Adj Close": "33.659801",
+   "Volume": "317900"
+  },
+  {
+   "Date": "Jun 27 2025",
+   "Close": "34.369999",
+   "Adj Close": "33.966156",
+   "Volume": "274500"
+  },
+  {
+   "Date": "Jun 30 2025",
+   "Close": "34.415001",
+   "Adj Close": "34.010632",
+   "Volume": "221500"
+  },
+  {
+   "Date": "Jul 01 2025",
+   "Close": "34.630001",
+   "Adj Close": "34.223106",
+   "Volume": "548500"
+  },
+  {
+   "Date": "Jul 02 2025",
+   "Close": "34.799999",
+   "Adj Close": "34.391106",
+   "Volume": "538900"
+  },
+  {
+   "Date": "Jul 03 2025",
+   "Close": "34.869999",
+   "Adj Close": "34.460281",
+   "Volume": "310200"
+  },
+  {
+   "Date": "Jul 07 2025",
+   "Close": "34.790001",
+   "Adj Close": "34.381226",
+   "Volume": "189300"
+  },
+  {
+   "Date": "Jul 08 2025",
+   "Close": "34.630001",
+   "Adj Close": "34.223106",
+   "Volume": "428200"
+  },
+  {
+   "Date": "Jul 09 2025",
+   "Close": "34.77",
+   "Adj Close": "34.361458",
+   "Volume": "1130200"
+  },
+  {
+   "Date": "Jul 10 2025",
+   "Close": "34.84",
+   "Adj Close": "34.430634",
+   "Volume": "771900"
+  },
+  {
+   "Date": "Jul 11 2025",
+   "Close": "34.490002",
+   "Adj Close": "34.084751",
+   "Volume": "178100"
+  },
+  {
+   "Date": "Jul 14 2025",
+   "Close": "34.700001",
+   "Adj Close": "34.292278",
+   "Volume": "296200"
+  },
+  {
+   "Date": "Jul 15 2025",
+   "Close": "34.209999",
+   "Adj Close": "33.808041",
+   "Volume": "254600"
+  },
+  {
+   "Date": "Jul 16 2025",
+   "Close": "34.41",
+   "Adj Close": "34.005692",
+   "Volume": "446200"
+  },
+  {
+   "Date": "Jul 17 2025",
+   "Close": "34.73",
+   "Adj Close": "34.321926",
+   "Volume": "448800"
+  },
+  {
+   "Date": "Jul 18 2025",
+   "Close": "34.830002",
+   "Adj Close": "34.420757",
+   "Volume": "224600"
+  },
+  {
+   "Date": "Jul 21 2025",
+   "Close": "34.689999",
+   "Adj Close": "34.282398",
+   "Volume": "329200"
+  },
+  {
+   "Date": "Jul 22 2025",
+   "Close": "35",
+   "Adj Close": "34.588757",
+   "Volume": "320800"
+  },
+  {
+   "Date": "Jul 23 2025",
+   "Close": "35.18",
+   "Adj Close": "34.766644",
+   "Volume": "1745200"
+  },
+  {
+   "Date": "Jul 24 2025",
+   "Close": "35.080002",
+   "Adj Close": "34.667816",
+   "Volume": "1335100"
+  },
+  {
+   "Date": "Jul 25 2025",
+   "Close": "35.220001",
+   "Adj Close": "34.806168",
+   "Volume": "463500"
+  },
+  {
+   "Date": "Jul 28 2025",
+   "Close": "35.209999",
+   "Adj Close": "34.796284",
+   "Volume": "607900"
+  },
+  {
+   "Date": "Jul 29 2025",
+   "Close": "35.07",
+   "Adj Close": "34.657932",
+   "Volume": "257000"
+  },
+  {
+   "Date": "Jul 30 2025",
+   "Close": "35.009998",
+   "Adj Close": "34.598637",
+   "Volume": "342300"
+  },
+  {
+   "Date": "Jul 31 2025",
+   "Close": "34.82",
+   "Adj Close": "34.41087",
+   "Volume": "413600"
+  },
+  {
+   "Date": "Aug 01 2025",
+   "Close": "34.369999",
+   "Adj Close": "33.966156",
+   "Volume": "374700"
+  },
+  {
+   "Date": "Aug 04 2025",
+   "Close": "34.919998",
+   "Adj Close": "34.509693",
+   "Volume": "308700"
+  },
+  {
+   "Date": "Aug 05 2025",
+   "Close": "34.810001",
+   "Adj Close": "34.40099",
+   "Volume": "591200"
+  },
+  {
+   "Date": "Aug 06 2025",
+   "Close": "34.799999",
+   "Adj Close": "34.391106",
+   "Volume": "337200"
+  },
+  {
+   "Date": "Aug 07 2025",
+   "Close": "34.759998",
+   "Adj Close": "34.351574",
+   "Volume": "370100"
+  },
+  {
+   "Date": "Aug 08 2025",
+   "Close": "34.68",
+   "Adj Close": "34.272518",
+   "Volume": "328200"
+  },
+  {
+   "Date": "Aug 11 2025",
+   "Close": "34.610001",
+   "Adj Close": "34.203339",
+   "Volume": "220000"
+  },
+  {
+   "Date": "Aug 12 2025",
+   "Close": "35.099998",
+   "Adj Close": "34.68758",
+   "Volume": "303400"
+  },
+  {
+   "Date": "Aug 13 2025",
+   "Close": "35.59",
+   "Adj Close": "35.171818",
+   "Volume": "320900"
+  },
+  {
+   "Date": "Aug 14 2025",
+   "Close": "35.209999",
+   "Adj Close": "34.796284",
+   "Volume": "375000"
+  },
+  {
+   "Date": "Aug 15 2025",
+   "Close": "35.099998",
+   "Adj Close": "34.68758",
+   "Volume": "237300"
+  },
+  {
+   "Date": "Aug 18 2025",
+   "Close": "35.200001",
+   "Adj Close": "34.786407",
+   "Volume": "2460100"
+  },
+  {
+   "Date": "Aug 19 2025",
+   "Close": "35.290001",
+   "Adj Close": "34.875347",
+   "Volume": "298400"
+  },
+  {
+   "Date": "Aug 20 2025",
+   "Close": "35.259998",
+   "Adj Close": "34.845699",
+   "Volume": "370800"
+  },
+  {
+   "Date": "Aug 21 2025",
+   "Close": "35.139999",
+   "Adj Close": "34.727108",
+   "Volume": "243000"
+  },
+  {
+   "Date": "Aug 22 2025",
+   "Close": "35.869999",
+   "Adj Close": "35.448532",
+   "Volume": "298900"
+  },
+  {
+   "Date": "Aug 25 2025",
+   "Close": "35.68",
+   "Adj Close": "35.260765",
+   "Volume": "264400"
+  },
+  {
+   "Date": "Aug 26 2025",
+   "Close": "35.849998",
+   "Adj Close": "35.428768",
+   "Volume": "460200"
+  },
+  {
+   "Date": "Aug 27 2025",
+   "Close": "36.02",
+   "Adj Close": "35.596771",
+   "Volume": "750700"
+  },
+  {
+   "Date": "Aug 28 2025",
+   "Close": "36.049999",
+   "Adj Close": "35.626419",
+   "Volume": "413300"
+  },
+  {
+   "Date": "Aug 29 2025",
+   "Close": "35.830002",
+   "Adj Close": "35.409004",
+   "Volume": "400300"
+  },
+  {
+   "Date": "Sep 02 2025",
+   "Close": "35.650002",
+   "Adj Close": "35.231117",
+   "Volume": "776300"
+  },
+  {
+   "Date": "Sep 03 2025",
+   "Close": "35.639999",
+   "Adj Close": "35.221233",
+   "Volume": "394900"
+  },
+  {
+   "Date": "Sep 04 2025",
+   "Close": "35.990002",
+   "Adj Close": "35.567127",
+   "Volume": "578100"
+  },
+  {
+   "Date": "Sep 05 2025",
+   "Close": "36",
+   "Adj Close": "35.577003",
+   "Volume": "342100"
+  },
+  {
+   "Date": "Sep 08 2025",
+   "Close": "36.060001",
+   "Adj Close": "35.636303",
+   "Volume": "286500"
+  },
+  {
+   "Date": "Sep 09 2025",
+   "Close": "36.040001",
+   "Adj Close": "35.616543",
+   "Volume": "298500"
+  },
+  {
+   "Date": "Sep 10 2025",
+   "Close": "35.990002",
+   "Adj Close": "35.567127",
+   "Volume": "411400"
+  },
+  {
+   "Date": "Sep 11 2025",
+   "Close": "36.439999",
+   "Adj Close": "36.011833",
+   "Volume": "882500"
+  },
+  {
+   "Date": "Sep 12 2025",
+   "Close": "36.189999",
+   "Adj Close": "35.764771",
+   "Volume": "527000"
+  },
+  {
+   "Date": "Sep 15 2025",
+   "Close": "36.299999",
+   "Adj Close": "35.873478",
+   "Volume": "568200"
+  },
+  {
+   "Date": "Sep 16 2025",
+   "Close": "36.110001",
+   "Adj Close": "35.685719",
+   "Volume": "834100"
+  },
+  {
+   "Date": "Sep 17 2025",
+   "Close": "36.209999",
+   "Adj Close": "35.784542",
+   "Volume": "901400"
+  },
+  {
+   "Date": "Sep 18 2025",
+   "Close": "36.52",
+   "Adj Close": "36.090897",
+   "Volume": "363800"
+  },
+  {
+   "Date": "Sep 19 2025",
+   "Close": "36.25",
+   "Adj Close": "35.943157",
+   "Volume": "1750600"
+  },
+  {
+   "Date": "Sep 22 2025",
+   "Close": "36.299999",
+   "Adj Close": "35.992733",
+   "Volume": "396800"
+  },
+  {
+   "Date": "Sep 23 2025",
+   "Close": "36.200001",
+   "Adj Close": "35.893585",
+   "Volume": "359500"
+  },
+  {
+   "Date": "Sep 24 2025",
+   "Close": "35.970001",
+   "Adj Close": "35.665527",
+   "Volume": "269500"
+  },
+  {
+   "Date": "Sep 25 2025",
+   "Close": "35.709999",
+   "Adj Close": "35.407726",
+   "Volume": "459600"
+  },
+  {
+   "Date": "Sep 26 2025",
+   "Close": "36.139999",
+   "Adj Close": "35.834087",
+   "Volume": "478100"
+  },
+  {
+   "Date": "Sep 29 2025",
+   "Close": "36.23",
+   "Adj Close": "35.923325",
+   "Volume": "415600"
+  },
+  {
+   "Date": "Sep 30 2025",
+   "Close": "36.150002",
+   "Adj Close": "35.844006",
+   "Volume": "334700"
+  },
+  {
+   "Date": "Oct 01 2025",
+   "Close": "36.110001",
+   "Adj Close": "35.80434",
+   "Volume": "669600"
+  },
+  {
+   "Date": "Oct 02 2025",
+   "Close": "36.259998",
+   "Adj Close": "35.953072",
+   "Volume": "448200"
+  },
+  {
+   "Date": "Oct 03 2025",
+   "Close": "36.23",
+   "Adj Close": "35.923325",
+   "Volume": "325000"
+  },
+  {
+   "Date": "Oct 06 2025",
+   "Close": "36.310001",
+   "Adj Close": "36.002651",
+   "Volume": "441000"
+  },
+  {
+   "Date": "Oct 07 2025",
+   "Close": "36.060001",
+   "Adj Close": "35.754765",
+   "Volume": "556300"
+  },
+  {
+   "Date": "Oct 08 2025",
+   "Close": "36.240002",
+   "Adj Close": "35.933243",
+   "Volume": "4978500"
+  },
+  {
+   "Date": "Oct 09 2025",
+   "Close": "35.959999",
+   "Adj Close": "35.655613",
+   "Volume": "429200"
+  },
+  {
+   "Date": "Oct 10 2025",
+   "Close": "34.91",
+   "Adj Close": "34.614502",
+   "Volume": "920700"
+  },
+  {
+   "Date": "Oct 13 2025",
+   "Close": "35.310001",
+   "Adj Close": "35.011116",
+   "Volume": "435100"
+  },
+  {
+   "Date": "Oct 14 2025",
+   "Close": "35.610001",
+   "Adj Close": "35.308575",
+   "Volume": "1201200"
+  },
+  {
+   "Date": "Oct 15 2025",
+   "Close": "35.720001",
+   "Adj Close": "35.417648",
+   "Volume": "860400"
+  },
+  {
+   "Date": "Oct 16 2025",
+   "Close": "35.279999",
+   "Adj Close": "34.981369",
+   "Volume": "385700"
+  },
+  {
+   "Date": "Oct 17 2025",
+   "Close": "35.400002",
+   "Adj Close": "35.100353",
+   "Volume": "523200"
+  },
+  {
+   "Date": "Oct 20 2025",
+   "Close": "35.810001",
+   "Adj Close": "35.506882",
+   "Volume": "1208500"
+  },
+  {
+   "Date": "Oct 21 2025",
+   "Close": "36.009998",
+   "Adj Close": "35.705185",
+   "Volume": "519900"
+  },
+  {
+   "Date": "Oct 22 2025",
+   "Close": "35.759998",
+   "Adj Close": "35.457302",
+   "Volume": "429900"
+  },
+  {
+   "Date": "Oct 23 2025",
+   "Close": "36",
+   "Adj Close": "35.695271",
+   "Volume": "1040600"
+  },
+  {
+   "Date": "Oct 24 2025",
+   "Close": "36.200001",
+   "Adj Close": "35.893585",
+   "Volume": "378900"
+  },
+  {
+   "Date": "Oct 27 2025",
+   "Close": "36.400002",
+   "Adj Close": "36.091888",
+   "Volume": "393900"
+  },
+  {
+   "Date": "Oct 28 2025",
+   "Close": "36.02",
+   "Adj Close": "35.715107",
+   "Volume": "468400"
+  },
+  {
+   "Date": "Oct 29 2025",
+   "Close": "35.630001",
+   "Adj Close": "35.328403",
+   "Volume": "719800"
+  },
+  {
+   "Date": "Oct 30 2025",
+   "Close": "35.439999",
+   "Adj Close": "35.140011",
+   "Volume": "446200"
+  },
+  {
+   "Date": "Oct 31 2025",
+   "Close": "35.73",
+   "Adj Close": "35.427559",
+   "Volume": "657000"
+  },
+  {
+   "Date": "Nov 03 2025",
+   "Close": "35.91",
+   "Adj Close": "35.606037",
+   "Volume": "601500"
+  },
+  {
+   "Date": "Nov 04 2025",
+   "Close": "35.369999",
+   "Adj Close": "35.070602",
+   "Volume": "478100"
+  },
+  {
+   "Date": "Nov 05 2025",
+   "Close": "35.66",
+   "Adj Close": "35.35815",
+   "Volume": "373800"
+  },
+  {
+   "Date": "Nov 06 2025",
+   "Close": "35.209999",
+   "Adj Close": "34.911961",
+   "Volume": "520900"
+  },
+  {
+   "Date": "Nov 07 2025",
+   "Close": "35.66",
+   "Adj Close": "35.35815",
+   "Volume": "469000"
+  },
+  {
+   "Date": "Nov 10 2025",
+   "Close": "35.950001",
+   "Adj Close": "35.645699",
+   "Volume": "484000"
+  },
+  {
+   "Date": "Nov 11 2025",
+   "Close": "36.150002",
+   "Adj Close": "35.844006",
+   "Volume": "466200"
+  },
+  {
+   "Date": "Nov 12 2025",
+   "Close": "36.16",
+   "Adj Close": "35.853916",
+   "Volume": "787700"
+  },
+  {
+   "Date": "Nov 13 2025",
+   "Close": "35.57",
+   "Adj Close": "35.268913",
+   "Volume": "717700"
+  },
+  {
+   "Date": "Nov 14 2025",
+   "Close": "35.48",
+   "Adj Close": "35.179672",
+   "Volume": "474000"
+  },
+  {
+   "Date": "Nov 17 2025",
+   "Close": "34.950001",
+   "Adj Close": "34.65416",
+   "Volume": "673100"
+  },
+  {
+   "Date": "Nov 18 2025",
+   "Close": "34.91",
+   "Adj Close": "34.614502",
+   "Volume": "980500"
+  },
+  {
+   "Date": "Nov 19 2025",
+   "Close": "34.869999",
+   "Adj Close": "34.574837",
+   "Volume": "717900"
+  },
+  {
+   "Date": "Nov 20 2025",
+   "Close": "34.330002",
+   "Adj Close": "34.03941",
+   "Volume": "528400"
+  },
+  {
+   "Date": "Nov 21 2025",
+   "Close": "35.060001",
+   "Adj Close": "34.763229",
+   "Volume": "385600"
+  },
+  {
+   "Date": "Nov 24 2025",
+   "Close": "35.349998",
+   "Adj Close": "35.050774",
+   "Volume": "546800"
+  },
+  {
+   "Date": "Nov 25 2025",
+   "Close": "35.950001",
+   "Adj Close": "35.645699",
+   "Volume": "944500"
+  },
+  {
+   "Date": "Nov 26 2025",
+   "Close": "36.130001",
+   "Adj Close": "35.824173",
+   "Volume": "734100"
+  },
+  {
+   "Date": "Nov 28 2025",
+   "Close": "36.41",
+   "Adj Close": "36.101803",
+   "Volume": "250800"
+  },
+  {
+   "Date": "Dec 01 2025",
+   "Close": "36.209999",
+   "Adj Close": "35.903496",
+   "Volume": "362000"
+  },
+  {
+   "Date": "Dec 02 2025",
+   "Close": "36.139999",
+   "Adj Close": "35.834087",
+   "Volume": "478900"
+  },
+  {
+   "Date": "Dec 03 2025",
+   "Close": "36.349998",
+   "Adj Close": "36.042309",
+   "Volume": "445200"
+  },
+  {
+   "Date": "Dec 04 2025",
+   "Close": "36.5",
+   "Adj Close": "36.19104",
+   "Volume": "1065700"
+  },
+  {
+   "Date": "Dec 05 2025",
+   "Close": "36.43",
+   "Adj Close": "36.121635",
+   "Volume": "374200"
+  },
+  {
+   "Date": "Dec 08 2025",
+   "Close": "36.380001",
+   "Adj Close": "36.072056",
+   "Volume": "703000"
+  },
+  {
+   "Date": "Dec 09 2025",
+   "Close": "36.400002",
+   "Adj Close": "36.091888",
+   "Volume": "576700"
+  },
+  {
+   "Date": "Dec 10 2025",
+   "Close": "36.77",
+   "Adj Close": "36.458755",
+   "Volume": "759100"
+  },
+  {
+   "Date": "Dec 11 2025",
+   "Close": "37.02",
+   "Adj Close": "36.706642",
+   "Volume": "438400"
+  },
+  {
+   "Date": "Dec 12 2025",
+   "Close": "36.669998",
+   "Adj Close": "36.3596",
+   "Volume": "717000"
+  },
+  {
+   "Date": "Dec 15 2025",
+   "Close": "36.59",
+   "Adj Close": "36.280281",
+   "Volume": "478800"
+  },
+  {
+   "Date": "Dec 16 2025",
+   "Close": "36.349998",
+   "Adj Close": "36.042309",
+   "Volume": "543900"
+  },
+  {
+   "Date": "Dec 17 2025",
+   "Close": "36.200001",
+   "Adj Close": "35.893585",
+   "Volume": "458400"
+  },
+  {
+   "Date": "Dec 18 2025",
+   "Close": "36.369999",
+   "Adj Close": "36.062138",
+   "Volume": "343700"
+  },
+  {
+   "Date": "Dec 19 2025",
+   "Close": "36.509998",
+   "Adj Close": "36.30677",
+   "Volume": "1604200"
+  },
+  {
+   "Date": "Dec 22 2025",
+   "Close": "36.830002",
+   "Adj Close": "36.624992",
+   "Volume": "846700"
+  },
+  {
+   "Date": "Dec 23 2025",
+   "Close": "36.779999",
+   "Adj Close": "36.575268",
+   "Volume": "885900"
+  },
+  {
+   "Date": "Dec 24 2025",
+   "Close": "36.889999",
+   "Adj Close": "36.684658",
+   "Volume": "423300"
+  },
+  {
+   "Date": "Dec 26 2025",
+   "Close": "36.900002",
+   "Adj Close": "36.694603",
+   "Volume": "333100"
+  },
+  {
+   "Date": "Dec 29 2025",
+   "Close": "36.740002",
+   "Adj Close": "36.535492",
+   "Volume": "463600"
+  },
+  {
+   "Date": "Dec 30 2025",
+   "Close": "36.689999",
+   "Adj Close": "36.485767",
+   "Volume": "487600"
+  },
+  {
+   "Date": "Dec 31 2025",
+   "Close": "36.380001",
+   "Adj Close": "36.177494",
+   "Volume": "498500"
+  },
+  {
+   "Date": "Jan 02 2026",
+   "Close": "36.630001",
+   "Adj Close": "36.426105",
+   "Volume": "920600"
+  },
+  {
+   "Date": "Jan 05 2026",
+   "Close": "37.080002",
+   "Adj Close": "36.8736",
+   "Volume": "1215000"
+  },
+  {
+   "Date": "Jan 06 2026",
+   "Close": "37.560001",
+   "Adj Close": "37.350929",
+   "Volume": "773500"
+  },
+  {
+   "Date": "Jan 07 2026",
+   "Close": "37.279999",
+   "Adj Close": "37.072483",
+   "Volume": "890000"
+  },
+  {
+   "Date": "Jan 08 2026",
+   "Close": "37.299999",
+   "Adj Close": "37.092373",
+   "Volume": "1015300"
+  },
+  {
+   "Date": "Jan 09 2026",
+   "Close": "37.470001",
+   "Adj Close": "37.261429",
+   "Volume": "952500"
+  },
+  {
+   "Date": "Jan 12 2026",
+   "Close": "37.490002",
+   "Adj Close": "37.281315",
+   "Volume": "599500"
+  },
+  {
+   "Date": "Jan 13 2026",
+   "Close": "37.560001",
+   "Adj Close": "37.350929",
+   "Volume": "614800"
+  },
+  {
+   "Date": "Jan 14 2026",
+   "Close": "37.540001",
+   "Adj Close": "37.331039",
+   "Volume": "683200"
+  },
+  {
+   "Date": "Jan 15 2026",
+   "Close": "37.73",
+   "Adj Close": "37.519978",
+   "Volume": "792400"
+  },
+  {
+   "Date": "Jan 16 2026",
+   "Close": "37.57",
+   "Adj Close": "37.36087",
+   "Volume": "994200"
+  },
+  {
+   "Date": "Jan 20 2026",
+   "Close": "36.98",
+   "Adj Close": "36.774155",
+   "Volume": "595900"
+  },
+  {
+   "Date": "Jan 21 2026",
+   "Close": "37.509998",
+   "Adj Close": "37.301205",
+   "Volume": "1873700"
+  },
+  {
+   "Date": "Jan 22 2026",
+   "Close": "37.709999",
+   "Adj Close": "37.500092",
+   "Volume": "1229800"
+  },
+  {
+   "Date": "Jan 23 2026",
+   "Close": "37.470001",
+   "Adj Close": "37.261429",
+   "Volume": "643900"
+  },
+  {
+   "Date": "Jan 26 2026",
+   "Close": "37.59",
+   "Adj Close": "37.38076",
+   "Volume": "389100"
+  },
+  {
+   "Date": "Jan 27 2026",
+   "Close": "37.459999",
+   "Adj Close": "37.251484",
+   "Volume": "1068900"
+  },
+  {
+   "Date": "Jan 28 2026",
+   "Close": "37.400002",
+   "Adj Close": "37.191818",
+   "Volume": "650900"
+  },
+  {
+   "Date": "Jan 29 2026",
+   "Close": "37.27",
+   "Adj Close": "37.062542",
+   "Volume": "989000"
+  },
+  {
+   "Date": "Jan 30 2026",
+   "Close": "36.810001",
+   "Adj Close": "36.605103",
+   "Volume": "788300"
+  },
+  {
+   "Date": "Feb 02 2026",
+   "Close": "37.049999",
+   "Adj Close": "36.843765",
+   "Volume": "828400"
+  },
+  {
+   "Date": "Feb 03 2026",
+   "Close": "36.889999",
+   "Adj Close": "36.684658",
+   "Volume": "796600"
+  },
+  {
+   "Date": "Feb 04 2026",
+   "Close": "36.98",
+   "Adj Close": "36.774155",
+   "Volume": "806000"
+  },
+  {
+   "Date": "Feb 05 2026",
+   "Close": "36.59",
+   "Adj Close": "36.386326",
+   "Volume": "1013900"
+  },
+  {
+   "Date": "Feb 06 2026",
+   "Close": "37.490002",
+   "Adj Close": "37.281315",
+   "Volume": "571800"
+  },
+  {
+   "Date": "Feb 09 2026",
+   "Close": "37.669998",
+   "Adj Close": "37.460312",
+   "Volume": "476300"
+  },
+  {
+   "Date": "Feb 10 2026",
+   "Close": "37.669998",
+   "Adj Close": "37.460312",
+   "Volume": "463600"
+  },
+  {
+   "Date": "Feb 11 2026",
+   "Close": "37.490002",
+   "Adj Close": "37.281315",
+   "Volume": "956000"
+  },
+  {
+   "Date": "Feb 12 2026",
+   "Close": "36.959999",
+   "Adj Close": "36.754265",
+   "Volume": "878300"
+  },
+  {
+   "Date": "Feb 13 2026",
+   "Close": "37.48",
+   "Adj Close": "37.27137",
+   "Volume": "672900"
+  },
+  {
+   "Date": "Feb 17 2026",
+   "Close": "37.41",
+   "Adj Close": "37.201763",
+   "Volume": "844900"
+  },
+  {
+   "Date": "Feb 18 2026",
+   "Close": "37.669998",
+   "Adj Close": "37.460312",
+   "Volume": "711300"
+  },
+  {
+   "Date": "Feb 19 2026",
+   "Close": "37.630001",
+   "Adj Close": "37.42054",
+   "Volume": "597400"
+  },
+  {
+   "Date": "Feb 20 2026",
+   "Close": "37.84",
+   "Adj Close": "37.629368",
+   "Volume": "749400"
+  },
+  {
+   "Date": "Feb 23 2026",
+   "Close": "37.150002",
+   "Adj Close": "36.943211",
+   "Volume": "487600"
+  },
+  {
+   "Date": "Feb 24 2026",
+   "Close": "37.709999",
+   "Adj Close": "37.500092",
+   "Volume": "520500"
+  },
+  {
+   "Date": "Feb 25 2026",
+   "Close": "37.919998",
+   "Adj Close": "37.70892",
+   "Volume": "1169100"
+  },
+  {
+   "Date": "Feb 26 2026",
+   "Close": "38.259998",
+   "Adj Close": "38.047028",
+   "Volume": "672600"
+  },
+  {
+   "Date": "Feb 27 2026",
+   "Close": "38.060001",
+   "Adj Close": "37.848148",
+   "Volume": "468500"
+  },
+  {
+   "Date": "Mar 02 2026",
+   "Close": "38.07",
+   "Adj Close": "37.858089",
+   "Volume": "817500"
+  },
+  {
+   "Date": "Mar 03 2026",
+   "Close": "37.529999",
+   "Adj Close": "37.321091",
+   "Volume": "739800"
+  },
+  {
+   "Date": "Mar 04 2026",
+   "Close": "37.66",
+   "Adj Close": "37.450371",
+   "Volume": "627200"
+  },
+  {
+   "Date": "Mar 05 2026",
+   "Close": "37.189999",
+   "Adj Close": "36.982986",
+   "Volume": "575500"
+  },
+  {
+   "Date": "Mar 06 2026",
+   "Close": "36.66",
+   "Adj Close": "36.455936",
+   "Volume": "11280300"
+  },
+  {
+   "Date": "Mar 09 2026",
+   "Close": "36.880001",
+   "Adj Close": "36.674713",
+   "Volume": "1064500"
+  },
+  {
+   "Date": "Mar 10 2026",
+   "Close": "36.619999",
+   "Adj Close": "36.416157",
+   "Volume": "966300"
+  },
+  {
+   "Date": "Mar 11 2026",
+   "Close": "36.549999",
+   "Adj Close": "36.346546",
+   "Volume": "794300"
+  },
+  {
+   "Date": "Mar 12 2026",
+   "Close": "35.880001",
+   "Adj Close": "35.680279",
+   "Volume": "922400"
+  },
+  {
+   "Date": "Mar 13 2026",
+   "Close": "35.779999",
+   "Adj Close": "35.580833",
+   "Volume": "677100"
+  },
+  {
+   "Date": "Mar 16 2026",
+   "Close": "36.09",
+   "Adj Close": "35.889111",
+   "Volume": "652600"
+  },
+  {
+   "Date": "Mar 17 2026",
+   "Close": "36.360001",
+   "Adj Close": "36.157608",
+   "Volume": "559100"
+  },
+  {
+   "Date": "Mar 18 2026",
+   "Close": "36.029999",
+   "Adj Close": "35.829445",
+   "Volume": "6682400"
+  },
+  {
+   "Date": "Mar 19 2026",
+   "Close": "36.080002",
+   "Adj Close": "35.879169",
+   "Volume": "876200"
+  },
+  {
+   "Date": "Mar 20 2026",
+   "Close": "35.32",
+   "Adj Close": "35.227867",
+   "Volume": "766800"
+  },
+  {
+   "Date": "Mar 23 2026",
+   "Close": "35.869999",
+   "Adj Close": "35.776432",
+   "Volume": "1104600"
+  },
+  {
+   "Date": "Mar 24 2026",
+   "Close": "36.029999",
+   "Adj Close": "35.936016",
+   "Volume": "935300"
+  },
+  {
+   "Date": "Mar 25 2026",
+   "Close": "36.23",
+   "Adj Close": "36.135494",
+   "Volume": "1090000"
+  },
+  {
+   "Date": "Mar 26 2026",
+   "Close": "35.73",
+   "Adj Close": "35.636799",
+   "Volume": "763400"
+  },
+  {
+   "Date": "Mar 27 2026",
+   "Close": "35.23",
+   "Adj Close": "35.138103",
+   "Volume": "747800"
+  },
+  {
+   "Date": "Mar 30 2026",
+   "Close": "34.970001",
+   "Adj Close": "34.878784",
+   "Volume": "1128800"
+  },
+  {
+   "Date": "Mar 31 2026",
+   "Close": "35.959999",
+   "Adj Close": "35.866199",
+   "Volume": "1315700"
+  },
+  {
+   "Date": "Apr 01 2026",
+   "Close": "36.32",
+   "Adj Close": "36.225258",
+   "Volume": "959700"
+  },
+  {
+   "Date": "Apr 02 2026",
+   "Close": "36.41",
+   "Adj Close": "36.315025",
+   "Volume": "1376700"
+  },
+  {
+   "Date": "Apr 06 2026",
+   "Close": "36.599998",
+   "Adj Close": "36.504528",
+   "Volume": "535200"
+  },
+  {
+   "Date": "Apr 07 2026",
+   "Close": "36.540001",
+   "Adj Close": "36.444687",
+   "Volume": "1183500"
+  },
+  {
+   "Date": "Apr 08 2026",
+   "Close": "37.470001",
+   "Adj Close": "37.372261",
+   "Volume": "1086500"
+  },
+  {
+   "Date": "Apr 09 2026",
+   "Close": "37.43",
+   "Adj Close": "37.332363",
+   "Volume": "936200"
+  },
+  {
+   "Date": "Apr 10 2026",
+   "Close": "37.169998",
+   "Adj Close": "37.07304",
+   "Volume": "933400"
+  },
+  {
+   "Date": "Apr 13 2026",
+   "Close": "37.639999",
+   "Adj Close": "37.541817",
+   "Volume": "641200"
+  },
+  {
+   "Date": "Apr 14 2026",
+   "Close": "37.82",
+   "Adj Close": "37.721348",
+   "Volume": "1084700"
+  },
+  {
+   "Date": "Apr 15 2026",
+   "Close": "37.84",
+   "Adj Close": "37.741295",
+   "Volume": "898800"
+  },
+  {
+   "Date": "Apr 16 2026",
+   "Close": "37.919998",
+   "Adj Close": "37.821083",
+   "Volume": "862700"
+  },
+  {
+   "Date": "Apr 17 2026",
+   "Close": "38.509998",
+   "Adj Close": "38.409546",
+   "Volume": "928400"
+  },
+  {
+   "Date": "Apr 20 2026",
+   "Close": "38.639999",
+   "Adj Close": "38.539207",
+   "Volume": "694900"
+  },
+  {
+   "Date": "Apr 21 2026",
+   "Close": "38.459999",
+   "Adj Close": "38.359676",
+   "Volume": "824600"
+  },
+  {
+   "Date": "Apr 22 2026",
+   "Close": "38.369999",
+   "Adj Close": "38.269913",
+   "Volume": "570800"
+  },
+  {
+   "Date": "Apr 23 2026",
+   "Close": "38.23",
+   "Adj Close": "38.130276",
+   "Volume": "536700"
+  },
+  {
+   "Date": "Apr 24 2026",
+   "Close": "38.240002",
+   "Adj Close": "38.140255",
+   "Volume": "514100"
+  },
+  {
+   "Date": "Apr 27 2026",
+   "Close": "38.34",
+   "Adj Close": "38.23999",
+   "Volume": "380400"
+  },
+  {
+   "Date": "Apr 28 2026",
+   "Close": "37.990002",
+   "Adj Close": "37.890907",
+   "Volume": "544300"
+  },
+  {
+   "Date": "Apr 29 2026",
+   "Close": "37.849998",
+   "Adj Close": "37.751266",
+   "Volume": "676600"
+  },
+  {
+   "Date": "Apr 30 2026",
+   "Close": "38.490002",
+   "Adj Close": "38.389603",
+   "Volume": "1088700"
+  },
+  {
+   "Date": "May 01 2026",
+   "Close": "38.5",
+   "Adj Close": "38.399574",
+   "Volume": "451500"
+  },
+  {
+   "Date": "May 04 2026",
+   "Close": "38.450001",
+   "Adj Close": "38.349705",
+   "Volume": "519200"
+  },
+  {
+   "Date": "May 05 2026",
+   "Close": "38.790001",
+   "Adj Close": "38.68882",
+   "Volume": "435300"
+  },
+  {
+   "Date": "May 06 2026",
+   "Close": "39.169998",
+   "Adj Close": "39.067825",
+   "Volume": "752100"
+  },
+  {
+   "Date": "May 07 2026",
+   "Close": "38.709999",
+   "Adj Close": "38.609024",
+   "Volume": "717800"
+  },
+  {
+   "Date": "May 08 2026",
+   "Close": "38.830002",
+   "Adj Close": "38.728714",
+   "Volume": "684800"
+  },
+  {
+   "Date": "May 11 2026",
+   "Close": "38.860001",
+   "Adj Close": "38.758636",
+   "Volume": "645200"
+  },
+  {
+   "Date": "May 12 2026",
+   "Close": "38.700001",
+   "Adj Close": "38.599052",
+   "Volume": "780300"
+  },
+  {
+   "Date": "May 13 2026",
+   "Close": "38.73",
+   "Adj Close": "38.628975",
+   "Volume": "691700"
+  },
+  {
+   "Date": "May 14 2026",
+   "Close": "38.93",
+   "Adj Close": "38.828453",
+   "Volume": "3721500"
+  },
+  {
+   "Date": "May 15 2026",
+   "Close": "38.369999",
+   "Adj Close": "38.269913",
+   "Volume": "897000"
+  },
+  {
+   "Date": "May 18 2026",
+   "Close": "38.360001",
+   "Adj Close": "38.259941",
+   "Volume": "826000"
+  },
+  {
+   "Date": "May 19 2026",
+   "Close": "38.150002",
+   "Adj Close": "38.050488",
+   "Volume": "790800"
+  },
+  {
+   "Date": "May 20 2026",
+   "Close": "38.630001",
+   "Adj Close": "38.529236",
+   "Volume": "644600"
+  },
+  {
+   "Date": "May 21 2026",
+   "Close": "38.759998",
+   "Adj Close": "38.658894",
+   "Volume": "1003600"
+  },
+  {
+   "Date": "May 22 2026",
+   "Close": "39.189999",
+   "Adj Close": "39.087772",
+   "Volume": "507100"
+  },
+  {
+   "Date": "May 26 2026",
+   "Close": "39.549999",
+   "Adj Close": "39.446835",
+   "Volume": "590300"
+  },
+  {
+   "Date": "May 27 2026",
+   "Close": "39.419998",
+   "Adj Close": "39.317173",
+   "Volume": "569400"
+  },
+  {
+   "Date": "May 28 2026",
+   "Close": "39.610001",
+   "Adj Close": "39.50668",
+   "Volume": "910800"
+  },
+  {
+   "Date": "May 29 2026",
+   "Close": "39.689999",
+   "Adj Close": "39.586468",
+   "Volume": "545900"
+  },
+  {
+   "Date": "Jun 01 2026",
+   "Close": "39.91",
+   "Adj Close": "39.805897",
+   "Volume": "925900"
+  },
+  {
+   "Date": "Jun 02 2026",
+   "Close": "40.119999",
+   "Adj Close": "40.015347",
+   "Volume": "584800"
+  },
+  {
+   "Date": "Jun 03 2026",
+   "Close": "40.040001",
+   "Adj Close": "39.935558",
+   "Volume": "381400"
+  },
+  {
+   "Date": "Jun 04 2026",
+   "Close": "40.130001",
+   "Adj Close": "40.025322",
+   "Volume": "555600"
+  },
+  {
+   "Date": "Jun 05 2026",
+   "Close": "39.32",
+   "Adj Close": "39.217434",
+   "Volume": "967900"
+  },
+  {
+   "Date": "Jun 08 2026",
+   "Close": "39.25",
+   "Adj Close": "39.147617",
+   "Volume": "535600"
+  },
+  {
+   "Date": "Jun 09 2026",
+   "Close": "39.459999",
+   "Adj Close": "39.357067",
+   "Volume": "1562900"
+  },
+  {
+   "Date": "Jun 10 2026",
+   "Close": "38.849998",
+   "Adj Close": "38.748657",
+   "Volume": "627900"
+  },
+  {
+   "Date": "Jun 11 2026",
+   "Close": "39.709999",
+   "Adj Close": "39.606415",
+   "Volume": "884400"
+  },
+  {
+   "Date": "Jun 12 2026",
+   "Close": "40.139999",
+   "Adj Close": "40.035294",
+   "Volume": "550600"
+  },
+  {
+   "Date": "Jun 15 2026",
+   "Close": "40.57",
+   "Adj Close": "40.464172",
+   "Volume": "751200"
+  },
+  {
+   "Date": "Jun 16 2026",
+   "Close": "40.369999",
+   "Adj Close": "40.264694",
+   "Volume": "862100"
+  },
+  {
+   "Date": "Jun 17 2026",
+   "Close": "39.869999",
+   "Adj Close": "39.765999",
+   "Volume": "1101900"
+  },
+  {
+   "Date": "Jun 18 2026",
+   "Close": "40.110001",
+   "Adj Close": "40.110001",
+   "Volume": "719200"
+  },
+  {
+   "Date": "Jun 22 2026",
+   "Close": "40.32",
+   "Adj Close": "40.32",
+   "Volume": "906700"
+  },
+  {
+   "Date": "Jun 23 2026",
+   "Close": "39.91",
+   "Adj Close": "39.91",
+   "Volume": "618200"
+  },
+  {
+   "Date": "Jun 24 2026",
+   "Close": "40.110001",
+   "Adj Close": "40.110001",
+   "Volume": "645600"
+  },
+  {
+   "Date": "Jun 25 2026",
+   "Close": "40.529999",
+   "Adj Close": "40.529999",
+   "Volume": "1327200"
+  },
+  {
+   "Date": "Jun 26 2026",
+   "Close": "40.34",
+   "Adj Close": "40.34",
+   "Volume": "827200"
+  },
+  {
+   "Date": "Jun 29 2026",
+   "Close": "40.5",
+   "Adj Close": "40.5",
+   "Volume": "853500"
+  },
+  {
+   "Date": "Jun 30 2026",
+   "Close": "40.580002",
+   "Adj Close": "40.580002",
+   "Volume": "1167500"
+  },
+  {
+   "Date": "Jul 01 2026",
+   "Close": "40.439999",
+   "Adj Close": "40.439999",
+   "Volume": "1045000"
+  },
+  {
+   "Date": "Jul 02 2026",
+   "Close": "40.380001",
+   "Adj Close": "40.380001",
+   "Volume": "1080300"
+  },
+  {
+   "Date": "Jul 06 2026",
+   "Close": "40.599998",
+   "Adj Close": "40.599998",
+   "Volume": "780200"
+  },
+  {
+   "Date": "Jul 07 2026",
+   "Close": "40.380001",
+   "Adj Close": "40.380001",
+   "Volume": "579000"
+  },
+  {
+   "Date": "Jul 08 2026",
+   "Close": "40.110001",
+   "Adj Close": "40.110001",
+   "Volume": "873600"
+  },
+  {
+   "Date": "Jul 09 2026",
+   "Close": "40.540001",
+   "Adj Close": "40.540001",
+   "Volume": "497100"
+  },
+  {
+   "Date": "Jul 10 2026",
+   "Close": "40.580002",
+   "Adj Close": "40.580002",
+   "Volume": "687800"
+  },
+  {
+   "Date": "Jul 13 2026",
+   "Close": "40.5",
+   "Adj Close": "40.5",
+   "Volume": "1348900"
+  },
+  {
+   "Date": "Jul 14 2026",
+   "Close": "40.57",
+   "Adj Close": "40.57",
+   "Volume": "530200"
+  },
+  {
+   "Date": "Jul 15 2026",
+   "Close": "40.529999",
+   "Adj Close": "40.529999",
+   "Volume": "1411500"
+  },
+  {
+   "Date": "Jul 16 2026",
+   "Close": "40.610001",
+   "Adj Close": "40.610001",
+   "Volume": "745800"
+  },
+  {
+   "Date": "Jul 17 2026",
+   "Close": "40.419998",
+   "Adj Close": "40.419998",
+   "Volume": "678000"
+  },
+  {
+   "Date": "Jul 20 2026",
+   "Close": "40.27",
+   "Adj Close": "40.27",
+   "Volume": "1022100"
+  },
+  {
+   "Date": "Jul 21 2026",
+   "Close": "40.529999",
+   "Adj Close": "40.529999",
+   "Volume": "2635200"
+  },
+  {
+   "Date": "Jul 22 2026",
+   "Close": "40.529999",
+   "Adj Close": "40.529999",
+   "Volume": "498400"
+  },
+  {
+   "Date": "Jul 23 2026",
+   "Close": "40.380001",
+   "Adj Close": "40.380001",
+   "Volume": "996100"
+  },
+  {
+   "Date": "Jul 24 2026",
+   "Close": "40.57",
+   "Adj Close": "40.57",
+   "Volume": "839800"
+  },
+  {
+   "Date": "Jul 27 2026",
+   "Close": "40.880001",
+   "Adj Close": "40.880001",
+   "Volume": "823900"
+  },
+  {
+   "Date": "Jul 28 2026",
+   "Close": "41.23",
+   "Adj Close": "41.23",
+   "Volume": "508100"
+  },
+  {
+   "Date": "Jul 29 2026",
+   "Close": "40.889999",
+   "Adj Close": "40.889999",
+   "Volume": "948100"
+  },
+  {
+   "Date": "Jul 30 2026",
+   "Close": "41.07",
+   "Adj Close": "41.07",
+   "Volume": "637100"
+  },
+  {
+   "Date": "Jul 31 2026",
+   "Close": "41.110001",
+   "Adj Close": "41.110001",
+   "Volume": "551200"
+  },
+  {
+   "Date": "Aug 03 2026",
+   "Close": "41.52",
+   "Adj Close": "41.52",
+   "Volume": "835500"
+  },
+  {
+   "Date": "Aug 04 2026",
+   "Close": "42.169998",
+   "Adj Close": "42.169998",
+   "Volume": "2950200"
+  },
+  {
+   "Date": "Aug 05 2026",
+   "Close": "42.009998",
+   "Adj Close": "42.009998",
+   "Volume": "793000"
+  },
+  {
+   "Date": "Aug 06 2026",
+   "Close": "41.759998",
+   "Adj Close": "41.759998",
+   "Volume": "1384300"
+  },
+  {
+   "Date": "Aug 07 2026",
+   "Close": "42.290001",
+   "Adj Close": "42.290001",
+   "Volume": "551200"
+  },
+  {
+   "Date": "Aug 10 2026",
+   "Close": "42.369999",
+   "Adj Close": "42.369999",
+   "Volume": "647400"
+  },
+  {
+   "Date": "Aug 11 2026",
+   "Close": "42.43",
+   "Adj Close": "42.43",
+   "Volume": "588000"
+  },
+  {
+   "Date": "Aug 12 2026",
+   "Close": "42.529999",
+   "Adj Close": "42.529999",
+   "Volume": "1184400"
+  },
+  {
+   "Date": "Aug 13 2026",
+   "Close": "42.860001",
+   "Adj Close": "42.860001",
+   "Volume": "913300"
+  },
+  {
+   "Date": "Aug 14 2026",
+   "Close": "42.959999",
+   "Adj Close": "42.959999",
+   "Volume": "616300"
+  },
+  {
+   "Date": "Aug 17 2026",
+   "Close": "42.720001",
+   "Adj Close": "42.720001",
+   "Volume": "489500"
+  },
+  {
+   "Date": "Aug 18 2026",
+   "Close": "42.27",
+   "Adj Close": "42.27",
+   "Volume": "524600"
+  },
+  {
+   "Date": "Aug 19 2026",
+   "Close": "42.450001",
+   "Adj Close": "42.450001",
+   "Volume": "1055700"
+  },
+  {
+   "Date": "Aug 20 2026",
+   "Close": "42.09",
+   "Adj Close": "42.09",
+   "Volume": "852100"
+  },
+  {
+   "Date": "Aug 21 2026",
+   "Close": "42.389999",
+   "Adj Close": "42.389999",
+   "Volume": "708900"
+  },
+  {
+   "Date": "Aug 24 2026",
+   "Close": "42.279999",
+   "Adj Close": "42.279999",
+   "Volume": "492700"
+  },
+  {
+   "Date": "Aug 25 2026",
+   "Close": "42.259998",
+   "Adj Close": "42.259998",
+   "Volume": "839600"
+  }
+ ]
+}

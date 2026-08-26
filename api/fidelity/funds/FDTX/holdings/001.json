@@ -1,0 +1,377 @@
+{
+ "ticker": "FDTX",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 40,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "BE SEMICONDUCTOR INDUSTRIES NV",
+   "Ticker": "-",
+   "Identifier": "NL0012866412",
+   "Weight": "2.2481624998",
+   "Market Value": "5796879.7",
+   "Shares Held": "17475",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COHERENT CORP",
+   "Ticker": "-",
+   "Identifier": "19247G107",
+   "Weight": "3.7470404523",
+   "Market Value": "9661731.63",
+   "Shares Held": "26729",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SYNOPSYS INC",
+   "Ticker": "-",
+   "Identifier": "871607107",
+   "Weight": "2.1498383115",
+   "Market Value": "5543351.1",
+   "Shares Held": "11655",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MAGNITE INC",
+   "Ticker": "-",
+   "Identifier": "55955D100",
+   "Weight": "0.9319874728",
+   "Market Value": "2403126.67",
+   "Shares Held": "167699",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CLOUDFLARE INC",
+   "Ticker": "-",
+   "Identifier": "18915M107",
+   "Weight": "2.0485091785",
+   "Market Value": "5282074.26",
+   "Shares Held": "21843",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "APPLE INC",
+   "Ticker": "-",
+   "Identifier": "037833100",
+   "Weight": "1.1873664993",
+   "Market Value": "3061620.66",
+   "Shares Held": "9811",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AMAZON.COM INC",
+   "Ticker": "-",
+   "Identifier": "023135106",
+   "Weight": "4.0051831589",
+   "Market Value": "10327351.76",
+   "Shares Held": "38159",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SAP SE",
+   "Ticker": "-",
+   "Identifier": "DE0007164600",
+   "Weight": "1.2228949831",
+   "Market Value": "3153230.74",
+   "Shares Held": "17412",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MICROSOFT CORP",
+   "Ticker": "-",
+   "Identifier": "594918104",
+   "Weight": "3.7894592958",
+   "Market Value": "9771108.48",
+   "Shares Held": "21702",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ALPHABET INC",
+   "Ticker": "-",
+   "Identifier": "02079K107",
+   "Weight": "3.6609451257",
+   "Market Value": "9439735.11",
+   "Shares Held": "25077",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ADVANTEST CORP",
+   "Ticker": "-",
+   "Identifier": "JP3122400009",
+   "Weight": "1.5561893841",
+   "Market Value": "4012629.27",
+   "Shares Held": "24420",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MEDIATEK INC",
+   "Ticker": "-",
+   "Identifier": "TW0002454006",
+   "Weight": "4.6079774924",
+   "Market Value": "11881654.99",
+   "Shares Held": "86601",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "META PLATFORMS INC",
+   "Ticker": "-",
+   "Identifier": "30303M102",
+   "Weight": "2.8396141119",
+   "Market Value": "7321935.76",
+   "Shares Held": "11576",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "INTUIT INC",
+   "Ticker": "-",
+   "Identifier": "461202103",
+   "Weight": "0.5019564674",
+   "Market Value": "1294293.12",
+   "Shares Held": "3904",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DATADOG INC",
+   "Ticker": "-",
+   "Identifier": "23804L103",
+   "Weight": "2.4361871307",
+   "Market Value": "6281700.6",
+   "Shares Held": "25396",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PALANTIR TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "69608A108",
+   "Weight": "2.8691447445",
+   "Market Value": "7398080.4",
+   "Shares Held": "47260",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CROWDSTRIKE HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "22788C105",
+   "Weight": "1.23718752",
+   "Market Value": "3190084",
+   "Shares Held": "4364",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NXP SEMICONDUCTORS NV",
+   "Ticker": "-",
+   "Identifier": "NL0009538784",
+   "Weight": "1.433458351",
+   "Market Value": "3696167.7",
+   "Shares Held": "11502",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WESTERN DIGITAL CORP",
+   "Ticker": "-",
+   "Identifier": "958102105",
+   "Weight": "3.9977285402",
+   "Market Value": "10308130.05",
+   "Shares Held": "19405",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MONOLITHIC POWER SYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "609839105",
+   "Weight": "1.3022914376",
+   "Market Value": "3357954.24",
+   "Shares Held": "2144",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CELESTICA INC",
+   "Ticker": "-",
+   "Identifier": "15101Q207",
+   "Weight": "1.0719142421",
+   "Market Value": "2763927.39",
+   "Shares Held": "7149",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MARVELL TECHNOLOGY INC",
+   "Ticker": "-",
+   "Identifier": "573874104",
+   "Weight": "8.0594478146",
+   "Market Value": "20781260",
+   "Shares Held": "101372",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GLOBAL-E ONLINE LTD",
+   "Ticker": "-",
+   "Identifier": "IL0011741688",
+   "Weight": "0.9084590235",
+   "Market Value": "2342458.64",
+   "Shares Held": "76451",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MONTAGE TECHNOLOGY CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100007DX6",
+   "Weight": "0.0920058014",
+   "Market Value": "237236.66",
+   "Shares Held": "4648",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SILICON MOTION TECH CORP",
+   "Ticker": "-",
+   "Identifier": "82706C108",
+   "Weight": "1.7502372261",
+   "Market Value": "4512981",
+   "Shares Held": "16300",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+   "Ticker": "-",
+   "Identifier": "IE00BKVD2N49",
+   "Weight": "4.0422740879",
+   "Market Value": "10422990.6",
+   "Shares Held": "11847",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BROADCOM INC",
+   "Ticker": "-",
+   "Identifier": "11135F101",
+   "Weight": "0.7873280739",
+   "Market Value": "2030122.88",
+   "Shares Held": "4544",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "0.2685564835",
+   "Market Value": "692472.02",
+   "Shares Held": "692333.553",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "TAIWAN SEMICONDUCTOR MFG CO LTD",
+   "Ticker": "-",
+   "Identifier": "874039100",
+   "Weight": "5.9978720344",
+   "Market Value": "15465493.55",
+   "Shares Held": "36959",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PALO ALTO NETWORKS INC",
+   "Ticker": "-",
+   "Identifier": "697435105",
+   "Weight": "3.6705504122",
+   "Market Value": "9464502.31",
+   "Shares Held": "33599",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ARISTA NETWORKS INC",
+   "Ticker": "-",
+   "Identifier": "040413205",
+   "Weight": "1.7875381884",
+   "Market Value": "4609161.41",
+   "Shares Held": "28903",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TWILIO INC",
+   "Ticker": "-",
+   "Identifier": "90138F102",
+   "Weight": "2.0862112311",
+   "Market Value": "5379288.88",
+   "Shares Held": "28217",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "IBM CORPORATION",
+   "Ticker": "-",
+   "Identifier": "459200101",
+   "Weight": "1.0947643039",
+   "Market Value": "2822846.2",
+   "Shares Held": "9479",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CORNING INC",
+   "Ticker": "-",
+   "Identifier": "219350105",
+   "Weight": "1.5857931019",
+   "Market Value": "4088962.36",
+   "Shares Held": "22571",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BIZLINK HOLDING INC",
+   "Ticker": "-",
+   "Identifier": "KYG114741062",
+   "Weight": "0.514809115",
+   "Market Value": "1327433.63",
+   "Shares Held": "20000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MICRON TECHNOLOGY INC",
+   "Ticker": "-",
+   "Identifier": "595112103",
+   "Weight": "9.3616794344",
+   "Market Value": "24139060",
+   "Shares Held": "24860",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHOPIFY INC",
+   "Ticker": "-",
+   "Identifier": "82509L107",
+   "Weight": "2.8883143905",
+   "Market Value": "7447509.27",
+   "Shares Held": "62737",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NVIDIA CORP",
+   "Ticker": "-",
+   "Identifier": "67066G104",
+   "Weight": "4.6223218463",
+   "Market Value": "11918641.86",
+   "Shares Held": "56449",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AIRBNB INC",
+   "Ticker": "-",
+   "Identifier": "009066101",
+   "Weight": "0.665852881",
+   "Market Value": "1716899.49",
+   "Shares Held": "12879",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DISCO CORP",
+   "Ticker": "-",
+   "Identifier": "JP3548600000",
+   "Weight": "0.8647721583",
+   "Market Value": "2229812.2",
+   "Shares Held": "5456",
+   "Asset Category": "EC"
+  }
+ ]
+}

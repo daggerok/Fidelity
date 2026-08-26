@@ -1,0 +1,311 @@
+{
+ "ticker": "FIDU",
+ "name": "Fidelity MSCI Industrials Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIDU",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063878/000141036826063878-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063878/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FIDU?period1=0&period2=1787720820&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$94.51",
+  "value": 94.51,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$2,073.53 M",
+  "value": 2073525980.1599996,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": -2.41,
+   "mo1Text": "-2.41%",
+   "qtd": -3.82,
+   "qtdText": "-3.82%",
+   "ytd": 15.19,
+   "ytdText": "15.19%",
+   "yr1": 17.54,
+   "yr1Text": "17.54%",
+   "yr3": 20.28,
+   "yr3Text": "20.28%",
+   "yr5": 12.94,
+   "yr5Text": "12.94%",
+   "yr10": 13.67,
+   "yr10Text": "13.67%",
+   "sinceInception": 12.43,
+   "sinceInceptionText": "12.43%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.074"
+   ],
+   [
+    "12/27/2013",
+    "0.01"
+   ],
+   [
+    "03/21/2014",
+    "0.115"
+   ],
+   [
+    "06/20/2014",
+    "0.111"
+   ],
+   [
+    "09/19/2014",
+    "0.086"
+   ],
+   [
+    "12/19/2014",
+    "0.134"
+   ],
+   [
+    "03/20/2015",
+    "0.112"
+   ],
+   [
+    "06/19/2015",
+    "0.137"
+   ],
+   [
+    "09/18/2015",
+    "0.164"
+   ],
+   [
+    "12/18/2015",
+    "0.117"
+   ],
+   [
+    "12/29/2015",
+    "0.009"
+   ],
+   [
+    "06/17/2016",
+    "0.144"
+   ],
+   [
+    "09/16/2016",
+    "0.146"
+   ],
+   [
+    "12/16/2016",
+    "0.135"
+   ],
+   [
+    "03/17/2017",
+    "0.155"
+   ],
+   [
+    "06/16/2017",
+    "0.13"
+   ],
+   [
+    "09/15/2017",
+    "0.204"
+   ],
+   [
+    "12/15/2017",
+    "0.132"
+   ],
+   [
+    "03/16/2018",
+    "0.156"
+   ],
+   [
+    "06/15/2018",
+    "0.161"
+   ],
+   [
+    "09/21/2018",
+    "0.159"
+   ],
+   [
+    "12/21/2018",
+    "0.177"
+   ],
+   [
+    "03/15/2019",
+    "0.186"
+   ],
+   [
+    "06/21/2019",
+    "0.162"
+   ],
+   [
+    "09/20/2019",
+    "0.186"
+   ],
+   [
+    "12/20/2019",
+    "0.17"
+   ],
+   [
+    "12/30/2019",
+    "0.025"
+   ],
+   [
+    "03/20/2020",
+    "0.185"
+   ],
+   [
+    "06/19/2020",
+    "0.135"
+   ],
+   [
+    "09/18/2020",
+    "0.144"
+   ],
+   [
+    "12/18/2020",
+    "0.138"
+   ],
+   [
+    "03/19/2021",
+    "0.154"
+   ],
+   [
+    "06/18/2021",
+    "0.153"
+   ],
+   [
+    "09/17/2021",
+    "0.156"
+   ],
+   [
+    "12/30/2021",
+    "0.011"
+   ],
+   [
+    "03/18/2022",
+    "0.169"
+   ],
+   [
+    "06/17/2022",
+    "0.192"
+   ],
+   [
+    "09/16/2022",
+    "0.194"
+   ],
+   [
+    "12/16/2022",
+    "0.198"
+   ],
+   [
+    "03/17/2023",
+    "0.186"
+   ],
+   [
+    "06/16/2023",
+    "0.211"
+   ],
+   [
+    "09/15/2023",
+    "0.194"
+   ],
+   [
+    "12/15/2023",
+    "0.277"
+   ],
+   [
+    "03/15/2024",
+    "0.187"
+   ],
+   [
+    "06/21/2024",
+    "0.209"
+   ],
+   [
+    "09/20/2024",
+    "0.22"
+   ],
+   [
+    "12/20/2024",
+    "0.384"
+   ],
+   [
+    "03/21/2025",
+    "0.209"
+   ],
+   [
+    "06/20/2025",
+    "0.212"
+   ],
+   [
+    "09/19/2025",
+    "0.28"
+   ],
+   [
+    "12/19/2025",
+    "0.143"
+   ],
+   [
+    "03/20/2026",
+    "0.265"
+   ],
+   [
+    "06/18/2026",
+    "0.213"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 362,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042576",
+  "seriesName": "Fidelity MSCI Industrials Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063878"
+ }
+}

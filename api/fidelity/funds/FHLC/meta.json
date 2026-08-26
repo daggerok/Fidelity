@@ -1,0 +1,303 @@
+{
+ "ticker": "FHLC",
+ "name": "Fidelity MSCI Health Care Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FHLC",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063876/000141036826063876-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063876/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FHLC?period1=0&period2=1787720817&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$85.01",
+  "value": 85.01,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$2,850.67 M",
+  "value": 2850670535.96,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 7.83,
+   "mo1Text": "7.83%",
+   "qtd": 9.41,
+   "qtdText": "9.41%",
+   "ytd": 15.24,
+   "ytdText": "15.24%",
+   "yr1": 31.74,
+   "yr1Text": "31.74%",
+   "yr3": 12.11,
+   "yr3Text": "12.11%",
+   "yr5": 6.18,
+   "yr5Text": "6.18%",
+   "yr10": 10.95,
+   "yr10Text": "10.95%",
+   "sinceInception": 11.48,
+   "sinceInceptionText": "11.48%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.046"
+   ],
+   [
+    "12/27/2013",
+    "0.008"
+   ],
+   [
+    "03/21/2014",
+    "0.069"
+   ],
+   [
+    "06/20/2014",
+    "0.091"
+   ],
+   [
+    "09/19/2014",
+    "0.09"
+   ],
+   [
+    "12/19/2014",
+    "0.088"
+   ],
+   [
+    "12/29/2014",
+    "0.002"
+   ],
+   [
+    "03/20/2015",
+    "0.228"
+   ],
+   [
+    "06/19/2015",
+    "0.272"
+   ],
+   [
+    "09/18/2015",
+    "0.111"
+   ],
+   [
+    "12/18/2015",
+    "0.105"
+   ],
+   [
+    "06/17/2016",
+    "0.111"
+   ],
+   [
+    "09/16/2016",
+    "0.121"
+   ],
+   [
+    "12/16/2016",
+    "0.117"
+   ],
+   [
+    "03/17/2017",
+    "0.125"
+   ],
+   [
+    "06/16/2017",
+    "0.137"
+   ],
+   [
+    "09/15/2017",
+    "0.132"
+   ],
+   [
+    "12/15/2017",
+    "0.158"
+   ],
+   [
+    "03/16/2018",
+    "0.134"
+   ],
+   [
+    "06/15/2018",
+    "0.146"
+   ],
+   [
+    "09/21/2018",
+    "0.142"
+   ],
+   [
+    "12/21/2018",
+    "0.147"
+   ],
+   [
+    "12/28/2018",
+    "0.316"
+   ],
+   [
+    "03/15/2019",
+    "0.159"
+   ],
+   [
+    "06/21/2019",
+    "0.164"
+   ],
+   [
+    "09/20/2019",
+    "0.169"
+   ],
+   [
+    "12/20/2019",
+    "0.093"
+   ],
+   [
+    "03/20/2020",
+    "0.254"
+   ],
+   [
+    "06/19/2020",
+    "0.173"
+   ],
+   [
+    "09/18/2020",
+    "0.176"
+   ],
+   [
+    "12/18/2020",
+    "0.234"
+   ],
+   [
+    "03/19/2021",
+    "0.201"
+   ],
+   [
+    "06/18/2021",
+    "0.183"
+   ],
+   [
+    "09/17/2021",
+    "0.19"
+   ],
+   [
+    "03/18/2022",
+    "0.218"
+   ],
+   [
+    "09/16/2022",
+    "0.222"
+   ],
+   [
+    "12/16/2022",
+    "0.194"
+   ],
+   [
+    "03/17/2023",
+    "0.232"
+   ],
+   [
+    "06/16/2023",
+    "0.229"
+   ],
+   [
+    "09/15/2023",
+    "0.219"
+   ],
+   [
+    "12/15/2023",
+    "0.224"
+   ],
+   [
+    "03/15/2024",
+    "0.238"
+   ],
+   [
+    "06/21/2024",
+    "0.242"
+   ],
+   [
+    "09/20/2024",
+    "0.25"
+   ],
+   [
+    "12/20/2024",
+    "0.258"
+   ],
+   [
+    "03/21/2025",
+    "0.252"
+   ],
+   [
+    "06/20/2025",
+    "0.257"
+   ],
+   [
+    "09/19/2025",
+    "0.256"
+   ],
+   [
+    "12/19/2025",
+    "0.272"
+   ],
+   [
+    "03/20/2026",
+    "0.229"
+   ],
+   [
+    "06/18/2026",
+    "0.263"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 340,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042575",
+  "seriesName": "Fidelity MSCI Health Care Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063876"
+ }
+}

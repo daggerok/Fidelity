@@ -1,0 +1,467 @@
+{
+ "ticker": "FBOT",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 50,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "TERADYNE INC",
+   "Ticker": "-",
+   "Identifier": "880770102",
+   "Weight": "5.8730457631",
+   "Market Value": "12405756.33",
+   "Shares Held": "33143",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SYNOPSYS INC",
+   "Ticker": "-",
+   "Identifier": "871607107",
+   "Weight": "1.4604180474",
+   "Market Value": "3084871.32",
+   "Shares Held": "6486",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RECRUIT HOLDINGS CO LTD",
+   "Ticker": "-",
+   "Identifier": "JP3970300004",
+   "Weight": "1.1839059387",
+   "Market Value": "2500789.06",
+   "Shares Held": "37681",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AMAZON.COM INC",
+   "Ticker": "-",
+   "Identifier": "023135106",
+   "Weight": "2.2006661052",
+   "Market Value": "4648512.64",
+   "Shares Held": "17176",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SMC CORP",
+   "Ticker": "-",
+   "Identifier": "JP3162600005",
+   "Weight": "2.3336677065",
+   "Market Value": "4929454.68",
+   "Shares Held": "11360",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MICROSOFT CORP",
+   "Ticker": "-",
+   "Identifier": "594918104",
+   "Weight": "1.0015892602",
+   "Market Value": "2115677.76",
+   "Shares Held": "4699",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ALPHABET INC",
+   "Ticker": "-",
+   "Identifier": "02079K107",
+   "Weight": "3.11897609",
+   "Market Value": "6588277.86",
+   "Shares Held": "17502",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AXON ENTERPRISE INC",
+   "Ticker": "-",
+   "Identifier": "05464C101",
+   "Weight": "3.3980280592",
+   "Market Value": "7177725.12",
+   "Shares Held": "15996",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SYMBOTIC INC",
+   "Ticker": "-",
+   "Identifier": "87151X101",
+   "Weight": "1.134580437",
+   "Market Value": "2396597.78",
+   "Shares Held": "51623",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DEERE and CO",
+   "Ticker": "-",
+   "Identifier": "244199105",
+   "Weight": "4.2695325478",
+   "Market Value": "9018622.12",
+   "Shares Held": "16634",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PALANTIR TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "69608A108",
+   "Weight": "3.1353639706",
+   "Market Value": "6622894.32",
+   "Shares Held": "42308",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "OCTAVE INTELLIGENCE PLC",
+   "Ticker": "-",
+   "Identifier": "SE0028329433",
+   "Weight": "0.2714170396",
+   "Market Value": "573319.84",
+   "Shares Held": "33631",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AUTODESK INC",
+   "Ticker": "-",
+   "Identifier": "052769106",
+   "Weight": "0.8459272885",
+   "Market Value": "1786869.75",
+   "Shares Held": "7725",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BYD CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100000296",
+   "Weight": "1.3684151725",
+   "Market Value": "2890531.74",
+   "Shares Held": "248114",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ROCKET LAB CORP",
+   "Ticker": "-",
+   "Identifier": "773121108",
+   "Weight": "2.1058198648",
+   "Market Value": "4448166.96",
+   "Shares Held": "31002",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DASSAULT SYSTEMES SA",
+   "Ticker": "-",
+   "Identifier": "FR0014003TT8",
+   "Weight": "1.5222503098",
+   "Market Value": "3215480.89",
+   "Shares Held": "146597",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HESAI GROUP",
+   "Ticker": "-",
+   "Identifier": "428050108",
+   "Weight": "0.5200021393",
+   "Market Value": "1098411.3",
+   "Shares Held": "58117",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EMERSON ELECTRIC CO",
+   "Ticker": "-",
+   "Identifier": "291011104",
+   "Weight": "2.36906111",
+   "Market Value": "5004216.9",
+   "Shares Held": "34795",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MANHATTAN ASSOCS INC",
+   "Ticker": "-",
+   "Identifier": "562750109",
+   "Weight": "0.5646620949",
+   "Market Value": "1192747.45",
+   "Shares Held": "7949",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TESLA INC",
+   "Ticker": "-",
+   "Identifier": "88160R101",
+   "Weight": "1.83037018",
+   "Market Value": "3866328.88",
+   "Shares Held": "8872",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "FANUC CORPORATION",
+   "Ticker": "-",
+   "Identifier": "JP3802400006",
+   "Weight": "2.0061780885",
+   "Market Value": "4237691.57",
+   "Shares Held": "85519",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MISUMI GROUP INC",
+   "Ticker": "-",
+   "Identifier": "JP3885400006",
+   "Weight": "2.2315646657",
+   "Market Value": "4713780.31",
+   "Shares Held": "198977",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ESTUN AUTOMATION CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100001X35",
+   "Weight": "0.6514170545",
+   "Market Value": "1376001.75",
+   "Shares Held": "335872",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RENISHAW PLC",
+   "Ticker": "-",
+   "Identifier": "GB0007323586",
+   "Weight": "2.1375150847",
+   "Market Value": "4515117.43",
+   "Shares Held": "63259",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HEXAGON AB",
+   "Ticker": "-",
+   "Identifier": "SE0015961909",
+   "Weight": "1.4729940305",
+   "Market Value": "3111435.83",
+   "Shares Held": "336317",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KEYENCE CORP",
+   "Ticker": "-",
+   "Identifier": "JP3236200006",
+   "Weight": "2.6420061894",
+   "Market Value": "5580764.45",
+   "Shares Held": "11095",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KARDEX HOLDING AG",
+   "Ticker": "-",
+   "Identifier": "CH0100837282",
+   "Weight": "1.3659075183",
+   "Market Value": "2885234.77",
+   "Shares Held": "8341",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PONY AI INC",
+   "Ticker": "-",
+   "Identifier": "732908108",
+   "Weight": "0.672871874",
+   "Market Value": "1421321.21",
+   "Shares Held": "141707",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CATERPILLAR INC",
+   "Ticker": "-",
+   "Identifier": "149123101",
+   "Weight": "1.7046187703",
+   "Market Value": "3600701.57",
+   "Shares Held": "4111",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHENZHEN INOVANCE TECHNOLOGY CO LTD",
+   "Ticker": "-",
+   "Identifier": "CNE100000V46",
+   "Weight": "2.0939297434",
+   "Market Value": "4423051.21",
+   "Shares Held": "404644",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BETA TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "086921103",
+   "Weight": "0.1241582284",
+   "Market Value": "262262",
+   "Shares Held": "14300",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "INTUITIVE SURGICAL INC",
+   "Ticker": "-",
+   "Identifier": "46120E602",
+   "Weight": "0.8061306096",
+   "Market Value": "1702806.4",
+   "Shares Held": "4010",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TAIWAN SEMICONDUCTOR MFG CO LTD",
+   "Ticker": "-",
+   "Identifier": "TW0002330008",
+   "Weight": "6.6424070796",
+   "Market Value": "14030894.19",
+   "Shares Held": "187162",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KOMATSU LTD",
+   "Ticker": "-",
+   "Identifier": "JP3304200003",
+   "Weight": "1.6285378194",
+   "Market Value": "3439994.2",
+   "Shares Held": "83301",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SANDVIK AB",
+   "Ticker": "-",
+   "Identifier": "SE0000667891",
+   "Weight": "1.881296504",
+   "Market Value": "3973901.61",
+   "Shares Held": "97454",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "1.0247002675",
+   "Market Value": "2164495.62",
+   "Shares Held": "2164062.81",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "TELEDYNE TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "879360105",
+   "Weight": "0.9985611831",
+   "Market Value": "2109281.49",
+   "Shares Held": "3403",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SIEMENS AG",
+   "Ticker": "-",
+   "Identifier": "DE0007236101",
+   "Weight": "3.1469163119",
+   "Market Value": "6647296.57",
+   "Shares Held": "21123",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AIRTAC INTERNATIONAL GROUP",
+   "Ticker": "-",
+   "Identifier": "KYG014081064",
+   "Weight": "2.5305364649",
+   "Market Value": "5345304.64",
+   "Shares Held": "119941",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PTC INC",
+   "Ticker": "-",
+   "Identifier": "69370C100",
+   "Weight": "1.423408502",
+   "Market Value": "3006695.29",
+   "Shares Held": "21673",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "THK CO LTD",
+   "Ticker": "-",
+   "Identifier": "JP3539250005",
+   "Weight": "3.5563533811",
+   "Market Value": "7512158.98",
+   "Shares Held": "156600",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NVIDIA CORP",
+   "Ticker": "-",
+   "Identifier": "67066G104",
+   "Weight": "4.5991943975",
+   "Market Value": "9714973.68",
+   "Shares Held": "46012",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ATS CORP",
+   "Ticker": "-",
+   "Identifier": "00217Y104",
+   "Weight": "1.7756406789",
+   "Market Value": "3750722.62",
+   "Shares Held": "121298",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DAIFUKU CO LTD",
+   "Ticker": "-",
+   "Identifier": "JP3497400006",
+   "Weight": "3.3480947946",
+   "Market Value": "7072250.05",
+   "Shares Held": "154064",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HIWIN TECHNOLOGIES CORP",
+   "Ticker": "-",
+   "Identifier": "TW0002049004",
+   "Weight": "1.8155068406",
+   "Market Value": "3834932.74",
+   "Shares Held": "309693",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AMETEK INC NEW",
+   "Ticker": "-",
+   "Identifier": "031100100",
+   "Weight": "1.4888653987",
+   "Market Value": "3144961.25",
+   "Shares Held": "13925",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NEMETSCHEK SE",
+   "Ticker": "-",
+   "Identifier": "DE0006452907",
+   "Weight": "0.4486790786",
+   "Market Value": "947754.12",
+   "Shares Held": "13148",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ROCKWELL AUTOMATION INC",
+   "Ticker": "-",
+   "Identifier": "773903109",
+   "Weight": "1.7956380776",
+   "Market Value": "3792963.54",
+   "Shares Held": "8409",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EPIROC AB",
+   "Ticker": "-",
+   "Identifier": "SE0015658109",
+   "Weight": "1.6234866168",
+   "Market Value": "3429324.44",
+   "Shares Held": "115265",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UBER TECHNOLOGIES INC",
+   "Ticker": "-",
+   "Identifier": "90353T100",
+   "Weight": "1.6869771454",
+   "Market Value": "3563436.8",
+   "Shares Held": "50617",
+   "Asset Category": "EC"
+  }
+ ]
+}

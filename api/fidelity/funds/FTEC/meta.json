@@ -1,0 +1,303 @@
+{
+ "ticker": "FTEC",
+ "name": "Fidelity MSCI Information Technology Index ETF",
+ "category": "Sector",
+ "source": {
+  "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FTEC",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063885/000141036826063885-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063885/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FTEC?period1=0&period2=1787720853&interval=1d&events=div%7Csplit",
+  "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
+ },
+ "expenseRatio": {
+  "display": "0.084%",
+  "value": 0.084
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "Aug 25 2026"
+ },
+ "marketPrice": {
+  "display": "$280.41",
+  "value": 280.41,
+  "asOfDate": "Aug 25 2026"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null
+ },
+ "aum": {
+  "display": "$17,890.31 M",
+  "value": 17890310483.539993,
+  "asOfDate": "Apr 30 2026",
+  "source": "sum of reported N-PORT position values"
+ },
+ "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
+  "monthEnd": {
+   "asOfDate": "Aug 25 2026",
+   "mo1": 3.66,
+   "mo1Text": "3.66%",
+   "qtd": 0.15,
+   "qtdText": "0.15%",
+   "ytd": 25.07,
+   "ytdText": "25.07%",
+   "yr1": 36.02,
+   "yr1Text": "36.02%",
+   "yr3": 31.24,
+   "yr3Text": "31.24%",
+   "yr5": 18.48,
+   "yr5Text": "18.48%",
+   "yr10": 23.95,
+   "yr10Text": "23.95%",
+   "sinceInception": 21.81,
+   "sinceInceptionText": "21.81%"
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "null": null
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "12/20/2013",
+    "0.049"
+   ],
+   [
+    "03/21/2014",
+    "0.077"
+   ],
+   [
+    "06/20/2014",
+    "0.07"
+   ],
+   [
+    "09/19/2014",
+    "0.09"
+   ],
+   [
+    "12/19/2014",
+    "0.11"
+   ],
+   [
+    "03/20/2015",
+    "0.099"
+   ],
+   [
+    "06/19/2015",
+    "0.092"
+   ],
+   [
+    "09/18/2015",
+    "0.127"
+   ],
+   [
+    "12/18/2015",
+    "0.098"
+   ],
+   [
+    "06/17/2016",
+    "0.117"
+   ],
+   [
+    "09/16/2016",
+    "0.108"
+   ],
+   [
+    "12/16/2016",
+    "0.114"
+   ],
+   [
+    "12/28/2016",
+    "0.002"
+   ],
+   [
+    "03/17/2017",
+    "0.101"
+   ],
+   [
+    "06/16/2017",
+    "0.122"
+   ],
+   [
+    "09/15/2017",
+    "0.123"
+   ],
+   [
+    "12/15/2017",
+    "0.134"
+   ],
+   [
+    "03/16/2018",
+    "0.119"
+   ],
+   [
+    "06/15/2018",
+    "0.142"
+   ],
+   [
+    "09/21/2018",
+    "0.141"
+   ],
+   [
+    "12/21/2018",
+    "0.189"
+   ],
+   [
+    "03/15/2019",
+    "0.179"
+   ],
+   [
+    "06/21/2019",
+    "0.194"
+   ],
+   [
+    "09/20/2019",
+    "0.185"
+   ],
+   [
+    "12/20/2019",
+    "0.191"
+   ],
+   [
+    "03/20/2020",
+    "0.279"
+   ],
+   [
+    "06/19/2020",
+    "0.196"
+   ],
+   [
+    "09/18/2020",
+    "0.189"
+   ],
+   [
+    "12/18/2020",
+    "0.2"
+   ],
+   [
+    "03/19/2021",
+    "0.198"
+   ],
+   [
+    "06/18/2021",
+    "0.198"
+   ],
+   [
+    "09/17/2021",
+    "0.196"
+   ],
+   [
+    "12/17/2021",
+    "0.257"
+   ],
+   [
+    "03/18/2022",
+    "0.209"
+   ],
+   [
+    "06/17/2022",
+    "0.215"
+   ],
+   [
+    "09/16/2022",
+    "0.219"
+   ],
+   [
+    "12/16/2022",
+    "0.233"
+   ],
+   [
+    "03/17/2023",
+    "0.232"
+   ],
+   [
+    "06/16/2023",
+    "0.22"
+   ],
+   [
+    "09/15/2023",
+    "0.223"
+   ],
+   [
+    "12/15/2023",
+    "0.433"
+   ],
+   [
+    "03/15/2024",
+    "0.236"
+   ],
+   [
+    "06/21/2024",
+    "0.232"
+   ],
+   [
+    "09/20/2024",
+    "0.225"
+   ],
+   [
+    "12/20/2024",
+    "0.212"
+   ],
+   [
+    "03/21/2025",
+    "0.23"
+   ],
+   [
+    "06/20/2025",
+    "0.234"
+   ],
+   [
+    "09/19/2025",
+    "0.225"
+   ],
+   [
+    "12/19/2025",
+    "0.267"
+   ],
+   [
+    "03/20/2026",
+    "0.221"
+   ],
+   [
+    "06/18/2026",
+    "0.289"
+   ]
+  ]
+ },
+ "holdings": {
+  "pages": [
+   "holdings/001.json",
+   "holdings/002.json"
+  ],
+  "pageSize": 250,
+  "totalRows": 285,
+  "asOf": "Apr 30 2026"
+ },
+ "history": {
+  "pages": [
+   "history/001.json",
+   "history/002.json",
+   "history/003.json",
+   "history/004.json"
+  ],
+  "pageSize": 1000,
+  "totalRows": 3227,
+  "asOf": "Aug 25 2026"
+ },
+ "seed": {
+  "seriesId": "S000042577",
+  "seriesName": "Fidelity MSCI Information Technology Index ETF",
+  "trustCik": "0000945908",
+  "trustName": "Fidelity Covington Trust",
+  "accession": "0001410368-26-063885"
+ }
+}

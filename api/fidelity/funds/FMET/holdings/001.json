@@ -1,0 +1,494 @@
+{
+ "ticker": "FMET",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 53,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Asset Category"
+ ],
+ "rows": [
+  {
+   "Name": "DIGITAL REALTY TRUST INC",
+   "Ticker": "-",
+   "Identifier": "253868103",
+   "Weight": "3.5765303912",
+   "Market Value": "1574557.44",
+   "Shares Held": "8768",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EQUINIX INC",
+   "Ticker": "-",
+   "Identifier": "29444U700",
+   "Weight": "4.6644438983",
+   "Market Value": "2053508.3",
+   "Shares Held": "1970",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SAKURA INTERNET INC",
+   "Ticker": "-",
+   "Identifier": "JP3317300006",
+   "Weight": "0.4998883742",
+   "Market Value": "220074.45",
+   "Shares Held": "12100",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NEXON CO LTD",
+   "Ticker": "-",
+   "Identifier": "JP3758190007",
+   "Weight": "1.2953749808",
+   "Market Value": "570285.19",
+   "Shares Held": "43200",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PLAYTIKA HOLDING CORP",
+   "Ticker": "-",
+   "Identifier": "72815L107",
+   "Weight": "0.4448396407",
+   "Market Value": "195839.4",
+   "Shares Held": "52645",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "APPLE INC",
+   "Ticker": "-",
+   "Identifier": "037833100",
+   "Weight": "4.5305422587",
+   "Market Value": "1994558.48",
+   "Shares Held": "6893",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ADVANCED MICRO DEVICES INC",
+   "Ticker": "-",
+   "Identifier": "007903107",
+   "Weight": "5.409985745",
+   "Market Value": "2381731",
+   "Shares Held": "4100",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NAGARRO SE",
+   "Ticker": "-",
+   "Identifier": "DE000A3H2200",
+   "Weight": "0.8300925292",
+   "Market Value": "365445.9",
+   "Shares Held": "4279",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MICROSOFT CORP",
+   "Ticker": "-",
+   "Identifier": "594918104",
+   "Weight": "4.2466511993",
+   "Market Value": "1869576.24",
+   "Shares Held": "5012",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NETMARBLE CORP",
+   "Ticker": "-",
+   "Identifier": "KR7251270005",
+   "Weight": "0.521090236",
+   "Market Value": "229408.51",
+   "Shares Held": "9516",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WIX.COM LTD",
+   "Ticker": "-",
+   "Identifier": "IL0011301780",
+   "Weight": "0.7529252443",
+   "Market Value": "331473.22",
+   "Shares Held": "7306",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BAIDU INC",
+   "Ticker": "-",
+   "Identifier": "KYG070341048",
+   "Weight": "2.5269545283",
+   "Market Value": "1112484.62",
+   "Shares Held": "79600",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EPAM SYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "29414B104",
+   "Weight": "1.0846822315",
+   "Market Value": "477528.3",
+   "Shares Held": "6018",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ADOBE INC",
+   "Ticker": "-",
+   "Identifier": "00724F101",
+   "Weight": "3.8540746525",
+   "Market Value": "1696745.52",
+   "Shares Held": "8276",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "META PLATFORMS INC",
+   "Ticker": "-",
+   "Identifier": "30303M102",
+   "Weight": "4.373282287",
+   "Market Value": "1925325.22",
+   "Shares Held": "3418",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SKYWORKS SOLUTIONS INC",
+   "Ticker": "-",
+   "Identifier": "83088M102",
+   "Weight": "1.5711528027",
+   "Market Value": "691695.6",
+   "Shares Held": "10202",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UNITY SOFTWARE INC",
+   "Ticker": "-",
+   "Identifier": "91332U101",
+   "Weight": "1.6599551875",
+   "Market Value": "730790.6",
+   "Shares Held": "25570",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AMBARELLA INC",
+   "Ticker": "-",
+   "Identifier": "KYG037AX1015",
+   "Weight": "1.2502226423",
+   "Market Value": "550407",
+   "Shares Held": "6415",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ELECTRONIC ARTS INC",
+   "Ticker": "-",
+   "Identifier": "285512109",
+   "Weight": "3.3300292357",
+   "Market Value": "1466036",
+   "Shares Held": "7150",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TURTLE BEACH CORP",
+   "Ticker": "-",
+   "Identifier": "900450206",
+   "Weight": "0.3616673885",
+   "Market Value": "159223.05",
+   "Shares Held": "12789",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MONOLITHIC POWER SYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "609839105",
+   "Weight": "3.5732782182",
+   "Market Value": "1573125.68",
+   "Shares Held": "1138",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MODERN TIMES GRP MTG AB",
+   "Ticker": "-",
+   "Identifier": "SE0018012494",
+   "Weight": "0.666038874",
+   "Market Value": "293221.74",
+   "Shares Held": "23185",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DASSAULT SYSTEMES SA",
+   "Ticker": "-",
+   "Identifier": "FR0014003TT8",
+   "Weight": "1.786325081",
+   "Market Value": "786424.59",
+   "Shares Held": "38611",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SUPER MICRO COMPUTER INC",
+   "Ticker": "-",
+   "Identifier": "86800U302",
+   "Weight": "1.5426912465",
+   "Market Value": "679165.48",
+   "Shares Held": "23156",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "BENTLEY SYSTEMS INC",
+   "Ticker": "-",
+   "Identifier": "08265T208",
+   "Weight": "1.162950784",
+   "Market Value": "511985.81",
+   "Shares Held": "17129",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GRINDR INC",
+   "Ticker": "-",
+   "Identifier": "39854F101",
+   "Weight": "0.7060195044",
+   "Market Value": "310823.1",
+   "Shares Held": "21630",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COWELL E HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "KYG248141163",
+   "Weight": "0.5504106506",
+   "Market Value": "242316.74",
+   "Shares Held": "81000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NCSOFT CORPORATION",
+   "Ticker": "-",
+   "Identifier": "KR7036570000",
+   "Weight": "0.8951105484",
+   "Market Value": "394069.9",
+   "Shares Held": "2371",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NEWBORN TOWN INC",
+   "Ticker": "-",
+   "Identifier": "KYG6464H1011",
+   "Weight": "0.5598358783",
+   "Market Value": "246466.17",
+   "Shares Held": "256000",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CHICAGO MERCANTILE EXCH INC",
+   "Ticker": "-",
+   "Identifier": "-",
+   "Weight": "0.0021676459",
+   "Market Value": "954.3",
+   "Shares Held": "2",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "NAVER CORP",
+   "Ticker": "-",
+   "Identifier": "KR7035420009",
+   "Weight": "1.8479874853",
+   "Market Value": "813571.29",
+   "Shares Held": "6334",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PEARLABYSS CORP",
+   "Ticker": "-",
+   "Identifier": "KR7263750002",
+   "Weight": "0.5731390639",
+   "Market Value": "252322.86",
+   "Shares Held": "10799",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WEIBO CORP",
+   "Ticker": "-",
+   "Identifier": "KYG9515T1085",
+   "Weight": "0.5776928011",
+   "Market Value": "254327.63",
+   "Shares Held": "35300",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VNET GROUP INC",
+   "Ticker": "-",
+   "Identifier": "90138A103",
+   "Weight": "0.6760217658",
+   "Market Value": "297616.68",
+   "Shares Held": "37017",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KRAFTON INC",
+   "Ticker": "-",
+   "Identifier": "KR7259960003",
+   "Weight": "1.1746802627",
+   "Market Value": "517149.68",
+   "Shares Held": "3395",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TAKE-TWO INTERACTV SOFTWR INC",
+   "Ticker": "-",
+   "Identifier": "874054109",
+   "Weight": "3.4949159229",
+   "Market Value": "1538626.9",
+   "Shares Held": "6155",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "QUALCOMM INC",
+   "Ticker": "-",
+   "Identifier": "747525103",
+   "Weight": "3.7121935411",
+   "Market Value": "1634282.76",
+   "Shares Held": "8844",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "0.1517556776",
+   "Market Value": "66810.01",
+   "Shares Held": "66796.649",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "SNAP INC",
+   "Ticker": "-",
+   "Identifier": "83304A106",
+   "Weight": "1.0656269819",
+   "Market Value": "469139.28",
+   "Shares Held": "105662",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "HELLO GROUP INC",
+   "Ticker": "-",
+   "Identifier": "423403104",
+   "Weight": "0.5653801046",
+   "Market Value": "248907",
+   "Shares Held": "42915",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CIRRUS LOGIC INC.",
+   "Ticker": "-",
+   "Identifier": "172755100",
+   "Weight": "1.3866262399",
+   "Market Value": "610458.3",
+   "Shares Held": "4110",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PINTEREST INC",
+   "Ticker": "-",
+   "Identifier": "72352L106",
+   "Weight": "1.8425311643",
+   "Market Value": "811169.16",
+   "Shares Held": "38572",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SHIFT INC",
+   "Ticker": "-",
+   "Identifier": "JP3355400007",
+   "Weight": "0.607579125",
+   "Market Value": "267485",
+   "Shares Held": "64500",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PTC INC",
+   "Ticker": "-",
+   "Identifier": "69370C100",
+   "Weight": "1.7331280799",
+   "Market Value": "763004.76",
+   "Shares Held": "6716",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A303",
+   "Weight": "3.8658226435",
+   "Market Value": "1701917.54",
+   "Shares Held": "1701747.368",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "ROBLOX CORP",
+   "Ticker": "-",
+   "Identifier": "771049103",
+   "Weight": "3.3683082311",
+   "Market Value": "1482888.22",
+   "Shares Held": "27269",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NVIDIA CORP",
+   "Ticker": "-",
+   "Identifier": "67066G104",
+   "Weight": "4.4590472191",
+   "Market Value": "1963082.99",
+   "Shares Held": "9811",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SUNNY OPTICAL TECHNOLOGY (GROUP) COMPANY LIMITED",
+   "Ticker": "-",
+   "Identifier": "KYG8586D1097",
+   "Weight": "1.0919232545",
+   "Market Value": "480716.14",
+   "Shares Held": "61800",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UBISOFT ENTERTAINMENT SA",
+   "Ticker": "-",
+   "Identifier": "FR0000054470",
+   "Weight": "0.5789850978",
+   "Market Value": "254896.56",
+   "Shares Held": "41471",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COREWEAVE INC",
+   "Ticker": "-",
+   "Identifier": "21873S108",
+   "Weight": "2.3740526538",
+   "Market Value": "1045170",
+   "Shares Held": "10500",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "REDDIT INC",
+   "Ticker": "-",
+   "Identifier": "75734B100",
+   "Weight": "2.3293973768",
+   "Market Value": "1025510.64",
+   "Shares Held": "5908",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NETEASE INC",
+   "Ticker": "-",
+   "Identifier": "KYG6427A1022",
+   "Weight": "3.3357736904",
+   "Market Value": "1468564.98",
+   "Shares Held": "56900",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ALPHABET INC",
+   "Ticker": "-",
+   "Identifier": "02079K305",
+   "Weight": "4.6789184485",
+   "Market Value": "2059880.68",
+   "Shares Held": "5764",
+   "Asset Category": "EC"
+  }
+ ]
+}
