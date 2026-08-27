@@ -596,10 +596,11 @@ export class TickerResolver {
     if (known) return known;
     const norm = normalizeHoldingName(name);
     if (!norm || !this.search || this.missed.has(norm)) return '-';
+    const search = this.search; // narrowed to non-null; closures cannot see `this` narrowing
     const inflight = this.inFlight.get(norm) ?? (async () => {
       let symbol: string | null = null;
       try {
-        symbol = await this.search(name);
+        symbol = await search(name);
       } catch {
         symbol = null; // offline/throttled: keep "-" instead of failing the fund
       }

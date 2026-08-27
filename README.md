@@ -127,7 +127,7 @@ The header toolbar includes the same integrated drag-and-drop upload as `daggero
 - `scripts/fidelity-funds.ts` — the verified seed: ticker ↔ SEC seriesId ↔ trust CIK map with categories, accessions, inceptions, exchange names and expense ratios.
 - `scripts/update-data.test.ts` — `bun test` suite: range parsers, N-PORT fixtures (equity, N/A-CUSIP fallback, empty body), chart fixtures (null closes, adjusted closes, dividend ordering), price-return derivations incl. young-fund nulls, quarter anchoring, catalog metric derivations.
 - `api/fidelity/**` — the generated static feed: `index.json`, `funds/{TICKER}/meta.json`, paginated `holdings/` + `history/` pages, `update-state.json`.
-- Verification before every publish: `bunx tsc --noEmit` (updater + inline app), `bun test`, `node --check` on the transpiled inline script, jsdom e2e against the real feed.
+- Verification before every publish — Bun only, no tsconfig (same as daggerok/iShares and daggerok/SPDR): `bun install --frozen-lockfile`, `bun test`, the inline `bunx tsc --noEmit --target es2022 --module esnext --moduleResolution bundler --types bun,node --skipLibCheck scripts/update-data.ts scripts/update-data.test.ts` type-check, `node --check` on the transpiled inline script, jsdom e2e against the real feed.
 
 ## TypeScript
 
