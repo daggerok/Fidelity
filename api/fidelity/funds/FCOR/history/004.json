@@ -1,0 +1,20 @@
+{
+ "ticker": "FCOR",
+ "page": 4,
+ "pageSize": 1000,
+ "totalRows": 3001,
+ "headers": [
+  "Date",
+  "Close",
+  "Adj Close",
+  "Volume"
+ ],
+ "rows": [
+  {
+   "Date": "Sep 16 2026",
+   "Close": "45.66",
+   "Adj Close": "45.66",
+   "Volume": "51800"
+  }
+ ]
+}

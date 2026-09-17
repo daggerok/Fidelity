@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FELC",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005398/000003540226005398-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005398/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FELC?period1=0&period2=1787724545&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FELC?period1=0&period2=1789632792&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Aug 25 2026"
+  "asOfDate": "Sep 16 2026"
  },
  "marketPrice": {
-  "display": "$43.44",
-  "value": 43.44,
-  "asOfDate": "Aug 25 2026"
+  "display": "$43.00",
+  "value": 43,
+  "asOfDate": "Sep 16 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Aug 25 2026",
-   "mo1": 3.58,
-   "mo1Text": "3.58%",
-   "qtd": 3.7,
-   "qtdText": "3.70%",
-   "ytd": 14.36,
-   "ytdText": "14.36%",
-   "yr1": 21.66,
-   "yr1Text": "21.66%",
+   "asOfDate": "Sep 16 2026",
+   "mo1": -2.23,
+   "mo1Text": "-2.23%",
+   "qtd": 2.65,
+   "qtdText": "2.65%",
+   "ytd": 13.2,
+   "ytdText": "13.20%",
+   "yr1": 17.56,
+   "yr1Text": "17.56%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 23.02,
-   "sinceInceptionText": "23.02%"
+   "sinceInception": 22.04,
+   "sinceInceptionText": "22.04%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -127,8 +127,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 692,
-  "asOf": "Aug 25 2026"
+  "totalRows": 707,
+  "asOf": "Sep 16 2026"
  },
  "seed": {
   "seriesId": "S000081804",

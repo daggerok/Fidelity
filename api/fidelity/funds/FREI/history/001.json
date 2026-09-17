@@ -2,7 +2,7 @@
  "ticker": "FREI",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 47,
+ "totalRows": 62,
  "headers": [
   "Date",
   "Close",
@@ -291,6 +291,96 @@
    "Close": "25.01",
    "Adj Close": "25.01",
    "Volume": "4700"
+  },
+  {
+   "Date": "Aug 26 2026",
+   "Close": "25",
+   "Adj Close": "25",
+   "Volume": "21200"
+  },
+  {
+   "Date": "Aug 27 2026",
+   "Close": "24.950001",
+   "Adj Close": "24.950001",
+   "Volume": "7400"
+  },
+  {
+   "Date": "Aug 28 2026",
+   "Close": "24.91",
+   "Adj Close": "24.91",
+   "Volume": "9200"
+  },
+  {
+   "Date": "Aug 31 2026",
+   "Close": "24.860001",
+   "Adj Close": "24.860001",
+   "Volume": "14700"
+  },
+  {
+   "Date": "Sep 01 2026",
+   "Close": "24.780001",
+   "Adj Close": "24.780001",
+   "Volume": "12300"
+  },
+  {
+   "Date": "Sep 02 2026",
+   "Close": "24.73",
+   "Adj Close": "24.73",
+   "Volume": "18900"
+  },
+  {
+   "Date": "Sep 03 2026",
+   "Close": "24.790001",
+   "Adj Close": "24.790001",
+   "Volume": "7000"
+  },
+  {
+   "Date": "Sep 04 2026",
+   "Close": "24.77",
+   "Adj Close": "24.77",
+   "Volume": "9200"
+  },
+  {
+   "Date": "Sep 08 2026",
+   "Close": "24.75",
+   "Adj Close": "24.75",
+   "Volume": "4500"
+  },
+  {
+   "Date": "Sep 09 2026",
+   "Close": "24.67",
+   "Adj Close": "24.67",
+   "Volume": "12600"
+  },
+  {
+   "Date": "Sep 10 2026",
+   "Close": "24.52",
+   "Adj Close": "24.52",
+   "Volume": "11600"
+  },
+  {
+   "Date": "Sep 11 2026",
+   "Close": "24.540001",
+   "Adj Close": "24.540001",
+   "Volume": "5300"
+  },
+  {
+   "Date": "Sep 14 2026",
+   "Close": "24.540001",
+   "Adj Close": "24.540001",
+   "Volume": "12200"
+  },
+  {
+   "Date": "Sep 15 2026",
+   "Close": "24.49",
+   "Adj Close": "24.49",
+   "Volume": "4700"
+  },
+  {
+   "Date": "Sep 16 2026",
+   "Close": "24.49",
+   "Adj Close": "24.49",
+   "Volume": "18500"
   }
  ]
 }
