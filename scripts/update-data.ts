@@ -7,6 +7,7 @@
 // JSON API under ./api/fidelity, following the daggerok/iShares and
 // daggerok/SPDR repository design (no dependencies, Bun only).
 
+/// <reference types="bun" />
 import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
 import { FIDELITY_FUNDS, FIDELITY_TRUSTS } from './fidelity-funds';
 import { HELD_TICKERS } from './held-tickers';
