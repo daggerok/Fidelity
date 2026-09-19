@@ -1039,6 +1039,17 @@ function fundFilterReasons(
 // Deterministic writers (iShares/SPDR-style)
 // ---------------------------------------------------------------------------
 
+export function samePublishedContent(previous: string, value: unknown): boolean {
+  const withoutRunTimestamp = (item: unknown): unknown => {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) return item;
+    const { generatedAt, savedAt, ...content } = item as Record<string, unknown>;
+    return content;
+  };
+  try {
+    return JSON.stringify(withoutRunTimestamp(JSON.parse(previous))) === JSON.stringify(withoutRunTimestamp(value));
+  } catch { return false; }
+}
+
 async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
   const next = `${JSON.stringify(value, null, 1)}\n`;
   let previous: string | null = null;
@@ -1047,7 +1058,7 @@ async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
   } catch {
     // First write.
   }
-  if (previous === next) return false;
+  if (previous === next || (previous !== null && samePublishedContent(previous, value))) return false;
   await writeFile(file, next, 'utf8');
   return true;
 }
