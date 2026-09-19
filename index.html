@@ -86,14 +86,53 @@
      */
     #table-scroll{overscroll-behavior:contain}
 
+    /* Pinned catalog columns (Use + Ticker). Sticky is applied directly to
+       the th/td, never to a nested wrapper - a nested wrapper's containing
+       block is its own (non-sticky) parent cell, so it would stop pinning
+       the moment that parent cell scrolls out of view. */
+    #table-scroll table{min-width:max-content;border-collapse:separate;border-spacing:0;isolation:isolate}
+    #table-scroll tbody{position:relative;z-index:0}
+    #table-scroll tbody tr{position:relative;z-index:0}
+    #table-scroll .catalog-sticky-col{position:sticky;background:#fff;background-clip:padding-box}
+    #table-scroll thead .catalog-sticky-col{top:0;z-index:30;background:#f8fafc}
+    #table-scroll tbody .catalog-sticky-col{z-index:20}
+    #table-scroll .catalog-sticky-use{left:0;width:5rem;min-width:5rem}
+    #table-scroll .catalog-sticky-ticker{left:5rem;width:6rem;min-width:6rem;box-shadow:4px 0 6px -6px rgba(15,23,42,.7)}
+    .dark #table-scroll .catalog-sticky-col{background:#172033}
+    .dark #table-scroll thead .catalog-sticky-col{background:#0f172a}
+    #table-scroll tbody tr:hover .catalog-sticky-col{background:#f8fafc}
+    #table-scroll tbody tr.selected-row .catalog-sticky-col{background:#eff6ff}
+    .dark #table-scroll tbody tr:hover .catalog-sticky-col{background:#1f2a3d}
+    .dark #table-scroll tbody tr.selected-row .catalog-sticky-col{background:#19274e}
+
+    /* Pinned Watchlist Ticker column. Same sticky-on-the-cell shape, colors
+       and z-index stack as the catalog pin, with its own explicit
+       header-background rule (the catalog block originally shipped without
+       one and the pinned header cell mismatched the rest of the header row). */
+    #table-scroll .watchlist-sticky-col{position:sticky;background:#fff;background-clip:padding-box}
+    #table-scroll thead .watchlist-sticky-col{top:0;z-index:30;background:#f8fafc}
+    #table-scroll tbody .watchlist-sticky-col{z-index:20}
+    #table-scroll .watchlist-sticky-ticker{left:0;width:7rem;min-width:7rem;box-shadow:4px 0 6px -6px rgba(15,23,42,.7)}
+    .dark #table-scroll .watchlist-sticky-col{background:#172033}
+    .dark #table-scroll thead .watchlist-sticky-col{background:#0f172a}
+    #table-scroll tbody tr:hover .watchlist-sticky-col{background:#f8fafc}
+    .dark #table-scroll tbody tr:hover .watchlist-sticky-col{background:#1f2a3d}
+
     /* Detail navigation expands into place after an ETF is selected. */
     main.space-y-6 > #selected-tabs-panel{max-height:0;margin-top:0;overflow:hidden;opacity:0;transform:translateY(-10px);padding-top:0;padding-bottom:0;border-color:transparent;transition:max-height .32s ease,margin-top .32s ease,padding .32s ease,opacity .22s ease,transform .32s ease,border-color .22s ease}
     main.space-y-6 > #selected-tabs-panel.is-visible{max-height:8rem;margin-top:1.5rem;padding-top:1rem;padding-bottom:1rem;opacity:1;transform:translateY(0);border-color:rgb(226 232 240)}
     .dark main.space-y-6 > #selected-tabs-panel.is-visible{border-color:rgb(51 65 85)}
 
+    /* Blacklist manager uses the same expand/collapse contract as the detail
+       tabs panel, but its max-height is measured from JS (scrollHeight) since
+       the chip list is unbounded — no fixed rem value can cap it. */
+    main.space-y-6 > #blacklist-panel{max-height:0;margin-top:0;overflow:hidden;opacity:0;transform:translateY(-10px);padding-top:0;padding-bottom:0;border-color:transparent;transition:max-height .32s ease,margin-top .32s ease,padding .32s ease,opacity .22s ease,transform .32s ease,border-color .22s ease}
+    main.space-y-6 > #blacklist-panel.is-visible{margin-top:1.5rem;padding-top:1rem;padding-bottom:1rem;opacity:1;transform:translateY(0);border-color:rgb(226 232 240)}
+    .dark main.space-y-6 > #blacklist-panel.is-visible{border-color:rgb(51 65 85)}
+
     @keyframes tableRefresh{from{opacity:.32;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
     #table-body.table-content-enter{animation:tableRefresh .22s ease-out}
-    @media (prefers-reduced-motion:reduce){#table-body.table-content-enter{animation:none}main.space-y-6 > #selected-tabs-panel{transition:none}}
+    @media (prefers-reduced-motion:reduce){#table-body.table-content-enter{animation:none}main.space-y-6 > #selected-tabs-panel{transition:none}main.space-y-6 > #blacklist-panel{transition:none}}
   </style>
 </head>
 <body class="min-h-screen font-sans bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
@@ -166,7 +205,7 @@
       </div>
 
       <!-- Blacklist manager: blacklisted ETFs are hidden from All ETFs and stored in localStorage. -->
-      <div id="blacklist-panel" class="hidden bg-white dark:bg-slate-800/80 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm backdrop-blur">
+      <div id="blacklist-panel" class="bg-white dark:bg-slate-800/80 px-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm backdrop-blur">
         <div class="flex flex-col sm:flex-row sm:items-center gap-2.5">
           <input type="text" id="blacklist-input" placeholder="Add ETF tickers to blacklist (e.g. SPY, XLK)" class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 w-full sm:w-80 focus:outline-none focus:border-blue-500 text-sm placeholder-slate-400 dark:placeholder-slate-500 transition" />
           <div class="flex flex-wrap items-center gap-2.5">
