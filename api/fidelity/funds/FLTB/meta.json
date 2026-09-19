@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLTB",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004685/000003540226004685-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004685/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FLTB?period1=0&period2=1789632835&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FLTB?period1=0&period2=1789793442&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 16 2026"
+  "asOfDate": "Sep 18 2026"
  },
  "marketPrice": {
   "display": "$49.51",
   "value": 49.51,
-  "asOfDate": "Sep 16 2026"
+  "asOfDate": "Sep 18 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,17 +36,17 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 16 2026",
-   "mo1": -0.73,
-   "mo1Text": "-0.73%",
+   "asOfDate": "Sep 18 2026",
+   "mo1": -0.9,
+   "mo1Text": "-0.90%",
    "qtd": -0.39,
    "qtdText": "-0.39%",
    "ytd": 0.63,
    "ytdText": "0.63%",
-   "yr1": 1.57,
-   "yr1Text": "1.57%",
-   "yr3": 5.36,
-   "yr3Text": "5.36%",
+   "yr1": 1.7,
+   "yr1Text": "1.70%",
+   "yr3": 5.39,
+   "yr3Text": "5.39%",
    "yr5": 2.19,
    "yr5Text": "2.19%",
    "yr10": 2.36,
@@ -653,8 +653,8 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3001,
-  "asOf": "Sep 16 2026"
+  "totalRows": 3003,
+  "asOf": "Sep 18 2026"
  },
  "seed": {
   "seriesId": "S000042569",

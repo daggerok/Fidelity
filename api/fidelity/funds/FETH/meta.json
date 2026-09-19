@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FETH",
   "edgarFiling": null,
   "nportDoc": null,
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FETH?period1=0&period2=1789632818&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FETH?period1=0&period2=1789793369&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 16 2026"
+  "asOfDate": "Sep 18 2026"
  },
  "marketPrice": {
-  "display": "$23.94",
-  "value": 23.94,
-  "asOfDate": "Sep 16 2026"
+  "display": "$26.28",
+  "value": 26.28,
+  "asOfDate": "Sep 18 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 16 2026",
-   "mo1": 26.07,
-   "mo1Text": "26.07%",
-   "qtd": 48.79,
-   "qtdText": "48.79%",
-   "ytd": -19.15,
-   "ytdText": "-19.15%",
-   "yr1": -46.98,
-   "yr1Text": "-46.98%",
+   "asOfDate": "Sep 18 2026",
+   "mo1": 25.56,
+   "mo1Text": "25.56%",
+   "qtd": 63.33,
+   "qtdText": "63.33%",
+   "ytd": -11.25,
+   "ytdText": "-11.25%",
+   "yr1": -40.73,
+   "yr1Text": "-40.73%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": -15.82,
-   "sinceInceptionText": "-15.82%"
+   "sinceInception": -12.05,
+   "sinceInceptionText": "-12.05%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -79,8 +79,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 540,
-  "asOf": "Sep 16 2026"
+  "totalRows": 542,
+  "asOf": "Sep 18 2026"
  },
  "seed": {
   "seriesId": null,

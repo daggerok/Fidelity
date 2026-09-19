@@ -2,7 +2,7 @@
  "ticker": "FENY",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3242,
+ "totalRows": 3244,
  "headers": [
   "Date",
   "Close",
@@ -37,7 +37,7 @@
   {
    "Date": "Oct 06 2025",
    "Close": "24.799999",
-   "Adj Close": "24.303265",
+   "Adj Close": "24.303263",
    "Volume": "2768900"
   },
   {
@@ -49,13 +49,13 @@
   {
    "Date": "Oct 08 2025",
    "Close": "24.74",
-   "Adj Close": "24.244467",
+   "Adj Close": "24.244469",
    "Volume": "2709700"
   },
   {
    "Date": "Oct 09 2025",
    "Close": "24.370001",
-   "Adj Close": "23.881878",
+   "Adj Close": "23.88188",
    "Volume": "2899700"
   },
   {
@@ -67,7 +67,7 @@
   {
    "Date": "Oct 13 2025",
    "Close": "24.030001",
-   "Adj Close": "23.548691",
+   "Adj Close": "23.548689",
    "Volume": "2306200"
   },
   {
@@ -79,7 +79,7 @@
   {
    "Date": "Oct 15 2025",
    "Close": "24",
-   "Adj Close": "23.519289",
+   "Adj Close": "23.519287",
    "Volume": "2148500"
   },
   {
@@ -169,49 +169,49 @@
   {
    "Date": "Nov 05 2025",
    "Close": "24.23",
-   "Adj Close": "23.744682",
+   "Adj Close": "23.74468",
    "Volume": "4138400"
   },
   {
    "Date": "Nov 06 2025",
    "Close": "24.43",
-   "Adj Close": "23.940678",
+   "Adj Close": "23.940676",
    "Volume": "2783800"
   },
   {
    "Date": "Nov 07 2025",
    "Close": "24.799999",
-   "Adj Close": "24.303265",
+   "Adj Close": "24.303263",
    "Volume": "4627700"
   },
   {
    "Date": "Nov 10 2025",
    "Close": "25.030001",
-   "Adj Close": "24.52866",
+   "Adj Close": "24.528658",
    "Volume": "4583000"
   },
   {
    "Date": "Nov 11 2025",
    "Close": "25.35",
-   "Adj Close": "24.842251",
+   "Adj Close": "24.842249",
    "Volume": "4301600"
   },
   {
    "Date": "Nov 12 2025",
    "Close": "24.99",
-   "Adj Close": "24.48946",
+   "Adj Close": "24.489458",
    "Volume": "3150000"
   },
   {
    "Date": "Nov 13 2025",
    "Close": "25.02",
-   "Adj Close": "24.518858",
+   "Adj Close": "24.51886",
    "Volume": "5253700"
   },
   {
    "Date": "Nov 14 2025",
    "Close": "25.43",
-   "Adj Close": "24.920649",
+   "Adj Close": "24.920647",
    "Volume": "4720700"
   },
   {
@@ -223,7 +223,7 @@
   {
    "Date": "Nov 18 2025",
    "Close": "25.17",
-   "Adj Close": "24.665854",
+   "Adj Close": "24.665855",
    "Volume": "5256600"
   },
   {
@@ -235,7 +235,7 @@
   {
    "Date": "Nov 20 2025",
    "Close": "24.58",
-   "Adj Close": "24.087671",
+   "Adj Close": "24.087673",
    "Volume": "4170500"
   },
   {
@@ -253,7 +253,7 @@
   {
    "Date": "Nov 25 2025",
    "Close": "24.58",
-   "Adj Close": "24.087671",
+   "Adj Close": "24.087673",
    "Volume": "3719700"
   },
   {
@@ -277,13 +277,13 @@
   {
    "Date": "Dec 02 2025",
    "Close": "24.99",
-   "Adj Close": "24.48946",
+   "Adj Close": "24.489458",
    "Volume": "4619100"
   },
   {
    "Date": "Dec 03 2025",
    "Close": "25.52",
-   "Adj Close": "25.008846",
+   "Adj Close": "25.008844",
    "Volume": "2896400"
   },
   {
@@ -295,7 +295,7 @@
   {
    "Date": "Dec 05 2025",
    "Close": "25.52",
-   "Adj Close": "25.008846",
+   "Adj Close": "25.008844",
    "Volume": "4060100"
   },
   {
@@ -307,13 +307,13 @@
   {
    "Date": "Dec 09 2025",
    "Close": "25.379999",
-   "Adj Close": "24.871647",
+   "Adj Close": "24.871649",
    "Volume": "4450800"
   },
   {
    "Date": "Dec 10 2025",
    "Close": "25.6",
-   "Adj Close": "25.087242",
+   "Adj Close": "25.08724",
    "Volume": "5975600"
   },
   {
@@ -331,7 +331,7 @@
   {
    "Date": "Dec 15 2025",
    "Close": "25.02",
-   "Adj Close": "24.518858",
+   "Adj Close": "24.51886",
    "Volume": "4991800"
   },
   {
@@ -349,7 +349,7 @@
   {
    "Date": "Dec 18 2025",
    "Close": "24.4",
-   "Adj Close": "23.911278",
+   "Adj Close": "23.911276",
    "Volume": "6337300"
   },
   {
@@ -1461,6 +1461,18 @@
    "Close": "35.43",
    "Adj Close": "35.43",
    "Volume": "1234300"
+  },
+  {
+   "Date": "Sep 17 2026",
+   "Close": "35.630001",
+   "Adj Close": "35.630001",
+   "Volume": "582000"
+  },
+  {
+   "Date": "Sep 18 2026",
+   "Close": "35.290001",
+   "Adj Close": "35.290001",
+   "Volume": "980600"
   }
  ]
 }

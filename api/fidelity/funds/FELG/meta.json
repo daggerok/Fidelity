@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FELG",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005384/000003540226005384-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005384/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FELG?period1=0&period2=1789632792&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FELG?period1=0&period2=1789793365&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 16 2026"
+  "asOfDate": "Sep 18 2026"
  },
  "marketPrice": {
-  "display": "$43.48",
-  "value": 43.48,
-  "asOfDate": "Sep 16 2026"
+  "display": "$44.41",
+  "value": 44.41,
+  "asOfDate": "Sep 18 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 16 2026",
-   "mo1": -3.1,
-   "mo1Text": "-3.10%",
-   "qtd": -0.16,
-   "qtdText": "-0.16%",
-   "ytd": 4.47,
-   "ytdText": "4.47%",
-   "yr1": 7.71,
-   "yr1Text": "7.71%",
+   "asOfDate": "Sep 18 2026",
+   "mo1": 0.98,
+   "mo1Text": "0.98%",
+   "qtd": 1.97,
+   "qtdText": "1.97%",
+   "ytd": 6.71,
+   "ytdText": "6.71%",
+   "yr1": 8.39,
+   "yr1Text": "8.39%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 21.84,
-   "sinceInceptionText": "21.84%"
+   "sinceInception": 22.71,
+   "sinceInceptionText": "22.71%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -126,8 +126,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 707,
-  "asOf": "Sep 16 2026"
+  "totalRows": 709,
+  "asOf": "Sep 18 2026"
  },
  "seed": {
   "seriesId": "S000081805",

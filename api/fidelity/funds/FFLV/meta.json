@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFLV",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004089/000003540226004089-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004089/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FFLV?period1=0&period2=1789632823&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FFLV?period1=0&period2=1789793386&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 16 2026"
+  "asOfDate": "Sep 18 2026"
  },
  "marketPrice": {
-  "display": "$28.33",
-  "value": 28.33,
-  "asOfDate": "Sep 16 2026"
+  "display": "$28.23",
+  "value": 28.227,
+  "asOfDate": "Sep 18 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 16 2026",
-   "mo1": -2.34,
-   "mo1Text": "-2.34%",
-   "qtd": 2.27,
-   "qtdText": "2.27%",
-   "ytd": 16.87,
-   "ytdText": "16.87%",
-   "yr1": 24.64,
-   "yr1Text": "24.64%",
+   "asOfDate": "Sep 18 2026",
+   "mo1": -2.92,
+   "mo1Text": "-2.92%",
+   "qtd": 2.19,
+   "qtdText": "2.19%",
+   "ytd": 16.79,
+   "ytdText": "16.79%",
+   "yr1": 24.19,
+   "yr1Text": "24.19%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 16.13,
-   "sinceInceptionText": "16.13%"
+   "sinceInception": 16.06,
+   "sinceInceptionText": "16.06%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -106,6 +106,10 @@
    [
     "06/18/2026",
     "0.092"
+   ],
+   [
+    "09/18/2026",
+    "0.083"
    ]
   ]
  },
@@ -122,8 +126,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 642,
-  "asOf": "Sep 16 2026"
+  "totalRows": 644,
+  "asOf": "Sep 18 2026"
  },
  "seed": {
   "seriesId": "S000084016",

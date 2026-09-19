@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCLO",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004622/000003540226004622-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004622/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FCLO?period1=0&period2=1789632737&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FCLO?period1=0&period2=1789793365&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 16 2026"
+  "asOfDate": "Sep 18 2026"
  },
  "marketPrice": {
-  "display": "$50.50",
-  "value": 50.5,
-  "asOfDate": "Sep 16 2026"
+  "display": "$50.54",
+  "value": 50.538,
+  "asOfDate": "Sep 18 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,11 +36,11 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 16 2026",
-   "mo1": 1.05,
-   "mo1Text": "1.05%",
-   "qtd": 1.8,
-   "qtdText": "1.80%",
+   "asOfDate": "Sep 18 2026",
+   "mo1": 0.97,
+   "mo1Text": "0.97%",
+   "qtd": 1.88,
+   "qtdText": "1.88%",
    "ytd": null,
    "ytdText": "—",
    "yr1": null,
@@ -110,8 +110,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 149,
-  "asOf": "Sep 16 2026"
+  "totalRows": 151,
+  "asOf": "Sep 18 2026"
  },
  "seed": {
   "seriesId": "S000099376",
