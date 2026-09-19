@@ -547,3 +547,13 @@ describe('formatHeldTickersSeed', () => {
     expect(out).toContain('"GOOD": "GD"');
   });
 });
+
+// Run timestamps must not turn unchanged data/cursor state into daily commits.
+import { samePublishedContent } from './update-data';
+test('published JSON ignores run timestamp-only changes but preserves real updates', () => {
+  expect(samePublishedContent('{"generatedAt":"old","funds":[{"ticker":"FAAA"}]}', { generatedAt: 'new', funds: [{ ticker: 'FAAA' }] })).toBe(true);
+  expect(samePublishedContent('{"cursor":null,"savedAt":"old"}', { cursor: null, savedAt: 'new' })).toBe(true);
+  expect(samePublishedContent('{"cursor":null,"savedAt":"old"}', { cursor: 'FBND', savedAt: 'new' })).toBe(false);
+  expect(samePublishedContent('{"generatedAt":"old","funds":[]}', { generatedAt: 'new', funds: [{ ticker: 'FAAA' }] })).toBe(false);
+  expect(samePublishedContent('broken', {})).toBe(false);
+});

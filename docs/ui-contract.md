@@ -12,7 +12,7 @@ The provider applications share this interaction contract so users do not need t
 ## Selection and watchlist
 
 - Selection is persisted per provider in `localStorage`.
-- `Select all` applies to the visible, non-blacklisted catalog.
+- Header `Use` selects the current category/filter, excluding blacklisted funds; the `All ETFs` pill selects the entire non-blacklisted catalog without navigating. Both checked states use `.every()` over their own scope.
 - The Watchlist tab aggregates holdings across selected funds and exposes the number of selected ETFs holding each security.
 - Blacklisting is persisted per provider and removes a fund from the catalog and selection until restored.
 
@@ -39,3 +39,34 @@ When a provider does not publish a dataset, retain the navigation entry and expl
 ## Accessibility baseline
 
 Interactive controls should have an accessible name, active tabs should expose `aria-selected`, sortable headers should expose `aria-sort`, and loading/error status changes should be announced to assistive technology. Keyboard focus and reduced-motion preferences must remain visible/respected.
+
+## Persistent per-tab state
+
+- `fidelity-tab-filters` stores non-empty per-tab filters; `fidelity-searches`
+  remains a read-only migration source. A present new map takes precedence,
+  including an empty map, so cleared filters cannot reappear on reload.
+- `fidelity-site-state` remembers `activeTab` and mirrors filters as `sheetFilter`.
+- `fidelity-tab-sorts` stores only explicit header choices. Switching/reloading
+  restores the tab's sort; Clear removes selection and filters, **not sorts**.
+- The search-field × clears only the current tab and refocuses the input.
+
+## Watchlist loading and identity
+
+- Detail paging and background loading share a serialized per-ticker queue.
+  Background runs are serialized and use at most four concurrent fund workers.
+  Navigation never discards an already fetched cache page; uploads supersede
+  in-flight feed requests. Failed funds show an incomplete label and can retry
+  when Watchlist is reopened.
+- The Watchlist tab progresses from `Loading…` to `N+` to an exact count, even
+  while viewing the catalog. Selected-count/ticker badges update immediately;
+  badges in the subtitle and Watchlist open the selected fund's detail view.
+- Identity uses ticker → CUSIP → ISIN → Identifier/Security ID → SEDOL/FIGI →
+  name, skipping placeholders, with namespaced keys to avoid cross-tier
+  collisions. Fidelity's feed currently has only the generic Identifier field;
+  optional separate identifier columns do not require fabricated feed data.
+- Aggregation is cached by selected funds, cache-entry identity and row counts.
+  Rendering grows in 200-row chunks; exports and Copy Tickers use the full
+  filtered result, independent of mounted rows.
+- Catalog Use/Ticker and Watchlist Ticker are pinned on the cells themselves.
+  Other detail tables have no pinned columns. Every pinned background is opaque,
+  including hover/selection and headers in both themes.
