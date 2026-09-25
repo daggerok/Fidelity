@@ -1064,11 +1064,11 @@
         el.tableBody.innerHTML = rows.map((fund, index) => {
           const selected = state.selected.has(fund.ticker);
           return `
-            <tr data-ticker="${escapeHtml(fund.ticker)}" class="cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/30 transition border-b border-slate-100 dark:border-slate-700/30 ${selected ? 'selected-row' : ''}">
+            <tr data-ticker="${escapeHtml(fund.ticker)}" class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition border-b border-slate-100 dark:border-slate-700/30 ${selected ? 'selected-row' : ''}">
               <td class="py-2.5 px-4 text-slate-400 dark:text-slate-500 text-xs text-center font-mono">${index + 1}</td>
               <td class="catalog-sticky-col catalog-sticky-use py-2.5 px-4 w-20 text-center">
                 <div class="inline-flex items-center justify-center gap-1.5">
-                  <input data-checkbox="${escapeHtml(fund.ticker)}" type="checkbox" ${selected ? 'checked' : ''} class="w-4 h-4 accent-blue-600" aria-label="Use ${escapeHtml(fund.ticker)}" />
+                  <input data-checkbox="${escapeHtml(fund.ticker)}" type="checkbox" ${selected ? 'checked' : ''} class="w-4 h-4 accent-blue-600 cursor-pointer" aria-label="Use ${escapeHtml(fund.ticker)}" />
                   <button data-blacklist="${escapeHtml(fund.ticker)}" class="w-4 h-4 rounded text-slate-300 dark:text-slate-600 hover:text-rose-500 dark:hover:text-rose-400 leading-none transition" title="Blacklist ${escapeHtml(fund.ticker)} — hide it from All ETFs">✕</button>
                 </div>
               </td>
@@ -1100,13 +1100,13 @@
         }).join('');
       }
 
-      el.tableBody.querySelectorAll('tr[data-ticker]').forEach((row: any) => {
-        row.addEventListener('click', (event: any) => {
-          const target: any = event.target;
-          if (target.closest('a')) return;
-          if (target.closest('button[data-blacklist]')) return;
-          toggleFund(row.dataset.ticker || '');
+      el.tableBody.querySelectorAll('input[data-checkbox]').forEach((checkbox: any) => {
+        checkbox.addEventListener('change', (event: any) => {
+          event.stopPropagation();
+          const ticker = checkbox.dataset.checkbox || '';
+          toggleFund(ticker);
         });
+        checkbox.addEventListener('click', (event: any) => event.stopPropagation());
       });
 
       el.tableBody.querySelectorAll('button[data-blacklist]').forEach((button: any) => {
@@ -1119,7 +1119,7 @@
       const selected = state.selected.size;
       const queryText = currentQuery() ? ` matching “${currentQuery()}”` : '';
       const activeText = state.activeFundTicker ? ` Active ETF detail tabs are for ${state.activeFundTicker}.` : '';
-      setStatus(`Showing ${rows.length} ETF${rows.length === 1 ? '' : 's'}${queryText}. Click rows to select ETFs.${selected ? ` ${selected} selected.` : ' No ETFs selected yet.'}${activeText}`, selected ? 'success' : 'info');
+      setStatus(`Showing ${rows.length} ETF${rows.length === 1 ? '' : 's'}${queryText}. Use the checkboxes in the “Use” column to select ETFs.${selected ? ` ${selected} selected.` : ' No ETFs selected yet.'}${activeText}`, selected ? 'success' : 'info');
       el.tickerCount.textContent = `${rows.length} ETFs`;
       renderSubtitle();
     }
@@ -1194,7 +1194,7 @@
       const tickers = [...state.selected];
       const entries = tickers.map(ticker => sheetState.get(`${ticker}:holdings`));
       const signature = tickers.map((ticker, i) => `${ticker}:${entries[i]?.rows.length || 0}`).join('|');
-      if (watchlistCache && watchlistCache.signature === signature && entries.every((entry, i) => entry === watchlistCache.entries[i])) return watchlistCache.rows;
+      if (watchlistCache && watchlistCache.signature === signature && entries.every((entry, i) => entry === watchlistCache?.entries[i])) return watchlistCache.rows;
       const map: Map<string, WatchlistRow> = new Map();
       getSelectedPositions().forEach(position => {
         const symbol = position.symbol;
@@ -1514,7 +1514,7 @@
       const countsText = state.counts
         ? `${state.counts.funds} ETFs · ${(state.counts.holdings || 0).toLocaleString('en-US')} holdings rows · ${(state.counts.history || 0).toLocaleString('en-US')} history rows`
         : '';
-      const base = text ? String(text) : 'Search Fidelity ETFs, select rows, then use the Watchlist tab.';
+      const base = text ? String(text) : 'Search Fidelity ETFs, select ETFs via the “Use” checkbox, then use the Watchlist tab.';
       const badges = [...state.selected].map(ticker => `<button data-activate-fund="${escapeHtml(ticker)}" class="font-mono rounded px-1.5 ${ticker === state.activeFundTicker ? 'bg-blue-600 text-white' : 'text-blue-600 dark:text-blue-400 hover:underline'}" title="Open ${escapeHtml(ticker)} details">${escapeHtml(ticker)}</button>`).join(' ');
       el.subtitle.innerHTML = `
         <span class="block sm:inline">${escapeHtml(base)}</span>

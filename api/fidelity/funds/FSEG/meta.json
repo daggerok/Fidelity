@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSEG",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005422/000003540226005422-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005422/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FSEG?period1=0&period2=1789793413&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FSEG?period1=0&period2=1790315422&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 18 2026"
+  "asOfDate": "Sep 24 2026"
  },
  "marketPrice": {
-  "display": "$26.26",
-  "value": 26.26,
-  "asOfDate": "Sep 18 2026"
+  "display": "$26.08",
+  "value": 26.084,
+  "asOfDate": "Sep 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,11 +36,11 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 18 2026",
-   "mo1": -5.64,
-   "mo1Text": "-5.64%",
-   "qtd": -7.47,
-   "qtdText": "-7.47%",
+   "asOfDate": "Sep 24 2026",
+   "mo1": -5.26,
+   "mo1Text": "-5.26%",
+   "qtd": -8.07,
+   "qtdText": "-8.07%",
    "ytd": null,
    "ytdText": "—",
    "yr1": null,
@@ -60,8 +60,8 @@
   }
  },
  "distributions": {
-  "frequency": "Unknown",
-  "paymentsPerYear": null,
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
   "headers": [
    "Ex-Date",
    "Amount"
@@ -70,6 +70,10 @@
    [
     "06/18/2026",
     "0.009"
+   ],
+   [
+    "09/18/2026",
+    "0.011"
    ]
   ]
  },
@@ -87,8 +91,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 98,
-  "asOf": "Sep 18 2026"
+  "totalRows": 101,
+  "asOf": "Sep 24 2026"
  },
  "seed": {
   "seriesId": "S000102552",

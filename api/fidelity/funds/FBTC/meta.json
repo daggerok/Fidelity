@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBTC",
   "edgarFiling": null,
   "nportDoc": null,
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBTC?period1=0&period2=1789793351&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBTC?period1=0&period2=1790315390&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 18 2026"
+  "asOfDate": "Sep 24 2026"
  },
  "marketPrice": {
-  "display": "$70.66",
-  "value": 70.66,
-  "asOfDate": "Sep 18 2026"
+  "display": "$73.41",
+  "value": 73.41,
+  "asOfDate": "Sep 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 18 2026",
-   "mo1": 18.56,
-   "mo1Text": "18.56%",
-   "qtd": 35.29,
-   "qtdText": "35.29%",
-   "ytd": -7.31,
-   "ytdText": "-7.31%",
-   "yr1": -29.64,
-   "yr1Text": "-29.64%",
+   "asOfDate": "Sep 24 2026",
+   "mo1": 6.82,
+   "mo1Text": "6.82%",
+   "qtd": 40.55,
+   "qtdText": "40.55%",
+   "ytd": -3.7,
+   "ytdText": "-3.70%",
+   "yr1": -23.03,
+   "yr1Text": "-23.03%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 22.6,
-   "sinceInceptionText": "22.60%"
+   "sinceInception": 24.19,
+   "sinceInceptionText": "24.19%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -79,8 +79,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 674,
-  "asOf": "Sep 18 2026"
+  "totalRows": 678,
+  "asOf": "Sep 24 2026"
  },
  "seed": {
   "seriesId": null,

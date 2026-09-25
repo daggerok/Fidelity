@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FHLC",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063876/000141036826063876-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063876/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FHLC?period1=0&period2=1789793390&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FHLC?period1=0&period2=1790315401&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 18 2026"
+  "asOfDate": "Sep 24 2026"
  },
  "marketPrice": {
-  "display": "$81.42",
-  "value": 81.42,
-  "asOfDate": "Sep 18 2026"
+  "display": "$82.25",
+  "value": 82.25,
+  "asOfDate": "Sep 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 18 2026",
-   "mo1": -4.43,
-   "mo1Text": "-4.43%",
-   "qtd": 4.79,
-   "qtdText": "4.79%",
-   "ytd": 10.37,
-   "ytdText": "10.37%",
-   "yr1": 25.3,
-   "yr1Text": "25.30%",
-   "yr3": 10.97,
-   "yr3Text": "10.97%",
-   "yr5": 5.41,
-   "yr5Text": "5.41%",
-   "yr10": 10.54,
-   "yr10Text": "10.54%",
-   "sinceInception": 11.05,
-   "sinceInceptionText": "11.05%"
+   "asOfDate": "Sep 24 2026",
+   "mo1": -2.95,
+   "mo1Text": "-2.95%",
+   "qtd": 6.18,
+   "qtdText": "6.18%",
+   "ytd": 11.84,
+   "ytdText": "11.84%",
+   "yr1": 29.36,
+   "yr1Text": "29.36%",
+   "yr3": 11.79,
+   "yr3Text": "11.79%",
+   "yr5": 5.8,
+   "yr5Text": "5.80%",
+   "yr10": 10.49,
+   "yr10Text": "10.49%",
+   "sinceInception": 11.15,
+   "sinceInceptionText": "11.15%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -270,6 +270,10 @@
    [
     "06/18/2026",
     "0.263"
+   ],
+   [
+    "09/18/2026",
+    "0.254"
    ]
   ]
  },
@@ -290,8 +294,8 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3244,
-  "asOf": "Sep 18 2026"
+  "totalRows": 3247,
+  "asOf": "Sep 24 2026"
  },
  "seed": {
   "seriesId": "S000042575",
