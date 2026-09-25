@@ -1,4 +1,5 @@
 #!/usr/bin/env bun
+import { hasOutputFilters, printConfig, printFilter, createReporter } from './update-output.ts';
 
 // Fidelity ETF static data updater.
 // Fetches official SEC EDGAR N-PORT-P holdings filings for the Fidelity ETF
@@ -1243,7 +1244,6 @@ async function processFund(
   };
   const reasons = fundFilterReasons(candidate, config);
   if (reasons.length) {
-    console.log(`[${ticker.padEnd(5)}] skipped (${reasons.join(', ')})`);
     return null;
   }
 
@@ -1268,7 +1268,7 @@ async function processFund(
   if (nport) {
     try {
       const resolved = await attachHoldingTickers(nport, resolver);
-      if (resolved) console.log(`[ticker   ] ${ticker}: resolved ${resolved}/${nport.holdings.length} holding tickers`);
+      if (resolved) console.warn(`[ticker   ] ${ticker}: resolved ${resolved}/${nport.holdings.length} holding tickers`);
     } catch (error) {
       console.warn(`[ticker   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping "-" tickers`);
     }
@@ -1458,9 +1458,7 @@ async function main(): Promise<void> {
   const config = readConfig();
   requestSleepMs = Math.max(0, config.requestSleep) * 1000;
 
-  console.log('Fidelity ETF static data updater');
-  console.log('Sources: SEC EDGAR N-PORT-P (holdings, net assets) + Yahoo Finance public chart API (history, distributions)');
-  for (const line of configLines(config)) console.log(`  ${line}`);
+  printConfig('Fidelity', config);
   console.log('');
 
   const seedFunds = FIDELITY_FUNDS.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
@@ -1540,6 +1538,8 @@ async function main(): Promise<void> {
   let lastProcessedTicker: string | null = cursor;
   let failures = 0;
 
+  printFilter(seedFunds.length, seedFunds.length, hasOutputFilters(config));
+  const output = createReporter(API_ROOT, config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length);
   async function worker(): Promise<void> {
     for (;;) {
       const item = queue.shift();
@@ -1549,15 +1549,17 @@ async function main(): Promise<void> {
       const previous = previousIndex.get(seed.ticker) || {};
       const entry = accessionBySeries.get(seriesKeyOf(seed)) || null;
       processed += 1;
+      const before = await output.before(seed.ticker);
       try {
         const row = await processFund(seed, entry ? entry.accession : null, config, previous, resolver);
         if (row) {
           results.push(row);
           lastProcessedTicker = seed.ticker;
         }
+        await output.result(seed.ticker, before, row ? undefined : 'skipped');
       } catch (error) {
         failures += 1;
-        console.warn(`[error   ] ${seed.ticker}: ${error instanceof Error ? error.message : String(error)}`);
+        await output.result(seed.ticker, before, 'failed', String(error));
       }
       if (config.maxFetches > 0 && processed >= config.maxFetches) {
         console.log(`[cursor  ] batch of ${config.maxFetches} reached — rerun to continue after ${lastProcessedTicker}`);
