@@ -1103,7 +1103,7 @@
       el.tableBody.querySelectorAll('input[data-checkbox]').forEach((checkbox: any) => {
         checkbox.addEventListener('change', (event: any) => {
           event.stopPropagation();
-          const ticker = (checkbox as any).dataset.checkbox || '';
+          const ticker = checkbox.dataset.checkbox || '';
           toggleFund(ticker);
         });
         checkbox.addEventListener('click', (event: any) => event.stopPropagation());
@@ -1514,7 +1514,7 @@
       const countsText = state.counts
         ? `${state.counts.funds} ETFs · ${(state.counts.holdings || 0).toLocaleString('en-US')} holdings rows · ${(state.counts.history || 0).toLocaleString('en-US')} history rows`
         : '';
-      const base = text ? String(text) : 'Search Fidelity ETFs, select rows, then use the Watchlist tab.';
+      const base = text ? String(text) : 'Search Fidelity ETFs, select ETFs via the “Use” checkbox, then use the Watchlist tab.';
       const badges = [...state.selected].map(ticker => `<button data-activate-fund="${escapeHtml(ticker)}" class="font-mono rounded px-1.5 ${ticker === state.activeFundTicker ? 'bg-blue-600 text-white' : 'text-blue-600 dark:text-blue-400 hover:underline'}" title="Open ${escapeHtml(ticker)} details">${escapeHtml(ticker)}</button>`).join(' ');
       el.subtitle.innerHTML = `
         <span class="block sm:inline">${escapeHtml(base)}</span>
