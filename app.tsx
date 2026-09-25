@@ -1194,7 +1194,7 @@
       const tickers = [...state.selected];
       const entries = tickers.map(ticker => sheetState.get(`${ticker}:holdings`));
       const signature = tickers.map((ticker, i) => `${ticker}:${entries[i]?.rows.length || 0}`).join('|');
-      if (watchlistCache && watchlistCache.signature === signature && entries.every((entry, i) => entry === watchlistCache.entries[i])) return watchlistCache.rows;
+      if (watchlistCache && watchlistCache.signature === signature && entries.every((entry, i) => entry === watchlistCache?.entries[i])) return watchlistCache.rows;
       const map: Map<string, WatchlistRow> = new Map();
       getSelectedPositions().forEach(position => {
         const symbol = position.symbol;
