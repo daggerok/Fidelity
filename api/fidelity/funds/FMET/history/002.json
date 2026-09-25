@@ -2,7 +2,7 @@
  "ticker": "FMET",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1107,
+ "totalRows": 1110,
  "headers": [
   "Date",
   "Close",
@@ -19,7 +19,7 @@
   {
    "Date": "Apr 20 2026",
    "Close": "35.727001",
-   "Adj Close": "35.562599",
+   "Adj Close": "35.562595",
    "Volume": "3800"
   },
   {
@@ -49,7 +49,7 @@
   {
    "Date": "Apr 27 2026",
    "Close": "36.169998",
-   "Adj Close": "36.003555",
+   "Adj Close": "36.003551",
    "Volume": "3900"
   },
   {
@@ -91,13 +91,13 @@
   {
    "Date": "May 06 2026",
    "Close": "37.942001",
-   "Adj Close": "37.767403",
+   "Adj Close": "37.767406",
    "Volume": "2100"
   },
   {
    "Date": "May 07 2026",
    "Close": "37.841999",
-   "Adj Close": "37.667862",
+   "Adj Close": "37.667858",
    "Volume": "4600"
   },
   {
@@ -109,13 +109,13 @@
   {
    "Date": "May 11 2026",
    "Close": "38.584999",
-   "Adj Close": "38.407444",
+   "Adj Close": "38.40744",
    "Volume": "9200"
   },
   {
    "Date": "May 12 2026",
    "Close": "37.685001",
-   "Adj Close": "37.511589",
+   "Adj Close": "37.511585",
    "Volume": "4600"
   },
   {
@@ -127,7 +127,7 @@
   {
    "Date": "May 14 2026",
    "Close": "38.036999",
-   "Adj Close": "37.861965",
+   "Adj Close": "37.861961",
    "Volume": "4000"
   },
   {
@@ -139,7 +139,7 @@
   {
    "Date": "May 18 2026",
    "Close": "37.373001",
-   "Adj Close": "37.201019",
+   "Adj Close": "37.201023",
    "Volume": "6100"
   },
   {
@@ -151,13 +151,13 @@
   {
    "Date": "May 20 2026",
    "Close": "37.666",
-   "Adj Close": "37.492672",
+   "Adj Close": "37.492676",
    "Volume": "2200"
   },
   {
    "Date": "May 21 2026",
    "Close": "37.779999",
-   "Adj Close": "37.606144",
+   "Adj Close": "37.606148",
    "Volume": "3100"
   },
   {
@@ -199,13 +199,13 @@
   {
    "Date": "Jun 02 2026",
    "Close": "40.136002",
-   "Adj Close": "39.951309",
+   "Adj Close": "39.951305",
    "Volume": "1100"
   },
   {
    "Date": "Jun 03 2026",
    "Close": "39.990002",
-   "Adj Close": "39.805977",
+   "Adj Close": "39.805981",
    "Volume": "1600"
   },
   {
@@ -253,7 +253,7 @@
   {
    "Date": "Jun 15 2026",
    "Close": "37.960999",
-   "Adj Close": "37.786312",
+   "Adj Close": "37.786316",
    "Volume": "6300"
   },
   {
@@ -265,7 +265,7 @@
   {
    "Date": "Jun 17 2026",
    "Close": "36.756001",
-   "Adj Close": "36.586861",
+   "Adj Close": "36.586857",
    "Volume": "2200"
   },
   {
@@ -651,6 +651,24 @@
    "Close": "38.451",
    "Adj Close": "38.451",
    "Volume": "1100"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "Close": "39.898998",
+   "Adj Close": "39.898998",
+   "Volume": "3400"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "Close": "39.450001",
+   "Adj Close": "39.450001",
+   "Volume": "2100"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "Close": "39.391998",
+   "Adj Close": "39.391998",
+   "Volume": "3200"
   }
  ]
 }

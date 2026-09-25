@@ -2,7 +2,7 @@
  "ticker": "FDHY",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2077,
+ "totalRows": 2080,
  "headers": [
   "Date",
   "Close",
@@ -13,7 +13,7 @@
   {
    "Date": "Jun 01 2026",
    "Close": "49.105",
-   "Adj Close": "48.305988",
+   "Adj Close": "48.305992",
    "Volume": "99200"
   },
   {
@@ -37,13 +37,13 @@
   {
    "Date": "Jun 05 2026",
    "Close": "48.880001",
-   "Adj Close": "48.08466",
+   "Adj Close": "48.084656",
    "Volume": "69900"
   },
   {
    "Date": "Jun 08 2026",
    "Close": "48.880001",
-   "Adj Close": "48.08466",
+   "Adj Close": "48.084656",
    "Volume": "38500"
   },
   {
@@ -61,7 +61,7 @@
   {
    "Date": "Jun 11 2026",
    "Close": "49.09",
-   "Adj Close": "48.291237",
+   "Adj Close": "48.291233",
    "Volume": "83600"
   },
   {
@@ -91,7 +91,7 @@
   {
    "Date": "Jun 18 2026",
    "Close": "49.249001",
-   "Adj Close": "48.447647",
+   "Adj Close": "48.447651",
    "Volume": "66400"
   },
   {
@@ -109,7 +109,7 @@
   {
    "Date": "Jun 24 2026",
    "Close": "49.18",
-   "Adj Close": "48.379772",
+   "Adj Close": "48.379768",
    "Volume": "59300"
   },
   {
@@ -121,7 +121,7 @@
   {
    "Date": "Jun 26 2026",
    "Close": "49.259998",
-   "Adj Close": "48.458469",
+   "Adj Close": "48.458466",
    "Volume": "62500"
   },
   {
@@ -471,6 +471,24 @@
    "Close": "48.560001",
    "Adj Close": "48.560001",
    "Volume": "197900"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "Close": "48.689999",
+   "Adj Close": "48.689999",
+   "Volume": "212400"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "Close": "48.310001",
+   "Adj Close": "48.310001",
+   "Volume": "87500"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "Close": "48.200001",
+   "Adj Close": "48.200001",
+   "Volume": "40600"
   }
  ]
 }
