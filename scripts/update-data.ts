@@ -1,4 +1,5 @@
 #!/usr/bin/env bun
+/// <reference types="bun" />
 import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
 import { createHash as outputCreateHash } from 'node:crypto';
 import { join as outputJoin } from 'node:path';
@@ -133,7 +134,6 @@ function outputCreateReporter(root: URL | string, total: number) {
 // JSON API under ./api/fidelity, following the daggerok/iShares and
 // daggerok/SPDR repository design (no dependencies, Bun only).
 
-/// <reference types="bun" />
 import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
 import { FIDELITY_FUNDS, FIDELITY_TRUSTS } from './fidelity-funds';
 import { HELD_TICKERS } from './held-tickers';
