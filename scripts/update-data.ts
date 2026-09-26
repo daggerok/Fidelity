@@ -8,6 +8,9 @@ import { fileURLToPath as outputFileURLToPath } from 'node:url';
 /** Presentation only: no requests, writes, filtering, or changes to updater state. */
 
 const outputClean = (value: unknown): string => String(value ?? 'null').replace(/[\r\n\t]+/g, ' ');
+/** Presentation only: per-fund retry and fallback notices are printed when VERBOSE is enabled. */
+const outputVerbose = (): boolean => /^(1|true|yes|on)$/i.test((globalThis as any).process?.env?.VERBOSE ?? '');
+function outputNote(message: string): void { if (outputVerbose()) console.warn(message); }
 /** Names are the canonical environment knobs, not internal parser properties. */
 function outputConfigEntries(config: Record<string, any>): [string, string][] {
   const values = new Map<string, string>();
@@ -36,7 +39,8 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
   });
 }
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
-  console.log(`[ config ] ${brand} updater:\n${outputConfigEntries(config).map(([key, value]) => `            ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
@@ -44,7 +48,7 @@ function outputHasOutputFilters(config: Record<string, any>): boolean {
     !['', ':', 'null', 'all'].includes(value));
 }
 function outputPrintFilter(selected: number, total: number, deferred = false): void {
-  console.log(`[ filter ] ${selected} of ${total} funds ${deferred ? 'selected for evaluation (data-dependent filters applied per fund)' : 'pass filters'}`);
+  console.log(`[ filter   ] ${selected} of ${total} funds ${deferred ? 'selected for evaluation (data-dependent filters applied per fund)' : 'pass filters'}`);
 }
 function outputStable(value: any): any {
   if (Array.isArray(value)) return value.map(outputStable);
@@ -88,19 +92,27 @@ function outputMoney(value: any): string {
 function outputFundLine(index: number, total: number, ticker: string, status: string, data: any = {}, reason?: unknown): string {
   const width = Math.max(2, String(total).length);
   const metrics = data.metrics ?? {};
+  // Presentation only. Keep valid zero/false values; omit unavailable fields.
+  // outputMoney returns the string 'null' for an unavailable monetary value.
+  const field = (key: string, value: unknown): string =>
+    value === null || value === undefined || value === 'null' ? '' : `${key}=${outputClean(value)}`;
+  const sources = [
+    field('official', data.officialHistoryCount),
+    field('yahoo', data.yahooHistoryCount),
+  ].filter(part => part !== '').join(' ');
   const detail = [
-    `port=${outputClean(data.portId ?? data.portfolioId)}`,
-    `history=${outputClean(outputCount(data.history ?? data.historyCount))}`,
-    `(official=${outputClean(data.officialHistoryCount)} yahoo=${outputClean(data.yahooHistoryCount)})`,
-    `holdings=${outputClean(outputCount(data.holdings ?? data.holdingsCount))}`,
-    `divs=${outputClean(outputCount(data.worksheets?.Distributions ?? data.distributions))}`,
-    `netAssets=${outputMoney(data.netAssets ?? data.aum)}`,
-    `total=${outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)}`,
-    `div=${outputClean(outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield))}`,
-    `sec=${outputClean(outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield))}`,
-    `wp=${outputClean(data.workplaceRaw)}`,
-  ].join(' ');
-  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)} ${detail}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+    field('port', data.portId ?? data.portfolioId),
+    field('history', outputCount(data.history ?? data.historyCount)),
+    sources ? `(${sources})` : '',
+    field('holdings', outputCount(data.holdings ?? data.holdingsCount)),
+    field('divs', outputCount(data.worksheets?.Distributions ?? data.distributions)),
+    field('netAssets', outputMoney(data.netAssets ?? data.aum)),
+    field('total', outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)),
+    field('div', outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
+    field('sec', outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
+    field('wp', data.workplaceRaw),
+  ].filter(part => part !== '').join(' ');
+  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
@@ -1336,7 +1348,7 @@ async function processFund(
     try {
       chart = parseChart(await fetchJson(chartUrl(ticker, config), `[chart   ] ${ticker}`, yahooHeaders(), config));
     } catch (error) {
-      console.warn(`[chart   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
+      outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
     }
   }
 
@@ -1372,7 +1384,7 @@ async function processFund(
         await writeFile(new URL(`nport-${(nport.repPdDate || 'latest').replace(/-/g, '')}.xml`, rawDir), xml, 'utf8');
       }
     } catch (error) {
-      console.warn(`[nport   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous holdings`);
+      outputNote(`[ ${'nport'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous holdings`);
     }
   }
 
@@ -1381,9 +1393,9 @@ async function processFund(
   if (nport) {
     try {
       const resolved = await attachHoldingTickers(nport, resolver);
-      if (resolved) console.warn(`[ticker   ] ${ticker}: resolved ${resolved}/${nport.holdings.length} holding tickers`);
+      if (resolved) outputNote(`[ ${'ticker'.padEnd(9)}] ${ticker}: resolved ${resolved}/${nport.holdings.length} holding tickers`);
     } catch (error) {
-      console.warn(`[ticker   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping "-" tickers`);
+      outputNote(`[ ${'ticker'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping "-" tickers`);
     }
   }
 
@@ -1575,8 +1587,8 @@ async function main(): Promise<void> {
   console.log('');
 
   const seedFunds = FIDELITY_FUNDS.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
-  console.log(`[seed    ] ${seedFunds.length} Fidelity ETFs across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants`);
-  console.log(`[ticker  ] ${Object.keys(HELD_TICKERS).length} known holding names in scripts/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
+  console.log(`[ ${'seed'.padEnd(9)}] ${seedFunds.length} Fidelity ETFs across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants`);
+  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(HELD_TICKERS).length} known holding names in scripts/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
 
   // Unknown holding names are resolved through the Yahoo symbol search
   // (strict name match). Every search is globally paced like the rest of the
@@ -1617,7 +1629,7 @@ async function main(): Promise<void> {
         );
         accessions = parseNportAccessions(submissions);
       } catch (error) {
-        console.warn(`[edgar   ] submissions ${cik}: ${error instanceof Error ? error.message : String(error)} — using seed accessions`);
+        outputNote(`[ ${'edgar'.padEnd(9)}] submissions ${cik}: ${error instanceof Error ? error.message : String(error)} — using seed accessions`);
         continue;
       }
       const fresh = accessions.filter((entry) => entry.filed > newestSeed).sort((a, b) => (a.filed < b.filed ? 1 : -1));
@@ -1675,7 +1687,7 @@ async function main(): Promise<void> {
         await output.result(seed.ticker, before, 'failed', String(error));
       }
       if (config.maxFetches > 0 && processed >= config.maxFetches) {
-        console.log(`[cursor  ] batch of ${config.maxFetches} reached — rerun to continue after ${lastProcessedTicker}`);
+        console.log(`[ ${'cursor'.padEnd(9)}] batch of ${config.maxFetches} reached — rerun to continue after ${lastProcessedTicker}`);
         return;
       }
     }
@@ -1717,16 +1729,16 @@ async function main(): Promise<void> {
     const merged: Record<string, string> = { ...HELD_TICKERS, ...resolver.freshEntries() };
     const seedChanged = await writeTextIfChanged(HELD_TICKERS_FILE, formatHeldTickersSeed(merged));
     if (seedChanged) {
-      console.log(`[ticker  ] ${resolver.fresh.length} new name -> ticker mappings added to scripts/held-tickers.ts`);
+      console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to scripts/held-tickers.ts`);
     }
   }
 
   await writeUpdateState(lastProcessedTicker);
 
   console.log('');
-  console.log(`[done    ] ${results.length} funds updated, ${keptFromPrevious.length} kept from previous runs, ${failures} failures`);
-  console.log(`[done    ] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  console.log(`[cursor  ] ${lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)'}`);
+  console.log(`[ ${'done'.padEnd(9)}] ${results.length} funds updated, ${keptFromPrevious.length} kept from previous runs, ${failures} failures`);
+  console.log(`[ ${'done'.padEnd(9)}] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
+  console.log(`[ ${'cursor'.padEnd(9)}] ${lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)'}`);
 
   if (process.env.GITHUB_STEP_SUMMARY) {
     await appendFile(
