@@ -496,13 +496,20 @@ Examples:
 // Fetch layer with global pacing and bounded retries (SPDR-style)
 // ---------------------------------------------------------------------------
 
-let nextRequestAt = 0;
+// One pacing lane per concurrent worker (sized from config.concurrency in
+// main()). A single shared gate capped total throughput at one request per
+// REQUEST_SLEEP no matter how high CONCURRENCY was set; CONCURRENCY workers
+// now each get their own paced lane, so concurrency actually multiplies
+// throughput as documented instead of only overlapping wait time.
+let nextRequestAtLanes: number[] = [0];
 let requestSleepMs = REQUEST_SLEEP_FALLBACK * 1000;
 
 async function paceRequests(): Promise<void> {
-  const waitFor = nextRequestAt - Date.now();
+  let lane = 0;
+  for (let i = 1; i < nextRequestAtLanes.length; i++) if (nextRequestAtLanes[i] < nextRequestAtLanes[lane]) lane = i;
+  const waitFor = nextRequestAtLanes[lane] - Date.now();
   if (waitFor > 0) await sleep(waitFor);
-  nextRequestAt = Date.now() + requestSleepMs;
+  nextRequestAtLanes[lane] = Date.now() + requestSleepMs;
 }
 
 class HttpError extends Error {
@@ -1590,6 +1597,7 @@ async function backfillTickers(): Promise<void> {
 async function main(): Promise<void> {
   const config = readConfig();
   requestSleepMs = Math.max(0, config.requestSleep) * 1000;
+  nextRequestAtLanes = new Array(Math.max(1, config.concurrency)).fill(0);
 
   outputPrintConfig('Fidelity', config);
   console.log('');
