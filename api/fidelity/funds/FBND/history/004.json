@@ -2,7 +2,7 @@
  "ticker": "FBND",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3006,
+ "totalRows": 3008,
  "headers": [
   "Date",
   "Close",
@@ -35,6 +35,12 @@
    "Volume": "3955700"
   },
   {
+   "Date": "Sep 22 2026",
+   "Close": "44.34",
+   "Adj Close": "44.34",
+   "Volume": "4245700"
+  },
+  {
    "Date": "Sep 23 2026",
    "Close": "43.950001",
    "Adj Close": "43.950001",
@@ -45,6 +51,12 @@
    "Close": "43.720001",
    "Adj Close": "43.720001",
    "Volume": "5144800"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "Close": "43.82",
+   "Adj Close": "43.82",
+   "Volume": "6149700"
   }
  ]
 }

@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMUB",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004110/000003540226004110-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004110/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMUB?period1=0&period2=1790315486&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMUB?period1=0&period2=1790479079&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 24 2026"
+  "asOfDate": "Sep 25 2026"
  },
  "marketPrice": {
-  "display": "$48.73",
-  "value": 48.725,
-  "asOfDate": "Sep 24 2026"
+  "display": "$48.54",
+  "value": 48.54,
+  "asOfDate": "Sep 25 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 24 2026",
-   "mo1": -3.34,
-   "mo1Text": "-3.34%",
-   "qtd": -4.68,
-   "qtdText": "-4.68%",
-   "ytd": -2.26,
-   "ytdText": "-2.26%",
-   "yr1": -0.95,
-   "yr1Text": "-0.95%",
+   "asOfDate": "Sep 25 2026",
+   "mo1": -3.35,
+   "mo1Text": "-3.35%",
+   "qtd": -5.05,
+   "qtdText": "-5.05%",
+   "ytd": -2.63,
+   "ytdText": "-2.63%",
+   "yr1": -1.24,
+   "yr1Text": "-1.24%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 2.86,
-   "sinceInceptionText": "2.86%"
+   "sinceInception": 2.59,
+   "sinceInceptionText": "2.59%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -156,8 +156,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 368,
-  "asOf": "Sep 24 2026"
+  "totalRows": 370,
+  "asOf": "Sep 25 2026"
  },
  "seed": {
   "seriesId": "S000089370",

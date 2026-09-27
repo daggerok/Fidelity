@@ -2,7 +2,7 @@
  "ticker": "FSEG",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 101,
+ "totalRows": 103,
  "headers": [
   "Date",
   "Close",
@@ -91,7 +91,7 @@
   {
    "Date": "May 19 2026",
    "Close": "25.07",
-   "Adj Close": "25.051207",
+   "Adj Close": "25.051208",
    "Volume": "700"
   },
   {
@@ -103,7 +103,7 @@
   {
    "Date": "May 21 2026",
    "Close": "26.040001",
-   "Adj Close": "26.020483",
+   "Adj Close": "26.020481",
    "Volume": "1200"
   },
   {
@@ -127,7 +127,7 @@
   {
    "Date": "May 28 2026",
    "Close": "27.02",
-   "Adj Close": "26.999748",
+   "Adj Close": "26.999746",
    "Volume": "100"
   },
   {
@@ -181,7 +181,7 @@
   {
    "Date": "Jun 10 2026",
    "Close": "25.9",
-   "Adj Close": "25.880585",
+   "Adj Close": "25.880587",
    "Volume": "2100"
   },
   {
@@ -605,6 +605,12 @@
    "Volume": "1500"
   },
   {
+   "Date": "Sep 22 2026",
+   "Close": "26.610001",
+   "Adj Close": "26.610001",
+   "Volume": "5100"
+  },
+  {
    "Date": "Sep 23 2026",
    "Close": "26.120001",
    "Adj Close": "26.120001",
@@ -615,6 +621,12 @@
    "Close": "26.08",
    "Adj Close": "26.08",
    "Volume": "6000"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "Close": "26.129999",
+   "Adj Close": "26.129999",
+   "Volume": "1700"
   }
  ]
 }

@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMED",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004621/000003540226004621-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004621/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMED?period1=0&period2=1790315413&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMED?period1=0&period2=1790479057&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 24 2026"
+  "asOfDate": "Sep 25 2026"
  },
  "marketPrice": {
-  "display": "$32.24",
-  "value": 32.236,
-  "asOfDate": "Sep 24 2026"
+  "display": "$32.21",
+  "value": 32.206,
+  "asOfDate": "Sep 25 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 24 2026",
-   "mo1": -1.31,
-   "mo1Text": "-1.31%",
-   "qtd": 11.38,
-   "qtdText": "11.38%",
-   "ytd": 19.17,
-   "ytdText": "19.17%",
-   "yr1": 33.41,
-   "yr1Text": "33.41%",
-   "yr3": 13.58,
-   "yr3Text": "13.58%",
+   "asOfDate": "Sep 25 2026",
+   "mo1": -0.8,
+   "mo1Text": "-0.80%",
+   "qtd": 11.27,
+   "qtdText": "11.27%",
+   "ytd": 19.06,
+   "ytdText": "19.06%",
+   "yr1": 31.11,
+   "yr1Text": "31.11%",
+   "yr3": 13.7,
+   "yr3Text": "13.70%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 7.83,
-   "sinceInceptionText": "7.83%"
+   "sinceInception": 7.79,
+   "sinceInceptionText": "7.79%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -90,8 +90,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 824,
-  "asOf": "Sep 24 2026"
+  "totalRows": 826,
+  "asOf": "Sep 25 2026"
  },
  "seed": {
   "seriesId": "S000079688",

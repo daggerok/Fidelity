@@ -1,4 +1,131 @@
 #!/usr/bin/env bun
+/// <reference types="bun" />
+import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
+import { createHash as outputCreateHash } from 'node:crypto';
+import { join as outputJoin } from 'node:path';
+import { fileURLToPath as outputFileURLToPath } from 'node:url';
+
+// Console presentation; no changes to provider requests or persisted data.
+/** Presentation only: no requests, writes, filtering, or changes to updater state. */
+
+const outputClean = (value: unknown): string => String(value ?? 'null').replace(/[\r\n\t]+/g, ' ');
+/** Presentation only: per-fund retry and fallback notices are printed when VERBOSE is enabled. */
+const outputVerbose = (): boolean => /^(1|true|yes|on)$/i.test((globalThis as any).process?.env?.VERBOSE ?? '');
+function outputNote(message: string): void { if (outputVerbose()) console.warn(message); }
+/** Names are the canonical environment knobs, not internal parser properties. */
+function outputConfigEntries(config: Record<string, any>): [string, string][] {
+  const values = new Map<string, string>();
+  const aliases: Record<string, string> = {
+    requestSleepSeconds: 'REQUEST_SLEEP', categories: 'CATEGORY',
+    aumRange: 'AUM', terRange: 'TER', dividendYieldRange: 'DIVIDEND_YIELD', secYieldRange: 'SEC_YIELD',
+    performanceRanges: 'PERFORMANCE', totalReturnRanges: 'TOTAL_RETURN',
+    skipVanEck: 'SKIP_VANECK', skipProShares: 'SKIP_PROSHARES',
+    skipWisdomTree: 'SKIP_WISDOMTREE', skipGoldmanSachs: 'SKIP_GOLDMANSACHS',
+  };
+  const range = (v: any): string => v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
+  for (const [key, value] of Object.entries(config)) {
+    const name = aliases[key] ?? key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase();
+    if (name === 'PERFORMANCE' || name === 'TOTAL_RETURN') {
+      for (const period of ['YTD', '1Y', '3Y', '5Y', '10Y']) values.set(`${name}_${period}`, range(value?.[period]));
+    } else if (['AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD'].includes(name)) {
+      values.set(name, range(value));
+    } else {
+      values.set(name, value instanceof Set ? [...value].join(',') || 'all' : Array.isArray(value) ? value.join(',') || 'all' : outputClean(value));
+    }
+  }
+  const first = ['MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY'];
+  return [...values].sort(([a], [b]) => {
+    const ai = first.indexOf(a), bi = first.indexOf(b);
+    return (ai < 0 ? first.length : ai) - (bi < 0 ? first.length : bi) || a.localeCompare(b);
+  });
+}
+function outputPrintConfig(brand: string, config: Record<string, any>): void {
+  const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+}
+function outputHasOutputFilters(config: Record<string, any>): boolean {
+  return outputConfigEntries(config).some(([name, value]) =>
+    /^(TICKERS|CATEGORY|AUM|TER|DIVIDEND_YIELD|SEC_YIELD|PERFORMANCE_|TOTAL_RETURN_)/.test(name) &&
+    !['', ':', 'null', 'all'].includes(value));
+}
+function outputPrintFilter(selected: number, total: number, deferred = false): void {
+  console.log(`[ filter   ] ${selected} of ${total} funds ${deferred ? 'selected for evaluation (data-dependent filters applied per fund)' : 'pass filters'}`);
+}
+function outputStable(value: any): any {
+  if (Array.isArray(value)) return value.map(outputStable);
+  if (value && typeof value === 'object') return Object.fromEntries(Object.keys(value).sort().filter(key => !['generatedAt', 'catalogReadAt'].includes(key)).map(key => [key, outputStable(value[key])]));
+  return value;
+}
+function outputContentKey(value: unknown): string { return JSON.stringify(outputStable(value)) ?? 'null'; }
+async function outputInspectFund(root: URL | string, ticker: string): Promise<{ digest: string; meta: any }> {
+  const dir = outputJoin(root instanceof URL ? outputFileURLToPath(root) : root, 'funds', ticker);
+  const hash = outputCreateHash('sha256');
+  async function visit(path: string): Promise<void> {
+    const entries = await outputReadDir(path, { withFileTypes: true }).catch(() => []);
+    for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
+      if (entry.isDirectory()) await visit(outputJoin(path, entry.name));
+      else if (entry.name.endsWith('.json')) {
+        const text = await outputReadFile(outputJoin(path, entry.name), 'utf8').catch(() => '');
+        hash.update(outputJoin(path.slice(dir.length), entry.name));
+        try { hash.update(outputContentKey(JSON.parse(text))); } catch { hash.update(text); }
+      }
+    }
+  }
+  await visit(dir);
+  const meta = await outputReadFile(outputJoin(dir, 'meta.json'), 'utf8').then(JSON.parse).catch(() => ({}));
+  return { digest: hash.digest('hex'), meta };
+}
+const outputCount = (value: any): unknown => typeof value === 'number' ? value : Array.isArray(value) ? value.length : value?.totalRows ?? value?.rows?.length ?? null;
+const outputScalar = (value: any): any => value && typeof value === 'object' ? value.display ?? value.value ?? null : value;
+function outputMoney(value: any): string {
+  const raw = outputScalar(value);
+  if (raw === null || raw === undefined || raw === '—' || raw === '--') return 'null';
+  const text = String(raw).replace(/[$,\s]/g, '');
+  const match = text.match(/^([+-]?[\d.]+)([KMBT])?$/i);
+  if (!match) return outputClean(raw);
+  const number = Number(match[1]) * ({ K: 1e3, M: 1e6, B: 1e9, T: 1e12 }[match[2]?.toUpperCase() as 'K' | 'M' | 'B' | 'T'] ?? 1);
+  if (!Number.isFinite(number)) return 'null';
+  for (const [unit, scale] of [['T', 1e12], ['B', 1e9], ['M', 1e6], ['K', 1e3]] as const) {
+    if (Math.abs(number) >= scale) return `$${(number / scale).toFixed(1)}${unit}`;
+  }
+  return `$${number.toFixed(2)}`;
+}
+function outputFundLine(index: number, total: number, ticker: string, status: string, data: any = {}, reason?: unknown): string {
+  const width = Math.max(2, String(total).length);
+  const metrics = data.metrics ?? {};
+  // Presentation only. Keep valid zero/false values; omit unavailable fields.
+  // outputMoney returns the string 'null' for an unavailable monetary value.
+  const field = (key: string, value: unknown): string =>
+    value === null || value === undefined || value === 'null' ? '' : `${key}=${outputClean(value)}`;
+  const sources = [
+    field('official', data.officialHistoryCount),
+    field('yahoo', data.yahooHistoryCount),
+  ].filter(part => part !== '').join(' ');
+  const detail = [
+    field('port', data.portId ?? data.portfolioId),
+    field('history', outputCount(data.history ?? data.historyCount)),
+    sources ? `(${sources})` : '',
+    field('holdings', outputCount(data.holdings ?? data.holdingsCount)),
+    field('divs', outputCount(data.worksheets?.Distributions ?? data.distributions)),
+    field('netAssets', outputMoney(data.netAssets ?? data.aum)),
+    field('total', outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)),
+    field('div', outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
+    field('sec', outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
+    field('wp', data.workplaceRaw),
+  ].filter(part => part !== '').join(' ');
+  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+}
+function outputCreateReporter(root: URL | string, total: number) {
+  let completed = 0;
+  return {
+    before: (ticker: string) => outputInspectFund(root, ticker),
+    async result(ticker: string, before: { digest: string }, status?: string, reason?: unknown, extra: any = {}) {
+      const after = await outputInspectFund(root, ticker);
+      console.log(outputFundLine(++completed, total, ticker, status ?? (before.digest === after.digest ? 'unchanged' : 'updated'), { ...after.meta, ...extra }, reason));
+    },
+  };
+}
+
 
 // Fidelity ETF static data updater.
 // Fetches official SEC EDGAR N-PORT-P holdings filings for the Fidelity ETF
@@ -7,7 +134,6 @@
 // JSON API under ./api/fidelity, following the daggerok/iShares and
 // daggerok/SPDR repository design (no dependencies, Bun only).
 
-/// <reference types="bun" />
 import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
 import { FIDELITY_FUNDS, FIDELITY_TRUSTS } from './fidelity-funds';
 import { HELD_TICKERS } from './held-tickers';
@@ -1222,7 +1348,7 @@ async function processFund(
     try {
       chart = parseChart(await fetchJson(chartUrl(ticker, config), `[chart   ] ${ticker}`, yahooHeaders(), config));
     } catch (error) {
-      console.warn(`[chart   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
+      outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
     }
   }
 
@@ -1243,7 +1369,6 @@ async function processFund(
   };
   const reasons = fundFilterReasons(candidate, config);
   if (reasons.length) {
-    console.log(`[${ticker.padEnd(5)}] skipped (${reasons.join(', ')})`);
     return null;
   }
 
@@ -1259,7 +1384,7 @@ async function processFund(
         await writeFile(new URL(`nport-${(nport.repPdDate || 'latest').replace(/-/g, '')}.xml`, rawDir), xml, 'utf8');
       }
     } catch (error) {
-      console.warn(`[nport   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous holdings`);
+      outputNote(`[ ${'nport'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous holdings`);
     }
   }
 
@@ -1268,9 +1393,9 @@ async function processFund(
   if (nport) {
     try {
       const resolved = await attachHoldingTickers(nport, resolver);
-      if (resolved) console.log(`[ticker   ] ${ticker}: resolved ${resolved}/${nport.holdings.length} holding tickers`);
+      if (resolved) outputNote(`[ ${'ticker'.padEnd(9)}] ${ticker}: resolved ${resolved}/${nport.holdings.length} holding tickers`);
     } catch (error) {
-      console.warn(`[ticker   ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping "-" tickers`);
+      outputNote(`[ ${'ticker'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping "-" tickers`);
     }
   }
 
@@ -1458,14 +1583,12 @@ async function main(): Promise<void> {
   const config = readConfig();
   requestSleepMs = Math.max(0, config.requestSleep) * 1000;
 
-  console.log('Fidelity ETF static data updater');
-  console.log('Sources: SEC EDGAR N-PORT-P (holdings, net assets) + Yahoo Finance public chart API (history, distributions)');
-  for (const line of configLines(config)) console.log(`  ${line}`);
+  outputPrintConfig('Fidelity', config);
   console.log('');
 
   const seedFunds = FIDELITY_FUNDS.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
-  console.log(`[seed    ] ${seedFunds.length} Fidelity ETFs across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants`);
-  console.log(`[ticker  ] ${Object.keys(HELD_TICKERS).length} known holding names in scripts/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
+  console.log(`[ ${'seed'.padEnd(9)}] ${seedFunds.length} Fidelity ETFs across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants`);
+  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(HELD_TICKERS).length} known holding names in scripts/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
 
   // Unknown holding names are resolved through the Yahoo symbol search
   // (strict name match). Every search is globally paced like the rest of the
@@ -1506,7 +1629,7 @@ async function main(): Promise<void> {
         );
         accessions = parseNportAccessions(submissions);
       } catch (error) {
-        console.warn(`[edgar   ] submissions ${cik}: ${error instanceof Error ? error.message : String(error)} — using seed accessions`);
+        outputNote(`[ ${'edgar'.padEnd(9)}] submissions ${cik}: ${error instanceof Error ? error.message : String(error)} — using seed accessions`);
         continue;
       }
       const fresh = accessions.filter((entry) => entry.filed > newestSeed).sort((a, b) => (a.filed < b.filed ? 1 : -1));
@@ -1540,6 +1663,8 @@ async function main(): Promise<void> {
   let lastProcessedTicker: string | null = cursor;
   let failures = 0;
 
+  outputPrintFilter(seedFunds.length, seedFunds.length, outputHasOutputFilters(config));
+  const output = outputCreateReporter(API_ROOT, config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length);
   async function worker(): Promise<void> {
     for (;;) {
       const item = queue.shift();
@@ -1549,18 +1674,20 @@ async function main(): Promise<void> {
       const previous = previousIndex.get(seed.ticker) || {};
       const entry = accessionBySeries.get(seriesKeyOf(seed)) || null;
       processed += 1;
+      const before = await output.before(seed.ticker);
       try {
         const row = await processFund(seed, entry ? entry.accession : null, config, previous, resolver);
         if (row) {
           results.push(row);
           lastProcessedTicker = seed.ticker;
         }
+        await output.result(seed.ticker, before, row ? undefined : 'skipped');
       } catch (error) {
         failures += 1;
-        console.warn(`[error   ] ${seed.ticker}: ${error instanceof Error ? error.message : String(error)}`);
+        await output.result(seed.ticker, before, 'failed', String(error));
       }
       if (config.maxFetches > 0 && processed >= config.maxFetches) {
-        console.log(`[cursor  ] batch of ${config.maxFetches} reached — rerun to continue after ${lastProcessedTicker}`);
+        console.log(`[ ${'cursor'.padEnd(9)}] batch of ${config.maxFetches} reached — rerun to continue after ${lastProcessedTicker}`);
         return;
       }
     }
@@ -1602,16 +1729,16 @@ async function main(): Promise<void> {
     const merged: Record<string, string> = { ...HELD_TICKERS, ...resolver.freshEntries() };
     const seedChanged = await writeTextIfChanged(HELD_TICKERS_FILE, formatHeldTickersSeed(merged));
     if (seedChanged) {
-      console.log(`[ticker  ] ${resolver.fresh.length} new name -> ticker mappings added to scripts/held-tickers.ts`);
+      console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to scripts/held-tickers.ts`);
     }
   }
 
   await writeUpdateState(lastProcessedTicker);
 
   console.log('');
-  console.log(`[done    ] ${results.length} funds updated, ${keptFromPrevious.length} kept from previous runs, ${failures} failures`);
-  console.log(`[done    ] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  console.log(`[cursor  ] ${lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)'}`);
+  console.log(`[ ${'done'.padEnd(9)}] ${results.length} funds updated, ${keptFromPrevious.length} kept from previous runs, ${failures} failures`);
+  console.log(`[ ${'done'.padEnd(9)}] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
+  console.log(`[ ${'cursor'.padEnd(9)}] ${lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)'}`);
 
   if (process.env.GITHUB_STEP_SUMMARY) {
     await appendFile(

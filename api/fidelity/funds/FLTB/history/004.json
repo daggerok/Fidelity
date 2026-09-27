@@ -2,7 +2,7 @@
  "ticker": "FLTB",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3006,
+ "totalRows": 3008,
  "headers": [
   "Date",
   "Close",
@@ -35,6 +35,12 @@
    "Volume": "101700"
   },
   {
+   "Date": "Sep 22 2026",
+   "Close": "49.52",
+   "Adj Close": "49.52",
+   "Volume": "37400"
+  },
+  {
    "Date": "Sep 23 2026",
    "Close": "49.32",
    "Adj Close": "49.32",
@@ -45,6 +51,12 @@
    "Close": "49.240002",
    "Adj Close": "49.240002",
    "Volume": "60300"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "Close": "49.310001",
+   "Adj Close": "49.310001",
+   "Volume": "41800"
   }
  ]
 }

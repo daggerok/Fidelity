@@ -2,7 +2,7 @@
  "ticker": "FDTX",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 824,
+ "totalRows": 826,
  "headers": [
   "Date",
   "Close",
@@ -4943,6 +4943,12 @@
    "Volume": "37500"
   },
   {
+   "Date": "Sep 22 2026",
+   "Close": "58.687",
+   "Adj Close": "58.687",
+   "Volume": "42700"
+  },
+  {
    "Date": "Sep 23 2026",
    "Close": "58.492001",
    "Adj Close": "58.492001",
@@ -4953,6 +4959,12 @@
    "Close": "58.839001",
    "Adj Close": "58.839001",
    "Volume": "35900"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "Close": "58.818001",
+   "Adj Close": "58.818001",
+   "Volume": "27000"
   }
  ]
 }
