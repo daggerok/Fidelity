@@ -936,7 +936,12 @@ export function parseChart(payload: JsonRecord): ParsedChart {
     days.push({
       date: epochToIsoDate(timestamps[i]),
       close: round(close, 6),
-      adjClose: round(adjClose, 6),
+      // Yahoo recomputes the split/dividend-adjusted close on every request;
+      // at 6 decimals the last digit or two jitters between otherwise
+      // identical requests, making every history row (and the fund) look
+      // "updated" on every single run. 2 decimals is well past any
+      // meaningful precision for a price and absorbs that jitter.
+      adjClose: round(adjClose, 2),
       volume: typeof volumes[i] === 'number' ? (volumes[i] as number) : 0,
     });
   }
@@ -1434,7 +1439,10 @@ async function processFund(
         ? `${EDGAR_ARCHIVES}/${Number(seed.trustCik)}/${accession.replace(/-/g, '')}/${accession.replace(/-/g, '')}-index.htm`
         : ((previous.source as JsonRecord)?.edgarFiling ?? null),
       nportDoc: nportUrl || ((previous.source as JsonRecord)?.nportDoc ?? null),
-      yahooChart: chartUrl(ticker, config),
+      // A stable provenance URL, not the live fetch URL: chartUrl(ticker, config)
+      // embeds the current timestamp in period2, which would make this field
+      // (and the file's digest) change on every single run.
+      yahooChart: `${YAHOO_CHART_URL}/${encodeURIComponent(ticker)}`,
       provider: 'SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API',
     },
     expenseRatio: numberOrNull(seed.ter) === null ? { display: '—', value: null } : { display: `${seed.ter}%`, value: numberOrNull(seed.ter) },
