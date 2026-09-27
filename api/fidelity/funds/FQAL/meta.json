@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FQAL",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004131/000003540226004131-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004131/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FQAL?period1=0&period2=1790315418&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FQAL?period1=0&period2=1790478807&interval=1d&events=div%7Csplit",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 24 2026"
+  "asOfDate": "Sep 25 2026"
  },
  "marketPrice": {
-  "display": "$83.77",
-  "value": 83.77,
-  "asOfDate": "Sep 24 2026"
+  "display": "$84.19",
+  "value": 84.19,
+  "asOfDate": "Sep 25 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 24 2026",
-   "mo1": -0.75,
-   "mo1Text": "-0.75%",
-   "qtd": 3.27,
-   "qtdText": "3.27%",
-   "ytd": 11.88,
-   "ytdText": "11.88%",
-   "yr1": 14.87,
-   "yr1Text": "14.87%",
-   "yr3": 20.43,
-   "yr3Text": "20.43%",
-   "yr5": 11.49,
-   "yr5Text": "11.49%",
-   "yr10": 14.16,
-   "yr10Text": "14.16%",
-   "sinceInception": 14.33,
-   "sinceInceptionText": "14.33%"
+   "asOfDate": "Sep 25 2026",
+   "mo1": -0.71,
+   "mo1Text": "-0.71%",
+   "qtd": 3.78,
+   "qtdText": "3.78%",
+   "ytd": 12.44,
+   "ytdText": "12.44%",
+   "yr1": 14.76,
+   "yr1Text": "14.76%",
+   "yr3": 21.17,
+   "yr3Text": "21.17%",
+   "yr5": 11.71,
+   "yr5Text": "11.71%",
+   "yr10": 14.28,
+   "yr10Text": "14.28%",
+   "sinceInception": 14.38,
+   "sinceInceptionText": "14.38%"
   },
   "quarterEnd": {
    "asOfDate": "Jun 30 2026",
@@ -236,8 +236,8 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2518,
-  "asOf": "Sep 24 2026"
+  "totalRows": 2520,
+  "asOf": "Sep 25 2026"
  },
  "seed": {
   "seriesId": "S000054753",

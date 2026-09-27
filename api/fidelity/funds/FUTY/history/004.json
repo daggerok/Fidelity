@@ -2,7 +2,7 @@
  "ticker": "FUTY",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3247,
+ "totalRows": 3249,
  "headers": [
   "Date",
   "Close",
@@ -1481,6 +1481,12 @@
    "Volume": "672100"
   },
   {
+   "Date": "Sep 22 2026",
+   "Close": "52.400002",
+   "Adj Close": "52.400002",
+   "Volume": "289500"
+  },
+  {
    "Date": "Sep 23 2026",
    "Close": "51.459999",
    "Adj Close": "51.459999",
@@ -1491,6 +1497,12 @@
    "Close": "51",
    "Adj Close": "51",
    "Volume": "955600"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "Close": "51.169998",
+   "Adj Close": "51.169998",
+   "Volume": "650400"
   }
  ]
 }
