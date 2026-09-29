@@ -14,32 +14,32 @@ on:
       request_sleep:
         description: "Seconds between outgoing request starts (SEC allows 10/s; Yahoo throttles; keep >= 1)"
         required: false
-        default: "1"
+        default: ""
         type: string
       aum:
         description: "AUM min:max; bounds may be amounts or K/M/B/T suffixes, or a nano/micro/small/mid/large preset"
         required: false
-        default: ":"
+        default: ""
         type: string
       ter:
         description: "Expense ratio range in %: min:max, min:, :max, or :"
         required: false
-        default: ":"
+        default: ""
         type: string
       concurrency:
         description: "Parallel fund update workers (keep low)"
         required: false
-        default: "2"
+        default: ""
         type: string
       holdings_page_size:
         description: "Rows in each generated current-holdings JSON page"
         required: false
-        default: "250"
+        default: ""
         type: string
       history_page_size:
         description: "Rows in each generated NAV-history JSON page"
         required: false
-        default: "1000"
+        default: ""
         type: string
       store_raw_downloads:
         description: "Store source N-PORT XML files (true/yes/on/1)"
@@ -49,7 +49,7 @@ on:
       max_retries:
         description: "Retries after the initial request (default 2)"
         required: false
-        default: "2"
+        default: ""
         type: string
       tickers:
         description: "Only update these tickers, separated by spaces or commas"
@@ -59,12 +59,12 @@ on:
       dividend_yield:
         description: "Indicated dividend-yield percentage range; colon required"
         required: false
-        default: ":"
+        default: ""
         type: string
       history_range:
         description: "Yahoo chart range for history rows (max, 10y, 5y, ...)"
         required: false
-        default: "max"
+        default: ""
         type: string
       skip_yahoo:
         description: "Update EDGAR holdings only, keeping previous history (true/1)"
@@ -74,7 +74,7 @@ on:
       refresh_catalog:
         description: "Scan EDGAR submissions for N-PORT filings newer than the seed (default on)"
         required: false
-        default: "1"
+        default: ""
         type: string
       performance_ytd:
         description: "Market-price YTD return range: min:max, min:, :max, or :; colon required"
@@ -138,20 +138,20 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
     env:
-      MAX_FETCHES: ${{ inputs.max_fetches || '0' }}
-      REQUEST_SLEEP: ${{ inputs.request_sleep || '1' }}
-      AUM: ${{ inputs.aum || ':' }}
-      TER: ${{ inputs.ter || ':' }}
-      CONCURRENCY: ${{ inputs.concurrency || '2' }}
-      HOLDINGS_PAGE_SIZE: ${{ inputs.holdings_page_size || '250' }}
-      HISTORY_PAGE_SIZE: ${{ inputs.history_page_size || '1000' }}
+      MAX_FETCHES: ${{ inputs.max_fetches || '' }}
+      REQUEST_SLEEP: ${{ inputs.request_sleep || '' }}
+      AUM: ${{ inputs.aum || '' }}
+      TER: ${{ inputs.ter || '' }}
+      CONCURRENCY: ${{ inputs.concurrency || '' }}
+      HOLDINGS_PAGE_SIZE: ${{ inputs.holdings_page_size || '' }}
+      HISTORY_PAGE_SIZE: ${{ inputs.history_page_size || '' }}
       STORE_RAW_DOWNLOADS: ${{ inputs.store_raw_downloads || '' }}
-      MAX_RETRIES: ${{ inputs.max_retries || '2' }}
+      MAX_RETRIES: ${{ inputs.max_retries || '' }}
       TICKERS: ${{ inputs.tickers || '' }}
-      DIVIDEND_YIELD: ${{ inputs.dividend_yield || ':' }}
-      HISTORY_RANGE: ${{ inputs.history_range || 'max' }}
+      DIVIDEND_YIELD: ${{ inputs.dividend_yield || '' }}
+      HISTORY_RANGE: ${{ inputs.history_range || '' }}
       SKIP_YAHOO: ${{ inputs.skip_yahoo || '' }}
-      REFRESH_CATALOG: ${{ inputs.refresh_catalog || '1' }}
+      REFRESH_CATALOG: ${{ inputs.refresh_catalog || '' }}
       PERFORMANCE_YTD: ${{ inputs.performance_ytd || '' }}
       PERFORMANCE_1Y: ${{ inputs.performance_1y || '' }}
       PERFORMANCE_3Y: ${{ inputs.performance_3y || '' }}
