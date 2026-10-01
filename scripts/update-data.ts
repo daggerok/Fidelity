@@ -431,7 +431,7 @@ function configLines(config: UpdaterConfig): string[] {
   ];
 }
 
-const USAGE = `
+export const USAGE = `
 Fidelity ETF static data updater (Bun, no dependencies).
 
   bun ./scripts/update-data.ts            update ./api/fidelity from SEC EDGAR + Yahoo
