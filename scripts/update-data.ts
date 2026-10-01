@@ -1,15 +1,4 @@
 #!/usr/bin/env bun
-// Checked-in JSON is the runtime default; any nonblank environment value wins.
-import { readFileSync as readUpdaterConfig } from 'node:fs';
-try {
-  const updaterDefaults = JSON.parse(readUpdaterConfig(new URL('./update-data.config.json', import.meta.url), 'utf8')) as Record<string, unknown>;
-  for (const [key, value] of Object.entries(updaterDefaults)) {
-    const current = process.env[key];
-    if ((current === undefined || current.trim() === '') && value !== null && value !== undefined) process.env[key] = String(value);
-  }
-} catch (error) {
-  if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-}
 /// <reference types="bun" />
 import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
 import { createHash as outputCreateHash } from 'node:crypto';
@@ -52,7 +41,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
 }
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
@@ -309,6 +298,11 @@ function parsePositiveInt(raw: string, fallback: number): number {
   return Number.isFinite(value) && value > 0 ? value : fallback;
 }
 
+function parseNonNegativeInt(raw: string, fallback: number): number {
+  const value = Number.parseInt(raw, 10);
+  return Number.isFinite(value) && value >= 0 ? value : fallback;
+}
+
 function parseNonNegativeFloat(raw: string, fallback: number): number {
   const value = Number(raw);
   return Number.isFinite(value) && value >= 0 ? value : fallback;
@@ -383,15 +377,15 @@ function parseRanges(env: Record<string, string | undefined>, prefix: 'PERFORMAN
   return ranges;
 }
 
-function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
+export function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
   return {
     concurrency: parsePositiveInt(envValue(env, 'CONCURRENCY'), CONCURRENCY_FALLBACK),
     requestSleep: parseNonNegativeFloat(envValue(env, 'REQUEST_SLEEP'), REQUEST_SLEEP_FALLBACK),
-    maxFetches: parsePositiveInt(envValue(env, 'MAX_FETCHES', ['FIDELITY_LIMIT']), 0),
+    maxFetches: parseNonNegativeInt(envValue(env, 'MAX_FETCHES', ['FIDELITY_LIMIT']), 0),
     holdingsPageSize: parsePositiveInt(envValue(env, 'HOLDINGS_PAGE_SIZE'), HOLDINGS_PAGE_SIZE_FALLBACK),
     historyPageSize: parsePositiveInt(envValue(env, 'HISTORY_PAGE_SIZE', ['HISTORICAL_PAGE_SIZE']), HISTORY_PAGE_SIZE_FALLBACK),
     storeRawDownloads: parseBoolean(envValue(env, 'STORE_RAW_DOWNLOADS', ['FIDELITY_STORE_RAW_DOWNLOADS']), false),
-    maxRetries: parsePositiveInt(envValue(env, 'MAX_RETRIES'), MAX_RETRIES_FALLBACK),
+    maxRetries: parseNonNegativeInt(envValue(env, 'MAX_RETRIES'), MAX_RETRIES_FALLBACK),
     tickers: envValue(env, 'TICKERS')
       .split(/[\s,;]+/)
       .map(sanitizeTicker)
@@ -447,7 +441,11 @@ Fidelity ETF static data updater (Bun, no dependencies).
                                           generated holdings data (no network)
   ./scripts/update-data.ts -h | --help    print this help
 
-Environment variables (all optional; strict "min:max" ranges; AND logic):
+Controls resolve as: scripts/update-data.config.json defaults < environment
+(the GitHub Actions workflow also layers an "advanced" JSON object and nonblank
+inputs between them). Every control below is a key of the config file; an
+explicit environment variable (optionally prefixed FIDELITY_) wins. Strict
+"min:max" ranges; AND logic.
 
   MAX_FETCHES          Batch size: continue after the ticker cursor saved in
                        api/fidelity/update-state.json. Empty or 0 means all.
@@ -480,6 +478,7 @@ Environment variables (all optional; strict "min:max" ranges; AND logic):
   SKIP_YAHOO           1/true to update EDGAR holdings only.
   REFRESH_CATALOG      0/false to skip scanning EDGAR submissions for N-PORT
                        filings newer than the seed accessions (default on).
+  VERBOSE              1/true to print per-fund retry and fallback notices.
 
 Holding tickers: N-PORT positions publish no exchange tickers, so the
 updater fills the holdings Ticker column from the name -> ticker seed in
@@ -1602,11 +1601,82 @@ async function backfillTickers(): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
+// Controls: one resolver shared by the CLI and the GitHub Actions workflow
+// ---------------------------------------------------------------------------
+
+// Precedence: config file < advanced JSON < nonblank named inputs < environment
+// (`FIDELITY_<KEY>` and legacy aliases are honored; explicit env wins).
+export const CONTROL_NAMES = [
+  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'TICKERS',
+  'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'STORE_RAW_DOWNLOADS', 'MAX_RETRIES', 'HISTORY_RANGE',
+  'SEC_UA', 'SKIP_YAHOO', 'REFRESH_CATALOG', 'VERBOSE',
+  ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => ['YTD', '1Y', '3Y', '5Y', '10Y'].map((period) => `${prefix}_${period}`)),
+] as const;
+export type ControlName = (typeof CONTROL_NAMES)[number];
+export const CONFIG_FILE_URL = new URL('./update-data.config.json', import.meta.url);
+const CONTROL_ENV_ALIASES: Partial<Record<ControlName, string[]>> = {
+  MAX_FETCHES: ['FIDELITY_LIMIT'],
+  HISTORY_PAGE_SIZE: ['HISTORICAL_PAGE_SIZE'],
+};
+
+export function resolveControls(
+  file: unknown = {},
+  advanced: unknown = {},
+  inputs: unknown = {},
+  env: Record<string, string | undefined> = {},
+): Record<string, string> {
+  const result: Record<string, string> = {};
+  const known = new Set<string>(CONTROL_NAMES);
+  const apply = (value: unknown, skipEmpty = false): void => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Configuration must be a JSON object');
+    for (const [key, raw] of Object.entries(value)) {
+      if (!known.has(key)) throw new Error(`Unknown updater control: ${key}`);
+      if (skipEmpty && (raw === '' || raw === undefined || raw === null)) continue;
+      if (!['string', 'number', 'boolean'].includes(typeof raw)) throw new Error(`${key}: expected string, number or boolean`);
+      const text = String(raw);
+      if (/[\r\n\0]/.test(text)) throw new Error(`${key}: multiline/control characters are not allowed`);
+      result[key] = text;
+    }
+  };
+  apply(file);
+  apply(advanced);
+  apply(inputs, true);
+  for (const key of CONTROL_NAMES) {
+    const value = [`FIDELITY_${key}`, key, ...(CONTROL_ENV_ALIASES[key] ?? [])].map((name) => env[name]).find((v) => v !== undefined);
+    if (value !== undefined) apply({ [key]: value });
+  }
+  for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
+    const v = result[key]?.trim();
+    if (v === undefined || v === '') continue;
+    const min = ['MAX_FETCHES', 'MAX_RETRIES'].includes(key) ? 0 : 1;
+    if (!/^\d+$/.test(v) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
+  }
+  const sleep = result.REQUEST_SLEEP?.trim();
+  if (sleep && (!Number.isFinite(Number(sleep)) || Number(sleep) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
+  for (const key of ['STORE_RAW_DOWNLOADS', 'SKIP_YAHOO', 'REFRESH_CATALOG', 'VERBOSE']) {
+    if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
+  }
+  const range = result.HISTORY_RANGE?.trim();
+  if (range && !/^(max|\d+y)$/i.test(range)) throw new Error('HISTORY_RANGE: expected "max" or "<N>y"');
+  readConfig(result); // validate every min:max filter before any request or write
+  return result;
+}
+
+export async function runtimeControls(env: Record<string, string | undefined> = process.env): Promise<Record<string, string>> {
+  let file: unknown = {};
+  try { file = JSON.parse(await readFile(CONFIG_FILE_URL, 'utf8')); }
+  catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+  return resolveControls(file, {}, {}, env);
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
-async function main(): Promise<void> {
-  const config = readConfig();
+export async function main(env: Record<string, string | undefined> = process.env): Promise<void> {
+  const controls = await runtimeControls(env);
+  if (env === process.env) process.env.VERBOSE = controls.VERBOSE ?? '';
+  const config = readConfig(controls);
   requestSleepMs = Math.max(0, config.requestSleep) * 1000;
   nextRequestAtLanes = new Array(Math.max(1, config.concurrency)).fill(0);
 
