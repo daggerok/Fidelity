@@ -72,6 +72,7 @@ Caveats:
 | `SKIP_YAHOO` | `false` | Skip Yahoo Finance requests (EDGAR holdings only, previous history is kept). |
 | `REFRESH_CATALOG` | `1` | Scan EDGAR submissions for N-PORT filings newer than the seed accessions; `0` skips. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
+| `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Market-price return ranges (strict `min:max`, colon required; 3Y/5Y/10Y are CAGR). |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative return ranges (strict `min:max`, colon required). |
 
