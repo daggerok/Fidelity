@@ -135,8 +135,122 @@ function outputCreateReporter(root: URL | string, total: number) {
 // daggerok/SPDR repository design (no dependencies, Bun only).
 
 import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
-import { FIDELITY_FUNDS, FIDELITY_TRUSTS } from './fidelity-funds';
-import { HELD_TICKERS } from './held-tickers';
+import { HELD_TICKERS } from '../data/held-tickers';
+
+// ---------------------------------------------------------------------------
+// Fidelity ETF seed
+// ---------------------------------------------------------------------------
+
+// Fidelity ETF seed: ticker <-> SEC series mapping, verified against
+// EDGAR N-PORT-P filings (seriesId + accession) and Yahoo Finance
+// (instrumentType, longName, firstTradeDate, expense ratio).
+//
+// Fidelity publishes no public fund-data API, so this seed is the catalog
+// backbone: the updater refreshes holdings by seriesId from EDGAR and
+// history from Yahoo. Re-verify quarterly with the REFRESH_CATALOG scan
+// (new N-PORT filings) and `bun test` regression checks.
+//
+// Generated 2026-08-26 from SEC EDGAR + Yahoo public data.
+
+export const FIDELITY_TRUSTS: Record<string, string> = {
+  '0000945908': 'Fidelity Covington Trust',
+  '0001562565': 'Fidelity Merrimack Street Trust',
+  '0001852317': 'Fidelity Wise Origin Bitcoin Fund',
+  '0002000046': 'Fidelity Ethereum Fund',
+};
+
+export type FidelitySeedFund = {
+  ticker: string;
+  name: string;
+  seriesId: string | null;
+  trustCik: string;
+  category: string;
+  accession: string | null;
+  filed: string | null;
+  repPdDate: string | null;
+  inception: string | null;
+  exchange: string;
+  ter: number | null;
+  fundPage: string;
+  catalogOnly?: boolean;
+};
+
+export const FIDELITY_FUNDS: FidelitySeedFund[] = [
+    { ticker: 'FAAA', name: 'Fidelity AAA CLO ETF', seriesId: 'S000099377', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004633', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2026-02-12', exchange: 'NasdaqGM', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FAAA' },
+    { ticker: 'FBCG', name: 'Fidelity Blue Chip Growth ETF', seriesId: 'S000068173', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004036', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2020-06-05', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBCG' },
+    { ticker: 'FBCV', name: 'Fidelity Blue Chip Value ETF', seriesId: 'S000068175', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004033', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2020-06-05', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBCV' },
+    { ticker: 'FBND', name: 'Fidelity Total Bond ETF', seriesId: 'S000042567', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004724', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2014-10-09', exchange: 'NYSEArca', ter: 0.36, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBND' },
+    { ticker: 'FBOT', name: 'Fidelity Disruptive Automation ETF', seriesId: 'S000079685', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-004640', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2023-06-12', exchange: 'NasdaqGM', ter: 0.5, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBOT' },
+    { ticker: 'FBTC', name: 'Fidelity Wise Origin Bitcoin Fund', seriesId: null, trustCik: '0001852317', category: 'Digital Assets', accession: null, filed: null, repPdDate: null, inception: '2024-01-11', exchange: 'Cboe US', ter: 0.25, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBTC', catalogOnly: true },
+    { ticker: 'FCLD', name: 'Fidelity Cloud Computing ETF', seriesId: 'S000073598', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-005390', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2021-10-07', exchange: 'Cboe US', ter: 0.39, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCLD' },
+    { ticker: 'FCLO', name: 'Fidelity CLO ETF', seriesId: 'S000099376', trustCik: '0000945908', category: 'Bond', accession: '0000035402-26-004622', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2026-02-12', exchange: 'NasdaqGM', ter: 0.0, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCLO' },
+    { ticker: 'FCOM', name: 'Fidelity MSCI Communication Services Index ETF', seriesId: 'S000042579', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063883', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCOM' },
+    { ticker: 'FCOR', name: 'Fidelity Corporate Bond ETF', seriesId: 'S000040431', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004643', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2014-10-09', exchange: 'NYSEArca', ter: 0.36, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCOR' },
+    { ticker: 'FCPI', name: 'Fidelity Stocks for Inflation ETF', seriesId: 'S000066804', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004225', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2019-11-07', exchange: 'Cboe US', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCPI' },
+    { ticker: 'FDCF', name: 'Fidelity Disruptive Communications ETF', seriesId: 'S000079686', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-004620', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2023-06-12', exchange: 'NasdaqGM', ter: 0.5, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDCF' },
+    { ticker: 'FDEM', name: 'Fidelity Emerging Markets Multifactor ETF', seriesId: 'S000064787', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004045', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2019-03-01', exchange: 'Cboe US', ter: 0.25, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDEM' },
+    { ticker: 'FDEV', name: 'Fidelity International Multifactor ETF', seriesId: 'S000064788', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004091', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2019-03-01', exchange: 'Cboe US', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDEV' },
+    { ticker: 'FDFF', name: 'Fidelity Disruptive Finance ETF', seriesId: 'S000079687', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-004619', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2023-06-12', exchange: 'NasdaqGM', ter: 0.5, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDFF' },
+    { ticker: 'FDHY', name: 'Fidelity Enhanced High Yield ETF', seriesId: 'S000062078', trustCik: '0000945908', category: 'Bond', accession: '0000035402-26-004665', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2018-06-14', exchange: 'NYSEArca', ter: 0.35, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDHY' },
+    { ticker: 'FDIF', name: 'Fidelity Disruptors ETF', seriesId: 'S000079690', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004651', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2023-06-20', exchange: 'NasdaqGM', ter: 0.5, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDIF' },
+    { ticker: 'FDIG', name: 'Fidelity Crypto Industry and Digital Payments ETF', seriesId: 'S000075902', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-005394', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2022-04-21', exchange: 'NasdaqGM', ter: 0.39, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDIG' },
+    { ticker: 'FDIS', name: 'Fidelity MSCI Consumer Discretionary Index ETF', seriesId: 'S000042570', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063882', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDIS' },
+    { ticker: 'FDLO', name: 'Fidelity Low Volatility Factor ETF', seriesId: 'S000054751', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004112', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2016-09-15', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDLO' },
+    { ticker: 'FDMO', name: 'Fidelity Momentum Factor ETF', seriesId: 'S000054752', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004099', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2016-09-15', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDMO' },
+    { ticker: 'FDRV', name: 'Fidelity Electric Vehicles and Future Transportation ETF', seriesId: 'S000073600', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-005378', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2021-10-07', exchange: 'Cboe US', ter: 0.39, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDRV' },
+    { ticker: 'FDTX', name: 'Fidelity Disruptive Technology ETF', seriesId: 'S000079689', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-004627', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2023-06-12', exchange: 'NasdaqGM', ter: 0.5, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDTX' },
+    { ticker: 'FDVV', name: 'Fidelity High Dividend ETF', seriesId: 'S000054749', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004078', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2016-09-15', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDVV' },
+    { ticker: 'FEAC', name: 'Fidelity Enhanced U.S. All-Cap Equity ETF', seriesId: 'S000087779', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005417', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2024-11-21', exchange: 'NYSEArca', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FEAC' },
+    { ticker: 'FELC', name: 'Fidelity Enhanced Large Cap Core ETF', seriesId: 'S000081804', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005398', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2023-11-20', exchange: 'NYSEArca', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FELC' },
+    { ticker: 'FELG', name: 'Fidelity Enhanced Large Cap Growth ETF', seriesId: 'S000081805', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005384', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2023-11-20', exchange: 'NYSEArca', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FELG' },
+    { ticker: 'FELV', name: 'Fidelity Enhanced Large Cap Value ETF', seriesId: 'S000081806', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005385', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2023-11-20', exchange: 'NYSEArca', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FELV' },
+    { ticker: 'FEMG', name: 'Fidelity Enhanced Mid Cap Growth ETF', seriesId: 'S000102550', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005396', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2026-04-30', exchange: 'NYSEArca', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FEMG' },
+    { ticker: 'FEMR', name: 'Fidelity Enhanced Emerging Markets ETF', seriesId: 'S000087780', trustCik: '0000945908', category: 'International', accession: '0000035402-26-005383', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2024-11-21', exchange: 'NYSEArca', ter: 0.38, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FEMR' },
+    { ticker: 'FEMV', name: 'Fidelity Enhanced Mid Cap Value ETF', seriesId: 'S000102551', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005395', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2026-04-30', exchange: 'NYSEArca', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FEMV' },
+    { ticker: 'FENI', name: 'Fidelity Enhanced International ETF', seriesId: 'S000081802', trustCik: '0000945908', category: 'International', accession: '0000035402-26-005399', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2023-11-20', exchange: 'NYSEArca', ter: 0.28, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FENI' },
+    { ticker: 'FENY', name: 'Fidelity MSCI Energy Index ETF', seriesId: 'S000042573', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063881', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FENY' },
+    { ticker: 'FESM', name: 'Fidelity Enhanced Small Cap Core ETF', seriesId: 'S000081807', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005400', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2023-11-20', exchange: 'NYSEArca', ter: 0.28, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FESM' },
+    { ticker: 'FETH', name: 'Fidelity Ethereum Fund', seriesId: null, trustCik: '0002000046', category: 'Digital Assets', accession: null, filed: null, repPdDate: null, inception: '2024-07-23', exchange: 'Cboe US', ter: 0.25, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FETH', catalogOnly: true },
+    { ticker: 'FFDI', name: 'Fidelity Fundamental Developed International ETF', seriesId: 'S000087781', trustCik: '0000945908', category: 'International', accession: '0000035402-26-004054', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2024-11-21', exchange: 'Cboe US', ter: 0.55, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFDI' },
+    { ticker: 'FFEM', name: 'Fidelity Fundamental Emerging Markets ETF', seriesId: 'S000087783', trustCik: '0000945908', category: 'International', accession: '0000035402-26-004060', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2024-11-21', exchange: 'Cboe US', ter: 0.6, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFEM' },
+    { ticker: 'FFGX', name: 'Fidelity Fundamental Global ex US ETF', seriesId: 'S000087782', trustCik: '0000945908', category: 'International', accession: '0000035402-26-004042', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2024-11-21', exchange: 'Cboe US', ter: 0.55, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFGX' },
+    { ticker: 'FFLC', name: 'Fidelity Fundamental Large Cap Core ETF', seriesId: 'S000068174', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004052', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2020-06-05', exchange: 'Cboe US', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFLC' },
+    { ticker: 'FFLG', name: 'Fidelity Fundamental Large Cap Growth ETF', seriesId: 'S000070233', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004062', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFLG' },
+    { ticker: 'FFLV', name: 'Fidelity Fundamental Large Cap Value ETF', seriesId: 'S000084016', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004089', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2024-02-26', exchange: 'Cboe US', ter: 0.38, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFLV' },
+    { ticker: 'FFSM', name: 'Fidelity Fundamental Small-Mid Cap ETF', seriesId: 'S000070236', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004079', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFSM' },
+    { ticker: 'FHLC', name: 'Fidelity MSCI Health Care Index ETF', seriesId: 'S000042575', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063876', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FHLC' },
+    { ticker: 'FIDI', name: 'Fidelity International High Dividend ETF', seriesId: 'S000059462', trustCik: '0000945908', category: 'International', accession: '0000035402-26-004085', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2018-01-25', exchange: 'NYSEArca', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIDI' },
+    { ticker: 'FIDU', name: 'Fidelity MSCI Industrials Index ETF', seriesId: 'S000042576', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063878', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIDU' },
+    { ticker: 'FIGB', name: 'Fidelity Investment Grade Bond ETF', seriesId: 'S000071131', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004658', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2021-03-04', exchange: 'NYSEArca', ter: 0.36, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIGB' },
+    { ticker: 'FIVA', name: 'Fidelity International Value Factor ETF', seriesId: 'S000059463', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004084', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2018-01-25', exchange: 'NYSEArca', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIVA' },
+    { ticker: 'FLDB', name: 'Fidelity Low Duration Bond Factor ETF', seriesId: 'S000062079', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004687', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2024-02-26', exchange: 'NasdaqGM', ter: 0.2, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLDB' },
+    { ticker: 'FLDR', name: 'Fidelity Low Duration Bond ETF', seriesId: 'S000084018', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004694', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2018-06-18', exchange: 'Cboe US', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLDR' },
+    { ticker: 'FLRG', name: 'Fidelity U.S. Multifactor ETF', seriesId: 'S000068350', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004211', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2020-09-18', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLRG' },
+    { ticker: 'FLTB', name: 'Fidelity Limited Term Bond ETF', seriesId: 'S000042569', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004685', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2014-10-09', exchange: 'NYSEArca', ter: 0.25, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLTB' },
+    { ticker: 'FMAG', name: 'Fidelity Magellan ETF', seriesId: 'S000070234', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004116', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMAG' },
+    { ticker: 'FMAT', name: 'Fidelity MSCI Materials Index ETF', seriesId: 'S000042578', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063875', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMAT' },
+    { ticker: 'FMDE', name: 'Fidelity Enhanced Mid Cap Core ETF', seriesId: 'S000081803', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005387', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2023-11-20', exchange: 'NYSEArca', ter: 0.23, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMDE' },
+    { ticker: 'FMED', name: 'Fidelity Disruptive Medicine ETF', seriesId: 'S000079688', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-004621', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2023-06-12', exchange: 'NasdaqGM', ter: 0.5, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMED' },
+    { ticker: 'FMET', name: 'Fidelity Metaverse ETF', seriesId: 'S000075903', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-005474', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2022-04-21', exchange: 'NasdaqGM', ter: 0.39, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMET' },
+    { ticker: 'FMUB', name: 'Fidelity Municipal Bond Opportunities ETF', seriesId: 'S000089370', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004110', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2025-04-07', exchange: 'NasdaqGM', ter: 0.3, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMUB' },
+    { ticker: 'FMUN', name: 'Fidelity Systematic Municipal Bond Index ETF', seriesId: 'S000089371', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-005529', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2025-04-08', exchange: 'NasdaqGM', ter: 0.05, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMUN' },
+    { ticker: 'FNCL', name: 'Fidelity MSCI Financials Index ETF', seriesId: 'S000042574', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063879', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FNCL' },
+    { ticker: 'FPFD', name: 'Fidelity Preferred Securities and Income ETF', seriesId: 'S000072125', trustCik: '0000945908', category: 'Bond', accession: '0000035402-26-004678', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2021-06-17', exchange: 'Cboe US', ter: 0.59, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPFD' },
+    { ticker: 'FPRO', name: 'Fidelity MSCI Real Estate Index ETF', seriesId: 'S000047984', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063884', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPRO' },
+    { ticker: 'FQAL', name: 'Fidelity Quality Factor ETF', seriesId: 'S000054753', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004131', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2016-09-16', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FQAL' },
+    { ticker: 'FREI', name: 'Fidelity Real Estate Investment ETF', seriesId: 'S000070235', trustCik: '0000945908', category: 'Sector', accession: '0000035402-26-004137', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FREI' },
+    { ticker: 'FRNW', name: 'Fidelity Clean Energy ETF', seriesId: 'S000073597', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-005377', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2021-10-07', exchange: 'Cboe US', ter: 0.39, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FRNW' },
+    { ticker: 'FSEC', name: 'Fidelity Investment Grade Securitized ETF', seriesId: 'S000071132', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004686', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2021-03-08', exchange: 'NYSEArca', ter: 0.36, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSEC' },
+    { ticker: 'FSEG', name: 'Fidelity Enhanced Small Cap Growth ETF', seriesId: 'S000102552', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005422', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2026-04-30', exchange: 'NYSEArca', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSEG' },
+    { ticker: 'FSEV', name: 'Fidelity Enhanced Small Cap Value ETF', seriesId: 'S000102553', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005415', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2026-04-30', exchange: 'NYSEArca', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSEV' },
+    { ticker: 'FSMD', name: 'Fidelity Small-Mid Multifactor ETF', seriesId: 'S000064786', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004227', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2019-02-28', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSMD' },
+    { ticker: 'FSTA', name: 'Fidelity MSCI Consumer Staples Index ETF', seriesId: 'S000042572', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063877', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSTA' },
+    { ticker: 'FSYD', name: 'Fidelity Sustainable High Yield ETF', seriesId: 'S000075296', trustCik: '0000945908', category: 'Bond', accession: '0000035402-26-004717', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2022-02-17', exchange: 'NYSEArca', ter: 0.55, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSYD' },
+    { ticker: 'FTBD', name: 'Fidelity Tactical Bond ETF', seriesId: 'S000079047', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004704', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2023-01-26', exchange: 'NYSEArca', ter: 0.55, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FTBD' },
+    { ticker: 'FTEC', name: 'Fidelity MSCI Information Technology Index ETF', seriesId: 'S000042577', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063885', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FTEC' },
+    { ticker: 'FUTY', name: 'Fidelity MSCI Utilities Index ETF', seriesId: 'S000042571', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063880', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FUTY' },
+    { ticker: 'FVAL', name: 'Fidelity Value Factor ETF', seriesId: 'S000054754', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004222', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2016-09-15', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FVAL' },
+];
 
 // ---------------------------------------------------------------------------
 // Constants and small helpers
@@ -147,13 +261,13 @@ type JsonRecord = Record<string, any>;
 const SEC_DATA_HOST = 'https://data.sec.gov';
 const EDGAR_ARCHIVES = 'https://www.sec.gov/Archives/edgar/data';
 // Yahoo symbol-search endpoint used to resolve holding names that the static
-// name -> ticker seed (scripts/held-tickers.ts) does not cover yet.
+// name -> ticker seed (data/held-tickers.ts) does not cover yet.
 const YAHOO_SEARCH_URL = 'https://query1.finance.yahoo.com/v1/finance/search';
 // SEC requires a declared User-Agent for automated access:
 // https://www.sec.gov/os/accessing-edgar-data
 // SEC's WAF accepts the strict "Company Name contact@domain" shape: no
 // parentheses, no URLs. Override with SEC_UA when running from CI.
-const SEC_UA_DEFAULT = 'DaggerOk Fidelity Feed admin@daggerok.example.com';
+const SEC_UA_DEFAULT = 'daggerok ETF feed daggerok@gmail.com';
 const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const YAHOO_BROWSER_UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
@@ -385,7 +499,7 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     holdingsPageSize: parsePositiveInt(envValue(env, 'HOLDINGS_PAGE_SIZE'), HOLDINGS_PAGE_SIZE_FALLBACK),
     historyPageSize: parsePositiveInt(envValue(env, 'HISTORY_PAGE_SIZE', ['HISTORICAL_PAGE_SIZE']), HISTORY_PAGE_SIZE_FALLBACK),
     storeRawDownloads: parseBoolean(envValue(env, 'STORE_RAW_DOWNLOADS', ['FIDELITY_STORE_RAW_DOWNLOADS']), false),
-    maxRetries: parseNonNegativeInt(envValue(env, 'MAX_RETRIES'), MAX_RETRIES_FALLBACK),
+    maxRetries: parsePositiveInt(envValue(env, 'MAX_RETRIES'), MAX_RETRIES_FALLBACK),
     tickers: envValue(env, 'TICKERS')
       .split(/[\s,;]+/)
       .map(sanitizeTicker)
@@ -437,14 +551,15 @@ Fidelity ETF static data updater (Bun, no dependencies).
   bun ./scripts/update-data.ts            update ./api/fidelity from SEC EDGAR + Yahoo
   ./scripts/update-data.ts --backfill-tickers
                                           offline: stamp real exchange tickers from
-                                          scripts/held-tickers.ts into already
+                                          data/held-tickers.ts into already
                                           generated holdings data (no network)
   ./scripts/update-data.ts -h | --help    print this help
 
 Controls resolve as: scripts/update-data.config.json defaults < environment
 (the GitHub Actions workflow also layers an "advanced" JSON object and nonblank
 inputs between them). Every control below is a key of the config file; an
-explicit environment variable (optionally prefixed FIDELITY_) wins. Strict
+explicitly set environment variable (optionally prefixed FIDELITY_) wins even
+when empty, which clears the control. Strict
 "min:max" ranges; AND logic.
 
   MAX_FETCHES          Batch size: continue after the ticker cursor saved in
@@ -455,7 +570,7 @@ explicit environment variable (optionally prefixed FIDELITY_) wins. Strict
                        requests per second; Yahoo throttles hard, keep >= 1.
   CONCURRENCY          Parallel fund workers (default 2). Starts are still
                        globally spaced by REQUEST_SLEEP.
-  MAX_RETRIES          Retries after the initial request (default 2). Only
+  MAX_RETRIES          Retries after the initial request (integer >= 1, default 2). Only
                        network errors and HTTP 403/408/425/429/5xx responses
                        are retried with bounded exponential backoff.
   TICKERS              Space-, comma- or semicolon-separated ticker allowlist,
@@ -482,10 +597,10 @@ explicit environment variable (optionally prefixed FIDELITY_) wins. Strict
 
 Holding tickers: N-PORT positions publish no exchange tickers, so the
 updater fills the holdings Ticker column from the name -> ticker seed in
-scripts/held-tickers.ts (SEC EDGAR company tickers + exchange symbol
+data/held-tickers.ts (SEC EDGAR company tickers + exchange symbol
 directories). Names the seed does not cover yet are resolved live through
 the Yahoo Finance symbol search with a strict name match; new mappings are
-written back to scripts/held-tickers.ts (commit it with the data update).
+written back to data/held-tickers.ts (commit it with the data update).
 Bond / private positions have no exchange ticker and keep "-".
 
 AUM and return filters are evaluated against fresh Yahoo data and the
@@ -584,7 +699,7 @@ async function fetchJson(url: string, label: string, headers: Record<string, str
 // N-PORT positions publish no exchange tickers — only the issuer name and a
 // CUSIP/ISIN. The holdings feed still needs real tickers (the Watchlist
 // "Copy Tickers" action, exports, deduplication), so the updater resolves
-// them from the name -> ticker seed in scripts/held-tickers.ts and, for names
+// them from the name -> ticker seed in data/held-tickers.ts and, for names
 // the seed does not cover yet (new IPOs, foreign listings), from the Yahoo
 // Finance symbol search with a STRICT name match so a fuzzy hit can never
 // pin the wrong security. Positions that genuinely have no exchange ticker
@@ -779,10 +894,10 @@ async function attachHoldingTickers(nport: ParsedNport, resolver: TickerResolver
 }
 
 // ---------------------------------------------------------------------------
-// Seed file persistence (scripts/held-tickers.ts grows with live resolutions)
+// Seed file persistence (data/held-tickers.ts grows with live resolutions)
 // ---------------------------------------------------------------------------
 
-const HELD_TICKERS_FILE = new URL('held-tickers.ts', import.meta.url);
+const HELD_TICKERS_FILE = new URL('../data/held-tickers.ts', import.meta.url);
 
 export function formatHeldTickersSeed(entries: Record<string, string>): string {
   const rows = Object.entries(entries)
@@ -1548,7 +1663,7 @@ async function processFund(
 async function backfillTickers(): Promise<void> {
   console.log('Fidelity ETF static data updater — holdings ticker backfill (offline, seed only)');
   const resolver = new TickerResolver(HELD_TICKERS);
-  console.log(`[ticker  ] ${resolver.size} known holding names in scripts/held-tickers.ts`);
+  console.log(`[ticker  ] ${resolver.size} known holding names in data/held-tickers.ts`);
 
   const fundsDir = new URL('funds/', API_ROOT);
   let fundDirs: string[] = [];
@@ -1648,7 +1763,7 @@ export function resolveControls(
   for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
     const v = result[key]?.trim();
     if (v === undefined || v === '') continue;
-    const min = ['MAX_FETCHES', 'MAX_RETRIES'].includes(key) ? 0 : 1;
+    const min = key === 'MAX_FETCHES' ? 0 : 1;
     if (!/^\d+$/.test(v) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
   }
   const sleep = result.REQUEST_SLEEP?.trim();
@@ -1685,7 +1800,7 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   const seedFunds = FIDELITY_FUNDS.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
   console.log(`[ ${'seed'.padEnd(9)}] ${seedFunds.length} Fidelity ETFs across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants`);
-  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(HELD_TICKERS).length} known holding names in scripts/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
+  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(HELD_TICKERS).length} known holding names in data/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
 
   // Unknown holding names are resolved through the Yahoo symbol search
   // (strict name match). Every search is globally paced like the rest of the
@@ -1813,7 +1928,7 @@ export async function main(env: Record<string, string | undefined> = process.env
       site: 'https://digital.fidelity.com/prgw/digital/research/etfs',
       catalog: 'SEC EDGAR N-PORT-P filings of the Fidelity ETF trusts',
       history: 'Yahoo Finance public chart API (adjusted close)',
-      holdingTickers: 'scripts/held-tickers.ts seed (SEC EDGAR company tickers + exchange symbol directories) extended live by the Yahoo Finance symbol search',
+      holdingTickers: 'data/held-tickers.ts seed (SEC EDGAR company tickers + exchange symbol directories) extended live by the Yahoo Finance symbol search',
       trusts: FIDELITY_TRUSTS,
     },
     counts,
@@ -1826,7 +1941,7 @@ export async function main(env: Record<string, string | undefined> = process.env
     const merged: Record<string, string> = { ...HELD_TICKERS, ...resolver.freshEntries() };
     const seedChanged = await writeTextIfChanged(HELD_TICKERS_FILE, formatHeldTickersSeed(merged));
     if (seedChanged) {
-      console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to scripts/held-tickers.ts`);
+      console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to data/held-tickers.ts`);
     }
   }
 
