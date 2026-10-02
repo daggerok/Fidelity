@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'bun:test';
+import { afterEach, describe, expect, test } from 'bun:test';
 import {
   parseRange,
   parseAumRange,
@@ -26,6 +26,8 @@ import {
   resolveControls,
   runtimeControls,
   USAGE,
+  isCertError,
+  installSystemCa,
 } from './update-data';
 import { readFileSync } from 'node:fs';
 import { HELD_TICKERS } from '../data/held-tickers';
@@ -580,7 +582,7 @@ test('legacy FIDELITY_ prefix and aliases keep working and the prefix wins', () 
 });
 
 test('resolver rejects unknown, invalid and environment-file injection values', () => {
-  for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { MAX_FETCHES: 1.5 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { SKIP_YAHOO: 'maybe' }, { HISTORY_RANGE: '5 years' }, { AUM: '5' }, { TER: '1:0' }, { PERFORMANCE_1Y: '5' }, { TICKERS: ['FDIS'] }, { TICKERS: { a: 1 } }, null, []]) {
+  for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { MAX_FETCHES: 1.5 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { USE_SYSTEM_CA: 'maybe' }, { SKIP_YAHOO: 'maybe' }, { HISTORY_RANGE: '5 years' }, { AUM: '5' }, { TER: '1:0' }, { PERFORMANCE_1Y: '5' }, { TICKERS: ['FDIS'] }, { TICKERS: { a: 1 } }, null, []]) {
     expect(() => resolveControls(value)).toThrow();
   }
   expect(() => resolveControls({}, { SEC_UA: 'x\rfoo' })).toThrow();
@@ -655,4 +657,68 @@ test('README keeps the standard section order and no stale references', () => {
   let at = -1;
   for (const heading of order) { const next = doc.indexOf(heading); expect(next, heading).toBeGreaterThan(at); at = next; }
   expect(doc).not.toMatch(/worklog|\.prompt|evidence|fixtures|config-docs/i);
+});
+
+test('USE_SYSTEM_CA accepts auto/true/false case-insensitively, rejects others, defaults to auto', () => {
+  for (const value of ['auto', 'true', 'false', 'AUTO', 'True', 'FALSE']) expect(resolveControls({}, { USE_SYSTEM_CA: value }).USE_SYSTEM_CA).toBe(value);
+  expect(() => resolveControls({}, { USE_SYSTEM_CA: 'maybe' })).toThrow();
+  expect(() => resolveControls({}, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow();
+  expect(JSON.parse(read('scripts/update-data.config.json')).USE_SYSTEM_CA).toBe('auto');
+});
+
+test('isCertError recognizes untrusted-certificate errors, also through .cause', () => {
+  expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
+  expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
+  expect(isCertError(Object.assign(new Error('fetch failed'), { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
+  expect(isCertError(Object.assign(new Error('socket hang up'), { code: 'ECONNRESET' }))).toBe(false);
+  expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
+  expect(isCertError(null)).toBe(false);
+});
+
+describe('installSystemCa', () => {
+  const original = globalThis.fetch;
+  afterEach(() => { globalThis.fetch = original; });
+  const stubFetch = (impl: () => Promise<Response>): void => { globalThis.fetch = impl as unknown as typeof fetch; };
+
+  test('mode false and an already active store leave fetch unchanged', () => {
+    let calls = 0;
+    const reexec = (() => { calls++; throw new Error('reexec'); }) as () => never;
+    stubFetch(async () => new Response('ok'));
+    const before = globalThis.fetch;
+    installSystemCa('false', reexec, false);
+    expect(globalThis.fetch).toBe(before);
+    installSystemCa('auto', reexec, true);
+    expect(globalThis.fetch).toBe(before);
+    installSystemCa('true', reexec, true);
+    expect(globalThis.fetch).toBe(before);
+    expect(calls).toBe(0);
+  });
+
+  test('mode true restarts immediately', () => {
+    let calls = 0;
+    const reexec = (() => { calls++; throw new Error('reexec'); }) as () => never;
+    expect(() => installSystemCa('true', reexec, false)).toThrow('reexec');
+    expect(calls).toBe(1);
+  });
+
+  test('mode auto wraps fetch: cert error restarts once, other errors pass, success passes through', async () => {
+    let calls = 0;
+    const reexec = (() => { calls++; throw new Error('reexec'); }) as () => never;
+    stubFetch(async () => { throw Object.assign(new Error('fetch failed'), { code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' }); });
+    installSystemCa('auto', reexec, false);
+    await expect(fetch('https://example.invalid')).rejects.toThrow('reexec');
+    expect(calls).toBe(1);
+
+    globalThis.fetch = original;
+    stubFetch(async () => { throw Object.assign(new Error('reset'), { code: 'ECONNRESET' }); });
+    installSystemCa('auto', reexec, false);
+    await expect(fetch('https://example.invalid')).rejects.toThrow('reset');
+    expect(calls).toBe(1);
+
+    globalThis.fetch = original;
+    stubFetch(async () => new Response('fine'));
+    installSystemCa('auto', reexec, false);
+    expect(await (await fetch('https://example.invalid')).text()).toBe('fine');
+    expect(calls).toBe(1);
+  });
 });
