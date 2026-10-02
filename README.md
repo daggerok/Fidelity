@@ -44,6 +44,8 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `siAnn` - since-inception annualized -> *SI Ann.*
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
 - `secYield` - 30-day SEC yield when published; `-` (unavailable, not zero) otherwise
+- `returnsBasis` - mandatory non-empty label of how the returns are computed; for Fidelity always "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns)"
+- `performanceAsOf` - ISO `YYYY-MM-DD` date the returns are as of: the last Yahoo close date (not the NAV date), or `null` when unknown
 
 Caveats:
 
