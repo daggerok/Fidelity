@@ -1,12 +1,12 @@
 {
- "generatedAt": "2026-09-27T03:14:23Z",
+ "generatedAt": "2026-10-02T03:20:15Z",
  "source": {
   "provider": "Fidelity Investments (ETFs)",
   "market": "us",
   "site": "https://digital.fidelity.com/prgw/digital/research/etfs",
   "catalog": "SEC EDGAR N-PORT-P filings of the Fidelity ETF trusts",
   "history": "Yahoo Finance public chart API (adjusted close)",
-  "holdingTickers": "scripts/held-tickers.ts seed (SEC EDGAR company tickers + exchange symbol directories) extended live by the Yahoo Finance symbol search",
+  "holdingTickers": "data/held-tickers.ts seed (SEC EDGAR company tickers + exchange symbol directories) extended live by the Yahoo Finance symbol search",
   "trusts": {
    "0000945908": "Fidelity Covington Trust",
    "0001562565": "Fidelity Merrimack Street Trust",
@@ -17,7 +17,7 @@
  "counts": {
   "funds": 74,
   "holdings": 22962,
-  "history": 109770
+  "history": 109774
  },
  "funds": [
   {
@@ -1220,11 +1220,11 @@
    "navValue": null,
    "aum": "$1,771.87 M",
    "aumValue": 1771868777.6100004,
-   "asOfDate": "Sep 25 2026",
+   "asOfDate": "Oct 01 2026",
    "inceptionDate": "Oct 24 2013",
    "exchange": "NYSEArca",
-   "closePrice": "$96.28",
-   "closePriceValue": 96.28,
+   "closePrice": "$94.83",
+   "closePriceValue": 94.83,
    "premiumDiscount": "—",
    "premiumDiscountValue": null,
    "distributions": {
@@ -1234,45 +1234,45 @@
    },
    "returns": {
     "monthEnd": {
-     "asOfDate": "Sep 25 2026",
-     "mo1": -4.75,
-     "mo1Text": "-4.75%",
-     "qtd": -6.68,
-     "qtdText": "-6.68%",
-     "ytd": -5.18,
-     "ytdText": "-5.18%",
-     "yr1": -5.92,
-     "yr1Text": "-5.92%",
-     "yr3": 12.79,
-     "yr3Text": "12.79%",
-     "yr5": 3.77,
-     "yr5Text": "3.77%",
-     "yr10": 12.94,
-     "yr10Text": "12.94%",
-     "sinceInception": 11.96,
-     "sinceInceptionText": "11.96%"
+     "asOfDate": "Oct 01 2026",
+     "mo1": -4.83,
+     "mo1Text": "-4.83%",
+     "qtd": null,
+     "qtdText": "—",
+     "ytd": -6.61,
+     "ytdText": "-6.61%",
+     "yr1": -7.04,
+     "yr1Text": "-7.04%",
+     "yr3": 11.65,
+     "yr3Text": "11.65%",
+     "yr5": 4.08,
+     "yr5Text": "4.08%",
+     "yr10": 12.73,
+     "yr10Text": "12.73%",
+     "sinceInception": 11.81,
+     "sinceInceptionText": "11.81%"
     },
     "quarterEnd": {
-     "asOfDate": "Jun 30 2026",
+     "asOfDate": "Sep 30 2026",
      "null": null
     }
    },
    "metrics": {
-    "ytd": -5.18,
-    "tr1y": -5.92,
-    "tr3y": 43.49,
-    "tr5y": 20.33,
-    "tr10y": 237.66,
-    "cagr3y": 12.79,
-    "cagr5y": 3.77,
-    "cagr10y": 12.94,
-    "siAnn": 11.96,
-    "dividendYield": 0.84,
-    "dividendYieldText": "0.84%",
+    "ytd": -6.61,
+    "tr1y": -7.04,
+    "tr3y": 39.18,
+    "tr5y": 22.13,
+    "tr10y": 231.43,
+    "cagr3y": 11.65,
+    "cagr5y": 4.08,
+    "cagr10y": 12.73,
+    "siAnn": 11.81,
+    "dividendYield": 0.85,
+    "dividendYieldText": "0.85%",
     "secYield": null
    },
    "holdings": 251,
-   "history": 3249
+   "history": 3253
   },
   {
    "ticker": "FDLO",
