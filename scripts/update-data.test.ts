@@ -13,6 +13,11 @@ import {
   indicatedYield,
   inferDistributionFrequency,
   deriveCatalogMetrics,
+  RETURNS_BASIS,
+  isoDateOrNull,
+  displayDateToIso,
+  normalizeStoredMetrics,
+  normalizeIndexRow,
   formatEdgarDate,
   epochToIsoDate,
   normalizeHoldingName,
@@ -383,6 +388,32 @@ describe('deriveCatalogMetrics', () => {
     expect(metrics.tr10y).toBeNull();
     expect(metrics.dividendYield).toBeCloseTo(1.0, 6);
     expect(metrics.secYield).toBeNull();
+    expect(metrics.returnsBasis).toBe(RETURNS_BASIS);
+    expect(String(metrics.returnsBasis).trim()).not.toBe('');
+    expect(metrics.performanceAsOf).toBe('2026-06-30');
+    const keys = Object.keys(metrics);
+    expect(keys.slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+  });
+
+  test('performanceAsOf is null (never empty) when there is no price history', () => {
+    const metrics = deriveCatalogMetrics(priceReturns([]), null, null, null);
+    expect(metrics.performanceAsOf).toBeNull();
+    expect(metrics.returnsBasis).toBe(RETURNS_BASIS);
+  });
+
+  test('stored metrics gain basis and as-of from the stored returns table', () => {
+    expect(displayDateToIso('Sep 25 2026')).toBe('2026-09-25');
+    expect(displayDateToIso('—')).toBeNull();
+    expect(isoDateOrNull('')).toBeNull();
+    const old = { ytd: 1, secYield: null };
+    const out = normalizeStoredMetrics(old, { monthEnd: { asOfDate: 'Sep 25 2026' } });
+    expect(Object.keys(out)).toEqual(['ytd', 'secYield', 'returnsBasis', 'performanceAsOf']);
+    expect(out.performanceAsOf).toBe('2026-09-25');
+    expect(normalizeStoredMetrics(old, null).performanceAsOf).toBeNull();
+    const kept = normalizeStoredMetrics({ ...out, performanceAsOf: '2026-09-01' }, null);
+    expect(kept.performanceAsOf).toBe('2026-09-01');
+    const row = normalizeIndexRow({ ticker: 'X', metrics: old, returns: { monthEnd: { asOfDate: 'Sep 25 2026' } } });
+    expect((row.metrics as Record<string, unknown>).performanceAsOf).toBe('2026-09-25');
   });
 
   test('tolerates no-distribution funds (crypto)', () => {

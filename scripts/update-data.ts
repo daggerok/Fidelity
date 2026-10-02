@@ -1291,6 +1291,45 @@ export function deriveCatalogMetrics(
     dividendYield,
     dividendYieldText: dividendYield === null ? '—' : `${dividendYield.toFixed(2)}%`,
     secYield: null, // Fidelity publishes no 30-day SEC yield feed; shown as "—"
+    returnsBasis: RETURNS_BASIS,
+    performanceAsOf: isoDateOrNull(returns.asOfDate),
+  };
+}
+
+export const RETURNS_BASIS =
+  'derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns); Fidelity publishes no machine-readable performance table';
+
+/** ISO YYYY-MM-DD or null (never an empty string). */
+export function isoDateOrNull(value: unknown): string | null {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value ?? ''));
+  return match ? match[0] : null;
+}
+
+/** Inverse of formatEdgarDate ("Sep 25 2026" -> "2026-09-25"); null when unparseable. */
+export function displayDateToIso(value: unknown): string | null {
+  const match = /^([A-Za-z]{3}) (\d{2}) (\d{4})$/.exec(String(value ?? ''));
+  if (!match) return null;
+  const month = MONTHS.indexOf(match[1]) + 1;
+  return month ? `${match[3]}-${String(month).padStart(2, '0')}-${match[2]}` : null;
+}
+
+/**
+ * Metrics carried over from a previous run (no fresh Yahoo chart): keep the
+ * numbers, make sure the mandatory returnsBasis / performanceAsOf sit at the
+ * end. The as-of date is the stored one, else the stored returns table date.
+ */
+export function normalizeIndexRow(row: JsonRecord): JsonRecord {
+  if (!row.metrics || typeof row.metrics !== 'object') return row;
+  return { ...row, metrics: normalizeStoredMetrics(row.metrics as JsonRecord, row.returns as JsonRecord | undefined) };
+}
+
+export function normalizeStoredMetrics(metrics: JsonRecord, storedReturns?: JsonRecord | null): JsonRecord {
+  const { returnsBasis: _basis, performanceAsOf: storedAsOf, ...rest } = metrics;
+  const monthEnd = (storedReturns?.monthEnd as JsonRecord | undefined) ?? {};
+  return {
+    ...rest,
+    returnsBasis: RETURNS_BASIS,
+    performanceAsOf: isoDateOrNull(storedAsOf) ?? displayDateToIso(monthEnd.asOfDate),
   };
 }
 
@@ -1535,7 +1574,9 @@ async function processFund(
         inferDistributionFrequency(chart.dividends).paymentsPerYear,
         chart.regularMarketPrice,
       )
-    : ((previous.metrics as JsonRecord) ?? deriveCatalogMetrics(priceReturns([]), null, null, null));
+    : (previous.metrics
+        ? normalizeStoredMetrics(previous.metrics as JsonRecord, previous.returns as JsonRecord | undefined)
+        : deriveCatalogMetrics(priceReturns([]), null, null, null));
 
   const candidate = {
     ticker,
@@ -1952,7 +1993,8 @@ export async function main(env: Record<string, string | undefined> = process.env
   const keptFromPrevious = seedFunds
     .filter((seed) => !results.some((row) => row.ticker === seed.ticker))
     .map((seed) => previousIndex.get(seed.ticker))
-    .filter(Boolean) as JsonRecord[];
+    .filter(Boolean)
+    .map((row) => normalizeIndexRow(row as JsonRecord));
   const funds = [...results, ...keptFromPrevious].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
 
   const counts = {
