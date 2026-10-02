@@ -48,7 +48,7 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 Caveats:
 
 - Holdings and net assets come from SEC N-PORT-P filings; price history, distributions and market-price returns come from Yahoo Finance and are estimates, not official NAV figures
-- N-PORT positions publish no exchange tickers, so the Ticker column is filled from the name -> ticker seed in `scripts/held-tickers.ts`; unmapped names are resolved live through Yahoo symbol search with a strict name match, and bond or private positions keep `-`
+- N-PORT positions publish no exchange tickers, so the Ticker column is filled from the name -> ticker seed in `data/held-tickers.ts`; unmapped names are resolved live through Yahoo symbol search with a strict name match, and bond or private positions keep `-`
 - Funds not selected for a successful update (filters, batch cursor, failures) keep their prior published metadata and data files
 - `TICKERS` combines with the AUM, TER and yield filters using AND logic; it does not override them
 
@@ -66,16 +66,16 @@ Caveats:
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page. Legacy alias `HISTORICAL_PAGE_SIZE`. |
 | `STORE_RAW_DOWNLOADS` | `false` | Store the source N-PORT XML under `api/fidelity/raw` (`1`/`true`/`yes`/`on`). |
-| `MAX_RETRIES` | `2` | Retries after the initial request. Only network errors and HTTP 403/408/425/429/5xx are retried with exponential backoff. |
+| `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1). Only network errors and HTTP 403/408/425/429/5xx are retried with exponential backoff. |
 | `HISTORY_RANGE` | `max` | Yahoo chart range for history rows: `max` or `<N>y`. |
-| `SEC_UA` | empty (declared default) | Override the SEC User-Agent; SEC policy requires automated tools to declare a contact. In CI the protected `SEC_UA` repository variable wins when nonblank. |
+| `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | Override the SEC User-Agent; SEC policy requires automated tools to declare a contact. In CI the protected `SEC_UA` repository variable wins when nonblank. |
 | `SKIP_YAHOO` | `false` | Skip Yahoo Finance requests (EDGAR holdings only, previous history is kept). |
 | `REFRESH_CATALOG` | `1` | Scan EDGAR submissions for N-PORT filings newer than the seed accessions; `0` skips. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Market-price return ranges (strict `min:max`, colon required; 3Y/5Y/10Y are CAGR). |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative return ranges (strict `min:max`, colon required). |
 
-Every control also accepts an environment variable of the same name, optionally prefixed with `FIDELITY_`.
+Every control also accepts an environment variable of the same name, optionally prefixed with `FIDELITY_`. An explicitly set variable wins even when empty, which clears the control.
 
 ### Examples
 
@@ -98,8 +98,6 @@ bun test
 bun build --target=bun scripts/update-data.ts --outfile=/dev/null
 git diff --check
 ```
-
-`bun test` also covers the config, README controls and workflow checks in `scripts/config-docs.test.ts`.
 
 ## Brands table
 
@@ -124,7 +122,7 @@ git diff --check
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
-| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) |
 | **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
 | **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
