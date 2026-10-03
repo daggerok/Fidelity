@@ -56,6 +56,7 @@ Caveats:
 - `nav` and `premiumDiscount` are `null` for every fund: Yahoo's chart meta carries no NAV and Fidelity publishes no machine-readable NAV, so none is guessed
 - N-PORT holdings and net assets are as of the filing's report period (shown as the holdings as-of date); `REFRESH_CATALOG` moves each series to its newest filing, never to an older report period than the published one
 - Every request has a 45 s timeout (headers and body) and is retried per `MAX_RETRIES`; files are written through a temp file and a rename; the run stops taking new funds after 25 minutes and still writes the index
+- Unbounded runs (`MAX_FETCHES=0`, and `TICKERS` runs) process the stalest fund first: funds without published data, then the oldest published as-of date, ties alphabetical. A run cut short by the 25 minute deadline therefore leaves the freshest funds for last and the next run starts with the skipped ones, so the tail of the list never starves. The log and the step summary report how many funds were refreshed and the oldest remaining published as-of date. A bounded run (`MAX_FETCHES` > 0) keeps walking the alphabetical cursor
 - `TICKERS` is strict (an unknown ticker is an error), does not count against `MAX_FETCHES` for other funds and never moves the batch cursor
 - `TICKERS` combines with the AUM, TER and yield filters using AND logic; it does not override them
 

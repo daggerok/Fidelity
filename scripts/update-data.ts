@@ -1544,6 +1544,35 @@ async function readPreviousIndex(): Promise<Map<string, JsonRecord>> {
   return map;
 }
 
+/**
+ * ISO date a published index row is refreshed up to (the latest of its dated fields),
+ * or null when the fund has no published data yet.
+ */
+export function publishedAsOf(row: JsonRecord | null | undefined): string | null {
+  if (!row || row.dataFile === null) return null;
+  const dates = [(row.metrics as JsonRecord | undefined)?.performanceAsOf, displayDateToIso(row.asOfDate)].filter(
+    (value): value is string => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value),
+  );
+  return dates.length ? dates.sort()[dates.length - 1] : null;
+}
+
+/**
+ * Run order of an unbounded run: funds without published data first, then the stalest
+ * published as-of, ties alphabetical. A run cut short by the soft deadline therefore
+ * leaves the freshest funds for last, and the next run starts where this one stopped.
+ */
+export function stalestFirst<T extends { ticker: string }>(funds: T[], published: Map<string, JsonRecord>): T[] {
+  const key = (fund: T): string => publishedAsOf(published.get(fund.ticker)) ?? '';
+  return funds.slice().sort((a, b) => (key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : a.ticker.localeCompare(b.ticker)));
+}
+
+/** One line for the log and the step summary: what a deadline-truncated run left behind. */
+export function deadlineSummary(attempted: number, total: number, remaining: Array<{ ticker: string }>, published: Map<string, JsonRecord>): string {
+  const ordered = stalestFirst(remaining, published);
+  const oldest = ordered.length ? `${publishedAsOf(published.get(ordered[0].ticker)) ?? 'never published'} (${ordered[0].ticker})` : 'none';
+  return `${attempted} of ${total} funds refreshed, ${remaining.length} keep their previously published data, oldest remaining published as-of: ${oldest}`;
+}
+
 async function readPreviousMeta(ticker: string): Promise<JsonRecord | null> {
   try {
     return JSON.parse(await readFile(new URL(`funds/${ticker}/meta.json`, API_ROOT), 'utf8')) as JsonRecord;
@@ -2063,10 +2092,13 @@ export async function main(env: Record<string, string | undefined> = process.env
   const selected = config.tickers.length ? seedFunds.filter((fund) => config.tickers.includes(fund.ticker)) : seedFunds;
   const cursor = config.maxFetches > 0 && !config.tickers.length ? state?.cursor || null : null;
   const cursorIndex = cursor ? selected.findIndex((fund) => fund.ticker === cursor) : -1;
-  const ordered =
-    cursorIndex >= 0
+  // A bounded unscoped run keeps walking the alphabetical cursor; every other run goes stalest first.
+  const cursorMode = config.maxFetches > 0 && !config.tickers.length;
+  const ordered = cursorMode
+    ? cursorIndex >= 0
       ? selected.slice(cursorIndex + 1).concat(selected.slice(0, cursorIndex + 1))
-      : selected.slice();
+      : selected.slice()
+    : stalestFirst(selected, previousIndex);
 
   const queue = ordered.map((seed) => ({ seed }));
   const results: JsonRecord[] = [];
@@ -2081,9 +2113,9 @@ export async function main(env: Record<string, string | undefined> = process.env
   async function worker(): Promise<void> {
     for (;;) {
       if (config.maxFetches > 0 && processed >= config.maxFetches) return;
+      if (!queue.length) return;
       if (Date.now() > deadline) { deadlineHit = true; return; }
-      const item = queue.shift();
-      if (!item) return;
+      const item = queue.shift()!;
       const seed = item.seed;
       const previous = previousIndex.get(seed.ticker) || {};
       const entry = accessionBySeries.get(seriesKeyOf(seed)) || null;
@@ -2102,7 +2134,8 @@ export async function main(env: Record<string, string | undefined> = process.env
   }
 
   await Promise.all(Array.from({ length: Math.max(1, config.concurrency) }, () => worker()));
-  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(9)}] soft run deadline reached: remaining funds keep their previously published data`);
+  const deadlineText = deadlineHit ? deadlineSummary(processed, ordered.length, queue.map((item) => item.seed), previousIndex) : '';
+  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(9)}] soft run deadline reached: ${deadlineText}; the next run starts with them`);
 
   // Funds not selected for a successful update keep their previously published rows.
   const keptFromPrevious = seedFunds
@@ -2158,7 +2191,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   if (process.env.GITHUB_STEP_SUMMARY) {
     await appendFile(
       process.env.GITHUB_STEP_SUMMARY,
-      `### Fidelity data update\n\n- updated: ${results.length}\n- kept from previous runs: ${keptFromPrevious.length}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`,
+      `### Fidelity data update\n\n- updated: ${results.length}\n- kept from previous runs: ${keptFromPrevious.length}\n- failed: ${failures}\n${deadlineHit ? `- soft deadline: ${deadlineText}\n` : ''}- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`,
       'utf8',
     );
   }
