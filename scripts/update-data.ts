@@ -308,9 +308,16 @@ const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const YAHOO_BROWSER_UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 
-const API_ROOT = new URL('../api/fidelity/', import.meta.url);
-const INDEX_FILE = new URL('index.json', API_ROOT);
-const STATE_FILE = new URL('update-state.json', API_ROOT);
+let API_ROOT = new URL('../api/fidelity/', import.meta.url);
+let INDEX_FILE = new URL('index.json', API_ROOT);
+let STATE_FILE = new URL('update-state.json', API_ROOT);
+
+/** Test hook: point every read and write of the feed at another directory (a trailing slash URL). */
+export function useOutputRoot(root: URL): void {
+  API_ROOT = root;
+  INDEX_FILE = new URL('index.json', API_ROOT);
+  STATE_FILE = new URL('update-state.json', API_ROOT);
+}
 
 const HOLDINGS_PAGE_SIZE_FALLBACK = 250;
 const HISTORY_PAGE_SIZE_FALLBACK = 1000;
@@ -983,7 +990,26 @@ async function writeTextIfChanged(file: URL, value: string): Promise<boolean> {
 // SEC EDGAR layer: trust submissions + N-PORT-P primary documents
 // ---------------------------------------------------------------------------
 
+/** A filing may replace published holdings unless its report period is older than the published one. */
+export function nportMayReplace(publishedAsOfIso: string | null, filingRepPdDate: string | null | undefined): boolean {
+  const filing = isoDateOrNull(filingRepPdDate);
+  if (!publishedAsOfIso || !filing) return true;
+  return filing >= publishedAsOfIso;
+}
+
 export type NportAccession = { accession: string; filed: string; reportDate: string; url: string };
+
+/**
+ * Whether a freshly discovered filing may replace the accession a series is on:
+ * only a strictly newer filing (by filing date, then report period), never an
+ * older or identical one. Seed baselines and refreshed filings are compared alike.
+ */
+export function isNewerAccession(current: NportAccession | undefined, candidate: { accession: string; filed: string; reportDate: string }): boolean {
+  if (!current) return true;
+  if (current.accession === candidate.accession) return false;
+  if (candidate.reportDate && current.reportDate && candidate.reportDate < current.reportDate) return false;
+  return candidate.filed > current.filed || (candidate.filed === current.filed && candidate.reportDate > current.reportDate);
+}
 
 function nportUrlFor(trustCik: string, accession: string): string {
   return `${EDGAR_ARCHIVES}/${Number(trustCik)}/${accession.replace(/-/g, '')}/primary_doc.xml`;
@@ -1291,6 +1317,7 @@ export function deriveCatalogMetrics(
     dividendYield,
     dividendYieldText: dividendYield === null ? '—' : `${dividendYield.toFixed(2)}%`,
     secYield: null, // Fidelity publishes no 30-day SEC yield feed; shown as "—"
+    secYieldText: '—',
     returnsBasis: RETURNS_BASIS,
     performanceAsOf: isoDateOrNull(returns.asOfDate),
   };
@@ -1328,6 +1355,7 @@ export function normalizeStoredMetrics(metrics: JsonRecord, storedReturns?: Json
   const monthEnd = (storedReturns?.monthEnd as JsonRecord | undefined) ?? {};
   return {
     ...rest,
+    secYieldText: typeof rest.secYieldText === 'string' ? rest.secYieldText : (numberOrNull(rest.secYield) === null ? '—' : `${Number(rest.secYield).toFixed(2)}%`),
     returnsBasis: RETURNS_BASIS,
     performanceAsOf: isoDateOrNull(storedAsOf) ?? displayDateToIso(monthEnd.asOfDate),
   };
@@ -1479,6 +1507,14 @@ async function readPreviousIndex(): Promise<Map<string, JsonRecord>> {
   return map;
 }
 
+async function readPreviousMeta(ticker: string): Promise<JsonRecord | null> {
+  try {
+    return JSON.parse(await readFile(new URL(`funds/${ticker}/meta.json`, API_ROOT), 'utf8')) as JsonRecord;
+  } catch {
+    return null;
+  }
+}
+
 async function readPreviousSheet(ticker: string, kind: 'holdings' | 'history'): Promise<JsonRecord[]> {
   const rows: JsonRecord[] = [];
   let page = 1;
@@ -1518,7 +1554,7 @@ function distributionRows(chart: ParsedChart): string[][] {
   return chart.dividends.map((dividend) => [formatUsDate(dividend.epoch), String(round(dividend.amount, 6))]);
 }
 
-function returnsBlock(returns: PriceReturns | null, previous: JsonRecord): JsonRecord | null {
+export function returnsBlock(returns: PriceReturns | null, previous: JsonRecord): JsonRecord | null {
   if (!returns || !returns.asOfDate) return (previous.returns as JsonRecord) ?? null;
   const text = (value: number | null): string => (value === null ? '—' : `${value.toFixed(2)}%`);
   const quarterAnchor = lastCompletedQuarterEnd();
@@ -1543,8 +1579,18 @@ function returnsBlock(returns: PriceReturns | null, previous: JsonRecord): JsonR
       sinceInception: returns.siAnn,
       sinceInceptionText: text(returns.siAnn),
     },
-    quarterEnd: { asOfDate: formatEdgarDate(quarterAnchor.toISOString().slice(0, 10)), null: null },
+    quarterEnd: emptyReturnRow(formatEdgarDate(quarterAnchor.toISOString().slice(0, 10))),
   };
+}
+
+/** A returns row with every value unavailable (null, never 0 and never a stray key). */
+export function emptyReturnRow(asOfDate: string): JsonRecord {
+  const row: JsonRecord = { asOfDate };
+  for (const key of ['mo1', 'qtd', 'ytd', 'yr1', 'yr3', 'yr5', 'yr10', 'sinceInception']) {
+    row[key] = null;
+    row[`${key}Text`] = '—';
+  }
+  return row;
 }
 
 async function processFund(
@@ -1555,6 +1601,7 @@ async function processFund(
   resolver: TickerResolver,
 ): Promise<JsonRecord | null> {
   const ticker = seed.ticker;
+  const previousMeta = await readPreviousMeta(ticker);
   const nportUrl = accession && !seed.catalogOnly ? nportUrlFor(seed.trustCik, accession) : null;
 
   // 1) Yahoo chart: history, distributions, quote meta, derived metrics.
@@ -1594,7 +1641,14 @@ async function processFund(
   if (nportUrl) {
     try {
       const xml = await fetchText(nportUrl, `[nport   ] ${ticker}`, secHeaders(config), config);
-      nport = parseNport(xml);
+      const parsedNport = parseNport(xml);
+      if (seed.seriesId && parsedNport.seriesId && parsedNport.seriesId !== seed.seriesId) {
+        throw new Error(`filing is for series ${parsedNport.seriesId}, expected ${seed.seriesId}`);
+      }
+      if (!nportMayReplace(displayDateToIso((previousMeta?.holdings as JsonRecord | undefined)?.asOf), parsedNport.repPdDate)) {
+        throw new Error(`filing period ${parsedNport.repPdDate} is older than the published holdings`);
+      }
+      nport = parsedNport;
       if (config.storeRawDownloads) {
         const rawDir = new URL(`raw/${ticker}/`, API_ROOT);
         await mkdir(rawDir, { recursive: true });
@@ -1627,16 +1681,25 @@ async function processFund(
   const history = chart ? historyRows(chart) : await readPreviousSheet(ticker, 'history');
   const historyManifest = await writePages(fundDir, ticker, 'history', historyHeaders, history, config.historyPageSize);
 
-  const distributions = chart ? distributionRows(chart) : ((previous.distributions?.rows as JsonRecord[]) || []);
+  const previousDistributions = (previousMeta?.distributions as JsonRecord | undefined) ?? {};
+  const distributions = chart ? distributionRows(chart) : ((previousDistributions.rows as string[][]) || []);
   const frequency = chart
     ? inferDistributionFrequency(chart.dividends)
-    : { frequency: String((previous.distributions as JsonRecord)?.frequency || '—'), paymentsPerYear: null };
+    : {
+        frequency: String(previousDistributions.frequency || (previous.distributions as JsonRecord | undefined)?.frequency || '—'),
+        paymentsPerYear: numberOrNull(previousDistributions.paymentsPerYear),
+      };
   const latestDividend = chart && chart.dividends.length ? chart.dividends[chart.dividends.length - 1] : null;
 
   const name = nport?.seriesName || seed.name;
-  const nav = chart?.navPrice ?? null;
-  const price = chart?.regularMarketPrice ?? null;
-  const premiumDiscount = nav && price ? round(((price - nav) / nav) * 100, 2) : null;
+  // Yahoo's chart meta carries no NAV for these funds and Fidelity publishes no
+  // machine-readable NAV, so nav and premium stay null (never guessed). When the
+  // chart request failed, the previously published quote block is kept as one unit.
+  const nav = chart ? (chart.navPrice ?? null) : numberOrNull(previous.navValue);
+  const price = chart ? (chart.regularMarketPrice ?? null) : numberOrNull(previous.closePriceValue);
+  const premiumDiscount = chart ? (nav && price ? round(((price - nav) / nav) * 100, 2) : null) : numberOrNull(previous.premiumDiscountValue);
+  const previousQuoteDate = (key: 'nav' | 'marketPrice'): string => String(((previousMeta?.[key] as JsonRecord | undefined)?.asOfDate as string | undefined) ?? '—');
+  const quoteDate = chart?.regularMarketTime ? formatEpochDate(chart.regularMarketTime) : null;
   const netAssets = nport ? nport.totalValue : numberOrNull(previous.aumValue);
   const returns = chart ? priceReturns(chart.days) : null;
   const returnsData = returnsBlock(returns, previous);
@@ -1649,8 +1712,8 @@ async function processFund(
       fundPage: seed.fundPage,
       edgarFiling: accession
         ? `${EDGAR_ARCHIVES}/${Number(seed.trustCik)}/${accession.replace(/-/g, '')}/${accession.replace(/-/g, '')}-index.htm`
-        : ((previous.source as JsonRecord)?.edgarFiling ?? null),
-      nportDoc: nportUrl || ((previous.source as JsonRecord)?.nportDoc ?? null),
+        : ((previousMeta?.source as JsonRecord | undefined)?.edgarFiling ?? null),
+      nportDoc: nportUrl || ((previousMeta?.source as JsonRecord | undefined)?.nportDoc ?? null),
       // A stable provenance URL, not the live fetch URL: chartUrl(ticker, config)
       // embeds the current timestamp in period2, which would make this field
       // (and the file's digest) change on every single run.
@@ -1661,36 +1724,36 @@ async function processFund(
     nav: {
       display: nav === null ? '—' : `$${nav.toFixed(2)}`,
       value: nav,
-      asOfDate: chart?.regularMarketTime ? formatEpochDate(chart.regularMarketTime) : '—',
+      asOfDate: nav === null ? '—' : (chart ? (quoteDate ?? '—') : previousQuoteDate('nav')),
     },
     marketPrice: {
       display: price === null ? '—' : `$${price.toFixed(2)}`,
       value: price,
-      asOfDate: chart?.regularMarketTime ? formatEpochDate(chart.regularMarketTime) : '—',
+      asOfDate: price === null ? '—' : (chart ? (quoteDate ?? '—') : previousQuoteDate('marketPrice')),
     },
     premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount },
     aum: {
       display: netAssets === null ? '—' : formatAumDisplay(netAssets),
       value: netAssets,
-      asOfDate: nport ? formatEdgarDate(nport.repPdDate) : (((previous.aum as JsonRecord)?.asOfDate as string) ?? '—'),
-      source: nport ? 'sum of reported N-PORT position values' : 'previous run',
+      asOfDate: nport ? formatEdgarDate(nport.repPdDate) : (((previousMeta?.aum as JsonRecord | undefined)?.asOfDate as string) ?? '—'),
+      source: nport ? 'sum of reported N-PORT position values' : ((previousMeta?.aum as JsonRecord | undefined)?.source ?? 'previous run'),
     },
     returns: returnsData,
     distributions: { frequency: frequency.frequency, paymentsPerYear: frequency.paymentsPerYear, headers: ['Ex-Date', 'Amount'], rows: distributions },
     holdings: {
       ...holdingsManifest,
-      asOf: nport ? formatEdgarDate(nport.repPdDate) : (((previous.holdings as JsonRecord)?.asOf as string) ?? '—'),
+      asOf: nport ? formatEdgarDate(nport.repPdDate) : (((previousMeta?.holdings as JsonRecord | undefined)?.asOf as string) ?? '—'),
     },
     history: {
       ...historyManifest,
-      asOf: returns ? formatEdgarDate(returns.asOfDate) : (((previous.history as JsonRecord)?.asOf as string) ?? '—'),
+      asOf: returns ? formatEdgarDate(returns.asOfDate) : (((previousMeta?.history as JsonRecord | undefined)?.asOf as string) ?? '—'),
     },
     seed: {
       seriesId: seed.seriesId,
       seriesName: seed.name,
       trustCik: seed.trustCik,
       trustName: FIDELITY_TRUSTS[seed.trustCik] || null,
-      accession: accession || ((previous.seed as JsonRecord)?.accession ?? null),
+      accession: accession || ((previousMeta?.seed as JsonRecord | undefined)?.accession ?? null),
     },
   };
   await writeIfChanged(new URL('meta.json', fundDir), meta);
@@ -1715,11 +1778,13 @@ async function processFund(
     closePriceValue: price,
     premiumDiscount: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`,
     premiumDiscountValue: premiumDiscount,
-    distributions: {
-      frequency: frequency.frequency,
-      exDate: latestDividend ? formatUsDate(latestDividend.epoch) : '—',
-      dividend: latestDividend ? String(round(latestDividend.amount, 6)) : '—',
-    },
+    distributions: chart || !previous.distributions
+      ? {
+          frequency: frequency.frequency,
+          exDate: latestDividend ? formatUsDate(latestDividend.epoch) : '—',
+          dividend: latestDividend ? String(round(latestDividend.amount, 6)) : '—',
+        }
+      : previous.distributions,
     returns: {
       monthEnd: monthEnd,
       quarterEnd: (returnsData?.quarterEnd as JsonRecord) || null,
@@ -1901,18 +1966,21 @@ export async function main(env: Record<string, string | undefined> = process.env
       accessionBySeries.set(seriesKeyOf(fund), {
         accession: fund.accession,
         filed: fund.filed || '',
-        reportDate: '',
+        reportDate: fund.repPdDate || '',
         url: nportUrlFor(fund.trustCik, fund.accession),
       });
     }
   }
-  const seedAccessions = new Map(accessionBySeries);
+  const knownSeries = new Set(seedFunds.map((fund) => fund.seriesId).filter(Boolean));
 
   if (config.refreshCatalog) {
     for (const [cik] of Object.entries(FIDELITY_TRUSTS)) {
-      const newestSeed = [...seedAccessions.values()]
-        .filter((entry) => entry.url.includes(`/${Number(cik)}/`))
-        .reduce((max, entry) => (entry.filed > max ? entry.filed : max), '0000-00-00');
+      // Every series of a trust files on its own schedule: look back to the oldest
+      // seed filing of the trust, not the newest, so no series misses its update.
+      const trustAccessions = seedFunds
+        .filter((fund) => fund.trustCik === cik && accessionBySeries.has(seriesKeyOf(fund)))
+        .map((fund) => accessionBySeries.get(seriesKeyOf(fund))!.filed);
+      const oldestSeed = trustAccessions.length ? trustAccessions.reduce((min, filed) => (filed < min ? filed : min)) : '0000-00-00';
       let accessions: NportAccession[] = [];
       try {
         const submissions = await fetchJson(
@@ -1926,17 +1994,22 @@ export async function main(env: Record<string, string | undefined> = process.env
         outputNote(`[ ${'edgar'.padEnd(9)}] submissions ${cik}: ${error instanceof Error ? error.message : String(error)} — using seed accessions`);
         continue;
       }
-      const fresh = accessions.filter((entry) => entry.filed > newestSeed).sort((a, b) => (a.filed < b.filed ? 1 : -1));
+      const taken = new Set([...accessionBySeries.values()].map((entry) => entry.accession));
+      const fresh = accessions.filter((entry) => entry.filed >= oldestSeed && !taken.has(entry.accession)).sort((a, b) => (a.filed < b.filed ? 1 : -1));
+      const resolved = new Set<string>();
       for (const entry of fresh) {
         const url = nportUrlFor(cik, entry.accession);
         try {
           const parsed = parseNport(await fetchText(url, `[nport   ] refresh ${entry.accession}`, secHeaders(config), config));
-          const key = parsed.seriesId || `__ticker__${seedFunds.find((f) => f.seriesId === parsed.seriesId)?.ticker || ''}`;
-          if (!accessionBySeries.has(key)) {
-            accessionBySeries.set(key, { ...entry, url });
+          // Identity: only a filing of a series this feed tracks may move an accession.
+          if (!parsed.seriesId || !knownSeries.has(parsed.seriesId) || resolved.has(parsed.seriesId)) continue;
+          const candidate = { ...entry, reportDate: parsed.repPdDate || entry.reportDate, url };
+          if (isNewerAccession(accessionBySeries.get(parsed.seriesId), candidate)) {
+            accessionBySeries.set(parsed.seriesId, candidate);
           }
+          resolved.add(parsed.seriesId);
         } catch {
-          // Skip unreachable accessions; seed accessions remain the fallback.
+          // Skip unreachable accessions; the current accession stays the fallback.
         }
       }
     }
