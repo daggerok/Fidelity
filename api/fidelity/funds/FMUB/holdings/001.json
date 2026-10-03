@@ -2,7 +2,7 @@
  "ticker": "FMUB",
  "page": 1,
  "pageSize": 250,
- "totalRows": 524,
+ "totalRows": 596,
  "headers": [
   "Name",
   "Ticker",
@@ -14,533 +14,596 @@
  ],
  "rows": [
   {
-   "Name": "MINNESOTA AGRIC and EC DEV BRD",
+   "Name": "DISTRICT COLUMBIA HOSP REV",
    "Ticker": "-",
-   "Identifier": "6049203E6",
-   "Weight": "0.0541099326",
-   "Market Value": "103004.37",
+   "Identifier": "254764KA0",
+   "Weight": "0.1052421799",
+   "Market Value": "255383.93",
+   "Shares Held": "270000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A204",
+   "Weight": "6.4723334845",
+   "Market Value": "15705964.69",
+   "Shares Held": "15702824.125",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "METROPOLITAN PIER and EXPOSITION AUTH ILL DEDICATED ST TAX REV",
+   "Ticker": "-",
+   "Identifier": "592247K33",
+   "Weight": "0.0062072851",
+   "Market Value": "15062.79",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "METROPOLITAN PIER and EXPOSITION AUTH ILL DEDICATED ST TAX REV",
+   "Ticker": "-",
+   "Identifier": "592247L57",
+   "Weight": "0.003599781",
+   "Market Value": "8735.34",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "METROPOLITAN PIER and EXPOSITION AUTH ILL DEDICATED ST TAX REV",
+   "Ticker": "-",
+   "Identifier": "592248BD9",
+   "Weight": "0.0160968235",
+   "Market Value": "39061.05",
    "Shares Held": "100000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
+   "Name": "MISSOURI ST DEV FIN BRD SOLID WASTE DISP REV",
    "Ticker": "-",
-   "Identifier": "56035DJJ2",
-   "Weight": "1.1120718458",
-   "Market Value": "2116954.4",
-   "Shares Held": "2000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "UPPER TRINTY TX RGL WTR DST RV",
-   "Ticker": "-",
-   "Identifier": "916672Y85",
-   "Weight": "0.2751841396",
-   "Market Value": "523844.1",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "RED RIV ED FIN CORP TEX HIGHER ED REV",
-   "Ticker": "-",
-   "Identifier": "756870AU5",
-   "Weight": "0.17342304",
-   "Market Value": "330130.35",
-   "Shares Held": "330000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PALM BEACH CNTY FLA HEALTH FACS AUTH HOSP REV",
-   "Ticker": "-",
-   "Identifier": "69651ABL7",
-   "Weight": "0.1053614638",
-   "Market Value": "200567.45",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "JACKSON ST UNIV EDL BLDG CORP MS REV",
-   "Ticker": "-",
-   "Identifier": "468714FG0",
-   "Weight": "0.0450763106",
-   "Market Value": "85807.85",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "VIRGINIA SMALL BUSINESS FING AUTH REV",
-   "Ticker": "-",
-   "Identifier": "928104PP7",
-   "Weight": "0.1016356329",
-   "Market Value": "193474.91",
-   "Shares Held": "185000",
+   "Identifier": "60636LAA7",
+   "Weight": "0.2904280533",
+   "Market Value": "704761.7",
+   "Shares Held": "675000",
    "Asset Category": "DBT"
   },
   {
    "Name": "MOBILE AL IDB POLLUTN CTL REV",
    "Ticker": "-",
-   "Identifier": "607167EA7",
-   "Weight": "0.053025915",
-   "Market Value": "100940.82",
-   "Shares Held": "100000",
+   "Identifier": "607167DV2",
+   "Weight": "0.2301813188",
+   "Market Value": "558565.11",
+   "Shares Held": "560000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "ILLINOIS ST",
+   "Name": "MUSKINGUM CNTY OH HOSP FACS",
    "Ticker": "-",
-   "Identifier": "452153JS9",
-   "Weight": "0.0291254003",
-   "Market Value": "55443.49",
-   "Shares Held": "50000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ENERGY SOUTHEAST ALA COOP DISTENERGY SUPPLY REV",
-   "Ticker": "-",
-   "Identifier": "292723CU5",
-   "Weight": "0.0524023113",
-   "Market Value": "99753.72",
-   "Shares Held": "95000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PEA RIDGE ARK SCH DIST NO 109",
-   "Ticker": "-",
-   "Identifier": "704537ZU6",
-   "Weight": "0.0911379896",
-   "Market Value": "173491.46",
-   "Shares Held": "205000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FAYETTE CNTY GA DEV AUTH REV",
-   "Ticker": "-",
-   "Identifier": "31222PAD3",
-   "Weight": "0.1772850961",
-   "Market Value": "337482.21",
-   "Shares Held": "325000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LOS ANGELES CA UNI SCH DIST",
-   "Ticker": "-",
-   "Identifier": "544647DF4",
-   "Weight": "0.0025753974",
-   "Market Value": "4902.56",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "UNIVERSITY KA HA HLTH FAC REV",
-   "Ticker": "-",
-   "Identifier": "914367JG3",
-   "Weight": "0.5465154478",
-   "Market Value": "1040353.9",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
-   "Ticker": "-",
-   "Identifier": "93978HTH8",
-   "Weight": "0.0081285956",
-   "Market Value": "15473.7",
-   "Shares Held": "15000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW YORK ST DORM AUTH REVS NONST SUPPORTED DEBT",
-   "Ticker": "-",
-   "Identifier": "64990GX49",
-   "Weight": "0.1300224272",
-   "Market Value": "247512.38",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ILLINOIS FIN AUTH RV",
-   "Ticker": "-",
-   "Identifier": "45204ENZ7",
-   "Weight": "0.0053094826",
-   "Market Value": "10107.2",
-   "Shares Held": "10000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WA ST HSG FIN COMMISSION",
-   "Ticker": "-",
-   "Identifier": "939783Z25",
-   "Weight": "0.2101297503",
-   "Market Value": "400005.72",
-   "Shares Held": "400000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW ORLEANS LA AVIATION BOARD",
-   "Ticker": "-",
-   "Identifier": "64763HJH9",
-   "Weight": "0.0317360675",
-   "Market Value": "60413.19",
-   "Shares Held": "60000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MARICOPA CNTY AZ IDA REV",
-   "Ticker": "-",
-   "Identifier": "56682HEJ4",
-   "Weight": "0.1006566944",
-   "Market Value": "191611.39",
-   "Shares Held": "175000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PORT SEATTLE WA REV",
-   "Ticker": "-",
-   "Identifier": "7353892J6",
-   "Weight": "0.5731612526",
-   "Market Value": "1091077.2",
-   "Shares Held": "995000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
-   "Ticker": "-",
-   "Identifier": "09182TCR6",
-   "Weight": "0.3005176084",
-   "Market Value": "572069.22",
-   "Shares Held": "545000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HOWARD SUAMICO WI SCD",
-   "Ticker": "-",
-   "Identifier": "442841MW9",
-   "Weight": "0.0061457871",
-   "Market Value": "11699.2",
-   "Shares Held": "15000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ILLINOIS ST",
-   "Ticker": "-",
-   "Identifier": "452153AJ8",
-   "Weight": "0.0677093881",
-   "Market Value": "128892.47",
-   "Shares Held": "120000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "DENVER CO CITY and CNTY ARPT",
-   "Ticker": "-",
-   "Identifier": "249182LA2",
-   "Weight": "0.0487277671",
-   "Market Value": "92758.81",
-   "Shares Held": "90000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "STEEL PT INFRASTRUCTURE IMPT DIST CONN SPL OBLIG REV",
-   "Ticker": "-",
-   "Identifier": "85814YAE2",
-   "Weight": "0.0560319146",
-   "Market Value": "106663.08",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL BRD ED",
-   "Ticker": "-",
-   "Identifier": "167505SX5",
-   "Weight": "0.0529000701",
-   "Market Value": "100701.26",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PENNSYLVANIA ST HIGHER EDL FACS AUTH REV",
-   "Ticker": "-",
-   "Identifier": "70917TVB4",
-   "Weight": "0.7637619493",
-   "Market Value": "1453907.16",
-   "Shares Held": "1370000",
+   "Identifier": "628077CK3",
+   "Weight": "0.0769512648",
+   "Market Value": "186732.32",
+   "Shares Held": "200000",
    "Asset Category": "DBT"
   },
   {
    "Name": "NEW JERSEY ST TRANSN TR FD AUT",
    "Ticker": "-",
-   "Identifier": "6461365L1",
-   "Weight": "0.0742207484",
-   "Market Value": "141287.58",
-   "Shares Held": "155000",
+   "Identifier": "646136EU1",
+   "Weight": "0.0051252994",
+   "Market Value": "12437.21",
+   "Shares Held": "15000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NEW YORK TRANSPORTATION DEVELOPMENT CORP",
+   "Name": "NEW JERSEY ST TRANSN TR FD AUT",
    "Ticker": "-",
-   "Identifier": "650116CX2",
-   "Weight": "0.0106713603",
-   "Market Value": "20314.14",
-   "Shares Held": "20000",
+   "Identifier": "646136EX5",
+   "Weight": "0.0241959908",
+   "Market Value": "58714.74",
+   "Shares Held": "80000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
+   "Name": "OHIO ST HIGHER EDL FAC COMMN",
    "Ticker": "-",
-   "Identifier": "93978HTX3",
-   "Weight": "0.0828848204",
-   "Market Value": "157780.62",
-   "Shares Held": "155000",
+   "Identifier": "67756DDT0",
+   "Weight": "0.0947593827",
+   "Market Value": "229946.05",
+   "Shares Held": "255000",
    "Asset Category": "DBT"
   },
   {
    "Name": "PHOENIX AZ INDL DEV AUTH LEASE REVENUES AUTH",
    "Ticker": "-",
    "Identifier": "71885MAQ5",
-   "Weight": "0.0511083298",
-   "Market Value": "97290.48",
+   "Weight": "0.0393874027",
+   "Market Value": "95578.69",
    "Shares Held": "100000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "METROPOLITAN PIER and EXPOSITION AUTH ILL DEDICATED ST TAX REV",
+   "Name": "PHOENIX AZ INDL DEV AUTH LEASE REVENUES AUTH",
    "Ticker": "-",
-   "Identifier": "592247K33",
-   "Weight": "0.0080337496",
-   "Market Value": "15293.15",
-   "Shares Held": "20000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MADISON WI MET SCH DIST",
-   "Ticker": "-",
-   "Identifier": "558495RC3",
-   "Weight": "0.1686232304",
-   "Market Value": "320993.37",
-   "Shares Held": "300000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SUFFOLK TOB ASSET SECURITIZATION CORP NY TOB SETTLEMENT ASSET-BKD",
-   "Ticker": "-",
-   "Identifier": "864809CC0",
-   "Weight": "0.0865718514",
-   "Market Value": "164799.3",
-   "Shares Held": "185000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LOS ANGELES CA DEPT ARPTS REV",
-   "Ticker": "-",
-   "Identifier": "544445FV6",
-   "Weight": "0.0080933363",
-   "Market Value": "15406.58",
-   "Shares Held": "15000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW YORK STATE URBAN DEVELOPMENT CORP",
-   "Ticker": "-",
-   "Identifier": "650036BY1",
-   "Weight": "0.0026652687",
-   "Market Value": "5073.64",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW YORK TRANSPORTATION DEVELOPMENT CORP",
-   "Ticker": "-",
-   "Identifier": "650116HV1",
-   "Weight": "0.0532555257",
-   "Market Value": "101377.91",
+   "Identifier": "71885MAR3",
+   "Weight": "0.0374921248",
+   "Market Value": "90979.55",
    "Shares Held": "100000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "WASHINGTON ST HIGHER ED FACS",
+   "Name": "PORT PORT ARTHUR TX NAV DIST E",
    "Ticker": "-",
-   "Identifier": "9397816S4",
-   "Weight": "0.4038218315",
-   "Market Value": "768720.48",
-   "Shares Held": "800000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "JEFFERSON CNTY AL SWR REV",
-   "Ticker": "-",
-   "Identifier": "472682ZH9",
-   "Weight": "0.2848458724",
-   "Market Value": "542236.3",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PUERTO RICO COMWLTH",
-   "Ticker": "-",
-   "Identifier": "74514L3M7",
-   "Weight": "0.1277763929",
-   "Market Value": "243236.8",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW YORK ST DORM AUTH REVS NONST SUPPORTED DEBT",
-   "Ticker": "-",
-   "Identifier": "65000BRH3",
-   "Weight": "0.3862265691",
-   "Market Value": "735225.91",
-   "Shares Held": "725000",
+   "Identifier": "735220AV7",
+   "Weight": "0.3708845812",
+   "Market Value": "900000",
+   "Shares Held": "900000",
    "Asset Category": "DBT"
   },
   {
    "Name": "POWAY CA UNIFIED SCH DIST",
    "Ticker": "-",
    "Identifier": "738850RD0",
-   "Weight": "0.0206087111",
-   "Market Value": "39231.01",
+   "Weight": "0.015672206",
+   "Market Value": "38030.66",
    "Shares Held": "60000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LONG ISLAND PWR AUTH NY ELEC",
-   "Ticker": "-",
-   "Identifier": "542691DE7",
-   "Weight": "0.0028304808",
-   "Market Value": "5388.14",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
-   "Ticker": "-",
-   "Identifier": "56035DJZ6",
-   "Weight": "0.2822092546",
-   "Market Value": "537217.2",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CENTRE CNTY PA HOSP AUTH REV",
-   "Ticker": "-",
-   "Identifier": "156273GW8",
-   "Weight": "0.0052629028",
-   "Market Value": "10018.53",
-   "Shares Held": "10000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MISSOURI ST HSG DEV COM SF MTG",
-   "Ticker": "-",
-   "Identifier": "60637BE89",
-   "Weight": "0.1696988482",
-   "Market Value": "323040.93",
-   "Shares Held": "460000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "OHIO ST HIGHER EDL FAC COMMN",
-   "Ticker": "-",
-   "Identifier": "67756DUH7",
-   "Weight": "0.0167072773",
-   "Market Value": "31804.19",
-   "Shares Held": "30000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "UNIVERSITY AZ UNIV REVS",
-   "Ticker": "-",
-   "Identifier": "040484NU7",
-   "Weight": "0.0262697358",
-   "Market Value": "50007.41",
-   "Shares Held": "50000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SAN DIEGO CNTY CA REG ARPT AUTH ARPT REV",
-   "Ticker": "-",
-   "Identifier": "79739GSW7",
-   "Weight": "0.2064109114",
-   "Market Value": "392926.49",
-   "Shares Held": "350000",
    "Asset Category": "DBT"
   },
   {
    "Name": "PUBLIC FIN AUTH WI HOSP REV",
    "Ticker": "-",
-   "Identifier": "74442CDC5",
-   "Weight": "0.2017595772",
-   "Market Value": "384072.15",
+   "Identifier": "74442CAX2",
+   "Weight": "0.1162298128",
+   "Market Value": "282046.86",
+   "Shares Held": "300000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SALT VERDE FINL CORP GAS REV AZ",
+   "Ticker": "-",
+   "Identifier": "79575EAS7",
+   "Weight": "0.1095115889",
+   "Market Value": "265744.21",
+   "Shares Held": "260000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SAN DIEGO CA UNI SCH DIST",
+   "Ticker": "-",
+   "Identifier": "797355Q31",
+   "Weight": "0.0035377114",
+   "Market Value": "8584.72",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TALLAHASSEE FL HEALTH FACS REV",
+   "Ticker": "-",
+   "Identifier": "874485CQ6",
+   "Weight": "0.1941440877",
+   "Market Value": "471116.05",
    "Shares Held": "500000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NORTH CAROLINA ST ED ASSISTANCE AUTH REV",
+   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
    "Ticker": "-",
-   "Identifier": "658262GQ7",
-   "Weight": "0.3001241671",
-   "Market Value": "571320.26",
-   "Shares Held": "550000",
+   "Identifier": "93978HGC3",
+   "Weight": "0.105974986",
+   "Market Value": "257162.18",
+   "Shares Held": "275000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "CONNECTICUT ST HEALTH and EDL FACS AUTH REVENUE",
+   "Name": "WISCONSIN ST HEALTH and EDL FACS AUTH REV",
    "Ticker": "-",
-   "Identifier": "20775DEV0",
-   "Weight": "0.0027916756",
-   "Market Value": "5314.27",
+   "Identifier": "97712DKG0",
+   "Weight": "0.0328452294",
+   "Market Value": "79703.25",
+   "Shares Held": "80000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MASSACHUSETTS ST DEV FIN AGY REV",
+   "Ticker": "-",
+   "Identifier": "57584XJB8",
+   "Weight": "0.120059497",
+   "Market Value": "291340.09",
+   "Shares Held": "305000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MARYLAND ST HLTH and HI ED FACS",
+   "Ticker": "-",
+   "Identifier": "574218B85",
+   "Weight": "0.0380434323",
+   "Market Value": "92317.37",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HALIFAX HOSP MED CTR FL HOSP",
+   "Ticker": "-",
+   "Identifier": "405815LH2",
+   "Weight": "0.0779688278",
+   "Market Value": "189201.57",
+   "Shares Held": "215000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "STAMFORD CT",
+   "Ticker": "-",
+   "Identifier": "852634KU7",
+   "Weight": "0.0020604699",
+   "Market Value": "5000",
    "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ELK GROVE CALIF UNI SCH DIST CTFS PARTN",
+   "Ticker": "-",
+   "Identifier": "287286BH0",
+   "Weight": "0.019179134",
+   "Market Value": "46540.68",
+   "Shares Held": "50000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ST CLOUD MINN HEALTH CARE RV",
+   "Ticker": "-",
+   "Identifier": "78916VDT4",
+   "Weight": "0.0058778201",
+   "Market Value": "14263.3",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WISCONSIN ST HEALTH and EDL FACS AUTH REV",
+   "Ticker": "-",
+   "Identifier": "97712DQR0",
+   "Weight": "0.1388579097",
+   "Market Value": "336956.9",
+   "Shares Held": "360000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WEST VIRGINIA ST HOSP FIN AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "956622L36",
+   "Weight": "0.2012221355",
+   "Market Value": "488291.86",
+   "Shares Held": "520000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WEST VIRGINIA ST HOSP FIN AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "956622L69",
+   "Weight": "0.2218285158",
+   "Market Value": "538295.94",
+   "Shares Held": "600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WEST VIRGINIA ST HOSP FIN AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "956622L77",
+   "Weight": "0.2358322151",
+   "Market Value": "572277.75",
+   "Shares Held": "660000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DISTRICT COLUMBIA",
+   "Ticker": "-",
+   "Identifier": "25476FRU4",
+   "Weight": "0.0502591589",
+   "Market Value": "121960.43",
+   "Shares Held": "145000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST",
+   "Ticker": "-",
+   "Identifier": "452152D65",
+   "Weight": "0.2060458563",
+   "Market Value": "499997.25",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NORTHAMPTON CNTY PA GEN PURP AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "66353RBX1",
+   "Weight": "0.0396898797",
+   "Market Value": "96312.69",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC FIN AUTH WI HOSP REV",
+   "Ticker": "-",
+   "Identifier": "74442CBR4",
+   "Weight": "0.1501198035",
+   "Market Value": "364285.36",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AMERICAN MUN PWR REV",
+   "Ticker": "-",
+   "Identifier": "02765ULN2",
+   "Weight": "0.0036597325",
+   "Market Value": "8880.82",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LYCOMING CNTY PA AUTH COLLEGE REV",
+   "Ticker": "-",
+   "Identifier": "550802JV5",
+   "Weight": "0.1593879166",
+   "Market Value": "386775.65",
+   "Shares Held": "465000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HONOLULU HI CTY and CNTY WASTEWTR SYS REV",
+   "Ticker": "-",
+   "Identifier": "438701K37",
+   "Weight": "0.2063997626",
+   "Market Value": "500856.05",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOUISVILLE and JEFF CNTY KY VI and CO",
+   "Ticker": "-",
+   "Identifier": "546604FV6",
+   "Weight": "0.0063601843",
+   "Market Value": "15433.82",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOS ANGELES CA UNI SCH DIST",
+   "Ticker": "-",
+   "Identifier": "5446464X7",
+   "Weight": "0.0039472381",
+   "Market Value": "9578.49",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH RV",
+   "Ticker": "-",
+   "Identifier": "45204EHX9",
+   "Weight": "0.0538573657",
+   "Market Value": "130691.95",
+   "Shares Held": "155000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST SALES TAX REV",
+   "Ticker": "-",
+   "Identifier": "452227KE0",
+   "Weight": "0.0439338625",
+   "Market Value": "106611.27",
+   "Shares Held": "115000",
    "Asset Category": "DBT"
   },
   {
    "Name": "ILLINOIS ST SALES TAX REV",
    "Ticker": "-",
    "Identifier": "452227KF7",
-   "Weight": "0.1077453517",
-   "Market Value": "205105.45",
+   "Weight": "0.0823116967",
+   "Market Value": "199740.11",
    "Shares Held": "220000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "DALLAS FORT WORTH TX INTL ARPT",
+   "Name": "ILLINOIS FIN AUTH RV",
    "Ticker": "-",
-   "Identifier": "23503CGJ0",
-   "Weight": "0.5563810561",
-   "Market Value": "1059134.2",
-   "Shares Held": "1000000",
+   "Identifier": "45204ELJ5",
+   "Weight": "0.2195543505",
+   "Market Value": "532777.38",
+   "Shares Held": "650000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "FLORIDA DEV FIN CORP STUDENT HSG REV",
+   "Name": "ILLINOIS FIN AUTH RV",
    "Ticker": "-",
-   "Identifier": "34062AAE1",
-   "Weight": "0.0505208259",
-   "Market Value": "96172.1",
-   "Shares Held": "100000",
+   "Identifier": "45204EMD7",
+   "Weight": "0.1075633281",
+   "Market Value": "261016.5",
+   "Shares Held": "310000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "MONTANA FACILITY FIN AUTH REV",
+   "Name": "WISCONSIN ST HEALTH and EDL FACS AUTH REV",
    "Ticker": "-",
-   "Identifier": "61204KPV7",
-   "Weight": "0.2792348054",
-   "Market Value": "531555",
+   "Identifier": "97712DUE4",
+   "Weight": "0.0806115165",
+   "Market Value": "195614.4",
+   "Shares Held": "240000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PENNSLYVANIA DEV FING AUTH REV",
+   "Ticker": "-",
+   "Identifier": "70869PLT2",
+   "Weight": "0.2390865996",
+   "Market Value": "580174.94",
+   "Shares Held": "630000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH RV",
+   "Ticker": "-",
+   "Identifier": "45204ENW4",
+   "Weight": "0.0058011665",
+   "Market Value": "14077.29",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH RV",
+   "Ticker": "-",
+   "Identifier": "45204ENZ7",
+   "Weight": "0.0041470418",
+   "Market Value": "10063.34",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DISTRICT COLUMBIA UNIV REV",
+   "Ticker": "-",
+   "Identifier": "25484JCZ1",
+   "Weight": "0.0166486215",
+   "Market Value": "40400.06",
+   "Shares Held": "40000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHICAGO IL",
+   "Ticker": "-",
+   "Identifier": "167486ZY8",
+   "Weight": "0.0041386722",
+   "Market Value": "10043.03",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SHELBY CO TN HLTH EDL and HSG FACS",
+   "Ticker": "-",
+   "Identifier": "821697S42",
+   "Weight": "0.001950346",
+   "Market Value": "4732.77",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW ORLEANS LA AVIATION BOARD",
+   "Ticker": "-",
+   "Identifier": "64763HJH9",
+   "Weight": "0.0247961686",
+   "Market Value": "60171.15",
+   "Shares Held": "60000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW ORLEANS LA AVIATION BOARD",
+   "Ticker": "-",
+   "Identifier": "64763HHB4",
+   "Weight": "0.0352115472",
+   "Market Value": "85445.43",
+   "Shares Held": "85000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW ORLEANS LA AVIATION BOARD",
+   "Ticker": "-",
+   "Identifier": "64763HHD0",
+   "Weight": "0.0724490391",
+   "Market Value": "175807.08",
+   "Shares Held": "175000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOUISIANA PUB FAC AUTH HSP REV",
+   "Ticker": "-",
+   "Identifier": "546395N91",
+   "Weight": "0.0087047188",
+   "Market Value": "21123.14",
+   "Shares Held": "25000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WISCONSIN HSG and ECONOMIC DEV AUTH HOME OWNERSHIP MTG REV",
+   "Ticker": "-",
+   "Identifier": "97689SAC6",
+   "Weight": "0.0259570745",
+   "Market Value": "62988.24",
+   "Shares Held": "72861.789",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GRIFFIN-SPALDING CNTY GA HOSP REV",
+   "Ticker": "-",
+   "Identifier": "398258AX1",
+   "Weight": "0.0362623086",
+   "Market Value": "87995.24",
+   "Shares Held": "105000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PORT SEATTLE WA REV",
+   "Ticker": "-",
+   "Identifier": "735389ZT8",
+   "Weight": "0.2088059175",
+   "Market Value": "506694.9",
    "Shares Held": "500000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "INDIANA FIN AUTH EDL FACS REV",
+   "Name": "OHIO ST HOSP FAC REV ACTING",
    "Ticker": "-",
-   "Identifier": "45470EFX8",
-   "Weight": "0.0873800146",
-   "Market Value": "166337.73",
-   "Shares Held": "160000",
+   "Identifier": "677561KP6",
+   "Weight": "0.1702888161",
+   "Market Value": "413228.11",
+   "Shares Held": "445000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "ILLINOIS FIN AUTHRV",
+   "Name": "MISSOURI ST HSG DEV COM SF MTG",
    "Ticker": "-",
-   "Identifier": "45204FNG6",
-   "Weight": "0.0500103073",
-   "Market Value": "95200.27",
+   "Identifier": "60637BNU0",
+   "Weight": "0.0093092607",
+   "Market Value": "22590.14",
+   "Shares Held": "24271.509",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
+   "Ticker": "-",
+   "Identifier": "93978HSF3",
+   "Weight": "0.0315222182",
+   "Market Value": "76492.79",
+   "Shares Held": "75000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NJ EDA MOTOR VEHICLE",
+   "Ticker": "-",
+   "Identifier": "64578JBF2",
+   "Weight": "0.0040560638",
+   "Market Value": "9842.57",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
+   "Ticker": "-",
+   "Identifier": "93978HTH8",
+   "Weight": "0.0063238953",
+   "Market Value": "15345.76",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST",
+   "Ticker": "-",
+   "Identifier": "452152Q20",
+   "Weight": "0.0105515015",
+   "Market Value": "25604.6",
+   "Shares Held": "25000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHICAGO IL BRD ED",
+   "Ticker": "-",
+   "Identifier": "167505SX5",
+   "Weight": "0.0413872577",
+   "Market Value": "100431.6",
    "Shares Held": "100000",
    "Asset Category": "DBT"
   },
@@ -548,1719 +611,1656 @@
    "Name": "SOUTHWEST HRG ED AUTH TEX REV",
    "Ticker": "-",
    "Identifier": "845040MC5",
-   "Weight": "0.0026937829",
-   "Market Value": "5127.92",
+   "Weight": "0.0020897533",
+   "Market Value": "5071.06",
    "Shares Held": "5000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NEVADA ST",
+   "Name": "CENTRAL FLA EXPWY AUTH SR LIEN REV",
    "Ticker": "-",
-   "Identifier": "641462UZ7",
-   "Weight": "0.0406221122",
-   "Market Value": "77328.78",
-   "Shares Held": "85000",
+   "Identifier": "153476CV6",
+   "Weight": "0.1523088591",
+   "Market Value": "369597.39",
+   "Shares Held": "395000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "GEORGETOWN TEX UTIL SYS REV",
+   "Name": "TEXAS STATE",
    "Ticker": "-",
-   "Identifier": "373064Y65",
-   "Weight": "0.3304675723",
-   "Market Value": "629082.36",
-   "Shares Held": "600000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "REDMOND OR",
-   "Ticker": "-",
-   "Identifier": "757657ZL8",
-   "Weight": "0.4401548996",
-   "Market Value": "837884.58",
-   "Shares Held": "780000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BURKE CNTY GA DEV AUTH PCR",
-   "Ticker": "-",
-   "Identifier": "121342QG7",
-   "Weight": "0.1786532261",
-   "Market Value": "340086.6",
-   "Shares Held": "340000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FAYETTE CNTY GA DEV AUTH REV",
-   "Ticker": "-",
-   "Identifier": "31222PAF8",
-   "Weight": "0.2236117974",
-   "Market Value": "425670.32",
-   "Shares Held": "400000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
-   "Ticker": "-",
-   "Identifier": "09182TEW3",
-   "Weight": "0.1896271374",
-   "Market Value": "360976.68",
-   "Shares Held": "360000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHARLOTTE NC ARPT REV",
-   "Ticker": "-",
-   "Identifier": "161036YE2",
-   "Weight": "0.283622068",
-   "Market Value": "539906.65",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ST JOHN BAPTIST PARISH LA REV",
-   "Ticker": "-",
-   "Identifier": "79020FAW6",
-   "Weight": "0.1368332181",
-   "Market Value": "260477.49",
-   "Shares Held": "260000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTHEAST ENERGY AUTHORITY A COOPERATIVE DISTRICT",
-   "Ticker": "-",
-   "Identifier": "84136HBT9",
-   "Weight": "0.1684692915",
-   "Market Value": "320700.33",
-   "Shares Held": "310000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PHOENIX AZ INDL DEV AUTH STUDENT HSG REV",
-   "Ticker": "-",
-   "Identifier": "71885DDV1",
-   "Weight": "0.0405650102",
-   "Market Value": "77220.08",
-   "Shares Held": "75000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CENTRAL PLAINS ENERGY PROJ NE GAS PROJ REV",
-   "Ticker": "-",
-   "Identifier": "154871CW5",
-   "Weight": "0.074615981",
-   "Market Value": "142039.95",
-   "Shares Held": "135000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTH CAROLINA HSG FIN DEV AUT",
-   "Ticker": "-",
-   "Identifier": "83712GAK5",
-   "Weight": "0.2023332443",
-   "Market Value": "385164.19",
-   "Shares Held": "350000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HALIFAX HOSP MED CTR FL HOSP",
-   "Ticker": "-",
-   "Identifier": "405815LH2",
-   "Weight": "0.0456121969",
-   "Market Value": "86827.97",
-   "Shares Held": "95000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "OHIO ST HIGHER EDL FAC COMMN",
-   "Ticker": "-",
-   "Identifier": "67756DDT0",
-   "Weight": "0.0024431384",
-   "Market Value": "4650.79",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NASHUA NH",
-   "Ticker": "-",
-   "Identifier": "631298FB7",
-   "Weight": "0.1791019885",
-   "Market Value": "340940.87",
-   "Shares Held": "425000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MUSKINGUM CNTY OH HOSP FACS",
-   "Ticker": "-",
-   "Identifier": "628077CK3",
-   "Weight": "0.1001039613",
-   "Market Value": "190559.2",
-   "Shares Held": "200000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PENNSYLVANIA ST",
-   "Ticker": "-",
-   "Identifier": "70914PS52",
-   "Weight": "0.1549262656",
-   "Market Value": "294919.65",
-   "Shares Held": "310000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "UTAH HSG CORP",
-   "Ticker": "-",
-   "Identifier": "91743PDP7",
-   "Weight": "0.0038733241",
-   "Market Value": "7373.31",
-   "Shares Held": "9289.472",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CALIFORNIA CMNTY CHOICE FING AUTH CLEAN ENERGY PROJ REV",
-   "Ticker": "-",
-   "Identifier": "13013JGT7",
-   "Weight": "0.2716893379",
-   "Market Value": "517191.35",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CALIFORNIA MUN FIN AUTH REV",
-   "Ticker": "-",
-   "Identifier": "13048T2P7",
-   "Weight": "0.0253313938",
-   "Market Value": "48221.17",
-   "Shares Held": "50000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MASSACHUSETTS DEVELOPMENT FINANCE AGENCY",
-   "Ticker": "-",
-   "Identifier": "57584YG94",
-   "Weight": "0.2292726382",
-   "Market Value": "436446.37",
-   "Shares Held": "510000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PALM BEACH CNTY FL HEALTH FACS",
-   "Ticker": "-",
-   "Identifier": "696507VX7",
-   "Weight": "0.580410846",
-   "Market Value": "1104877.62",
-   "Shares Held": "1100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WISCONSIN ST HEALTH and EDL FACSAUTH REV",
-   "Ticker": "-",
-   "Identifier": "97712JPN7",
-   "Weight": "0.0027214881",
-   "Market Value": "5180.66",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "KENTUCKY INC KY PUB ENERGY AUTH GAS SUPPLY REV",
-   "Ticker": "-",
-   "Identifier": "74440DEL4",
-   "Weight": "0.0441079363",
-   "Market Value": "83964.44",
-   "Shares Held": "80000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "TALLAHASSEE FL HEALTH FACS REV",
-   "Ticker": "-",
-   "Identifier": "874485CQ6",
-   "Weight": "0.2557381438",
-   "Market Value": "486826.45",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SHELBY CO TN HLTH EDL and HSG FACS",
-   "Ticker": "-",
-   "Identifier": "821697S42",
-   "Weight": "0.0025694351",
-   "Market Value": "4891.21",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "STEEL PT INFRASTRUCTURE IMPT DIST CONN SPL OBLIG REV",
-   "Ticker": "-",
-   "Identifier": "85814YAD4",
-   "Weight": "0.044935636",
-   "Market Value": "85540.06",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTHEAST ENERGY AUTH COMMODITY SUPPLY REV ALA",
-   "Ticker": "-",
-   "Identifier": "84136FBB2",
-   "Weight": "0.4400467316",
-   "Market Value": "837678.67",
-   "Shares Held": "810000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PUBLIC FIN AUTH WI HOSP REV",
-   "Ticker": "-",
-   "Identifier": "74442CBR4",
-   "Weight": "0.1947926832",
-   "Market Value": "370809.88",
-   "Shares Held": "400000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FORT BEND TEX GRAND PKWY TOLL RD AUTH LTD CONTRACT TAX TOLL RD REV",
-   "Ticker": "-",
-   "Identifier": "346832CE6",
-   "Weight": "0.282379037",
-   "Market Value": "537540.4",
-   "Shares Held": "580000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "IOWA HIGHER ED LN AUTH REV",
-   "Ticker": "-",
-   "Identifier": "46247DBJ5",
-   "Weight": "0.1953093901",
-   "Market Value": "371793.49",
-   "Shares Held": "375000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "TEXAS MUNICIPAL GAS ACQUISITION and SUPPLY CORP V",
-   "Ticker": "-",
-   "Identifier": "88256RAV8",
-   "Weight": "0.5472994307",
-   "Market Value": "1041846.3",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NORTHEAST OH REGL SWR WSTWTR R",
-   "Ticker": "-",
-   "Identifier": "663903HV7",
-   "Weight": "0.0941901226",
-   "Market Value": "179301.54",
-   "Shares Held": "200000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "METROPOLITAN PIER and EXPOSITION AUTH ILL DEDICATED ST TAX REV",
-   "Ticker": "-",
-   "Identifier": "592248BD9",
-   "Weight": "0.020675978",
-   "Market Value": "39359.06",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "AMERICAN MUN PWR REV",
-   "Ticker": "-",
-   "Identifier": "02765ULN2",
-   "Weight": "0.0048076159",
-   "Market Value": "9151.84",
-   "Shares Held": "10000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LOUISVILLE and JEFFERSON CNTY KY METRO GOVT HEALTH SYS REV",
-   "Ticker": "-",
-   "Identifier": "54659LCD4",
-   "Weight": "0.1852631936",
-   "Market Value": "352669.42",
-   "Shares Held": "350000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PORT SEATTLE WA REV",
-   "Ticker": "-",
-   "Identifier": "735389ZT8",
-   "Weight": "0.2673459918",
-   "Market Value": "508923.3",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "METROPOLITAN GOVT NASHVILLE and DAVIDSON CNTY TN",
-   "Ticker": "-",
-   "Identifier": "592112VA1",
-   "Weight": "0.1770033686",
-   "Market Value": "336945.91",
-   "Shares Held": "350000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HONOLULU HI CITY and CNTY MFR",
-   "Ticker": "-",
-   "Identifier": "438697BQ6",
-   "Weight": "0.1788729136",
-   "Market Value": "340504.8",
-   "Shares Held": "340000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "AKRON BATH COPLEY HSP DIST OH",
-   "Ticker": "-",
-   "Identifier": "009730PN6",
-   "Weight": "0.0575066472",
-   "Market Value": "109470.4",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "OHIO ST HIGHER EDL FAC COMMN",
-   "Ticker": "-",
-   "Identifier": "67756DT30",
-   "Weight": "0.1054127715",
-   "Market Value": "200665.12",
-   "Shares Held": "200000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NJ ST HSG and MTG FIN AGY MFR",
-   "Ticker": "-",
-   "Identifier": "646108Z29",
-   "Weight": "0.264918056",
-   "Market Value": "504301.45",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PHILADELPHIA PA",
-   "Ticker": "-",
-   "Identifier": "717813C56",
-   "Weight": "0.1893162916",
-   "Market Value": "360384.95",
-   "Shares Held": "330000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LOS ANGELES CA DEPT ARPTS REV",
-   "Ticker": "-",
-   "Identifier": "544445E54",
-   "Weight": "0.4160009983",
-   "Market Value": "791904.9",
-   "Shares Held": "715000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WEST VIRGINIA ECONOMIC DEV AUTH SOLD WASTE DISP FACS REV",
-   "Ticker": "-",
-   "Identifier": "95648VBS7",
-   "Weight": "0.0079566909",
-   "Market Value": "15146.46",
-   "Shares Held": "15000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SALES TAX SECURITIZATION CORPILL",
-   "Ticker": "-",
-   "Identifier": "79467BEP6",
-   "Weight": "0.1387212752",
-   "Market Value": "264071.62",
-   "Shares Held": "264000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SHELBY CNTY TENN HEALTH EDL and HSG FAC BRD HEALTH CARE REV",
-   "Ticker": "-",
-   "Identifier": "821691AD4",
-   "Weight": "0.2795396731",
-   "Market Value": "532135.35",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PENNSYLVANIA ST TPK COMMN TPK",
-   "Ticker": "-",
-   "Identifier": "709225RH1",
-   "Weight": "0.2937340237",
-   "Market Value": "559155.9",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MASSACHUSETTS ST PORT AUTH REV",
-   "Ticker": "-",
-   "Identifier": "575896YF6",
-   "Weight": "0.2497887938",
-   "Market Value": "475501.19",
-   "Shares Held": "450000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "TEXAS WTR DEV BRD",
-   "Ticker": "-",
-   "Identifier": "8828544R0",
-   "Weight": "0.1201949674",
-   "Market Value": "228804.7",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW ORLEANS LA AVIATION BOARD",
-   "Ticker": "-",
-   "Identifier": "64763HHB4",
-   "Weight": "0.045119975",
-   "Market Value": "85890.97",
-   "Shares Held": "85000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL OHARE INTL ARPT REV",
-   "Ticker": "-",
-   "Identifier": "167593L42",
-   "Weight": "0.3151209654",
-   "Market Value": "599868.36",
-   "Shares Held": "630000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "DUBOIS PA HOSP AUTH HOSP REV",
-   "Ticker": "-",
-   "Identifier": "263804BA3",
-   "Weight": "0.3079377721",
-   "Market Value": "586194.34",
-   "Shares Held": "580000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PROSPER TEX INDPT SCH DIST",
-   "Ticker": "-",
-   "Identifier": "7436005M6",
-   "Weight": "0.3564899206",
-   "Market Value": "678618.84",
-   "Shares Held": "600000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL BRD ED",
-   "Ticker": "-",
-   "Identifier": "167505ZL3",
-   "Weight": "0.551547458",
-   "Market Value": "1049932.9",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GREAT LAKES WTR AUTH MICH WTR SUPPLY SYS REV",
-   "Ticker": "-",
-   "Identifier": "39081JHU5",
-   "Weight": "0.5796073633",
-   "Market Value": "1103348.1",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SAN FRANCISCO CA CITY and COUNTY AIRPORTS COMMISSION INTERNATIONAL AIRPORT REVENUE",
-   "Ticker": "-",
-   "Identifier": "79766DVR7",
-   "Weight": "0.1479378335",
-   "Market Value": "281616.38",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MISSOURI ST DEV FIN BRD SOLID WASTE DISP REV",
-   "Ticker": "-",
-   "Identifier": "60636LAA7",
-   "Weight": "0.3736550904",
-   "Market Value": "711294.68",
+   "Identifier": "882724EP8",
+   "Weight": "0.258785652",
+   "Market Value": "627977.27",
    "Shares Held": "675000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "VIRGINIA SMALL BUSINESS FING AUTH REV",
+   "Name": "NEW YORK CITY GO",
    "Ticker": "-",
-   "Identifier": "928104PS1",
-   "Weight": "0.0178250833",
-   "Market Value": "33932.06",
-   "Shares Held": "35000",
+   "Identifier": "64966MTB5",
+   "Weight": "0.0612638607",
+   "Market Value": "148664.78",
+   "Shares Held": "160000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "FLORIDA ST MUN PWR AGY REV",
+   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
    "Ticker": "-",
-   "Identifier": "342816R80",
-   "Weight": "0.0507741863",
-   "Market Value": "96654.4",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTHEAST ENERGY AUTHORITY A COOPERATIVE DISTRICT",
-   "Ticker": "-",
-   "Identifier": "84136HCT8",
-   "Weight": "0.9936877402",
-   "Market Value": "1891596.88",
-   "Shares Held": "1770000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL MIDWAY ARPT REV",
-   "Ticker": "-",
-   "Identifier": "167562UP0",
-   "Weight": "0.5585577065",
-   "Market Value": "1063277.7",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SALES TAX SECURITIZATION CORPILL",
-   "Ticker": "-",
-   "Identifier": "79467BJB2",
-   "Weight": "0.1731343574",
-   "Market Value": "329580.81",
-   "Shares Held": "300000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WASHINGTON ST HIGHER ED FACS",
-   "Ticker": "-",
-   "Identifier": "939781U57",
-   "Weight": "0.1481741368",
-   "Market Value": "282066.21",
-   "Shares Held": "310000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL OHARE INTL ARPT REV",
-   "Ticker": "-",
-   "Identifier": "1675934M1",
-   "Weight": "0.0281377678",
-   "Market Value": "53563.42",
-   "Shares Held": "50000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
-   "Ticker": "-",
-   "Identifier": "09182THB6",
-   "Weight": "0.2148329594",
-   "Market Value": "408958.81",
-   "Shares Held": "380000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MINNESOTA ST HIGHER ED FACS AUTH REV FOR ISSUES DTD PRIOR TO 12/29/2017 SEE 60416H",
-   "Ticker": "-",
-   "Identifier": "60416JBC3",
-   "Weight": "0.0807448161",
-   "Market Value": "153706.88",
-   "Shares Held": "150000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GRAND FORKS ND HEALTH CARE SYS REV",
-   "Ticker": "-",
-   "Identifier": "38546WCZ1",
-   "Weight": "0.2714838339",
-   "Market Value": "516800.15",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW YORK TRANSPORTATION DEVELOPMENT CORP",
-   "Ticker": "-",
-   "Identifier": "650116DH6",
-   "Weight": "0.0109569226",
-   "Market Value": "20857.74",
-   "Shares Held": "20000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CONNECTICUT ST",
-   "Ticker": "-",
-   "Identifier": "20772KMA4",
-   "Weight": "0.0100110055",
-   "Market Value": "19057.08",
-   "Shares Held": "20000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MONTGOMERY CNTY OH HOSP REV",
-   "Ticker": "-",
-   "Identifier": "613520MW2",
-   "Weight": "0.0142024877",
-   "Market Value": "27036.04",
-   "Shares Held": "25000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTH CAROLINA ST SVC AUTH REV",
-   "Ticker": "-",
-   "Identifier": "8371514U0",
-   "Weight": "0.0050904045",
-   "Market Value": "9690.16",
-   "Shares Held": "10000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MINNESOTA ST HIGHER ED FACS AUTH REV FOR ISSUES DTD PRIOR TO 12/29/2017 SEE 60416H",
-   "Ticker": "-",
-   "Identifier": "60416JGT1",
-   "Weight": "0.153102875",
-   "Market Value": "291448.62",
-   "Shares Held": "300000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MARYLAND HEALTH and HIGHER EDUCATIONAL FACILITIES AUTHORITY",
-   "Ticker": "-",
-   "Identifier": "57421CBZ6",
-   "Weight": "0.1982471668",
-   "Market Value": "377385.88",
-   "Shares Held": "360000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BURKE CNTY GA DEV AUTH PCR",
-   "Ticker": "-",
-   "Identifier": "121342PN3",
-   "Weight": "0.0559761102",
-   "Market Value": "106556.85",
-   "Shares Held": "105000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "OHIO ST HOSP REV",
-   "Ticker": "-",
-   "Identifier": "67756CEA2",
-   "Weight": "0.1671157863",
-   "Market Value": "318123.78",
-   "Shares Held": "305000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MORRISTOWN TN",
-   "Ticker": "-",
-   "Identifier": "618635QS8",
-   "Weight": "0.5116991271",
-   "Market Value": "974077.1",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WISCONSIN ST HEALTH and EDL FACSAUTH REV",
-   "Ticker": "-",
-   "Identifier": "97712JPP2",
-   "Weight": "0.0253369201",
-   "Market Value": "48231.69",
-   "Shares Held": "50000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "INDIANA FIN AUTH EDL FACS REV",
-   "Ticker": "-",
-   "Identifier": "45470EFY6",
-   "Weight": "0.094039052",
-   "Market Value": "179013.96",
-   "Shares Held": "170000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GRAND FORKS ND HEALTH CARE SYS REV",
-   "Ticker": "-",
-   "Identifier": "38546WDQ0",
-   "Weight": "0.0271363563",
-   "Market Value": "51657.12",
-   "Shares Held": "60000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WAYNE CNTY MICH ARPT AUTH REV",
-   "Ticker": "-",
-   "Identifier": "9445142H0",
-   "Weight": "0.5597583182",
-   "Market Value": "1065563.2",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NORTHAMPTON CNTY PA GEN PURP AUTH HOSP REV",
-   "Ticker": "-",
-   "Identifier": "66353RBX1",
-   "Weight": "0.0510012072",
-   "Market Value": "97086.56",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTH CAROLINA ST SVC AUTH REV",
-   "Ticker": "-",
-   "Identifier": "8371515A3",
-   "Weight": "0.0605073149",
-   "Market Value": "115182.51",
-   "Shares Held": "110000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FORT WORTH TEX SPL TAX REV",
-   "Ticker": "-",
-   "Identifier": "349507DC4",
-   "Weight": "0.2142377071",
-   "Market Value": "407825.68",
-   "Shares Held": "400000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CONNECTICUT ST HEALTH and EDL FACS AUTH REVENUE",
-   "Ticker": "-",
-   "Identifier": "20775DEZ1",
-   "Weight": "0.00264434",
-   "Market Value": "5033.8",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WEST VIRGINIA ST HOSP FIN AUTH HOSP REV",
-   "Ticker": "-",
-   "Identifier": "956622X25",
-   "Weight": "0.559386709",
-   "Market Value": "1064855.8",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL",
-   "Ticker": "-",
-   "Identifier": "167486W70",
-   "Weight": "0.2824812374",
-   "Market Value": "537734.95",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SALT VERDE FINL CORP GAS REV AZ",
-   "Ticker": "-",
-   "Identifier": "79575EAS7",
-   "Weight": "0.144751897",
-   "Market Value": "275551.59",
-   "Shares Held": "260000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
-   "Ticker": "-",
-   "Identifier": "09182TDU8",
-   "Weight": "0.3341305227",
-   "Market Value": "636055.2",
-   "Shares Held": "600000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTHEAST ENERGY AUTH COOP DIST ALA COMMODITY SUPPLY REV",
-   "Ticker": "-",
-   "Identifier": "84136GAK1",
-   "Weight": "0.2105179279",
-   "Market Value": "400744.66",
-   "Shares Held": "380000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "VIRGINIA SMALL BUSINESS FING AUTH REV",
-   "Ticker": "-",
-   "Identifier": "928104PQ5",
-   "Weight": "0.0514833535",
-   "Market Value": "98004.38",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ALABAMA ST UNIVERSITY REV",
-   "Ticker": "-",
-   "Identifier": "010632PZ4",
-   "Weight": "0.2612644615",
-   "Market Value": "497346.42",
-   "Shares Held": "475000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WASHINGTON ST",
-   "Ticker": "-",
-   "Identifier": "93974EW51",
-   "Weight": "0.0295271258",
-   "Market Value": "56208.22",
-   "Shares Held": "50000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GENESEE COUNTY FUNDING CORP/THE",
-   "Ticker": "-",
-   "Identifier": "371669AJ1",
-   "Weight": "0.1403350801",
-   "Market Value": "267143.68",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PROSPER TEX INDPT SCH DIST",
-   "Ticker": "-",
-   "Identifier": "7436005L8",
-   "Weight": "0.2349240968",
-   "Market Value": "447204.56",
-   "Shares Held": "400000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CALIFORNIA CMNTY CHOICE FING AUTH CLEAN ENERGY PROJ REV",
-   "Ticker": "-",
-   "Identifier": "13013JHN9",
-   "Weight": "0.5582617955",
-   "Market Value": "1062714.4",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NORTH TX TWY AUTH REV",
-   "Ticker": "-",
-   "Identifier": "66285WR32",
-   "Weight": "0.3728818607",
-   "Market Value": "709822.75",
-   "Shares Held": "650000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "AMERICAN MUN PWR REV",
-   "Ticker": "-",
-   "Identifier": "02765URP1",
-   "Weight": "0.2725739715",
-   "Market Value": "518875.35",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CONNECTICUT ST HEALTH and EDL FACS AUTH REVENUE",
-   "Ticker": "-",
-   "Identifier": "20775DCM2",
-   "Weight": "0.1979988863",
-   "Market Value": "376913.25",
-   "Shares Held": "375000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GEISINGER AUTH PA HLTH SYS REV",
-   "Ticker": "-",
-   "Identifier": "368497JX2",
-   "Weight": "0.0264354732",
-   "Market Value": "50322.91",
-   "Shares Held": "50000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WEST HAVEN CT",
-   "Ticker": "-",
-   "Identifier": "953140Y53",
-   "Weight": "0.0577985237",
-   "Market Value": "110026.02",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SALT LAKE CITY UT ARPT REV",
-   "Ticker": "-",
-   "Identifier": "795576LX3",
-   "Weight": "0.0858285543",
-   "Market Value": "163384.35",
-   "Shares Held": "150000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MEDFORD OR HOSP FACS AUTH",
-   "Ticker": "-",
-   "Identifier": "584283GV1",
-   "Weight": "0.0055381005",
-   "Market Value": "10542.4",
-   "Shares Held": "10000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WEST HAVEN CT",
-   "Ticker": "-",
-   "Identifier": "953140Y61",
-   "Weight": "0.0575374202",
-   "Market Value": "109528.98",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MICHIGAN ST HSG DEV AUTH RENTHSG REV",
-   "Ticker": "-",
-   "Identifier": "59465PAX6",
-   "Weight": "0.0110180117",
-   "Market Value": "20974.03",
-   "Shares Held": "30000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW ORLEANS LA AVIATION BOARD",
-   "Ticker": "-",
-   "Identifier": "64763HMN2",
-   "Weight": "0.2290735746",
-   "Market Value": "436067.43",
-   "Shares Held": "405000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTH DAKOTA HSG DEV AUTH",
-   "Ticker": "-",
-   "Identifier": "83756C6Z3",
-   "Weight": "0.0480653793",
-   "Market Value": "91497.88",
-   "Shares Held": "85000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SACRAMENTO CNTY CA ARPT SYS RV",
-   "Ticker": "-",
-   "Identifier": "786107VU3",
-   "Weight": "0.2823797987",
-   "Market Value": "537541.85",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "DENVER CO CITY and CNTY ARPT",
-   "Ticker": "-",
-   "Identifier": "249182LN4",
-   "Weight": "0.1042026778",
-   "Market Value": "198361.57",
-   "Shares Held": "210000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "INDIANA FIN AUTH EDL FACS REV",
-   "Ticker": "-",
-   "Identifier": "45470ECL7",
-   "Weight": "0.2786057385",
-   "Market Value": "530357.5",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ILLINOIS HOUSING DEV AUTH",
-   "Ticker": "-",
-   "Identifier": "45201Y4S3",
-   "Weight": "0.0547138001",
-   "Market Value": "104153.9",
-   "Shares Held": "115000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CUYAHOGA CNTY OH ECON DEV REV",
-   "Ticker": "-",
-   "Identifier": "232263KJ1",
-   "Weight": "0.0027603142",
-   "Market Value": "5254.57",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MISSOURI ST HSG DEV COM SF MTG",
-   "Ticker": "-",
-   "Identifier": "60637B7E4",
-   "Weight": "0.0409664942",
-   "Market Value": "77984.35",
-   "Shares Held": "70000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SALT LAKE CITY UT ARPT REV",
-   "Ticker": "-",
-   "Identifier": "795576LV7",
-   "Weight": "0.155884039",
-   "Market Value": "296742.88",
-   "Shares Held": "270000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PORT SEATTLE WA REV",
-   "Ticker": "-",
-   "Identifier": "735389H68",
-   "Weight": "0.0027293993",
-   "Market Value": "5195.72",
-   "Shares Held": "5000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LYCOMING CNTY PA AUTH COLLEGE REV",
-   "Ticker": "-",
-   "Identifier": "550802JV5",
-   "Weight": "0.2115424113",
-   "Market Value": "402694.88",
-   "Shares Held": "465000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PENNSLYVANIA DEV FING AUTH REV",
-   "Ticker": "-",
-   "Identifier": "70869PLT2",
-   "Weight": "0.3184477026",
-   "Market Value": "606201.18",
-   "Shares Held": "630000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW YORK ENERGY FINANCE DEVELOPMENT CORP",
-   "Ticker": "-",
-   "Identifier": "64947PAA4",
-   "Weight": "0.1433289292",
-   "Market Value": "272842.81",
-   "Shares Held": "265000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FAYETTE CNTY GA DEV AUTH REV",
-   "Ticker": "-",
-   "Identifier": "31222PAE1",
-   "Weight": "0.2073024108",
-   "Market Value": "394623.56",
-   "Shares Held": "375000",
+   "Identifier": "93978HTX3",
+   "Weight": "0.0645810071",
+   "Market Value": "156714.27",
+   "Shares Held": "155000",
    "Asset Category": "DBT"
   },
   {
    "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
    "Ticker": "-",
    "Identifier": "93978HUG8",
-   "Weight": "0.0800379077",
-   "Market Value": "152361.2",
+   "Weight": "0.0625436722",
+   "Market Value": "151770.41",
    "Shares Held": "150000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "CTSC JOBS-ECO DEV AUT",
+   "Name": "NEW HOPE CULTURAL ED FACS FINCORP TEX HOSP REV",
    "Ticker": "-",
-   "Identifier": "83704HAM9",
-   "Weight": "0.1060546036",
-   "Market Value": "201886.92",
-   "Shares Held": "200000",
+   "Identifier": "645424AU6",
+   "Weight": "0.1027948403",
+   "Market Value": "249445.14",
+   "Shares Held": "265000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "PENNSYLVANIA ST",
+   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
    "Ticker": "-",
-   "Identifier": "70914PU83",
-   "Weight": "0.0204703847",
-   "Market Value": "38967.69",
-   "Shares Held": "40000",
+   "Identifier": "93978HUA1",
+   "Weight": "0.0037187113",
+   "Market Value": "9023.94",
+   "Shares Held": "10000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "HOUSTON TEX HIGHER ED FIN CORPUNIV REV",
+   "Name": "UNIVERSITY HOUSTON TX UNIV REV",
    "Ticker": "-",
-   "Identifier": "44237QAH8",
-   "Weight": "0.3666063047",
-   "Market Value": "697876.52",
-   "Shares Held": "725000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PUERTO RICO COMWLTH",
-   "Ticker": "-",
-   "Identifier": "74514L3K1",
-   "Weight": "0.0073438352",
-   "Market Value": "13979.82",
-   "Shares Held": "14000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL BRD ED",
-   "Ticker": "-",
-   "Identifier": "167505YL4",
-   "Weight": "0.0468507417",
-   "Market Value": "89185.68",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTH SALT LAKE REDEVELOPMENT AGENCY",
-   "Ticker": "-",
-   "Identifier": "83985AAA0",
-   "Weight": "0.4024416403",
-   "Market Value": "766093.13",
-   "Shares Held": "750000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NORTH DAKOTA ST HSG FIN AGY",
-   "Ticker": "-",
-   "Identifier": "6589095M4",
-   "Weight": "0.0510744942",
-   "Market Value": "97226.07",
-   "Shares Held": "90000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "RHODE ISLAND ST STUDENT LN",
-   "Ticker": "-",
-   "Identifier": "762323CX9",
-   "Weight": "0.0301541546",
-   "Market Value": "57401.84",
-   "Shares Held": "55000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WAYNE CNTY MICH ARPT AUTH REV",
-   "Ticker": "-",
-   "Identifier": "944514T24",
-   "Weight": "0.2938907992",
-   "Market Value": "559454.34",
-   "Shares Held": "510000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WAYNE CNTY MICH ARPT AUTH REV",
-   "Ticker": "-",
-   "Identifier": "944514T32",
-   "Weight": "0.2980841673",
-   "Market Value": "567436.89",
-   "Shares Held": "515000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WEST VIRGINIA ST HOSP FIN AUTH HOSP REV",
-   "Ticker": "-",
-   "Identifier": "956622L69",
-   "Weight": "0.2894566101",
-   "Market Value": "551013.36",
-   "Shares Held": "600000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "TENNESSEE ENGY ACQ CRP GAS REV",
-   "Ticker": "-",
-   "Identifier": "880443JQ0",
-   "Weight": "0.3677288595",
-   "Market Value": "700013.43",
-   "Shares Held": "655000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ARIZONA ST INDL DEV AUTH MULTIFAMILY HSG REV",
-   "Ticker": "-",
-   "Identifier": "04062PDH1",
-   "Weight": "0.0956941836",
-   "Market Value": "182164.69",
-   "Shares Held": "184000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WASHINGTON ST HSG FIN COMMN NONPROFIT REV",
-   "Ticker": "-",
-   "Identifier": "93978LGK6",
-   "Weight": "0.083411708",
-   "Market Value": "158783.61",
-   "Shares Held": "155000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
-   "Ticker": "-",
-   "Identifier": "56035DEN8",
-   "Weight": "0.1103681695",
-   "Market Value": "210098.28",
-   "Shares Held": "200000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CALIFORNIA ST",
-   "Ticker": "-",
-   "Identifier": "13063DXB9",
-   "Weight": "0.0270505668",
-   "Market Value": "51493.81",
+   "Identifier": "914302FB5",
+   "Weight": "0.0189202401",
+   "Market Value": "45912.44",
    "Shares Held": "50000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "CALIFORNIA INFRASTRUCTURE and ECONNOMIC DEV BK REV",
+   "Name": "BURKE CNTY GA DEV AUTH PCR",
    "Ticker": "-",
-   "Identifier": "13034AN30",
-   "Weight": "0.0074876512",
-   "Market Value": "14253.59",
-   "Shares Held": "15000",
+   "Identifier": "121342PN3",
+   "Weight": "0.0435353346",
+   "Market Value": "105644.19",
+   "Shares Held": "105000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "HOUSTON TEX FIN CORP MFHR",
+   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
    "Ticker": "-",
-   "Identifier": "442396EL7",
-   "Weight": "0.0131896033",
-   "Market Value": "25107.9",
+   "Identifier": "93978HUW3",
+   "Weight": "0.0106226042",
+   "Market Value": "25777.14",
    "Shares Held": "25000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ILLINOIS ST TOLL HWY AU HWY RV",
-   "Ticker": "-",
-   "Identifier": "452252PQ6",
-   "Weight": "0.0109436478",
-   "Market Value": "20832.47",
-   "Shares Held": "20000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WICHITA KANS SALES TAX SPL OBLIG REV",
-   "Ticker": "-",
-   "Identifier": "967323AX4",
-   "Weight": "0.1311593705",
-   "Market Value": "249676.68",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FLORIDA HIGHER EDL FACS FING AUTH REV",
-   "Ticker": "-",
-   "Identifier": "34073TNP8",
-   "Weight": "0.1246429671",
-   "Market Value": "237271.97",
-   "Shares Held": "320000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WORCESTER MA",
-   "Ticker": "-",
-   "Identifier": "981306ZB2",
-   "Weight": "0.0273670281",
-   "Market Value": "52096.23",
-   "Shares Held": "60000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MARYLAND HEALTH and HIGHER EDUCATIONAL FACILITIES AUTHORITY",
-   "Ticker": "-",
-   "Identifier": "57421CFZ2",
-   "Weight": "0.0787960166",
-   "Market Value": "149997.12",
-   "Shares Held": "150000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MICHIGAN FIN AUTH LTD OBLIG REV",
-   "Ticker": "-",
-   "Identifier": "594479JP3",
-   "Weight": "0.1069347825",
-   "Market Value": "203562.44",
-   "Shares Held": "200000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL",
-   "Ticker": "-",
-   "Identifier": "167486U31",
-   "Weight": "0.2644584563",
-   "Market Value": "503426.55",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "INDIANA FIN AUTH EDL FACS REV",
-   "Ticker": "-",
-   "Identifier": "45470EFW0",
-   "Weight": "0.0806339532",
-   "Market Value": "153495.84",
-   "Shares Held": "150000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PORT SEATTLE WA REV",
-   "Ticker": "-",
-   "Identifier": "735389H50",
-   "Weight": "0.0164513167",
-   "Market Value": "31316.94",
-   "Shares Held": "30000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PORT PORT ARTHUR TX NAV DIST E",
-   "Ticker": "-",
-   "Identifier": "735220AV7",
-   "Weight": "0.4727851772",
-   "Market Value": "900000",
-   "Shares Held": "900000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTH CAROLINA ST SVC AUTH REV",
-   "Ticker": "-",
-   "Identifier": "8371514F3",
-   "Weight": "0.0224027313",
-   "Market Value": "42646.13",
-   "Shares Held": "40000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ILLINOIS ST",
-   "Ticker": "-",
-   "Identifier": "452152Q20",
-   "Weight": "0.0135390493",
-   "Market Value": "25773.11",
-   "Shares Held": "25000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GARLAND TX WTR and SWR REV",
-   "Ticker": "-",
-   "Identifier": "366168TZ5",
-   "Weight": "0.3646552253",
-   "Market Value": "694162.42",
-   "Shares Held": "645000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "INDIANA FIN AUTH EDL FACS REV",
-   "Ticker": "-",
-   "Identifier": "45470EFZ3",
-   "Weight": "0.0977564988",
-   "Market Value": "186090.54",
-   "Shares Held": "175000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MIDA MOUNTAIN VILLAGE PUBLIC INFRASTRUCTURE DISTRICT",
-   "Ticker": "-",
-   "Identifier": "59561UAJ9",
-   "Weight": "0.2107079823",
-   "Market Value": "401106.45",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MICHIGAN FINANCE AUTHORITY",
-   "Ticker": "-",
-   "Identifier": "59447UAY6",
-   "Weight": "0.2817624201",
-   "Market Value": "536366.6",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEBRASKA INVT FIN AUTH SINGLE FAMILY HSG REV",
-   "Ticker": "-",
-   "Identifier": "63968XDX0",
-   "Weight": "0.2911474685",
-   "Market Value": "554232.1",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ILLINOIS FIN AUTH RV",
-   "Ticker": "-",
-   "Identifier": "45204EHX9",
-   "Weight": "0.0712704113",
-   "Market Value": "135671.28",
-   "Shares Held": "155000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PUERTO RICO SALES TAX FING CORP SALES TAX REV",
-   "Ticker": "-",
-   "Identifier": "74529JQE8",
-   "Weight": "0.0105356867",
-   "Market Value": "20055.87",
-   "Shares Held": "24000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LONG ISLAND PWR AUTH NY ELEC",
-   "Ticker": "-",
-   "Identifier": "542691KA7",
-   "Weight": "0.1310661635",
-   "Market Value": "249499.25",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MASSACHUSETTS ST DEV FIN AGY RV",
-   "Ticker": "-",
-   "Identifier": "57585BTF5",
-   "Weight": "0.2842372929",
-   "Market Value": "541077.8",
-   "Shares Held": "500000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW JERSEY ST TRANSN TR FD AUT",
-   "Ticker": "-",
-   "Identifier": "64613CFT0",
-   "Weight": "0.0586662264",
-   "Market Value": "111677.79",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CHICAGO IL",
-   "Ticker": "-",
-   "Identifier": "167486ZY8",
-   "Weight": "0.0053025957",
-   "Market Value": "10094.09",
-   "Shares Held": "10000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CALIFORNIA CMNTY CHOICE FING AUTH CLEAN ENERGY PROJ REV",
-   "Ticker": "-",
-   "Identifier": "13013JEA0",
-   "Weight": "0.0752342685",
-   "Market Value": "143216.93",
-   "Shares Held": "140000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
-   "Ticker": "-",
-   "Identifier": "56035DFC1",
-   "Weight": "0.1388394872",
-   "Market Value": "264296.65",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GRAND PARKWAY TRANSN CORP TEX SYS TOLL REV",
-   "Ticker": "-",
-   "Identifier": "38611TDR5",
-   "Weight": "0.0785551641",
-   "Market Value": "149538.63",
-   "Shares Held": "145000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SAN DIEGO CA UNI SCH DIST",
-   "Ticker": "-",
-   "Identifier": "797355Q31",
-   "Weight": "0.0045289773",
-   "Market Value": "8621.42",
-   "Shares Held": "10000",
    "Asset Category": "DBT"
   },
   {
    "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
    "Ticker": "-",
    "Identifier": "93978HUY9",
-   "Weight": "0.008218887",
-   "Market Value": "15645.58",
+   "Weight": "0.0063616637",
+   "Market Value": "15437.41",
    "Shares Held": "15000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "SOUTH DAKOTA HSG DEV AUT",
+   "Name": "GEISINGER AUTH PA HLTH SYS REV",
    "Ticker": "-",
-   "Identifier": "83756LDX0",
-   "Weight": "0.4099174141",
-   "Market Value": "780324.11",
-   "Shares Held": "690000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ILLINOIS ST",
-   "Ticker": "-",
-   "Identifier": "452153GN3",
-   "Weight": "0.1613208899",
-   "Market Value": "307092.54",
-   "Shares Held": "310000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PEA RIDGE ARK SCH DIST NO 109",
-   "Ticker": "-",
-   "Identifier": "704537ZE2",
-   "Weight": "0.3892769633",
-   "Market Value": "741032.68",
-   "Shares Held": "1115000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW JERSEY EDA WTR FACS REV",
-   "Ticker": "-",
-   "Identifier": "645780FT9",
-   "Weight": "0.1796476404",
-   "Market Value": "341979.58",
-   "Shares Held": "340000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "TENNESSEE HSG DEV AGY RESIDENTIAL FIN PROG REV",
-   "Ticker": "-",
-   "Identifier": "880461G69",
-   "Weight": "0.0069459287",
-   "Market Value": "13222.36",
-   "Shares Held": "15000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WEST VIRGINIA ST HOSP FIN AUTH HOSP REV",
-   "Ticker": "-",
-   "Identifier": "956622L77",
-   "Weight": "0.312534841",
-   "Market Value": "594945.38",
-   "Shares Held": "660000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WISCONSIN ST HEALTH and EDL FACSAUTH REV",
-   "Ticker": "-",
-   "Identifier": "97712JDN0",
-   "Weight": "0.2724930674",
-   "Market Value": "518721.34",
-   "Shares Held": "720000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "OKLAHOMA HSG FIN AGY SINGLE FAMILY MTG REV",
-   "Ticker": "-",
-   "Identifier": "67886MD55",
-   "Weight": "0.0527633931",
-   "Market Value": "100441.08",
-   "Shares Held": "90000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MINNETONKA INDEPENDENT SCHOOL DISTRICT NO 276",
-   "Ticker": "-",
-   "Identifier": "604196BD6",
-   "Weight": "0.0610916459",
-   "Market Value": "116294.85",
-   "Shares Held": "150000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "METROPOLITAN PIER and EXPOSITION AUTH ILL DEDICATED ST TAX REV",
-   "Ticker": "-",
-   "Identifier": "592247L57",
-   "Weight": "0.0047750515",
-   "Market Value": "9089.85",
-   "Shares Held": "15000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "METRO NASHVLL ARPT TN",
-   "Ticker": "-",
-   "Identifier": "592190UM2",
-   "Weight": "0.5515173574",
-   "Market Value": "1049875.6",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GARDEN CITY KS SALES TAX REV",
-   "Ticker": "-",
-   "Identifier": "36508AAA6",
-   "Weight": "0.3663977854",
-   "Market Value": "697479.58",
-   "Shares Held": "700000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "INDIANA FIN AUTH EDL FACS REV",
-   "Ticker": "-",
-   "Identifier": "45470EGC3",
-   "Weight": "0.116645186",
-   "Market Value": "222047.29",
-   "Shares Held": "205000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
-   "Ticker": "-",
-   "Identifier": "09182TGC5",
-   "Weight": "0.5712489154",
-   "Market Value": "1087436.85",
-   "Shares Held": "1025000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LOS ANGELES CA UNI SCH DIST",
-   "Ticker": "-",
-   "Identifier": "5446464X7",
-   "Weight": "0.0050627623",
-   "Market Value": "9637.54",
+   "Identifier": "368497JB0",
+   "Weight": "0.0041631011",
+   "Market Value": "10102.31",
    "Shares Held": "10000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "CHATANOOGA TN HEALTH ED and HSG FAC BRD REV",
+   "Name": "TOBACCO SETTLEMENT FIN CORP NJ",
    "Ticker": "-",
-   "Identifier": "162410EN0",
-   "Weight": "0.1508049236",
-   "Market Value": "287074.21",
-   "Shares Held": "340000",
+   "Identifier": "888808HT2",
+   "Weight": "0.1889967742",
+   "Market Value": "458625.42",
+   "Shares Held": "475000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "JEA FLA WTR and SWR SYS REV",
+   "Name": "DUBOIS PA HOSP AUTH HOSP REV",
    "Ticker": "-",
-   "Identifier": "46615SEY0",
-   "Weight": "0.027744295",
-   "Market Value": "52814.4",
-   "Shares Held": "50000",
+   "Identifier": "263804BA3",
+   "Weight": "0.2417344229",
+   "Market Value": "586600.23",
+   "Shares Held": "580000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "SAN ANTONIO TX ELEC and GAS REV",
+   "Name": "DUBOIS PA HOSP AUTH HOSP REV",
    "Ticker": "-",
-   "Identifier": "79625GLA9",
-   "Weight": "0.283106522",
-   "Market Value": "538925.25",
-   "Shares Held": "500000",
+   "Identifier": "263804BB1",
+   "Weight": "0.0915477448",
+   "Market Value": "222152.59",
+   "Shares Held": "220000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
+   "Name": "CALIFORNIA MUN FN AUTH REV",
    "Ticker": "-",
-   "Identifier": "09182TGT8",
-   "Weight": "0.1479774056",
-   "Market Value": "281691.71",
-   "Shares Held": "265000",
+   "Identifier": "13048VBL1",
+   "Weight": "0.0169915372",
+   "Market Value": "41232.19",
+   "Shares Held": "40000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "CALIFORNIA HSG FIN AGY MUN CTFS",
+   "Name": "PORT SEATTLE WA REV",
    "Ticker": "-",
-   "Identifier": "13033DAE5",
-   "Weight": "0.2881924035",
-   "Market Value": "548606.8",
-   "Shares Held": "551944.905",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WASHINGTON ST HSG FIN COMMN MULTIFAMILY HSG REV",
-   "Ticker": "-",
-   "Identifier": "93978PPU5",
-   "Weight": "0.023674702",
-   "Market Value": "45067.47",
-   "Shares Held": "45000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SOUTH MIAMI FL HLTH FCS HSP RV",
-   "Ticker": "-",
-   "Identifier": "838810EM7",
-   "Weight": "0.5693603225",
-   "Market Value": "1083841.7",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "METRO GOV NASH and DAVID ELEC REV",
-   "Ticker": "-",
-   "Identifier": "592030R93",
-   "Weight": "0.0562071236",
-   "Market Value": "106996.61",
-   "Shares Held": "100000",
+   "Identifier": "735389D88",
+   "Weight": "0.0020794015",
+   "Market Value": "5045.94",
+   "Shares Held": "5000",
    "Asset Category": "DBT"
   },
   {
    "Name": "MASSACHUSETTS ST HSG FIN AGY",
    "Ticker": "-",
    "Identifier": "57586NZ61",
-   "Weight": "0.1899351201",
-   "Market Value": "361562.96",
+   "Weight": "0.1421187022",
+   "Market Value": "344869.64",
    "Shares Held": "370000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOS ANGELES CA DEPT ARPTS REV",
+   "Ticker": "-",
+   "Identifier": "544445FV6",
+   "Weight": "0.0063094102",
+   "Market Value": "15310.61",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TENNESSEE HSG DEV AGY RESIDENTIAL FIN PROG REV",
+   "Ticker": "-",
+   "Identifier": "880461VY1",
+   "Weight": "0.4627585313",
+   "Market Value": "1122944.17",
+   "Shares Held": "1265000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DENVER CO CITY and CNTY ARPT",
+   "Ticker": "-",
+   "Identifier": "249182LK0",
+   "Weight": "0.3493454797",
+   "Market Value": "847732.55",
+   "Shares Held": "780000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DENVER CO CITY and CNTY ARPT",
+   "Ticker": "-",
+   "Identifier": "249182LA2",
+   "Weight": "0.0381097135",
+   "Market Value": "92478.21",
+   "Shares Held": "90000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DENVER CO CITY and CNTY ARPT",
+   "Ticker": "-",
+   "Identifier": "249182LN4",
+   "Weight": "0.0793278602",
+   "Market Value": "192499.44",
+   "Shares Held": "210000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MINNESOTA ST HIGHER ED FACS AUTH REV FOR ISSUES DTD PRIOR TO 12/29/2017 SEE 60416H",
+   "Ticker": "-",
+   "Identifier": "60416JBC3",
+   "Weight": "0.0628625876",
+   "Market Value": "152544.3",
+   "Shares Held": "150000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MEMPHIS-SHELBY CNTY TN ARPT AU",
+   "Ticker": "-",
+   "Identifier": "586111NB8",
+   "Weight": "0.0020856942",
+   "Market Value": "5061.21",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WEST VIRGINIA ST HOSP FIN AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "956622S47",
+   "Weight": "0.0273415701",
+   "Market Value": "66347.9",
+   "Shares Held": "70000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SAN MATEO CNTY CALIF CMNTY COL DIST",
+   "Ticker": "-",
+   "Identifier": "799038NH3",
+   "Weight": "0.0021695388",
+   "Market Value": "5264.67",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHICAGO IL OHARE INTL ARPT REV",
+   "Ticker": "-",
+   "Identifier": "167593L42",
+   "Weight": "0.2351510073",
+   "Market Value": "570624.71",
+   "Shares Held": "630000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHICAGO IL OHARE INTL ARPT REV",
+   "Ticker": "-",
+   "Identifier": "167593M41",
+   "Weight": "0.3327263889",
+   "Market Value": "807404.15",
+   "Shares Held": "865000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH RV",
+   "Ticker": "-",
+   "Identifier": "45204ET81",
+   "Weight": "0.0063509658",
+   "Market Value": "15411.45",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MASSACHUSETTS ST PORT AUTH REV",
+   "Ticker": "-",
+   "Identifier": "575896TG0",
+   "Weight": "0.0128248014",
+   "Market Value": "31121.06",
+   "Shares Held": "30000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUERTO RICO SALES TAX FING CORP SALES TAX REV",
+   "Ticker": "-",
+   "Identifier": "74529JQE8",
+   "Weight": "0.0083733376",
+   "Market Value": "20319",
+   "Shares Held": "24000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOS ANGELES CA DEPT ARPTS REV",
+   "Ticker": "-",
+   "Identifier": "544445JH3",
+   "Weight": "0.0042663966",
+   "Market Value": "10352.97",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TEXAS WTR DEV BRD",
+   "Ticker": "-",
+   "Identifier": "882854U83",
+   "Weight": "0.0021523627",
+   "Market Value": "5222.99",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOWER COLO RIV AUTH TX REV",
+   "Ticker": "-",
+   "Identifier": "54811BST9",
+   "Weight": "0.0021432431",
+   "Market Value": "5200.86",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH RV",
+   "Ticker": "-",
+   "Identifier": "45204EY28",
+   "Weight": "0.6400715717",
+   "Market Value": "1553217.48",
+   "Shares Held": "1475000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FINANCE AUTHORITY",
+   "Ticker": "-",
+   "Identifier": "452017AP1",
+   "Weight": "0.1486989941",
+   "Market Value": "360837.58",
+   "Shares Held": "350000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CUYAHOGA CNTY OH ECON DEV REV",
+   "Ticker": "-",
+   "Identifier": "232263KJ1",
+   "Weight": "0.0021469396",
+   "Market Value": "5209.83",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MASSACHUSETTS ST DEV FIN AGY REV",
+   "Ticker": "-",
+   "Identifier": "57584XVH1",
+   "Weight": "0.0123679293",
+   "Market Value": "30012.4",
+   "Shares Held": "30000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MONTGOMERY CNTY PA HIGHER ED and HEALTH AUTH REV",
+   "Ticker": "-",
+   "Identifier": "613603A33",
+   "Weight": "0.0768273687",
+   "Market Value": "186431.67",
+   "Shares Held": "180000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW MEXICO MTG FIN AUTH",
+   "Ticker": "-",
+   "Identifier": "647201HB1",
+   "Weight": "0.2521409539",
+   "Market Value": "611853.04",
+   "Shares Held": "765000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MASSACHUSETTS DEVELOPMENT FINANCE AGENCY",
+   "Ticker": "-",
+   "Identifier": "57584YTE9",
+   "Weight": "0.0064247429",
+   "Market Value": "15590.48",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PORT SEATTLE WA REV",
+   "Ticker": "-",
+   "Identifier": "735389H50",
+   "Weight": "0.0127717773",
+   "Market Value": "30992.39",
+   "Shares Held": "30000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PORT SEATTLE WA REV",
+   "Ticker": "-",
+   "Identifier": "735389H68",
+   "Weight": "0.0021235079",
+   "Market Value": "5152.97",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHATANOOGA TN HEALTH ED and HSG FAC BRD REV",
+   "Ticker": "-",
+   "Identifier": "162410EN0",
+   "Weight": "0.1148903714",
+   "Market Value": "278796.53",
+   "Shares Held": "340000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "COLORADO HEALTH FACS AUTH CO",
+   "Ticker": "-",
+   "Identifier": "19648FKP8",
+   "Weight": "0.0211775302",
+   "Market Value": "51390.05",
+   "Shares Held": "50000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CONNECTICUT ST HEALTH and EDL FACS AUTH REVENUE",
+   "Ticker": "-",
+   "Identifier": "20775DCM2",
+   "Weight": "0.1531513935",
+   "Market Value": "371641.91",
+   "Shares Held": "375000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OREGON ST HSG and CMNTY SVCS DPT",
+   "Ticker": "-",
+   "Identifier": "686087E94",
+   "Weight": "0.0033974511",
+   "Market Value": "8244.36",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NORTHEAST OH REGL SWR WSTWTR R",
+   "Ticker": "-",
+   "Identifier": "663903HV7",
+   "Weight": "0.0707533219",
+   "Market Value": "171692.2",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AMES IOWA",
+   "Ticker": "-",
+   "Identifier": "0308072F7",
+   "Weight": "0.3334474545",
+   "Market Value": "809153.91",
+   "Shares Held": "900000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PALM BEACH CNTY FLA HEALTH FACS AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "69651ABL7",
+   "Weight": "0.0810167285",
+   "Market Value": "196597.7",
+   "Shares Held": "250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW JERSEY ST TRANSN TR FD AUT",
+   "Ticker": "-",
+   "Identifier": "6461365L1",
+   "Weight": "0.0558753899",
+   "Market Value": "135588.95",
+   "Shares Held": "155000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OHIO ST HIGHER EDL FAC COMMN",
+   "Ticker": "-",
+   "Identifier": "67756DUH7",
+   "Weight": "0.0128972187",
+   "Market Value": "31296.79",
+   "Shares Held": "30000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FULTON CNTY GA DEV AUTH REV",
+   "Ticker": "-",
+   "Identifier": "36005FGD1",
+   "Weight": "0.1428822753",
+   "Market Value": "346722.55",
+   "Shares Held": "440000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK ST URBAN EEV CORP STSALES TAX REV",
+   "Ticker": "-",
+   "Identifier": "64985TAU5",
+   "Weight": "0.2989262553",
+   "Market Value": "725383.7",
+   "Shares Held": "1000000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TENNESSEE HSG DEV AGY RESIDENTIAL FIN PROG REV",
+   "Ticker": "-",
+   "Identifier": "880461G69",
+   "Weight": "0.005208464",
+   "Market Value": "12639.02",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WASHINGTON ST",
+   "Ticker": "-",
+   "Identifier": "93974EDP8",
+   "Weight": "0.0064871917",
+   "Market Value": "15742.02",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS HOUSING DEV AUTH",
+   "Ticker": "-",
+   "Identifier": "45201Y4S3",
+   "Weight": "0.0418449334",
+   "Market Value": "101542.21",
+   "Shares Held": "115000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WASHINGTON ST HEALTH CARE FACS AUTH REV",
+   "Ticker": "-",
+   "Identifier": "93978HVP7",
+   "Weight": "0.0042474856",
+   "Market Value": "10307.08",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CITY HSG DEV CORPMULTIFAMILY HSG REV",
+   "Ticker": "-",
+   "Identifier": "64972ELD9",
+   "Weight": "0.0044280487",
+   "Market Value": "10745.24",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ASHLAND KY MED CTR REV",
+   "Ticker": "-",
+   "Identifier": "044293BV9",
+   "Weight": "0.0812329459",
+   "Market Value": "197122.38",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW JERSEY ST",
+   "Ticker": "-",
+   "Identifier": "646039XK8",
+   "Weight": "0.0274511088",
+   "Market Value": "66613.71",
+   "Shares Held": "80000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OHIO ST HOSP REV",
+   "Ticker": "-",
+   "Identifier": "67756CEA2",
+   "Weight": "0.129563744",
+   "Market Value": "314403.39",
+   "Shares Held": "305000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CONNECTICUT ST HEALTH and EDL FACS AUTH REVENUE",
+   "Ticker": "-",
+   "Identifier": "20775DEV0",
+   "Weight": "0.0021682902",
+   "Market Value": "5261.64",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CONNECTICUT ST HEALTH and EDL FACS AUTH REVENUE",
+   "Ticker": "-",
+   "Identifier": "20775DEZ1",
+   "Weight": "0.0020700387",
+   "Market Value": "5023.22",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA MUN FIN AUTH REV",
+   "Ticker": "-",
+   "Identifier": "13048T2P7",
+   "Weight": "0.0192162142",
+   "Market Value": "46630.66",
+   "Shares Held": "50000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FLORIDA HIGHER EDL FACS FING AUTH REV",
+   "Ticker": "-",
+   "Identifier": "34073TMZ7",
+   "Weight": "0.0126068408",
+   "Market Value": "30592.15",
+   "Shares Held": "30000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH RV",
+   "Ticker": "-",
+   "Identifier": "45204EMB1",
+   "Weight": "0.0040059903",
+   "Market Value": "9721.06",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WACO TX",
+   "Ticker": "-",
+   "Identifier": "929831QL2",
+   "Weight": "0.0123806548",
+   "Market Value": "30043.28",
+   "Shares Held": "40000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOUISVILLE and JEFFERSON CNTY KY METRO GOVT HEALTH SYS REV",
+   "Ticker": "-",
+   "Identifier": "54659LCD4",
+   "Weight": "0.1447444291",
+   "Market Value": "351241.31",
+   "Shares Held": "350000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BUCKEYE OH TOB SETTLEMENT FING AUTH",
+   "Ticker": "-",
+   "Identifier": "118217CW6",
+   "Weight": "0.4071749369",
+   "Market Value": "988063.3",
+   "Shares Held": "1400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOUISVILLE and JEFFERSON CNTY KY METRO GOVT HEALTH SYS REV",
+   "Ticker": "-",
+   "Identifier": "54659LCB8",
+   "Weight": "0.029324282",
+   "Market Value": "71159.21",
+   "Shares Held": "90000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTHRV",
+   "Ticker": "-",
+   "Identifier": "45204FBG9",
+   "Weight": "0.1578843093",
+   "Market Value": "383126.95",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AMESBURY MASS",
+   "Ticker": "-",
+   "Identifier": "031069XA0",
+   "Weight": "0.0088498954",
+   "Market Value": "21475.43",
+   "Shares Held": "25000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "RHODE ISLAND ST STUDENT LN",
+   "Ticker": "-",
+   "Identifier": "762315RG6",
+   "Weight": "0.5122172224",
+   "Market Value": "1242962.16",
+   "Shares Held": "1200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CONNECTICUT ST HEALTH and EDL FACS AUTH REVENUE",
+   "Ticker": "-",
+   "Identifier": "20775DHE5",
+   "Weight": "0.0128034756",
+   "Market Value": "31069.31",
+   "Shares Held": "30000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GEISINGER AUTH PA HLTH SYS REV",
+   "Ticker": "-",
+   "Identifier": "368497JX2",
+   "Weight": "0.0206252377",
+   "Market Value": "50049.84",
+   "Shares Held": "50000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MEDFORD OR HOSP FACS AUTH",
+   "Ticker": "-",
+   "Identifier": "584283GV1",
+   "Weight": "0.0042858227",
+   "Market Value": "10400.11",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK STATE URBAN DEVELOPMENT CORP",
+   "Ticker": "-",
+   "Identifier": "650036BY1",
+   "Weight": "0.0020642117",
+   "Market Value": "5009.08",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HONOLULU HI CITY and CNTY",
+   "Ticker": "-",
+   "Identifier": "438687MU6",
+   "Weight": "0.0021939142",
+   "Market Value": "5323.82",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOUISIANA PUB FAC AUTH HSP REV",
+   "Ticker": "-",
+   "Identifier": "546395V50",
+   "Weight": "0.0187077974",
+   "Market Value": "45396.92",
+   "Shares Held": "65000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ROCH MI COMM SCH REF GO",
+   "Ticker": "-",
+   "Identifier": "771537WG8",
+   "Weight": "0.0020001888",
+   "Market Value": "4853.72",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LONG ISLAND PWR AUTH NY ELEC",
+   "Ticker": "-",
+   "Identifier": "542691DE7",
+   "Weight": "0.0021929911",
+   "Market Value": "5321.58",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK N Y CITY TRANSITIONAL FIN AUTH REV",
+   "Ticker": "-",
+   "Identifier": "64971XSB5",
+   "Weight": "0.1763819635",
+   "Market Value": "428013.93",
+   "Shares Held": "510000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH HEALTH SVCSFAC LEASE REV",
+   "Ticker": "-",
+   "Identifier": "452031AR8",
+   "Weight": "0.5031687883",
+   "Market Value": "1221004.95",
+   "Shares Held": "1500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK TRANSPORTATION DEVELOPMENT CORP",
+   "Ticker": "-",
+   "Identifier": "650116CX2",
+   "Weight": "0.0083652152",
+   "Market Value": "20299.29",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA ST",
+   "Ticker": "-",
+   "Identifier": "13063DXB9",
+   "Weight": "0.020920025",
+   "Market Value": "50765.18",
+   "Shares Held": "50000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AKRON BATH COPLEY HSP DIST OH",
+   "Ticker": "-",
+   "Identifier": "009730PN6",
+   "Weight": "0.0439071588",
+   "Market Value": "106546.47",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AKRON BATH COPLEY HSP DIST OH",
+   "Ticker": "-",
+   "Identifier": "009730PP1",
+   "Weight": "0.0065860736",
+   "Market Value": "15981.97",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "METROPOLITAN TRANSN AUTH NY RV",
+   "Ticker": "-",
+   "Identifier": "59261AH75",
+   "Weight": "0.0054279906",
+   "Market Value": "13171.73",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PENNSYLVANIA ST",
+   "Ticker": "-",
+   "Identifier": "70914PS52",
+   "Weight": "0.1162100653",
+   "Market Value": "281998.94",
+   "Shares Held": "310000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HOUSTON TX ARPT SYS REV",
+   "Ticker": "-",
+   "Identifier": "442349EC6",
+   "Weight": "0.170214429",
+   "Market Value": "413047.6",
+   "Shares Held": "475000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TEXAS WTR DEV BRD",
+   "Ticker": "-",
+   "Identifier": "8828544R0",
+   "Weight": "0.0886579193",
+   "Market Value": "215140.05",
+   "Shares Held": "250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC FIN AUTH WI HOSP REV",
+   "Ticker": "-",
+   "Identifier": "74442CDB7",
+   "Weight": "0.0370283666",
+   "Market Value": "89854.18",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC FIN AUTH WI HOSP REV",
+   "Ticker": "-",
+   "Identifier": "74442CDC5",
+   "Weight": "0.160061134",
+   "Market Value": "388409.3",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC FIN AUTH WI HOSP REV",
+   "Ticker": "-",
+   "Identifier": "74442CDD3",
+   "Weight": "0.0794101142",
+   "Market Value": "192699.04",
+   "Shares Held": "255000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HILLSBOROUGH CNTY FLA INDL DEV",
+   "Ticker": "-",
+   "Identifier": "43233AFE1",
+   "Weight": "0.0727644888",
+   "Market Value": "176572.56",
+   "Shares Held": "235000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FLORIDA HIGHER EDL FACS FING AUTH REV",
+   "Ticker": "-",
+   "Identifier": "34073TNP8",
+   "Weight": "0.1391419166",
+   "Market Value": "337646.08",
+   "Shares Held": "465000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOS ANGELES CA UNI SCH DIST",
+   "Ticker": "-",
+   "Identifier": "544647DF4",
+   "Weight": "0.0019393472",
+   "Market Value": "4706.08",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BALTIMORE MD PROJ REV",
+   "Ticker": "-",
+   "Identifier": "05922KK81",
+   "Weight": "0.0377598128",
+   "Market Value": "91629.13",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK TRANSPORTATION DEVELOPMENT CORP",
+   "Ticker": "-",
+   "Identifier": "650116DH6",
+   "Weight": "0.0085463181",
+   "Market Value": "20738.76",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST TOLL HWY AU HWY RV",
+   "Ticker": "-",
+   "Identifier": "452252PQ6",
+   "Weight": "0.0085002625",
+   "Market Value": "20627",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW JERSEY ST TRANSN TR FD AUT",
+   "Ticker": "-",
+   "Identifier": "6461367D7",
+   "Weight": "0.0150772165",
+   "Market Value": "36586.84",
+   "Shares Held": "35000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CONNECTICUT ST",
+   "Ticker": "-",
+   "Identifier": "20772KMA4",
+   "Weight": "0.0075958728",
+   "Market Value": "18432.38",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA MUN FIN AUTH REV",
+   "Ticker": "-",
+   "Identifier": "13048T2S1",
+   "Weight": "0.0151846164",
+   "Market Value": "36847.46",
+   "Shares Held": "40000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA INFRASTRUCTURE and ECONNOMIC DEV BK REV",
+   "Ticker": "-",
+   "Identifier": "13034AN30",
+   "Weight": "0.0058974192",
+   "Market Value": "14310.86",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MARYLAND HEALTH and HIGHER EDUCATIONAL FACILITIES AUTHORITY",
+   "Ticker": "-",
+   "Identifier": "57421CBX1",
+   "Weight": "0.1353668556",
+   "Market Value": "328485.4",
+   "Shares Held": "315000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MARYLAND HEALTH and HIGHER EDUCATIONAL FACILITIES AUTHORITY",
+   "Ticker": "-",
+   "Identifier": "57421CBZ6",
+   "Weight": "0.1533969891",
+   "Market Value": "372237.88",
+   "Shares Held": "360000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MONTGOMERY CNTY OH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "613520MW2",
+   "Weight": "0.0109653139",
+   "Market Value": "26608.77",
+   "Shares Held": "25000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MASSACHUSETTS DEVELOPMENT FINANCE AGENCY",
+   "Ticker": "-",
+   "Identifier": "57584YG94",
+   "Weight": "0.1793540306",
+   "Market Value": "435226.04",
+   "Shares Held": "510000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WORCESTER MA",
+   "Ticker": "-",
+   "Identifier": "981306ZB2",
+   "Weight": "0.0208677015",
+   "Market Value": "50638.21",
+   "Shares Held": "60000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DETROIT MI",
+   "Ticker": "-",
+   "Identifier": "2510934Z0",
+   "Weight": "0.0425825692",
+   "Market Value": "103332.18",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "METROPOLITAN GOVT NASHVILLE and DAVIDSON CNTY TN",
+   "Ticker": "-",
+   "Identifier": "592112VA1",
+   "Weight": "0.1348143406",
+   "Market Value": "327144.65",
+   "Shares Held": "350000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA HSG FIN AGY MUN CTFS",
+   "Ticker": "-",
+   "Identifier": "13033DAE5",
+   "Weight": "0.2157836082",
+   "Market Value": "523627.18",
+   "Shares Held": "549295.885",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MASSACHUSETTS ST PORT AUTH REV",
+   "Ticker": "-",
+   "Identifier": "575896YF6",
+   "Weight": "0.1925004302",
+   "Market Value": "467127.5",
+   "Shares Held": "450000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MISSOURI ST HSG DEV COM SF MTG",
+   "Ticker": "-",
+   "Identifier": "60637BE89",
+   "Weight": "0.1297709696",
+   "Market Value": "314906.25",
+   "Shares Held": "460000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST",
+   "Ticker": "-",
+   "Identifier": "452153AJ8",
+   "Weight": "0.0524271977",
+   "Market Value": "127221.46",
+   "Shares Held": "120000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UTAH HSG CORP",
+   "Ticker": "-",
+   "Identifier": "91743PDP7",
+   "Weight": "0.0027905892",
+   "Market Value": "6771.73",
+   "Shares Held": "9116.242",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW MEXICO MTG FIN AUTH",
+   "Ticker": "-",
+   "Identifier": "647201MW9",
+   "Weight": "0.209643107",
+   "Market Value": "508726.45",
+   "Shares Held": "745000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FLORIDA ST MUN PWR AGY REV",
+   "Ticker": "-",
+   "Identifier": "342816R80",
+   "Weight": "0.0389729103",
+   "Market Value": "94572.87",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PENNSYLVANIA ST",
+   "Ticker": "-",
+   "Identifier": "70914PU83",
+   "Weight": "0.0154678198",
+   "Market Value": "37534.69",
+   "Shares Held": "40000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "METROPOLITAN WASH DC ARPTS ATH",
+   "Ticker": "-",
+   "Identifier": "592647JV4",
+   "Weight": "0.0826949153",
+   "Market Value": "200670.04",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "METROPOLITAN WASH DC ARPTS ATH",
+   "Ticker": "-",
+   "Identifier": "592647KK6",
+   "Weight": "0.0677159296",
+   "Market Value": "164321.57",
+   "Shares Held": "175000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MICHIGAN ST HSG DEV AUTH RENTHSG REV",
+   "Ticker": "-",
+   "Identifier": "59465PAX6",
+   "Weight": "0.0083887952",
+   "Market Value": "20356.51",
+   "Shares Held": "30000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CENTRE CNTY PA HOSP AUTH REV",
+   "Ticker": "-",
+   "Identifier": "156273GW8",
+   "Weight": "0.0040902223",
+   "Market Value": "9925.46",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "METROPOLITAN PIER and EXPOSITION AUTH ILL DEDICATED ST TAX REV",
+   "Ticker": "-",
+   "Identifier": "592250EU4",
+   "Weight": "0.0613100276",
+   "Market Value": "148776.81",
+   "Shares Held": "300000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WISCONSIN ST HEALTH and EDL FACSAUTH REV",
+   "Ticker": "-",
+   "Identifier": "97712JBU6",
+   "Weight": "0.0468059432",
+   "Market Value": "113580.75",
+   "Shares Held": "135000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PENNSYLVANIA ST TPK COMMN TPK",
+   "Ticker": "-",
+   "Identifier": "709225DN3",
+   "Weight": "0.0111663127",
+   "Market Value": "27096.52",
+   "Shares Held": "25000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC FIN AUTH WI REVENUE",
+   "Ticker": "-",
+   "Identifier": "74442PSG1",
+   "Weight": "0.1027616832",
+   "Market Value": "249364.68",
+   "Shares Held": "315000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "INDIANA FIN AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "45471ATA0",
+   "Weight": "0.1406831976",
+   "Market Value": "341386.2",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ALLEGHENY CNTY PA ARPT ATH REV",
+   "Ticker": "-",
+   "Identifier": "01728LFE7",
+   "Weight": "0.1062290255",
+   "Market Value": "257778.64",
+   "Shares Held": "270000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MIAMI-DADE CNTY FLA SEAPORT REV",
+   "Ticker": "-",
+   "Identifier": "59335KDR5",
+   "Weight": "0.1823497602",
+   "Market Value": "442495.57",
+   "Shares Held": "460000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GRAND FORKS ND HEALTH CARE SYS REV",
+   "Ticker": "-",
+   "Identifier": "38546WCZ1",
+   "Weight": "0.2115113145",
+   "Market Value": "513259.9",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GRAND FORKS ND HEALTH CARE SYS REV",
+   "Ticker": "-",
+   "Identifier": "38546WDQ0",
+   "Weight": "0.0208365142",
+   "Market Value": "50562.53",
+   "Shares Held": "60000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SUFFOLK TOB ASSET SECURITIZATION CORP NY TOB SETTLEMENT ASSET-BKD",
+   "Ticker": "-",
+   "Identifier": "864809CC0",
+   "Weight": "0.0611649499",
+   "Market Value": "148424.76",
+   "Shares Held": "175000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "STEEL PT INFRASTRUCTURE IMPT DIST CONN SPL OBLIG REV",
+   "Ticker": "-",
+   "Identifier": "85814YAD4",
+   "Weight": "0.0323839562",
+   "Market Value": "78583.91",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OHIO ST HOSP REV",
+   "Ticker": "-",
+   "Identifier": "67756CFE3",
+   "Weight": "0.0374724432",
+   "Market Value": "90931.79",
+   "Shares Held": "120000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTHRV",
+   "Ticker": "-",
+   "Identifier": "45204FNG6",
+   "Weight": "0.0383498572",
+   "Market Value": "93060.95",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WISCONSIN ST HEALTH and EDL FACSAUTH REV",
+   "Ticker": "-",
+   "Identifier": "97712JDN0",
+   "Weight": "0.2101100013",
+   "Market Value": "509859.43",
+   "Shares Held": "720000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DUBOIS PA HOSP AUTH HOSP REV",
+   "Ticker": "-",
+   "Identifier": "263804DD5",
+   "Weight": "0.1282341516",
+   "Market Value": "311176.96",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TENNESSEE HSG DEV AGY RESIDENTIAL FIN PROG REV",
+   "Ticker": "-",
+   "Identifier": "8804616T0",
+   "Weight": "0.1657259055",
+   "Market Value": "402155.61",
+   "Shares Held": "545000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "INDIANA FIN AUTH EDL FACS REV",
+   "Ticker": "-",
+   "Identifier": "45470EAZ8",
+   "Weight": "0.0041926071",
+   "Market Value": "10173.91",
+   "Shares Held": "10000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GOLDEN ST TOB SECURTZN CORP CALIF TOB SETTLEMENT REV",
+   "Ticker": "-",
+   "Identifier": "38122NB84",
+   "Weight": "0.0192601599",
+   "Market Value": "46737.3",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHICAGO IL BRD ED",
+   "Ticker": "-",
+   "Identifier": "167505YL4",
+   "Weight": "0.0353745304",
+   "Market Value": "85840.93",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VIRGINIA SMALL BUSINESS FING AUTH REV",
+   "Ticker": "-",
+   "Identifier": "928104PP7",
+   "Weight": "0.0784432469",
+   "Market Value": "190352.81",
+   "Shares Held": "185000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VIRGINIA SMALL BUSINESS FING AUTH REV",
+   "Ticker": "-",
+   "Identifier": "928104PQ5",
+   "Weight": "0.0394995953",
+   "Market Value": "95850.94",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VIRGINIA SMALL BUSINESS FING AUTH REV",
+   "Ticker": "-",
+   "Identifier": "928104PS1",
+   "Weight": "0.013701622",
+   "Market Value": "33248.78",
+   "Shares Held": "35000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PORT PORTLAND OR ARPT REV",
+   "Ticker": "-",
+   "Identifier": "7352402C6",
+   "Weight": "0.0984251647",
+   "Market Value": "238841.55",
+   "Shares Held": "225000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
+   "Ticker": "-",
+   "Identifier": "56035DDX7",
+   "Weight": "0.0827541826",
+   "Market Value": "200813.86",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUERTO RICO COMWLTH",
+   "Ticker": "-",
+   "Identifier": "74514L3K1",
+   "Weight": "0.005769188",
+   "Market Value": "13999.69",
+   "Shares Held": "14000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUERTO RICO COMWLTH",
+   "Ticker": "-",
+   "Identifier": "74514L3R6",
+   "Weight": "0.1495900114",
+   "Market Value": "362999.75",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUERTO RICO COMWLTH",
+   "Ticker": "-",
+   "Identifier": "74514L3M7",
+   "Weight": "0.100674353",
+   "Market Value": "244299.5",
+   "Shares Held": "250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK TRANSPORTATION DEVELOPMENT CORP",
+   "Ticker": "-",
+   "Identifier": "650116FJ0",
+   "Weight": "0.0152887938",
+   "Market Value": "37100.26",
+   "Shares Held": "35000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FAIRFAX CNTY VA INDL DEV AUTHHEALTH CARE REV",
+   "Ticker": "-",
+   "Identifier": "30382VAT3",
+   "Weight": "0.1948744624",
+   "Market Value": "472888.4",
+   "Shares Held": "495000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GENESEE COUNTY FUNDING CORP/THE",
+   "Ticker": "-",
+   "Identifier": "371669AJ1",
+   "Weight": "0.1085243436",
+   "Market Value": "263348.53",
+   "Shares Held": "250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST",
+   "Ticker": "-",
+   "Identifier": "452153CX5",
+   "Weight": "0.01745954",
+   "Market Value": "42367.86",
+   "Shares Held": "40000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SOUTHEAST ENERGY AUTH COMMODITY SUPPLY REV ALA",
+   "Ticker": "-",
+   "Identifier": "84136FBB2",
+   "Weight": "0.3429635987",
+   "Market Value": "832246.08",
+   "Shares Held": "810000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK ST DORM AUTH REVS NONST SUPPORTED DEBT",
+   "Ticker": "-",
+   "Identifier": "65000BRH3",
+   "Weight": "0.3003152757",
+   "Market Value": "728754.34",
+   "Shares Held": "725000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
+   "Ticker": "-",
+   "Identifier": "09182TBL0",
+   "Weight": "0.027539981",
+   "Market Value": "66829.37",
+   "Shares Held": "65000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LOS ANGELES CA DEPT ARPTS REV",
+   "Ticker": "-",
+   "Identifier": "544445E54",
+   "Weight": "0.3200004941",
+   "Market Value": "776523.1",
+   "Shares Held": "715000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA ST",
+   "Ticker": "-",
+   "Identifier": "13063DZ27",
+   "Weight": "0.1077573955",
+   "Market Value": "261487.43",
+   "Shares Held": "250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BLACK BELT ENERGY GAS DIST ALAGAS PROJ REV",
+   "Ticker": "-",
+   "Identifier": "09182TCG0",
+   "Weight": "0.2706792694",
+   "Market Value": "656838.69",
+   "Shares Held": "630000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
+   "Ticker": "-",
+   "Identifier": "56035DEN8",
+   "Weight": "0.085224175",
+   "Market Value": "206807.62",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TENNESSEE ENGY ACQ CRP GAS REV",
+   "Ticker": "-",
+   "Identifier": "880443JF4",
+   "Weight": "0.1033179153",
+   "Market Value": "250714.45",
+   "Shares Held": "245000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SALES TAX SECURITIZATION CORPILL",
+   "Ticker": "-",
+   "Identifier": "79467BEP6",
+   "Weight": "0.1088608513",
+   "Market Value": "264165.11",
+   "Shares Held": "264000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
+   "Ticker": "-",
+   "Identifier": "56035DFC1",
+   "Weight": "0.1077578158",
+   "Market Value": "261488.45",
+   "Shares Held": "250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ESSEX CNTY NJ",
+   "Ticker": "-",
+   "Identifier": "296804Y35",
+   "Weight": "0.1602435762",
+   "Market Value": "388852.02",
+   "Shares Held": "450000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "IOWA FIN AUTH SINGLE FAMILY MTG REV",
+   "Ticker": "-",
+   "Identifier": "4624674Q1",
+   "Weight": "0.079300048",
+   "Market Value": "192431.95",
+   "Shares Held": "185000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CONNECTICUT ST HSG FIN AUTH HSG MTG FIN PROG",
+   "Ticker": "-",
+   "Identifier": "20775HYY3",
+   "Weight": "0.0887947303",
+   "Market Value": "215472.04",
+   "Shares Held": "205000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MONONGALIA CTY W VA BLD CM REV",
+   "Ticker": "-",
+   "Identifier": "610218BL2",
+   "Weight": "0.0906991073",
+   "Market Value": "220093.26",
+   "Shares Held": "220000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS FIN AUTH RV",
+   "Ticker": "-",
+   "Identifier": "45204EME5",
+   "Weight": "0.0125963407",
+   "Market Value": "30566.67",
+   "Shares Held": "35000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SCHAUMBURG IL",
+   "Ticker": "-",
+   "Identifier": "806347PX2",
+   "Weight": "0.0424570248",
+   "Market Value": "103027.53",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST",
+   "Ticker": "-",
+   "Identifier": "452153FD6",
+   "Weight": "0.2173004107",
+   "Market Value": "527307.9",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST",
+   "Ticker": "-",
+   "Identifier": "452153FE4",
+   "Weight": "0.1400679619",
+   "Market Value": "339893.25",
+   "Shares Held": "320000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ILLINOIS ST",
+   "Ticker": "-",
+   "Identifier": "452153GN3",
+   "Weight": "0.1240648732",
+   "Market Value": "301059.66",
+   "Shares Held": "310000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HIGHER ED STUDENT ASSISTANCE AUTH NJ STUDENT LN REV",
+   "Ticker": "-",
+   "Identifier": "646080WW7",
+   "Weight": "0.1304876917",
+   "Market Value": "316645.47",
+   "Shares Held": "300000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MINNEAPOLIS MINN HEALTH CARE S",
+   "Ticker": "-",
+   "Identifier": "60374VEW9",
+   "Weight": "0.1350786288",
+   "Market Value": "327785.98",
+   "Shares Held": "315000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CALIFORNIA HSG FIN AGY MUN CTFS",
+   "Ticker": "-",
+   "Identifier": "13033DAL9",
+   "Weight": "0.0397173993",
+   "Market Value": "96379.47",
+   "Shares Held": "96801.453",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW JERSEY EDA WTR FACS REV",
+   "Ticker": "-",
+   "Identifier": "645780FT9",
+   "Weight": "0.1409795673",
+   "Market Value": "342105.38",
+   "Shares Held": "340000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NJ ST HSG and MTG FIN AGY MFR",
+   "Ticker": "-",
+   "Identifier": "646108Z29",
+   "Weight": "0.2069067",
+   "Market Value": "502086.2",
+   "Shares Held": "500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MAIN STR NAT GAS INC GA GAS SUPPLY REV",
+   "Ticker": "-",
+   "Identifier": "56035DFK3",
+   "Weight": "0.0238032776",
+   "Market Value": "57761.77",
+   "Shares Held": "55000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NEW YORK ST HSG FIN AGY",
+   "Ticker": "-",
+   "Identifier": "64987JH38",
+   "Weight": "0.1525042782",
+   "Market Value": "370071.6",
+   "Shares Held": "370000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MINNESOTA ST HIGHER ED FACS AUTH REV FOR ISSUES DTD PRIOR TO 12/29/2017 SEE 60416H",
+   "Ticker": "-",
+   "Identifier": "60416JGT1",
+   "Weight": "0.117120999",
+   "Market Value": "284209.44",
+   "Shares Held": "300000",
    "Asset Category": "DBT"
   }
  ]

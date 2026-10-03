@@ -2,7 +2,7 @@
  "ticker": "FPRO",
  "page": 1,
  "pageSize": 250,
- "totalRows": 129,
+ "totalRows": 124,
  "headers": [
   "Name",
   "Ticker",
@@ -14,1164 +14,1119 @@
  ],
  "rows": [
   {
-   "Name": "Independence Realty Trust Inc",
-   "Ticker": "IRT",
-   "Identifier": "45378A106",
-   "Weight": "0.25218368",
-   "Market Value": "3639821.15",
-   "Shares Held": "223165",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Omega Healthcare Investors Inc",
-   "Ticker": "OHI",
-   "Identifier": "681936100",
-   "Weight": "0.8742740177",
-   "Market Value": "12618584.44",
-   "Shares Held": "268652",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Equity Residential",
-   "Ticker": "EQR",
-   "Identifier": "29476L107",
-   "Weight": "1.4837093942",
-   "Market Value": "21414695.96",
-   "Shares Held": "327542",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Welltower Inc",
-   "Ticker": "WELL",
-   "Identifier": "95040Q104",
-   "Weight": "8.5999586089",
-   "Market Value": "124125047.4",
-   "Shares Held": "571110",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Howard Hughes Holdings Inc",
-   "Ticker": "HHH",
-   "Identifier": "44267T102",
-   "Weight": "0.140492631",
-   "Market Value": "2027760.28",
-   "Shares Held": "32564",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Tanger Inc",
-   "Ticker": "SKT",
-   "Identifier": "875465106",
-   "Weight": "0.2757618628",
-   "Market Value": "3980130.12",
-   "Shares Held": "107339",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Jones Lang LaSalle Inc",
-   "Ticker": "JLL",
-   "Identifier": "48020Q107",
-   "Weight": "0.9956595842",
-   "Market Value": "14370568.36",
-   "Shares Held": "45172",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Highwoods Properties Inc",
-   "Ticker": "HIW",
-   "Identifier": "431284108",
-   "Weight": "0.1760726599",
-   "Market Value": "2541294.47",
-   "Shares Held": "104537",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Realty Income Corp",
-   "Ticker": "O",
-   "Identifier": "756109104",
-   "Weight": "3.7005882753",
-   "Market Value": "53411384.4",
-   "Shares Held": "831435",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Essential Properties Realty Trust Inc",
-   "Ticker": "EPRT",
-   "Identifier": "29670E107",
-   "Weight": "0.3901024997",
-   "Market Value": "5630433.06",
-   "Shares Held": "179142",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Outfront Media Inc",
-   "Ticker": "OUT",
-   "Identifier": "69007J304",
-   "Weight": "0.2945337157",
-   "Market Value": "4251068.3",
-   "Shares Held": "137798",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Four Corners Property Trust Inc",
-   "Ticker": "FCPT",
-   "Identifier": "35086T109",
-   "Weight": "0.1677500295",
-   "Market Value": "2421172.16",
-   "Shares Held": "94688",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "WP Carey Inc",
-   "Ticker": "WPC",
-   "Identifier": "92936U109",
-   "Weight": "1.0520601233",
-   "Market Value": "15184609.44",
-   "Shares Held": "208208",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "UDR Inc",
-   "Ticker": "UDR",
-   "Identifier": "902653104",
-   "Weight": "0.7460302534",
-   "Market Value": "10767614.68",
-   "Shares Held": "296302",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sila Realty Trust Inc",
-   "Ticker": "SILA",
-   "Identifier": "146280508",
-   "Weight": "0.1149356887",
-   "Market Value": "1658891.45",
-   "Shares Held": "54515",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ventas Inc",
-   "Ticker": "VTR",
-   "Identifier": "92276F100",
-   "Weight": "2.5848766834",
-   "Market Value": "37308079.66",
-   "Shares Held": "424631",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "UMH Properties Inc",
-   "Ticker": "UMH",
-   "Identifier": "903002103",
-   "Weight": "0.0799326858",
-   "Market Value": "1153685.6",
-   "Shares Held": "74192",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Easterly Government Properties Inc",
-   "Ticker": "DEA",
-   "Identifier": "27616P301",
-   "Weight": "0.0698786143",
-   "Market Value": "1008573.03",
-   "Shares Held": "43083",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Forestar Group Inc",
-   "Ticker": "FOR",
-   "Identifier": "346232101",
-   "Weight": "0.0495193679",
-   "Market Value": "714723.66",
-   "Shares Held": "25291",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Americold Realty Trust Inc",
-   "Ticker": "COLD",
-   "Identifier": "03064D108",
-   "Weight": "0.2207078428",
-   "Market Value": "3185523.64",
-   "Shares Held": "260468",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Regency Centers Corp",
-   "Ticker": "REG",
-   "Identifier": "758849103",
-   "Weight": "0.9025783957",
-   "Market Value": "13027107.6",
-   "Shares Held": "167336",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Global Net Lease Inc",
-   "Ticker": "GNL",
-   "Identifier": "379378201",
-   "Weight": "0.1281344193",
-   "Market Value": "1849391.56",
-   "Shares Held": "193451",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Saul Centers Inc",
-   "Ticker": "BFS",
-   "Identifier": "804395101",
-   "Weight": "0.034925666",
-   "Market Value": "504089.63",
-   "Shares Held": "14641",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Whitestone REIT",
-   "Ticker": "WSR",
-   "Identifier": "966084204",
-   "Weight": "0.0606010629",
-   "Market Value": "874668.14",
-   "Shares Held": "46181",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "CubeSmart",
-   "Ticker": "CUBE",
-   "Identifier": "229663109",
-   "Weight": "0.600465444",
-   "Market Value": "8666646.56",
-   "Shares Held": "214097",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sun Communities Inc",
-   "Ticker": "SUI",
-   "Identifier": "866674104",
-   "Weight": "1.0573193149",
-   "Market Value": "15260516.48",
-   "Shares Held": "119372",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Centerspace",
-   "Ticker": "CSR",
-   "Identifier": "15202L107",
-   "Weight": "0.0793231403",
-   "Market Value": "1144887.9",
-   "Shares Held": "16770",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "RLJ Lodging Trust",
-   "Ticker": "RLJ",
-   "Identifier": "74965L101",
-   "Weight": "0.0920293784",
-   "Market Value": "1328279.76",
-   "Shares Held": "161199",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "BXP Inc",
-   "Ticker": "BXP",
-   "Identifier": "101121101",
-   "Weight": "0.573505422",
-   "Market Value": "8277526.78",
-   "Shares Held": "141593",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Prologis Inc",
-   "Ticker": "PLD",
-   "Identifier": "74340W103",
-   "Weight": "8.1873859256",
-   "Market Value": "118170297.36",
-   "Shares Held": "832068",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Phillips Edison & Co Inc",
-   "Ticker": "PECO",
-   "Identifier": "71844V201",
-   "Weight": "0.3257677322",
-   "Market Value": "4701875.56",
-   "Shares Held": "117064",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "American Homes 4 Rent",
-   "Ticker": "AMH",
-   "Identifier": "02665T306",
-   "Weight": "0.6887622263",
-   "Market Value": "9941052.96",
-   "Shares Held": "312219",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "CBRE Group Inc",
-   "Ticker": "CBRE",
-   "Identifier": "12504L109",
-   "Weight": "2.7471136327",
-   "Market Value": "39649680.35",
-   "Shares Held": "277795",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Gaming and Leisure Properties Inc",
-   "Ticker": "GLPI",
-   "Identifier": "36467J108",
-   "Weight": "0.8705177609",
-   "Market Value": "12564369.58",
-   "Shares Held": "259273",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kennedy-Wilson Holdings Inc",
-   "Ticker": "KW",
-   "Identifier": "489398107",
-   "Weight": "0.0844089859",
-   "Market Value": "1218293",
-   "Shares Held": "111770",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "DiamondRock Hospitality Co",
-   "Ticker": "DRH",
-   "Identifier": "252784301",
-   "Weight": "0.1424409925",
-   "Market Value": "2055881.4",
-   "Shares Held": "201557",
-   "Asset Category": "EC"
-  },
-  {
    "Name": "Acadia Realty Trust",
    "Ticker": "AKR",
    "Identifier": "004239109",
-   "Weight": "0.1763936896",
-   "Market Value": "2545927.96",
-   "Shares Held": "117758",
+   "Weight": "0.1804863165",
+   "Market Value": "2695433.79",
+   "Shares Held": "119957",
    "Asset Category": "EC"
   },
   {
-   "Name": "Empire State Realty Trust Inc",
-   "Ticker": "ESRT",
-   "Identifier": "292104106",
-   "Weight": "0.0585781012",
-   "Market Value": "845470.3",
-   "Shares Held": "151790",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Rayonier Inc",
-   "Ticker": "RYN",
-   "Identifier": "754907103",
-   "Weight": "0.4192619624",
-   "Market Value": "6051297.84",
-   "Shares Held": "285304",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Terreno Realty Corp",
-   "Ticker": "TRNO",
-   "Identifier": "88146M101",
-   "Weight": "0.4290315781",
-   "Market Value": "6192304.8",
-   "Shares Held": "94974",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Safehold Inc",
-   "Ticker": "SAFE",
-   "Identifier": "78646V107",
-   "Weight": "0.0569510139",
-   "Market Value": "821986.2",
-   "Shares Held": "51310",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "InvenTrust Properties Corp",
-   "Ticker": "IVT",
-   "Identifier": "46124J201",
-   "Weight": "0.1712039766",
-   "Market Value": "2471023.72",
-   "Shares Held": "76931",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "LXP Industrial Trust",
-   "Ticker": "LXP",
-   "Identifier": "529043408",
-   "Weight": "0.2040756338",
-   "Market Value": "2945467.4",
-   "Shares Held": "57845",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Xenia Hotels & Resorts Inc",
-   "Ticker": "XHR",
-   "Identifier": "984017103",
-   "Weight": "0.1180005555",
-   "Market Value": "1703127.33",
-   "Shares Held": "104679",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "American Tower Corp",
-   "Ticker": "-",
-   "Identifier": "03027X100",
-   "Weight": "5.2925488632",
-   "Market Value": "76388493.06",
-   "Shares Held": "418086",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kite Realty Group Trust",
-   "Ticker": "KRG",
-   "Identifier": "49803T300",
-   "Weight": "0.3793678307",
-   "Market Value": "5475497.28",
-   "Shares Held": "209308",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Federal Realty Investment Trust",
-   "Ticker": "FRT",
-   "Identifier": "313745101",
-   "Weight": "0.5721641907",
-   "Market Value": "8258168.5",
-   "Shares Held": "74465",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Alexandria Real Estate Equities Inc",
-   "Ticker": "ARE",
-   "Identifier": "015271109",
-   "Weight": "0.4223188233",
-   "Market Value": "6095418.17",
-   "Shares Held": "150467",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Hudson Pacific Properties Inc",
-   "Ticker": "HPP",
-   "Identifier": "444097406",
-   "Weight": "0.0324792367",
-   "Market Value": "468779.79",
-   "Shares Held": "50899",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Brandywine Realty Trust",
-   "Ticker": "BDN",
-   "Identifier": "105368203",
-   "Weight": "0.0374026139",
-   "Market Value": "539839.95",
-   "Shares Held": "178165",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ryman Hospitality Properties Inc",
-   "Ticker": "RHP",
-   "Identifier": "78377T107",
-   "Weight": "0.3932461341",
-   "Market Value": "5675805.81",
-   "Shares Held": "54009",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Marcus & Millichap Inc",
-   "Ticker": "MMI",
-   "Identifier": "566324109",
-   "Weight": "0.0550419818",
-   "Market Value": "794432.73",
-   "Shares Held": "28587",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Diversified Healthcare Trust",
-   "Ticker": "DHC",
-   "Identifier": "25525P107",
-   "Weight": "0.1017177011",
-   "Market Value": "1468113.4",
-   "Shares Held": "194710",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "JBG SMITH Properties",
-   "Ticker": "JBGS",
-   "Identifier": "46590V100",
-   "Weight": "0.0861315405",
-   "Market Value": "1243155",
-   "Shares Held": "82877",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "American Assets Trust Inc",
-   "Ticker": "AAT",
-   "Identifier": "024013104",
-   "Weight": "0.0755095491",
-   "Market Value": "1089845.52",
-   "Shares Held": "52548",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Gladstone Commercial Corp",
-   "Ticker": "-",
-   "Identifier": "376536108",
-   "Weight": "0.0408811994",
-   "Market Value": "590047.12",
-   "Shares Held": "46792",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Lineage Inc",
-   "Ticker": "LINE",
-   "Identifier": "53566V106",
-   "Weight": "0.1559551352",
-   "Market Value": "2250933.92",
-   "Shares Held": "61034",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Lamar Advertising Co",
-   "Ticker": "LAMR",
-   "Identifier": "512816109",
-   "Weight": "0.7971260505",
-   "Market Value": "11505091.28",
-   "Shares Held": "83467",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Crown Castle Inc",
-   "Ticker": "CCI",
-   "Identifier": "22822V101",
-   "Weight": "2.501168477",
-   "Market Value": "36099901.16",
-   "Shares Held": "406622",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Brixmor Property Group Inc",
-   "Ticker": "BRX",
-   "Identifier": "11120U105",
-   "Weight": "0.5966374928",
-   "Market Value": "8611396.92",
-   "Shares Held": "286188",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "LTC Properties Inc",
-   "Ticker": "LTC",
-   "Identifier": "502175102",
-   "Weight": "0.1170759735",
-   "Market Value": "1689782.64",
-   "Shares Held": "44212",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "COPT Defense Properties",
-   "Ticker": "CDP",
-   "Identifier": "22002T108",
-   "Weight": "0.2329176219",
-   "Market Value": "3361750",
-   "Shares Held": "107576",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "CBL & Associates Properties Inc",
-   "Ticker": "CBL",
-   "Identifier": "124830878",
-   "Weight": "0.0498072941",
-   "Market Value": "718879.36",
-   "Shares Held": "15968",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Public Storage",
-   "Ticker": "PSA",
-   "Identifier": "74460D109",
-   "Weight": "3.0858745577",
-   "Market Value": "44539089.45",
-   "Shares Held": "147261",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "American Healthcare REIT Inc",
-   "Ticker": "AHR",
-   "Identifier": "398182303",
-   "Weight": "0.5675538511",
-   "Market Value": "8191626.48",
-   "Shares Held": "161316",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Millrose Properties Inc",
-   "Ticker": "MRP",
-   "Identifier": "601137102",
-   "Weight": "0.2995789515",
-   "Market Value": "4323887.27",
-   "Shares Held": "140981",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Host Hotels & Resorts Inc",
-   "Ticker": "HST",
-   "Identifier": "44107P104",
-   "Weight": "0.9815868591",
-   "Market Value": "14167453.7",
-   "Shares Held": "670490",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sunstone Hotel Investors Inc",
-   "Ticker": "SHO",
-   "Identifier": "867892101",
-   "Weight": "0.1311198513",
-   "Market Value": "1892480.94",
-   "Shares Held": "192717",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "EPR Properties",
-   "Ticker": "EPR",
-   "Identifier": "26884U109",
-   "Weight": "0.2829899636",
-   "Market Value": "4084454.85",
-   "Shares Held": "73185",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Broadstone Net Lease Inc",
-   "Ticker": "BNL",
-   "Identifier": "11135E203",
-   "Weight": "0.25081685",
-   "Market Value": "3620093.4",
-   "Shares Held": "182833",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Douglas Emmett Inc",
-   "Ticker": "DEI",
-   "Identifier": "25960P109",
-   "Weight": "0.1069779389",
-   "Market Value": "1544035.54",
-   "Shares Held": "142834",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "CoStar Group Inc",
-   "Ticker": "CSGP",
-   "Identifier": "22160N109",
-   "Weight": "0.9531528592",
-   "Market Value": "13757059.68",
-   "Shares Held": "397488",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sabra Health Care REIT Inc",
-   "Ticker": "SBRA",
-   "Identifier": "78573L106",
-   "Weight": "0.3243985473",
-   "Market Value": "4682113.82",
-   "Shares Held": "226627",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kimco Realty Corp",
-   "Ticker": "KIM",
-   "Identifier": "49446R109",
-   "Weight": "1.0492446507",
-   "Market Value": "15143973.12",
-   "Shares Held": "640608",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Pebblebrook Hotel Trust",
-   "Ticker": "PEB",
-   "Identifier": "70509V100",
-   "Weight": "0.1197293748",
-   "Market Value": "1728079.75",
-   "Shares Held": "122995",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "First Industrial Realty Trust Inc",
-   "Ticker": "FR",
-   "Identifier": "32054K103",
-   "Weight": "0.5432421463",
-   "Market Value": "7840730.43",
-   "Shares Held": "126443",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "National Health Investors Inc",
-   "Ticker": "NHI",
-   "Identifier": "63633D104",
-   "Weight": "0.2384744734",
-   "Market Value": "3441953.23",
-   "Shares Held": "44753",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Essex Property Trust Inc",
-   "Ticker": "ESS",
-   "Identifier": "297178105",
-   "Weight": "1.1144451776",
-   "Market Value": "16085026.31",
-   "Shares Held": "61111",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Opendoor Technologies Inc",
-   "Ticker": "OPEN",
-   "Identifier": "683712103",
-   "Weight": "0.3141835283",
-   "Market Value": "4534678.26",
-   "Shares Held": "842877",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Camden Property Trust",
-   "Ticker": "CPT",
-   "Identifier": "133131102",
-   "Weight": "0.7398004409",
-   "Market Value": "10677698.46",
-   "Shares Held": "101673",
+   "Name": "Agree Realty Corp",
+   "Ticker": "ADC",
+   "Identifier": "008492100",
+   "Weight": "0.5696473145",
+   "Market Value": "8507274.4",
+   "Shares Held": "109348",
    "Asset Category": "EC"
   },
   {
    "Name": "Alexander's Inc",
    "Ticker": "ALX",
    "Identifier": "014752109",
-   "Weight": "0.046714816",
-   "Market Value": "674244.96",
-   "Shares Held": "2676",
+   "Weight": "0.0440530011",
+   "Market Value": "657900",
+   "Shares Held": "2580",
    "Asset Category": "EC"
   },
   {
-   "Name": "Iron Mountain Inc",
-   "Ticker": "IRM",
-   "Identifier": "46284V101",
-   "Weight": "2.4238551461",
-   "Market Value": "34984021.27",
-   "Shares Held": "277673",
+   "Name": "Alexandria Real Estate Equities Inc",
+   "Ticker": "ARE",
+   "Identifier": "015271109",
+   "Weight": "0.5170671684",
+   "Market Value": "7722027.6",
+   "Shares Held": "150088",
    "Asset Category": "EC"
   },
   {
-   "Name": "Vornado Realty Trust",
-   "Ticker": "VNO",
-   "Identifier": "929042109",
-   "Weight": "0.3230113947",
-   "Market Value": "4662092.75",
-   "Shares Held": "155975",
+   "Name": "American Assets Trust Inc",
+   "Ticker": "AAT",
+   "Identifier": "024013104",
+   "Weight": "0.078296969",
+   "Market Value": "1169309.12",
+   "Shares Held": "49568",
    "Asset Category": "EC"
   },
   {
-   "Name": "Curbline Properties Corp",
-   "Ticker": "CURB",
-   "Identifier": "23128Q101",
-   "Weight": "0.1798361964",
-   "Market Value": "2595614.4",
-   "Shares Held": "94044",
+   "Name": "American Homes 4 Rent",
+   "Ticker": "AMH",
+   "Identifier": "02665T306",
+   "Weight": "0.7012651361",
+   "Market Value": "10472892.24",
+   "Shares Held": "313372",
    "Asset Category": "EC"
   },
   {
-   "Name": "Compass Inc",
-   "Ticker": "COMP",
-   "Identifier": "20464U100",
-   "Weight": "0.3037296069",
-   "Market Value": "4383794.57",
-   "Shares Held": "579101",
+   "Name": "American Tower Corp",
+   "Ticker": "-",
+   "Identifier": "03027X100",
+   "Weight": "4.1029031817",
+   "Market Value": "61273918.64",
+   "Shares Held": "353449",
    "Asset Category": "EC"
   },
   {
-   "Name": "Macerich Co/The",
-   "Ticker": "MAC",
-   "Identifier": "554382101",
-   "Weight": "0.3603245068",
-   "Market Value": "5200640.9",
-   "Shares Held": "239330",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "SBA Communications Corp",
-   "Ticker": "SBAC",
-   "Identifier": "78410G104",
-   "Weight": "1.5652506502",
-   "Market Value": "22591598.4",
-   "Shares Held": "102132",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Newmark Group Inc",
-   "Ticker": "NMRK",
-   "Identifier": "65158N102",
-   "Weight": "0.1595044318",
-   "Market Value": "2302161.68",
-   "Shares Held": "142814",
+   "Name": "Americold Realty Trust Inc",
+   "Ticker": "COLD",
+   "Identifier": "03064D108",
+   "Weight": "0.2481327028",
+   "Market Value": "3705684.09",
+   "Shares Held": "263001",
    "Asset Category": "EC"
   },
   {
    "Name": "Apartment Investment and Management Co",
    "Ticker": "AIV",
    "Identifier": "03748R747",
-   "Weight": "0.0399328576",
-   "Market Value": "576359.5",
-   "Shares Held": "135614",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Piedmont Realty Trust Inc",
-   "Ticker": "PDM",
-   "Identifier": "720190206",
-   "Weight": "0.0727905207",
-   "Market Value": "1050601.2",
-   "Shares Held": "125670",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "AvalonBay Communities Inc",
-   "Ticker": "AVB",
-   "Identifier": "053484101",
-   "Weight": "1.7080380104",
-   "Market Value": "24652479",
-   "Shares Held": "134713",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Getty Realty Corp",
-   "Ticker": "GTY",
-   "Identifier": "374297109",
-   "Weight": "0.1169864633",
-   "Market Value": "1688490.72",
-   "Shares Held": "50981",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "eXp World Holdings Inc",
-   "Ticker": "EXPI",
-   "Identifier": "30212W100",
-   "Weight": "0.0397676747",
-   "Market Value": "573975.38",
-   "Shares Held": "92279",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Urban Edge Properties",
-   "Ticker": "UE",
-   "Identifier": "91704F104",
-   "Weight": "0.186600472",
-   "Market Value": "2693244.64",
-   "Shares Held": "122867",
+   "Weight": "0.0245751893",
+   "Market Value": "367012.84",
+   "Shares Held": "136436",
    "Asset Category": "EC"
   },
   {
    "Name": "Apple Hospitality REIT Inc",
    "Ticker": "APLE",
    "Identifier": "03784Y200",
-   "Weight": "0.2090698089",
-   "Market Value": "3017549.4",
-   "Shares Held": "224020",
+   "Weight": "0.2434532074",
+   "Market Value": "3635799.18",
+   "Shares Held": "220218",
    "Asset Category": "EC"
   },
   {
-   "Name": "Cushman & Wakefield Ltd",
-   "Ticker": "CWK",
-   "Identifier": "000000000",
-   "Weight": "0.1150517758",
-   "Market Value": "1660566.96",
-   "Shares Held": "118274",
+   "Name": "AvalonBay Communities Inc",
+   "Ticker": "AVB",
+   "Identifier": "053484101",
+   "Weight": "1.680599922",
+   "Market Value": "25098555.42",
+   "Shares Held": "135222",
    "Asset Category": "EC"
   },
   {
-   "Name": "National Storage Affiliates Trust",
-   "Ticker": "-",
-   "Identifier": "637870106",
-   "Weight": "0.2093615388",
-   "Market Value": "3021760",
-   "Shares Held": "71000",
+   "Name": "BXP Inc",
+   "Ticker": "BXP",
+   "Identifier": "101121101",
+   "Weight": "0.6677706946",
+   "Market Value": "9972676.76",
+   "Shares Held": "142223",
    "Asset Category": "EC"
   },
   {
-   "Name": "Kilroy Realty Corp",
-   "Ticker": "KRC",
-   "Identifier": "49427F108",
-   "Weight": "0.2500189377",
-   "Market Value": "3608576.96",
-   "Shares Held": "108496",
+   "Name": "Brandywine Realty Trust",
+   "Ticker": "BDN",
+   "Identifier": "105368203",
+   "Weight": "0.0364868395",
+   "Market Value": "544904.8",
+   "Shares Held": "179245",
    "Asset Category": "EC"
   },
   {
-   "Name": "Chicago Board of Trade",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.0074287055",
-   "Market Value": "107220.1",
-   "Shares Held": "63",
-   "Asset Category": "DE"
-  },
-  {
-   "Name": "VICI Properties Inc",
-   "Ticker": "VICI",
-   "Identifier": "925652109",
-   "Weight": "2.0353976985",
-   "Market Value": "29377331.6",
-   "Shares Held": "1006073",
+   "Name": "Brixmor Property Group Inc",
+   "Ticker": "BRX",
+   "Identifier": "11120U105",
+   "Weight": "0.6057341817",
+   "Market Value": "9046205.9",
+   "Shares Held": "287090",
    "Asset Category": "EC"
   },
   {
-   "Name": "NETSTREIT Corp",
-   "Ticker": "NTST",
-   "Identifier": "64119V303",
-   "Weight": "0.1161739506",
-   "Market Value": "1676763.55",
-   "Shares Held": "81515",
+   "Name": "Broadstone Net Lease Inc",
+   "Ticker": "BNL",
+   "Identifier": "11135E203",
+   "Weight": "0.260223907",
+   "Market Value": "3886257.56",
+   "Shares Held": "181516",
    "Asset Category": "EC"
   },
   {
-   "Name": "Simon Property Group Inc",
-   "Ticker": "SPG",
-   "Identifier": "828806109",
-   "Weight": "4.2791590194",
-   "Market Value": "61762020.06",
-   "Shares Held": "303186",
+   "Name": "CBL & Associates Properties Inc",
+   "Ticker": "CBL",
+   "Identifier": "124830878",
+   "Weight": "0.0574784133",
+   "Market Value": "858398.91",
+   "Shares Held": "14621",
    "Asset Category": "EC"
   },
   {
-   "Name": "St Joe Co/The",
-   "Ticker": "JOE",
-   "Identifier": "790148100",
-   "Weight": "0.1825989018",
-   "Market Value": "2635489.12",
-   "Shares Held": "40816",
+   "Name": "CBRE Group Inc",
+   "Ticker": "CBRE",
+   "Identifier": "12504L109",
+   "Weight": "2.7485310818",
+   "Market Value": "41047341.95",
+   "Shares Held": "279595",
    "Asset Category": "EC"
   },
   {
-   "Name": "Smartstop Self Storage REIT Inc",
-   "Ticker": "SMA",
-   "Identifier": "83192D402",
-   "Weight": "0.1070997676",
-   "Market Value": "1545793.92",
-   "Shares Held": "49104",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "State Street Global Advisors",
-   "Ticker": "-",
-   "Identifier": "857492862",
-   "Weight": "0.1669759705",
-   "Market Value": "2410000",
-   "Shares Held": "2410000",
-   "Asset Category": "STIV"
-  },
-  {
-   "Name": "Agree Realty Corp",
-   "Ticker": "ADC",
-   "Identifier": "008492100",
-   "Weight": "0.5547264272",
-   "Market Value": "8006485.52",
-   "Shares Held": "103832",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "NNN REIT Inc",
-   "Ticker": "NNN",
-   "Identifier": "637417106",
-   "Weight": "0.5354448632",
-   "Market Value": "7728190.57",
-   "Shares Held": "176483",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "AH Realty Trust Inc",
-   "Ticker": "AHRT",
-   "Identifier": "04208T108",
-   "Weight": "0.0383023366",
-   "Market Value": "552825.84",
-   "Shares Held": "90776",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "NexPoint Residential Trust Inc",
-   "Ticker": "NXRT",
-   "Identifier": "65341D102",
-   "Weight": "0.0483554526",
-   "Market Value": "697924.62",
-   "Shares Held": "24158",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "EastGroup Properties Inc",
-   "Ticker": "EGP",
-   "Identifier": "277276101",
-   "Weight": "0.6749920603",
-   "Market Value": "9742305.2",
-   "Shares Held": "48421",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Medical Properties Trust Inc",
-   "Ticker": "MPT",
-   "Identifier": "58463J304",
-   "Weight": "0.1945019509",
-   "Market Value": "2807288.38",
-   "Shares Held": "568277",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Mid-America Apartment Communities Inc",
-   "Ticker": "MAA",
-   "Identifier": "59522J103",
-   "Weight": "0.9912065983",
-   "Market Value": "14306297.46",
-   "Shares Held": "110747",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Digital Realty Trust Inc",
-   "Ticker": "DLR",
-   "Identifier": "253868103",
-   "Weight": "4.3203615831",
-   "Market Value": "62356705.5",
-   "Shares Held": "310325",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Veris Residential Inc",
-   "Ticker": "VRE",
-   "Identifier": "554489104",
-   "Weight": "0.1087095095",
-   "Market Value": "1569027.67",
-   "Shares Held": "82711",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "STAG Industrial Inc",
-   "Ticker": "STAG",
-   "Identifier": "85254J102",
-   "Weight": "0.4586255303",
-   "Market Value": "6619440.66",
-   "Shares Held": "171577",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Weyerhaeuser Co",
-   "Ticker": "WY",
-   "Identifier": "962166104",
-   "Weight": "1.1784409014",
-   "Market Value": "17008690.32",
-   "Shares Held": "693666",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Extra Space Storage Inc",
-   "Ticker": "EXR",
-   "Identifier": "30225T102",
-   "Weight": "1.9886257815",
-   "Market Value": "28702262.49",
-   "Shares Held": "200253",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Landbridge Co LLC",
-   "Ticker": "-",
-   "Identifier": "514952100",
-   "Weight": "0.1174435528",
-   "Market Value": "1695087.99",
-   "Shares Held": "24663",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Rexford Industrial Realty Inc",
-   "Ticker": "REXR",
-   "Identifier": "76169C100",
-   "Weight": "0.5246580984",
-   "Market Value": "7572502.88",
-   "Shares Held": "210992",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "SL Green Realty Corp",
-   "Ticker": "SLG",
-   "Identifier": "78440X887",
-   "Weight": "0.2042631292",
-   "Market Value": "2948173.56",
-   "Shares Held": "69516",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Healthcare Realty Trust Inc",
-   "Ticker": "HR",
-   "Identifier": "42226K105",
-   "Weight": "0.4623662729",
-   "Market Value": "6673431.6",
-   "Shares Held": "356868",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Equinix Inc",
-   "Ticker": "EQIX",
-   "Identifier": "29444U700",
-   "Weight": "4.7239285276",
-   "Market Value": "68181473.78",
-   "Shares Held": "62966",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Healthpeak Properties Inc",
-   "Ticker": "DOC",
-   "Identifier": "42250P103",
-   "Weight": "0.7551411088",
-   "Market Value": "10899113.61",
-   "Shares Held": "674033",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Cousins Properties Inc",
-   "Ticker": "CUZ",
-   "Identifier": "222795502",
-   "Weight": "0.2854337844",
-   "Market Value": "4119727.04",
-   "Shares Held": "160864",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Equity LifeStyle Properties Inc",
-   "Ticker": "ELS",
-   "Identifier": "29472R108",
-   "Weight": "0.745655885",
-   "Market Value": "10762211.34",
-   "Shares Held": "170046",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Zillow Group Inc",
-   "Ticker": "ZG",
-   "Identifier": "98954M200",
-   "Weight": "0.4687355817",
-   "Market Value": "6765361.2",
-   "Shares Held": "152373",
+   "Name": "Camden Property Trust",
+   "Ticker": "CPT",
+   "Identifier": "133131102",
+   "Weight": "0.7560446452",
+   "Market Value": "11290984.95",
+   "Shares Held": "101895",
    "Asset Category": "EC"
   },
   {
    "Name": "CareTrust REIT Inc",
    "Ticker": "CTRE",
    "Identifier": "14174T107",
-   "Weight": "0.5723813911",
-   "Market Value": "8261303.4",
-   "Shares Held": "209412",
+   "Weight": "0.5870365279",
+   "Market Value": "8766969.84",
+   "Shares Held": "209036",
    "Asset Category": "EC"
   },
   {
-   "Name": "Park Hotels & Resorts Inc",
-   "Ticker": "PK",
-   "Identifier": "700517105",
-   "Weight": "0.164075065",
-   "Market Value": "2368130.61",
-   "Shares Held": "206463",
+   "Name": "Centerspace",
+   "Ticker": "CSR",
+   "Identifier": "15202L107",
+   "Weight": "0.0619554657",
+   "Market Value": "925260.48",
+   "Shares Held": "16872",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Compass Inc",
+   "Ticker": "COMP",
+   "Identifier": "20464U100",
+   "Weight": "0.4731313487",
+   "Market Value": "7065877.62",
+   "Shares Held": "620358",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "COPT Defense Properties",
+   "Ticker": "CDP",
+   "Identifier": "22002T108",
+   "Weight": "0.2750992937",
+   "Market Value": "4108410.8",
+   "Shares Held": "108230",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CoStar Group Inc",
+   "Ticker": "CSGP",
+   "Identifier": "22160N109",
+   "Weight": "0.7656901411",
+   "Market Value": "11435033.52",
+   "Shares Held": "397602",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cousins Properties Inc",
+   "Ticker": "CUZ",
+   "Identifier": "222795502",
+   "Weight": "0.336981155",
+   "Market Value": "5032572.05",
+   "Shares Held": "159511",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Crown Castle Inc",
+   "Ticker": "CCI",
+   "Identifier": "22822V101",
+   "Weight": "2.0893664253",
+   "Market Value": "31203190.2",
+   "Shares Held": "408954",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CubeSmart",
+   "Ticker": "CUBE",
+   "Identifier": "229663109",
+   "Weight": "0.5951232166",
+   "Market Value": "8887738.74",
+   "Shares Held": "214369",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Curbline Properties Corp",
+   "Ticker": "CURB",
+   "Identifier": "23128Q101",
+   "Weight": "0.1879110993",
+   "Market Value": "2806317.6",
+   "Shares Held": "91590",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DiamondRock Hospitality Co",
+   "Ticker": "DRH",
+   "Identifier": "252784301",
+   "Weight": "0.1797756463",
+   "Market Value": "2684820.44",
+   "Shares Held": "202781",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Digital Realty Trust Inc",
+   "Ticker": "DLR",
+   "Identifier": "253868103",
+   "Weight": "3.946057482",
+   "Market Value": "58931540.52",
+   "Shares Held": "312601",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Diversified Healthcare Trust",
+   "Ticker": "DHC",
+   "Identifier": "25525P107",
+   "Weight": "0.1112967567",
+   "Market Value": "1662137.3",
+   "Shares Held": "186757",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Douglas Emmett Inc",
+   "Ticker": "DEI",
+   "Identifier": "25960P109",
+   "Weight": "0.1130484698",
+   "Market Value": "1688297.88",
+   "Shares Held": "142834",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EPR Properties",
+   "Ticker": "EPR",
+   "Identifier": "26884U109",
+   "Weight": "0.3016077609",
+   "Market Value": "4504295.76",
+   "Shares Held": "72568",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Easterly Government Properties Inc",
+   "Ticker": "DEA",
+   "Identifier": "27616P301",
+   "Weight": "0.0675098802",
+   "Market Value": "1008211.68",
+   "Shares Held": "41388",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EastGroup Properties Inc",
+   "Ticker": "EGP",
+   "Identifier": "277276101",
+   "Weight": "0.6873099207",
+   "Market Value": "10264481.1",
+   "Shares Held": "49110",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Empire State Realty Trust Inc",
+   "Ticker": "ESRT",
+   "Identifier": "292104106",
+   "Weight": "0.0483862214",
+   "Market Value": "722613.54",
+   "Shares Held": "142809",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Equinix Inc",
+   "Ticker": "EQIX",
+   "Identifier": "29444U700",
+   "Weight": "5.2392209341",
+   "Market Value": "78244009.92",
+   "Shares Held": "76764",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Equity LifeStyle Properties Inc",
+   "Ticker": "ELS",
+   "Identifier": "29472R108",
+   "Weight": "0.7444434932",
+   "Market Value": "11117730.06",
+   "Shares Held": "170858",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Equity Residential",
+   "Ticker": "EQR",
+   "Identifier": "29476L107",
+   "Weight": "1.4616186428",
+   "Market Value": "21828226.95",
+   "Shares Held": "328491",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Essential Properties Realty Trust Inc",
+   "Ticker": "EPRT",
+   "Identifier": "29670E107",
+   "Weight": "0.4017610897",
+   "Market Value": "6000013.95",
+   "Shares Held": "191755",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Essex Property Trust Inc",
+   "Ticker": "ESS",
+   "Identifier": "297178105",
+   "Weight": "1.1635744135",
+   "Market Value": "17377149.98",
+   "Shares Held": "61157",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AGNT Inc",
+   "Ticker": "AGNT",
+   "Identifier": "30212W100",
+   "Weight": "0.0251762901",
+   "Market Value": "375989.85",
+   "Shares Held": "92837",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Extra Space Storage Inc",
+   "Ticker": "EXR",
+   "Identifier": "30225T102",
+   "Weight": "1.9947947095",
+   "Market Value": "29790829.4",
+   "Shares Held": "201235",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Federal Realty Investment Trust",
+   "Ticker": "FRT",
+   "Identifier": "313745101",
+   "Weight": "0.6175051269",
+   "Market Value": "9221996.53",
+   "Shares Held": "74317",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "First Industrial Realty Trust Inc",
+   "Ticker": "FR",
+   "Identifier": "32054K103",
+   "Weight": "0.5569974193",
+   "Market Value": "8318357.28",
+   "Shares Held": "126342",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Forestar Group Inc",
+   "Ticker": "FOR",
+   "Identifier": "346232101",
+   "Weight": "0.0426426522",
+   "Market Value": "636837.45",
+   "Shares Held": "22623",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Four Corners Property Trust Inc",
+   "Ticker": "FCPT",
+   "Identifier": "35086T109",
+   "Weight": "0.172180475",
+   "Market Value": "2571392",
+   "Shares Held": "100445",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gaming and Leisure Properties Inc",
+   "Ticker": "GLPI",
+   "Identifier": "36467J108",
+   "Weight": "0.7796113334",
+   "Market Value": "11642936.55",
+   "Shares Held": "259945",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Getty Realty Corp",
+   "Ticker": "GTY",
+   "Identifier": "374297109",
+   "Weight": "0.1196066058",
+   "Market Value": "1786238.94",
+   "Shares Held": "52321",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gladstone Commercial Corp",
+   "Ticker": "-",
+   "Identifier": "376536108",
+   "Weight": "0.0394009533",
+   "Market Value": "588425",
+   "Shares Held": "47074",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Global Net Lease Inc",
+   "Ticker": "GNL",
+   "Identifier": "379378201",
+   "Weight": "0.1136410366",
+   "Market Value": "1697147.44",
+   "Shares Held": "194627",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "American Healthcare REIT Inc",
+   "Ticker": "AHR",
+   "Identifier": "398182303",
+   "Weight": "0.6501845035",
+   "Market Value": "9710039.6",
+   "Shares Held": "174641",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Healthcare Realty Trust Inc",
+   "Ticker": "HR",
+   "Identifier": "42226K105",
+   "Weight": "0.500364464",
+   "Market Value": "7472584.68",
+   "Shares Held": "355668",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Healthpeak Properties Inc",
+   "Ticker": "DOC",
+   "Identifier": "42250P103",
+   "Weight": "0.9879926711",
+   "Market Value": "14754962.49",
+   "Shares Held": "675903",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Highwoods Properties Inc",
+   "Ticker": "HIW",
+   "Identifier": "431284108",
+   "Weight": "0.2270673009",
+   "Market Value": "3391087.41",
+   "Shares Held": "102357",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Host Hotels & Resorts Inc",
+   "Ticker": "HST",
+   "Identifier": "44107P104",
+   "Weight": "1.1278198675",
+   "Market Value": "16843181.46",
+   "Shares Held": "670242",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Howard Hughes Holdings Inc",
+   "Ticker": "HHH",
+   "Identifier": "44267T102",
+   "Weight": "0.1350109968",
+   "Market Value": "2016292.48",
+   "Shares Held": "31544",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Independence Realty Trust Inc",
+   "Ticker": "IRT",
+   "Identifier": "45378A106",
+   "Weight": "0.2459075341",
+   "Market Value": "3672452.79",
+   "Shares Held": "220833",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "InvenTrust Properties Corp",
+   "Ticker": "IVT",
+   "Identifier": "46124J201",
+   "Weight": "0.1768190197",
+   "Market Value": "2640665.34",
+   "Shares Held": "74574",
    "Asset Category": "EC"
   },
   {
    "Name": "Invitation Homes Inc",
    "Ticker": "INVH",
    "Identifier": "46187W107",
-   "Weight": "1.1169662403",
-   "Market Value": "16121413.35",
-   "Shares Held": "560355",
+   "Weight": "1.1190878154",
+   "Market Value": "16712774.52",
+   "Shares Held": "562341",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Iron Mountain Inc",
+   "Ticker": "IRM",
+   "Identifier": "46284V101",
+   "Weight": "2.2866869965",
+   "Market Value": "34150031.52",
+   "Shares Held": "279186",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "JBG SMITH Properties",
+   "Ticker": "JBGS",
+   "Identifier": "46590V100",
+   "Weight": "0.0784438746",
+   "Market Value": "1171503.05",
+   "Shares Held": "83381",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Jones Lang LaSalle Inc",
+   "Ticker": "JLL",
+   "Identifier": "48020Q107",
+   "Weight": "1.0743887372",
+   "Market Value": "16045225.82",
+   "Shares Held": "45194",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kilroy Realty Corp",
+   "Ticker": "KRC",
+   "Identifier": "49427F108",
+   "Weight": "0.2788285748",
+   "Market Value": "4164104.94",
+   "Shares Held": "107267",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kimco Realty Corp",
+   "Ticker": "KIM",
+   "Identifier": "49446R109",
+   "Weight": "1.0956311559",
+   "Market Value": "16362466.12",
+   "Shares Held": "642169",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kite Realty Group Trust",
+   "Ticker": "KRG",
+   "Identifier": "49803T300",
+   "Weight": "0.4016210141",
+   "Market Value": "5997922.02",
+   "Shares Held": "209571",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LTC Properties Inc",
+   "Ticker": "LTC",
+   "Identifier": "502175102",
+   "Weight": "0.1226361733",
+   "Market Value": "1831483.36",
+   "Shares Held": "45514",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lamar Advertising Co",
+   "Ticker": "LAMR",
+   "Identifier": "512816109",
+   "Weight": "0.8942659018",
+   "Market Value": "13355220.36",
+   "Shares Held": "83491",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Landbridge Co LLC",
+   "Ticker": "-",
+   "Identifier": "514952100",
+   "Weight": "0.1326909176",
+   "Market Value": "1981643.76",
+   "Shares Held": "25563",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LXP Industrial Trust",
+   "Ticker": "LXP",
+   "Identifier": "529043408",
+   "Weight": "0.2342402518",
+   "Market Value": "3498210.29",
+   "Shares Held": "57793",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lineage Inc",
+   "Ticker": "LINE",
+   "Identifier": "53566V106",
+   "Weight": "0.1797981409",
+   "Market Value": "2685156.38",
+   "Shares Held": "63374",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Macerich Co/The",
+   "Ticker": "MAC",
+   "Identifier": "554382101",
+   "Weight": "0.4108367854",
+   "Market Value": "6135552.96",
+   "Shares Held": "237444",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Marcus & Millichap Inc",
+   "Ticker": "MMI",
+   "Identifier": "566324109",
+   "Weight": "0.0536539639",
+   "Market Value": "801283.5",
+   "Shares Held": "26058",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Medical Properties Trust Inc",
+   "Ticker": "MPT",
+   "Identifier": "58463J304",
+   "Weight": "0.1772496175",
+   "Market Value": "2647096.01",
+   "Shares Held": "571727",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mid-America Apartment Communities Inc",
+   "Ticker": "MAA",
+   "Identifier": "59522J103",
+   "Weight": "0.9852204397",
+   "Market Value": "14713561.2",
+   "Shares Held": "111180",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Millrose Properties Inc",
+   "Ticker": "MRP",
+   "Identifier": "601137102",
+   "Weight": "0.263757176",
+   "Market Value": "3939024.4",
+   "Shares Held": "140780",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "National Health Investors Inc",
+   "Ticker": "NHI",
+   "Identifier": "63633D104",
+   "Weight": "0.2275692962",
+   "Market Value": "3398584.35",
+   "Shares Held": "44339",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NNN REIT Inc",
+   "Ticker": "NNN",
+   "Identifier": "637417106",
+   "Weight": "0.5629934485",
+   "Market Value": "8407903.68",
+   "Shares Held": "176934",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NETSTREIT Corp",
+   "Ticker": "NTST",
+   "Identifier": "64119V303",
+   "Weight": "0.1279722305",
+   "Market Value": "1911173.55",
+   "Shares Held": "89099",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Newmark Group Inc",
+   "Ticker": "NMRK",
+   "Identifier": "65158N102",
+   "Weight": "0.1428002162",
+   "Market Value": "2132618.89",
+   "Shares Held": "142222",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NexPoint Residential Trust Inc",
+   "Ticker": "NXRT",
+   "Identifier": "65341D102",
+   "Weight": "0.0415087625",
+   "Market Value": "619903.62",
+   "Shares Held": "23742",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Omega Healthcare Investors Inc",
+   "Ticker": "OHI",
+   "Identifier": "681936100",
+   "Weight": "0.9119024314",
+   "Market Value": "13618609.29",
+   "Shares Held": "268983",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Opendoor Technologies Inc",
+   "Ticker": "OPEN",
+   "Identifier": "683712103",
+   "Weight": "0.2149179828",
+   "Market Value": "3209646.05",
+   "Shares Held": "851365",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Outfront Media Inc",
+   "Ticker": "OUT",
+   "Identifier": "69007J304",
+   "Weight": "0.2998100456",
+   "Market Value": "4477448.17",
+   "Shares Held": "140491",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Park Hotels & Resorts Inc",
+   "Ticker": "PK",
+   "Identifier": "700517105",
+   "Weight": "0.2032910164",
+   "Market Value": "3036005.64",
+   "Shares Held": "201594",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Pebblebrook Hotel Trust",
+   "Ticker": "PEB",
+   "Identifier": "70509V100",
+   "Weight": "0.15136725",
+   "Market Value": "2260561.4",
+   "Shares Held": "118354",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Phillips Edison & Co Inc",
+   "Ticker": "PECO",
+   "Identifier": "71844V201",
+   "Weight": "0.332581647",
+   "Market Value": "4966868.55",
+   "Shares Held": "116895",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Piedmont Realty Trust Inc",
+   "Ticker": "PDM",
+   "Identifier": "720190206",
+   "Weight": "0.0830479663",
+   "Market Value": "1240261.86",
+   "Shares Held": "127994",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Prologis Inc",
+   "Ticker": "PLD",
+   "Identifier": "74340W103",
+   "Weight": "7.9396587968",
+   "Market Value": "118573114.11",
+   "Shares Held": "819951",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Public Storage",
+   "Ticker": "PSA",
+   "Identifier": "74460D109",
+   "Weight": "3.4275106705",
+   "Market Value": "51187415.51",
+   "Shares Held": "157903",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RLJ Lodging Trust",
+   "Ticker": "RLJ",
+   "Identifier": "74965L101",
+   "Weight": "0.1250618096",
+   "Market Value": "1867708.5",
+   "Shares Held": "152466",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Rayonier Inc",
+   "Ticker": "RYN",
+   "Identifier": "754907103",
+   "Weight": "0.4165378785",
+   "Market Value": "6220694.7",
+   "Shares Held": "285615",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Realty Income Corp",
+   "Ticker": "O",
+   "Identifier": "756109104",
+   "Weight": "3.6276778878",
+   "Market Value": "54176769.45",
+   "Shares Held": "848235",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Regency Centers Corp",
+   "Ticker": "REG",
+   "Identifier": "758849103",
+   "Weight": "0.8989416983",
+   "Market Value": "13425050.03",
+   "Shares Held": "167207",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Rexford Industrial Realty Inc",
+   "Ticker": "REXR",
+   "Identifier": "76169C100",
+   "Weight": "0.5351811859",
+   "Market Value": "7992547.47",
+   "Shares Held": "211611",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ryman Hospitality Properties Inc",
+   "Ticker": "RHP",
+   "Identifier": "78377T107",
+   "Weight": "0.4889310008",
+   "Market Value": "7301834.1",
+   "Shares Held": "54634",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SBA Communications Corp",
+   "Ticker": "SBAC",
+   "Identifier": "78410G104",
+   "Weight": "1.2433504558",
+   "Market Value": "18568548",
+   "Shares Held": "102600",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SL Green Realty Corp",
+   "Ticker": "SLG",
+   "Identifier": "78440X887",
+   "Weight": "0.2425930028",
+   "Market Value": "3622952.64",
+   "Shares Held": "68448",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sabra Health Care REIT Inc",
+   "Ticker": "SBRA",
+   "Identifier": "78573L106",
+   "Weight": "0.3260208869",
+   "Market Value": "4868888.3",
+   "Shares Held": "229990",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Safehold Inc",
+   "Ticker": "SAFE",
+   "Identifier": "78646V107",
+   "Weight": "0.0528564808",
+   "Market Value": "789373.66",
+   "Shares Held": "48787",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "St Joe Co/The",
+   "Ticker": "JOE",
+   "Identifier": "790148100",
+   "Weight": "0.1664077816",
+   "Market Value": "2485180.96",
+   "Shares Held": "39929",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Saul Centers Inc",
+   "Ticker": "BFS",
+   "Identifier": "804395101",
+   "Weight": "0.033606244",
+   "Market Value": "501885.17",
+   "Shares Held": "14731",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Service Properties Trust",
+   "Ticker": "-",
+   "Identifier": "81761L201",
+   "Weight": "0.0593447358",
+   "Market Value": "886271.1",
+   "Shares Held": "110370",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Simon Property Group Inc",
+   "Ticker": "SPG",
+   "Identifier": "828806109",
+   "Weight": "4.688833451",
+   "Market Value": "70024367.3",
+   "Shares Held": "305290",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Smartstop Self Storage REIT Inc",
+   "Ticker": "SMA",
+   "Identifier": "83192D402",
+   "Weight": "0.1143693648",
+   "Market Value": "1708024.5",
+   "Shares Held": "50925",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "STAG Industrial Inc",
+   "Ticker": "STAG",
+   "Identifier": "85254J102",
+   "Weight": "0.4462762174",
+   "Market Value": "6664815.48",
+   "Shares Held": "174198",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sun Communities Inc",
+   "Ticker": "SUI",
+   "Identifier": "866674104",
+   "Weight": "0.9897808272",
+   "Market Value": "14781667.32",
+   "Shares Held": "119709",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sunstone Hotel Investors Inc",
+   "Ticker": "SHO",
+   "Identifier": "867892101",
+   "Weight": "0.147724332",
+   "Market Value": "2206157.03",
+   "Shares Held": "187439",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tanger Inc",
+   "Ticker": "SKT",
+   "Identifier": "875465106",
+   "Weight": "0.2850120988",
+   "Market Value": "4256451.44",
+   "Shares Held": "104684",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Terreno Realty Corp",
+   "Ticker": "TRNO",
+   "Identifier": "88146M101",
+   "Weight": "0.4654378982",
+   "Market Value": "6950981.45",
+   "Shares Held": "97013",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UDR Inc",
+   "Ticker": "UDR",
+   "Identifier": "902653104",
+   "Weight": "0.761279345",
+   "Market Value": "11369161.44",
+   "Shares Held": "297934",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UMH Properties Inc",
+   "Ticker": "UMH",
+   "Identifier": "903002103",
+   "Weight": "0.0764611795",
+   "Market Value": "1141892.92",
+   "Shares Held": "75572",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Urban Edge Properties",
+   "Ticker": "UE",
+   "Identifier": "91704F104",
+   "Weight": "0.1831413398",
+   "Market Value": "2735084.66",
+   "Shares Held": "120701",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ventas Inc",
+   "Ticker": "VTR",
+   "Identifier": "92276F100",
+   "Weight": "2.7083010242",
+   "Market Value": "40446534.87",
+   "Shares Held": "432537",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VICI Properties Inc",
+   "Ticker": "VICI",
+   "Identifier": "925652109",
+   "Weight": "1.7911625813",
+   "Market Value": "26749729.5",
+   "Shares Held": "1015170",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vornado Realty Trust",
+   "Ticker": "VNO",
+   "Identifier": "929042109",
+   "Weight": "0.4075234131",
+   "Market Value": "6086070.12",
+   "Shares Held": "154508",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WP Carey Inc",
+   "Ticker": "WPC",
+   "Identifier": "92936U109",
+   "Weight": "1.026565979",
+   "Market Value": "15331027.2",
+   "Shares Held": "208302",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.2932849136",
+   "Market Value": "4380000",
+   "Shares Held": "4380000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Welltower Inc",
+   "Ticker": "WELL",
+   "Identifier": "95040Q104",
+   "Weight": "9.0827214922",
+   "Market Value": "135643936.28",
+   "Shares Held": "578587",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Weyerhaeuser Co",
+   "Ticker": "WY",
+   "Identifier": "962166104",
+   "Weight": "1.1646170661",
+   "Market Value": "17392721.25",
+   "Shares Held": "694875",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Xenia Hotels & Resorts Inc",
+   "Ticker": "XHR",
+   "Identifier": "984017103",
+   "Weight": "0.1391114908",
+   "Market Value": "2077530.42",
+   "Shares Held": "100949",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Zillow Group Inc",
+   "Ticker": "ZG",
+   "Identifier": "98954M101",
+   "Weight": "0.0836270045",
+   "Market Value": "1248909.38",
+   "Shares Held": "36002",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Zillow Group Inc",
+   "Ticker": "ZG",
+   "Identifier": "98954M200",
+   "Weight": "0.3465506179",
+   "Market Value": "5175485.12",
+   "Shares Held": "151952",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Board of Trade",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0058591094",
+   "Market Value": "87501.6",
+   "Shares Held": "118",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Cushman & Wakefield Ltd",
+   "Ticker": "CWK",
+   "Identifier": "000000000",
+   "Weight": "0.1982768729",
+   "Market Value": "2961123",
+   "Shares Held": "220650",
    "Asset Category": "EC"
   }
  ]

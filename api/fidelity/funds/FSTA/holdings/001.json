@@ -2,7 +2,7 @@
  "ticker": "FSTA",
  "page": 1,
  "pageSize": 250,
- "totalRows": 95,
+ "totalRows": 96,
  "headers": [
   "Name",
   "Ticker",
@@ -14,858 +14,867 @@
  ],
  "rows": [
   {
-   "Name": "Interparfums Inc",
-   "Ticker": "IPAR",
-   "Identifier": "458334109",
-   "Weight": "0.1982628775",
-   "Market Value": "2851445.98",
-   "Shares Held": "31259",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Dollar General Corp",
-   "Ticker": "DG",
-   "Identifier": "256677105",
-   "Weight": "0.9286741532",
-   "Market Value": "13356328.8",
-   "Shares Held": "115260",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Universal Corp/VA",
-   "Ticker": "UVV",
-   "Identifier": "913456109",
-   "Weight": "0.1635287132",
-   "Market Value": "2351894.1",
-   "Shares Held": "43895",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Marzetti Company/The",
-   "Ticker": "MZTI",
-   "Identifier": "513847103",
-   "Weight": "0.2134624308",
-   "Market Value": "3070048.2",
-   "Shares Held": "23565",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Central Garden & Pet Co",
-   "Ticker": "-",
-   "Identifier": "153527205",
-   "Weight": "0.2077632486",
-   "Market Value": "2988081.72",
-   "Shares Held": "89037",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Mondelez International Inc",
-   "Ticker": "MDLZ",
-   "Identifier": "609207105",
-   "Weight": "2.5902747487",
-   "Market Value": "37253713.92",
-   "Shares Held": "606343",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Clorox Co/The",
-   "Ticker": "CLX",
-   "Identifier": "189054109",
-   "Weight": "0.4851991291",
-   "Market Value": "6978205.52",
-   "Shares Held": "72358",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Molson Coors Beverage Co",
-   "Ticker": "TAP",
-   "Identifier": "60871R209",
-   "Weight": "0.3610931262",
-   "Market Value": "5193294.66",
-   "Shares Held": "121509",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Philip Morris International Inc",
-   "Ticker": "PM",
-   "Identifier": "718172109",
-   "Weight": "4.1548961829",
-   "Market Value": "59756330.42",
-   "Shares Held": "362006",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "National Beverage Corp",
-   "Ticker": "FIZZ",
-   "Identifier": "635017106",
-   "Weight": "0.1172633267",
-   "Market Value": "1686498.48",
-   "Shares Held": "49284",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Coca-Cola Consolidated Inc",
-   "Ticker": "COKE",
-   "Identifier": "191098102",
-   "Weight": "0.5169045552",
-   "Market Value": "7434197.64",
-   "Shares Held": "36252",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "General Mills Inc",
-   "Ticker": "GIS",
-   "Identifier": "370334104",
-   "Weight": "0.7023553858",
-   "Market Value": "10101378.87",
-   "Shares Held": "286077",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Costco Wholesale Corp",
-   "Ticker": "COST",
-   "Identifier": "22160K105",
-   "Weight": "12.2354645289",
-   "Market Value": "175972257.56",
-   "Shares Held": "173452",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sprouts Farmers Market Inc",
-   "Ticker": "SFM",
-   "Identifier": "85208M102",
-   "Weight": "0.4377922719",
-   "Market Value": "6296393.1",
-   "Shares Held": "76926",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Brown-Forman Corp",
-   "Ticker": "-",
-   "Identifier": "115637209",
-   "Weight": "0.2806862087",
-   "Market Value": "4036870.5",
-   "Shares Held": "156650",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Seaboard Corp",
-   "Ticker": "SEB",
-   "Identifier": "811543107",
-   "Weight": "0.2000452678",
-   "Market Value": "2877080.58",
-   "Shares Held": "506",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "US Foods Holding Corp",
-   "Ticker": "USFD",
-   "Identifier": "912008109",
-   "Weight": "0.8136055654",
-   "Market Value": "11701395.38",
-   "Shares Held": "125162",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Coty Inc",
-   "Ticker": "COTY",
-   "Identifier": "222070203",
-   "Weight": "0.1187491145",
-   "Market Value": "1707867.3",
-   "Shares Held": "694255",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Tootsie Roll Industries Inc",
-   "Ticker": "TR",
-   "Identifier": "890516107",
-   "Weight": "0.1009517921",
-   "Market Value": "1451903.58",
-   "Shares Held": "34389",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Casey's General Stores Inc",
-   "Ticker": "CASY",
-   "Identifier": "147528103",
-   "Weight": "1.1409486425",
-   "Market Value": "16409291.85",
-   "Shares Held": "19959",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Natural Grocers by Vitamin Cottage Inc",
-   "Ticker": "NGVC",
-   "Identifier": "63888U108",
-   "Weight": "0.0321915427",
-   "Market Value": "462983.52",
-   "Shares Held": "15987",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "PepsiCo Inc",
-   "Ticker": "PEP",
-   "Identifier": "713448108",
-   "Weight": "4.5246435826",
-   "Market Value": "65074092.12",
-   "Shares Held": "410588",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Energizer Holdings Inc",
-   "Ticker": "ENR",
-   "Identifier": "29272W109",
-   "Weight": "0.1476789524",
-   "Market Value": "2123940.5",
-   "Shares Held": "108475",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Estee Lauder Cos Inc/The",
-   "Ticker": "-",
-   "Identifier": "518439104",
-   "Weight": "0.6866706595",
-   "Market Value": "9875798.82",
-   "Shares Held": "128742",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Archer-Daniels-Midland Co",
-   "Ticker": "ADM",
-   "Identifier": "039483102",
-   "Weight": "1.2711162943",
-   "Market Value": "18281382.24",
-   "Shares Held": "245256",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "J M Smucker Co/The",
-   "Ticker": "SJM",
-   "Identifier": "832696405",
-   "Weight": "0.4675768966",
-   "Market Value": "6724759.97",
-   "Shares Held": "68599",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Procter & Gamble Co/The",
-   "Ticker": "PG",
-   "Identifier": "742718109",
-   "Weight": "9.0978557091",
-   "Market Value": "130846704.21",
-   "Shares Held": "889569",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "BJ's Wholesale Club Holdings Inc",
-   "Ticker": "BJ",
-   "Identifier": "05550J101",
-   "Weight": "0.5276052012",
-   "Market Value": "7588095.91",
-   "Shares Held": "80819",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Olaplex Holdings Inc",
-   "Ticker": "OLPX",
-   "Identifier": "679369108",
-   "Weight": "0.0413329841",
-   "Market Value": "594457.08",
-   "Shares Held": "292836",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Darling Ingredients Inc",
-   "Ticker": "DAR",
-   "Identifier": "237266101",
-   "Weight": "0.5528716223",
-   "Market Value": "7951481.31",
-   "Shares Held": "123797",
-   "Asset Category": "EC"
-  },
-  {
    "Name": "Albertsons Cos Inc",
    "Ticker": "-",
    "Identifier": "013091103",
-   "Weight": "0.3338379297",
-   "Market Value": "4801306.4",
-   "Shares Held": "284944",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Chefs' Warehouse Inc/The",
-   "Ticker": "CHEF",
-   "Identifier": "163086101",
-   "Weight": "0.2691044544",
-   "Market Value": "3870300",
-   "Shares Held": "49875",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Mission Produce Inc",
-   "Ticker": "AVO",
-   "Identifier": "60510V108",
-   "Weight": "0.0776207925",
-   "Market Value": "1116353.7",
-   "Shares Held": "80545",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Tyson Foods Inc",
-   "Ticker": "TSN",
-   "Identifier": "902494103",
-   "Weight": "0.7187731995",
-   "Market Value": "10337502.29",
-   "Shares Held": "161347",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ingredion Inc",
-   "Ticker": "INGR",
-   "Identifier": "457187102",
-   "Weight": "0.3710643588",
-   "Market Value": "5336702.4",
-   "Shares Held": "47760",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Dollar Tree Inc",
-   "Ticker": "DLTR",
-   "Identifier": "256746108",
-   "Weight": "0.6981828067",
-   "Market Value": "10041368.22",
-   "Shares Held": "103402",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Vita Coco Co Inc/The",
-   "Ticker": "COCO",
-   "Identifier": "92846Q107",
-   "Weight": "0.2956259246",
-   "Market Value": "4251735.7",
-   "Shares Held": "64430",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Constellation Brands Inc",
-   "Ticker": "STZ",
-   "Identifier": "21036P108",
-   "Weight": "0.8727106059",
-   "Market Value": "12551452.8",
-   "Shares Held": "80160",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Simply Good Foods Co/The",
-   "Ticker": "SMPL",
-   "Identifier": "82900L102",
-   "Weight": "0.1441541165",
-   "Market Value": "2073245.79",
-   "Shares Held": "155067",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Brown-Forman Corp",
-   "Ticker": "-",
-   "Identifier": "115637100",
-   "Weight": "0.1630596775",
-   "Market Value": "2345148.36",
-   "Shares Held": "89237",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Target Corp",
-   "Ticker": "TGT",
-   "Identifier": "87612E106",
-   "Weight": "1.9973373884",
-   "Market Value": "28726001.25",
-   "Shares Held": "221395",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Pilgrim's Pride Corp",
-   "Ticker": "PPC",
-   "Identifier": "72147K108",
-   "Weight": "0.1696593483",
-   "Market Value": "2440065.8",
-   "Shares Held": "73718",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Walmart Inc",
-   "Ticker": "WMT",
-   "Identifier": "931142103",
-   "Weight": "16.1186221396",
-   "Market Value": "231820403.71",
-   "Shares Held": "1757147",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Coca-Cola Co/The",
-   "Ticker": "KO",
-   "Identifier": "191216100",
-   "Weight": "8.3246581456",
-   "Market Value": "119726462.68",
-   "Shares Held": "1520143",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ingles Markets Inc",
-   "Ticker": "IMKTA",
-   "Identifier": "457030104",
-   "Weight": "0.1623572651",
-   "Market Value": "2335046.16",
-   "Shares Held": "25528",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Chicago Mercantile Exchange",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.0057610332",
-   "Market Value": "82856.03",
-   "Shares Held": "42",
-   "Asset Category": "DE"
-  },
-  {
-   "Name": "Grocery Outlet Holding Corp",
-   "Ticker": "GO",
-   "Identifier": "39874R101",
-   "Weight": "0.0944691358",
-   "Market Value": "1358669.06",
-   "Shares Held": "171766",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "McCormick & Co Inc/MD",
-   "Ticker": "-",
-   "Identifier": "579780206",
-   "Weight": "0.5121559543",
-   "Market Value": "7365902.56",
-   "Shares Held": "144884",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Post Holdings Inc",
-   "Ticker": "POST",
-   "Identifier": "737446104",
-   "Weight": "0.2942103189",
-   "Market Value": "4231376.25",
-   "Shares Held": "40395",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Monster Beverage Corp",
-   "Ticker": "MNST",
-   "Identifier": "61174X109",
-   "Weight": "1.8800289141",
-   "Market Value": "27038853.45",
-   "Shares Held": "350835",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Lamb Weston Holdings Inc",
-   "Ticker": "LW",
-   "Identifier": "513272104",
-   "Weight": "0.3207896038",
-   "Market Value": "4613643.45",
-   "Shares Held": "105939",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Hershey Co/The",
-   "Ticker": "HSY",
-   "Identifier": "427866108",
-   "Weight": "0.9816145858",
-   "Market Value": "14117725.92",
-   "Shares Held": "76008",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Turning Point Brands Inc",
-   "Ticker": "TPB",
-   "Identifier": "90041L105",
-   "Weight": "0.1486635189",
-   "Market Value": "2138100.68",
-   "Shares Held": "26501",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Hormel Foods Corp",
-   "Ticker": "HRL",
-   "Identifier": "440452100",
-   "Weight": "0.3455362625",
-   "Market Value": "4969553.55",
-   "Shares Held": "231465",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Bunge Global SA",
-   "Ticker": "BG",
-   "Identifier": "000000000",
-   "Weight": "0.718165195",
-   "Market Value": "10328757.88",
-   "Shares Held": "81284",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Campbell's Company/The",
-   "Ticker": "CPB",
-   "Identifier": "134429109",
-   "Weight": "0.2435940822",
-   "Market Value": "3503406.06",
-   "Shares Held": "168514",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "WD-40 Co",
-   "Ticker": "WDFC",
-   "Identifier": "929236107",
-   "Weight": "0.2266003101",
-   "Market Value": "3258999.12",
-   "Shares Held": "15522",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Conagra Brands Inc",
-   "Ticker": "CAG",
-   "Identifier": "205887102",
-   "Weight": "0.3317418137",
-   "Market Value": "4771159.75",
-   "Shares Held": "332485",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Vital Farms Inc",
-   "Ticker": "VITL",
-   "Identifier": "92847W103",
-   "Weight": "0.0598251471",
-   "Market Value": "860414.1",
-   "Shares Held": "63034",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Central Garden & Pet Co",
-   "Ticker": "-",
-   "Identifier": "153527106",
-   "Weight": "0.0392615952",
-   "Market Value": "564666.06",
-   "Shares Held": "15253",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kenvue Inc",
-   "Ticker": "KVUE",
-   "Identifier": "49177J102",
-   "Weight": "1.1803046485",
-   "Market Value": "16975315.74",
-   "Shares Held": "968358",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Oil-Dri Corp of America",
-   "Ticker": "ODC",
-   "Identifier": "677864100",
-   "Weight": "0.0832611567",
-   "Market Value": "1197474.25",
-   "Shares Held": "16415",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Weis Markets Inc",
-   "Ticker": "WMK",
-   "Identifier": "948849104",
-   "Weight": "0.1171948098",
-   "Market Value": "1685513.06",
-   "Shares Held": "24017",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Cal-Maine Foods Inc",
-   "Ticker": "CALM",
-   "Identifier": "128030202",
-   "Weight": "0.2541248808",
-   "Market Value": "3654861.56",
-   "Shares Held": "47306",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sysco Corp",
-   "Ticker": "SYY",
-   "Identifier": "871829107",
-   "Weight": "1.2314244636",
-   "Market Value": "17710528.47",
-   "Shares Held": "237057",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Spectrum Brands Holdings Inc",
-   "Ticker": "SPB",
-   "Identifier": "84790A105",
-   "Weight": "0.224778585",
-   "Market Value": "3232798.8",
-   "Shares Held": "39138",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Herbalife Ltd",
-   "Ticker": "HLF",
-   "Identifier": "000000000",
-   "Weight": "0.2092245658",
-   "Market Value": "3009098.6",
-   "Shares Held": "181271",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Flowers Foods Inc",
-   "Ticker": "FLO",
-   "Identifier": "343498101",
-   "Weight": "0.2062782451",
-   "Market Value": "2966724.18",
-   "Shares Held": "327453",
+   "Weight": "0.2353047481",
+   "Market Value": "3333441.96",
+   "Shares Held": "287862",
    "Asset Category": "EC"
   },
   {
    "Name": "Altria Group Inc",
    "Ticker": "MO",
    "Identifier": "02209S103",
-   "Weight": "3.9207209227",
-   "Market Value": "56388387.25",
-   "Shares Held": "776165",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "J & J Snack Foods Corp",
-   "Ticker": "JJSF",
-   "Identifier": "466032109",
-   "Weight": "0.1644901092",
-   "Market Value": "2365721.04",
-   "Shares Held": "26804",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "United Natural Foods Inc",
-   "Ticker": "UNFI",
-   "Identifier": "911163103",
-   "Weight": "0.2973554479",
-   "Market Value": "4276609.96",
-   "Shares Held": "85498",
+   "Weight": "3.7077418121",
+   "Market Value": "52525680.98",
+   "Shares Held": "768706",
    "Asset Category": "EC"
   },
   {
    "Name": "Andersons Inc/The",
    "Ticker": "ANDE",
    "Identifier": "034164103",
-   "Weight": "0.3115737514",
-   "Market Value": "4481099.7",
-   "Shares Held": "57055",
+   "Weight": "0.2817212704",
+   "Market Value": "3991001.08",
+   "Shares Held": "56386",
    "Asset Category": "EC"
   },
   {
-   "Name": "Seneca Foods Corp",
-   "Ticker": "-",
-   "Identifier": "817070501",
-   "Weight": "0.0768823396",
-   "Market Value": "1105733.16",
-   "Shares Held": "7906",
+   "Name": "Archer-Daniels-Midland Co",
+   "Ticker": "ADM",
+   "Identifier": "039483102",
+   "Weight": "1.3659083097",
+   "Market Value": "19350124.08",
+   "Shares Held": "244104",
    "Asset Category": "EC"
   },
   {
-   "Name": "Maplebear Inc",
-   "Ticker": "CART",
-   "Identifier": "565394103",
-   "Weight": "0.4058956414",
-   "Market Value": "5837651.05",
-   "Shares Held": "137843",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "State Street Global Advisors",
-   "Ticker": "-",
-   "Identifier": "857492862",
-   "Weight": "0.1293269993",
-   "Market Value": "1860000",
-   "Shares Held": "1860000",
-   "Asset Category": "STIV"
-  },
-  {
-   "Name": "CONTRA TREEHOUSE FOODS",
-   "Ticker": "-",
-   "Identifier": "894CVR018",
-   "Weight": "0.0000205032",
-   "Market Value": "294.88",
-   "Shares Held": "152",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "John B Sanfilippo & Son Inc",
-   "Ticker": "JBSS",
-   "Identifier": "800422107",
-   "Weight": "0.0904901348",
-   "Market Value": "1301442.48",
-   "Shares Held": "15912",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Fresh Del Monte Produce Inc",
-   "Ticker": "FDP",
-   "Identifier": "000000000",
-   "Weight": "0.2074701679",
-   "Market Value": "2983866.59",
-   "Shares Held": "71231",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kroger Co/The",
-   "Ticker": "KR",
-   "Identifier": "501044101",
-   "Weight": "1.4594007046",
-   "Market Value": "20989316.43",
-   "Shares Held": "308349",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Church & Dwight Co Inc",
-   "Ticker": "CHD",
-   "Identifier": "171340102",
-   "Weight": "0.8747255414",
-   "Market Value": "12580431.9",
-   "Shares Held": "129615",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "PriceSmart Inc",
-   "Ticker": "PSMT",
-   "Identifier": "741511109",
-   "Weight": "0.2996528044",
-   "Market Value": "4309650.88",
-   "Shares Held": "27464",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Primo Brands Corp",
-   "Ticker": "PRMB",
-   "Identifier": "741623102",
-   "Weight": "0.3271011681",
-   "Market Value": "4704417.3",
-   "Shares Held": "230835",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Boston Beer Co Inc/The",
-   "Ticker": "SAM",
-   "Identifier": "100557107",
-   "Weight": "0.2236215895",
-   "Market Value": "3216158.72",
-   "Shares Held": "13568",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "elf Beauty Inc",
-   "Ticker": "-",
-   "Identifier": "26856L103",
-   "Weight": "0.2345409148",
-   "Market Value": "3373202.07",
-   "Shares Held": "52731",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kimberly-Clark Corp",
-   "Ticker": "KMB",
-   "Identifier": "494368103",
-   "Weight": "1.1461481615",
-   "Market Value": "16484072.1",
-   "Shares Held": "167470",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kraft Heinz Co/The",
-   "Ticker": "KHC",
-   "Identifier": "500754106",
-   "Weight": "0.7682452065",
-   "Market Value": "11049016",
-   "Shares Held": "487600",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Freshpet Inc",
-   "Ticker": "FRPT",
-   "Identifier": "358039105",
-   "Weight": "0.2576923563",
-   "Market Value": "3706169.52",
-   "Shares Held": "55004",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Performance Food Group Co",
-   "Ticker": "PFGC",
-   "Identifier": "71377A103",
-   "Weight": "0.5822365141",
-   "Market Value": "8373811.52",
-   "Shares Held": "92467",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Celsius Holdings Inc",
-   "Ticker": "CELH",
-   "Identifier": "15118V207",
-   "Weight": "0.2815584234",
-   "Market Value": "4049414.82",
-   "Shares Held": "120626",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Utz Brands Inc",
-   "Ticker": "UTZ",
-   "Identifier": "918090101",
-   "Weight": "0.0720062111",
-   "Market Value": "1035603.96",
-   "Shares Held": "130101",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Keurig Dr Pepper Inc",
-   "Ticker": "KDP",
-   "Identifier": "49271V100",
-   "Weight": "1.3227472453",
-   "Market Value": "19023946.2",
-   "Shares Held": "647073",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Edgewell Personal Care Co",
-   "Ticker": "EPC",
-   "Identifier": "28035Q102",
-   "Weight": "0.1227929125",
-   "Market Value": "1766025.8",
-   "Shares Held": "78316",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Colgate-Palmolive Co",
-   "Ticker": "CL",
-   "Identifier": "194162103",
-   "Weight": "2.1581103526",
-   "Market Value": "31038261.76",
-   "Shares Held": "363616",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Reynolds Consumer Products Inc",
-   "Ticker": "REYN",
-   "Identifier": "76171L106",
-   "Weight": "0.162226407",
-   "Market Value": "2333164.14",
-   "Shares Held": "111262",
+   "Name": "BJ's Wholesale Club Holdings Inc",
+   "Ticker": "BJ",
+   "Identifier": "05550J101",
+   "Weight": "0.5812691564",
+   "Market Value": "8234542.7",
+   "Shares Held": "84215",
    "Asset Category": "EC"
   },
   {
    "Name": "BellRing Brands Inc",
    "Ticker": "BRBR",
    "Identifier": "07831C103",
-   "Weight": "0.2227167788",
-   "Market Value": "3203145.6",
-   "Shares Held": "179952",
+   "Weight": "0.1785861695",
+   "Market Value": "2529938.88",
+   "Shares Held": "204192",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Boston Beer Co Inc/The",
+   "Ticker": "SAM",
+   "Identifier": "100557107",
+   "Weight": "0.1691496121",
+   "Market Value": "2396256",
+   "Shares Held": "13080",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Brown-Forman Corp",
+   "Ticker": "-",
+   "Identifier": "115637100",
+   "Weight": "0.1505667118",
+   "Market Value": "2133001.56",
+   "Shares Held": "72998",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Brown-Forman Corp",
+   "Ticker": "-",
+   "Identifier": "115637209",
+   "Weight": "0.3598366267",
+   "Market Value": "5097621.36",
+   "Shares Held": "177432",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cal-Maine Foods Inc",
+   "Ticker": "CALM",
+   "Identifier": "128030202",
+   "Weight": "0.3291915373",
+   "Market Value": "4663488.06",
+   "Shares Held": "53127",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Campbell's Company/The",
+   "Ticker": "CPB",
+   "Identifier": "134429109",
+   "Weight": "0.3393051362",
+   "Market Value": "4806762.24",
+   "Shares Held": "218688",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Casey's General Stores Inc",
+   "Ticker": "CASY",
+   "Identifier": "147528103",
+   "Weight": "1.215398456",
+   "Market Value": "17217928",
+   "Shares Held": "19768",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Celsius Holdings Inc",
+   "Ticker": "CELH",
+   "Identifier": "15118V207",
+   "Weight": "0.347744961",
+   "Market Value": "4926324.92",
+   "Shares Held": "168652",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Central Garden & Pet Co",
+   "Ticker": "-",
+   "Identifier": "153527106",
+   "Weight": "0.0435225786",
+   "Market Value": "616562.1",
+   "Shares Held": "14322",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Central Garden & Pet Co",
+   "Ticker": "-",
+   "Identifier": "153527205",
+   "Weight": "0.2252604883",
+   "Market Value": "3191150.07",
+   "Shares Held": "84177",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chefs' Warehouse Inc/The",
+   "Ticker": "CHEF",
+   "Identifier": "163086101",
+   "Weight": "0.4173578397",
+   "Market Value": "5912494.95",
+   "Shares Held": "51257",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Church & Dwight Co Inc",
+   "Ticker": "CHD",
+   "Identifier": "171340102",
+   "Weight": "0.9167125988",
+   "Market Value": "12986598.3",
+   "Shares Held": "131430",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Clorox Co/The",
+   "Ticker": "CLX",
+   "Identifier": "189054109",
+   "Weight": "0.5524310964",
+   "Market Value": "7826008.66",
+   "Shares Held": "81922",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coca-Cola Consolidated Inc",
+   "Ticker": "COKE",
+   "Identifier": "191098102",
+   "Weight": "0.5012218238",
+   "Market Value": "7100553.1",
+   "Shares Held": "37789",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coca-Cola Co/The",
+   "Ticker": "KO",
+   "Identifier": "191216100",
+   "Weight": "8.4822172915",
+   "Market Value": "120163231.97",
+   "Shares Held": "1371883",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Colgate-Palmolive Co",
+   "Ticker": "CL",
+   "Identifier": "194162103",
+   "Weight": "2.3323619808",
+   "Market Value": "33041378.7",
+   "Shares Held": "361899",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Conagra Brands Inc",
+   "Ticker": "CAG",
+   "Identifier": "205887102",
+   "Weight": "0.4128119664",
+   "Market Value": "5848095.89",
+   "Shares Held": "403039",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Constellation Brands Inc",
+   "Ticker": "STZ",
+   "Identifier": "21036P108",
+   "Weight": "0.7312705749",
+   "Market Value": "10359536.04",
+   "Shares Held": "79548",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Costco Wholesale Corp",
+   "Ticker": "COST",
+   "Identifier": "22160K105",
+   "Weight": "11.394266765",
+   "Market Value": "161416746.75",
+   "Shares Held": "169575",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Coty Inc",
+   "Ticker": "COTY",
+   "Identifier": "222070203",
+   "Weight": "0.1193104787",
+   "Market Value": "1690210.5",
+   "Shares Held": "614622",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Darling Ingredients Inc",
+   "Ticker": "DAR",
+   "Identifier": "237266101",
+   "Weight": "0.524573995",
+   "Market Value": "7431371.36",
+   "Shares Held": "122549",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dollar General Corp",
+   "Ticker": "DG",
+   "Identifier": "256677105",
+   "Weight": "1.0946407097",
+   "Market Value": "15507214.8",
+   "Shares Held": "122056",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Dollar Tree Inc",
+   "Ticker": "DLTR",
+   "Identifier": "256746108",
+   "Weight": "1.0012929934",
+   "Market Value": "14184805.47",
+   "Shares Held": "111507",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "elf Beauty Inc",
+   "Ticker": "-",
+   "Identifier": "26856L103",
+   "Weight": "0.4462249175",
+   "Market Value": "6321440.07",
+   "Shares Held": "76263",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Edgewell Personal Care Co",
+   "Ticker": "EPC",
+   "Identifier": "28035Q102",
+   "Weight": "0.1479487306",
+   "Market Value": "2095913.96",
+   "Shares Held": "77084",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Energizer Holdings Inc",
+   "Ticker": "ENR",
+   "Identifier": "29272W109",
+   "Weight": "0.1493961083",
+   "Market Value": "2116418.22",
+   "Shares Held": "100926",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Flowers Foods Inc",
+   "Ticker": "FLO",
+   "Identifier": "343498101",
+   "Weight": "0.1683750857",
+   "Market Value": "2385283.68",
+   "Shares Held": "339784",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Freshpet Inc",
+   "Ticker": "FRPT",
+   "Identifier": "358039105",
+   "Weight": "0.3280639269",
+   "Market Value": "4647513.78",
+   "Shares Held": "78057",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "General Mills Inc",
+   "Ticker": "GIS",
+   "Identifier": "370334104",
+   "Weight": "0.7888122319",
+   "Market Value": "11174699.25",
+   "Shares Held": "312579",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Grocery Outlet Holding Corp",
+   "Ticker": "GO",
+   "Identifier": "39874R101",
+   "Weight": "0.1028399897",
+   "Market Value": "1456881.51",
+   "Shares Held": "158529",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hershey Co/The",
+   "Ticker": "HSY",
+   "Identifier": "427866108",
+   "Weight": "0.9701681471",
+   "Market Value": "13743875.7",
+   "Shares Held": "78514",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Hormel Foods Corp",
+   "Ticker": "HRL",
+   "Identifier": "440452100",
+   "Weight": "0.4567142432",
+   "Market Value": "6470036.98",
+   "Shares Held": "258698",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ingles Markets Inc",
+   "Ticker": "IMKTA",
+   "Identifier": "457030104",
+   "Weight": "0.1605586828",
+   "Market Value": "2274552.7",
+   "Shares Held": "25270",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ingredion Inc",
+   "Ticker": "INGR",
+   "Identifier": "457187102",
+   "Weight": "0.382268207",
+   "Market Value": "5415398.08",
+   "Shares Held": "54448",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Interparfums Inc",
+   "Ticker": "IPAR",
+   "Identifier": "458334109",
+   "Weight": "0.2826412105",
+   "Market Value": "4004033.4",
+   "Shares Held": "32148",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "J & J Snack Foods Corp",
+   "Ticker": "JJSF",
+   "Identifier": "466032109",
+   "Weight": "0.1426535961",
+   "Market Value": "2020900.5",
+   "Shares Held": "26417",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kenvue Inc",
+   "Ticker": "KVUE",
+   "Identifier": "49177J102",
+   "Weight": "1.3477423002",
+   "Market Value": "19092775.52",
+   "Shares Held": "992348",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Keurig Dr Pepper Inc",
+   "Ticker": "KDP",
+   "Identifier": "49271V100",
+   "Weight": "1.4405541512",
+   "Market Value": "20407593.52",
+   "Shares Held": "655771",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kimberly-Clark Corp",
+   "Ticker": "KMB",
+   "Identifier": "494368103",
+   "Weight": "1.3316054662",
+   "Market Value": "18864173.25",
+   "Shares Held": "172575",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kraft Heinz Co/The",
+   "Ticker": "KHC",
+   "Identifier": "500754106",
+   "Weight": "0.8945167558",
+   "Market Value": "12672161.15",
+   "Shares Held": "490219",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kroger Co/The",
+   "Ticker": "KR",
+   "Identifier": "501044101",
+   "Weight": "1.2446482426",
+   "Market Value": "17632294.76",
+   "Shares Held": "305374",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lamb Weston Holdings Inc",
+   "Ticker": "LW",
+   "Identifier": "513272104",
+   "Weight": "0.450357934",
+   "Market Value": "6379990.4",
+   "Shares Held": "121408",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Marzetti Company/The",
+   "Ticker": "MZTI",
+   "Identifier": "513847103",
+   "Weight": "0.2415770189",
+   "Market Value": "3422298.01",
+   "Shares Held": "32023",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Estee Lauder Cos Inc/The",
+   "Ticker": "-",
+   "Identifier": "518439104",
+   "Weight": "0.8481745335",
+   "Market Value": "12015654.6",
+   "Shares Held": "143214",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Maplebear Inc",
+   "Ticker": "CART",
+   "Identifier": "565394103",
+   "Weight": "0.4303251076",
+   "Market Value": "6096195.6",
+   "Shares Held": "136686",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "McCormick & Co Inc/MD",
+   "Ticker": "-",
+   "Identifier": "579780206",
+   "Weight": "0.6033342789",
+   "Market Value": "8547128",
+   "Shares Held": "167920",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mission Produce Inc",
+   "Ticker": "AVO",
+   "Identifier": "60510V108",
+   "Weight": "0.0857950697",
+   "Market Value": "1215414.85",
+   "Shares Held": "96385",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Molson Coors Beverage Co",
+   "Ticker": "TAP",
+   "Identifier": "60871R209",
+   "Weight": "0.3882085359",
+   "Market Value": "5499551.68",
+   "Shares Held": "132328",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Mondelez International Inc",
+   "Ticker": "MDLZ",
+   "Identifier": "609207105",
+   "Weight": "2.6493020811",
+   "Market Value": "37531306.92",
+   "Shares Held": "602332",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Monster Beverage Corp",
+   "Ticker": "MNST",
+   "Identifier": "61174X109",
+   "Weight": "2.3638819278",
+   "Market Value": "33487905.66",
+   "Shares Held": "347457",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "National Beverage Corp",
+   "Ticker": "FIZZ",
+   "Identifier": "635017106",
+   "Weight": "0.091285155",
+   "Market Value": "1293190.08",
+   "Shares Held": "40872",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Natural Grocers by Vitamin Cottage Inc",
+   "Ticker": "NGVC",
+   "Identifier": "63888U108",
+   "Weight": "0.0359084065",
+   "Market Value": "508696.02",
+   "Shares Held": "15867",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Oil-Dri Corp of America",
+   "Ticker": "ODC",
+   "Identifier": "677864100",
+   "Weight": "0.1064968564",
+   "Market Value": "1508686.47",
+   "Shares Held": "15207",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PepsiCo Inc",
+   "Ticker": "PEP",
+   "Identifier": "713448108",
+   "Weight": "4.2290857462",
+   "Market Value": "59911293.72",
+   "Shares Held": "429287",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Performance Food Group Co",
+   "Ticker": "PFGC",
+   "Identifier": "71377A103",
+   "Weight": "0.7853604894",
+   "Market Value": "11125800.18",
+   "Shares Held": "97262",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Philip Morris International Inc",
+   "Ticker": "PM",
+   "Identifier": "718172109",
+   "Weight": "4.5388163604",
+   "Market Value": "64299088.84",
+   "Shares Held": "336962",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Pilgrim's Pride Corp",
+   "Ticker": "PPC",
+   "Identifier": "72147K108",
+   "Weight": "0.1434583333",
+   "Market Value": "2032300.8",
+   "Shares Held": "74280",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Post Holdings Inc",
+   "Ticker": "POST",
+   "Identifier": "737446104",
+   "Weight": "0.2929781159",
+   "Market Value": "4150471.05",
+   "Shares Held": "45405",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "PriceSmart Inc",
+   "Ticker": "PSMT",
+   "Identifier": "741511109",
+   "Weight": "0.3867937252",
+   "Market Value": "5479508.78",
+   "Shares Held": "28258",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Primo Brands Corp",
+   "Ticker": "PRMB",
+   "Identifier": "741623102",
+   "Weight": "0.3674674197",
+   "Market Value": "5205722.9",
+   "Shares Held": "229327",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Procter & Gamble Co/The",
+   "Ticker": "PG",
+   "Identifier": "742718109",
+   "Weight": "8.4591970649",
+   "Market Value": "119837116.2",
+   "Shares Held": "829380",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Reynolds Consumer Products Inc",
+   "Ticker": "REYN",
+   "Identifier": "76171L106",
+   "Weight": "0.1618579434",
+   "Market Value": "2292958.66",
+   "Shares Held": "91939",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "John B Sanfilippo & Son Inc",
+   "Ticker": "JBSS",
+   "Identifier": "800422107",
+   "Weight": "0.0903984257",
+   "Market Value": "1280628.24",
+   "Shares Held": "15474",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Seaboard Corp",
+   "Ticker": "SEB",
+   "Identifier": "811543107",
+   "Weight": "0.1423683681",
+   "Market Value": "2016859.82",
+   "Shares Held": "457",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Seneca Foods Corp",
+   "Ticker": "-",
+   "Identifier": "817070501",
+   "Weight": "0.0955804397",
+   "Market Value": "1354039.18",
+   "Shares Held": "8182",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Simply Good Foods Co/The",
+   "Ticker": "SMPL",
+   "Identifier": "82900L102",
+   "Weight": "0.1021615385",
+   "Market Value": "1447270.24",
+   "Shares Held": "142168",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "J M Smucker Co/The",
+   "Ticker": "SJM",
+   "Identifier": "832696405",
+   "Weight": "0.6123671216",
+   "Market Value": "8675091.66",
+   "Shares Held": "72741",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Spectrum Brands Holdings Inc",
+   "Ticker": "SPB",
+   "Identifier": "84790A105",
+   "Weight": "0.2398574713",
+   "Market Value": "3397938.06",
+   "Shares Held": "38278",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sprouts Farmers Market Inc",
+   "Ticker": "SFM",
+   "Identifier": "85208M102",
+   "Weight": "0.4691994672",
+   "Market Value": "6646908.76",
+   "Shares Held": "76261",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sysco Corp",
+   "Ticker": "SYY",
+   "Identifier": "871829107",
+   "Weight": "1.4692472296",
+   "Market Value": "20814073.68",
+   "Shares Held": "244182",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Target Corp",
+   "Ticker": "TGT",
+   "Identifier": "87612E106",
+   "Weight": "2.2375697153",
+   "Market Value": "31698505.18",
+   "Shares Held": "219382",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tootsie Roll Industries Inc",
+   "Ticker": "TR",
+   "Identifier": "890516107",
+   "Weight": "0.0804556624",
+   "Market Value": "1139774.2",
+   "Shares Held": "29210",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CONTRA TREEHOUSE FOODS",
+   "Ticker": "-",
+   "Identifier": "894CVR018",
+   "Weight": "0.0000202788",
+   "Market Value": "287.28",
+   "Shares Held": "152",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Turning Point Brands Inc",
+   "Ticker": "TPB",
+   "Identifier": "90041L105",
+   "Weight": "0.1662946173",
+   "Market Value": "2355810.75",
+   "Shares Held": "31575",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tyson Foods Inc",
+   "Ticker": "TSN",
+   "Identifier": "902494103",
+   "Weight": "0.6700724049",
+   "Market Value": "9492572.88",
+   "Shares Held": "163778",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "United Natural Foods Inc",
+   "Ticker": "UNFI",
+   "Identifier": "911163103",
+   "Weight": "0.3044528094",
+   "Market Value": "4313027.16",
+   "Shares Held": "84852",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "US Foods Holding Corp",
+   "Ticker": "USFD",
+   "Identifier": "912008109",
+   "Weight": "0.9176834738",
+   "Market Value": "13000352.19",
+   "Shares Held": "129241",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Universal Corp/VA",
+   "Ticker": "UVV",
+   "Identifier": "913456109",
+   "Weight": "0.1610102696",
+   "Market Value": "2280950.1",
+   "Shares Held": "43290",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Utz Brands Inc",
+   "Ticker": "UTZ",
+   "Identifier": "918090101",
+   "Weight": "0.1268174697",
+   "Market Value": "1796558.2",
+   "Shares Held": "127235",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vita Coco Co Inc/The",
+   "Ticker": "COCO",
+   "Identifier": "92846Q107",
+   "Weight": "0.2971479997",
+   "Market Value": "4209543.66",
+   "Shares Held": "63839",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vital Farms Inc",
+   "Ticker": "VITL",
+   "Identifier": "92847W103",
+   "Weight": "0.056218185",
+   "Market Value": "796414.26",
+   "Shares Held": "62562",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WD-40 Co",
+   "Ticker": "WDFC",
+   "Identifier": "929236107",
+   "Weight": "0.3070757685",
+   "Market Value": "4350185.28",
+   "Shares Held": "19152",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.2223557409",
+   "Market Value": "3150000",
+   "Shares Held": "3150000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Walmart Inc",
+   "Ticker": "WMT",
+   "Identifier": "931142103",
+   "Weight": "13.4747681735",
+   "Market Value": "190890145.6",
+   "Shares Held": "1716638",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Weis Markets Inc",
+   "Ticker": "WMK",
+   "Identifier": "948849104",
+   "Weight": "0.1165282613",
+   "Market Value": "1650796.25",
+   "Shares Held": "21425",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "-0.0001144596",
+   "Market Value": "-1621.49",
+   "Shares Held": "1",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0014327227",
+   "Market Value": "20296.65",
+   "Shares Held": "57",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Dole PLC",
+   "Ticker": "DOLE",
+   "Identifier": "000000000",
+   "Weight": "0.1316793267",
+   "Market Value": "1865433.64",
+   "Shares Held": "131926",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Del Monte Corp",
+   "Ticker": "DMC",
+   "Identifier": "000000000",
+   "Weight": "0.1425678515",
+   "Market Value": "2019685.8",
+   "Shares Held": "67980",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Herbalife Ltd",
+   "Ticker": "HLF",
+   "Identifier": "000000000",
+   "Weight": "0.1574697563",
+   "Market Value": "2230793.46",
+   "Shares Held": "179613",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Bunge Global SA",
+   "Ticker": "BG",
+   "Identifier": "000000000",
+   "Weight": "0.6037414363",
+   "Market Value": "8552895.99",
+   "Shares Held": "80513",
    "Asset Category": "EC"
   }
  ]

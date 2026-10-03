@@ -4,9 +4,9 @@
  "category": "Sector",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSTA",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063877/000141036826063877-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063877/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FSTA?period1=0&period2=1790479059&interval=1d&events=div%7Csplit",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097244/000141036826097244-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097244/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FSTA",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$51.76",
-  "value": 51.76,
-  "asOfDate": "Sep 25 2026"
+  "display": "$50.90",
+  "value": 50.9,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$1,436.24 M",
-  "value": 1436244282.51,
-  "asOfDate": "Apr 30 2026",
+  "display": "$1,414.56 M",
+  "value": 1414563512.6100006,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": -2.58,
-   "mo1Text": "-2.58%",
-   "qtd": -1.01,
-   "qtdText": "-1.01%",
-   "ytd": 7,
-   "ytdText": "7.00%",
-   "yr1": 6.74,
-   "yr1Text": "6.74%",
-   "yr3": 9.28,
-   "yr3Text": "9.28%",
+   "asOfDate": "Oct 02 2026",
+   "mo1": -4.75,
+   "mo1Text": "-4.75%",
+   "qtd": 0.35,
+   "qtdText": "0.35%",
+   "ytd": 5.23,
+   "ytdText": "5.23%",
+   "yr1": 4.91,
+   "yr1Text": "4.91%",
+   "yr3": 9.22,
+   "yr3Text": "9.22%",
    "yr5": 6.28,
    "yr5Text": "6.28%",
-   "yr10": 7.57,
-   "yr10Text": "7.57%",
-   "sinceInception": 8.28,
-   "sinceInceptionText": "8.28%"
+   "yr10": 7.42,
+   "yr10Text": "7.42%",
+   "sinceInception": 8.13,
+   "sinceInceptionText": "8.13%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -282,8 +297,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 95,
-  "asOf": "Apr 30 2026"
+  "totalRows": 96,
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
@@ -293,14 +308,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3249,
-  "asOf": "Sep 25 2026"
+  "totalRows": 3254,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000042572",
   "seriesName": "Fidelity MSCI Consumer Staples Index ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0001410368-26-063877"
+  "accession": "0001410368-26-097244"
  }
 }

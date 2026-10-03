@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMET",
   "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005474/000003540226005474-index.htm",
   "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005474/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMET?period1=0&period2=1790479058&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMET",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$39.37",
-  "value": 39.369,
-  "asOfDate": "Sep 25 2026"
+  "display": "$39.25",
+  "value": 39.25,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,27 +36,42 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": 1.39,
-   "mo1Text": "1.39%",
-   "qtd": 6.48,
-   "qtdText": "6.48%",
-   "ytd": 9.84,
-   "ytdText": "9.84%",
-   "yr1": 5.26,
-   "yr1Text": "5.26%",
-   "yr3": 19.6,
-   "yr3Text": "19.60%",
+   "asOfDate": "Oct 02 2026",
+   "mo1": 2.78,
+   "mo1Text": "2.78%",
+   "qtd": 0.64,
+   "qtdText": "0.64%",
+   "ytd": 9.51,
+   "ytdText": "9.51%",
+   "yr1": 4.58,
+   "yr1Text": "4.58%",
+   "yr3": 19.54,
+   "yr3Text": "19.54%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 12.31,
-   "sinceInceptionText": "12.31%"
+   "sinceInception": 12.18,
+   "sinceInceptionText": "12.18%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -151,8 +166,8 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1112,
-  "asOf": "Sep 25 2026"
+  "totalRows": 1117,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000075903",
