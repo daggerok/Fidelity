@@ -33,8 +33,22 @@ import {
   USAGE,
   isCertError,
   installSystemCa,
+  isNewerAccession,
+  nportMayReplace,
+  emptyReturnRow,
+  returnsBlock,
+  useOutputRoot,
+  main,
+  fetchWithRetry,
+  configureRequestLanes,
+  paceRequests,
+  setSoftDeadline,
+  chartUrl,
 } from './update-data';
-import { readFileSync } from 'node:fs';
+import { readFileSync, mkdtempSync, readdirSync, statSync, rmSync, mkdirSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { HELD_TICKERS } from '../data/held-tickers';
 
 // ---------------------------------------------------------------------------
@@ -407,7 +421,8 @@ describe('deriveCatalogMetrics', () => {
     expect(isoDateOrNull('')).toBeNull();
     const old = { ytd: 1, secYield: null };
     const out = normalizeStoredMetrics(old, { monthEnd: { asOfDate: 'Sep 25 2026' } });
-    expect(Object.keys(out)).toEqual(['ytd', 'secYield', 'returnsBasis', 'performanceAsOf']);
+    expect(Object.keys(out)).toEqual(['ytd', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf']);
+    expect(out.secYieldText).toBe('—');
     expect(out.performanceAsOf).toBe('2026-09-25');
     expect(normalizeStoredMetrics(old, null).performanceAsOf).toBeNull();
     const kept = normalizeStoredMetrics({ ...out, performanceAsOf: '2026-09-01' }, null);
@@ -751,5 +766,330 @@ describe('installSystemCa', () => {
     installSystemCa('auto', reexec, false);
     expect(await (await fetch('https://example.invalid')).text()).toBe('fine');
     expect(calls).toBe(1);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Data contract: accession refresh, returns shape, retention (mocked, offline)
+// ---------------------------------------------------------------------------
+
+describe('accession freshness', () => {
+  const seed = { accession: 'A-1', filed: '2026-06-26', reportDate: '2026-04-30', url: '' };
+  test('only a strictly newer filing replaces the current one', () => {
+    expect(isNewerAccession(undefined, { accession: 'A-2', filed: '2026-01-01', reportDate: '' })).toBe(true);
+    expect(isNewerAccession(seed, { accession: 'A-2', filed: '2026-09-25', reportDate: '2026-07-31' })).toBe(true);
+    expect(isNewerAccession(seed, { accession: 'A-1', filed: '2026-09-25', reportDate: '2026-07-31' })).toBe(false);
+    expect(isNewerAccession(seed, { accession: 'A-0', filed: '2026-05-01', reportDate: '2026-03-31' })).toBe(false);
+    expect(isNewerAccession(seed, { accession: 'A-3', filed: '2026-09-25', reportDate: '2026-02-28' })).toBe(false);
+  });
+  test('a filing with an older report period never replaces published holdings', () => {
+    expect(nportMayReplace('2026-06-30', '2026-05-31')).toBe(false);
+    expect(nportMayReplace('2026-06-30', '2026-06-30')).toBe(true);
+    expect(nportMayReplace('2026-06-30', '2026-07-31')).toBe(true);
+    expect(nportMayReplace(null, '2026-05-31')).toBe(true);
+  });
+});
+
+describe('returns block shape', () => {
+  test('quarterEnd is a full row of nulls with no stray "null" key', () => {
+    const returns = priceReturns(
+      Array.from({ length: 400 }, (_, i) => ({ date: new Date(Date.UTC(2025, 0, 1) + i * 86_400_000).toISOString().slice(0, 10), close: 10 + i / 100, adjClose: 10 + i / 100, volume: 1 })),
+    );
+    const block = returnsBlock(returns, {}) as Record<string, any>;
+    expect(Object.keys(block.quarterEnd)).not.toContain('null');
+    expect(Object.keys(block.quarterEnd).sort()).toEqual(Object.keys(block.monthEnd).sort());
+    expect(block.quarterEnd.yr1).toBeNull();
+    expect(emptyReturnRow('Jun 30 2026').ytdText).toBe('—');
+  });
+});
+
+// A tiny offline world: SEC submissions + N-PORT documents, Yahoo chart/search.
+const world = {
+  accessions: {} as Record<string, { series: string; repPd: string }>,
+  submissions: {} as Record<string, Array<{ accession: string; filed: string; repPd: string }>>,
+  chart: 'ok' as 'ok' | 'down',
+  inFlight: 0,
+  peak: 0,
+  delayMs: 0,
+  positions: 1,
+};
+
+const nportXml = (series: string, repPd: string): string => `<?xml version="1.0"?>
+<edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>Fidelity ${series}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
+<invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>50</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
+
+function worldChart(): Record<string, unknown> {
+  const start = Date.UTC(2025, 0, 2) / 1000;
+  const days = Array.from({ length: 450 }, (_, i) => ({ t: start + i * day, close: 20 + i / 50, volume: 100 }));
+  return chartFixture({ days, dividends: [{ t: start + 200 * day, amount: 0.12 }, { t: start + 300 * day, amount: 0.13 }], meta: { navPrice: undefined, regularMarketTime: start + 449 * day } });
+}
+
+function installWorld(): void {
+  globalThis.fetch = (async (input: RequestInfo | URL) => {
+    const url = String(input);
+    world.inFlight += 1;
+    world.peak = Math.max(world.peak, world.inFlight);
+    try {
+      if (world.delayMs) await new Promise((resolve) => setTimeout(resolve, world.delayMs));
+      const sub = /data\.sec\.gov\/submissions\/CIK(\d+)\.json/.exec(url);
+      if (sub) {
+        const rows = world.submissions[sub[1]] || [];
+        return new Response(JSON.stringify({ filings: { recent: { form: rows.map(() => 'NPORT-P'), accessionNumber: rows.map((r) => r.accession), filingDate: rows.map((r) => r.filed), reportDate: rows.map((r) => r.repPd) } } }));
+      }
+      const arch = /Archives\/edgar\/data\/\d+\/(\d{18})\/primary_doc\.xml/.exec(url);
+      if (arch) {
+        const hit = Object.entries(world.accessions).find(([acc]) => acc.replace(/-/g, '') === arch[1]);
+        return hit ? new Response(nportXml(hit[1].series, hit[1].repPd)) : new Response('missing', { status: 404 });
+      }
+      if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart())) : new Response('down', { status: 404 });
+      if (url.includes('finance/search')) return new Response(JSON.stringify({ quotes: [] }));
+      return new Response('unexpected ' + url, { status: 500 });
+    } finally {
+      world.inFlight -= 1;
+    }
+  }) as unknown as typeof fetch;
+}
+
+function snapshot(dir: string): Record<string, string> {
+  const out: Record<string, string> = {};
+  const walk = (current: string): void => {
+    for (const name of readdirSync(current)) {
+      const path = join(current, name);
+      if (statSync(path).isDirectory()) walk(path);
+      else out[path.slice(dir.length)] = readFileSync(path, 'utf8');
+    }
+  };
+  walk(dir);
+  return out;
+}
+
+describe('mocked end-to-end runs', () => {
+  const original = globalThis.fetch;
+  let root = '';
+  const env = (extra: Record<string, string>): Record<string, string> => ({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', CONCURRENCY: '2', ...extra });
+  const readJson = (rel: string): any => JSON.parse(readFileSync(join(root, rel), 'utf8'));
+  const quiet = async (fn: () => Promise<void>): Promise<void> => {
+    const log = console.log;
+    console.log = () => {};
+    try { await fn(); } finally { console.log = log; }
+  };
+  const fresh = (): void => {
+    root = mkdtempSync(join(tmpdir(), 'fidelity-run-'));
+    mkdirSync(root, { recursive: true });
+    useOutputRoot(pathToFileURL(root + '/'));
+    world.accessions = {
+      '0000035402-26-004724': { series: 'S000042567', repPd: '2026-05-31' },
+      '0000035402-26-004036': { series: 'S000068173', repPd: '2026-04-30' },
+      '0000035402-26-004033': { series: 'S000068175', repPd: '2026-04-30' },
+    };
+    world.submissions = {};
+    world.chart = 'ok';
+    world.delayMs = 0;
+    world.peak = 0;
+    world.positions = 1;
+    setSoftDeadline(25 * 60_000);
+    installWorld();
+  };
+  afterEach(() => {
+    globalThis.fetch = original;
+    if (root) rmSync(root, { recursive: true, force: true });
+    process.exitCode = 0;
+  });
+
+  test('REFRESH_CATALOG moves a series to its newer filing and publishes its holdings', async () => {
+    fresh();
+    world.accessions['0000035402-26-009999'] = { series: 'S000042567', repPd: '2026-07-31' };
+    world.accessions['0000035402-26-009998'] = { series: 'S000068173', repPd: '2026-07-31' };
+    world.submissions['0001562565'] = [{ accession: '0000035402-26-009999', filed: '2026-09-25', repPd: '2026-07-31' }, { accession: '0000035402-26-004724', filed: '2026-07-24', repPd: '2026-05-31' }];
+    // a filing of an unknown series must be ignored (identity check)
+    world.accessions['0000035402-26-009997'] = { series: 'S000000001', repPd: '2026-08-31' };
+    world.submissions['0000945908'] = [{ accession: '0000035402-26-009997', filed: '2026-09-26', repPd: '2026-08-31' }];
+    await quiet(() => main(env({ TICKERS: 'FBND FBCG' })));
+    const fbnd = readJson('funds/FBND/meta.json');
+    expect(fbnd.holdings.asOf).toBe('Jul 31 2026');
+    expect(fbnd.source.nportDoc).toContain('000003540226009999');
+    expect(fbnd.seed.accession).toBe('0000035402-26-009999');
+    const fbcg = readJson('funds/FBCG/meta.json');
+    expect(fbcg.holdings.asOf).toBe('Apr 30 2026');
+  });
+
+  test('older filings never replace fresher published holdings', async () => {
+    fresh();
+    world.submissions['0001562565'] = [];
+    await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: 'false' })));
+    expect(readJson('funds/FBND/meta.json').holdings.asOf).toBe('May 31 2026');
+    // the seed accession now points at an older period than what is published
+    const meta = readJson('funds/FBND/meta.json');
+    meta.holdings.asOf = 'Jun 30 2026';
+    writeFileSync(join(root, 'funds/FBND/meta.json'), JSON.stringify(meta));
+    await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: 'false' })));
+    expect(readJson('funds/FBND/meta.json').holdings.asOf).toBe('Jun 30 2026');
+  });
+
+  test('nav and premium stay null with an honest as-of, and the quote block survives a Yahoo outage', async () => {
+    fresh();
+    await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: 'false' })));
+    const meta = readJson('funds/FBND/meta.json');
+    expect(meta.nav).toEqual({ display: '—', value: null, asOfDate: '—' });
+    expect(meta.premiumDiscount.value).toBeNull();
+    expect(JSON.stringify(meta.returns)).not.toContain('"null"');
+    const price = meta.marketPrice.value;
+    expect(price).toBeGreaterThan(0);
+    const metricsBefore = readJson('index.json').funds[0].metrics;
+    world.chart = 'down';
+    await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: 'false' })));
+    const after = readJson('funds/FBND/meta.json');
+    expect(after.marketPrice.value).toBe(price);
+    expect(after.marketPrice.asOfDate).toBe(meta.marketPrice.asOfDate);
+    expect(after.distributions.rows).toEqual(meta.distributions.rows);
+    expect(after.distributions.frequency).toBe(meta.distributions.frequency);
+    expect(readJson('index.json').funds[0].metrics).toEqual(metricsBefore);
+  });
+
+  test('a one-ticker run keeps every published row and file of the other funds', async () => {
+    fresh();
+    await quiet(() => main(env({ TICKERS: 'FBND FBCG FBCV', REFRESH_CATALOG: 'false' })));
+    expect(readJson('index.json').funds).toHaveLength(3);
+    await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: 'false' })));
+    const index = readJson('index.json');
+    expect(index.funds.map((f: any) => f.ticker)).toEqual(['FBCG', 'FBCV', 'FBND']);
+    expect(readdirSync(join(root, 'funds')).sort()).toEqual(['FBCG', 'FBCV', 'FBND']);
+  });
+
+  test('a rerun with identical upstream data changes no file at all', async () => {
+    fresh();
+    const run = () => quiet(() => main(env({ TICKERS: 'FBND FBCG', REFRESH_CATALOG: 'false' })));
+    await run();
+    const first = snapshot(root);
+    await new Promise((resolve) => setTimeout(resolve, 1100));
+    await run();
+    expect(snapshot(root)).toEqual(first);
+  });
+});
+
+describe('robustness', () => {
+  const original = globalThis.fetch;
+  afterEach(() => {
+    globalThis.fetch = original;
+    configureRequestLanes(1, 1);
+  });
+
+  test('every request carries a timeout: a hanging server is aborted and retried', async () => {
+    let calls = 0;
+    globalThis.fetch = ((_url: string, init?: RequestInit) => {
+      calls += 1;
+      return new Promise((_resolve, reject) => {
+        const signal = init?.signal;
+        if (!signal) return; // old behavior: hangs forever
+        signal.addEventListener('abort', () => reject(new Error('aborted by timeout')));
+      });
+    }) as unknown as typeof fetch;
+    configureRequestLanes(1, 0);
+    const started = Date.now();
+    await expect(fetchWithRetry('https://example.invalid/x', '[t]', {}, 1, 30)).rejects.toThrow('network error');
+    expect(calls).toBe(2);
+    expect(Date.now() - started).toBeLessThan(5000);
+  });
+
+  test('pacing reserves the lane slot synchronously: three concurrent callers on one lane are spaced', async () => {
+    configureRequestLanes(1, 0.06);
+    const starts: number[] = [];
+    await Promise.all([0, 1, 2].map(async () => { await paceRequests(); starts.push(Date.now()); }));
+    starts.sort((a, b) => a - b);
+    expect(starts[1] - starts[0]).toBeGreaterThanOrEqual(45);
+    expect(starts[2] - starts[1]).toBeGreaterThanOrEqual(45);
+  });
+
+  test('HISTORY_RANGE shrinks the Yahoo request with an explicit period1', () => {
+    const now = Date.UTC(2026, 9, 2);
+    expect(chartUrl('FBND', { historyRange: 'max' }, now)).toContain('period1=0&');
+    const url = chartUrl('FBND', { historyRange: '5y' }, now);
+    const period1 = Number(/period1=(\d+)/.exec(url)![1]);
+    expect(Math.round((now / 1000 - period1) / 86_400 / 365.25)).toBe(5);
+    expect(url).toContain(`period2=${Math.floor(now / 1000)}`);
+  });
+});
+
+describe('mocked runs: concurrency, cursor, deadline, writes', () => {
+  const original = globalThis.fetch;
+  let root = '';
+  const env = (extra: Record<string, string>): Record<string, string> => ({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', REFRESH_CATALOG: 'false', ...extra });
+  const readJson = (rel: string): any => JSON.parse(readFileSync(join(root, rel), 'utf8'));
+  const quiet = async (fn: () => Promise<void>): Promise<void> => {
+    const log = console.log;
+    console.log = () => {};
+    try { await fn(); } finally { console.log = log; }
+  };
+  const fresh = (): void => {
+    root = mkdtempSync(join(tmpdir(), 'fidelity-run-'));
+    useOutputRoot(pathToFileURL(root + '/'));
+    world.accessions = {
+      '0000035402-26-004724': { series: 'S000042567', repPd: '2026-05-31' },
+      '0000035402-26-004036': { series: 'S000068173', repPd: '2026-04-30' },
+      '0000035402-26-004033': { series: 'S000068175', repPd: '2026-04-30' },
+    };
+    world.submissions = {};
+    world.chart = 'ok';
+    world.delayMs = 0;
+    world.peak = 0;
+    world.positions = 1;
+    setSoftDeadline(25 * 60_000);
+    installWorld();
+  };
+  afterEach(() => {
+    globalThis.fetch = original;
+    setSoftDeadline(25 * 60_000);
+    if (root) rmSync(root, { recursive: true, force: true });
+    process.exitCode = 0;
+  });
+
+  test('CONCURRENCY is real: peak in-flight requests is 1 at c=1 and grows with c', async () => {
+    fresh();
+    world.delayMs = 25;
+    await quiet(() => main(env({ TICKERS: 'FBND FBCG FBCV', CONCURRENCY: '1' })));
+    expect(world.peak).toBe(1);
+    rmSync(root, { recursive: true, force: true });
+    fresh();
+    world.delayMs = 25;
+    await quiet(() => main(env({ TICKERS: 'FBND FBCG FBCV', CONCURRENCY: '3' })));
+    expect(world.peak).toBeGreaterThanOrEqual(2);
+    expect(world.peak).toBeLessThanOrEqual(3);
+  });
+
+  test('MAX_FETCHES cursor advances run by run; TICKERS runs leave the cursor untouched; unknown tickers are errors', async () => {
+    fresh();
+    await quiet(() => main(env({ MAX_FETCHES: '1' })));
+    expect(readJson('update-state.json').cursor).toBe('FAAA');
+    await quiet(() => main(env({ MAX_FETCHES: '1' })));
+    expect(readJson('update-state.json').cursor).toBe('FBCG');
+    expect(readJson('index.json').funds.map((f: any) => f.ticker)).toEqual(['FAAA', 'FBCG']);
+    await quiet(() => main(env({ TICKERS: 'FBND', MAX_FETCHES: '1' })));
+    expect(readJson('update-state.json').cursor).toBe('FBCG');
+    await expect(quiet(() => main(env({ TICKERS: 'FBND NOPE' })))).rejects.toThrow('NOPE');
+    await quiet(() => main(env({})));
+    expect(readJson('update-state.json').cursor).toBeNull();
+  });
+
+  test('the soft deadline stops taking new funds but still writes the index with every published row', async () => {
+    fresh();
+    await quiet(() => main(env({ TICKERS: 'FBND FBCG' })));
+    setSoftDeadline(-1);
+    await quiet(() => main(env({ TICKERS: 'FBND FBCG' })));
+    expect(readJson('index.json').funds.map((f: any) => f.ticker)).toEqual(['FBCG', 'FBND']);
+  });
+
+  test('writes are atomic (no temp leftovers) and stale pages go only after the new meta is written', async () => {
+    fresh();
+    world.positions = 2;
+    await quiet(() => main(env({ TICKERS: 'FBND', HOLDINGS_PAGE_SIZE: '1' })));
+    expect(readdirSync(join(root, 'funds/FBND/holdings')).sort()).toEqual(['001.json', '002.json']);
+    world.positions = 1;
+    world.submissions['0001562565'] = [];
+    // a newer period so the one-position filing may replace the two-position one
+    world.accessions['0000035402-26-004724'] = { series: 'S000042567', repPd: '2026-05-31' };
+    await quiet(() => main(env({ TICKERS: 'FBND', HOLDINGS_PAGE_SIZE: '1' })));
+    expect(readdirSync(join(root, 'funds/FBND/holdings'))).toEqual(['001.json']);
+    expect(readJson('funds/FBND/meta.json').holdings.pages).toEqual(['holdings/001.json']);
+    expect(Object.keys(snapshot(root)).filter((name) => name.endsWith('.tmp'))).toEqual([]);
   });
 });

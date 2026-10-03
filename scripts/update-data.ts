@@ -134,7 +134,7 @@ function outputCreateReporter(root: URL | string, total: number) {
 // JSON API under ./api/fidelity, following the daggerok/iShares and
 // daggerok/SPDR repository design (no dependencies, Bun only).
 
-import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, readdir, rm, appendFile, rename } from 'node:fs/promises';
 import { HELD_TICKERS } from '../data/held-tickers';
 
 // --- TLS trust store (identical in every ETF repo) ---
@@ -308,9 +308,16 @@ const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const YAHOO_BROWSER_UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 
-const API_ROOT = new URL('../api/fidelity/', import.meta.url);
-const INDEX_FILE = new URL('index.json', API_ROOT);
-const STATE_FILE = new URL('update-state.json', API_ROOT);
+let API_ROOT = new URL('../api/fidelity/', import.meta.url);
+let INDEX_FILE = new URL('index.json', API_ROOT);
+let STATE_FILE = new URL('update-state.json', API_ROOT);
+
+/** Test hook: point every read and write of the feed at another directory (a trailing slash URL). */
+export function useOutputRoot(root: URL): void {
+  API_ROOT = root;
+  INDEX_FILE = new URL('index.json', API_ROOT);
+  STATE_FILE = new URL('update-state.json', API_ROOT);
+}
 
 const HOLDINGS_PAGE_SIZE_FALLBACK = 250;
 const HISTORY_PAGE_SIZE_FALLBACK = 1000;
@@ -666,14 +673,28 @@ Examples:
 // now each get their own paced lane, so concurrency actually multiplies
 // throughput as documented instead of only overlapping wait time.
 let nextRequestAtLanes: number[] = [0];
+let softDeadlineMs = 25 * 60_000; // the workflow times out at 30 min: stop taking new funds well before, and still write the index
+
+/** Test hook: shorten (or exhaust) the soft run deadline. */
+export function setSoftDeadline(ms: number): void {
+  softDeadlineMs = ms;
+}
 let requestSleepMs = REQUEST_SLEEP_FALLBACK * 1000;
 
-async function paceRequests(): Promise<void> {
+/** Sizes the per-worker pacing lanes (one lane per CONCURRENCY worker, REQUEST_SLEEP apart). */
+export function configureRequestLanes(lanes: number, sleepSeconds: number): void {
+  requestSleepMs = Math.max(0, sleepSeconds) * 1000;
+  nextRequestAtLanes = new Array(Math.max(1, lanes)).fill(0);
+}
+
+/** Reserves the earliest lane slot synchronously, then waits for it: concurrent callers can never share a slot. */
+export async function paceRequests(): Promise<void> {
+  const now = Date.now();
   let lane = 0;
   for (let i = 1; i < nextRequestAtLanes.length; i++) if (nextRequestAtLanes[i] < nextRequestAtLanes[lane]) lane = i;
-  const waitFor = nextRequestAtLanes[lane] - Date.now();
+  const waitFor = nextRequestAtLanes[lane] - now;
+  nextRequestAtLanes[lane] = Math.max(now, nextRequestAtLanes[lane]) + requestSleepMs;
   if (waitFor > 0) await sleep(waitFor);
-  nextRequestAtLanes[lane] = Date.now() + requestSleepMs;
 }
 
 class HttpError extends Error {
@@ -686,18 +707,23 @@ class HttpError extends Error {
   }
 }
 
-export async function fetchWithRetry(
+/** Per-attempt time budget for headers and body together. */
+export const FETCH_TIMEOUT_MS = 45_000;
+
+async function fetchAttempts<T>(
   url: string,
   label: string,
-  init: RequestInit = {},
-  maxRetries = 2,
-): Promise<Response> {
+  init: RequestInit,
+  maxRetries: number,
+  timeoutMs: number,
+  consume: (response: Response) => Promise<T>,
+): Promise<T> {
   let lastError: unknown = null;
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     await paceRequests();
     try {
-      const response = await fetch(url, { redirect: 'follow', ...init });
-      if (response.ok) return response;
+      const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), ...init });
+      if (response.ok) return await consume(response);
       const retryable = [403, 408, 425, 429].includes(response.status) || response.status >= 500;
       if (!retryable) throw new HttpError(`${label}: HTTP ${response.status} ${response.statusText}`, response.status, false);
       lastError = new HttpError(`${label}: HTTP ${response.status} (attempt ${attempt + 1} of ${maxRetries + 1})`, response.status, true);
@@ -710,6 +736,16 @@ export async function fetchWithRetry(
   throw lastError instanceof Error ? lastError : new Error(`${label}: failed`);
 }
 
+export function fetchWithRetry(
+  url: string,
+  label: string,
+  init: RequestInit = {},
+  maxRetries = 2,
+  timeoutMs = FETCH_TIMEOUT_MS,
+): Promise<Response> {
+  return fetchAttempts(url, label, init, maxRetries, timeoutMs, async (response) => response);
+}
+
 function secHeaders(config: UpdaterConfig): Record<string, string> {
   return { 'User-Agent': config.secUa, Accept: 'application/json,*/*' };
 }
@@ -719,8 +755,8 @@ function yahooHeaders(): Record<string, string> {
 }
 
 async function fetchText(url: string, label: string, headers: Record<string, string>, config: UpdaterConfig): Promise<string> {
-  const response = await fetchWithRetry(url, label, { headers }, config.maxRetries);
-  return await response.text();
+  // The body is read inside the retry loop, so a stalled download is aborted and retried too.
+  return fetchAttempts(url, label, { headers }, config.maxRetries, FETCH_TIMEOUT_MS, (response) => response.text());
 }
 
 async function fetchJson(url: string, label: string, headers: Record<string, string>, config: UpdaterConfig): Promise<JsonRecord> {
@@ -975,15 +1011,41 @@ async function writeTextIfChanged(file: URL, value: string): Promise<boolean> {
     // First write.
   }
   if (previous === value) return false;
-  await writeFile(file, value, 'utf8');
+  await writeAtomic(file, value);
   return true;
+}
+
+/** Writes through a temp file and a rename, so a killed run never leaves a half-written JSON file behind. */
+async function writeAtomic(file: URL, text: string): Promise<void> {
+  const tmp = new URL(`${file.href}.tmp`);
+  await writeFile(tmp, text, 'utf8');
+  await rename(tmp, file);
 }
 
 // ---------------------------------------------------------------------------
 // SEC EDGAR layer: trust submissions + N-PORT-P primary documents
 // ---------------------------------------------------------------------------
 
+/** A filing may replace published holdings unless its report period is older than the published one. */
+export function nportMayReplace(publishedAsOfIso: string | null, filingRepPdDate: string | null | undefined): boolean {
+  const filing = isoDateOrNull(filingRepPdDate);
+  if (!publishedAsOfIso || !filing) return true;
+  return filing >= publishedAsOfIso;
+}
+
 export type NportAccession = { accession: string; filed: string; reportDate: string; url: string };
+
+/**
+ * Whether a freshly discovered filing may replace the accession a series is on:
+ * only a strictly newer filing (by filing date, then report period), never an
+ * older or identical one. Seed baselines and refreshed filings are compared alike.
+ */
+export function isNewerAccession(current: NportAccession | undefined, candidate: { accession: string; filed: string; reportDate: string }): boolean {
+  if (!current) return true;
+  if (current.accession === candidate.accession) return false;
+  if (candidate.reportDate && current.reportDate && candidate.reportDate < current.reportDate) return false;
+  return candidate.filed > current.filed || (candidate.filed === current.filed && candidate.reportDate > current.reportDate);
+}
 
 function nportUrlFor(trustCik: string, accession: string): string {
   return `${EDGAR_ARCHIVES}/${Number(trustCik)}/${accession.replace(/-/g, '')}/primary_doc.xml`;
@@ -1133,9 +1195,9 @@ export function parseChart(payload: JsonRecord): ParsedChart {
   };
 }
 
-function chartUrl(ticker: string, config: UpdaterConfig): string {
+export function chartUrl(ticker: string, config: Pick<UpdaterConfig, 'historyRange'>, nowMs = Date.now()): string {
   // Explicit period1/period2: `range=max` silently downgrades to monthly bars.
-  const period2 = Math.floor(Date.now() / 1000);
+  const period2 = Math.floor(nowMs / 1000);
   let period1 = 0; // "max"
   const yearsMatch = /^(\d+)y$/i.exec(config.historyRange);
   if (yearsMatch) period1 = Math.floor(period2 - Number(yearsMatch[1]) * 365.25 * 86_400);
@@ -1291,6 +1353,7 @@ export function deriveCatalogMetrics(
     dividendYield,
     dividendYieldText: dividendYield === null ? '—' : `${dividendYield.toFixed(2)}%`,
     secYield: null, // Fidelity publishes no 30-day SEC yield feed; shown as "—"
+    secYieldText: '—',
     returnsBasis: RETURNS_BASIS,
     performanceAsOf: isoDateOrNull(returns.asOfDate),
   };
@@ -1328,6 +1391,7 @@ export function normalizeStoredMetrics(metrics: JsonRecord, storedReturns?: Json
   const monthEnd = (storedReturns?.monthEnd as JsonRecord | undefined) ?? {};
   return {
     ...rest,
+    secYieldText: typeof rest.secYieldText === 'string' ? rest.secYieldText : (numberOrNull(rest.secYield) === null ? '—' : `${Number(rest.secYield).toFixed(2)}%`),
     returnsBasis: RETURNS_BASIS,
     performanceAsOf: isoDateOrNull(storedAsOf) ?? displayDateToIso(monthEnd.asOfDate),
   };
@@ -1400,7 +1464,7 @@ async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
     // First write.
   }
   if (previous === next || (previous !== null && samePublishedContent(previous, value))) return false;
-  await writeFile(file, next, 'utf8');
+  await writeAtomic(file, next);
   return true;
 }
 
@@ -1411,6 +1475,7 @@ async function writePages(
   headers: string[],
   rows: JsonRecord[],
   pageSize: number,
+  prune = true,
 ): Promise<{ pages: string[]; pageSize: number; totalRows: number }> {
   await mkdir(new URL(`${kind}/`, dir), { recursive: true });
   const pages: string[] = [];
@@ -1430,7 +1495,7 @@ async function writePages(
       pages.push(name);
     }
   }
-  await removeStalePages(dir, kind, new Set(pages));
+  if (prune) await removeStalePages(dir, kind, new Set(pages));
   return { pages, pageSize, totalRows: rows.length };
 }
 
@@ -1479,6 +1544,14 @@ async function readPreviousIndex(): Promise<Map<string, JsonRecord>> {
   return map;
 }
 
+async function readPreviousMeta(ticker: string): Promise<JsonRecord | null> {
+  try {
+    return JSON.parse(await readFile(new URL(`funds/${ticker}/meta.json`, API_ROOT), 'utf8')) as JsonRecord;
+  } catch {
+    return null;
+  }
+}
+
 async function readPreviousSheet(ticker: string, kind: 'holdings' | 'history'): Promise<JsonRecord[]> {
   const rows: JsonRecord[] = [];
   let page = 1;
@@ -1518,7 +1591,7 @@ function distributionRows(chart: ParsedChart): string[][] {
   return chart.dividends.map((dividend) => [formatUsDate(dividend.epoch), String(round(dividend.amount, 6))]);
 }
 
-function returnsBlock(returns: PriceReturns | null, previous: JsonRecord): JsonRecord | null {
+export function returnsBlock(returns: PriceReturns | null, previous: JsonRecord): JsonRecord | null {
   if (!returns || !returns.asOfDate) return (previous.returns as JsonRecord) ?? null;
   const text = (value: number | null): string => (value === null ? '—' : `${value.toFixed(2)}%`);
   const quarterAnchor = lastCompletedQuarterEnd();
@@ -1543,8 +1616,18 @@ function returnsBlock(returns: PriceReturns | null, previous: JsonRecord): JsonR
       sinceInception: returns.siAnn,
       sinceInceptionText: text(returns.siAnn),
     },
-    quarterEnd: { asOfDate: formatEdgarDate(quarterAnchor.toISOString().slice(0, 10)), null: null },
+    quarterEnd: emptyReturnRow(formatEdgarDate(quarterAnchor.toISOString().slice(0, 10))),
   };
+}
+
+/** A returns row with every value unavailable (null, never 0 and never a stray key). */
+export function emptyReturnRow(asOfDate: string): JsonRecord {
+  const row: JsonRecord = { asOfDate };
+  for (const key of ['mo1', 'qtd', 'ytd', 'yr1', 'yr3', 'yr5', 'yr10', 'sinceInception']) {
+    row[key] = null;
+    row[`${key}Text`] = '—';
+  }
+  return row;
 }
 
 async function processFund(
@@ -1555,6 +1638,7 @@ async function processFund(
   resolver: TickerResolver,
 ): Promise<JsonRecord | null> {
   const ticker = seed.ticker;
+  const previousMeta = await readPreviousMeta(ticker);
   const nportUrl = accession && !seed.catalogOnly ? nportUrlFor(seed.trustCik, accession) : null;
 
   // 1) Yahoo chart: history, distributions, quote meta, derived metrics.
@@ -1594,7 +1678,14 @@ async function processFund(
   if (nportUrl) {
     try {
       const xml = await fetchText(nportUrl, `[nport   ] ${ticker}`, secHeaders(config), config);
-      nport = parseNport(xml);
+      const parsedNport = parseNport(xml);
+      if (seed.seriesId && parsedNport.seriesId && parsedNport.seriesId !== seed.seriesId) {
+        throw new Error(`filing is for series ${parsedNport.seriesId}, expected ${seed.seriesId}`);
+      }
+      if (!nportMayReplace(displayDateToIso((previousMeta?.holdings as JsonRecord | undefined)?.asOf), parsedNport.repPdDate)) {
+        throw new Error(`filing period ${parsedNport.repPdDate} is older than the published holdings`);
+      }
+      nport = parsedNport;
       if (config.storeRawDownloads) {
         const rawDir = new URL(`raw/${ticker}/`, API_ROOT);
         await mkdir(rawDir, { recursive: true });
@@ -1621,22 +1712,31 @@ async function processFund(
 
   const holdingsHeaders = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category'];
   const holdingsRows: JsonRecord[] = nport ? nport.holdings : await readPreviousSheet(ticker, 'holdings');
-  const holdingsManifest = await writePages(fundDir, ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize);
+  const holdingsManifest = await writePages(fundDir, ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize, false);
 
   const historyHeaders = ['Date', 'Close', 'Adj Close', 'Volume'];
   const history = chart ? historyRows(chart) : await readPreviousSheet(ticker, 'history');
-  const historyManifest = await writePages(fundDir, ticker, 'history', historyHeaders, history, config.historyPageSize);
+  const historyManifest = await writePages(fundDir, ticker, 'history', historyHeaders, history, config.historyPageSize, false);
 
-  const distributions = chart ? distributionRows(chart) : ((previous.distributions?.rows as JsonRecord[]) || []);
+  const previousDistributions = (previousMeta?.distributions as JsonRecord | undefined) ?? {};
+  const distributions = chart ? distributionRows(chart) : ((previousDistributions.rows as string[][]) || []);
   const frequency = chart
     ? inferDistributionFrequency(chart.dividends)
-    : { frequency: String((previous.distributions as JsonRecord)?.frequency || '—'), paymentsPerYear: null };
+    : {
+        frequency: String(previousDistributions.frequency || (previous.distributions as JsonRecord | undefined)?.frequency || '—'),
+        paymentsPerYear: numberOrNull(previousDistributions.paymentsPerYear),
+      };
   const latestDividend = chart && chart.dividends.length ? chart.dividends[chart.dividends.length - 1] : null;
 
   const name = nport?.seriesName || seed.name;
-  const nav = chart?.navPrice ?? null;
-  const price = chart?.regularMarketPrice ?? null;
-  const premiumDiscount = nav && price ? round(((price - nav) / nav) * 100, 2) : null;
+  // Yahoo's chart meta carries no NAV for these funds and Fidelity publishes no
+  // machine-readable NAV, so nav and premium stay null (never guessed). When the
+  // chart request failed, the previously published quote block is kept as one unit.
+  const nav = chart ? (chart.navPrice ?? null) : numberOrNull(previous.navValue);
+  const price = chart ? (chart.regularMarketPrice ?? null) : numberOrNull(previous.closePriceValue);
+  const premiumDiscount = chart ? (nav && price ? round(((price - nav) / nav) * 100, 2) : null) : numberOrNull(previous.premiumDiscountValue);
+  const previousQuoteDate = (key: 'nav' | 'marketPrice'): string => String(((previousMeta?.[key] as JsonRecord | undefined)?.asOfDate as string | undefined) ?? '—');
+  const quoteDate = chart?.regularMarketTime ? formatEpochDate(chart.regularMarketTime) : null;
   const netAssets = nport ? nport.totalValue : numberOrNull(previous.aumValue);
   const returns = chart ? priceReturns(chart.days) : null;
   const returnsData = returnsBlock(returns, previous);
@@ -1649,8 +1749,8 @@ async function processFund(
       fundPage: seed.fundPage,
       edgarFiling: accession
         ? `${EDGAR_ARCHIVES}/${Number(seed.trustCik)}/${accession.replace(/-/g, '')}/${accession.replace(/-/g, '')}-index.htm`
-        : ((previous.source as JsonRecord)?.edgarFiling ?? null),
-      nportDoc: nportUrl || ((previous.source as JsonRecord)?.nportDoc ?? null),
+        : ((previousMeta?.source as JsonRecord | undefined)?.edgarFiling ?? null),
+      nportDoc: nportUrl || ((previousMeta?.source as JsonRecord | undefined)?.nportDoc ?? null),
       // A stable provenance URL, not the live fetch URL: chartUrl(ticker, config)
       // embeds the current timestamp in period2, which would make this field
       // (and the file's digest) change on every single run.
@@ -1661,39 +1761,42 @@ async function processFund(
     nav: {
       display: nav === null ? '—' : `$${nav.toFixed(2)}`,
       value: nav,
-      asOfDate: chart?.regularMarketTime ? formatEpochDate(chart.regularMarketTime) : '—',
+      asOfDate: nav === null ? '—' : (chart ? (quoteDate ?? '—') : previousQuoteDate('nav')),
     },
     marketPrice: {
       display: price === null ? '—' : `$${price.toFixed(2)}`,
       value: price,
-      asOfDate: chart?.regularMarketTime ? formatEpochDate(chart.regularMarketTime) : '—',
+      asOfDate: price === null ? '—' : (chart ? (quoteDate ?? '—') : previousQuoteDate('marketPrice')),
     },
     premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount },
     aum: {
       display: netAssets === null ? '—' : formatAumDisplay(netAssets),
       value: netAssets,
-      asOfDate: nport ? formatEdgarDate(nport.repPdDate) : (((previous.aum as JsonRecord)?.asOfDate as string) ?? '—'),
-      source: nport ? 'sum of reported N-PORT position values' : 'previous run',
+      asOfDate: nport ? formatEdgarDate(nport.repPdDate) : (((previousMeta?.aum as JsonRecord | undefined)?.asOfDate as string) ?? '—'),
+      source: nport ? 'sum of reported N-PORT position values' : ((previousMeta?.aum as JsonRecord | undefined)?.source ?? 'previous run'),
     },
     returns: returnsData,
     distributions: { frequency: frequency.frequency, paymentsPerYear: frequency.paymentsPerYear, headers: ['Ex-Date', 'Amount'], rows: distributions },
     holdings: {
       ...holdingsManifest,
-      asOf: nport ? formatEdgarDate(nport.repPdDate) : (((previous.holdings as JsonRecord)?.asOf as string) ?? '—'),
+      asOf: nport ? formatEdgarDate(nport.repPdDate) : (((previousMeta?.holdings as JsonRecord | undefined)?.asOf as string) ?? '—'),
     },
     history: {
       ...historyManifest,
-      asOf: returns ? formatEdgarDate(returns.asOfDate) : (((previous.history as JsonRecord)?.asOf as string) ?? '—'),
+      asOf: returns ? formatEdgarDate(returns.asOfDate) : (((previousMeta?.history as JsonRecord | undefined)?.asOf as string) ?? '—'),
     },
     seed: {
       seriesId: seed.seriesId,
       seriesName: seed.name,
       trustCik: seed.trustCik,
       trustName: FIDELITY_TRUSTS[seed.trustCik] || null,
-      accession: accession || ((previous.seed as JsonRecord)?.accession ?? null),
+      accession: accession || ((previousMeta?.seed as JsonRecord | undefined)?.accession ?? null),
     },
   };
+  // Order: pages first, then meta.json, then stale pages go (a crash in between never leaves meta pointing at removed pages).
   await writeIfChanged(new URL('meta.json', fundDir), meta);
+  await removeStalePages(fundDir, 'holdings', new Set(holdingsManifest.pages));
+  await removeStalePages(fundDir, 'history', new Set(historyManifest.pages));
 
   const monthEnd = (returnsData?.monthEnd as JsonRecord) || {};
   const fundRow: JsonRecord = {
@@ -1715,11 +1818,13 @@ async function processFund(
     closePriceValue: price,
     premiumDiscount: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`,
     premiumDiscountValue: premiumDiscount,
-    distributions: {
-      frequency: frequency.frequency,
-      exDate: latestDividend ? formatUsDate(latestDividend.epoch) : '—',
-      dividend: latestDividend ? String(round(latestDividend.amount, 6)) : '—',
-    },
+    distributions: chart || !previous.distributions
+      ? {
+          frequency: frequency.frequency,
+          exDate: latestDividend ? formatUsDate(latestDividend.epoch) : '—',
+          dividend: latestDividend ? String(round(latestDividend.amount, 6)) : '—',
+        }
+      : previous.distributions,
     returns: {
       monthEnd: monthEnd,
       quarterEnd: (returnsData?.quarterEnd as JsonRecord) || null,
@@ -1874,8 +1979,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   if (env === process.env) process.env.VERBOSE = controls.VERBOSE ?? '';
   if (env === process.env) installSystemCa((controls.USE_SYSTEM_CA ?? 'auto').trim().toLowerCase());
   const config = readConfig(controls);
-  requestSleepMs = Math.max(0, config.requestSleep) * 1000;
-  nextRequestAtLanes = new Array(Math.max(1, config.concurrency)).fill(0);
+  configureRequestLanes(config.concurrency, config.requestSleep);
 
   outputPrintConfig('Fidelity', config);
   console.log('');
@@ -1901,18 +2005,21 @@ export async function main(env: Record<string, string | undefined> = process.env
       accessionBySeries.set(seriesKeyOf(fund), {
         accession: fund.accession,
         filed: fund.filed || '',
-        reportDate: '',
+        reportDate: fund.repPdDate || '',
         url: nportUrlFor(fund.trustCik, fund.accession),
       });
     }
   }
-  const seedAccessions = new Map(accessionBySeries);
+  const knownSeries = new Set(seedFunds.map((fund) => fund.seriesId).filter(Boolean));
 
   if (config.refreshCatalog) {
     for (const [cik] of Object.entries(FIDELITY_TRUSTS)) {
-      const newestSeed = [...seedAccessions.values()]
-        .filter((entry) => entry.url.includes(`/${Number(cik)}/`))
-        .reduce((max, entry) => (entry.filed > max ? entry.filed : max), '0000-00-00');
+      // Every series of a trust files on its own schedule: look back to the oldest
+      // seed filing of the trust, not the newest, so no series misses its update.
+      const trustAccessions = seedFunds
+        .filter((fund) => fund.trustCik === cik && accessionBySeries.has(seriesKeyOf(fund)))
+        .map((fund) => accessionBySeries.get(seriesKeyOf(fund))!.filed);
+      const oldestSeed = trustAccessions.length ? trustAccessions.reduce((min, filed) => (filed < min ? filed : min)) : '0000-00-00';
       let accessions: NportAccession[] = [];
       try {
         const submissions = await fetchJson(
@@ -1926,17 +2033,22 @@ export async function main(env: Record<string, string | undefined> = process.env
         outputNote(`[ ${'edgar'.padEnd(9)}] submissions ${cik}: ${error instanceof Error ? error.message : String(error)} — using seed accessions`);
         continue;
       }
-      const fresh = accessions.filter((entry) => entry.filed > newestSeed).sort((a, b) => (a.filed < b.filed ? 1 : -1));
+      const taken = new Set([...accessionBySeries.values()].map((entry) => entry.accession));
+      const fresh = accessions.filter((entry) => entry.filed >= oldestSeed && !taken.has(entry.accession)).sort((a, b) => (a.filed < b.filed ? 1 : -1));
+      const resolved = new Set<string>();
       for (const entry of fresh) {
         const url = nportUrlFor(cik, entry.accession);
         try {
           const parsed = parseNport(await fetchText(url, `[nport   ] refresh ${entry.accession}`, secHeaders(config), config));
-          const key = parsed.seriesId || `__ticker__${seedFunds.find((f) => f.seriesId === parsed.seriesId)?.ticker || ''}`;
-          if (!accessionBySeries.has(key)) {
-            accessionBySeries.set(key, { ...entry, url });
+          // Identity: only a filing of a series this feed tracks may move an accession.
+          if (!parsed.seriesId || !knownSeries.has(parsed.seriesId) || resolved.has(parsed.seriesId)) continue;
+          const candidate = { ...entry, reportDate: parsed.repPdDate || entry.reportDate, url };
+          if (isNewerAccession(accessionBySeries.get(parsed.seriesId), candidate)) {
+            accessionBySeries.set(parsed.seriesId, candidate);
           }
+          resolved.add(parsed.seriesId);
         } catch {
-          // Skip unreachable accessions; seed accessions remain the fallback.
+          // Skip unreachable accessions; the current accession stays the fallback.
         }
       }
     }
@@ -1944,50 +2056,53 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   const previousIndex = await readPreviousIndex();
   const state = await readUpdateState();
-  const cursor = state?.cursor || null;
-  const cursorIndex = cursor ? seedFunds.findIndex((fund) => fund.ticker === cursor) : -1;
+  // TICKERS is strict and scopes the run: unknown tickers are an error and unselected
+  // funds neither count against MAX_FETCHES nor move the cursor.
+  const unknown = config.tickers.filter((ticker) => !seedFunds.some((fund) => fund.ticker === ticker));
+  if (unknown.length) throw new Error(`TICKERS: not a Fidelity ETF in the seed: ${unknown.join(', ')}`);
+  const selected = config.tickers.length ? seedFunds.filter((fund) => config.tickers.includes(fund.ticker)) : seedFunds;
+  const cursor = config.maxFetches > 0 && !config.tickers.length ? state?.cursor || null : null;
+  const cursorIndex = cursor ? selected.findIndex((fund) => fund.ticker === cursor) : -1;
   const ordered =
     cursorIndex >= 0
-      ? seedFunds.slice(cursorIndex + 1).concat(seedFunds.slice(0, cursorIndex + 1))
-      : seedFunds.slice();
+      ? selected.slice(cursorIndex + 1).concat(selected.slice(0, cursorIndex + 1))
+      : selected.slice();
 
   const queue = ordered.map((seed) => ({ seed }));
   const results: JsonRecord[] = [];
   let processed = 0;
-  let lastProcessedTicker: string | null = cursor;
+  let lastDispatchedTicker: string | null = cursor;
   let failures = 0;
+  const deadline = Date.now() + softDeadlineMs;
+  let deadlineHit = false;
 
-  outputPrintFilter(seedFunds.length, seedFunds.length, outputHasOutputFilters(config));
+  outputPrintFilter(selected.length, seedFunds.length, outputHasOutputFilters(config));
   const output = outputCreateReporter(API_ROOT, config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length);
   async function worker(): Promise<void> {
     for (;;) {
+      if (config.maxFetches > 0 && processed >= config.maxFetches) return;
+      if (Date.now() > deadline) { deadlineHit = true; return; }
       const item = queue.shift();
       if (!item) return;
-      if (config.maxFetches > 0 && processed >= config.maxFetches) return;
       const seed = item.seed;
       const previous = previousIndex.get(seed.ticker) || {};
       const entry = accessionBySeries.get(seriesKeyOf(seed)) || null;
       processed += 1;
+      lastDispatchedTicker = seed.ticker;
       const before = await output.before(seed.ticker);
       try {
         const row = await processFund(seed, entry ? entry.accession : null, config, previous, resolver);
-        if (row) {
-          results.push(row);
-          lastProcessedTicker = seed.ticker;
-        }
+        if (row) results.push(row);
         await output.result(seed.ticker, before, row ? undefined : 'skipped');
       } catch (error) {
         failures += 1;
         await output.result(seed.ticker, before, 'failed', String(error));
       }
-      if (config.maxFetches > 0 && processed >= config.maxFetches) {
-        console.log(`[ ${'cursor'.padEnd(9)}] batch of ${config.maxFetches} reached — rerun to continue after ${lastProcessedTicker}`);
-        return;
-      }
     }
   }
 
   await Promise.all(Array.from({ length: Math.max(1, config.concurrency) }, () => worker()));
+  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(9)}] soft run deadline reached: remaining funds keep their previously published data`);
 
   // Funds not selected for a successful update keep their previously published rows.
   const keptFromPrevious = seedFunds
@@ -2028,12 +2143,17 @@ export async function main(env: Record<string, string | undefined> = process.env
     }
   }
 
-  await writeUpdateState(lastProcessedTicker);
+  // Only an unscoped bounded run owns the cursor; full passes reset it, TICKERS runs never touch it.
+  if (!config.tickers.length) await writeUpdateState(config.maxFetches > 0 ? lastDispatchedTicker : null);
 
   console.log('');
   console.log(`[ ${'done'.padEnd(9)}] ${results.length} funds updated, ${keptFromPrevious.length} kept from previous runs, ${failures} failures`);
   console.log(`[ ${'done'.padEnd(9)}] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  console.log(`[ ${'cursor'.padEnd(9)}] ${lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)'}`);
+  console.log(`[ ${'cursor'.padEnd(9)}] ${config.maxFetches > 0 && !config.tickers.length && lastDispatchedTicker ? `next run continues after ${lastDispatchedTicker}` : 'cursor reset'}`);
+  if (failures > 0 && results.length === 0) {
+    console.error(`[ ${'failed'.padEnd(9)}] every selected fund failed`);
+    process.exitCode = 1;
+  }
 
   if (process.env.GITHUB_STEP_SUMMARY) {
     await appendFile(

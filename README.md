@@ -38,12 +38,12 @@ Defaults live in `scripts/update-data.config.json` (a flat object with one strin
 
 Each fund carries a derived `metrics` object that powers the catalog columns shared with the sibling sites:
 
-- `ytd` / `tr1y` - official YTD and 1-year returns -> *YTD Return*, *TR 1Y*
+- `ytd` / `tr1y` - YTD and 1-year returns derived from Yahoo adjusted market-price closes (estimates) -> *YTD Return*, *TR 1Y*
 - `cagr3y` / `cagr5y` / `cagr10y` - published annualized 3Y/5Y/10Y figures -> *CAGR 3Y/5Y/10Y*
 - `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
 - `siAnn` - since-inception annualized -> *SI Ann.*
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
-- `secYield` - 30-day SEC yield when published; `-` (unavailable, not zero) otherwise
+- `secYield` / `secYieldText` - Fidelity publishes no 30-day SEC yield feed: `null` and `-` (unavailable, not zero)
 - `returnsBasis` - mandatory non-empty label of how the returns are computed; for Fidelity always "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns)"
 - `performanceAsOf` - ISO `YYYY-MM-DD` date the returns are as of: the last Yahoo close date (not the NAV date), or `null` when unknown
 
@@ -52,6 +52,11 @@ Caveats:
 - Holdings and net assets come from SEC N-PORT-P filings; price history, distributions and market-price returns come from Yahoo Finance and are estimates, not official NAV figures
 - N-PORT positions publish no exchange tickers, so the Ticker column is filled from the name -> ticker seed in `data/held-tickers.ts`; unmapped names are resolved live through Yahoo symbol search with a strict name match, and bond or private positions keep `-`
 - Funds not selected for a successful update (filters, batch cursor, failures) keep their prior published metadata and data files
+- A published fund is either fully refreshed or fully kept: when the Yahoo chart request fails, price, returns, metrics and distributions of that fund stay at their previous state together; when the N-PORT download fails, holdings and net assets stay with their own as-of dates. The workflow still commits after such a partial run
+- `nav` and `premiumDiscount` are `null` for every fund: Yahoo's chart meta carries no NAV and Fidelity publishes no machine-readable NAV, so none is guessed
+- N-PORT holdings and net assets are as of the filing's report period (shown as the holdings as-of date); `REFRESH_CATALOG` moves each series to its newest filing, never to an older report period than the published one
+- Every request has a 45 s timeout (headers and body) and is retried per `MAX_RETRIES`; files are written through a temp file and a rename; the run stops taking new funds after 25 minutes and still writes the index
+- `TICKERS` is strict (an unknown ticker is an error), does not count against `MAX_FETCHES` for other funds and never moves the batch cursor
 - `TICKERS` combines with the AUM, TER and yield filters using AND logic; it does not override them
 
 ### Update controls
@@ -60,7 +65,7 @@ Caveats:
 | --- | --: | --- |
 | `MAX_FETCHES` | `0` (all) | Batch size: with a positive value the updater continues after the committed cursor in `api/fidelity/update-state.json`; `0` is a full pass. Legacy alias `FIDELITY_LIMIT`. |
 | `REQUEST_SLEEP` | `1` | Minimum delay in seconds between outgoing request starts, including retries. |
-| `CONCURRENCY` | `2` | Number of parallel fund update workers. Request starts are still globally spaced by `REQUEST_SLEEP`. |
+| `CONCURRENCY` | `2` | Number of parallel fund update workers, each with its own request lane: starts on one lane are `REQUEST_SLEEP` apart, so more workers mean more throughput. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Expense ratio range in % (strict `min:max`). |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range. |
@@ -72,7 +77,7 @@ Caveats:
 | `HISTORY_RANGE` | `max` | Yahoo chart range for history rows: `max` or `<N>y`. |
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | Override the SEC User-Agent; SEC policy requires automated tools to declare a contact. In CI the protected `SEC_UA` repository variable wins when nonblank. |
 | `SKIP_YAHOO` | `false` | Skip Yahoo Finance requests (EDGAR holdings only, previous history is kept). |
-| `REFRESH_CATALOG` | `1` | Scan EDGAR submissions for N-PORT filings newer than the seed accessions; `0` skips. |
+| `REFRESH_CATALOG` | `1` | Scan EDGAR submissions of every trust for N-PORT filings newer than the accession each series is on (same series, newer report period) and use them for holdings and net assets; `0` skips. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 | `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Market-price return ranges (strict `min:max`, colon required; 3Y/5Y/10Y are CAGR). |
