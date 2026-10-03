@@ -43,6 +43,8 @@ import {
   paceRequests,
   setSoftDeadline,
   chartUrl,
+  publishedAsOf,
+  stalestFirst,
 } from './update-data';
 import { readFileSync, mkdtempSync, readdirSync, statSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -155,6 +157,8 @@ const world = {
   peak: 0,
   delayMs: 0,
   positions: 1,
+  order: [] as string[],
+  onChart: null as null | (() => void),
 };
 
 const nportXml = (series: string, repPd: string): string => `<?xml version="1.0"?>
@@ -184,6 +188,7 @@ function installWorld(): void {
         const hit = Object.entries(world.accessions).find(([acc]) => acc.replace(/-/g, '') === arch[1]);
         return hit ? new Response(nportXml(hit[1].series, hit[1].repPd)) : new Response('missing', { status: 404 });
       }
+      if (url.includes('finance/chart/')) { world.order.push(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '?'); world.onChart?.(); }
       if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart())) : new Response('down', { status: 404 });
       if (url.includes('finance/search')) return new Response(JSON.stringify({ quotes: [] }));
       return new Response('unexpected ' + url, { status: 500 });
@@ -219,6 +224,8 @@ const fresh = (): string => {
   world.delayMs = 0;
   world.peak = 0;
   world.positions = 1;
+  world.order = [];
+  world.onChart = null;
   setSoftDeadline(25 * 60_000);
   installWorld();
   return root;
@@ -684,6 +691,51 @@ describe('pipeline', () => {
       setSoftDeadline(-1);
       await quiet(() => main(env()));
       expect(readJson(root, 'index.json').funds).toHaveLength(rows);
+    });
+  });
+
+  test('stalest fund first: a deadline-truncated run refreshes the stalest, the next runs pick up the skipped funds', async () => {
+    await inWorld(async (root) => {
+      await quiet(() => main(env({ TICKERS: 'FAAA FBCG FBCV' })));
+      // published as-of dates: FBCG stalest, then FAAA, then FBCV (alphabetical order would be FAAA, FBCG, FBCV)
+      const index = readJson(root, 'index.json');
+      const asOf: Record<string, [string, string]> = { FBCG: ['Jan 10 2026', '2026-01-10'], FAAA: ['Feb 10 2026', '2026-02-10'], FBCV: ['Mar 01 2026', '2026-03-01'] };
+      for (const row of index.funds) {
+        row.asOfDate = asOf[row.ticker][0];
+        row.metrics.performanceAsOf = asOf[row.ticker][1];
+      }
+      writeFileSync(join(root, 'index.json'), JSON.stringify(index));
+      const published = new Map<string, any>(index.funds.map((row: any) => [row.ticker, row]));
+      expect(stalestFirst([{ ticker: 'FAAA' }, { ticker: 'FBCG' }, { ticker: 'FBCV' }, { ticker: 'ZNEW' }], published).map((f) => f.ticker)).toEqual(['ZNEW', 'FBCG', 'FAAA', 'FBCV']);
+      expect(publishedAsOf({ ...index.funds[0], dataFile: null })).toBeNull();
+
+      // fake clock: every chart request "takes" 2 minutes, the soft deadline is 1 minute, so each run handles exactly one fund
+      const realNow = Date.now;
+      let clock = realNow();
+      Date.now = () => clock;
+      const summary = join(root, 'summary.md');
+      process.env.GITHUB_STEP_SUMMARY = summary;
+      try {
+        world.onChart = () => { clock += 120_000; };
+        const runs: string[][] = [];
+        for (let run = 0; run < 3; run++) {
+          world.order = [];
+          setSoftDeadline(60_000);
+          await quiet(() => main(env({ TICKERS: 'FAAA FBCG FBCV', CONCURRENCY: '1' })));
+          runs.push(world.order);
+        }
+        expect(runs).toEqual([['FBCG'], ['FAAA'], ['FBCV']]);
+        expect(readFileSync(summary, 'utf8')).toContain('1 of 3 funds refreshed, 2 keep their previously published data, oldest remaining published as-of: 2026-02-10 (FAAA)');
+        world.order = [];
+        setSoftDeadline(25 * 60_000);
+        await quiet(() => main(env({ TICKERS: 'FAAA FBCG FBCV', CONCURRENCY: '1' })));
+        expect(world.order).toHaveLength(3); // a run that finishes every fund reports no deadline
+        expect(readFileSync(summary, 'utf8').match(/soft deadline/g)).toHaveLength(3);
+        expect(readJson(root, 'index.json').funds).toHaveLength(3);
+        expect(readJson(root, 'index.json').funds.every((f: any) => f.asOfDate === 'Mar 27 2026')).toBe(true);
+      } finally {
+        Date.now = realNow;
+      }
     });
   });
 
