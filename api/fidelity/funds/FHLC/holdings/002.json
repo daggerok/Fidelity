@@ -2,7 +2,7 @@
  "ticker": "FHLC",
  "page": 2,
  "pageSize": 250,
- "totalRows": 340,
+ "totalRows": 337,
  "headers": [
   "Name",
   "Ticker",
@@ -14,813 +14,786 @@
  ],
  "rows": [
   {
-   "Name": "Harmony Biosciences Holdings Inc",
-   "Ticker": "HRMY",
-   "Identifier": "413197104",
-   "Weight": "0.0213671561",
-   "Market Value": "609913.86",
-   "Shares Held": "19511",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "State Street Global Advisors",
-   "Ticker": "-",
-   "Identifier": "857492862",
-   "Weight": "0.2338107216",
-   "Market Value": "6674000",
-   "Shares Held": "6674000",
-   "Asset Category": "STIV"
-  },
-  {
-   "Name": "RadNet Inc",
-   "Ticker": "RDNT",
-   "Identifier": "750491102",
-   "Weight": "0.0602736014",
-   "Market Value": "1720477.2",
-   "Shares Held": "30424",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Arvinas Inc",
-   "Ticker": "ARVN",
-   "Identifier": "04335A105",
-   "Weight": "0.0086855989",
-   "Market Value": "247925.7",
-   "Shares Held": "25043",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Nektar Therapeutics",
-   "Ticker": "NKTR",
-   "Identifier": "640268306",
-   "Weight": "0.0331616136",
-   "Market Value": "946580.24",
-   "Shares Held": "11131",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Tenet Healthcare Corp",
-   "Ticker": "THC",
-   "Identifier": "88033G407",
-   "Weight": "0.2510442239",
-   "Market Value": "7165920.96",
-   "Shares Held": "40458",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Azenta Inc",
-   "Ticker": "AZTA",
-   "Identifier": "114340102",
-   "Weight": "0.0161461844",
-   "Market Value": "460884.06",
-   "Shares Held": "18758",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Cogent Biosciences Inc",
-   "Ticker": "COGT",
-   "Identifier": "19240Q201",
-   "Weight": "0.048085774",
-   "Market Value": "1372582.29",
-   "Shares Held": "38351",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "HealthStream Inc",
-   "Ticker": "HSTM",
-   "Identifier": "42222N103",
-   "Weight": "0.0080285165",
-   "Market Value": "229169.64",
-   "Shares Held": "11039",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Chicago Mercantile Exchange",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "-0.0024920657",
-   "Market Value": "-71134.66",
-   "Shares Held": "61",
-   "Asset Category": "DE"
-  },
-  {
-   "Name": "Natera Inc",
-   "Ticker": "NTRA",
-   "Identifier": "632307104",
-   "Weight": "0.4375413106",
-   "Market Value": "12489378.96",
-   "Shares Held": "60581",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Neurocrine Biosciences Inc",
-   "Ticker": "NBIX",
-   "Identifier": "64125C109",
-   "Weight": "0.2120414006",
-   "Market Value": "6052606.56",
-   "Shares Held": "45968",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Exelixis Inc",
-   "Ticker": "EXEL",
-   "Identifier": "30161Q104",
-   "Weight": "0.1824335453",
-   "Market Value": "5207466.42",
-   "Shares Held": "117127",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "HealthEquity Inc",
-   "Ticker": "HQY",
-   "Identifier": "42226A107",
-   "Weight": "0.1130653269",
-   "Market Value": "3227388.32",
-   "Shares Held": "39344",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "HCA Healthcare Inc",
-   "Ticker": "HCA",
-   "Identifier": "40412C101",
-   "Weight": "1.1207942746",
-   "Market Value": "31992463.55",
-   "Shares Held": "73639",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Standard BioTools Inc",
-   "Ticker": "LAB",
-   "Identifier": "34385P108",
-   "Weight": "0.0038550326",
-   "Market Value": "110039.81",
-   "Shares Held": "118488",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Crinetics Pharmaceuticals Inc",
-   "Ticker": "CRNX",
-   "Identifier": "22663K107",
-   "Weight": "0.0559505042",
-   "Market Value": "1597076.74",
-   "Shares Held": "41183",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Masimo Corp",
-   "Ticker": "MASI",
-   "Identifier": "574795100",
-   "Weight": "0.131945074",
-   "Market Value": "3766300.44",
-   "Shares Held": "21108",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Bio-Rad Laboratories Inc",
-   "Ticker": "BIO",
-   "Identifier": "090572207",
-   "Weight": "0.084032693",
-   "Market Value": "2398667.56",
-   "Shares Held": "8563",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Avantor Inc",
-   "Ticker": "AVTR",
-   "Identifier": "05352A100",
-   "Weight": "0.0897379037",
-   "Market Value": "2561519.7",
-   "Shares Held": "316237",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "McKesson Corp",
-   "Ticker": "MCK",
-   "Identifier": "58155Q103",
-   "Weight": "1.6248905985",
-   "Market Value": "46381619.2",
-   "Shares Held": "56896",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Humana Inc",
-   "Ticker": "HUM",
-   "Identifier": "444859102",
-   "Weight": "0.4592134065",
-   "Market Value": "13107997.16",
-   "Shares Held": "55439",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Fortrea Holdings Inc",
-   "Ticker": "FTRE",
-   "Identifier": "34965K107",
-   "Weight": "0.0167529726",
-   "Market Value": "478204.5",
-   "Shares Held": "41583",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Certara Inc",
-   "Ticker": "CERT",
-   "Identifier": "15687V109",
-   "Weight": "0.0119887859",
-   "Market Value": "342213.38",
-   "Shares Held": "55826",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "CG oncology Inc",
-   "Ticker": "CGON",
-   "Identifier": "156944100",
-   "Weight": "0.0460724027",
-   "Market Value": "1315111.7",
-   "Shares Held": "19705",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Lantheus Holdings Inc",
-   "Ticker": "LNTH",
-   "Identifier": "516544103",
-   "Weight": "0.0902037616",
-   "Market Value": "2574817.36",
-   "Shares Held": "30428",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Pulse Biosciences Inc",
-   "Ticker": "PLSE",
-   "Identifier": "74587B101",
-   "Weight": "0.0068565555",
-   "Market Value": "195716.65",
-   "Shares Held": "9245",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Astrana Health Inc",
-   "Ticker": "ASTH",
-   "Identifier": "03763A207",
-   "Weight": "0.0249766751",
-   "Market Value": "712945.62",
-   "Shares Held": "20883",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Cytokinetics Inc",
-   "Ticker": "CYTK",
-   "Identifier": "23282W605",
-   "Weight": "0.1203900444",
-   "Market Value": "3436468.4",
-   "Shares Held": "53720",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Danaher Corp",
-   "Ticker": "DHR",
-   "Identifier": "235851102",
-   "Weight": "1.8371922822",
-   "Market Value": "52441655.4",
-   "Shares Held": "293052",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Haemonetics Corp",
-   "Ticker": "HAE",
-   "Identifier": "405024100",
-   "Weight": "0.0451783513",
-   "Market Value": "1289591.49",
-   "Shares Held": "21461",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Concentra Group Holdings Parent Inc",
-   "Ticker": "CON",
-   "Identifier": "20603L102",
-   "Weight": "0.0420557927",
-   "Market Value": "1200459.75",
-   "Shares Held": "53425",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Inhibrx Biosciences Inc",
-   "Ticker": "INBX",
-   "Identifier": "45720N103",
-   "Weight": "0.0150872352",
-   "Market Value": "430656.93",
-   "Shares Held": "3333",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Regeneron Pharmaceuticals Inc",
-   "Ticker": "REGN",
-   "Identifier": "75886F107",
-   "Weight": "1.1794713562",
-   "Market Value": "33667368.96",
-   "Shares Held": "47616",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ocular Therapeutix Inc",
-   "Ticker": "OCUL",
-   "Identifier": "67576A100",
-   "Weight": "0.0238707305",
-   "Market Value": "681377.03",
-   "Shares Held": "72719",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "ICU Medical Inc",
-   "Ticker": "ICUI",
-   "Identifier": "44930G107",
-   "Weight": "0.0446909331",
-   "Market Value": "1275678.4",
-   "Shares Held": "10702",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Integer Holdings Corp",
-   "Ticker": "ITGR",
-   "Identifier": "45826H109",
-   "Weight": "0.0496806521",
-   "Market Value": "1418107.22",
-   "Shares Held": "16022",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Kiniksa Pharmaceuticals International Plc",
-   "Ticker": "KNSA",
-   "Identifier": "000000000",
-   "Weight": "0.0312059939",
-   "Market Value": "890758.14",
-   "Shares Held": "16563",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Teleflex Inc",
-   "Ticker": "TFX",
-   "Identifier": "879369106",
-   "Weight": "0.0888244766",
-   "Market Value": "2535446.42",
-   "Shares Held": "20462",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Nurix Therapeutics Inc",
-   "Ticker": "NRIX",
-   "Identifier": "67080M103",
-   "Weight": "0.020236374",
-   "Market Value": "577636.3",
-   "Shares Held": "34589",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Enovis Corp",
-   "Ticker": "ENOV",
-   "Identifier": "194014502",
-   "Weight": "0.021532035",
-   "Market Value": "614620.24",
-   "Shares Held": "26221",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Syndax Pharmaceuticals Inc",
-   "Ticker": "SNDX",
-   "Identifier": "87164F105",
-   "Weight": "0.0281406895",
-   "Market Value": "803260.69",
-   "Shares Held": "37483",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "OPKO Health Inc",
-   "Ticker": "OPK",
-   "Identifier": "68375N103",
-   "Weight": "0.0078864612",
-   "Market Value": "225114.75",
-   "Shares Held": "200102",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Immunovant Inc",
-   "Ticker": "IMVT",
-   "Identifier": "45258J102",
-   "Weight": "0.0349396895",
-   "Market Value": "997334.45",
-   "Shares Held": "36741",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ardent Health Inc",
-   "Ticker": "ARDT",
-   "Identifier": "03980N107",
-   "Weight": "0.0044832915",
-   "Market Value": "127973.12",
-   "Shares Held": "13112",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Glaukos Corp",
-   "Ticker": "GKOS",
-   "Identifier": "377322102",
-   "Weight": "0.1331281779",
-   "Market Value": "3800071.5",
-   "Shares Held": "26450",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Mettler-Toledo International Inc",
-   "Ticker": "MTD",
-   "Identifier": "592688105",
-   "Weight": "0.4214301989",
-   "Market Value": "12029496.03",
-   "Shares Held": "9423",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Artivion Inc",
-   "Ticker": "AORT",
-   "Identifier": "228903100",
-   "Weight": "0.0230862815",
-   "Market Value": "658985.36",
-   "Shares Held": "18392",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "QuidelOrtho Corp",
-   "Ticker": "QDEL",
-   "Identifier": "219798105",
-   "Weight": "0.0136377688",
-   "Market Value": "389282.7",
-   "Shares Held": "31649",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Encompass Health Corp",
-   "Ticker": "EHC",
-   "Identifier": "29261A100",
-   "Weight": "0.1625779766",
-   "Market Value": "4640700",
-   "Shares Held": "46407",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Aurinia Pharmaceuticals Inc",
-   "Ticker": "AUPH",
-   "Identifier": "05156V102",
-   "Weight": "0.0280406329",
-   "Market Value": "800404.63",
-   "Shares Held": "52025",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Soleno Therapeutics Inc",
-   "Ticker": "SLNO",
-   "Identifier": "834203309",
-   "Weight": "0.0393460515",
-   "Market Value": "1123111.66",
-   "Shares Held": "21263",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Personalis Inc",
-   "Ticker": "PSNL",
-   "Identifier": "71535D106",
-   "Weight": "0.0047258829",
-   "Market Value": "134897.76",
-   "Shares Held": "24438",
-   "Asset Category": "EC"
-  },
-  {
    "Name": "Savara Inc",
    "Ticker": "SVRA",
    "Identifier": "805111101",
-   "Weight": "0.0058211092",
-   "Market Value": "166160.4",
-   "Shares Held": "31710",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Phibro Animal Health Corp",
-   "Ticker": "PAHC",
-   "Identifier": "71742Q106",
-   "Weight": "0.017311542",
-   "Market Value": "494148.56",
-   "Shares Held": "9292",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Alkermes PLC",
-   "Ticker": "ALKS",
-   "Identifier": "000000000",
-   "Weight": "0.0856341234",
-   "Market Value": "2444379.52",
-   "Shares Held": "72512",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Elanco Animal Health Inc",
-   "Ticker": "ELAN",
-   "Identifier": "28414H103",
-   "Weight": "0.1799093203",
-   "Market Value": "5135413.79",
-   "Shares Held": "229567",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sotera Health Co",
-   "Ticker": "SHC",
-   "Identifier": "83601L102",
-   "Weight": "0.0531573952",
-   "Market Value": "1517348.96",
-   "Shares Held": "97516",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Merck & Co Inc",
-   "Ticker": "MRK",
-   "Identifier": "58933Y105",
-   "Weight": "4.3764093724",
-   "Market Value": "124922227.48",
-   "Shares Held": "1144186",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "PACS Group Inc",
-   "Ticker": "PACS",
-   "Identifier": "69380Q107",
-   "Weight": "0.0258520335",
-   "Market Value": "737932.25",
-   "Shares Held": "21995",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Procept Biorobotics Corp",
-   "Ticker": "PRCT",
-   "Identifier": "74276L105",
-   "Weight": "0.0213597508",
-   "Market Value": "609702.48",
-   "Shares Held": "25362",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Quest Diagnostics Inc",
-   "Ticker": "DGX",
-   "Identifier": "74834L100",
-   "Weight": "0.3488659018",
-   "Market Value": "9958187.6",
-   "Shares Held": "51278",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "STERIS PLC",
-   "Ticker": "STE",
-   "Identifier": "000000000",
-   "Weight": "0.3440513964",
-   "Market Value": "9820760.16",
-   "Shares Held": "45282",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Clover Health Investments Corp",
-   "Ticker": "CLOV",
-   "Identifier": "18914F103",
-   "Weight": "0.0184108514",
-   "Market Value": "525527.75",
-   "Shares Held": "191101",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Scholar Rock Holding Corp",
-   "Ticker": "SRRK",
-   "Identifier": "80706P103",
-   "Weight": "0.0473016004",
-   "Market Value": "1350198.48",
-   "Shares Held": "28968",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "West Pharmaceutical Services Inc",
-   "Ticker": "WST",
-   "Identifier": "955306105",
-   "Weight": "0.3459699472",
-   "Market Value": "9875524.15",
-   "Shares Held": "33185",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "PTC Therapeutics Inc",
-   "Ticker": "PTCT",
-   "Identifier": "69366J200",
-   "Weight": "0.0761611941",
-   "Market Value": "2173979.9",
-   "Shares Held": "33415",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Capricor Therapeutics Inc",
-   "Ticker": "CAPR",
-   "Identifier": "14070B309",
-   "Weight": "0.0264280631",
-   "Market Value": "754374.7",
-   "Shares Held": "22465",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Waters Corp",
-   "Ticker": "WAT",
-   "Identifier": "941848103",
-   "Weight": "0.4911266043",
-   "Market Value": "14018942.05",
-   "Shares Held": "45335",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Eli Lilly & Co",
-   "Ticker": "LLY",
-   "Identifier": "532457108",
-   "Weight": "12.1290109816",
-   "Market Value": "346216027.8",
-   "Shares Held": "370443",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Novavax Inc",
-   "Ticker": "NVAX",
-   "Identifier": "670002401",
-   "Weight": "0.0173942418",
-   "Market Value": "496509.18",
-   "Shares Held": "62651",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "First Tracks Biotherapeutics Inc",
-   "Ticker": "TRAX",
-   "Identifier": "337185102",
-   "Weight": "0.0052320793",
-   "Market Value": "149346.86",
-   "Shares Held": "6418",
+   "Weight": "0.0072743836",
+   "Market Value": "239224.44",
+   "Shares Held": "43814",
    "Asset Category": "EC"
   },
   {
    "Name": "Henry Schein Inc",
    "Ticker": "HSIC",
    "Identifier": "806407102",
-   "Weight": "0.1279904623",
-   "Market Value": "3653418.2",
-   "Shares Held": "48980",
+   "Weight": "0.1216452203",
+   "Market Value": "4000409",
+   "Shares Held": "46652",
    "Asset Category": "EC"
   },
   {
-   "Name": "uniQure NV",
-   "Ticker": "QURE",
-   "Identifier": "000000000",
-   "Weight": "0.0125859674",
-   "Market Value": "359259.6",
-   "Shares Held": "18008",
+   "Name": "Scholar Rock Holding Corp",
+   "Ticker": "SRRK",
+   "Identifier": "80706P103",
+   "Weight": "0.0510243235",
+   "Market Value": "1677979.31",
+   "Shares Held": "35479",
    "Asset Category": "EC"
   },
   {
-   "Name": "Royalty Pharma PLC",
-   "Ticker": "RPRX",
-   "Identifier": "000000000",
-   "Weight": "0.3277855835",
-   "Market Value": "9356461.37",
-   "Shares Held": "186793",
+   "Name": "Schrodinger Inc/United States",
+   "Ticker": "-",
+   "Identifier": "80810D103",
+   "Weight": "0.0140825664",
+   "Market Value": "463117.46",
+   "Shares Held": "30589",
    "Asset Category": "EC"
   },
   {
-   "Name": "Mirum Pharmaceuticals Inc",
-   "Ticker": "MIRM",
-   "Identifier": "604749101",
-   "Weight": "0.0596348304",
-   "Market Value": "1702243.83",
-   "Shares Held": "17493",
+   "Name": "SELLAS Life Sciences Group Inc",
+   "Ticker": "SLS",
+   "Identifier": "81642T209",
+   "Weight": "0.0259738696",
+   "Market Value": "854173.32",
+   "Shares Held": "85332",
    "Asset Category": "EC"
   },
   {
-   "Name": "Roivant Sciences Ltd",
-   "Ticker": "ROIV",
-   "Identifier": "000000000",
-   "Weight": "0.1730453151",
-   "Market Value": "4939484.49",
-   "Shares Held": "173133",
+   "Name": "GeneDx Holdings Corp",
+   "Ticker": "WGS",
+   "Identifier": "81663L200",
+   "Weight": "0.0187256826",
+   "Market Value": "615810.38",
+   "Shares Held": "9458",
    "Asset Category": "EC"
   },
   {
-   "Name": "AtaiBeckley Inc",
-   "Ticker": "ATAI",
-   "Identifier": "04650F101",
-   "Weight": "0.0110339378",
-   "Market Value": "314957.76",
-   "Shares Held": "75711",
+   "Name": "Septerna Inc",
+   "Ticker": "SEPN",
+   "Identifier": "81734D104",
+   "Weight": "0.0046103219",
+   "Market Value": "151614.45",
+   "Shares Held": "4401",
    "Asset Category": "EC"
   },
   {
-   "Name": "Castle Biosciences Inc",
-   "Ticker": "CSTL",
-   "Identifier": "14843C105",
-   "Weight": "0.0116090558",
-   "Market Value": "331374.19",
-   "Shares Held": "13531",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Corcept Therapeutics Inc",
-   "Ticker": "CORT",
-   "Identifier": "218352102",
-   "Weight": "0.0716563425",
-   "Market Value": "2045391.36",
-   "Shares Held": "43968",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "IDEXX Laboratories Inc",
-   "Ticker": "IDXX",
-   "Identifier": "45168D104",
-   "Weight": "0.7230911513",
-   "Market Value": "20640244",
-   "Shares Held": "36805",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Annexon Inc",
-   "Ticker": "ANNX",
-   "Identifier": "03589W102",
-   "Weight": "0.0112460606",
-   "Market Value": "321012.69",
-   "Shares Held": "54687",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Baxter International Inc",
-   "Ticker": "BAX",
-   "Identifier": "071813109",
-   "Weight": "0.1464793853",
-   "Market Value": "4181174.46",
-   "Shares Held": "237837",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Bristol-Myers Squibb Co",
-   "Ticker": "BMY",
-   "Identifier": "110122108",
-   "Weight": "1.9920172171",
-   "Market Value": "56861049.04",
-   "Shares Held": "938456",
+   "Name": "SI-BONE Inc",
+   "Ticker": "SIBN",
+   "Identifier": "825704109",
+   "Weight": "0.0114679524",
+   "Market Value": "377133.6",
+   "Shares Held": "21235",
    "Asset Category": "EC"
   },
   {
    "Name": "ARS Pharmaceuticals Inc",
    "Ticker": "SPRY",
    "Identifier": "82835W108",
-   "Weight": "0.0072103114",
-   "Market Value": "205814.42",
-   "Shares Held": "24917",
+   "Weight": "0.0034930186",
+   "Market Value": "114870.96",
+   "Shares Held": "22392",
    "Asset Category": "EC"
   },
   {
-   "Name": "Xencor Inc",
-   "Ticker": "XNCR",
-   "Identifier": "98401F105",
-   "Weight": "0.0095805429",
-   "Market Value": "273471.39",
-   "Shares Held": "22923",
+   "Name": "Sionna Therapeutics Inc",
+   "Ticker": "-",
+   "Identifier": "829401108",
+   "Weight": "0.0091964483",
+   "Market Value": "302433.21",
+   "Shares Held": "6417",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Solventum Corp",
+   "Ticker": "SOLV",
+   "Identifier": "83444M101",
+   "Weight": "0.1819666626",
+   "Market Value": "5984132.16",
+   "Shares Held": "70039",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sotera Health Co",
+   "Ticker": "SHC",
+   "Identifier": "83601L102",
+   "Weight": "0.0718845286",
+   "Market Value": "2363985.32",
+   "Shares Held": "132362",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "STAAR Surgical Co",
+   "Ticker": "STAA",
+   "Identifier": "852312305",
+   "Weight": "0.0104570781",
+   "Market Value": "343890.12",
+   "Shares Held": "14117",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Stoke Therapeutics Inc",
+   "Ticker": "STOK",
+   "Identifier": "86150R107",
+   "Weight": "0.0154164572",
+   "Market Value": "506983.62",
+   "Shares Held": "17567",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Stryker Corp",
+   "Ticker": "SYK",
+   "Identifier": "863667101",
+   "Weight": "1.6239010605",
+   "Market Value": "53403400.5",
+   "Shares Held": "163965",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Supernus Pharmaceuticals Inc",
+   "Ticker": "SUPN",
+   "Identifier": "868459108",
+   "Weight": "0.0352742053",
+   "Market Value": "1160022.96",
+   "Shares Held": "25992",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Surgery Partners Inc",
+   "Ticker": "SGRY",
+   "Identifier": "86881A100",
+   "Weight": "0.0179072649",
+   "Market Value": "588896",
+   "Shares Held": "38240",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Syndax Pharmaceuticals Inc",
+   "Ticker": "SNDX",
+   "Identifier": "87164F105",
+   "Weight": "0.0233622063",
+   "Market Value": "768286.5",
+   "Shares Held": "40330",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tandem Diabetes Care Inc",
+   "Ticker": "TNDM",
+   "Identifier": "875372203",
+   "Weight": "0.0192397672",
+   "Market Value": "632716.5",
+   "Shares Held": "32447",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tango Therapeutics Inc",
+   "Ticker": "TNGX",
+   "Identifier": "87583X109",
+   "Weight": "0.036762487",
+   "Market Value": "1208966.4",
+   "Shares Held": "44480",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tarsus Pharmaceuticals Inc",
+   "Ticker": "TARS",
+   "Identifier": "87650L103",
+   "Weight": "0.0254142651",
+   "Market Value": "835770.24",
+   "Shares Held": "14156",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Taysha Gene Therapies Inc",
+   "Ticker": "TSHA",
+   "Identifier": "877619106",
+   "Weight": "0.0155857439",
+   "Market Value": "512550.76",
+   "Shares Held": "87466",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Teladoc Health Inc",
+   "Ticker": "TDOC",
+   "Identifier": "87918A105",
+   "Weight": "0.0170286864",
+   "Market Value": "560003.18",
+   "Shares Held": "83458",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Teleflex Inc",
+   "Ticker": "TFX",
+   "Identifier": "879369106",
+   "Weight": "0.087556934",
+   "Market Value": "2879386.02",
+   "Shares Held": "21062",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tempus AI Inc",
+   "Ticker": "TEM",
+   "Identifier": "88023B103",
+   "Weight": "0.0663201854",
+   "Market Value": "2180997.05",
+   "Shares Held": "49715",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "10X Genomics Inc",
+   "Ticker": "TXG",
+   "Identifier": "88025U109",
+   "Weight": "0.0724044819",
+   "Market Value": "2381084.44",
+   "Shares Held": "50372",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tenet Healthcare Corp",
+   "Ticker": "THC",
+   "Identifier": "88033G407",
+   "Weight": "0.3211219882",
+   "Market Value": "10560376.22",
+   "Shares Held": "41449",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TG Therapeutics Inc",
+   "Ticker": "TGTX",
+   "Identifier": "88322Q108",
+   "Weight": "0.1110471321",
+   "Market Value": "3651881.64",
+   "Shares Held": "70188",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Thermo Fisher Scientific Inc",
+   "Ticker": "TMO",
+   "Identifier": "883556102",
+   "Weight": "3.0872020649",
+   "Market Value": "101525328.3",
+   "Shares Held": "176781",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Tilray Brands Inc",
+   "Ticker": "TLRY",
+   "Identifier": "88688T209",
+   "Weight": "0.0079148666",
+   "Market Value": "260287.28",
+   "Shares Held": "57332",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TransMedics Group Inc",
+   "Ticker": "TMDX",
+   "Identifier": "89377M109",
+   "Weight": "0.0362962111",
+   "Market Value": "1193632.51",
+   "Shares Held": "15601",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Travere Therapeutics Inc",
+   "Ticker": "TVTX",
+   "Identifier": "89422G107",
+   "Weight": "0.0670390318",
+   "Market Value": "2204636.94",
+   "Shares Held": "39446",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Trevi Therapeutics Inc",
+   "Ticker": "TRVI",
+   "Identifier": "89532M101",
+   "Weight": "0.025278508",
+   "Market Value": "831305.75",
+   "Shares Held": "45551",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Twist Bioscience Corp",
+   "Ticker": "TWST",
+   "Identifier": "90184D100",
+   "Weight": "0.0750169537",
+   "Market Value": "2466997.85",
+   "Shares Held": "26947",
    "Asset Category": "EC"
   },
   {
    "Name": "Tyra Biosciences Inc",
    "Ticker": "TYRA",
    "Identifier": "90240B106",
-   "Weight": "0.0074529182",
-   "Market Value": "212739.5",
-   "Shares Held": "6122",
+   "Weight": "0.0102777196",
+   "Market Value": "337991.76",
+   "Shares Held": "10602",
    "Asset Category": "EC"
   },
   {
-   "Name": "Gilead Sciences Inc",
-   "Ticker": "GILD",
-   "Identifier": "375558103",
-   "Weight": "2.6215985555",
-   "Market Value": "74832106.24",
-   "Shares Held": "571936",
+   "Name": "UFP Technologies Inc",
+   "Ticker": "UFPT",
+   "Identifier": "902673102",
+   "Weight": "0.0266975409",
+   "Market Value": "877971.88",
+   "Shares Held": "3446",
    "Asset Category": "EC"
   },
   {
-   "Name": "Janux Therapeutics Inc",
-   "Ticker": "JANX",
-   "Identifier": "47103J105",
-   "Weight": "0.0088904898",
-   "Market Value": "253774.2",
-   "Shares Held": "17660",
+   "Name": "US Physical Therapy Inc",
+   "Ticker": "USPH",
+   "Identifier": "90337L108",
+   "Weight": "0.0181291067",
+   "Market Value": "596191.46",
+   "Shares Held": "7541",
    "Asset Category": "EC"
   },
   {
-   "Name": "MannKind Corp",
-   "Ticker": "MNKD",
-   "Identifier": "56400P706",
-   "Weight": "0.0134525959",
-   "Market Value": "383997.04",
-   "Shares Held": "135688",
+   "Name": "Ultragenyx Pharmaceutical Inc",
+   "Ticker": "RARE",
+   "Identifier": "90400D108",
+   "Weight": "0.0300533066",
+   "Market Value": "988329.16",
+   "Shares Held": "39676",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "United Therapeutics Corp",
+   "Ticker": "UTHR",
+   "Identifier": "91307C102",
+   "Weight": "0.2956780215",
+   "Market Value": "9723629.22",
+   "Shares Held": "18782",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UnitedHealth Group Inc",
+   "Ticker": "UNH",
+   "Identifier": "91324P102",
+   "Weight": "5.4409146889",
+   "Market Value": "178929217.6",
+   "Shares Held": "431779",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Universal Health Services Inc",
+   "Ticker": "UHS",
+   "Identifier": "913903100",
+   "Weight": "0.1243457381",
+   "Market Value": "4089217.88",
+   "Shares Held": "24277",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Upstream Bio Inc",
+   "Ticker": "UPB",
+   "Identifier": "91678A107",
+   "Weight": "0.0022058032",
+   "Market Value": "72539.76",
+   "Shares Held": "11496",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vaxcyte Inc",
+   "Ticker": "PCVX",
+   "Identifier": "92243G108",
+   "Weight": "0.0955966341",
+   "Market Value": "3143778.56",
+   "Shares Held": "58132",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Veeva Systems Inc",
+   "Ticker": "VEEV",
+   "Identifier": "922475108",
+   "Weight": "0.4334571177",
+   "Market Value": "14254614.78",
+   "Shares Held": "69951",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VeraDermics Inc",
+   "Ticker": "-",
+   "Identifier": "922967104",
+   "Weight": "0.0234355965",
+   "Market Value": "770700",
+   "Shares Held": "7340",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Veracyte Inc",
+   "Ticker": "VCYT",
+   "Identifier": "92337F107",
+   "Weight": "0.0534908943",
+   "Market Value": "1759094.64",
+   "Shares Held": "37977",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vera Therapeutics Inc",
+   "Ticker": "VERA",
+   "Identifier": "92337R101",
+   "Weight": "0.0198549129",
+   "Market Value": "652946.1",
+   "Shares Held": "20341",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vericel Corp",
+   "Ticker": "VCEL",
+   "Identifier": "92346J108",
+   "Weight": "0.0341256367",
+   "Market Value": "1122251.28",
+   "Shares Held": "24418",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vertex Pharmaceuticals Inc",
+   "Ticker": "VRTX",
+   "Identifier": "92532F100",
+   "Weight": "1.7554232703",
+   "Market Value": "57728622.9",
+   "Shares Held": "120999",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Viatris Inc",
+   "Ticker": "VTRS",
+   "Identifier": "92556V106",
+   "Weight": "0.2961861309",
+   "Market Value": "9740338.84",
+   "Shares Held": "554689",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Viking Therapeutics Inc",
+   "Ticker": "VKTX",
+   "Identifier": "92686J106",
+   "Weight": "0.0504960039",
+   "Market Value": "1660605.06",
+   "Shares Held": "52319",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Vir Biotechnology Inc",
+   "Ticker": "VIR",
+   "Identifier": "92764N102",
+   "Weight": "0.0146956717",
+   "Market Value": "483279.96",
+   "Shares Held": "55806",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Viridian Therapeutics Inc",
+   "Ticker": "VRDN",
+   "Identifier": "92790C104",
+   "Weight": "0.0211333422",
+   "Market Value": "694988.36",
+   "Shares Held": "36733",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.1491217924",
+   "Market Value": "4904000",
+   "Shares Held": "4904000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Waters Corp",
+   "Ticker": "WAT",
+   "Identifier": "941848103",
+   "Weight": "0.5367217398",
+   "Market Value": "17650561.8",
+   "Shares Held": "46780",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Waystar Holding Corp",
+   "Ticker": "WAY",
+   "Identifier": "946784105",
+   "Weight": "0.0354158455",
+   "Market Value": "1164680.92",
+   "Shares Held": "55172",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "West Pharmaceutical Services Inc",
+   "Ticker": "WST",
+   "Identifier": "955306105",
+   "Weight": "0.3552380457",
+   "Market Value": "11682312.48",
+   "Shares Held": "34263",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Xencor Inc",
+   "Ticker": "XNCR",
+   "Identifier": "98401F105",
+   "Weight": "0.0129583937",
+   "Market Value": "426148.06",
+   "Shares Held": "21086",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Xenon Pharmaceuticals Inc",
+   "Ticker": "XENE",
+   "Identifier": "98420N105",
+   "Weight": "0.0734487815",
+   "Market Value": "2415427.14",
+   "Shares Held": "38542",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Xeris Biopharma Holdings Inc",
+   "Ticker": "XERS",
+   "Identifier": "98422E103",
+   "Weight": "0.0197433264",
+   "Market Value": "649276.48",
+   "Shares Held": "80356",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Zenas Biopharma Inc",
+   "Ticker": "ZBIO",
+   "Identifier": "98937L105",
+   "Weight": "0.0120412442",
+   "Market Value": "395986.8",
+   "Shares Held": "12595",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Zimmer Biomet Holdings Inc",
+   "Ticker": "ZBH",
+   "Identifier": "98956P102",
+   "Weight": "0.2624572059",
+   "Market Value": "8631133.77",
+   "Shares Held": "91889",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Zoetis Inc",
+   "Ticker": "ZTS",
+   "Identifier": "98978V103",
+   "Weight": "0.4701838554",
+   "Market Value": "15462405.53",
+   "Shares Held": "200057",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Zymeworks Inc",
+   "Ticker": "ZYME",
+   "Identifier": "98985Y108",
+   "Weight": "0.0121869353",
+   "Market Value": "400777.98",
+   "Shares Held": "18267",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0028008141",
+   "Market Value": "92107.21",
+   "Shares Held": "53",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "-0.0002972109",
+   "Market Value": "-9774.04",
+   "Shares Held": "6",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Alkermes PLC",
+   "Ticker": "ALKS",
+   "Identifier": "000000000",
+   "Weight": "0.1121354907",
+   "Market Value": "3687673.26",
+   "Shares Held": "75274",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Biohaven Ltd",
+   "Ticker": "BHVN",
+   "Identifier": "000000000",
+   "Weight": "0.0242082232",
+   "Market Value": "796108.5",
+   "Shares Held": "58971",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Damora Therapeutics Inc",
+   "Ticker": "DMRA",
+   "Identifier": "000000000",
+   "Weight": "0.0151588517",
+   "Market Value": "498512.04",
+   "Shares Held": "17196",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Establishment Labs Holdings Inc",
+   "Ticker": "ESTA",
+   "Identifier": "000000000",
+   "Weight": "0.0244928335",
+   "Market Value": "805468.16",
+   "Shares Held": "8704",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Jazz Pharmaceuticals PLC",
+   "Ticker": "JAZZ",
+   "Identifier": "000000000",
+   "Weight": "0.2024594908",
+   "Market Value": "6658056.66",
+   "Shares Held": "26331",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kestra Medical Technologies Ltd",
+   "Ticker": "KMTS",
+   "Identifier": "000000000",
+   "Weight": "0.007854395",
+   "Market Value": "258298.62",
+   "Shares Held": "11314",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Kiniksa Pharmaceuticals International Plc",
+   "Ticker": "KNSA",
+   "Identifier": "000000000",
+   "Weight": "0.039939314",
+   "Market Value": "1313439.12",
+   "Shares Held": "17668",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LivaNova PLC",
+   "Ticker": "LIVN",
+   "Identifier": "000000000",
+   "Weight": "0.0630697405",
+   "Market Value": "2074103.34",
+   "Shares Held": "25881",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Medtronic PLC",
+   "Ticker": "MDT",
+   "Identifier": "000000000",
+   "Weight": "1.5858179185",
+   "Market Value": "52151003.21",
+   "Shares Held": "610739",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MeiraGTx Holdings plc",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0094618653",
+   "Market Value": "311161.68",
+   "Shares Held": "26392",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Novocure Ltd",
+   "Ticker": "NVCR",
+   "Identifier": "000000000",
+   "Weight": "0.0219595499",
+   "Market Value": "722158.92",
+   "Shares Held": "48663",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Roivant Sciences Ltd",
+   "Ticker": "ROIV",
+   "Identifier": "000000000",
+   "Weight": "0.2279401084",
+   "Market Value": "7496008.96",
+   "Shares Held": "221056",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Royalty Pharma PLC",
+   "Ticker": "RPRX",
+   "Identifier": "000000000",
+   "Weight": "0.3477119245",
+   "Market Value": "11434809.43",
+   "Shares Held": "195701",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "STERIS PLC",
+   "Ticker": "STE",
+   "Identifier": "000000000",
+   "Weight": "0.3233630533",
+   "Market Value": "10634075.6",
+   "Shares Held": "46559",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Theravance Biopharma Inc",
+   "Ticker": "TBPH",
+   "Identifier": "000000000",
+   "Weight": "0.0091903408",
+   "Market Value": "302232.36",
+   "Shares Held": "17926",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Perrigo Co PLC",
+   "Ticker": "PRGO",
+   "Identifier": "000000000",
+   "Weight": "0.0208321663",
+   "Market Value": "685083.93",
+   "Shares Held": "67763",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CRISPR Therapeutics AG",
+   "Ticker": "CRSP",
+   "Identifier": "000000000",
+   "Weight": "0.0584810194",
+   "Market Value": "1923199.25",
+   "Shares Held": "40075",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "UroGen Pharma Ltd",
+   "Ticker": "URGN",
+   "Identifier": "000000000",
+   "Weight": "0.0215829054",
+   "Market Value": "709772.64",
+   "Shares Held": "18561",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Newamsterdam Pharma Co NV",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0242358551",
+   "Market Value": "797017.2",
+   "Shares Held": "28680",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "uniQure NV",
+   "Ticker": "QURE",
+   "Identifier": "000000000",
+   "Weight": "0.0295683765",
+   "Market Value": "972381.81",
+   "Shares Held": "22287",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WaVe Life Sciences Ltd",
+   "Ticker": "WVE",
+   "Identifier": "000000000",
+   "Weight": "0.0103372805",
+   "Market Value": "339950.47",
+   "Shares Held": "61697",
    "Asset Category": "EC"
   }
  ]

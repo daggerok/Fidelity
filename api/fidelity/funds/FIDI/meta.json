@@ -4,9 +4,9 @@
  "category": "International",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIDI",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004085/000003540226004085-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004085/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FIDI?period1=0&period2=1790479056&interval=1d&events=div%7Csplit",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006184/000003540226006184-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006184/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FIDI",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$28.30",
-  "value": 28.3,
-  "asOfDate": "Sep 25 2026"
+  "display": "$27.59",
+  "value": 27.59,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$315.45 M",
-  "value": 315445640.8100001,
-  "asOfDate": "Apr 30 2026",
+  "display": "$360.52 M",
+  "value": 360524755.31000006,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": -2.44,
-   "mo1Text": "-2.44%",
-   "qtd": 5.21,
-   "qtdText": "5.21%",
-   "ytd": 13.11,
-   "ytdText": "13.11%",
-   "yr1": 21.85,
-   "yr1Text": "21.85%",
-   "yr3": 20.95,
-   "yr3Text": "20.95%",
-   "yr5": 11.24,
-   "yr5Text": "11.24%",
+   "asOfDate": "Oct 02 2026",
+   "mo1": -5.03,
+   "mo1Text": "-5.03%",
+   "qtd": 0.44,
+   "qtdText": "0.44%",
+   "ytd": 10.27,
+   "ytdText": "10.27%",
+   "yr1": 16.27,
+   "yr1Text": "16.27%",
+   "yr3": 21.06,
+   "yr3Text": "21.06%",
+   "yr5": 11.17,
+   "yr5Text": "11.17%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 5.81,
-   "sinceInceptionText": "5.81%"
+   "sinceInception": 5.49,
+   "sinceInceptionText": "5.49%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -211,7 +226,7 @@
   ],
   "pageSize": 250,
   "totalRows": 106,
-  "asOf": "Apr 30 2026"
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
@@ -220,14 +235,14 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2179,
-  "asOf": "Sep 25 2026"
+  "totalRows": 2184,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000059462",
   "seriesName": "Fidelity International High Dividend ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004085"
+  "accession": "0000035402-26-006184"
  }
 }

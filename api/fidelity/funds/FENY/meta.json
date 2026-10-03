@@ -4,9 +4,9 @@
  "category": "Sector",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FENY",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063881/000141036826063881-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063881/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FENY?period1=0&period2=1790479052&interval=1d&events=div%7Csplit",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097240/000141036826097240-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097240/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FENY",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$34.21",
-  "value": 34.21,
-  "asOfDate": "Sep 25 2026"
+  "display": "$34.64",
+  "value": 34.64,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$2,026.17 M",
-  "value": 2026173649.1800005,
-  "asOfDate": "Apr 30 2026",
+  "display": "$2,008.12 M",
+  "value": 2008123333.3300002,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": -0.53,
-   "mo1Text": "-0.53%",
-   "qtd": 17.11,
-   "qtdText": "17.11%",
-   "ytd": 40.67,
-   "ytdText": "40.67%",
-   "yr1": 37.91,
-   "yr1Text": "37.91%",
-   "yr3": 13.8,
-   "yr3Text": "13.80%",
-   "yr5": 22.49,
-   "yr5Text": "22.49%",
-   "yr10": 10.22,
-   "yr10Text": "10.22%",
-   "sinceInception": 6,
-   "sinceInceptionText": "6.00%"
+   "asOfDate": "Oct 02 2026",
+   "mo1": -3.51,
+   "mo1Text": "-3.51%",
+   "qtd": 0.23,
+   "qtdText": "0.23%",
+   "ytd": 42.43,
+   "ytdText": "42.43%",
+   "yr1": 44.09,
+   "yr1Text": "44.09%",
+   "yr3": 15.83,
+   "yr3Text": "15.83%",
+   "yr5": 22.3,
+   "yr5Text": "22.30%",
+   "yr10": 9.74,
+   "yr10Text": "9.74%",
+   "sinceInception": 6.09,
+   "sinceInceptionText": "6.09%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -282,8 +297,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 100,
-  "asOf": "Apr 30 2026"
+  "totalRows": 103,
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
@@ -293,14 +308,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3249,
-  "asOf": "Sep 25 2026"
+  "totalRows": 3254,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000042573",
   "seriesName": "Fidelity MSCI Energy Index ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0001410368-26-063881"
+  "accession": "0001410368-26-097240"
  }
 }

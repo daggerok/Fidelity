@@ -4,9 +4,9 @@
  "category": "US Equity",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBCV",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004033/000003540226004033-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004033/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBCV?period1=0&period2=1790479060&interval=1d&events=div%7Csplit",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006123/000003540226006123-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006123/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBCV",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$41.79",
-  "value": 41.7868,
-  "asOfDate": "Sep 25 2026"
+  "display": "$41.15",
+  "value": 41.152,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$156.49 M",
-  "value": 156487803.60999998,
-  "asOfDate": "Apr 30 2026",
+  "display": "$172.92 M",
+  "value": 172921252.58000004,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": -2.62,
-   "mo1Text": "-2.62%",
-   "qtd": 4.57,
-   "qtdText": "4.57%",
-   "ytd": 18.29,
-   "ytdText": "18.29%",
-   "yr1": 26.14,
-   "yr1Text": "26.14%",
-   "yr3": 17.21,
-   "yr3Text": "17.21%",
-   "yr5": 10.56,
-   "yr5Text": "10.56%",
+   "asOfDate": "Oct 02 2026",
+   "mo1": -4.21,
+   "mo1Text": "-4.21%",
+   "qtd": 1.16,
+   "qtdText": "1.16%",
+   "ytd": 16.47,
+   "ytdText": "16.47%",
+   "yr1": 22.84,
+   "yr1Text": "22.84%",
+   "yr3": 17.57,
+   "yr3Text": "17.57%",
+   "yr5": 10.5,
+   "yr5Text": "10.50%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 13.58,
-   "sinceInceptionText": "13.58%"
+   "sinceInception": 13.26,
+   "sinceInceptionText": "13.26%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -178,8 +193,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 127,
-  "asOf": "Apr 30 2026"
+  "totalRows": 130,
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
@@ -187,14 +202,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1585,
-  "asOf": "Sep 25 2026"
+  "totalRows": 1590,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000068175",
   "seriesName": "Fidelity Blue Chip Value ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004033"
+  "accession": "0000035402-26-006123"
  }
 }

@@ -4,9 +4,9 @@
  "category": "International",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FFDI",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004054/000003540226004054-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004054/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FFDI?period1=0&period2=1790479056&interval=1d&events=div%7Csplit",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006166/000003540226006166-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006166/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FFDI",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 24 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$32.33",
-  "value": 32.329,
-  "asOfDate": "Sep 24 2026"
+  "display": "$32.08",
+  "value": 32.077,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$22.04 M",
-  "value": 22041930.15999999,
-  "asOfDate": "Apr 30 2026",
+  "display": "$19.31 M",
+  "value": 19306533.790000003,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": -1.84,
-   "mo1Text": "-1.84%",
-   "qtd": -0.28,
-   "qtdText": "-0.28%",
-   "ytd": 8.35,
-   "ytdText": "8.35%",
-   "yr1": 10.97,
-   "yr1Text": "10.97%",
+   "asOfDate": "Oct 02 2026",
+   "mo1": -0.9,
+   "mo1Text": "-0.90%",
+   "qtd": 1.84,
+   "qtdText": "1.84%",
+   "ytd": 7.51,
+   "ytdText": "7.51%",
+   "yr1": 7.33,
+   "yr1Text": "7.33%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 17.39,
-   "sinceInceptionText": "17.39%"
+   "sinceInception": 16.71,
+   "sinceInceptionText": "16.71%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -110,22 +125,22 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 101,
-  "asOf": "Apr 30 2026"
+  "totalRows": 97,
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 461,
-  "asOf": "Sep 25 2026"
+  "totalRows": 466,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000087781",
   "seriesName": "Fidelity Fundamental Developed International ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004054"
+  "accession": "0000035402-26-006166"
  }
 }

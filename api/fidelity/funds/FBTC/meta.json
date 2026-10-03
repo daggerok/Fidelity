@@ -6,7 +6,7 @@
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBTC",
   "edgarFiling": null,
   "nportDoc": null,
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBTC?period1=0&period2=1790479050&interval=1d&events=div%7Csplit",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBTC",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,12 +16,12 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$73.05",
-  "value": 73.05,
-  "asOfDate": "Sep 25 2026"
+  "display": "$73.33",
+  "value": 73.33,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,27 +36,42 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": 5.02,
-   "mo1Text": "5.02%",
-   "qtd": 39.86,
-   "qtdText": "39.86%",
-   "ytd": -4.17,
-   "ytdText": "-4.17%",
-   "yr1": -23.27,
-   "yr1Text": "-23.27%",
+   "asOfDate": "Oct 02 2026",
+   "mo1": 8.98,
+   "mo1Text": "8.98%",
+   "qtd": -0.38,
+   "qtdText": "-0.38%",
+   "ytd": -3.8,
+   "ytdText": "-3.80%",
+   "yr1": -31.58,
+   "yr1Text": "-31.58%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 23.94,
-   "sinceInceptionText": "23.94%"
+   "sinceInception": 23.92,
+   "sinceInceptionText": "23.92%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -79,8 +94,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 679,
-  "asOf": "Sep 25 2026"
+  "totalRows": 684,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": null,

@@ -4,8 +4,8 @@
  "category": "Sector",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDIS",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063882/000141036826063882-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063882/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097237/000141036826097237-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097237/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDIS",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Oct 01 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$94.83",
-  "value": 94.83,
-  "asOfDate": "Oct 01 2026"
+  "display": "$95.92",
+  "value": 95.92,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$1,771.87 M",
-  "value": 1771868777.6100004,
-  "asOfDate": "Apr 30 2026",
+  "display": "$1,680.61 M",
+  "value": 1680614714.7399998,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 01 2026",
-   "mo1": -4.83,
-   "mo1Text": "-4.83%",
-   "qtd": null,
-   "qtdText": "—",
-   "ytd": -6.61,
-   "ytdText": "-6.61%",
-   "yr1": -7.04,
-   "yr1Text": "-7.04%",
-   "yr3": 11.65,
-   "yr3Text": "11.65%",
-   "yr5": 4.08,
-   "yr5Text": "4.08%",
-   "yr10": 12.73,
-   "yr10Text": "12.73%",
-   "sinceInception": 11.81,
-   "sinceInceptionText": "11.81%"
+   "asOfDate": "Oct 02 2026",
+   "mo1": -4.09,
+   "mo1Text": "-4.09%",
+   "qtd": 1.15,
+   "qtdText": "1.15%",
+   "ytd": -5.53,
+   "ytdText": "-5.53%",
+   "yr1": -5.42,
+   "yr1Text": "-5.42%",
+   "yr3": 13.04,
+   "yr3Text": "13.04%",
+   "yr5": 4.32,
+   "yr5Text": "4.32%",
+   "yr10": 12.85,
+   "yr10Text": "12.85%",
+   "sinceInception": 11.9,
+   "sinceInceptionText": "11.90%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
-   "null": null
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -279,12 +294,11 @@
  },
  "holdings": {
   "pages": [
-   "holdings/001.json",
-   "holdings/002.json"
+   "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 251,
-  "asOf": "Apr 30 2026"
+  "totalRows": 248,
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
@@ -294,14 +308,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3253,
-  "asOf": "Oct 01 2026"
+  "totalRows": 3254,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000042570",
   "seriesName": "Fidelity MSCI Consumer Discretionary Index ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0001410368-26-063882"
+  "accession": "0001410368-26-097237"
  }
 }

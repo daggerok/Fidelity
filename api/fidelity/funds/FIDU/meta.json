@@ -4,9 +4,9 @@
  "category": "Sector",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIDU",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063878/000141036826063878-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826063878/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FIDU?period1=0&period2=1790479053&interval=1d&events=div%7Csplit",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097241/000141036826097241-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097241/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FIDU",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$90.39",
-  "value": 90.395,
-  "asOfDate": "Sep 25 2026"
+  "display": "$90.28",
+  "value": 90.28,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$2,073.53 M",
-  "value": 2073525980.1599996,
-  "asOfDate": "Apr 30 2026",
+  "display": "$2,302.32 M",
+  "value": 2302319663.0099998,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": -4.53,
-   "mo1Text": "-4.53%",
-   "qtd": -7.79,
-   "qtdText": "-7.79%",
-   "ytd": 10.43,
-   "ytdText": "10.43%",
-   "yr1": 12.62,
-   "yr1Text": "12.62%",
-   "yr3": 20.15,
-   "yr3Text": "20.15%",
-   "yr5": 12.47,
-   "yr5Text": "12.47%",
-   "yr10": 13.35,
-   "yr10Text": "13.35%",
-   "sinceInception": 11.98,
-   "sinceInceptionText": "11.98%"
+   "asOfDate": "Oct 02 2026",
+   "mo1": -1.17,
+   "mo1Text": "-1.17%",
+   "qtd": 0.88,
+   "qtdText": "0.88%",
+   "ytd": 10.29,
+   "ytdText": "10.29%",
+   "yr1": 10.62,
+   "yr1Text": "10.62%",
+   "yr3": 20.87,
+   "yr3Text": "20.87%",
+   "yr5": 12.83,
+   "yr5Text": "12.83%",
+   "yr10": 13.23,
+   "yr10Text": "13.23%",
+   "sinceInception": 11.95,
+   "sinceInceptionText": "11.95%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -291,8 +306,8 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 362,
-  "asOf": "Apr 30 2026"
+  "totalRows": 364,
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
@@ -302,14 +317,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3249,
-  "asOf": "Sep 25 2026"
+  "totalRows": 3254,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000042576",
   "seriesName": "Fidelity MSCI Industrials Index ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0001410368-26-063878"
+  "accession": "0001410368-26-097241"
  }
 }

@@ -2,7 +2,7 @@
  "ticker": "FCOM",
  "page": 1,
  "pageSize": 250,
- "totalRows": 91,
+ "totalRows": 90,
  "headers": [
   "Name",
   "Ticker",
@@ -14,822 +14,813 @@
  ],
  "rows": [
   {
-   "Name": "Atlanta Braves Holdings Inc",
-   "Ticker": "-",
-   "Identifier": "047726104",
-   "Weight": "0.0214266914",
-   "Market Value": "377690.04",
-   "Shares Held": "7137",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Nexstar Media Group Inc",
-   "Ticker": "NXST",
-   "Identifier": "65336K103",
-   "Weight": "0.3603673464",
-   "Market Value": "6352224.66",
-   "Shares Held": "30519",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Clear Channel Outdoor Holdings Inc",
-   "Ticker": "CCO",
-   "Identifier": "18453H106",
-   "Weight": "0.036391957",
-   "Market Value": "641484",
-   "Shares Held": "267285",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Globalstar Inc",
-   "Ticker": "GSAT",
-   "Identifier": "378973507",
-   "Weight": "0.2512269741",
-   "Market Value": "4428398.4",
-   "Shares Held": "53808",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Warner Bros Discovery Inc",
-   "Ticker": "WBD",
-   "Identifier": "934423104",
-   "Weight": "2.8235667949",
-   "Market Value": "49771242.6",
-   "Shares Held": "1839972",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "AST SpaceMobile Inc",
-   "Ticker": "ASTS",
-   "Identifier": "00217D100",
-   "Weight": "1.0000287621",
-   "Market Value": "17627588.7",
-   "Shares Held": "238533",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "DoubleVerify Holdings Inc",
-   "Ticker": "DV",
-   "Identifier": "25862V105",
-   "Weight": "0.092284492",
-   "Market Value": "1626706.28",
-   "Shares Held": "147614",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "EchoStar Corp",
-   "Ticker": "ECHO",
-   "Identifier": "278768106",
-   "Weight": "1.0423993344",
-   "Market Value": "18374458.24",
-   "Shares Held": "149216",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Liberty Broadband Corp",
-   "Ticker": "-",
-   "Identifier": "530307305",
-   "Weight": "0.2743548893",
-   "Market Value": "4836076.05",
-   "Shares Held": "125645",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "NIQ Global Intelligence Plc",
-   "Ticker": "NIQ",
-   "Identifier": "000000000",
-   "Weight": "0.0388398574",
-   "Market Value": "684633.34",
-   "Shares Held": "62638",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Lionsgate Studios Corp",
-   "Ticker": "LION",
-   "Identifier": "53626N102",
-   "Weight": "0.151743725",
-   "Market Value": "2674799.04",
-   "Shares Held": "215016",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Yelp Inc",
-   "Ticker": "YELP",
-   "Identifier": "985817105",
-   "Weight": "0.0972767488",
-   "Market Value": "1714705.2",
-   "Shares Held": "62127",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "News Corp",
-   "Ticker": "-",
-   "Identifier": "65249B109",
-   "Weight": "0.5923473172",
-   "Market Value": "10441354.56",
-   "Shares Held": "396708",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Liberty Global Ltd",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.1155609927",
-   "Market Value": "2037003.06",
-   "Shares Held": "175907",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Cinemark Holdings Inc",
-   "Ticker": "CNK",
-   "Identifier": "17243V102",
-   "Weight": "0.1879243164",
-   "Market Value": "3312557.28",
-   "Shares Held": "112214",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sphere Entertainment Co",
-   "Ticker": "SPHR",
-   "Identifier": "55826T102",
-   "Weight": "0.2195854915",
-   "Market Value": "3870651.4",
-   "Shares Held": "27172",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Omnicom Group Inc",
-   "Ticker": "OMC",
-   "Identifier": "681919106",
-   "Weight": "1.4516712922",
-   "Market Value": "25588728.48",
-   "Shares Held": "333534",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Comcast Corp",
-   "Ticker": "CMCSA",
-   "Identifier": "20030N101",
-   "Weight": "2.6875092035",
-   "Market Value": "47372944.32",
-   "Shares Held": "1751958",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "IDT Corp",
-   "Ticker": "IDT",
-   "Identifier": "448947507",
-   "Weight": "0.0638856884",
-   "Market Value": "1126118.25",
-   "Shares Held": "22455",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Fox Corp",
-   "Ticker": "-",
-   "Identifier": "35137L105",
-   "Weight": "0.7960219504",
-   "Market Value": "14031543.96",
-   "Shares Held": "221004",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "QuinStreet Inc",
-   "Ticker": "QNST",
-   "Identifier": "74874Q100",
-   "Weight": "0.0417045279",
-   "Market Value": "735129.12",
-   "Shares Held": "57612",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Trump Media & Technology Group Corp",
-   "Ticker": "DJT",
-   "Identifier": "25400Q105",
-   "Weight": "0.09142327",
-   "Market Value": "1611525.45",
-   "Shares Held": "176123",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Telephone and Data Systems Inc",
-   "Ticker": "TDS",
-   "Identifier": "879433829",
-   "Weight": "0.277460131",
-   "Market Value": "4890812.4",
-   "Shares Held": "108540",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Madison Square Garden Sports Corp",
-   "Ticker": "MSGS",
-   "Identifier": "55825T103",
-   "Weight": "0.3212235431",
-   "Market Value": "5662233.64",
-   "Shares Held": "16534",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "ZoomInfo Technologies Inc",
-   "Ticker": "GTM",
-   "Identifier": "98980F104",
-   "Weight": "0.0993932251",
-   "Market Value": "1752012.5",
-   "Shares Held": "280322",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Taboola.com Ltd",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.0319151638",
-   "Market Value": "562571.2",
-   "Shares Held": "149620",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Alphabet Inc",
-   "Ticker": "GOOGL",
-   "Identifier": "02079K305",
-   "Weight": "16.2883576513",
-   "Market Value": "287116211.2",
-   "Shares Held": "746144",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Lumen Technologies Inc",
-   "Ticker": "LUMN",
-   "Identifier": "550241103",
-   "Weight": "0.5176478802",
-   "Market Value": "9124621.48",
-   "Shares Held": "1032197",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sirius XM Holdings Inc",
-   "Ticker": "SIRI",
-   "Identifier": "829933100",
-   "Weight": "0.30014264",
-   "Market Value": "5290638.84",
-   "Shares Held": "196386",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "TripAdvisor Inc",
-   "Ticker": "TRIP",
-   "Identifier": "896945201",
-   "Weight": "0.0666111027",
-   "Market Value": "1174159.35",
-   "Shares Held": "105495",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Iridium Communications Inc",
-   "Ticker": "IRDM",
-   "Identifier": "46269C102",
-   "Weight": "0.2217805684",
-   "Market Value": "3909344.2",
-   "Shares Held": "100060",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Gogo Inc",
-   "Ticker": "GOGO",
-   "Identifier": "38046C109",
-   "Weight": "0.0188275794",
-   "Market Value": "331875.28",
-   "Shares Held": "79396",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "TKO Group Holdings Inc",
-   "Ticker": "TKO",
-   "Identifier": "87256C101",
-   "Weight": "0.7502473841",
-   "Market Value": "13224671.94",
-   "Shares Held": "71066",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Paramount Skydance Corp",
-   "Ticker": "PSKY",
-   "Identifier": "69932A204",
-   "Weight": "0.1976966703",
-   "Market Value": "3484815.36",
-   "Shares Held": "340314",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Liberty Broadband Corp",
-   "Ticker": "-",
-   "Identifier": "530307107",
-   "Weight": "0.0380243106",
-   "Market Value": "670257.63",
-   "Shares Held": "17441",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Trade Desk Inc/The",
-   "Ticker": "TTD",
-   "Identifier": "88339J105",
-   "Weight": "0.6242481673",
-   "Market Value": "11003673.45",
-   "Shares Held": "466455",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Array Digital Infrastructure Inc",
-   "Ticker": "AD",
-   "Identifier": "911684108",
-   "Weight": "0.0474148707",
-   "Market Value": "835785.8",
-   "Shares Held": "16820",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Take-Two Interactive Software Inc",
-   "Ticker": "TTWO",
-   "Identifier": "874054109",
-   "Weight": "2.0848021544",
-   "Market Value": "36748977.92",
-   "Shares Held": "171917",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Alphabet Inc",
-   "Ticker": "GOOGL",
-   "Identifier": "02079K107",
-   "Weight": "10.7371293275",
-   "Market Value": "189264255.96",
-   "Shares Held": "495534",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Atlanta Braves Holdings Inc",
-   "Ticker": "-",
-   "Identifier": "047726302",
-   "Weight": "0.1382924185",
-   "Market Value": "2437691.76",
-   "Shares Held": "49336",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Walt Disney Co/The",
-   "Ticker": "DIS",
-   "Identifier": "254687106",
-   "Weight": "4.1155486599",
-   "Market Value": "72545112.5",
-   "Shares Held": "699230",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "John Wiley & Sons Inc",
-   "Ticker": "-",
-   "Identifier": "968223206",
-   "Weight": "0.1019657774",
-   "Market Value": "1797359.09",
-   "Shares Held": "43913",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Madison Square Garden Entertainment Corp",
-   "Ticker": "MSGE",
-   "Identifier": "558256103",
-   "Weight": "0.154541318",
-   "Market Value": "2724112.44",
-   "Shares Held": "40707",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "IMAX Corp",
-   "Ticker": "IMAX",
-   "Identifier": "45245E109",
-   "Weight": "0.1047200581",
-   "Market Value": "1845909.02",
-   "Shares Held": "48551",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Uniti Group Inc",
-   "Ticker": "UNIT",
-   "Identifier": "912932100",
-   "Weight": "0.1106955895",
-   "Market Value": "1951240.2",
-   "Shares Held": "164940",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Scholastic Corp",
-   "Ticker": "SCHL",
-   "Identifier": "807066105",
-   "Weight": "0.03367172",
-   "Market Value": "593534.16",
-   "Shares Held": "14706",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "EverQuote Inc",
-   "Ticker": "EVER",
-   "Identifier": "30041R108",
-   "Weight": "0.024910727",
-   "Market Value": "439103.42",
-   "Shares Held": "30451",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Magnite Inc",
-   "Ticker": "MGNI",
-   "Identifier": "55955D100",
-   "Weight": "0.1108837329",
-   "Market Value": "1954556.62",
-   "Shares Held": "152521",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Sinclair Inc",
-   "Ticker": "SBGI",
-   "Identifier": "829242106",
-   "Weight": "0.0343982719",
-   "Market Value": "606341.15",
-   "Shares Held": "38993",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Stagwell Inc",
-   "Ticker": "STGW",
-   "Identifier": "85256A109",
-   "Weight": "0.0439620042",
-   "Market Value": "774921.84",
-   "Shares Held": "123592",
-   "Asset Category": "EC"
-  },
-  {
    "Name": "AMC Entertainment Holdings Inc",
    "Ticker": "AMC",
    "Identifier": "00165C302",
-   "Weight": "0.0469583572",
-   "Market Value": "827738.8",
-   "Shares Held": "544565",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Netflix Inc",
-   "Ticker": "NFLX",
-   "Identifier": "64110L106",
-   "Weight": "5.1782706845",
-   "Market Value": "91277800.46",
-   "Shares Held": "975086",
+   "Weight": "0.1536263911",
+   "Market Value": "2658225.06",
+   "Shares Held": "942633",
    "Asset Category": "EC"
   },
   {
    "Name": "AT&T Inc",
    "Ticker": "-",
    "Identifier": "00206R102",
-   "Weight": "3.8807309857",
-   "Market Value": "68405962.17",
-   "Shares Held": "2617909",
+   "Weight": "4.505380736",
+   "Market Value": "77957412.75",
+   "Shares Held": "3353007",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "AST SpaceMobile Inc",
+   "Ticker": "ASTS",
+   "Identifier": "00217D100",
+   "Weight": "0.8601146442",
+   "Market Value": "14882718.3",
+   "Shares Held": "252335",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Alphabet Inc",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K107",
+   "Weight": "8.0240366452",
+   "Market Value": "138841348.45",
+   "Shares Held": "389293",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Alphabet Inc",
+   "Ticker": "GOOGL",
+   "Identifier": "02079K305",
+   "Weight": "14.6596305275",
+   "Market Value": "253658222.19",
+   "Shares Held": "712263",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Atlanta Braves Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "047726104",
+   "Weight": "0.022294567",
+   "Market Value": "385766.9",
+   "Shares Held": "7090",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Atlanta Braves Holdings Inc",
+   "Ticker": "-",
+   "Identifier": "047726302",
+   "Weight": "0.1487811516",
+   "Market Value": "2574387.01",
+   "Shares Held": "50647",
    "Asset Category": "EC"
   },
   {
    "Name": "Cargurus Inc",
    "Ticker": "CARG",
    "Identifier": "141788109",
-   "Weight": "0.1783650426",
-   "Market Value": "3144055.18",
-   "Shares Held": "86233",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "MediaAlpha Inc",
-   "Ticker": "MAX",
-   "Identifier": "58450V104",
-   "Weight": "0.0151549425",
-   "Market Value": "267137.41",
-   "Shares Held": "31391",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Snap Inc",
-   "Ticker": "SNAP",
-   "Identifier": "83304A106",
-   "Weight": "0.3927984958",
-   "Market Value": "6923891.18",
-   "Shares Held": "1140674",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Reddit Inc",
-   "Ticker": "RDDT",
-   "Identifier": "75734B100",
-   "Weight": "0.894994217",
-   "Market Value": "15776136.19",
-   "Shares Held": "107153",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "GCI Liberty Inc",
-   "Ticker": "-",
-   "Identifier": "36164V800",
-   "Weight": "0.0699705584",
-   "Market Value": "1233376.75",
-   "Shares Held": "36011",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ziff Davis Inc",
-   "Ticker": "ZD",
-   "Identifier": "48123V102",
-   "Weight": "0.1088582961",
-   "Market Value": "1918854.08",
-   "Shares Held": "41933",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Match Group Inc",
-   "Ticker": "MTCH",
-   "Identifier": "57667L107",
-   "Weight": "0.5043471692",
-   "Market Value": "8890168.76",
-   "Shares Held": "237578",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Liberty Latin America Ltd",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.0144097432",
-   "Market Value": "254001.72",
-   "Shares Held": "31281",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "fuboTV Inc",
-   "Ticker": "FUBO",
-   "Identifier": "35953D401",
-   "Weight": "0.0210523061",
-   "Market Value": "371090.72",
-   "Shares Held": "30121",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Liberty Latin America Ltd",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.0675149602",
-   "Market Value": "1190091.72",
-   "Shares Held": "143212",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Meta Platforms Inc",
-   "Ticker": "META",
-   "Identifier": "30303M102",
-   "Weight": "20.3851141972",
-   "Market Value": "359330073.57",
-   "Shares Held": "587227",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "USA TODAY Co Inc",
-   "Ticker": "TDAY",
-   "Identifier": "36472T109",
-   "Weight": "0.0608556701",
-   "Market Value": "1072707.87",
-   "Shares Held": "148369",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Verizon Communications Inc",
-   "Ticker": "VZ",
-   "Identifier": "92343V104",
-   "Weight": "4.1811001573",
-   "Market Value": "73700594.1",
-   "Shares Held": "1534470",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Fox Corp",
-   "Ticker": "-",
-   "Identifier": "35137L204",
-   "Weight": "0.5247355446",
-   "Market Value": "9249556.32",
-   "Shares Held": "162216",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Nextdoor Holdings Inc",
-   "Ticker": "NXDR",
-   "Identifier": "65345M108",
-   "Weight": "0.0207112219",
-   "Market Value": "365078.4",
-   "Shares Held": "228174",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Live Nation Entertainment Inc",
-   "Ticker": "LYV",
-   "Identifier": "538034109",
-   "Weight": "1.5440720575",
-   "Market Value": "27217484.32",
-   "Shares Held": "172328",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Shenandoah Telecommunications Co",
-   "Ticker": "SHEN",
-   "Identifier": "82312B106",
-   "Weight": "0.044205673",
-   "Market Value": "779217.01",
-   "Shares Held": "49537",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "State Street Global Advisors",
-   "Ticker": "-",
-   "Identifier": "857492862",
-   "Weight": "0.0919040387",
-   "Market Value": "1620000",
-   "Shares Held": "1620000",
-   "Asset Category": "STIV"
-  },
-  {
-   "Name": "Chicago Mercantile Exchange",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.0038171372",
-   "Market Value": "67284.99",
-   "Shares Held": "22",
-   "Asset Category": "DE"
-  },
-  {
-   "Name": "Angi Inc",
-   "Ticker": "ANGI",
-   "Identifier": "00183L201",
-   "Weight": "0.0160707237",
-   "Market Value": "283279.96",
-   "Shares Held": "38594",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Shutterstock Inc",
-   "Ticker": "SSTK",
-   "Identifier": "825690100",
-   "Weight": "0.0243938643",
-   "Market Value": "429992.64",
-   "Shares Held": "26592",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Liberty Media Corp-Liberty Formula One",
-   "Ticker": "-",
-   "Identifier": "531229755",
-   "Weight": "1.0983380954",
-   "Market Value": "19360495.35",
-   "Shares Held": "225253",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Electronic Arts Inc",
-   "Ticker": "EA",
-   "Identifier": "285512109",
-   "Weight": "2.0943998186",
-   "Market Value": "36918156.73",
-   "Shares Held": "182429",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Pinterest Inc",
-   "Ticker": "PINS",
-   "Identifier": "72352L106",
-   "Weight": "0.7040014057",
-   "Market Value": "12409490.3",
-   "Shares Held": "631205",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "ROBLOX Corp",
-   "Ticker": "RBLX",
-   "Identifier": "771049103",
-   "Weight": "1.6757555726",
-   "Market Value": "29538680.4",
-   "Shares Held": "534540",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Versant Media Group Inc",
-   "Ticker": "VSNT",
-   "Identifier": "925283103",
-   "Weight": "0.3487327614",
-   "Market Value": "6147140.88",
-   "Shares Held": "152952",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Cogent Communications Holdings Inc",
-   "Ticker": "CCOI",
-   "Identifier": "19239V302",
-   "Weight": "0.0670849106",
-   "Market Value": "1182511.2",
-   "Shares Held": "52208",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Roku Inc",
-   "Ticker": "ROKU",
-   "Identifier": "77543R102",
-   "Weight": "0.9172337445",
-   "Market Value": "16168154.16",
-   "Shares Held": "138711",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Grindr Inc",
-   "Ticker": "GRND",
-   "Identifier": "39854F101",
-   "Weight": "0.0299043046",
-   "Market Value": "527125.62",
-   "Shares Held": "39426",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "IAC Inc",
-   "Ticker": "IAC",
-   "Identifier": "44891N208",
-   "Weight": "0.1826478809",
-   "Market Value": "3219549.12",
-   "Shares Held": "72252",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Rumble Inc",
-   "Ticker": "RUM",
-   "Identifier": "78137L105",
-   "Weight": "0.0343365896",
-   "Market Value": "605253.87",
-   "Shares Held": "80379",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "New York Times Co/The",
-   "Ticker": "NYT",
-   "Identifier": "650111107",
-   "Weight": "0.7311283515",
-   "Market Value": "12887659.19",
-   "Shares Held": "163073",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "T-Mobile US Inc",
-   "Ticker": "TMUS",
-   "Identifier": "872590104",
-   "Weight": "2.6832963212",
-   "Market Value": "47298683.5",
-   "Shares Held": "241937",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Ibotta Inc",
-   "Ticker": "IBTA",
-   "Identifier": "451051106",
-   "Weight": "0.0325479174",
-   "Market Value": "573724.8",
-   "Shares Held": "16299",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Charter Communications Inc",
-   "Ticker": "CHTR",
-   "Identifier": "16119P108",
-   "Weight": "0.835656814",
-   "Market Value": "14730190.94",
-   "Shares Held": "89182",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Optimum Communications Inc",
-   "Ticker": "OPTU",
-   "Identifier": "02156K103",
-   "Weight": "0.023222047",
-   "Market Value": "409336.92",
-   "Shares Held": "259074",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "Liberty Global Ltd",
-   "Ticker": "-",
-   "Identifier": "000000000",
-   "Weight": "0.0914426805",
-   "Market Value": "1611867.6",
-   "Shares Held": "142140",
+   "Weight": "0.1714004548",
+   "Market Value": "2965772.88",
+   "Shares Held": "81837",
    "Asset Category": "EC"
   },
   {
    "Name": "Cars.com Inc",
    "Ticker": "CARS",
    "Identifier": "14575E105",
-   "Weight": "0.0373940078",
-   "Market Value": "659147.23",
-   "Shares Held": "59977",
+   "Weight": "0.037154223",
+   "Market Value": "642886.2",
+   "Shares Held": "54252",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Charter Communications Inc",
+   "Ticker": "CHTR",
+   "Identifier": "16119P108",
+   "Weight": "0.7262163207",
+   "Market Value": "12565851.54",
+   "Shares Held": "86673",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cinemark Holdings Inc",
+   "Ticker": "CNK",
+   "Identifier": "17243V102",
+   "Weight": "0.2335641279",
+   "Market Value": "4041402.09",
+   "Shares Held": "110451",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Clear Channel Outdoor Holdings Inc",
+   "Ticker": "CCO",
+   "Identifier": "18453H106",
+   "Weight": "0.0355713787",
+   "Market Value": "615497.96",
+   "Shares Held": "254338",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Cogent Communications Holdings Inc",
+   "Ticker": "CCOI",
+   "Identifier": "19239V302",
+   "Weight": "0.0402920451",
+   "Market Value": "697180.5",
+   "Shares Held": "51643",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Comcast Corp",
+   "Ticker": "CMCSA",
+   "Identifier": "20030N101",
+   "Weight": "3.3847624507",
+   "Market Value": "58567153.12",
+   "Shares Held": "2444372",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Trump Media & Technology Group Corp",
+   "Ticker": "DJT",
+   "Identifier": "25400Q105",
+   "Weight": "0.0958705939",
+   "Market Value": "1658866.12",
+   "Shares Held": "168242",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Walt Disney Co/The",
+   "Ticker": "DIS",
+   "Identifier": "254687106",
+   "Weight": "4.5042946975",
+   "Market Value": "77938620.83",
+   "Shares Held": "810257",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DoubleVerify Holdings Inc",
+   "Ticker": "DV",
+   "Identifier": "25862V105",
+   "Weight": "0.0945847106",
+   "Market Value": "1636616.25",
+   "Shares Held": "145477",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EchoStar Corp",
+   "Ticker": "ECHO",
+   "Identifier": "278768106",
+   "Weight": "0.6699575045",
+   "Market Value": "11592395.13",
+   "Shares Held": "137857",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Electronic Arts Inc",
+   "Ticker": "EA",
+   "Identifier": "285512109",
+   "Weight": "2.8343237294",
+   "Market Value": "49042812.98",
+   "Shares Held": "233693",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EverQuote Inc",
+   "Ticker": "EVER",
+   "Identifier": "30041R108",
+   "Weight": "0.0424769592",
+   "Market Value": "734986.46",
+   "Shares Held": "29143",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Meta Platforms Inc",
+   "Ticker": "META",
+   "Identifier": "30303M102",
+   "Weight": "20.6307446482",
+   "Market Value": "356977483.17",
+   "Shares Held": "641227",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fox Corp",
+   "Ticker": "-",
+   "Identifier": "35137L105",
+   "Weight": "0.7165247708",
+   "Market Value": "12398156.91",
+   "Shares Held": "212917",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Fox Corp",
+   "Ticker": "-",
+   "Identifier": "35137L204",
+   "Weight": "0.42976504",
+   "Market Value": "7436301.74",
+   "Shares Held": "143171",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Capital Corp",
+   "Ticker": "-",
+   "Identifier": "36164V800",
+   "Weight": "0.0468215803",
+   "Market Value": "810162.22",
+   "Shares Held": "34966",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "USA TODAY Co Inc",
+   "Ticker": "TDAY",
+   "Identifier": "36472T109",
+   "Weight": "0.0742074999",
+   "Market Value": "1284025.71",
+   "Shares Held": "147759",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Globalstar Inc",
+   "Ticker": "GSAT",
+   "Identifier": "378973507",
+   "Weight": "0.2630902484",
+   "Market Value": "4552297.86",
+   "Shares Held": "54597",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Gogo Inc",
+   "Ticker": "GOGO",
+   "Identifier": "38046C109",
+   "Weight": "0.0189188753",
+   "Market Value": "327356.7",
+   "Shares Held": "78315",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Grindr Inc",
+   "Ticker": "GRND",
+   "Identifier": "39854F101",
+   "Weight": "0.0362940678",
+   "Market Value": "628002.78",
+   "Shares Held": "36217",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "People Inc",
+   "Ticker": "-",
+   "Identifier": "44891N208",
+   "Weight": "0.1545182867",
+   "Market Value": "2673657.69",
+   "Shares Held": "64317",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "IDT Corp",
+   "Ticker": "IDT",
+   "Identifier": "448947507",
+   "Weight": "0.0827513948",
+   "Market Value": "1431862.26",
+   "Shares Held": "21741",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ibotta Inc",
+   "Ticker": "IBTA",
+   "Identifier": "451051106",
+   "Weight": "0.0144722533",
+   "Market Value": "250416",
+   "Shares Held": "10434",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "IMAX Corp",
+   "Ticker": "IMAX",
+   "Identifier": "45245E109",
+   "Weight": "0.1301976557",
+   "Market Value": "2252833.44",
+   "Shares Held": "47091",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Iridium Communications Inc",
+   "Ticker": "IRDM",
+   "Identifier": "46269C102",
+   "Weight": "0.2685244207",
+   "Market Value": "4646326.32",
+   "Shares Held": "98148",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Ziff Davis Inc",
+   "Ticker": "ZD",
+   "Identifier": "48123V102",
+   "Weight": "0.1104321256",
+   "Market Value": "1910826.92",
+   "Shares Held": "35999",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Broadband Corp",
+   "Ticker": "-",
+   "Identifier": "530307107",
+   "Weight": "0.0341816885",
+   "Market Value": "591451.9",
+   "Shares Held": "17365",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Broadband Corp",
+   "Ticker": "-",
+   "Identifier": "530307305",
+   "Weight": "0.2478227112",
+   "Market Value": "4288120.92",
+   "Shares Held": "125973",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Media Corp-Liberty Formula One",
+   "Ticker": "-",
+   "Identifier": "531229755",
+   "Weight": "1.2807751668",
+   "Market Value": "22161482.94",
+   "Shares Held": "225838",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lionsgate Studios Corp",
+   "Ticker": "LION",
+   "Identifier": "53626N102",
+   "Weight": "0.1658328816",
+   "Market Value": "2869436.16",
+   "Shares Held": "216072",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Live Nation Entertainment Inc",
+   "Ticker": "LYV",
+   "Identifier": "538034109",
+   "Weight": "1.6743900368",
+   "Market Value": "28972271.79",
+   "Shares Held": "166383",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Lumen Technologies Inc",
+   "Ticker": "LUMN",
+   "Identifier": "550241103",
+   "Weight": "0.3731330213",
+   "Market Value": "6456387.74",
+   "Shares Held": "1011973",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Madison Square Garden Entertainment Corp",
+   "Ticker": "MSGE",
+   "Identifier": "558256103",
+   "Weight": "0.1823134883",
+   "Market Value": "3154603.06",
+   "Shares Held": "40831",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Madison Square Garden Sports Corp",
+   "Ticker": "MSGS",
+   "Identifier": "55825T103",
+   "Weight": "0.3769077691",
+   "Market Value": "6521702.88",
+   "Shares Held": "16566",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sphere Entertainment Co",
+   "Ticker": "SPHR",
+   "Identifier": "55826T102",
+   "Weight": "0.22634308",
+   "Market Value": "3916455",
+   "Shares Held": "27340",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Magnite Inc",
+   "Ticker": "MGNI",
+   "Identifier": "55955D100",
+   "Weight": "0.1713034276",
+   "Market Value": "2964094",
+   "Shares Held": "153580",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Match Group Inc",
+   "Ticker": "MTCH",
+   "Identifier": "57667L107",
+   "Weight": "0.534312783",
+   "Market Value": "9245310.13",
+   "Shares Held": "234593",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MediaAlpha Inc",
+   "Ticker": "MAX",
+   "Identifier": "58450V104",
+   "Weight": "0.0237301736",
+   "Market Value": "410607.46",
+   "Shares Held": "33167",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Netflix Inc",
+   "Ticker": "NFLX",
+   "Identifier": "64110L106",
+   "Weight": "4.3203551775",
+   "Market Value": "74755882.25",
+   "Shares Held": "1042475",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "New York Times Co/The",
+   "Ticker": "NYT",
+   "Identifier": "650111107",
+   "Weight": "0.7213048709",
+   "Market Value": "12480867.84",
+   "Shares Held": "166656",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "News Corp",
+   "Ticker": "-",
+   "Identifier": "65249B109",
+   "Weight": "0.6188663281",
+   "Market Value": "10708355.32",
+   "Shares Held": "388547",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Newsmax Inc",
+   "Ticker": "-",
+   "Identifier": "65250K105",
+   "Weight": "0.0201202932",
+   "Market Value": "348145.05",
+   "Shares Held": "45155",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Nexstar Media Group Inc",
+   "Ticker": "NXST",
+   "Identifier": "65336K103",
+   "Weight": "0.3361080334",
+   "Market Value": "5815737.72",
+   "Shares Held": "30524",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Nextdoor Holdings Inc",
+   "Ticker": "NXDR",
+   "Identifier": "65345M108",
+   "Weight": "0.0324142549",
+   "Market Value": "560869.68",
+   "Shares Held": "252644",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Omnicom Group Inc",
+   "Ticker": "OMC",
+   "Identifier": "681919106",
+   "Weight": "1.3749865593",
+   "Market Value": "23791639.6",
+   "Shares Held": "302308",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Paramount Skydance Corp",
+   "Ticker": "PSKY",
+   "Identifier": "69932A204",
+   "Weight": "0.1576862241",
+   "Market Value": "2728473.08",
+   "Shares Held": "342773",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Pinterest Inc",
+   "Ticker": "PINS",
+   "Identifier": "72352L106",
+   "Weight": "0.6756587751",
+   "Market Value": "11691045.24",
+   "Shares Held": "486924",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "QuinStreet Inc",
+   "Ticker": "QNST",
+   "Identifier": "74874Q100",
+   "Weight": "0.0499366597",
+   "Market Value": "864063",
+   "Shares Held": "55746",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Reddit Inc",
+   "Ticker": "RDDT",
+   "Identifier": "75734B100",
+   "Weight": "0.9936062025",
+   "Market Value": "17192546.73",
+   "Shares Held": "122219",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ROBLOX Corp",
+   "Ticker": "RBLX",
+   "Identifier": "771049103",
+   "Weight": "1.2996076742",
+   "Market Value": "22487345.2",
+   "Shares Held": "631667",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Roku Inc",
+   "Ticker": "ROKU",
+   "Identifier": "77543R102",
+   "Weight": "1.162079278",
+   "Market Value": "20107666.64",
+   "Shares Held": "138664",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RUM Group Inc",
+   "Ticker": "-",
+   "Identifier": "78137L105",
+   "Weight": "0.0269447909",
+   "Market Value": "466230.56",
+   "Shares Held": "79834",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Scholastic Corp",
+   "Ticker": "SCHL",
+   "Identifier": "807066105",
+   "Weight": "0.0344498299",
+   "Market Value": "596091.6",
+   "Shares Held": "14664",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Shenandoah Telecommunications Co",
+   "Ticker": "SHEN",
+   "Identifier": "82312B106",
+   "Weight": "0.0324148635",
+   "Market Value": "560880.21",
+   "Shares Held": "46779",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Shutterstock Inc",
+   "Ticker": "SSTK",
+   "Identifier": "825690100",
+   "Weight": "0.0082096125",
+   "Market Value": "142052.4",
+   "Shares Held": "26306",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sinclair Inc",
+   "Ticker": "SBGI",
+   "Identifier": "829242106",
+   "Weight": "0.0291369463",
+   "Market Value": "504161.82",
+   "Shares Held": "36693",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Sirius XM Holdings Inc",
+   "Ticker": "SIRI",
+   "Identifier": "829933100",
+   "Weight": "0.3340813019",
+   "Market Value": "5780668.82",
+   "Shares Held": "195161",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Snap Inc",
+   "Ticker": "SNAP",
+   "Identifier": "83304A106",
+   "Weight": "0.319700559",
+   "Market Value": "5531836.24",
+   "Shares Held": "1179496",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Space Exploration Technologies Corp",
+   "Ticker": "SPCX",
+   "Identifier": "84615Q103",
+   "Weight": "1.5893704889",
+   "Market Value": "27501163.27",
+   "Shares Held": "253771",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Stagwell Inc",
+   "Ticker": "STGW",
+   "Identifier": "85256A109",
+   "Weight": "0.0588881185",
+   "Market Value": "1018951.7",
+   "Shares Held": "120586",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TKO Group Holdings Inc",
+   "Ticker": "TKO",
+   "Identifier": "87256C101",
+   "Weight": "0.7387169427",
+   "Market Value": "12782152.05",
+   "Shares Held": "70305",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "T-Mobile US Inc",
+   "Ticker": "TMUS",
+   "Identifier": "872590104",
+   "Weight": "3.22466173",
+   "Market Value": "55796901.57",
+   "Shares Held": "323067",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Take-Two Interactive Software Inc",
+   "Ticker": "TTWO",
+   "Identifier": "874054109",
+   "Weight": "2.6198529794",
+   "Market Value": "45331787.04",
+   "Shares Held": "186612",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Telephone and Data Systems Inc",
+   "Ticker": "TDS",
+   "Identifier": "879433829",
+   "Weight": "0.1972045212",
+   "Market Value": "3412265.28",
+   "Shares Held": "101616",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Trade Desk Inc/The",
+   "Ticker": "TTD",
+   "Identifier": "88339J105",
+   "Weight": "0.4607841259",
+   "Market Value": "7973030.56",
+   "Shares Held": "441964",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "TripAdvisor Inc",
+   "Ticker": "TRIP",
+   "Identifier": "896945201",
+   "Weight": "0.0844316265",
+   "Market Value": "1460935.61",
+   "Shares Held": "103137",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Array Digital Infrastructure Inc",
+   "Ticker": "AD",
+   "Identifier": "911684108",
+   "Weight": "0.0341389391",
+   "Market Value": "590712.2",
+   "Shares Held": "16955",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Uniti Group Inc",
+   "Ticker": "UNIT",
+   "Identifier": "912932100",
+   "Weight": "0.0816262548",
+   "Market Value": "1412393.76",
+   "Shares Held": "145308",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Verizon Communications Inc",
+   "Ticker": "VZ",
+   "Identifier": "92343V104",
+   "Weight": "4.7463299476",
+   "Market Value": "82126600.27",
+   "Shares Held": "1754467",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Versant Media Group Inc",
+   "Ticker": "VSNT",
+   "Identifier": "925283103",
+   "Weight": "0.3169387539",
+   "Market Value": "5484048.23",
+   "Shares Held": "152377",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "State Street Global Advisors",
+   "Ticker": "-",
+   "Identifier": "857492862",
+   "Weight": "0.0785982703",
+   "Market Value": "1360000",
+   "Shares Held": "1360000",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Warner Bros Discovery Inc",
+   "Ticker": "WBD",
+   "Identifier": "934423104",
+   "Weight": "2.9677652559",
+   "Market Value": "51351775.7",
+   "Shares Held": "1952539",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "John Wiley & Sons Inc",
+   "Ticker": "-",
+   "Identifier": "968223206",
+   "Weight": "0.1232417642",
+   "Market Value": "2132474.4",
+   "Shares Held": "40852",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Yelp Inc",
+   "Ticker": "YELP",
+   "Identifier": "985817105",
+   "Weight": "0.0834011118",
+   "Market Value": "1443104.43",
+   "Shares Held": "54601",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ZoomInfo Technologies Inc",
+   "Ticker": "GTM",
+   "Identifier": "98980F104",
+   "Weight": "0.0495841638",
+   "Market Value": "857963.7",
+   "Shares Held": "259989",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Chicago Mercantile Exchange",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "-0.006160581",
+   "Market Value": "-106597.64",
+   "Shares Held": "26",
+   "Asset Category": "DE"
+  },
+  {
+   "Name": "Liberty Global Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.1075423284",
+   "Market Value": "1860824.24",
+   "Shares Held": "175384",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Global Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0793430167",
+   "Market Value": "1372886.48",
+   "Shares Held": "132518",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "NIQ Global Intelligence Plc",
+   "Ticker": "NIQ",
+   "Identifier": "000000000",
+   "Weight": "0.0412936466",
+   "Market Value": "714511.39",
+   "Shares Held": "63967",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Latin America Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0156663199",
+   "Market Value": "271077.15",
+   "Shares Held": "33261",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Liberty Latin America Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0626485366",
+   "Market Value": "1084018.89",
+   "Shares Held": "134327",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "Taboola.com Ltd",
+   "Ticker": "-",
+   "Identifier": "000000000",
+   "Weight": "0.0390780573",
+   "Market Value": "676174.65",
+   "Shares Held": "134965",
    "Asset Category": "EC"
   }
  ]

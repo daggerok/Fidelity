@@ -4,9 +4,9 @@
  "category": "Factor",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLRG",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004211/000003540226004211-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004211/primary_doc.xml",
-  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FLRG?period1=0&period2=1790479055&interval=1d&events=div%7Csplit",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006303/000003540226006303-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006303/primary_doc.xml",
+  "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FLRG",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
  "expenseRatio": {
@@ -16,47 +16,62 @@
  "nav": {
   "display": "—",
   "value": null,
-  "asOfDate": "Sep 25 2026"
+  "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$41.61",
-  "value": 41.6141,
-  "asOfDate": "Sep 25 2026"
+  "display": "$41.66",
+  "value": 41.6591,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$283.22 M",
-  "value": 283215076.0199999,
-  "asOfDate": "Apr 30 2026",
+  "display": "$291.79 M",
+  "value": 291788055.2099999,
+  "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Sep 25 2026",
-   "mo1": -2.34,
-   "mo1Text": "-2.34%",
-   "qtd": 2.13,
-   "qtdText": "2.13%",
-   "ytd": 10.78,
-   "ytdText": "10.78%",
-   "yr1": 10.12,
-   "yr1Text": "10.12%",
-   "yr3": 19.41,
-   "yr3Text": "19.41%",
-   "yr5": 11.96,
-   "yr5Text": "11.96%",
+   "asOfDate": "Oct 02 2026",
+   "mo1": -1.42,
+   "mo1Text": "-1.42%",
+   "qtd": 0.53,
+   "qtdText": "0.53%",
+   "ytd": 10.89,
+   "ytdText": "10.89%",
+   "yr1": 9.69,
+   "yr1Text": "9.69%",
+   "yr3": 20.01,
+   "yr3Text": "20.01%",
+   "yr5": 12.4,
+   "yr5Text": "12.40%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 15.17,
-   "sinceInceptionText": "15.17%"
+   "sinceInception": 15.14,
+   "sinceInceptionText": "15.14%"
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
-   "null": null
+   "asOfDate": "Sep 30 2026",
+   "mo1": null,
+   "mo1Text": "—",
+   "qtd": null,
+   "qtdText": "—",
+   "ytd": null,
+   "ytdText": "—",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
+   "yr5": null,
+   "yr5Text": "—",
+   "yr10": null,
+   "yr10Text": "—",
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   }
  },
  "distributions": {
@@ -175,7 +190,7 @@
   ],
   "pageSize": 250,
   "totalRows": 102,
-  "asOf": "Apr 30 2026"
+  "asOf": "Jul 31 2026"
  },
  "history": {
   "pages": [
@@ -183,14 +198,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1512,
-  "asOf": "Sep 25 2026"
+  "totalRows": 1517,
+  "asOf": "Oct 02 2026"
  },
  "seed": {
   "seriesId": "S000068350",
   "seriesName": "Fidelity U.S. Multifactor ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004211"
+  "accession": "0000035402-26-006303"
  }
 }

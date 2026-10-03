@@ -2,7 +2,7 @@
  "ticker": "FBND",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3008,
+ "totalRows": 3013,
  "headers": [
   "Date",
   "Close",
@@ -13,50 +13,80 @@
   {
    "Date": "Sep 16 2026",
    "Close": "44.169998",
-   "Adj Close": "44.169998",
+   "Adj Close": "44",
    "Volume": "4112700"
   },
   {
    "Date": "Sep 17 2026",
    "Close": "44.400002",
-   "Adj Close": "44.400002",
+   "Adj Close": "44.23",
    "Volume": "3541000"
   },
   {
    "Date": "Sep 18 2026",
    "Close": "44.220001",
-   "Adj Close": "44.220001",
+   "Adj Close": "44.05",
    "Volume": "3817300"
   },
   {
    "Date": "Sep 21 2026",
    "Close": "44.330002",
-   "Adj Close": "44.330002",
+   "Adj Close": "44.16",
    "Volume": "3955700"
   },
   {
    "Date": "Sep 22 2026",
    "Close": "44.34",
-   "Adj Close": "44.34",
+   "Adj Close": "44.17",
    "Volume": "4245700"
   },
   {
    "Date": "Sep 23 2026",
    "Close": "43.950001",
-   "Adj Close": "43.950001",
+   "Adj Close": "43.78",
    "Volume": "4932600"
   },
   {
    "Date": "Sep 24 2026",
    "Close": "43.720001",
-   "Adj Close": "43.720001",
+   "Adj Close": "43.55",
    "Volume": "5144800"
   },
   {
    "Date": "Sep 25 2026",
    "Close": "43.82",
-   "Adj Close": "43.82",
+   "Adj Close": "43.65",
    "Volume": "6149700"
+  },
+  {
+   "Date": "Sep 28 2026",
+   "Close": "43.57",
+   "Adj Close": "43.4",
+   "Volume": "4395400"
+  },
+  {
+   "Date": "Sep 29 2026",
+   "Close": "43.349998",
+   "Adj Close": "43.35",
+   "Volume": "4710800"
+  },
+  {
+   "Date": "Sep 30 2026",
+   "Close": "43.299999",
+   "Adj Close": "43.3",
+   "Volume": "4064700"
+  },
+  {
+   "Date": "Oct 01 2026",
+   "Close": "43.360001",
+   "Adj Close": "43.36",
+   "Volume": "6310000"
+  },
+  {
+   "Date": "Oct 02 2026",
+   "Close": "43.279999",
+   "Adj Close": "43.28",
+   "Volume": "7132100"
   }
  ]
 }
