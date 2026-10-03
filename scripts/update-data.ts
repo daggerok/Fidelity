@@ -134,7 +134,7 @@ function outputCreateReporter(root: URL | string, total: number) {
 // JSON API under ./api/fidelity, following the daggerok/iShares and
 // daggerok/SPDR repository design (no dependencies, Bun only).
 
-import { mkdir, readFile, writeFile, readdir, rm, appendFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, readdir, rm, appendFile, rename } from 'node:fs/promises';
 import { HELD_TICKERS } from '../data/held-tickers';
 
 // --- TLS trust store (identical in every ETF repo) ---
@@ -673,14 +673,28 @@ Examples:
 // now each get their own paced lane, so concurrency actually multiplies
 // throughput as documented instead of only overlapping wait time.
 let nextRequestAtLanes: number[] = [0];
+let softDeadlineMs = 25 * 60_000; // the workflow times out at 30 min: stop taking new funds well before, and still write the index
+
+/** Test hook: shorten (or exhaust) the soft run deadline. */
+export function setSoftDeadline(ms: number): void {
+  softDeadlineMs = ms;
+}
 let requestSleepMs = REQUEST_SLEEP_FALLBACK * 1000;
 
-async function paceRequests(): Promise<void> {
+/** Sizes the per-worker pacing lanes (one lane per CONCURRENCY worker, REQUEST_SLEEP apart). */
+export function configureRequestLanes(lanes: number, sleepSeconds: number): void {
+  requestSleepMs = Math.max(0, sleepSeconds) * 1000;
+  nextRequestAtLanes = new Array(Math.max(1, lanes)).fill(0);
+}
+
+/** Reserves the earliest lane slot synchronously, then waits for it: concurrent callers can never share a slot. */
+export async function paceRequests(): Promise<void> {
+  const now = Date.now();
   let lane = 0;
   for (let i = 1; i < nextRequestAtLanes.length; i++) if (nextRequestAtLanes[i] < nextRequestAtLanes[lane]) lane = i;
-  const waitFor = nextRequestAtLanes[lane] - Date.now();
+  const waitFor = nextRequestAtLanes[lane] - now;
+  nextRequestAtLanes[lane] = Math.max(now, nextRequestAtLanes[lane]) + requestSleepMs;
   if (waitFor > 0) await sleep(waitFor);
-  nextRequestAtLanes[lane] = Date.now() + requestSleepMs;
 }
 
 class HttpError extends Error {
@@ -693,18 +707,23 @@ class HttpError extends Error {
   }
 }
 
-export async function fetchWithRetry(
+/** Per-attempt time budget for headers and body together. */
+export const FETCH_TIMEOUT_MS = 45_000;
+
+async function fetchAttempts<T>(
   url: string,
   label: string,
-  init: RequestInit = {},
-  maxRetries = 2,
-): Promise<Response> {
+  init: RequestInit,
+  maxRetries: number,
+  timeoutMs: number,
+  consume: (response: Response) => Promise<T>,
+): Promise<T> {
   let lastError: unknown = null;
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     await paceRequests();
     try {
-      const response = await fetch(url, { redirect: 'follow', ...init });
-      if (response.ok) return response;
+      const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), ...init });
+      if (response.ok) return await consume(response);
       const retryable = [403, 408, 425, 429].includes(response.status) || response.status >= 500;
       if (!retryable) throw new HttpError(`${label}: HTTP ${response.status} ${response.statusText}`, response.status, false);
       lastError = new HttpError(`${label}: HTTP ${response.status} (attempt ${attempt + 1} of ${maxRetries + 1})`, response.status, true);
@@ -717,6 +736,16 @@ export async function fetchWithRetry(
   throw lastError instanceof Error ? lastError : new Error(`${label}: failed`);
 }
 
+export function fetchWithRetry(
+  url: string,
+  label: string,
+  init: RequestInit = {},
+  maxRetries = 2,
+  timeoutMs = FETCH_TIMEOUT_MS,
+): Promise<Response> {
+  return fetchAttempts(url, label, init, maxRetries, timeoutMs, async (response) => response);
+}
+
 function secHeaders(config: UpdaterConfig): Record<string, string> {
   return { 'User-Agent': config.secUa, Accept: 'application/json,*/*' };
 }
@@ -726,8 +755,8 @@ function yahooHeaders(): Record<string, string> {
 }
 
 async function fetchText(url: string, label: string, headers: Record<string, string>, config: UpdaterConfig): Promise<string> {
-  const response = await fetchWithRetry(url, label, { headers }, config.maxRetries);
-  return await response.text();
+  // The body is read inside the retry loop, so a stalled download is aborted and retried too.
+  return fetchAttempts(url, label, { headers }, config.maxRetries, FETCH_TIMEOUT_MS, (response) => response.text());
 }
 
 async function fetchJson(url: string, label: string, headers: Record<string, string>, config: UpdaterConfig): Promise<JsonRecord> {
@@ -982,8 +1011,15 @@ async function writeTextIfChanged(file: URL, value: string): Promise<boolean> {
     // First write.
   }
   if (previous === value) return false;
-  await writeFile(file, value, 'utf8');
+  await writeAtomic(file, value);
   return true;
+}
+
+/** Writes through a temp file and a rename, so a killed run never leaves a half-written JSON file behind. */
+async function writeAtomic(file: URL, text: string): Promise<void> {
+  const tmp = new URL(`${file.href}.tmp`);
+  await writeFile(tmp, text, 'utf8');
+  await rename(tmp, file);
 }
 
 // ---------------------------------------------------------------------------
@@ -1159,9 +1195,9 @@ export function parseChart(payload: JsonRecord): ParsedChart {
   };
 }
 
-function chartUrl(ticker: string, config: UpdaterConfig): string {
+export function chartUrl(ticker: string, config: Pick<UpdaterConfig, 'historyRange'>, nowMs = Date.now()): string {
   // Explicit period1/period2: `range=max` silently downgrades to monthly bars.
-  const period2 = Math.floor(Date.now() / 1000);
+  const period2 = Math.floor(nowMs / 1000);
   let period1 = 0; // "max"
   const yearsMatch = /^(\d+)y$/i.exec(config.historyRange);
   if (yearsMatch) period1 = Math.floor(period2 - Number(yearsMatch[1]) * 365.25 * 86_400);
@@ -1428,7 +1464,7 @@ async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
     // First write.
   }
   if (previous === next || (previous !== null && samePublishedContent(previous, value))) return false;
-  await writeFile(file, next, 'utf8');
+  await writeAtomic(file, next);
   return true;
 }
 
@@ -1439,6 +1475,7 @@ async function writePages(
   headers: string[],
   rows: JsonRecord[],
   pageSize: number,
+  prune = true,
 ): Promise<{ pages: string[]; pageSize: number; totalRows: number }> {
   await mkdir(new URL(`${kind}/`, dir), { recursive: true });
   const pages: string[] = [];
@@ -1458,7 +1495,7 @@ async function writePages(
       pages.push(name);
     }
   }
-  await removeStalePages(dir, kind, new Set(pages));
+  if (prune) await removeStalePages(dir, kind, new Set(pages));
   return { pages, pageSize, totalRows: rows.length };
 }
 
@@ -1675,11 +1712,11 @@ async function processFund(
 
   const holdingsHeaders = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category'];
   const holdingsRows: JsonRecord[] = nport ? nport.holdings : await readPreviousSheet(ticker, 'holdings');
-  const holdingsManifest = await writePages(fundDir, ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize);
+  const holdingsManifest = await writePages(fundDir, ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize, false);
 
   const historyHeaders = ['Date', 'Close', 'Adj Close', 'Volume'];
   const history = chart ? historyRows(chart) : await readPreviousSheet(ticker, 'history');
-  const historyManifest = await writePages(fundDir, ticker, 'history', historyHeaders, history, config.historyPageSize);
+  const historyManifest = await writePages(fundDir, ticker, 'history', historyHeaders, history, config.historyPageSize, false);
 
   const previousDistributions = (previousMeta?.distributions as JsonRecord | undefined) ?? {};
   const distributions = chart ? distributionRows(chart) : ((previousDistributions.rows as string[][]) || []);
@@ -1756,7 +1793,10 @@ async function processFund(
       accession: accession || ((previousMeta?.seed as JsonRecord | undefined)?.accession ?? null),
     },
   };
+  // Order: pages first, then meta.json, then stale pages go (a crash in between never leaves meta pointing at removed pages).
   await writeIfChanged(new URL('meta.json', fundDir), meta);
+  await removeStalePages(fundDir, 'holdings', new Set(holdingsManifest.pages));
+  await removeStalePages(fundDir, 'history', new Set(historyManifest.pages));
 
   const monthEnd = (returnsData?.monthEnd as JsonRecord) || {};
   const fundRow: JsonRecord = {
@@ -1939,8 +1979,7 @@ export async function main(env: Record<string, string | undefined> = process.env
   if (env === process.env) process.env.VERBOSE = controls.VERBOSE ?? '';
   if (env === process.env) installSystemCa((controls.USE_SYSTEM_CA ?? 'auto').trim().toLowerCase());
   const config = readConfig(controls);
-  requestSleepMs = Math.max(0, config.requestSleep) * 1000;
-  nextRequestAtLanes = new Array(Math.max(1, config.concurrency)).fill(0);
+  configureRequestLanes(config.concurrency, config.requestSleep);
 
   outputPrintConfig('Fidelity', config);
   console.log('');
@@ -2017,50 +2056,53 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   const previousIndex = await readPreviousIndex();
   const state = await readUpdateState();
-  const cursor = state?.cursor || null;
-  const cursorIndex = cursor ? seedFunds.findIndex((fund) => fund.ticker === cursor) : -1;
+  // TICKERS is strict and scopes the run: unknown tickers are an error and unselected
+  // funds neither count against MAX_FETCHES nor move the cursor.
+  const unknown = config.tickers.filter((ticker) => !seedFunds.some((fund) => fund.ticker === ticker));
+  if (unknown.length) throw new Error(`TICKERS: not a Fidelity ETF in the seed: ${unknown.join(', ')}`);
+  const selected = config.tickers.length ? seedFunds.filter((fund) => config.tickers.includes(fund.ticker)) : seedFunds;
+  const cursor = config.maxFetches > 0 && !config.tickers.length ? state?.cursor || null : null;
+  const cursorIndex = cursor ? selected.findIndex((fund) => fund.ticker === cursor) : -1;
   const ordered =
     cursorIndex >= 0
-      ? seedFunds.slice(cursorIndex + 1).concat(seedFunds.slice(0, cursorIndex + 1))
-      : seedFunds.slice();
+      ? selected.slice(cursorIndex + 1).concat(selected.slice(0, cursorIndex + 1))
+      : selected.slice();
 
   const queue = ordered.map((seed) => ({ seed }));
   const results: JsonRecord[] = [];
   let processed = 0;
-  let lastProcessedTicker: string | null = cursor;
+  let lastDispatchedTicker: string | null = cursor;
   let failures = 0;
+  const deadline = Date.now() + softDeadlineMs;
+  let deadlineHit = false;
 
-  outputPrintFilter(seedFunds.length, seedFunds.length, outputHasOutputFilters(config));
+  outputPrintFilter(selected.length, seedFunds.length, outputHasOutputFilters(config));
   const output = outputCreateReporter(API_ROOT, config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length);
   async function worker(): Promise<void> {
     for (;;) {
+      if (config.maxFetches > 0 && processed >= config.maxFetches) return;
+      if (Date.now() > deadline) { deadlineHit = true; return; }
       const item = queue.shift();
       if (!item) return;
-      if (config.maxFetches > 0 && processed >= config.maxFetches) return;
       const seed = item.seed;
       const previous = previousIndex.get(seed.ticker) || {};
       const entry = accessionBySeries.get(seriesKeyOf(seed)) || null;
       processed += 1;
+      lastDispatchedTicker = seed.ticker;
       const before = await output.before(seed.ticker);
       try {
         const row = await processFund(seed, entry ? entry.accession : null, config, previous, resolver);
-        if (row) {
-          results.push(row);
-          lastProcessedTicker = seed.ticker;
-        }
+        if (row) results.push(row);
         await output.result(seed.ticker, before, row ? undefined : 'skipped');
       } catch (error) {
         failures += 1;
         await output.result(seed.ticker, before, 'failed', String(error));
       }
-      if (config.maxFetches > 0 && processed >= config.maxFetches) {
-        console.log(`[ ${'cursor'.padEnd(9)}] batch of ${config.maxFetches} reached — rerun to continue after ${lastProcessedTicker}`);
-        return;
-      }
     }
   }
 
   await Promise.all(Array.from({ length: Math.max(1, config.concurrency) }, () => worker()));
+  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(9)}] soft run deadline reached: remaining funds keep their previously published data`);
 
   // Funds not selected for a successful update keep their previously published rows.
   const keptFromPrevious = seedFunds
@@ -2101,12 +2143,17 @@ export async function main(env: Record<string, string | undefined> = process.env
     }
   }
 
-  await writeUpdateState(lastProcessedTicker);
+  // Only an unscoped bounded run owns the cursor; full passes reset it, TICKERS runs never touch it.
+  if (!config.tickers.length) await writeUpdateState(config.maxFetches > 0 ? lastDispatchedTicker : null);
 
   console.log('');
   console.log(`[ ${'done'.padEnd(9)}] ${results.length} funds updated, ${keptFromPrevious.length} kept from previous runs, ${failures} failures`);
   console.log(`[ ${'done'.padEnd(9)}] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  console.log(`[ ${'cursor'.padEnd(9)}] ${lastProcessedTicker ? `next run continues after ${lastProcessedTicker}` : 'full pass complete (cursor reset)'}`);
+  console.log(`[ ${'cursor'.padEnd(9)}] ${config.maxFetches > 0 && !config.tickers.length && lastDispatchedTicker ? `next run continues after ${lastDispatchedTicker}` : 'cursor reset'}`);
+  if (failures > 0 && results.length === 0) {
+    console.error(`[ ${'failed'.padEnd(9)}] every selected fund failed`);
+    process.exitCode = 1;
+  }
 
   if (process.env.GITHUB_STEP_SUMMARY) {
     await appendFile(
