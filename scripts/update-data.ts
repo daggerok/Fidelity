@@ -311,12 +311,14 @@ const YAHOO_BROWSER_UA =
 let API_ROOT = new URL('../api/fidelity/', import.meta.url);
 let INDEX_FILE = new URL('index.json', API_ROOT);
 let STATE_FILE = new URL('update-state.json', API_ROOT);
+let MISSES_FILE = new URL('../data/held-ticker-misses.json', import.meta.url);
 
 /** Test hook: point every read and write of the feed at another directory (a trailing slash URL). */
 export function useOutputRoot(root: URL): void {
   API_ROOT = root;
   INDEX_FILE = new URL('index.json', API_ROOT);
   STATE_FILE = new URL('update-state.json', API_ROOT);
+  MISSES_FILE = new URL('held-ticker-misses.json', API_ROOT); // never touch the repo's data/ from a test run
 }
 
 const HOLDINGS_PAGE_SIZE_FALLBACK = 250;
@@ -874,21 +876,52 @@ export function pickSearchTicker(name: string, payload: JsonRecord): string | nu
 
 export type TickerSearchFn = (name: string) => Promise<string | null>;
 
+/** A search miss is not repeated before this many days (state file data/held-ticker-misses.json). */
+export const MISS_TTL_DAYS = 30;
+/** Misses nobody refreshed for this long (the holding left every fund) are dropped from the state file. */
+export const MISS_RETENTION_DAYS = 90;
+
+// N-PORT asset categories that cannot have an exchange ticker of their own:
+// debt, every ABS flavour, loans, short-term investment vehicles, repos, real
+// estate and the derivative classes. Only equity (EC), preferred (EP) and
+// unknown codes go to the name search. The seed lookup still runs for every
+// row, so issuer names already mapped (bond rows of a listed issuer) keep their ticker.
+const NO_TICKER_CATEGORIES = new Set(['DBT', 'LON', 'STIV', 'RA', 'RE', 'DCO', 'DCR', 'DE', 'DFE', 'DIR', 'DO', 'SN']);
+
+export function canHaveListedTicker(assetCategory: unknown): boolean {
+  const code = String(assetCategory ?? '').trim().toUpperCase();
+  return !(NO_TICKER_CATEGORIES.has(code) || code.startsWith('ABS-'));
+}
+
+const DAY_MS = 86_400_000;
+const isoDay = (ms: number): string => new Date(ms).toISOString().slice(0, 10);
+function daysBetween(fromIso: string, toIso: string): number {
+  return (Date.parse(`${toIso}T00:00:00Z`) - Date.parse(`${fromIso}T00:00:00Z`)) / DAY_MS;
+}
+
 // Memoized name -> ticker lookup over the seed plus live Yahoo searches.
 // Unknown names are searched at most once per run (hits are learned into the
 // index, misses are cached) and can never throw: resolution degrades to "-".
+// Genuine misses (a valid answer without a strict match) are also remembered
+// across runs in `misses` (normalized name -> last tried date) for MISS_TTL_DAYS;
+// failed requests (offline, throttled) are never persisted as misses.
 export class TickerResolver {
   private readonly byName = new Map<string, string>();
   private readonly byNorm = new Map<string, string>();
   private readonly byNormCore = new Map<string, string>();
   private readonly inFlight = new Map<string, Promise<string | null>>();
   private readonly missed = new Map<string, true>();
+  private readonly misses = new Map<string, string>();
   readonly fresh: Array<{ name: string; ticker: string }> = [];
+  readonly stats = { searches: 0, skippedCategory: 0, skippedKnownMiss: 0 };
   private readonly search: TickerSearchFn | null;
+  private readonly today: string;
 
-  constructor(seed: Record<string, string>, search: TickerSearchFn | null = null) {
+  constructor(seed: Record<string, string>, search: TickerSearchFn | null = null, persistedMisses: Record<string, string> = {}, today: string = isoDay(Date.now())) {
     this.search = search;
+    this.today = today;
     for (const [name, ticker] of Object.entries(seed)) this.learn(name, ticker, false);
+    for (const [norm, date] of Object.entries(persistedMisses)) if (/^\d{4}-\d{2}-\d{2}$/.test(String(date))) this.misses.set(norm, String(date));
   }
 
   get size(): number {
@@ -925,21 +958,42 @@ export class TickerResolver {
     return this.byNorm.get(norm) ?? this.byNormCore.get(norm.replace(/ /g, '')) ?? null;
   }
 
-  async resolve(name: string): Promise<string> {
+  private missIsFresh(norm: string): boolean {
+    const date = this.misses.get(norm);
+    return date !== undefined && daysBetween(date, this.today) < MISS_TTL_DAYS;
+  }
+
+  async resolve(name: string, assetCategory?: unknown): Promise<string> {
     const known = this.lookup(name);
     if (known) return known;
     const norm = normalizeHoldingName(name);
     if (!norm || !this.search || this.missed.has(norm)) return '-';
+    if (!canHaveListedTicker(assetCategory)) {
+      this.stats.skippedCategory += 1;
+      return '-';
+    }
+    if (this.missIsFresh(norm)) {
+      this.stats.skippedKnownMiss += 1;
+      return '-';
+    }
     const search = this.search; // narrowed to non-null; closures cannot see `this` narrowing
     const inflight = this.inFlight.get(norm) ?? (async () => {
       let symbol: string | null = null;
+      let failed = false;
+      this.stats.searches += 1;
       try {
         symbol = await search(name);
       } catch {
         symbol = null; // offline/throttled: keep "-" instead of failing the fund
+        failed = true;
       }
-      if (symbol) this.learn(name, symbol, true);
-      else this.missed.set(norm, true);
+      if (symbol) {
+        this.learn(name, symbol, true);
+        this.misses.delete(norm); // a hit overrides an older miss
+      } else {
+        this.missed.set(norm, true);
+        if (!failed) this.misses.set(norm, this.today);
+      }
       this.inFlight.delete(norm);
       return symbol;
     })();
@@ -953,13 +1007,24 @@ export class TickerResolver {
     for (const { name, ticker } of this.fresh) out[name] = ticker;
     return out;
   }
+
+  /** Misses to persist: still-retained entries, minus names that are mapped by now. */
+  missEntries(): Record<string, string> {
+    const out: Record<string, string> = {};
+    for (const [norm, date] of this.misses) {
+      if (daysBetween(date, this.today) >= MISS_RETENTION_DAYS) continue;
+      if (this.lookup(norm)) continue;
+      out[norm] = date;
+    }
+    return out;
+  }
 }
 
 async function attachHoldingTickers(nport: ParsedNport, resolver: TickerResolver): Promise<number> {
   let resolved = 0;
   for (const holding of nport.holdings) {
     if (holding.Ticker !== '-') continue;
-    const symbol = await resolver.resolve(holding.Name);
+    const symbol = await resolver.resolve(holding.Name, holding['Asset Category']);
     if (symbol !== '-') {
       holding.Ticker = symbol;
       resolved += 1;
@@ -973,6 +1038,21 @@ async function attachHoldingTickers(nport: ParsedNport, resolver: TickerResolver
 // ---------------------------------------------------------------------------
 
 const HELD_TICKERS_FILE = new URL('../data/held-tickers.ts', import.meta.url);
+/** Sorted, one entry per line: normalized holding name -> last tried date. */
+export function formatMisses(entries: Record<string, string>): string {
+  const keys = Object.keys(entries).filter(Boolean).sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
+  if (!keys.length) return '{}\n';
+  return `{\n${keys.map((key) => `  ${JSON.stringify(key)}: ${JSON.stringify(entries[key])}`).join(',\n')}\n}\n`;
+}
+
+async function readMisses(): Promise<Record<string, string>> {
+  try {
+    const parsed = JSON.parse(await readFile(MISSES_FILE, 'utf8'));
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? (parsed as Record<string, string>) : {};
+  } catch {
+    return {}; // missing or unreadable: every name is simply searched again
+  }
+}
 
 export function formatHeldTickersSeed(entries: Record<string, string>): string {
   const rows = Object.entries(entries)
@@ -1003,14 +1083,14 @@ export function formatHeldTickersSeed(entries: Record<string, string>): string {
   return lines.join('\n');
 }
 
-async function writeTextIfChanged(file: URL, value: string): Promise<boolean> {
+async function writeTextIfChanged(file: URL, value: string, skipFirstEmpty = false): Promise<boolean> {
   let previous: string | null = null;
   try {
     previous = await readFile(file, 'utf8');
   } catch {
     // First write.
   }
-  if (previous === value) return false;
+  if (previous === value || (skipFirstEmpty && previous === null && value === '{}\n')) return false;
   await writeAtomic(file, value);
   return true;
 }
@@ -2024,7 +2104,9 @@ export async function main(env: Record<string, string | undefined> = process.env
     const payload = await fetchJson(yahooSearchUrl(name), `[ticker   ] ${name}`, yahooHeaders(), config);
     return pickSearchTicker(name, payload);
   };
-  const resolver = new TickerResolver(HELD_TICKERS, config.skipYahoo ? null : searchHoldingTicker);
+  const persistedMisses = await readMisses();
+  const resolver = new TickerResolver(HELD_TICKERS, config.skipYahoo ? null : searchHoldingTicker, persistedMisses);
+  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(persistedMisses).length} remembered search misses in data/held-ticker-misses.json (retried after ${MISS_TTL_DAYS} days)`);
 
   // accession per seriesId: seed baseline, refreshed from EDGAR submissions.
   const accessionBySeries = new Map<string, NportAccession>();
@@ -2175,6 +2257,13 @@ export async function main(env: Record<string, string | undefined> = process.env
       console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to data/held-tickers.ts`);
     }
   }
+
+  // Remember genuine search misses (sorted, only when the content changed) so the next run does not repeat them.
+  if (!config.skipYahoo) {
+    const missesChanged = await writeTextIfChanged(MISSES_FILE, formatMisses(resolver.missEntries()), true);
+    if (missesChanged) console.log(`[ ${'ticker'.padEnd(9)}] search misses updated in data/held-ticker-misses.json`);
+  }
+  console.log(`[ ${'ticker'.padEnd(9)}] name searches: ${resolver.stats.searches} sent, ${resolver.stats.skippedCategory} skipped (no-ticker asset category), ${resolver.stats.skippedKnownMiss} skipped (remembered miss)`);
 
   // Only an unscoped bounded run owns the cursor; full passes reset it, TICKERS runs never touch it.
   if (!config.tickers.length) await writeUpdateState(config.maxFetches > 0 ? lastDispatchedTicker : null);
