@@ -1,15 +1,4 @@
-// N-PORT holding name -> exchange ticker (GENERATED FILE: do not edit by hand).
-//
-// Seeded 2026-08-26 from public data:
-//   - SEC EDGAR company_tickers.json (CIK/ticker/title directory, all US-listed and FPI ADRs)
-//   - Nasdaq Trader, NYSE and NYSE American daily symbol directories (incl. ETFs)
-// Keys are the holding names exactly as filed in N-PORT positions (case preserved).
-// scripts/update-data.ts extends this file with tickers it resolves live through the
-// Yahoo Finance search API (strict name match only) and commits it with the generated
-// api/fidelity data. Positions without an exchange ticker (bonds, private debt) are
-// intentionally absent: their rows keep Ticker "-" and the app falls back to CUSIP/ISIN.
-
-export const HELD_TICKERS: Record<string, string> = {
+{
   "10X GENOMICS INC": "TXG",
   "10X Genomics Inc": "TXG",
   "1st Source Corp": "SRCE",
@@ -4210,5 +4199,5 @@ export const HELD_TICKERS: Record<string, string> = {
   "Zscaler Inc": "ZS",
   "ZURN ELKAY WATER SOLUTIONS CORP": "ZWS",
   "Zurn Elkay Water Solutions Corp": "ZWS",
-  "Zymeworks Inc": "ZYME",
-};
+  "Zymeworks Inc": "ZYME"
+}

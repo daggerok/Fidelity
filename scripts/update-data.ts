@@ -135,7 +135,6 @@ function outputCreateReporter(root: URL | string, total: number) {
 // daggerok/SPDR repository design (no dependencies, Bun only).
 
 import { mkdir, readFile, writeFile, readdir, rm, appendFile, rename } from 'node:fs/promises';
-import { HELD_TICKERS } from '../data/held-tickers';
 
 // --- TLS trust store (identical in every ETF repo) ---
 const SYSTEM_CA_MARKER = 'ETF_UPDATER_SYSTEM_CA';
@@ -297,7 +296,7 @@ type JsonRecord = Record<string, any>;
 const SEC_DATA_HOST = 'https://data.sec.gov';
 const EDGAR_ARCHIVES = 'https://www.sec.gov/Archives/edgar/data';
 // Yahoo symbol-search endpoint used to resolve holding names that the static
-// name -> ticker seed (data/held-tickers.ts) does not cover yet.
+// name -> ticker seed (api/fidelity/held-tickers.json) does not cover yet.
 const YAHOO_SEARCH_URL = 'https://query1.finance.yahoo.com/v1/finance/search';
 // SEC requires a declared User-Agent for automated access:
 // https://www.sec.gov/os/accessing-edgar-data
@@ -311,14 +310,16 @@ const YAHOO_BROWSER_UA =
 let API_ROOT = new URL('../api/fidelity/', import.meta.url);
 let INDEX_FILE = new URL('index.json', API_ROOT);
 let STATE_FILE = new URL('update-state.json', API_ROOT);
-let MISSES_FILE = new URL('../data/held-ticker-misses.json', import.meta.url);
+let MISSES_FILE = new URL('held-ticker-misses.json', API_ROOT);
+let HELD_TICKERS_FILE = new URL('held-tickers.json', API_ROOT);
 
 /** Test hook: point every read and write of the feed at another directory (a trailing slash URL). */
 export function useOutputRoot(root: URL): void {
   API_ROOT = root;
   INDEX_FILE = new URL('index.json', API_ROOT);
   STATE_FILE = new URL('update-state.json', API_ROOT);
-  MISSES_FILE = new URL('held-ticker-misses.json', API_ROOT); // never touch the repo's data/ from a test run
+  MISSES_FILE = new URL('held-ticker-misses.json', API_ROOT);
+  HELD_TICKERS_FILE = new URL('held-tickers.json', API_ROOT);
 }
 
 const HOLDINGS_PAGE_SIZE_FALLBACK = 250;
@@ -596,7 +597,7 @@ Fidelity ETF static data updater (Bun, no dependencies).
   bun ./scripts/update-data.ts            update ./api/fidelity from SEC EDGAR + Yahoo
   ./scripts/update-data.ts --backfill-tickers
                                           offline: stamp real exchange tickers from
-                                          data/held-tickers.ts into already
+                                          api/fidelity/held-tickers.json into already
                                           generated holdings data (no network)
   ./scripts/update-data.ts -h | --help    print this help
 
@@ -645,10 +646,10 @@ when empty, which clears the control. Strict
 
 Holding tickers: N-PORT positions publish no exchange tickers, so the
 updater fills the holdings Ticker column from the name -> ticker seed in
-data/held-tickers.ts (SEC EDGAR company tickers + exchange symbol
+api/fidelity/held-tickers.json (SEC EDGAR company tickers + exchange symbol
 directories). Names the seed does not cover yet are resolved live through
 the Yahoo Finance symbol search with a strict name match; new mappings are
-written back to data/held-tickers.ts (commit it with the data update).
+written back to api/fidelity/held-tickers.json (commit it with the data update).
 Bond / private positions have no exchange ticker and keep "-".
 
 AUM and return filters are evaluated against fresh Yahoo data and the
@@ -776,7 +777,7 @@ async function fetchJson(url: string, label: string, headers: Record<string, str
 // N-PORT positions publish no exchange tickers — only the issuer name and a
 // CUSIP/ISIN. The holdings feed still needs real tickers (the Watchlist
 // "Copy Tickers" action, exports, deduplication), so the updater resolves
-// them from the name -> ticker seed in data/held-tickers.ts and, for names
+// them from the name -> ticker seed in api/fidelity/held-tickers.json and, for names
 // the seed does not cover yet (new IPOs, foreign listings), from the Yahoo
 // Finance symbol search with a STRICT name match so a fuzzy hit can never
 // pin the wrong security. Positions that genuinely have no exchange ticker
@@ -876,7 +877,7 @@ export function pickSearchTicker(name: string, payload: JsonRecord): string | nu
 
 export type TickerSearchFn = (name: string) => Promise<string | null>;
 
-/** A search miss is not repeated before this many days (state file data/held-ticker-misses.json). */
+/** A search miss is not repeated before this many days (state file api/fidelity/held-ticker-misses.json). */
 export const MISS_TTL_DAYS = 30;
 /** Misses nobody refreshed for this long (the holding left every fund) are dropped from the state file. */
 export const MISS_RETENTION_DAYS = 90;
@@ -1034,10 +1035,9 @@ async function attachHoldingTickers(nport: ParsedNport, resolver: TickerResolver
 }
 
 // ---------------------------------------------------------------------------
-// Seed file persistence (data/held-tickers.ts grows with live resolutions)
+// Seed file persistence (api/fidelity/held-tickers.json grows with live resolutions)
 // ---------------------------------------------------------------------------
 
-const HELD_TICKERS_FILE = new URL('../data/held-tickers.ts', import.meta.url);
 /** Sorted, one entry per line: normalized holding name -> last tried date. */
 export function formatMisses(entries: Record<string, string>): string {
   const keys = Object.keys(entries).filter(Boolean).sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
@@ -1054,7 +1054,14 @@ async function readMisses(): Promise<Record<string, string>> {
   }
 }
 
-export function formatHeldTickersSeed(entries: Record<string, string>): string {
+/**
+ * N-PORT holding name -> exchange ticker, one entry per line, sorted (names exactly as filed, case preserved).
+ * Seeded 2026-08-26 from SEC EDGAR company_tickers.json and the Nasdaq Trader / NYSE / NYSE American symbol
+ * directories, then extended live through the Yahoo Finance symbol search (strict name match only) and committed
+ * with the generated feed. Positions without an exchange ticker (bonds, private debt) are intentionally absent:
+ * their rows keep Ticker "-" and the app falls back to CUSIP/ISIN.
+ */
+export function formatHeldTickers(entries: Record<string, string>): string {
   const rows = Object.entries(entries)
     .map(([name, ticker]) => [name, cleanHoldingTicker(ticker)] as const)
     .filter(([name, ticker]) => name && ticker)
@@ -1064,23 +1071,17 @@ export function formatHeldTickersSeed(entries: Record<string, string>): string {
       if (ka !== kb) return ka < kb ? -1 : 1;
       return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
     });
-  const lines = [
-    '// N-PORT holding name -> exchange ticker (GENERATED FILE: do not edit by hand).',
-    '//',
-    '// Seeded 2026-08-26 from public data:',
-    '//   - SEC EDGAR company_tickers.json (CIK/ticker/title directory, all US-listed and FPI ADRs)',
-    '//   - Nasdaq Trader, NYSE and NYSE American daily symbol directories (incl. ETFs)',
-    '// Keys are the holding names exactly as filed in N-PORT positions (case preserved).',
-    '// scripts/update-data.ts extends this file with tickers it resolves live through the',
-    '// Yahoo Finance search API (strict name match only) and commits it with the generated',
-    '// api/fidelity data. Positions without an exchange ticker (bonds, private debt) are',
-    '// intentionally absent: their rows keep Ticker "-" and the app falls back to CUSIP/ISIN.',
-    '',
-    'export const HELD_TICKERS: Record<string, string> = {',
-  ];
-  for (const [name, ticker] of rows) lines.push(`  ${JSON.stringify(name)}: ${JSON.stringify(ticker)},`);
-  lines.push('};', '');
-  return lines.join('\n');
+  if (!rows.length) return '{}\n';
+  return `{\n${rows.map(([name, ticker]) => `  ${JSON.stringify(name)}: ${JSON.stringify(ticker)}`).join(',\n')}\n}\n`;
+}
+
+async function readHeldTickers(): Promise<Record<string, string>> {
+  try {
+    const parsed = JSON.parse(await readFile(HELD_TICKERS_FILE, 'utf8'));
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? (parsed as Record<string, string>) : {};
+  } catch {
+    return {}; // missing or unreadable: names are only resolved live
+  }
 }
 
 async function writeTextIfChanged(file: URL, value: string, skipFirstEmpty = false): Promise<boolean> {
@@ -1983,8 +1984,8 @@ async function processFund(
 
 async function backfillTickers(): Promise<void> {
   console.log('Fidelity ETF static data updater — holdings ticker backfill (offline, seed only)');
-  const resolver = new TickerResolver(HELD_TICKERS);
-  console.log(`[ticker  ] ${resolver.size} known holding names in data/held-tickers.ts`);
+  const resolver = new TickerResolver(await readHeldTickers());
+  console.log(`[ticker  ] ${resolver.size} known holding names in api/fidelity/held-tickers.json`);
 
   const fundsDir = new URL('funds/', API_ROOT);
   let fundDirs: string[] = [];
@@ -2122,7 +2123,8 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   const seedFunds = FIDELITY_FUNDS.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
   console.log(`[ ${'seed'.padEnd(9)}] ${seedFunds.length} Fidelity ETFs across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants`);
-  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(HELD_TICKERS).length} known holding names in data/held-tickers.ts${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
+  const heldTickers = await readHeldTickers();
+  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(heldTickers).length} known holding names in api/fidelity/held-tickers.json${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
 
   // Unknown holding names are resolved through the Yahoo symbol search
   // (strict name match). Every search is globally paced like the rest of the
@@ -2132,8 +2134,8 @@ export async function main(env: Record<string, string | undefined> = process.env
     return pickSearchTicker(name, payload);
   };
   const persistedMisses = await readMisses();
-  const resolver = new TickerResolver(HELD_TICKERS, config.skipYahoo ? null : searchHoldingTicker, persistedMisses);
-  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(persistedMisses).length} remembered search misses in data/held-ticker-misses.json (retried after ${MISS_TTL_DAYS} days)`);
+  const resolver = new TickerResolver(heldTickers, config.skipYahoo ? null : searchHoldingTicker, persistedMisses);
+  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(persistedMisses).length} remembered search misses in api/fidelity/held-ticker-misses.json (retried after ${MISS_TTL_DAYS} days)`);
 
   // accession per seriesId: seed baseline, refreshed from EDGAR submissions.
   const accessionBySeries = new Map<string, NportAccession>();
@@ -2268,7 +2270,7 @@ export async function main(env: Record<string, string | undefined> = process.env
       site: 'https://digital.fidelity.com/prgw/digital/research/etfs',
       catalog: 'SEC EDGAR N-PORT-P filings of the Fidelity ETF trusts',
       history: 'Yahoo Finance public chart API (adjusted close)',
-      holdingTickers: 'data/held-tickers.ts seed (SEC EDGAR company tickers + exchange symbol directories) extended live by the Yahoo Finance symbol search',
+      holdingTickers: 'held-tickers.json seed (SEC EDGAR company tickers + exchange symbol directories) extended live by the Yahoo Finance symbol search',
       trusts: FIDELITY_TRUSTS,
     },
     counts,
@@ -2278,17 +2280,17 @@ export async function main(env: Record<string, string | undefined> = process.env
   // Persist tickers learned from live searches so the next run (and the
   // --backfill-tickers mode) can serve them without re-querying Yahoo.
   if (resolver.fresh.length) {
-    const merged: Record<string, string> = { ...HELD_TICKERS, ...resolver.freshEntries() };
-    const seedChanged = await writeTextIfChanged(HELD_TICKERS_FILE, formatHeldTickersSeed(merged));
+    const merged: Record<string, string> = { ...heldTickers, ...resolver.freshEntries() };
+    const seedChanged = await writeTextIfChanged(HELD_TICKERS_FILE, formatHeldTickers(merged));
     if (seedChanged) {
-      console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to data/held-tickers.ts`);
+      console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to api/fidelity/held-tickers.json`);
     }
   }
 
   // Remember genuine search misses (sorted, only when the content changed) so the next run does not repeat them.
   if (!config.skipYahoo) {
     const missesChanged = await writeTextIfChanged(MISSES_FILE, formatMisses(resolver.missEntries()), true);
-    if (missesChanged) console.log(`[ ${'ticker'.padEnd(9)}] search misses updated in data/held-ticker-misses.json`);
+    if (missesChanged) console.log(`[ ${'ticker'.padEnd(9)}] search misses updated in api/fidelity/held-ticker-misses.json`);
   }
   console.log(`[ ${'ticker'.padEnd(9)}] name searches: ${resolver.stats.searches} sent, ${resolver.stats.skippedCategory} skipped (no-ticker asset category), ${resolver.stats.skippedKnownMiss} skipped (remembered miss)`);
 

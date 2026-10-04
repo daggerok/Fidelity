@@ -27,7 +27,7 @@ import {
   MISS_TTL_DAYS,
   yahooSearchUrl,
   TickerResolver,
-  formatHeldTickersSeed,
+  formatHeldTickers,
   CONTROL_NAMES,
   readConfig,
   resolveControls,
@@ -53,7 +53,6 @@ import { readFileSync, mkdtempSync, readdirSync, statSync, rmSync, writeFileSync
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { HELD_TICKERS } from '../data/held-tickers';
 
 // Clean, portable environment for every test: pinned time zone, no exported control variables,
 // and fetch / exit code / deadline / request lanes restored afterwards.
@@ -75,6 +74,7 @@ afterEach(() => {
 });
 
 const read = (path: string) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
+const HELD_TICKERS: Record<string, string> = JSON.parse(read('api/fidelity/held-tickers.json'));
 const quiet = async (fn: () => Promise<void>): Promise<void> => {
   const log = console.log;
   console.log = () => {};
@@ -477,17 +477,19 @@ describe('parsing', () => {
     expect(pickSearchTicker('BULLISH', { quoteMatches: [{ symbol: 'BLSH', longname: 'Bullish BLCM Inc', quoteType: 'EQUITY' }] })).toBe('BLSH');
     expect(yahooSearchUrl('DIGITAL OCEAN')).toBe('https://query1.finance.yahoo.com/v1/finance/search?q=DIGITAL%20OCEAN&quotesCount=10&newsCount=0&enableFuzzyQuery=false');
 
-    const seed = formatHeldTickersSeed({ B: 'BB', A: 'AA', 'a10 networks inc': 'A' });
-    expect(seed).toBe(formatHeldTickersSeed({ 'a10 networks inc': 'A', B: 'BB', A: 'AA' }));
+    const seed = formatHeldTickers({ B: 'BB', A: 'AA', 'a10 networks inc': 'A' });
+    expect(seed).toBe(formatHeldTickers({ 'a10 networks inc': 'A', B: 'BB', A: 'AA' }));
     expect(seed.indexOf('"A"')).toBeLessThan(seed.indexOf('"a10 networks inc"'));
     expect(seed.indexOf('"a10 networks inc"')).toBeLessThan(seed.indexOf('"B"'));
-    const dropped = formatHeldTickersSeed({ '': 'XX', 'VALID INC': '', GOOD: 'GD' });
+    const dropped = formatHeldTickers({ '': 'XX', 'VALID INC': '', GOOD: 'GD' });
     expect(dropped).not.toContain('XX');
     expect(dropped).not.toContain('"VALID INC"');
-    expect(formatHeldTickersSeed({ 'SCE TRUST VI': 'sce^l' })).toContain('"SCE^L"');
+    expect(formatHeldTickers({ 'SCE TRUST VI': 'sce^l' })).toContain('"SCE^L"');
     for (const [name, ticker] of Object.entries(HELD_TICKERS)) {
       expect(name.length > 0 && ticker.length > 0, `bad seed entry ${name} -> ${ticker}`).toBe(true);
     }
+    // the committed file is exactly what the updater writes, so a rerun with the same data changes nothing
+    expect(formatHeldTickers(HELD_TICKERS)).toBe(read('api/fidelity/held-tickers.json'));
   });
 
   test('ticker resolver: seed by exact/normalized name, memoized search, failures degrade to "-", ambiguous keys give no guess', async () => {
