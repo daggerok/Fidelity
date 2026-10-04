@@ -59,10 +59,20 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `cagr3y` / `cagr5y` / `cagr10y` - published annualized 3Y/5Y/10Y figures -> *CAGR 3Y/5Y/10Y*
 - `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
 - `siAnn` - since-inception annualized -> *SI Ann.*
-- `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
+- `dividendYield` - indicated yield (latest distribution x frequency / price), not a trailing yield
+- `dividendYieldBasis` - code of the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null`; it travels with the yield it describes (see the table below)
 - `secYield` / `secYieldText` - Fidelity publishes no 30-day SEC yield feed: `null` and `-` (unavailable, not zero)
 - `returnsBasis` - mandatory non-empty label of how the returns are computed; for Fidelity always "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns)"
 - `performanceAsOf` - ISO `YYYY-MM-DD` date the returns are as of: the last Yahoo close date (not the NAV date), or `null` when unknown
+
+`dividendYieldBasis` for Fidelity (the provider publishes no yield, so the code is never `official-*`):
+
+| Code | Meaning here |
+| --- | --- |
+| `indicated` | updater estimate: latest Yahoo distribution x inferred payments per year / market price (not a trailing yield); the only source |
+| `null` | no yield (no distributions known or no price) |
+
+The other standard codes (`official-trailing-12m`, `official-distribution-rate`, `official-other`, `computed-trailing-12m`) are not used by Fidelity.
 
 Caveats:
 
