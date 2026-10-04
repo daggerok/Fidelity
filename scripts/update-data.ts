@@ -1432,11 +1432,29 @@ export function deriveCatalogMetrics(
     siAnn: returns.siAnn,
     dividendYield,
     dividendYieldText: dividendYield === null ? '—' : `${dividendYield.toFixed(2)}%`,
+    dividendYieldBasis: dividendYieldBasisFor(dividendYield),
     secYield: null, // Fidelity publishes no 30-day SEC yield feed; shown as "—"
     secYieldText: '—',
     returnsBasis: RETURNS_BASIS,
     performanceAsOf: isoDateOrNull(returns.asOfDate),
   };
+}
+
+/**
+ * Code of the definition behind dividendYield: Fidelity publishes no yield, so the
+ * only source is the updater estimate (latest distribution x payments per year / price).
+ * null exactly when the yield is null.
+ */
+export type DividendYieldSource = 'indicated';
+export type DividendYieldBasis = 'official-trailing-12m' | 'official-distribution-rate' | 'official-other' | 'computed-trailing-12m' | 'indicated';
+export const DIVIDEND_YIELD_BASES: readonly DividendYieldBasis[] = ['official-trailing-12m', 'official-distribution-rate', 'official-other', 'computed-trailing-12m', 'indicated'];
+
+export function dividendYieldBasisFor(dividendYield: number | null, source: DividendYieldSource = 'indicated'): DividendYieldBasis | null {
+  if (dividendYield === null) return null;
+  switch (source) {
+    case 'indicated':
+      return 'indicated';
+  }
 }
 
 export const RETURNS_BASIS =
@@ -1467,7 +1485,16 @@ export function normalizeIndexRow(row: JsonRecord): JsonRecord {
 }
 
 export function normalizeStoredMetrics(metrics: JsonRecord, storedReturns?: JsonRecord | null): JsonRecord {
-  const { returnsBasis: _basis, performanceAsOf: storedAsOf, ...rest } = metrics;
+  const { returnsBasis: _basis, performanceAsOf: storedAsOf, dividendYieldBasis: _storedCode, ...restNoCode } = metrics;
+  // The code travels with the stored yield: a null yield has no code, any stored
+  // yield was an updater estimate (the only source), never a new yield with an old code.
+  const code = dividendYieldBasisFor(numberOrNull(restNoCode.dividendYield));
+  const rest: JsonRecord = {};
+  for (const [key, value] of Object.entries(restNoCode)) {
+    rest[key] = value;
+    if (key === 'dividendYieldText') rest.dividendYieldBasis = code;
+  }
+  if (!('dividendYieldBasis' in rest)) rest.dividendYieldBasis = code;
   const monthEnd = (storedReturns?.monthEnd as JsonRecord | undefined) ?? {};
   return {
     ...rest,

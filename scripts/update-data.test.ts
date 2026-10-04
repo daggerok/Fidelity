@@ -628,12 +628,36 @@ describe('metrics', () => {
     expect(deriveCatalogMetrics(priceReturns([]), null, null, null).returnsBasis).toBe(RETURNS_BASIS);
   });
 
+  test('dividendYieldBasis: indicated for the updater estimate, null with a null yield, one key set on fresh, rebuilt and placeholder rows', () => {
+    const returns = { asOfDate: '2026-06-30', ytd: 9.09, yr1: 20, cagr3y: 10, cagr5y: 8, cagr10y: null, siAnn: 12.5, mo1: 0.85, qtd: 5.26 };
+    const fresh = deriveCatalogMetrics(returns, 0.1, 4, 40);
+    const none = deriveCatalogMetrics(returns, null, null, 40);
+    const placeholder = deriveCatalogMetrics(priceReturns([]), null, null, null);
+    expect(fresh.dividendYieldBasis).toBe('indicated');
+    expect(none.dividendYield).toBeNull();
+    expect(none.dividendYieldBasis).toBeNull();
+    expect(placeholder.dividendYieldBasis).toBeNull();
+    // rebuilt from a stored row: the code follows the stored yield, a stale code never survives
+    const rebuilt = normalizeStoredMetrics({ ...fresh, dividendYieldBasis: undefined }, null);
+    const stale = normalizeStoredMetrics({ ...none, dividendYieldBasis: 'indicated' }, null);
+    const legacy = normalizeStoredMetrics((({ dividendYieldBasis: _drop, ...rest }) => rest)(fresh), null);
+    expect(rebuilt.dividendYieldBasis).toBe('indicated');
+    expect(stale.dividendYieldBasis).toBeNull();
+    expect(legacy.dividendYieldBasis).toBe('indicated');
+    const keys = (m: Record<string, unknown>) => Object.keys(m).sort();
+    expect(keys(rebuilt)).toEqual(keys(fresh));
+    expect(keys(legacy)).toEqual(keys(fresh));
+    expect(keys(placeholder)).toEqual(keys(fresh));
+    expect(keys(none)).toEqual(keys(fresh));
+    expect(Object.keys(fresh).indexOf('dividendYieldBasis')).toBe(Object.keys(fresh).indexOf('dividendYieldText') + 1);
+  });
+
   test('stored rows gain basis and as-of from the returns table; returns block rows share one key set', () => {
     expect(displayDateToIso('Sep 25 2026')).toBe('2026-09-25');
     expect(displayDateToIso('—')).toBeNull();
     const old = { ytd: 1, secYield: null };
     const out = normalizeStoredMetrics(old, { monthEnd: { asOfDate: 'Sep 25 2026' } });
-    expect(Object.keys(out)).toEqual(['ytd', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf']);
+    expect(Object.keys(out)).toEqual(['ytd', 'secYield', 'dividendYieldBasis', 'secYieldText', 'returnsBasis', 'performanceAsOf']);
     expect(out.performanceAsOf).toBe('2026-09-25');
     expect(normalizeStoredMetrics(old, null).performanceAsOf).toBeNull();
     expect(normalizeStoredMetrics({ ...out, performanceAsOf: '2026-09-01' }, null).performanceAsOf).toBe('2026-09-01');
@@ -668,6 +692,7 @@ describe('pipeline', () => {
         expect(fund.dataFile).toBe(`./funds/${fund.ticker}/meta.json`);
         expect(statSync(join(root, fund.dataFile)).isFile()).toBe(true);
         expect(fund.metrics.returnsBasis).toBeTruthy();
+        expect(fund.metrics.dividendYieldBasis).toBe(fund.metrics.dividendYield === null ? null : 'indicated');
       }
     });
   });
