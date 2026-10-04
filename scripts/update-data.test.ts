@@ -22,6 +22,9 @@ import {
   normalizeHoldingName,
   normalizeHoldingNameCore,
   pickSearchTicker,
+  canHaveListedTicker,
+  formatMisses,
+  MISS_TTL_DAYS,
   yahooSearchUrl,
   TickerResolver,
   formatHeldTickersSeed,
@@ -157,13 +160,16 @@ const world = {
   peak: 0,
   delayMs: 0,
   positions: 1,
+  bonds: 0,
+  searches: [] as string[],
+  searchFails: false,
   order: [] as string[],
   onChart: null as null | (() => void),
 };
 
 const nportXml = (series: string, repPd: string): string => `<?xml version="1.0"?>
 <edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>Fidelity ${series}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
-<invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>50</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
+<invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>50</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}${Array.from({ length: world.bonds }, (_, i) => `<invstOrSec><name>ACME BOND ${i} LLC</name><cusip>99999${i}</cusip><balance>10</balance><units>PA</units><curCd>USD</curCd><valUSD>10</valUSD><pctVal>1</pctVal><assetCat>${i % 2 ? 'ABS-MBS' : 'DBT'}</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
 
 function worldChart(): Record<string, unknown> {
   const start = Date.UTC(2025, 0, 2) / 1000;
@@ -190,7 +196,10 @@ function installWorld(): void {
       }
       if (url.includes('finance/chart/')) { world.order.push(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '?'); world.onChart?.(); }
       if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart())) : new Response('down', { status: 404 });
-      if (url.includes('finance/search')) return new Response(JSON.stringify({ quotes: [] }));
+      if (url.includes('finance/search')) {
+        world.searches.push(decodeURIComponent(/[?&]q=([^&]*)/.exec(url)![1]));
+        return world.searchFails ? new Response('busy', { status: 500 }) : new Response(JSON.stringify({ quoteMatches: [] }));
+      }
       return new Response('unexpected ' + url, { status: 500 });
     } finally {
       world.inFlight -= 1;
@@ -224,6 +233,9 @@ const fresh = (): string => {
   world.delayMs = 0;
   world.peak = 0;
   world.positions = 1;
+  world.bonds = 0;
+  world.searches = [];
+  world.searchFails = false;
   world.order = [];
   world.onChart = null;
   setSoftDeadline(25 * 60_000);
@@ -509,6 +521,52 @@ describe('parsing', () => {
     expect(await failing.resolve('SOME PRIVATE LLC')).toBe('-');
     expect(calls).toBe(1);
   });
+
+  test('search misses: asset category gate, TTL, a hit overrides a miss, failures are never remembered, file is sorted', async () => {
+    for (const code of ['EC', 'EP', '', undefined, 'OTHER']) expect(canHaveListedTicker(code), String(code)).toBe(true);
+    for (const code of ['DBT', 'ABS-MBS', 'ABS-CBDO', 'LON', 'STIV', 'RA', 'DE', 'DFE', 'dbt']) expect(canHaveListedTicker(code), code).toBe(false);
+
+    const seen: string[] = [];
+    const search = async (name: string): Promise<string | null> => { seen.push(name); return name === 'NOW LISTED INC' ? 'NWLD' : null; };
+    // debt rows are never searched, but a name the seed knows still resolves for any category
+    const first = new TickerResolver({ 'BOEING CO': 'BA' }, search, {}, '2026-10-03');
+    expect(await first.resolve('ACME BOND LLC', 'DBT')).toBe('-');
+    expect(await first.resolve('BOEING CO', 'DBT')).toBe('BA');
+    expect(await first.resolve('PRIVATE ONE LLC', 'EC')).toBe('-');
+    expect(await first.resolve('PRIVATE TWO LLC', undefined)).toBe('-');
+    expect(seen).toEqual(['PRIVATE ONE LLC', 'PRIVATE TWO LLC']);
+    expect(first.missEntries()).toEqual({ 'PRIVATE ONE LLC': '2026-10-03', 'PRIVATE TWO LLC': '2026-10-03' });
+
+    // inside the TTL a remembered miss is not searched again; at the TTL it is, and the date moves
+    const persisted = first.missEntries();
+    seen.length = 0;
+    const within = new TickerResolver({}, search, persisted, '2026-11-01');
+    expect(await within.resolve('Private One LLC', 'EC')).toBe('-');
+    expect(seen).toEqual([]);
+    const expired = new TickerResolver({}, search, persisted, '2026-11-02');
+    expect(MISS_TTL_DAYS).toBe(30);
+    expect(await expired.resolve('Private One LLC', 'EC')).toBe('-');
+    expect(seen).toEqual(['Private One LLC']);
+    expect(expired.missEntries()['PRIVATE ONE LLC']).toBe('2026-11-02');
+    expect(expired.missEntries()['PRIVATE TWO LLC']).toBe('2026-10-03');
+    // entries nobody refreshed for 90 days are pruned
+    expect(new TickerResolver({}, search, persisted, '2027-01-02').missEntries()).toEqual({});
+
+    // an expired miss that is a hit now: the ticker is learned and the miss disappears
+    const hit = new TickerResolver({}, search, { 'NOW LISTED': '2026-08-01' }, '2026-10-03');
+    expect(await hit.resolve('NOW LISTED INC', 'EC')).toBe('NWLD');
+    expect(hit.missEntries()).toEqual({});
+    // a name that the seed knows by now is dropped even when still within its TTL
+    expect(new TickerResolver({ 'NOW LISTED INC': 'NWLD' }, search, { 'NOW LISTED': '2026-10-01' }, '2026-10-03').missEntries()).toEqual({});
+
+    // a failed request (offline, throttled) is retried next run, never remembered
+    const failing = new TickerResolver({}, async () => { throw new Error('429'); }, {}, '2026-10-03');
+    expect(await failing.resolve('FLAKY LLC', 'EC')).toBe('-');
+    expect(failing.missEntries()).toEqual({});
+
+    expect(formatMisses({ B: '2026-10-03', A: '2026-10-01' })).toBe('{\n  "A": "2026-10-01",\n  "B": "2026-10-03"\n}\n');
+    expect(formatMisses({})).toBe('{}\n');
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -624,6 +682,36 @@ describe('pipeline', () => {
       expect(snapshot(root)).toEqual(first);
       expect(samePublishedContent('{"generatedAt":"old","funds":[{"ticker":"FAAA"}]}', { generatedAt: 'new', funds: [{ ticker: 'FAAA' }] })).toBe(true);
       expect(samePublishedContent('{"generatedAt":"old","funds":[]}', { generatedAt: 'new', funds: [{ ticker: 'FAAA' }] })).toBe(false);
+    });
+  });
+
+  test('search misses are remembered: debt rows are never searched, a rerun sends no search and writes nothing, failures leave no state', async () => {
+    await inWorld(async (root) => {
+      world.positions = 3;
+      world.bonds = 4;
+      const missesFile = join(root, 'held-ticker-misses.json');
+      const run = () => quiet(() => main(env({ TICKERS: 'FBND FBCG FBCV' })));
+      await run();
+      // three funds hold the same 3 equity names and 4 bond names: 3 searches in total, none for bonds
+      expect(world.searches.slice().sort()).toEqual(['APPLE 0 INC', 'APPLE 1 INC', 'APPLE 2 INC']);
+      const written = readFileSync(missesFile, 'utf8');
+      const keys = Object.keys(JSON.parse(written));
+      expect(keys).toEqual(['APPLE 0', 'APPLE 1', 'APPLE 2']);
+      expect(written).toBe(formatMisses(JSON.parse(written)));
+      const first = snapshot(root);
+      await new Promise((resolve) => setTimeout(resolve, 1100)); // generatedAt has second resolution
+      world.searches = [];
+      await run();
+      expect(world.searches).toEqual([]);
+      expect(snapshot(root)).toEqual(first);
+      expect(Object.values(readJson(root, 'funds/FBND/holdings/001.json').rows.map((r: any) => r.Ticker)).every((t) => t === '-')).toBe(true);
+    });
+    await inWorld(async (root) => {
+      world.positions = 2;
+      world.searchFails = true;
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      expect(world.searches.length).toBeGreaterThan(0);
+      expect(Object.keys(snapshot(root)).some((name) => name.endsWith('held-ticker-misses.json'))).toBe(false);
     });
   });
 
