@@ -1,14 +1,16 @@
 # Fidelity
 
-One of the app's features lets you select Fidelity ETFs in the Watchlist and aggregate their holdings to see how often each ticker appears across the selected funds. Repeated holdings make overlapping exposure visible: the more selected funds include a ticker, the greater its potential influence on the portfolio; gains in that holding may help, while declines may hurt, and actual impact also depends on each fund's position size.  Another feature makes it faster and easier to find funds with stronger growth over different periods, higher dividend yields or distributions, greater Total Return (price performance plus dividends), and other key performance metrics. A single-file client-side tool that reads the generated `./api/fidelity` static feed (SEC EDGAR N-PORT-P holdings, Yahoo Finance price history and distributions) into a searchable ETF/category catalog with per-fund tabs, watchlist aggregation, N-PORT upload, ticker copy and CSV/TXT export — the same look and feel as the sibling applications.
+One of the app's features lets you select Fidelity ETFs in the Watchlist and aggregate their holdings to see how often each ticker appears across the selected funds. Repeated holdings make overlapping exposure visible: the more selected funds include a ticker, the greater its potential influence on the portfolio; gains in that holding may help, while declines may hurt, and actual impact also depends on each fund's position size.  Another feature makes it faster and easier to find funds with stronger growth over different periods, higher dividend yields or distributions, greater Total Return (price performance plus dividends), and other key performance metrics. A client-side tool that reads the generated `./api/fidelity` static feed (SEC EDGAR N-PORT-P holdings, Yahoo Finance price history and distributions) into a searchable ETF/category catalog with per-fund tabs, watchlist aggregation, N-PORT upload, ticker copy and CSV/TXT export — the same look and feel as the sibling applications.
 
 ## Using Bun
 
 ```bash
 bunx degit daggerok/Fidelity#main ./12345 && cd $_
-bunx serve . -p 1234
-open http://0:1234
+bun install
+bun run serve
 ```
+
+`bun run serve` starts the Parcel dev server (it copies `api/` to `dist/api` first) and prints the local URL. `bun run build` writes the site to `dist`, `bun run build-github-pages` does the same with the `/Fidelity/` public URL used by the Pages workflow
 
 The published application is available at <https://daggerok.github.io/Fidelity/>.
 
@@ -127,7 +129,7 @@ PERFORMANCE_1Y="15:" bun scripts/update-data.ts
 
 ## TypeScript and verification
 
-The browser app is intentionally build-free: `index.html` carries the markup, styles and bootstrap, and `app.tsx` is TypeScript compiled in the browser with Babel standalone - no build step, no bundler, no `tsconfig.json` needed. Bun runs TypeScript out of the box.
+The browser app is `src/index.html` (markup and bootstrap), `src/main.tsx` (TypeScript), `src/index.css` (Tailwind v4 and component styles) and `src/favicon.ico`, bundled by Parcel into `dist` with `api/` copied to `dist/api`. GitHub Pages is deployed by `.github/workflows/github-pages.yml`. There is no `tsconfig.json`; Bun runs the updater TypeScript out of the box
 
 Verification before every publish:
 
