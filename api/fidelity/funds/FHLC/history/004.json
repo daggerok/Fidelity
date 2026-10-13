@@ -2,7 +2,7 @@
  "ticker": "FHLC",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3254,
+ "totalRows": 3260,
  "headers": [
   "Date",
   "Close",
@@ -1533,6 +1533,42 @@
    "Close": "80.599998",
    "Adj Close": "80.6",
    "Volume": "210600"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "81.290001",
+   "Adj Close": "81.29",
+   "Volume": "200200"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "80.839996",
+   "Adj Close": "80.84",
+   "Volume": "281900"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "81.440002",
+   "Adj Close": "81.44",
+   "Volume": "232400"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "81.139999",
+   "Adj Close": "81.14",
+   "Volume": "339800"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "82.449997",
+   "Adj Close": "82.45",
+   "Volume": "159500"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "82.849998",
+   "Adj Close": "82.85",
+   "Volume": "110500"
   }
  ]
 }

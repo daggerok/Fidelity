@@ -2,7 +2,7 @@
  "ticker": "FCPI",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1734,
+ "totalRows": 1740,
  "headers": [
   "Date",
   "Close",
@@ -79,7 +79,7 @@
   {
    "Date": "Nov 14 2023",
    "Close": "33.389999",
-   "Adj Close": "31.9",
+   "Adj Close": "31.89",
    "Volume": "28700"
   },
   {
@@ -3319,7 +3319,7 @@
   {
    "Date": "Jan 12 2026",
    "Close": "50.150002",
-   "Adj Close": "49.66",
+   "Adj Close": "49.65",
    "Volume": "13800"
   },
   {
@@ -4413,6 +4413,42 @@
    "Close": "56.619999",
    "Adj Close": "56.62",
    "Volume": "13800"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "57",
+   "Adj Close": "57",
+   "Volume": "21100"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "57.113998",
+   "Adj Close": "57.11",
+   "Volume": "11200"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "56.91",
+   "Adj Close": "56.91",
+   "Volume": "6400"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "57.000999",
+   "Adj Close": "57",
+   "Volume": "4300"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "57.060001",
+   "Adj Close": "57.06",
+   "Volume": "22900"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "57.139999",
+   "Adj Close": "57.14",
+   "Volume": "7300"
   }
  ]
 }

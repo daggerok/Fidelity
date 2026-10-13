@@ -2,7 +2,7 @@
  "ticker": "FENI",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 719,
+ "totalRows": 725,
  "headers": [
   "Date",
   "Close",
@@ -4323,6 +4323,42 @@
    "Close": "40",
    "Adj Close": "40",
    "Volume": "1983300"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "40.060001",
+   "Adj Close": "40.06",
+   "Volume": "1270000"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "40.169998",
+   "Adj Close": "40.17",
+   "Volume": "1132000"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "39.650002",
+   "Adj Close": "39.65",
+   "Volume": "1399900"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "39.52",
+   "Adj Close": "39.52",
+   "Volume": "1419900"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "39.689999",
+   "Adj Close": "39.69",
+   "Volume": "2334400"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "39.630001",
+   "Adj Close": "39.63",
+   "Volume": "1040900"
   }
  ]
 }

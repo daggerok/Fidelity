@@ -2,7 +2,7 @@
  "ticker": "FENY",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3254,
+ "totalRows": 3260,
  "headers": [
   "Date",
   "Close",
@@ -1533,6 +1533,42 @@
    "Close": "34.639999",
    "Adj Close": "34.64",
    "Volume": "1082300"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "35.009998",
+   "Adj Close": "35.01",
+   "Volume": "833700"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "35.150002",
+   "Adj Close": "35.15",
+   "Volume": "822800"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "34.950001",
+   "Adj Close": "34.95",
+   "Volume": "846500"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "35.93",
+   "Adj Close": "35.93",
+   "Volume": "1941100"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "35.830002",
+   "Adj Close": "35.83",
+   "Volume": "1208800"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "36.34",
+   "Adj Close": "36.34",
+   "Volume": "1065700"
   }
  ]
 }

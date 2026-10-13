@@ -2,7 +2,7 @@
  "ticker": "FFSM",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1422,
+ "totalRows": 1428,
  "headers": [
   "Date",
   "Close",
@@ -2541,6 +2541,42 @@
    "Close": "34.490002",
    "Adj Close": "34.49",
    "Volume": "715400"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "34.560001",
+   "Adj Close": "34.56",
+   "Volume": "672100"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "34.700001",
+   "Adj Close": "34.7",
+   "Volume": "650500"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "34",
+   "Adj Close": "34",
+   "Volume": "415600"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "33.919998",
+   "Adj Close": "33.92",
+   "Volume": "334600"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "34.130001",
+   "Adj Close": "34.13",
+   "Volume": "495000"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "34.02",
+   "Adj Close": "34.02",
+   "Volume": "431400"
   }
  ]
 }

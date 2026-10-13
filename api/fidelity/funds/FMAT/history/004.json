@@ -2,7 +2,7 @@
  "ticker": "FMAT",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3254,
+ "totalRows": 3260,
  "headers": [
   "Date",
   "Close",
@@ -1533,6 +1533,42 @@
    "Close": "56.169998",
    "Adj Close": "56.17",
    "Volume": "59000"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "56.68",
+   "Adj Close": "56.68",
+   "Volume": "47000"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "57.02",
+   "Adj Close": "57.02",
+   "Volume": "81100"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "56.040001",
+   "Adj Close": "56.04",
+   "Volume": "48100"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "56.279999",
+   "Adj Close": "56.28",
+   "Volume": "40700"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "56.619999",
+   "Adj Close": "56.62",
+   "Volume": "46000"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "56.560001",
+   "Adj Close": "56.56",
+   "Volume": "42000"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FELC",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 719,
+ "totalRows": 725,
  "headers": [
   "Date",
   "Close",
@@ -1687,7 +1687,7 @@
   {
    "Date": "Dec 31 2024",
    "Close": "32.93",
-   "Adj Close": "32.37",
+   "Adj Close": "32.38",
    "Volume": "906700"
   },
   {
@@ -4323,6 +4323,42 @@
    "Close": "43.689999",
    "Adj Close": "43.69",
    "Volume": "671100"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "44",
+   "Adj Close": "44",
+   "Volume": "1342200"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "44.220001",
+   "Adj Close": "44.22",
+   "Volume": "963500"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "44.110001",
+   "Adj Close": "44.11",
+   "Volume": "947400"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "43.919998",
+   "Adj Close": "43.92",
+   "Volume": "917900"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "44.16",
+   "Adj Close": "44.16",
+   "Volume": "584900"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "44.119999",
+   "Adj Close": "44.12",
+   "Volume": "516300"
   }
  ]
 }

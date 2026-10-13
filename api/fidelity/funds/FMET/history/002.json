@@ -2,7 +2,7 @@
  "ticker": "FMET",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1117,
+ "totalRows": 1123,
  "headers": [
   "Date",
   "Close",
@@ -711,6 +711,42 @@
    "Close": "39.25",
    "Adj Close": "39.25",
    "Volume": "4800"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "39.865002",
+   "Adj Close": "39.87",
+   "Volume": "2100"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "40.068001",
+   "Adj Close": "40.07",
+   "Volume": "2700"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "39.849998",
+   "Adj Close": "39.85",
+   "Volume": "2100"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "39.289001",
+   "Adj Close": "39.29",
+   "Volume": "1800"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "39.651001",
+   "Adj Close": "39.65",
+   "Volume": "8600"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "39.459999",
+   "Adj Close": "39.46",
+   "Volume": "2200"
   }
  ]
 }

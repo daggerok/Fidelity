@@ -2,7 +2,7 @@
  "ticker": "FMED",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 831,
+ "totalRows": 837,
  "headers": [
   "Date",
   "Close",
@@ -4995,6 +4995,42 @@
    "Close": "31.818001",
    "Adj Close": "31.82",
    "Volume": "9100"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "32.632999",
+   "Adj Close": "32.63",
+   "Volume": "4400"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "31.259001",
+   "Adj Close": "31.26",
+   "Volume": "49600"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "31.051001",
+   "Adj Close": "31.05",
+   "Volume": "7100"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "30.566999",
+   "Adj Close": "30.57",
+   "Volume": "8400"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "31.4",
+   "Adj Close": "31.4",
+   "Volume": "2000"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "31.042",
+   "Adj Close": "31.04",
+   "Volume": "7800"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FTBD",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 925,
+ "totalRows": 931,
  "headers": [
   "Date",
   "Close",
@@ -5559,6 +5559,42 @@
    "Close": "46.803001",
    "Adj Close": "46.8",
    "Volume": "2300"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "46.810001",
+   "Adj Close": "46.81",
+   "Volume": "2300"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "46.953999",
+   "Adj Close": "46.95",
+   "Volume": "1200"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "46.867001",
+   "Adj Close": "46.87",
+   "Volume": "1700"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "46.950001",
+   "Adj Close": "46.95",
+   "Volume": "4700"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "47.014",
+   "Adj Close": "47.01",
+   "Volume": "5500"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "46.972",
+   "Adj Close": "46.97",
+   "Volume": "500"
   }
  ]
 }

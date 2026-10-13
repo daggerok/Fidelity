@@ -19,9 +19,9 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$41.60",
-  "value": 41.6,
-  "asOfDate": "Oct 02 2026"
+  "display": "$42.46",
+  "value": 42.46,
+  "asOfDate": "Oct 12 2026"
  },
  "premiumDiscount": {
   "display": "—",
@@ -36,23 +36,23 @@
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 02 2026",
-   "mo1": -3.35,
-   "mo1Text": "-3.35%",
-   "qtd": 0.39,
-   "qtdText": "0.39%",
-   "ytd": 21.42,
-   "ytdText": "21.42%",
-   "yr1": 25.41,
-   "yr1Text": "25.41%",
+   "asOfDate": "Oct 12 2026",
+   "mo1": -0.05,
+   "mo1Text": "-0.05%",
+   "qtd": 2.46,
+   "qtdText": "2.46%",
+   "ytd": 23.93,
+   "ytdText": "23.93%",
+   "yr1": 30.41,
+   "yr1Text": "30.41%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 21.47,
-   "sinceInceptionText": "21.47%"
+   "sinceInception": 22.11,
+   "sinceInceptionText": "22.11%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -146,8 +146,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 719,
-  "asOf": "Oct 02 2026"
+  "totalRows": 725,
+  "asOf": "Oct 12 2026"
  },
  "seed": {
   "seriesId": "S000081806",

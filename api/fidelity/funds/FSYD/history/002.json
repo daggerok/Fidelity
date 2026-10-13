@@ -2,7 +2,7 @@
  "ticker": "FSYD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1160,
+ "totalRows": 1166,
  "headers": [
   "Date",
   "Close",
@@ -969,6 +969,42 @@
    "Close": "46.599998",
    "Adj Close": "46.6",
    "Volume": "45800"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "46.639999",
+   "Adj Close": "46.64",
+   "Volume": "45500"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "46.744999",
+   "Adj Close": "46.74",
+   "Volume": "30400"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "46.689999",
+   "Adj Close": "46.69",
+   "Volume": "12400"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "46.639999",
+   "Adj Close": "46.64",
+   "Volume": "14500"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "46.654999",
+   "Adj Close": "46.65",
+   "Volume": "8200"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "46.689999",
+   "Adj Close": "46.69",
+   "Volume": "16100"
   }
  ]
 }

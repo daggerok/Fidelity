@@ -2,7 +2,7 @@
  "ticker": "FCOM",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3254,
+ "totalRows": 3260,
  "headers": [
   "Date",
   "Close",
@@ -1533,6 +1533,42 @@
    "Close": "71.790001",
    "Adj Close": "71.79",
    "Volume": "104000"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "72.800003",
+   "Adj Close": "72.8",
+   "Volume": "247500"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "72.940002",
+   "Adj Close": "72.94",
+   "Volume": "162900"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "72.559998",
+   "Adj Close": "72.56",
+   "Volume": "125000"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "72.779999",
+   "Adj Close": "72.78",
+   "Volume": "176500"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "71.889999",
+   "Adj Close": "71.89",
+   "Volume": "173400"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "72.739998",
+   "Adj Close": "72.74",
+   "Volume": "353500"
   }
  ]
 }

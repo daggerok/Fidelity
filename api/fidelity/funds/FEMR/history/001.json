@@ -2,7 +2,7 @@
  "ticker": "FEMR",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 466,
+ "totalRows": 472,
  "headers": [
   "Date",
   "Close",
@@ -2805,6 +2805,42 @@
    "Close": "41.73",
    "Adj Close": "41.73",
    "Volume": "75300"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "42.259998",
+   "Adj Close": "42.26",
+   "Volume": "38300"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "42.115002",
+   "Adj Close": "42.12",
+   "Volume": "156000"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "41.555",
+   "Adj Close": "41.56",
+   "Volume": "79600"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "40.860001",
+   "Adj Close": "40.86",
+   "Volume": "31000"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "41.029999",
+   "Adj Close": "41.03",
+   "Volume": "16900"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "40.66",
+   "Adj Close": "40.66",
+   "Volume": "22300"
   }
  ]
 }

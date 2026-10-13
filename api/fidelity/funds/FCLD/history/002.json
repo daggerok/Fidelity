@@ -2,7 +2,7 @@
  "ticker": "FCLD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1252,
+ "totalRows": 1258,
  "headers": [
   "Date",
   "Close",
@@ -1521,6 +1521,42 @@
    "Close": "45.060001",
    "Adj Close": "45.06",
    "Volume": "33200"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "45.52",
+   "Adj Close": "45.52",
+   "Volume": "26500"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "45.279999",
+   "Adj Close": "45.28",
+   "Volume": "50100"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "45.200001",
+   "Adj Close": "45.2",
+   "Volume": "16600"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "45.110001",
+   "Adj Close": "45.11",
+   "Volume": "18700"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "45.959999",
+   "Adj Close": "45.96",
+   "Volume": "12700"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "45.507",
+   "Adj Close": "45.51",
+   "Volume": "28700"
   }
  ]
 }

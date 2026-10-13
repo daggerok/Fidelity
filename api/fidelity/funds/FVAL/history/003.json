@@ -2,7 +2,7 @@
  "ticker": "FVAL",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2526,
+ "totalRows": 2532,
  "headers": [
   "Date",
   "Close",
@@ -3165,6 +3165,42 @@
    "Close": "81.470001",
    "Adj Close": "81.47",
    "Volume": "47100"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "81.760002",
+   "Adj Close": "81.76",
+   "Volume": "30800"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "82.260002",
+   "Adj Close": "82.26",
+   "Volume": "67400"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "82.139999",
+   "Adj Close": "82.14",
+   "Volume": "52600"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "82.129997",
+   "Adj Close": "82.13",
+   "Volume": "31000"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "82.32",
+   "Adj Close": "82.32",
+   "Volume": "19900"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "82.389999",
+   "Adj Close": "82.39",
+   "Volume": "21800"
   }
  ]
 }

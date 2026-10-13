@@ -2,7 +2,7 @@
  "ticker": "FIVA",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2184,
+ "totalRows": 2190,
  "headers": [
   "Date",
   "Close",
@@ -1113,6 +1113,42 @@
    "Close": "37.93",
    "Adj Close": "37.93",
    "Volume": "71600"
+  },
+  {
+   "Date": "Oct 05 2026",
+   "Close": "37.880001",
+   "Adj Close": "37.88",
+   "Volume": "62800"
+  },
+  {
+   "Date": "Oct 06 2026",
+   "Close": "37.939999",
+   "Adj Close": "37.94",
+   "Volume": "73100"
+  },
+  {
+   "Date": "Oct 07 2026",
+   "Close": "37.59",
+   "Adj Close": "37.59",
+   "Volume": "51600"
+  },
+  {
+   "Date": "Oct 08 2026",
+   "Close": "37.599998",
+   "Adj Close": "37.6",
+   "Volume": "137900"
+  },
+  {
+   "Date": "Oct 09 2026",
+   "Close": "37.75",
+   "Adj Close": "37.75",
+   "Volume": "79900"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "Close": "37.630001",
+   "Adj Close": "37.63",
+   "Volume": "38900"
   }
  ]
 }
