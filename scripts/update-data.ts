@@ -1251,7 +1251,8 @@ export function parseNport(xml: string): ParsedNport {
 // Yahoo chart layer: daily history, distributions, quote meta
 // ---------------------------------------------------------------------------
 
-export type ChartDay = { date: string; close: number; adjClose: number; volume: number };
+// adjCloseRaw: Yahoo's unrounded value, only used to tell float noise from a real change (never persisted).
+export type ChartDay = { date: string; close: number; adjClose: number; volume: number; adjCloseRaw?: number };
 export type ParsedChart = {
   exchangeName: string;
   longName: string;
@@ -1288,6 +1289,7 @@ export function parseChart(payload: JsonRecord): ParsedChart {
       // meaningful precision for a price and absorbs that jitter.
       adjClose: round(adjClose, 2),
       volume: typeof volumes[i] === 'number' ? (volumes[i] as number) : 0,
+      adjCloseRaw: adjClose,
     });
   }
   const events = ((result.events || {}) as JsonRecord).dividends as Record<string, JsonRecord> | undefined;
@@ -1744,6 +1746,24 @@ async function readPreviousSheet(ticker: string, kind: 'holdings' | 'history'): 
 
 type SeedFund = (typeof FIDELITY_FUNDS)[number];
 
+// Yahoo's adjusted close is float32 and its last digits move with the request's period2, so a value
+// sitting on a cent boundary (31.544998 vs 31.545001) flips between runs. Within that noise the
+// published cent is kept: a rerun with the same source data changes nothing. Close and Volume
+// update as usual; a real change beyond the noise is written.
+export const ADJ_CLOSE_NOISE = 1e-4;
+export function keepPublishedAdjClose(days: ChartDay[], published: JsonRecord[]): ChartDay[] {
+  const cents = new Map<string, number>();
+  for (const row of published) {
+    const value = numberOrNull(row['Adj Close']);
+    if (value !== null) cents.set(String(row.Date), value);
+  }
+  return days.map((day) => {
+    const prior = cents.get(formatEdgarDate(day.date));
+    const raw = day.adjCloseRaw ?? day.adjClose;
+    return prior !== undefined && prior !== day.adjClose && Math.abs(raw - prior) <= 0.005 + ADJ_CLOSE_NOISE ? { ...day, adjClose: prior } : day;
+  });
+}
+
 function historyRows(chart: ParsedChart): JsonRecord[] {
   return chart.days.map((day) => ({
     Date: formatEdgarDate(day.date),
@@ -1814,6 +1834,8 @@ async function processFund(
   if (!config.skipYahoo) {
     try {
       chart = parseChart(await fetchJson(chartUrl(ticker, config), `[chart   ] ${ticker}`, yahooHeaders(), config));
+      // History is rebuilt from the chart on every run: compare with the published rows first.
+      chart.days = keepPublishedAdjClose(chart.days, await readPreviousSheet(ticker, 'history'));
     } catch (error) {
       outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
     }
