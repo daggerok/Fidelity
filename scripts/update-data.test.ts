@@ -39,6 +39,8 @@ import {
   emptyReturnRow,
   returnsBlock,
   samePublishedContent,
+  keepPublishedAdjClose,
+  ADJ_CLOSE_NOISE,
   useOutputRoot,
   main,
   fetchWithRetry,
@@ -710,6 +712,47 @@ describe('pipeline', () => {
       expect(samePublishedContent('{"generatedAt":"old","funds":[{"ticker":"FAAA"}]}', { generatedAt: 'new', funds: [{ ticker: 'FAAA' }] })).toBe(true);
       expect(samePublishedContent('{"generatedAt":"old","funds":[]}', { generatedAt: 'new', funds: [{ ticker: 'FAAA' }] })).toBe(false);
     });
+  });
+
+  test('two runs on the same source data write zero changes even when Yahoo adjusted closes jitter across a cent boundary', async () => {
+    await inWorld(async (root) => {
+      // Yahoo float32 noise seen live: AAM SPDV 2024-11-12 came back as 31.544998 and 31.545001 a minute apart
+      const upstream = globalThis.fetch;
+      const jittered = (tail: number[]): void => {
+        globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+          const response = await upstream(input, init);
+          if (!String(input).includes('finance/chart/')) return response;
+          const payload = await response.json();
+          const indicators = payload.chart.result[0].indicators;
+          const closes: number[] = indicators.quote[0].close;
+          indicators.adjclose = [{ adjclose: closes.map((close, i) => (i >= closes.length - tail.length ? tail[i - closes.length + tail.length] : close)) }];
+          return new Response(JSON.stringify(payload));
+        }) as unknown as typeof fetch;
+      };
+      const run = () => quiet(() => main(env({ TICKERS: 'FBND' })));
+      jittered([23.915001, 24.984999, 25.995001]);
+      await run();
+      const first = snapshot(root);
+      await new Promise((resolve) => setTimeout(resolve, 1100)); // generatedAt has second resolution
+      jittered([23.914998, 24.985002, 25.994999]);
+      await run();
+      expect(snapshot(root)).toEqual(first);
+      // a real change beyond the noise is still written
+      jittered([23.9, 24.97, 25.98]);
+      await run();
+      const rows = readJson(root, 'funds/FBND/history/001.json').rows;
+      expect(snapshot(root)).not.toEqual(first);
+      expect(rows.slice(-3).map((row: any) => row['Adj Close'])).toEqual(['23.9', '24.97', '25.98']);
+    });
+  });
+
+  test('keepPublishedAdjClose keeps the published cent only within float noise of a cent boundary', () => {
+    const published = [{ Date: 'Nov 12 2024', Close: '33.928001', 'Adj Close': '31.54', Volume: '3900' }];
+    const fresh = (adjCloseRaw: number) => [{ date: '2024-11-12', close: 33.928001, adjClose: Math.round(adjCloseRaw * 100) / 100, volume: 4000, adjCloseRaw }];
+    expect(keepPublishedAdjClose(fresh(31.545001), published)[0]).toMatchObject({ adjClose: 31.54, volume: 4000 });
+    expect(keepPublishedAdjClose(fresh(31.5452), published)[0].adjClose).toBe(31.55);
+    expect(keepPublishedAdjClose(fresh(31.56), published)[0].adjClose).toBe(31.56);
+    expect(ADJ_CLOSE_NOISE).toBe(1e-4);
   });
 
   test('search misses are remembered: debt rows are never searched, a rerun sends no search and writes nothing, failures leave no state', async () => {
