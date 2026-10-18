@@ -2,7 +2,7 @@
  "ticker": "FELG",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 725,
+ "totalRows": 729,
  "headers": [
   "Date",
   "Close",
@@ -4359,6 +4359,30 @@
    "Close": "45.650002",
    "Adj Close": "45.65",
    "Volume": "227900"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "45.669998",
+   "Adj Close": "45.67",
+   "Volume": "463100"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "44.650002",
+   "Adj Close": "44.65",
+   "Volume": "218500"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "44.639999",
+   "Adj Close": "44.64",
+   "Volume": "294100"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "43.610001",
+   "Adj Close": "43.61",
+   "Volume": "429700"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FDCF",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 837,
+ "totalRows": 841,
  "headers": [
   "Date",
   "Close",
@@ -5031,6 +5031,30 @@
    "Close": "52.645",
    "Adj Close": "52.65",
    "Volume": "5600"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "52.554001",
+   "Adj Close": "52.55",
+   "Volume": "1400"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "51.268002",
+   "Adj Close": "51.27",
+   "Volume": "1600"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "51.686001",
+   "Adj Close": "51.69",
+   "Volume": "4500"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "50.34",
+   "Adj Close": "50.34",
+   "Volume": "5800"
   }
  ]
 }

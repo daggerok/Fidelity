@@ -2,7 +2,7 @@
  "ticker": "FDIF",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 832,
+ "totalRows": 836,
  "headers": [
   "Date",
   "Close",
@@ -4998,9 +4998,33 @@
   },
   {
    "Date": "Oct 12 2026",
-   "Close": "42.014801",
+   "Close": "42.014999",
    "Adj Close": "42.01",
-   "Volume": "5241"
+   "Volume": "5200"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "41.844002",
+   "Adj Close": "41.84",
+   "Volume": "11400"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "40.965",
+   "Adj Close": "40.97",
+   "Volume": "2500"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "41.264",
+   "Adj Close": "41.26",
+   "Volume": "7200"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "40.136002",
+   "Adj Close": "40.14",
+   "Volume": "55500"
   }
  ]
 }

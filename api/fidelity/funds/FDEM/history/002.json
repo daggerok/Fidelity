@@ -2,7 +2,7 @@
  "ticker": "FDEM",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1915,
+ "totalRows": 1919,
  "headers": [
   "Date",
   "Close",
@@ -5499,6 +5499,30 @@
    "Close": "35.48",
    "Adj Close": "35.48",
    "Volume": "27700"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "35.189999",
+   "Adj Close": "35.19",
+   "Volume": "88200"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "34.720001",
+   "Adj Close": "34.72",
+   "Volume": "49400"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "34.5",
+   "Adj Close": "34.5",
+   "Volume": "52600"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "34.150002",
+   "Adj Close": "34.15",
+   "Volume": "42100"
   }
  ]
 }

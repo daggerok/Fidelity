@@ -2,7 +2,7 @@
  "ticker": "FSEV",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 114,
+ "totalRows": 118,
  "headers": [
   "Date",
   "Close",
@@ -690,9 +690,33 @@
   },
   {
    "Date": "Oct 12 2026",
-   "Close": "25.8176",
+   "Close": "25.82",
    "Adj Close": "25.82",
-   "Volume": "241"
+   "Volume": "200"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "25.870001",
+   "Adj Close": "25.87",
+   "Volume": "100"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "25.48",
+   "Adj Close": "25.48",
+   "Volume": "100"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "25.809999",
+   "Adj Close": "25.81",
+   "Volume": "900"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "25.65",
+   "Adj Close": "25.65",
+   "Volume": "300"
   }
  ]
 }

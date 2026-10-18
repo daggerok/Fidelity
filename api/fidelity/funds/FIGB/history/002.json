@@ -2,7 +2,7 @@
  "ticker": "FIGB",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1409,
+ "totalRows": 1413,
  "headers": [
   "Date",
   "Close",
@@ -2463,6 +2463,30 @@
    "Close": "40.98",
    "Adj Close": "40.98",
    "Volume": "43400"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "41.040001",
+   "Adj Close": "41.04",
+   "Volume": "82300"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "41.09",
+   "Adj Close": "41.09",
+   "Volume": "69200"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "41.330002",
+   "Adj Close": "41.33",
+   "Volume": "48300"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "41.34",
+   "Adj Close": "41.34",
+   "Volume": "59400"
   }
  ]
 }

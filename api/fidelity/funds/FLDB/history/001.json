@@ -2,7 +2,7 @@
  "ticker": "FLDB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 660,
+ "totalRows": 664,
  "headers": [
   "Date",
   "Close",
@@ -3969,6 +3969,30 @@
    "Close": "50.25",
    "Adj Close": "50.25",
    "Volume": "28100"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "50.294998",
+   "Adj Close": "50.29",
+   "Volume": "16700"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "50.255001",
+   "Adj Close": "50.26",
+   "Volume": "11300"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "50.244999",
+   "Adj Close": "50.24",
+   "Volume": "12200"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "50.27",
+   "Adj Close": "50.27",
+   "Volume": "15200"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FFEM",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 472,
+ "totalRows": 476,
  "headers": [
   "Date",
   "Close",
@@ -2841,6 +2841,30 @@
    "Close": "41.305",
    "Adj Close": "41.31",
    "Volume": "3200"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "40.859001",
+   "Adj Close": "40.86",
+   "Volume": "7500"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "40.009998",
+   "Adj Close": "40.01",
+   "Volume": "13200"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "39.709",
+   "Adj Close": "39.71",
+   "Volume": "20300"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "38.946999",
+   "Adj Close": "38.95",
+   "Volume": "11200"
   }
  ]
 }

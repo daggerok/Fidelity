@@ -2,7 +2,7 @@
  "ticker": "FTEC",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3260,
+ "totalRows": 3264,
  "headers": [
   "Date",
   "Close",
@@ -1569,6 +1569,30 @@
    "Close": "301.920013",
    "Adj Close": "301.92",
    "Volume": "175700"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "Close": "301.790009",
+   "Adj Close": "301.79",
+   "Volume": "277100"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "Close": "293.079987",
+   "Adj Close": "293.08",
+   "Volume": "316600"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "Close": "292",
+   "Adj Close": "292",
+   "Volume": "399500"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "Close": "283.459991",
+   "Adj Close": "283.46",
+   "Volume": "464000"
   }
  ]
 }
