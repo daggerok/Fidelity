@@ -2,7 +2,7 @@
  "ticker": "FCPI",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1744,
+ "totalRows": 1745,
  "headers": [
   "Date",
   "Close",
@@ -4473,6 +4473,12 @@
    "Close": "56.650002",
    "Adj Close": "56.65",
    "Volume": "17700"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "Close": "56.452999",
+   "Adj Close": "56.45",
+   "Volume": "11200"
   }
  ]
 }

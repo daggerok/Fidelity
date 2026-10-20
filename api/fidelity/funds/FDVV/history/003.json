@@ -2,7 +2,7 @@
  "ticker": "FDVV",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2536,
+ "totalRows": 2537,
  "headers": [
   "Date",
   "Close",
@@ -3225,6 +3225,12 @@
    "Close": "61.68",
    "Adj Close": "61.68",
    "Volume": "640200"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "Close": "61.369999",
+   "Adj Close": "61.37",
+   "Volume": "477500"
   }
  ]
 }

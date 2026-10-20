@@ -2,7 +2,7 @@
  "ticker": "FDEV",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1919,
+ "totalRows": 1920,
  "headers": [
   "Date",
   "Close",
@@ -5523,6 +5523,12 @@
    "Close": "37.099998",
    "Adj Close": "37.1",
    "Volume": "26200"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "Close": "36.894001",
+   "Adj Close": "36.89",
+   "Volume": "26300"
   }
  ]
 }

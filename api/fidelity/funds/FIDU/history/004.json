@@ -2,7 +2,7 @@
  "ticker": "FIDU",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3264,
+ "totalRows": 3265,
  "headers": [
   "Date",
   "Close",
@@ -1593,6 +1593,12 @@
    "Close": "88.650002",
    "Adj Close": "88.65",
    "Volume": "2260200"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "Close": "88.209999",
+   "Adj Close": "88.21",
+   "Volume": "195200"
   }
  ]
 }

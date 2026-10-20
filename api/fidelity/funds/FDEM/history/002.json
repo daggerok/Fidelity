@@ -2,7 +2,7 @@
  "ticker": "FDEM",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1919,
+ "totalRows": 1920,
  "headers": [
   "Date",
   "Close",
@@ -5523,6 +5523,12 @@
    "Close": "34.150002",
    "Adj Close": "34.15",
    "Volume": "42100"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "Close": "34.189999",
+   "Adj Close": "34.19",
+   "Volume": "38800"
   }
  ]
 }

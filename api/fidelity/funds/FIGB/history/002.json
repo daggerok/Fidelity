@@ -2,7 +2,7 @@
  "ticker": "FIGB",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1413,
+ "totalRows": 1414,
  "headers": [
   "Date",
   "Close",
@@ -2487,6 +2487,12 @@
    "Close": "41.34",
    "Adj Close": "41.34",
    "Volume": "59400"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "Close": "41.150002",
+   "Adj Close": "41.15",
+   "Volume": "74100"
   }
  ]
 }

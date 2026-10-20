@@ -2,7 +2,7 @@
  "ticker": "FDCF",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 841,
+ "totalRows": 842,
  "headers": [
   "Date",
   "Close",
@@ -5055,6 +5055,12 @@
    "Close": "50.34",
    "Adj Close": "50.34",
    "Volume": "5800"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "Close": "50.661999",
+   "Adj Close": "50.66",
+   "Volume": "6300"
   }
  ]
 }
