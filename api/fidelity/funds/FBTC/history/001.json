@@ -2,7 +2,7 @@
  "ticker": "FBTC",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 695,
+ "totalRows": 696,
  "headers": [
   "Date",
   "Close",
@@ -4179,6 +4179,12 @@
    "Close": "71.139999",
    "Adj Close": "71.14",
    "Volume": "1904100"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "Close": "71.720001",
+   "Adj Close": "71.72",
+   "Volume": "2439100"
   }
  ]
 }

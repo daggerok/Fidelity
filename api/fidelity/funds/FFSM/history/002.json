@@ -2,7 +2,7 @@
  "ticker": "FFSM",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1433,
+ "totalRows": 1434,
  "headers": [
   "Date",
   "Close",
@@ -2607,6 +2607,12 @@
    "Close": "33.580002",
    "Adj Close": "33.58",
    "Volume": "1338800"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "Close": "33.875",
+   "Adj Close": "33.88",
+   "Volume": "607600"
   }
  ]
 }

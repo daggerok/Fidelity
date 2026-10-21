@@ -2,7 +2,7 @@
  "ticker": "FLDR",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2096,
+ "totalRows": 2097,
  "headers": [
   "Date",
   "Close",
@@ -585,6 +585,12 @@
    "Close": "49.919998",
    "Adj Close": "49.92",
    "Volume": "231400"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "Close": "49.93",
+   "Adj Close": "49.93",
+   "Volume": "194900"
   }
  ]
 }

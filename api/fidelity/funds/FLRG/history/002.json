@@ -2,7 +2,7 @@
  "ticker": "FLRG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1528,
+ "totalRows": 1529,
  "headers": [
   "Date",
   "Close",
@@ -3177,6 +3177,12 @@
    "Close": "41.900002",
    "Adj Close": "41.9",
    "Volume": "7400"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "Close": "42.089001",
+   "Adj Close": "42.09",
+   "Volume": "6700"
   }
  ]
 }

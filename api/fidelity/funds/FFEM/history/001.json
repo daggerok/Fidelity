@@ -2,7 +2,7 @@
  "ticker": "FFEM",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 477,
+ "totalRows": 478,
  "headers": [
   "Date",
   "Close",
@@ -2871,6 +2871,12 @@
    "Close": "39.189999",
    "Adj Close": "39.19",
    "Volume": "6400"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "Close": "39.327",
+   "Adj Close": "39.33",
+   "Volume": "5600"
   }
  ]
 }

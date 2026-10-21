@@ -2,7 +2,7 @@
  "ticker": "FMET",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1128,
+ "totalRows": 1129,
  "headers": [
   "Date",
   "Close",
@@ -777,6 +777,12 @@
    "Close": "38.52",
    "Adj Close": "38.52",
    "Volume": "18800"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "Close": "38.84",
+   "Adj Close": "38.84",
+   "Volume": "12900"
   }
  ]
 }

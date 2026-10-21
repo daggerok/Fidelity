@@ -2,7 +2,7 @@
  "ticker": "FQAL",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2536,
+ "totalRows": 2537,
  "headers": [
   "Date",
   "Close",
@@ -3225,6 +3225,12 @@
    "Close": "84.43",
    "Adj Close": "84.43",
    "Volume": "355500"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "Close": "84.900002",
+   "Adj Close": "84.9",
+   "Volume": "140900"
   }
  ]
 }
