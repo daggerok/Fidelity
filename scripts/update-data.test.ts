@@ -418,15 +418,24 @@ describe('parsing', () => {
     expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
   });
 
-  test('N-PORT identity: the series and its name must be the fund\'s (Yahoo trust prefix, & and case ignored); FPRO, FLDB and FLDR carry their own series', () => {
+  test('N-PORT identity and validity: a series ID, the fund\'s series and name (Yahoo trust prefix, & and case ignored) and >= 1 row; FPRO, FLDB and FLDR carry their own series', () => {
+    const doc = (seriesId: string, seriesName: string, rows = 1) => ({ seriesId, seriesName, holdings: parseNport(nportFixture(seriesName, equityPosition('EQUINIX INC', '29444U700', '100', '10', '1').repeat(rows))).holdings });
     // live names: Yahoo longName of FFLC and FPFD vs their N-PORT seriesName
-    expect(nportIdentityProblem('S000068174', 'Fidelity Covington Trust - Fidelity Fundamental Large Cap Core ETF', { seriesId: 'S000068174', seriesName: 'Fidelity Fundamental Large Cap Core ETF' })).toBeNull();
-    expect(nportIdentityProblem('S000072125', 'Fidelity Preferred Securities & Income ETF', { seriesId: 'S000072125', seriesName: 'Fidelity Preferred Securities and Income ETF' })).toBeNull();
+    expect(nportIdentityProblem('S000068174', 'Fidelity Covington Trust - Fidelity Fundamental Large Cap Core ETF', doc('S000068174', 'Fidelity Fundamental Large Cap Core ETF'))).toBeNull();
+    expect(nportIdentityProblem('S000072125', 'Fidelity Preferred Securities & Income ETF', doc('S000072125', 'Fidelity Preferred Securities and Income ETF'))).toBeNull();
     // the old seed pairings: FPRO with FREL's series, FLDB with FLDR's
-    expect(nportIdentityProblem('S000047984', 'Fidelity Real Estate Investment ETF', { seriesId: 'S000047984', seriesName: 'Fidelity MSCI Real Estate Index ETF' })).toContain('the fund is "Fidelity Real Estate Investment ETF"');
-    expect(nportIdentityProblem('S000062079', 'Fidelity Low Duration Bond ETF', { seriesId: 'S000062079', seriesName: 'Fidelity Low Duration Bond Factor ETF' })).toContain('Factor');
-    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', { seriesId: 'S000047984', seriesName: 'Fidelity Real Estate Investment ETF' })).toContain('expected S000070235');
-    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', { seriesId: '', seriesName: '' })).not.toBeNull();
+    expect(nportIdentityProblem('S000047984', 'Fidelity Real Estate Investment ETF', doc('S000047984', 'Fidelity MSCI Real Estate Index ETF'))).toContain('the fund is "Fidelity Real Estate Investment ETF"');
+    expect(nportIdentityProblem('S000062079', 'Fidelity Low Duration Bond ETF', doc('S000062079', 'Fidelity Low Duration Bond Factor ETF'))).toContain('Factor');
+    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', doc('S000047984', 'Fidelity Real Estate Investment ETF'))).toContain('expected S000070235');
+    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', doc('', ''))).not.toBeNull();
+    // validity: an HTML page parses to no series and no rows (0 holdings, AUM 0); a document without a series ID or positions is no usable filing either
+    const html = parseNport('<html><head><title>SEC.gov | Request Rate Threshold Exceeded</title></head><body><h1>Your request has been blocked</h1></body></html>');
+    expect([html.seriesId, html.seriesName, html.holdings.length, html.totalValue]).toEqual(['', '', 0, 0]);
+    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', html)).toContain('no series ID');
+    const unnamed = parseNport(nportFixture('Fidelity Total Bond ETF', equityPosition('US TREASURY N/B', '91282CDX7', '100', '990000', '1000000')).replace('<seriesId>S000099999</seriesId>', ''));
+    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', unnamed)).toContain('no series ID');
+    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', doc('S000042567', 'Fidelity Total Bond ETF', 0))).toBe('no holdings rows in the filing');
+    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', doc('S000042567', 'Fidelity Total Bond ETF', 2))).toBeNull();
     expect(fundNameKey('Fidelity Covington Trust - Fidelity Fundamental Small-Mid Cap ETF')).toBe('fidelity fundamental small mid cap etf');
     // the shortName is cut ("Fidelity Real Estate Investment"), so it never stands in for the longName
     expect(parseChart(chartFixture({ meta: { longName: undefined, shortName: 'Fidelity Real Estate Investment' } })).longName).toBe('');
@@ -896,6 +905,37 @@ describe('pipeline', () => {
         await quiet(() => main(env({ TICKERS: 'FBND' })));
         const fixed = readJson(root, 'funds/FBND/meta.json');
         expect([fixed.holdings.totalRows, fixed.holdings.asOf, fixed.seed.seriesId]).toEqual([1, 'May 31 2026', 'S000042567']);
+        expect(process.exitCode).toBe(0);
+      } finally {
+        console.warn = warn;
+      }
+    });
+  });
+
+  test('an N-PORT body that is no usable filing (no positions, an HTML page) is not used: no AUM 0 for a new fund, a published fund keeps holdings and AUM', async () => {
+    await inWorld(async (root) => {
+      const warn = console.warn;
+      const warnings: string[] = [];
+      console.warn = (message: string) => { warnings.push(String(message)); };
+      try {
+        // a new fund whose filing lists no positions: AUM stays unknown (null), never 0
+        world.positions = 0;
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        const fresh = readJson(root, 'funds/FBND/meta.json');
+        expect([fresh.aum.value, fresh.holdings.totalRows, readJson(root, 'index.json').funds[0].aumValue]).toEqual([null, 0, null]);
+        expect(warnings.some((line) => line.includes('FBND') && line.includes('no holdings rows'))).toBe(true);
+        world.positions = 2;
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        const meta = readJson(root, 'funds/FBND/meta.json');
+        expect([meta.aum.value, meta.holdings.totalRows]).toEqual([2000, 2]);
+        // SEC answers 200 with an HTML page: holdings and AUM stay as published, the rest of the fund still updates
+        const upstream = globalThis.fetch;
+        globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) =>
+          String(input).includes('primary_doc.xml') ? new Response('<html><body>Request Rate Threshold Exceeded</body></html>', { status: 200 }) : upstream(input, init)) as unknown as typeof fetch;
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        const kept = readJson(root, 'funds/FBND/meta.json');
+        expect([kept.aum, kept.holdings, kept.seed]).toEqual([meta.aum, meta.holdings, meta.seed]);
+        expect(readJson(root, 'index.json').funds[0].aumValue).toBe(2000);
         expect(process.exitCode).toBe(0);
       } finally {
         console.warn = warn;

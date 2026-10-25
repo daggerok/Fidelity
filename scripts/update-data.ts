@@ -1211,14 +1211,17 @@ export function fundNameKey(raw: unknown): string {
 }
 
 /**
- * Why a filing is not this fund's (null when it is): the series must be the seed's, and the series name must be the
- * name Yahoo gives the fund (its longName; the catalog name when Yahoo has none). A wrong seed pairing (FPRO had
- * FREL's series, FLDB and FLDR each other's) is caught here instead of publishing another fund's holdings.
+ * Why a downloaded N-PORT document is not this fund's filing (null when it is): it must carry a series ID, the seed's,
+ * a series name equal to the name Yahoo gives the fund (its longName; the catalog name when Yahoo has none) and at
+ * least one holdings row. A wrong seed pairing (FPRO had FREL's series, FLDB and FLDR each other's) and a body that is
+ * no filing (an HTML error page parses to no series and no rows: 0 holdings and AUM 0) are caught here.
  */
-export function nportIdentityProblem(seriesId: string | null, fundName: string, parsed: Pick<ParsedNport, 'seriesId' | 'seriesName'>): string | null {
-  if (seriesId && parsed.seriesId && parsed.seriesId !== seriesId) return `filing is for series ${parsed.seriesId}, expected ${seriesId}`;
+export function nportIdentityProblem(seriesId: string | null, fundName: string, parsed: Pick<ParsedNport, 'seriesId' | 'seriesName' | 'holdings'>): string | null {
+  if (!parsed.seriesId) return 'no series ID in the document (not an N-PORT filing)';
+  if (seriesId && parsed.seriesId !== seriesId) return `filing is for series ${parsed.seriesId}, expected ${seriesId}`;
   const name = fundNameKey(fundName);
   if (!name || name !== fundNameKey(parsed.seriesName)) return `filing is for "${parsed.seriesName}", the fund is "${fundName}"`;
+  if (!parsed.holdings.length) return 'no holdings rows in the filing';
   return null;
 }
 
