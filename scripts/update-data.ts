@@ -289,8 +289,8 @@ export const FIDELITY_FUNDS: FidelitySeedFund[] = [
     { ticker: 'FIDU', name: 'Fidelity MSCI Industrials Index ETF', seriesId: 'S000042576', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063878', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIDU' },
     { ticker: 'FIGB', name: 'Fidelity Investment Grade Bond ETF', seriesId: 'S000071131', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004658', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2021-03-04', exchange: 'NYSEArca', ter: 0.36, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIGB' },
     { ticker: 'FIVA', name: 'Fidelity International Value Factor ETF', seriesId: 'S000059463', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004084', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2018-01-25', exchange: 'NYSEArca', ter: 0.18, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIVA' },
-    { ticker: 'FLDB', name: 'Fidelity Low Duration Bond Factor ETF', seriesId: 'S000062079', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004687', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2024-02-26', exchange: 'NasdaqGM', ter: 0.2, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLDB' },
-    { ticker: 'FLDR', name: 'Fidelity Low Duration Bond ETF', seriesId: 'S000084018', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004694', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2018-06-18', exchange: 'Cboe US', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLDR' },
+    { ticker: 'FLDB', name: 'Fidelity Low Duration Bond ETF', seriesId: 'S000084018', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004694', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2024-02-26', exchange: 'NasdaqGM', ter: 0.2, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLDB' },
+    { ticker: 'FLDR', name: 'Fidelity Low Duration Bond Factor ETF', seriesId: 'S000062079', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004687', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2018-06-18', exchange: 'Cboe US', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLDR' },
     { ticker: 'FLRG', name: 'Fidelity U.S. Multifactor ETF', seriesId: 'S000068350', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004211', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2020-09-18', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLRG' },
     { ticker: 'FLTB', name: 'Fidelity Limited Term Bond ETF', seriesId: 'S000042569', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004685', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2014-10-09', exchange: 'NYSEArca', ter: 0.25, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLTB' },
     { ticker: 'FMAG', name: 'Fidelity Magellan ETF', seriesId: 'S000070234', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-004116', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMAG' },
@@ -302,7 +302,7 @@ export const FIDELITY_FUNDS: FidelitySeedFund[] = [
     { ticker: 'FMUN', name: 'Fidelity Systematic Municipal Bond Index ETF', seriesId: 'S000089371', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-005529', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2025-04-08', exchange: 'NasdaqGM', ter: 0.05, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMUN' },
     { ticker: 'FNCL', name: 'Fidelity MSCI Financials Index ETF', seriesId: 'S000042574', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063879', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2013-10-24', exchange: 'NYSEArca', ter: 0.084, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FNCL' },
     { ticker: 'FPFD', name: 'Fidelity Preferred Securities and Income ETF', seriesId: 'S000072125', trustCik: '0000945908', category: 'Bond', accession: '0000035402-26-004678', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2021-06-17', exchange: 'Cboe US', ter: 0.59, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPFD' },
-    { ticker: 'FPRO', name: 'Fidelity MSCI Real Estate Index ETF', seriesId: 'S000047984', trustCik: '0000945908', category: 'Sector', accession: '0001410368-26-063884', filed: '2026-06-23', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPRO' },
+    { ticker: 'FPRO', name: 'Fidelity Real Estate Investment ETF', seriesId: 'S000070235', trustCik: '0000945908', category: 'Sector', accession: '0000035402-26-004137', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPRO' },
     { ticker: 'FQAL', name: 'Fidelity Quality Factor ETF', seriesId: 'S000054753', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004131', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2016-09-16', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FQAL' },
     { ticker: 'FREI', name: 'Fidelity Real Estate Investment ETF', seriesId: 'S000070235', trustCik: '0000945908', category: 'Sector', accession: '0000035402-26-004137', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FREI' },
     { ticker: 'FRNW', name: 'Fidelity Clean Energy ETF', seriesId: 'S000073597', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-005377', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2021-10-07', exchange: 'Cboe US', ter: 0.39, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FRNW' },
@@ -1205,6 +1205,23 @@ export type ParsedNport = {
   totalValue: number;
 };
 
+/** A fund name for the N-PORT identity check: Yahoo's "<Trust> - " prefix dropped, & read as and, case and punctuation ignored. */
+export function fundNameKey(raw: unknown): string {
+  return String(raw ?? '').replace(/^.*\btrust\s+-\s+/i, '').replace(/&/g, ' and ').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+/**
+ * Why a filing is not this fund's (null when it is): the series must be the seed's, and the series name must be the
+ * name Yahoo gives the fund (its longName; the catalog name when Yahoo has none). A wrong seed pairing (FPRO had
+ * FREL's series, FLDB and FLDR each other's) is caught here instead of publishing another fund's holdings.
+ */
+export function nportIdentityProblem(seriesId: string | null, fundName: string, parsed: Pick<ParsedNport, 'seriesId' | 'seriesName'>): string | null {
+  if (seriesId && parsed.seriesId && parsed.seriesId !== seriesId) return `filing is for series ${parsed.seriesId}, expected ${seriesId}`;
+  const name = fundNameKey(fundName);
+  if (!name || name !== fundNameKey(parsed.seriesName)) return `filing is for "${parsed.seriesName}", the fund is "${fundName}"`;
+  return null;
+}
+
 // Minimal, forgiving N-PORT-P XML reader (machine-generated schemas only),
 // in the same spirit as SPDR's hand-rolled ZIP/OOXML workbook reader.
 export function parseNport(xml: string): ParsedNport {
@@ -1303,7 +1320,7 @@ export function parseChart(payload: JsonRecord): ParsedChart {
     .sort((a, b) => a.epoch - b.epoch);
   return {
     exchangeName: String(meta.fullExchangeName || meta.exchangeName || ''),
-    longName: String(meta.longName || meta.shortName || ''),
+    longName: String(meta.longName || ''), // never the shortName: it is often cut ("Fidelity Real Estate Investment")
     navPrice: numberOrNull(meta.navPrice),
     regularMarketPrice: numberOrNull(meta.regularMarketPrice) ?? numberOrNull(meta.previousClose),
     regularMarketTime: numberOrNull(meta.regularMarketTime),
@@ -1868,19 +1885,23 @@ async function processFund(
   }
 
   // 2) SEC N-PORT: official holdings + net assets (sum of reported valUSD).
+  // Holdings published for another series (before a seed correction) are no baseline for freshness or the guard's row count.
+  const published = (previousMeta?.seed as JsonRecord | undefined)?.seriesId === seed.seriesId ? previousMeta : null;
   let nport: ParsedNport | null = null;
   if (nportUrl) {
     try {
       const xml = await fetchText(nportUrl, `[nport   ] ${ticker}`, secHeaders(config), config);
       const parsedNport = parseNport(xml);
-      if (seed.seriesId && parsedNport.seriesId && parsedNport.seriesId !== seed.seriesId) {
-        throw new Error(`filing is for series ${parsedNport.seriesId}, expected ${seed.seriesId}`);
-      }
-      if (!nportMayReplace(displayDateToIso((previousMeta?.holdings as JsonRecord | undefined)?.asOf), parsedNport.repPdDate)) {
+      const identity = nportIdentityProblem(seed.seriesId, chart?.longName || seed.name, parsedNport);
+      if (identity) {
+        // Always reported (not only with VERBOSE): the fund keeps its previous holdings and AUM until the seed is fixed.
+        console.warn(`[ ${'nport'.padEnd(9)}] ${ticker}: ${identity} — N-PORT not used, keeping previous holdings`);
+      } else if (!nportMayReplace(displayDateToIso((published?.holdings as JsonRecord | undefined)?.asOf), parsedNport.repPdDate)) {
         throw new Error(`filing period ${parsedNport.repPdDate} is older than the published holdings`);
+      } else {
+        nport = parsedNport;
       }
-      nport = parsedNport;
-      if (config.storeRawDownloads) {
+      if (nport && config.storeRawDownloads) {
         const rawDir = new URL(`raw/${ticker}/`, API_ROOT);
         await mkdir(rawDir, { recursive: true });
         await writeFile(new URL(`nport-${(nport.repPdDate || 'latest').replace(/-/g, '')}.xml`, rawDir), xml, 'utf8');
@@ -1906,7 +1927,7 @@ async function processFund(
   // A fund is either fully updated or fully kept: fresh N-PORT holdings that look broken (no weight column,
   // non-numeric weights, a bad weight sum, half the rows gone) fail the fund before anything of it is written,
   // so its previous complete state stays published. The previous sheet re-read as retention is not checked.
-  const holdingsProblem = nport ? holdingsGuard(holdingsHeaders, holdingsRows, numberOrNull(previousMeta?.holdings?.totalRows), HOLDINGS_GUARD_RELAX[ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? []) : null;
+  const holdingsProblem = nport ? holdingsGuard(holdingsHeaders, holdingsRows, numberOrNull(published?.holdings?.totalRows), HOLDINGS_GUARD_RELAX[ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? []) : null;
   if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${previousMeta ? 'kept the previous complete data' : 'no data published for this fund yet'}`);
 
   const fundDir = new URL(`funds/${ticker}/`, API_ROOT);
@@ -1986,8 +2007,10 @@ async function processFund(
       asOf: returns ? formatEdgarDate(returns.asOfDate) : (((previousMeta?.history as JsonRecord | undefined)?.asOf as string) ?? '—'),
     },
     seed: {
-      seriesId: seed.seriesId,
-      seriesName: seed.name,
+      // The series of the published holdings: kept from before while N-PORT data is not used, so a corrected seed
+      // never makes another series' retained holdings the baseline of the next run.
+      seriesId: nport || !previousMeta?.seed ? seed.seriesId : (previousMeta.seed.seriesId ?? null),
+      seriesName: nport || !previousMeta?.seed ? seed.name : (previousMeta.seed.seriesName ?? null),
       trustCik: seed.trustCik,
       trustName: FIDELITY_TRUSTS[seed.trustCik] || null,
       accession: accession || ((previousMeta?.seed as JsonRecord | undefined)?.accession ?? null),
