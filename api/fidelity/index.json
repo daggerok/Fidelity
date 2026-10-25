@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T05:11:30Z",
+ "generatedAt": "2026-10-25T03:27:45Z",
  "source": {
   "provider": "Fidelity Investments (ETFs)",
   "market": "us",
@@ -17,7 +17,7 @@
  "counts": {
   "funds": 74,
   "holdings": 23071,
-  "history": 111028
+  "history": 111031
  },
  "funds": [
   {
@@ -1987,11 +1987,11 @@
    "navValue": null,
    "aum": "$10,371.97 M",
    "aumValue": 10371969550.339996,
-   "asOfDate": "Oct 20 2026",
+   "asOfDate": "Oct 23 2026",
    "inceptionDate": "Sep 15 2016",
    "exchange": "NYSEArca",
-   "closePrice": "$61.84",
-   "closePriceValue": 61.84,
+   "closePrice": "$61.97",
+   "closePriceValue": 61.97,
    "premiumDiscount": "—",
    "premiumDiscountValue": null,
    "distributions": {
@@ -2001,23 +2001,23 @@
    },
    "returns": {
     "monthEnd": {
-     "asOfDate": "Oct 20 2026",
-     "mo1": -0.32,
-     "mo1Text": "-0.32%",
-     "qtd": 2.1,
-     "qtdText": "2.10%",
-     "ytd": 11.54,
-     "ytdText": "11.54%",
-     "yr1": 13.89,
-     "yr1Text": "13.89%",
-     "yr3": 21.33,
-     "yr3Text": "21.33%",
-     "yr5": 13.27,
-     "yr5Text": "13.27%",
-     "yr10": 13.43,
-     "yr10Text": "13.43%",
-     "sinceInception": 13.23,
-     "sinceInceptionText": "13.23%"
+     "asOfDate": "Oct 23 2026",
+     "mo1": 1.23,
+     "mo1Text": "1.23%",
+     "qtd": 2.31,
+     "qtdText": "2.31%",
+     "ytd": 11.78,
+     "ytdText": "11.78%",
+     "yr1": 13.42,
+     "yr1Text": "13.42%",
+     "yr3": 21.74,
+     "yr3Text": "21.74%",
+     "yr5": 13.24,
+     "yr5Text": "13.24%",
+     "yr10": 13.47,
+     "yr10Text": "13.47%",
+     "sinceInception": 13.24,
+     "sinceInceptionText": "13.24%"
     },
     "quarterEnd": {
      "asOfDate": "Sep 30 2026",
@@ -2040,25 +2040,25 @@
     }
    },
    "metrics": {
-    "ytd": 11.54,
-    "tr1y": 13.89,
-    "tr3y": 78.61,
-    "tr5y": 86.46,
-    "tr10y": 252.6,
-    "cagr3y": 21.33,
-    "cagr5y": 13.27,
-    "cagr10y": 13.43,
-    "siAnn": 13.23,
+    "ytd": 11.78,
+    "tr1y": 13.42,
+    "tr3y": 80.43,
+    "tr5y": 86.21,
+    "tr10y": 253.84,
+    "cagr3y": 21.74,
+    "cagr5y": 13.24,
+    "cagr10y": 13.47,
+    "siAnn": 13.24,
     "dividendYield": 2.34,
     "dividendYieldText": "2.34%",
     "dividendYieldBasis": "indicated",
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns); Fidelity publishes no machine-readable performance table",
-    "performanceAsOf": "2026-10-20"
+    "performanceAsOf": "2026-10-23"
    },
    "holdings": 99,
-   "history": 2538
+   "history": 2541
   },
   {
    "ticker": "FEAC",
