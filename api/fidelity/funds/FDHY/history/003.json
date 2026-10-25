@@ -2,7 +2,7 @@
  "ticker": "FDHY",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2099,
+ "totalRows": 2102,
  "headers": [
   "Date",
   "Close",
@@ -603,6 +603,24 @@
    "Close": "47.619999",
    "Adj Close": "47.62",
    "Volume": "95200"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "47.73",
+   "Adj Close": "47.73",
+   "Volume": "40000"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "47.779999",
+   "Adj Close": "47.78",
+   "Volume": "34300"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "47.759998",
+   "Adj Close": "47.76",
+   "Volume": "49100"
   }
  ]
 }

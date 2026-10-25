@@ -2,7 +2,7 @@
  "ticker": "FMUB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 387,
+ "totalRows": 390,
  "headers": [
   "Date",
   "Close",
@@ -2331,6 +2331,24 @@
    "Close": "49.110001",
    "Adj Close": "49.11",
    "Volume": "208700"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "49.194",
+   "Adj Close": "49.19",
+   "Volume": "345300"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "49.546001",
+   "Adj Close": "49.55",
+   "Volume": "373300"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "49.643002",
+   "Adj Close": "49.64",
+   "Volume": "108800"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FELV",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 731,
+ "totalRows": 734,
  "headers": [
   "Date",
   "Close",
@@ -4395,6 +4395,24 @@
    "Close": "42.889999",
    "Adj Close": "42.89",
    "Volume": "456100"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "42.970001",
+   "Adj Close": "42.97",
+   "Volume": "251800"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "43.060001",
+   "Adj Close": "43.06",
+   "Volume": "243500"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "42.759998",
+   "Adj Close": "42.76",
+   "Volume": "566300"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FCLO",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 173,
+ "totalRows": 176,
  "headers": [
   "Date",
   "Close",
@@ -1047,6 +1047,24 @@
    "Close": "50.5",
    "Adj Close": "50.5",
    "Volume": "14400"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "50.509998",
+   "Adj Close": "50.51",
+   "Volume": "109700"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "50.52",
+   "Adj Close": "50.52",
+   "Volume": "81400"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "50.540001",
+   "Adj Close": "50.54",
+   "Volume": "137700"
   }
  ]
 }

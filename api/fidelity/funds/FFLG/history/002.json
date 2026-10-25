@@ -2,7 +2,7 @@
  "ticker": "FFLG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1434,
+ "totalRows": 1437,
  "headers": [
   "Date",
   "Close",
@@ -2613,6 +2613,24 @@
    "Close": "32.849998",
    "Adj Close": "32.85",
    "Volume": "40200"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "33.224998",
+   "Adj Close": "33.22",
+   "Volume": "53400"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "31.969999",
+   "Adj Close": "31.97",
+   "Volume": "74900"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "31.870001",
+   "Adj Close": "31.87",
+   "Volume": "62400"
   }
  ]
 }

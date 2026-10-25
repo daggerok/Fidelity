@@ -2,7 +2,7 @@
  "ticker": "FPFD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1342,
+ "totalRows": 1345,
  "headers": [
   "Date",
   "Close",
@@ -2061,6 +2061,24 @@
    "Close": "20.485001",
    "Adj Close": "20.49",
    "Volume": "5200"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "20.415001",
+   "Adj Close": "20.42",
+   "Volume": "15400"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "20.440001",
+   "Adj Close": "20.44",
+   "Volume": "7700"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "20.424999",
+   "Adj Close": "20.42",
+   "Volume": "11500"
   }
  ]
 }

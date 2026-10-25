@@ -2,7 +2,7 @@
  "ticker": "FFLV",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 666,
+ "totalRows": 669,
  "headers": [
   "Date",
   "Close",
@@ -4005,6 +4005,24 @@
    "Close": "28.687",
    "Adj Close": "28.69",
    "Volume": "400"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "28.757999",
+   "Adj Close": "28.76",
+   "Volume": "3000"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "28.791",
+   "Adj Close": "28.79",
+   "Volume": "1900"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "28.612",
+   "Adj Close": "28.61",
+   "Volume": "500"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FELC",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 731,
+ "totalRows": 734,
  "headers": [
   "Date",
   "Close",
@@ -4395,6 +4395,24 @@
    "Close": "43.580002",
    "Adj Close": "43.58",
    "Volume": "817000"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "43.759998",
+   "Adj Close": "43.76",
+   "Volume": "733300"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "43.240002",
+   "Adj Close": "43.24",
+   "Volume": "949500"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "42.98",
+   "Adj Close": "42.98",
+   "Volume": "1015700"
   }
  ]
 }

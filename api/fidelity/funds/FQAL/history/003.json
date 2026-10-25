@@ -2,7 +2,7 @@
  "ticker": "FQAL",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2537,
+ "totalRows": 2540,
  "headers": [
   "Date",
   "Close",
@@ -3231,6 +3231,24 @@
    "Close": "84.900002",
    "Adj Close": "84.9",
    "Volume": "140900"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "Close": "85.199997",
+   "Adj Close": "85.2",
+   "Volume": "131000"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "Close": "84.608002",
+   "Adj Close": "84.61",
+   "Volume": "198300"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "Close": "83.974998",
+   "Adj Close": "83.97",
+   "Volume": "146800"
   }
  ]
 }
