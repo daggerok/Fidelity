@@ -44,6 +44,7 @@ import {
   useOutputRoot,
   main,
   fetchWithRetry,
+  holdingsGuard,
   configureRequestLanes,
   paceRequests,
   setSoftDeadline,
@@ -171,7 +172,7 @@ const world = {
 
 const nportXml = (series: string, repPd: string): string => `<?xml version="1.0"?>
 <edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>Fidelity ${series}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
-<invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>50</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}${Array.from({ length: world.bonds }, (_, i) => `<invstOrSec><name>ACME BOND ${i} LLC</name><cusip>99999${i}</cusip><balance>10</balance><units>PA</units><curCd>USD</curCd><valUSD>10</valUSD><pctVal>1</pctVal><assetCat>${i % 2 ? 'ABS-MBS' : 'DBT'}</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
+<invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>${(100 / world.positions).toFixed(4)}</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}${Array.from({ length: world.bonds }, (_, i) => `<invstOrSec><name>ACME BOND ${i} LLC</name><cusip>99999${i}</cusip><balance>10</balance><units>PA</units><curCd>USD</curCd><valUSD>10</valUSD><pctVal>1</pctVal><assetCat>${i % 2 ? 'ABS-MBS' : 'DBT'}</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
 
 function worldChart(): Record<string, unknown> {
   const start = Date.UTC(2025, 0, 2) / 1000;
@@ -394,6 +395,21 @@ describe('parsing', () => {
     const empty = parseNport(nportFixture('Fidelity Test ETF', ''));
     expect(empty.holdings).toHaveLength(0);
     expect(empty.totalValue).toBe(0);
+  });
+
+  test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
+    const headers = ['Name', 'Ticker', 'Weight'];
+    const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
+    expect(holdingsGuard(headers, rows, 2)).toBeNull();
+    expect(holdingsGuard(headers, [['A', 'A', '60'], ['B', 'B', '40']], null)).toBeNull();
+    expect(holdingsGuard([], [], 0)).toBeNull(); // nothing published before: an empty sheet is honest
+    expect(holdingsGuard(headers, [], 505)).toContain('no holdings rows');
+    expect(holdingsGuard(['Name', 'Ticker', 'Wt'], rows, 2)).toContain('no weight column');
+    expect(holdingsGuard(headers, rows.map((row) => ({ ...row, Weight: '6\u200B0' })), 2)).toContain('numeric weight');
+    const allocation = [{ Name: 'Cash&Collateral', Ticker: '-', Weight: '100' }, { Name: 'Equities', Ticker: '-', Weight: '476' }];
+    expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
+    expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
+    expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
   });
 
   test('N-PORT freshness: only NPORT-P forms, only a strictly newer filing, never an older report period', () => {
@@ -802,6 +818,30 @@ describe('pipeline', () => {
       expect(after.distributions).toEqual(meta.distributions);
       expect(readJson(root, 'index.json').funds).toHaveLength(1);
       expect(readJson(root, 'index.json').funds[0].metrics).toEqual(metricsBefore);
+    });
+  });
+
+  test('fresh N-PORT holdings that fail the guard (halved sheet, broken weights) keep the fund exactly as published and report it failed', async () => {
+    await inWorld(async (root) => {
+      world.positions = 4;
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      const first = snapshot(root);
+      expect(readJson(root, 'funds/FBND/meta.json').holdings.totalRows).toBe(4);
+      await new Promise((resolve) => setTimeout(resolve, 1100)); // generatedAt has second resolution
+      world.positions = 1; // 1 of 4 published rows
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      expect(snapshot(root)).toEqual(first);
+      expect(process.exitCode).toBe(1);
+      process.exitCode = 0;
+      world.positions = 4;
+      const upstream = globalThis.fetch;
+      globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+        const response = await upstream(input, init);
+        return String(input).includes('primary_doc.xml') ? new Response((await response.text()).replace(/<pctVal>[^<]*<\/pctVal>/g, '<pctVal>N/A</pctVal>')) : response;
+      }) as unknown as typeof fetch;
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      expect(snapshot(root)).toEqual(first);
+      expect(process.exitCode).toBe(1);
     });
   });
 
