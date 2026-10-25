@@ -2,7 +2,7 @@
  "ticker": "FLDB",
  "page": 2,
  "pageSize": 250,
- "totalRows": 354,
+ "totalRows": 398,
  "headers": [
   "Name",
   "Ticker",
@@ -14,940 +14,1336 @@
  ],
  "rows": [
   {
-   "Name": "BARCLAYS PLC",
-   "Ticker": "BCS",
-   "Identifier": "06738ECM5",
-   "Weight": "0.1021850422",
-   "Market Value": "1651004.18",
-   "Shares Held": "1645000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GENERAL MTRS FINL CO INC",
+   "Name": "ALLY AUTO RECEIVABLES TRUST 2025-1",
    "Ticker": "-",
-   "Identifier": "37045XFF8",
-   "Weight": "0.2731997764",
-   "Market Value": "4414090",
-   "Shares Held": "4402000",
-   "Asset Category": "DBT"
+   "Identifier": "02008KAB9",
+   "Weight": "0.2098642837",
+   "Market Value": "859061.74",
+   "Shares Held": "859075.49",
+   "Asset Category": "ABS-CBDO"
   },
   {
-   "Name": "WELLS FARGO and CO",
-   "Ticker": "WFC",
-   "Identifier": "95000U3Z4",
-   "Weight": "0.2123695165",
-   "Market Value": "3431255.22",
-   "Shares Held": "3420000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MERCEDES-BENZ FINANCE NORTH AMERICA LLC",
+   "Name": "DEXT ABS 2025-2 LLC",
    "Ticker": "-",
-   "Identifier": "58769JAV9",
-   "Weight": "0.2229561806",
-   "Market Value": "3602304",
-   "Shares Held": "3600000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HSBC USA INC",
-   "Ticker": "-",
-   "Identifier": "40428HA51",
-   "Weight": "0.3671572006",
-   "Market Value": "5932160.52",
-   "Shares Held": "5905000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "LLOYDS BANKING GROUP PLC",
-   "Ticker": "LYG",
-   "Identifier": "53944YAW3",
-   "Weight": "0.2268314794",
-   "Market Value": "3664917.22",
-   "Shares Held": "3657000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATIONAL AUSTRALIA BANK LTD",
-   "Ticker": "-",
-   "Identifier": "632525CL3",
-   "Weight": "0.6906094142",
-   "Market Value": "11158179.37",
-   "Shares Held": "11114000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BANQUE FED CRED MUTUEL PARIS",
-   "Ticker": "-",
-   "Identifier": "06675DCQ3",
-   "Weight": "0.2514109515",
-   "Market Value": "4062047.86",
-   "Shares Held": "4040000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "JACKSON NATL LIFE GLOBAL FDG",
-   "Ticker": "-",
-   "Identifier": "46849CJS1",
-   "Weight": "0.1072972856",
-   "Market Value": "1733602.72",
-   "Shares Held": "1740000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MITSUBISHI UFJ FINANCIAL GROUP INC",
-   "Ticker": "MUFG",
-   "Identifier": "606822DM3",
-   "Weight": "0.1434185012",
-   "Market Value": "2317213.36",
-   "Shares Held": "2300000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MORGAN STANLEY",
-   "Ticker": "MS",
-   "Identifier": "61748UAJ1",
-   "Weight": "0.2608953916",
-   "Market Value": "4215288",
-   "Shares Held": "4200000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BANCO BILBAO VIZCAYA ARGENTARIA S.A",
-   "Ticker": "BBVA",
-   "Identifier": "05946KAV3",
-   "Weight": "0.2229896027",
-   "Market Value": "3602844",
-   "Shares Held": "3600000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SUMITOMO MITSUI FINANCIAL GROUP INC",
-   "Ticker": "-",
-   "Identifier": "86562MCZ1",
-   "Weight": "0.1350933094",
-   "Market Value": "2182703.2",
-   "Shares Held": "2180000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "AMERICAN HONDA FINANCE CORP",
-   "Ticker": "-",
-   "Identifier": "02665WFS5",
-   "Weight": "0.0433259874",
-   "Market Value": "700018.17",
-   "Shares Held": "700000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ABBVIE INC",
-   "Ticker": "ABBV",
-   "Identifier": "00287YEC9",
-   "Weight": "0.2991209657",
-   "Market Value": "4832898.77",
-   "Shares Held": "4823000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATIONAL RURAL UTILITIES COOPERATIVE FINANCE CORP",
-   "Ticker": "-",
-   "Identifier": "63743HFU1",
-   "Weight": "0.3733816026",
-   "Market Value": "6032728.21",
-   "Shares Held": "6005000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BARCLAYS PLC",
-   "Ticker": "BCS",
-   "Identifier": "06738EDF9",
-   "Weight": "0.0994818814",
-   "Market Value": "1607329.2",
-   "Shares Held": "1600000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ROYAL BANK OF CANADA",
-   "Ticker": "RY",
-   "Identifier": "78017FZU0",
-   "Weight": "0.5542510014",
-   "Market Value": "8955035.89",
-   "Shares Held": "8929000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "TOYOTA MOTOR CREDIT CORP",
-   "Ticker": "-",
-   "Identifier": "89236TNS0",
-   "Weight": "0.0062191015",
-   "Market Value": "100482.05",
-   "Shares Held": "100000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "WELLS FARGO and CO",
-   "Ticker": "WFC",
-   "Identifier": "95000U3M3",
-   "Weight": "0.6065201732",
-   "Market Value": "9799549.13",
-   "Shares Held": "9759000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "UST NOTES",
-   "Ticker": "-",
-   "Identifier": "91282CNC1",
-   "Weight": "1.2275125426",
-   "Market Value": "19832925.6",
-   "Shares Held": "20057000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ROYAL BANK OF CANADA",
-   "Ticker": "RY",
-   "Identifier": "78017DAL2",
-   "Weight": "0.4218043336",
-   "Market Value": "6815094.49",
-   "Shares Held": "6794000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HYUNDAI CAPITAL AMERICA",
-   "Ticker": "-",
-   "Identifier": "44891AEB9",
-   "Weight": "0.0155384051",
-   "Market Value": "251054.08",
-   "Shares Held": "250000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ROYAL BANK OF CANADA",
-   "Ticker": "RY",
-   "Identifier": "78016EYD3",
-   "Weight": "0.0757331964",
-   "Market Value": "1223621.59",
-   "Shares Held": "1222000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATIONAL AUSTRALIA BANK LTD",
-   "Ticker": "-",
-   "Identifier": "632525BW0",
-   "Weight": "0.1799825748",
-   "Market Value": "2907979.26",
-   "Shares Held": "2900000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ANZ NEW ZEALAND INTERNATIONAL LTD LONDON BRANCH",
-   "Ticker": "-",
-   "Identifier": "00182EBX6",
-   "Weight": "0.2190382204",
-   "Market Value": "3539001.5",
-   "Shares Held": "3530000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATIONWIDE BUILDING SOCIETY",
-   "Ticker": "-",
-   "Identifier": "63861VAQ0",
-   "Weight": "0.1310025951",
-   "Market Value": "2116609.51",
-   "Shares Held": "2110000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "THE TORONTO DOMINION BANK",
-   "Ticker": "TD",
-   "Identifier": "89115A2X9",
-   "Weight": "0.389175599",
-   "Market Value": "6287911.88",
-   "Shares Held": "6271000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PACIFIC LIFE GLOBAL FUNDING II",
-   "Ticker": "-",
-   "Identifier": "6944PL3G2",
-   "Weight": "0.1084487385",
-   "Market Value": "1752206.75",
-   "Shares Held": "1750000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "UST NOTES",
-   "Ticker": "-",
-   "Identifier": "91282CLW9",
-   "Weight": "0.8718334883",
-   "Market Value": "14086217.54",
-   "Shares Held": "14210000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FIFTH THIRD BANK CINN OH",
-   "Ticker": "-",
-   "Identifier": "31677QBV0",
-   "Weight": "0.0665656659",
-   "Market Value": "1075501.76",
-   "Shares Held": "1075000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BANK OF MONTREAL QUE",
-   "Ticker": "-",
-   "Identifier": "06368L3M6",
-   "Weight": "0.6139614275",
-   "Market Value": "9919777.51",
-   "Shares Held": "9884000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BMW US CAPITAL LLC",
-   "Ticker": "-",
-   "Identifier": "05565EDE2",
-   "Weight": "0.0716707434",
-   "Market Value": "1157984.52",
-   "Shares Held": "1155000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ABN AMRO BANK NV",
-   "Ticker": "-",
-   "Identifier": "00084DBE9",
-   "Weight": "0.4534084055",
-   "Market Value": "7325721.62",
-   "Shares Held": "7300000",
-   "Asset Category": "DBT"
+   "Identifier": "252153AB7",
+   "Weight": "0.0238114496",
+   "Market Value": "97470.16",
+   "Shares Held": "97483.24",
+   "Asset Category": "ABS-CBDO"
   },
   {
    "Name": "CANADIAN IMPERIAL BANK OF COMMERCE",
    "Ticker": "CM",
-   "Identifier": "13607QWA6",
-   "Weight": "0.123744275",
-   "Market Value": "1999336.8",
-   "Shares Held": "2000000",
+   "Identifier": "13607QFC1",
+   "Weight": "0.3037559268",
+   "Market Value": "1243399.26",
+   "Shares Held": "1240000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "RIO TINTO FIN USA PLC",
+   "Name": "NEXTERA ENERGY CAP HLDGS INC",
    "Ticker": "-",
-   "Identifier": "76720AAY2",
-   "Weight": "0.2595671194",
-   "Market Value": "4193827.1",
-   "Shares Held": "4169000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SHELL FINANCE US INC",
-   "Ticker": "-",
-   "Identifier": "822905AP0",
-   "Weight": "0.1302320123",
-   "Market Value": "2104159.2",
-   "Shares Held": "2098000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GOLDMAN SACHS GROUP INC (THE)",
-   "Ticker": "GS",
-   "Identifier": "38141GC69",
-   "Weight": "0.0621535096",
-   "Market Value": "1004214.53",
-   "Shares Held": "1000000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "GOLDMAN SACHS GROUP INC (THE)",
-   "Ticker": "GS",
-   "Identifier": "38141GD50",
-   "Weight": "0.3768371193",
-   "Market Value": "6088559.01",
-   "Shares Held": "6065000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "TOYOTA MOTOR CREDIT CORP",
-   "Ticker": "-",
-   "Identifier": "89236TPR0",
-   "Weight": "0.1772961498",
-   "Market Value": "2864574.68",
-   "Shares Held": "2860000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SUMITOMO MITSUI FINANCIAL GROUP INC",
-   "Ticker": "-",
-   "Identifier": "86562MDL1",
-   "Weight": "0.2605109255",
-   "Market Value": "4209076.18",
-   "Shares Held": "4175000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "PAYPAL HOLDINGS INC",
-   "Ticker": "PYPL",
-   "Identifier": "70450YAR4",
-   "Weight": "0.2214049339",
-   "Market Value": "3577240.5",
-   "Shares Held": "3570000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SIEMENS FUNDING BV",
-   "Ticker": "-",
-   "Identifier": "82622RAB2",
-   "Weight": "0.0878919081",
-   "Market Value": "1420069.95",
-   "Shares Held": "1415000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "Fidelity Revere Street Trust",
-   "Ticker": "-",
-   "Identifier": "31635A303",
-   "Weight": "0.1161648687",
-   "Market Value": "1876876.3",
-   "Shares Held": "1876688.633",
-   "Asset Category": "STIV"
-  },
-  {
-   "Name": "JPMORGAN CHASE and CO",
-   "Ticker": "JPM",
-   "Identifier": "46647PET9",
-   "Weight": "0.5420626263",
-   "Market Value": "8758108.26",
-   "Shares Held": "8727000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MERCEDES-BENZ FINANCE NORTH AMERICA LLC",
-   "Ticker": "-",
-   "Identifier": "58769JBF3",
-   "Weight": "0.0698452745",
-   "Market Value": "1128490.41",
-   "Shares Held": "1125000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "US BANK NA CINCINNATI OHIO",
-   "Ticker": "-",
-   "Identifier": "90331HPQ0",
-   "Weight": "0.3291535798",
-   "Market Value": "5318135.85",
-   "Shares Held": "5315000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BANK OF AMERICA CORPORATION",
-   "Ticker": "BAC",
-   "Identifier": "06051GMN6",
-   "Weight": "0.4617223594",
-   "Market Value": "7460050.21",
-   "Shares Held": "7439000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NEW YORK LIFE GLOBAL FDG",
-   "Ticker": "-",
-   "Identifier": "64953BBY3",
-   "Weight": "0.2695391034",
-   "Market Value": "4354944.49",
-   "Shares Held": "4347000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BANK OF NEW ZEALAND",
-   "Ticker": "-",
-   "Identifier": "06407EAD7",
-   "Weight": "0.0217485829",
-   "Market Value": "351391.95",
-   "Shares Held": "350000",
+   "Identifier": "65339KCL2",
+   "Weight": "0.1275846888",
+   "Market Value": "522257.16",
+   "Shares Held": "520000",
    "Asset Category": "DBT"
   },
   {
    "Name": "UST NOTES",
    "Ticker": "-",
-   "Identifier": "91282CNT4",
-   "Weight": "1.2962847865",
-   "Market Value": "20944079.05",
-   "Shares Held": "21205000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ABN AMRO BANK NV",
-   "Ticker": "-",
-   "Identifier": "00084DBB5",
-   "Weight": "0.2920726189",
-   "Market Value": "4719018.6",
-   "Shares Held": "4700000",
+   "Identifier": "91282CNV9",
+   "Weight": "6.9758660469",
+   "Market Value": "28555119.14",
+   "Shares Held": "28667100",
    "Asset Category": "DBT"
   },
   {
    "Name": "HYUNDAI CAPITAL AMERICA",
    "Ticker": "-",
-   "Identifier": "44891AEC7",
-   "Weight": "0.1471092453",
-   "Market Value": "2376844.73",
-   "Shares Held": "2350000",
+   "Identifier": "44891ADA2",
+   "Weight": "0.1616217773",
+   "Market Value": "661585.11",
+   "Shares Held": "661000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "BANK OF MONTREAL QUE",
+   "Name": "VICI PROPERTIES LP / VICI NOTE CO INC",
    "Ticker": "-",
-   "Identifier": "06368L8M1",
-   "Weight": "0.2048307131",
-   "Market Value": "3309450.74",
-   "Shares Held": "3305000",
+   "Identifier": "92564RAA3",
+   "Weight": "0.2805256325",
+   "Market Value": "1148308.01",
+   "Shares Held": "1150000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "ATHENE GLOBAL FUNDING",
+   "Name": "WORLD OMNI AUTOMOBILE LEASE SECURITIZATION TR 2024-A",
    "Ticker": "-",
-   "Identifier": "04685A3U3",
-   "Weight": "0.096268888",
-   "Market Value": "1555416.85",
-   "Shares Held": "1550000",
+   "Identifier": "981946AD8",
+   "Weight": "0.2040266503",
+   "Market Value": "835165.88",
+   "Shares Held": "832870.24",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "BOEING CO",
+   "Ticker": "BA",
+   "Identifier": "097023CU7",
+   "Weight": "0.2222807238",
+   "Market Value": "909887.39",
+   "Shares Held": "905000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "AMERICAN EXPRESS CO",
-   "Ticker": "AXP",
-   "Identifier": "025816EA3",
-   "Weight": "0.0541644104",
-   "Market Value": "875134.62",
-   "Shares Held": "870000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATWEST MARKETS PLC",
+   "Name": "GMF FLOORPLAN OWNER REVOLVING TR",
    "Ticker": "-",
-   "Identifier": "63906YAL2",
-   "Weight": "0.0624046372",
-   "Market Value": "1008272",
+   "Identifier": "361886DX9",
+   "Weight": "0.1725287933",
+   "Market Value": "706232.06",
+   "Shares Held": "705000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "BANK OF AMERICA CORPORATION",
+   "Ticker": "BAC",
+   "Identifier": "06051GKW8",
+   "Weight": "0.2458451254",
+   "Market Value": "1006346.28",
    "Shares Held": "1000000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "BANK OF MONTREAL QUE",
+   "Name": "KUBOTA CREDIT OWNER TRUST 2025-2",
    "Ticker": "-",
-   "Identifier": "06368LNU6",
-   "Weight": "0.0742801059",
-   "Market Value": "1200144",
-   "Shares Held": "1200000",
+   "Identifier": "50117LAB4",
+   "Weight": "0.0983539362",
+   "Market Value": "402603.54",
+   "Shares Held": "401704",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "HYUNDAI AUTO RECEIVABLES TRUST 25-B",
+   "Ticker": "-",
+   "Identifier": "44935XAB1",
+   "Weight": "0.0925926717",
+   "Market Value": "379020.29",
+   "Shares Held": "378498.27",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "WELLS FARGO COML MTG TR 2024-GRP",
+   "Ticker": "-",
+   "Identifier": "95003YAA0",
+   "Weight": "0.0943920175",
+   "Market Value": "386385.76",
+   "Shares Held": "388000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BMW US CAPITAL LLC",
+   "Ticker": "-",
+   "Identifier": "05565ECN3",
+   "Weight": "0.2861478542",
+   "Market Value": "1171322.1",
+   "Shares Held": "1170000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "GLAXOSMITHKLINE CAP PLC",
+   "Name": "GEORGIA POWER CO",
+   "Ticker": "GPJA",
+   "Identifier": "373334LF6",
+   "Weight": "0.1958823808",
+   "Market Value": "801828",
+   "Shares Held": "800000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MAGNETITE XXII LTD / MAGNETITE XXII LLC",
    "Ticker": "-",
-   "Identifier": "377373AN5",
-   "Weight": "0.2600452687",
-   "Market Value": "4201552.56",
-   "Shares Held": "4194000",
+   "Identifier": "55954HAW2",
+   "Weight": "0.2179939517",
+   "Market Value": "892339.85",
+   "Shares Held": "892000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "WORLD OMNI AUTO RECEIVABLES TRUST 2025-A",
+   "Ticker": "-",
+   "Identifier": "98164YAB7",
+   "Weight": "0.0372820949",
+   "Market Value": "152611.11",
+   "Shares Held": "152515.83",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "KEURIG DR PEPPER INC",
+   "Ticker": "KDP",
+   "Identifier": "49271VAY6",
+   "Weight": "0.3108072484",
+   "Market Value": "1272263.25",
+   "Shares Held": "1272000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CLP4",
+   "Weight": "2.766498431",
+   "Market Value": "11324427.93",
+   "Shares Held": "11334700",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BARCLAYS PLC",
+   "Ticker": "BCS",
+   "Identifier": "06738EBU8",
+   "Weight": "0.3047584661",
+   "Market Value": "1247503.07",
+   "Shares Held": "1260000",
    "Asset Category": "DBT"
   },
   {
    "Name": "RABOBANK NEDERLAND NEW YORK BRH",
    "Ticker": "-",
-   "Identifier": "21688ABY7",
-   "Weight": "0.2808173283",
-   "Market Value": "4537166.82",
-   "Shares Held": "4525000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HSBC HOLDINGS PLC",
-   "Ticker": "HSBC",
-   "Identifier": "404280EP0",
-   "Weight": "0.1821577045",
-   "Market Value": "2943122.84",
-   "Shares Held": "2910000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MACQUARIE GROUP LTD",
-   "Ticker": "-",
-   "Identifier": "55607PAE5",
-   "Weight": "0.3148156695",
-   "Market Value": "5086478.17",
-   "Shares Held": "5080000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "JPMORGAN CHASE and CO",
-   "Ticker": "JPM",
-   "Identifier": "46647PEN2",
-   "Weight": "0.4295500652",
-   "Market Value": "6940242.31",
-   "Shares Held": "6911000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "DAIMLER TRUCKS FINANCE NORTH AMERICA LLC",
-   "Ticker": "-",
-   "Identifier": "233853BB5",
-   "Weight": "0.122336652",
-   "Market Value": "1976593.83",
-   "Shares Held": "1975000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATIONAL BANK OF CANADA",
-   "Ticker": "-",
-   "Identifier": "63307A2Z7",
-   "Weight": "0.1637337484",
-   "Market Value": "2645446.9",
-   "Shares Held": "2644000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ORACLE CORP",
-   "Ticker": "ORCL",
-   "Identifier": "68389XCX1",
-   "Weight": "0.2745537904",
-   "Market Value": "4435966.81",
-   "Shares Held": "4471000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CONSTELLATION ENERGY GENERATION LLC",
-   "Ticker": "-",
-   "Identifier": "210385AN0",
-   "Weight": "0.0947102853",
-   "Market Value": "1530234.5",
-   "Shares Held": "1531000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATWEST MARKETS PLC",
-   "Ticker": "-",
-   "Identifier": "63906YAK4",
-   "Weight": "0.1211167842",
-   "Market Value": "1956884.42",
-   "Shares Held": "1948000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "MACQUARIE BANK LTD",
-   "Ticker": "-",
-   "Identifier": "55608PBN3",
-   "Weight": "0.0557240052",
-   "Market Value": "900333",
-   "Shares Held": "900000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BANK OF AMERICA CORPORATION",
-   "Ticker": "BAC",
-   "Identifier": "59022CAA1",
-   "Weight": "0.0127642114",
-   "Market Value": "206231.42",
-   "Shares Held": "206000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HYUNDAI CAPITAL AMERICA",
-   "Ticker": "-",
-   "Identifier": "44891ACW5",
-   "Weight": "0.1222993289",
-   "Market Value": "1975990.8",
-   "Shares Held": "1965000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "HSBC HOLDINGS PLC",
-   "Ticker": "HSBC",
-   "Identifier": "404280EK1",
-   "Weight": "0.0196020662",
-   "Market Value": "316710.67",
-   "Shares Held": "315000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "STANDARD CHARTERED PLC",
-   "Ticker": "-",
-   "Identifier": "853254CV0",
-   "Weight": "0.3368251201",
-   "Market Value": "5442084.96",
-   "Shares Held": "5435000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NORTHWESTERN MUTUAL GLOBAL FUNDING",
-   "Ticker": "-",
-   "Identifier": "66815L2Y4",
-   "Weight": "0.072843834",
-   "Market Value": "1176938.15",
-   "Shares Held": "1175000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FORD MOTOR CREDIT CO LLC",
-   "Ticker": "-",
-   "Identifier": "345397F99",
-   "Weight": "0.1736182546",
-   "Market Value": "2805150.91",
-   "Shares Held": "2800000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SVENSKA HANDELSBANKEN AB",
-   "Ticker": "-",
-   "Identifier": "86959LAR4",
-   "Weight": "0.1260290797",
-   "Market Value": "2036252.4",
-   "Shares Held": "2030000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "NATIONAL AUSTRALIA BANK LTD",
-   "Ticker": "-",
-   "Identifier": "632525CP4",
-   "Weight": "0.4628670679",
-   "Market Value": "7478545.27",
-   "Shares Held": "7450000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SKANDINAVISKA ENSKILDA BANKEN",
-   "Ticker": "-",
-   "Identifier": "830505BA0",
-   "Weight": "0.1056315146",
-   "Market Value": "1706688.85",
-   "Shares Held": "1700000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "COREBRIDGE GLOBAL FUNDING",
-   "Ticker": "-",
-   "Identifier": "00138CBE7",
-   "Weight": "0.0233872567",
-   "Market Value": "377868.01",
-   "Shares Held": "379000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "FORD MOTOR CREDIT CO LLC",
-   "Ticker": "-",
-   "Identifier": "345397G80",
-   "Weight": "0.1286915627",
-   "Market Value": "2079270.15",
-   "Shares Held": "2060000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CATERPILLAR FINL SVCS CORP",
-   "Ticker": "-",
-   "Identifier": "14913UBC3",
-   "Weight": "0.5871045673",
-   "Market Value": "9485851.1",
-   "Shares Held": "9449000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "CANADIAN IMPERIAL BANK OF COMMERCE",
-   "Ticker": "CM",
-   "Identifier": "13607L8D8",
-   "Weight": "0.1712727493",
-   "Market Value": "2767254.57",
-   "Shares Held": "2750000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "THE BANK OF NOVA SCOTIA",
-   "Ticker": "BNS",
-   "Identifier": "06418GAM9",
-   "Weight": "0.5774730307",
-   "Market Value": "9330234.32",
-   "Shares Held": "9284000",
+   "Identifier": "21688ABF8",
+   "Weight": "0.2445263539",
+   "Market Value": "1000948",
+   "Shares Held": "1000000",
    "Asset Category": "DBT"
   },
   {
    "Name": "BANK OF MONTREAL QUE",
    "Ticker": "-",
-   "Identifier": "06368FAD1",
-   "Weight": "0.2372835704",
-   "Market Value": "3833791.7",
-   "Shares Held": "3830000",
+   "Identifier": "06368MS47",
+   "Weight": "0.2444358671",
+   "Market Value": "1000577.6",
+   "Shares Held": "1000000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "US BANK NA CINCINNATI OHIO",
+   "Name": "JOHN DEERE OWNER TR 2024-C",
    "Ticker": "-",
-   "Identifier": "90331HPW7",
-   "Weight": "0.1083029504",
-   "Market Value": "1749851.25",
-   "Shares Held": "1750000",
+   "Identifier": "477911AC5",
+   "Weight": "0.0046291732",
+   "Market Value": "18949.13",
+   "Shares Held": "18947.02",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "JPM",
+   "Identifier": "46647PAF3",
+   "Weight": "0.3394434756",
+   "Market Value": "1389483.23",
+   "Shares Held": "1400000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "UBS GROUP AG",
+   "Name": "NATIONAL BANK OF CANADA",
    "Ticker": "-",
-   "Identifier": "225401BL1",
-   "Weight": "0.6291181233",
-   "Market Value": "10164664.31",
-   "Shares Held": "10170000",
+   "Identifier": "63307A3A1",
+   "Weight": "0.1467229457",
+   "Market Value": "600598",
+   "Shares Held": "600000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NATIONWIDE BUILDING SOCIETY",
+   "Name": "VALLEY STREAM PK CLO LTD / VY STREAM PK CLO LLC",
    "Ticker": "-",
-   "Identifier": "63861VAG2",
-   "Weight": "0.0901766516",
-   "Market Value": "1456984.56",
-   "Shares Held": "1450000",
+   "Identifier": "92013AAT6",
+   "Weight": "0.1363504198",
+   "Market Value": "558138.94",
+   "Shares Held": "558000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "WELLS FARGO and CO",
+   "Ticker": "WFC",
+   "Identifier": "95000U3L5",
+   "Weight": "0.2223710371",
+   "Market Value": "910257.08",
+   "Shares Held": "900000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CSX CORP",
+   "Ticker": "CSX",
+   "Identifier": "126408HE6",
+   "Weight": "0.1699230819",
+   "Market Value": "695565.8",
+   "Shares Held": "700000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MERCEDES-BENZ AUTO LEASE TRUST 2025-A",
+   "Ticker": "-",
+   "Identifier": "58768YAB1",
+   "Weight": "0.1323671301",
+   "Market Value": "541833.68",
+   "Shares Held": "540625.11",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "0.1653302719",
+   "Market Value": "676765.52",
+   "Shares Held": "676630.19",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "83368RBV3",
+   "Weight": "0.1940733292",
+   "Market Value": "794422.8",
+   "Shares Held": "790000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "83368RBC5",
+   "Weight": "0.2441673749",
+   "Market Value": "999478.55",
+   "Shares Held": "1000000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GOLDMAN SACHS BANK USA",
+   "Ticker": "-",
+   "Identifier": "38151LAJ9",
+   "Weight": "0.2446057741",
+   "Market Value": "1001273.1",
+   "Shares Held": "1000000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BAE SYSTEMS FINANCE INC",
+   "Ticker": "-",
+   "Identifier": "11041RAL2",
+   "Weight": "0.2095016086",
+   "Market Value": "857577.16",
+   "Shares Held": "830000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SFS AUTO RECEIVABLES SECURITIZATION TRUST 25-3A",
+   "Ticker": "-",
+   "Identifier": "78398KAB7",
+   "Weight": "0.1709782252",
+   "Market Value": "699884.94",
+   "Shares Held": "699725.54",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "NEUBERGER BERMAN LN ADVISERS NBLA CLO 50 LTD / NEUBERGER BERMAN LN",
+   "Ticker": "-",
+   "Identifier": "64134VAY2",
+   "Weight": "0.3666209674",
+   "Market Value": "1500732",
+   "Shares Held": "1500000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "ENTERPRISE FLEET FINANCING 2024-4 LLC",
+   "Ticker": "-",
+   "Identifier": "29374MAB4",
+   "Weight": "0.1005378336",
+   "Market Value": "411543.14",
+   "Shares Held": "410738.42",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "BANK OF IRELAND GROUP PLC",
+   "Ticker": "-",
+   "Identifier": "06279JAB5",
+   "Weight": "0.2814514266",
+   "Market Value": "1152097.67",
+   "Shares Held": "1161000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "USAA AUTO OWNER TRUST 2025-A",
+   "Ticker": "-",
+   "Identifier": "90327HAB5",
+   "Weight": "0.2161285584",
+   "Market Value": "884704.02",
+   "Shares Held": "884525.43",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "VOLVO FINANCIAL EQUIPMENT LLC SERIES 2024-1",
+   "Ticker": "-",
+   "Identifier": "92887QAB3",
+   "Weight": "0.0120542023",
+   "Market Value": "49342.86",
+   "Shares Held": "49327.91",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "JPM",
+   "Identifier": "46647PEE2",
+   "Weight": "0.2963168997",
+   "Market Value": "1212948.23",
+   "Shares Held": "1200000",
    "Asset Category": "DBT"
   },
   {
    "Name": "THE BANK OF NOVA SCOTIA",
    "Ticker": "BNS",
-   "Identifier": "06418GAR8",
-   "Weight": "0.2119711394",
-   "Market Value": "3424818.64",
-   "Shares Held": "3415000",
+   "Identifier": "06418GAT4",
+   "Weight": "0.3157642212",
+   "Market Value": "1292554.2",
+   "Shares Held": "1290000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CARMAX AUTO OWNER TRUST 2026-2",
+   "Ticker": "-",
+   "Identifier": "142935AB1",
+   "Weight": "0.2027368741",
+   "Market Value": "829886.29",
+   "Shares Held": "830000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FORD MOTOR CO",
+   "Ticker": "F",
+   "Identifier": "345370CR9",
+   "Weight": "0.220889641",
+   "Market Value": "904193.11",
+   "Shares Held": "906000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CITIGROUP COML MTG TR 2017",
+   "Ticker": "-",
+   "Identifier": "17325HBQ6",
+   "Weight": "0.0006601138",
+   "Market Value": "2702.12",
+   "Shares Held": "2707.824",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "HSBC HOLDINGS PLC",
+   "Ticker": "HSBC",
+   "Identifier": "404280BK4",
+   "Weight": "0.1461808508",
+   "Market Value": "598378.98",
+   "Shares Held": "600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NORDEA BANK ABP",
+   "Ticker": "-",
+   "Identifier": "65558RAM1",
+   "Weight": "0.2698964309",
+   "Market Value": "1104798.27",
+   "Shares Held": "1100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BARCLAYS PLC",
+   "Ticker": "BCS",
+   "Identifier": "06738ECM5",
+   "Weight": "0.2917718494",
+   "Market Value": "1194343.45",
+   "Shares Held": "1190000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HYUNDAI CAPITAL AMERICA",
+   "Ticker": "-",
+   "Identifier": "44891AEJ2",
+   "Weight": "0.2490238522",
+   "Market Value": "1019358.13",
+   "Shares Held": "1020000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VOLVO FINANCIAL EQUIPMENT LLC SERIES 2024-1",
+   "Ticker": "-",
+   "Identifier": "92887QAC1",
+   "Weight": "0.1613842006",
+   "Market Value": "660612.61",
+   "Shares Held": "660000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "MERCEDES-BENZ FINANCE NORTH AMERICA LLC",
+   "Ticker": "-",
+   "Identifier": "58769JAV9",
+   "Weight": "0.3666766666",
+   "Market Value": "1500960",
+   "Shares Held": "1500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MORGAN STANLEY",
+   "Ticker": "MS",
+   "Identifier": "61747YER2",
+   "Weight": "0.0975953765",
+   "Market Value": "399498.44",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ARI FLEET LEASE TRUST 2024-B",
+   "Ticker": "-",
+   "Identifier": "04033HAB1",
+   "Weight": "0.0071145646",
+   "Market Value": "29122.87",
+   "Shares Held": "28989.2",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "LLOYDS BANKING GROUP PLC",
+   "Ticker": "LYG",
+   "Identifier": "53944YAW3",
+   "Weight": "0.2693060145",
+   "Market Value": "1102381.45",
+   "Shares Held": "1100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GS MTG SECS CORP TR 2012-BWTR",
+   "Ticker": "-",
+   "Identifier": "36254KAM4",
+   "Weight": "0.0048428701",
+   "Market Value": "19823.88",
+   "Shares Held": "19909.227",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "VOLKSWAGEN AUTO LEASE TRUST 2025-B",
+   "Ticker": "-",
+   "Identifier": "92868BAB9",
+   "Weight": "0.2058113481",
+   "Market Value": "842471.39",
+   "Shares Held": "843296.98",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "JPM",
+   "Identifier": "46647PEA0",
+   "Weight": "0.2994435966",
+   "Market Value": "1225747.1",
+   "Shares Held": "1220000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BMP 2024-MF23",
+   "Ticker": "-",
+   "Identifier": "05593JAA8",
+   "Weight": "0.0515784125",
+   "Market Value": "211131.88",
+   "Shares Held": "211000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "ALTRIA GROUP INC",
+   "Ticker": "MO",
+   "Identifier": "02209SAU7",
+   "Weight": "0.1873654177",
+   "Market Value": "766964.53",
+   "Shares Held": "770000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BAT CAPITAL CORP",
+   "Ticker": "-",
+   "Identifier": "05526DBB0",
+   "Weight": "0.0968205639",
+   "Market Value": "396326.81",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DANSKE BANK A/S",
+   "Ticker": "-",
+   "Identifier": "23636ABM2",
+   "Weight": "0.3054276237",
+   "Market Value": "1250242.21",
+   "Shares Held": "1250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AERCAP IRELAND CAPITAL DAC / AERCAP GLOBAL AVIATION TRUST",
+   "Ticker": "-",
+   "Identifier": "00774MAV7",
+   "Weight": "0.3323463927",
+   "Market Value": "1360431.92",
+   "Shares Held": "1370000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DEUTSCHE BANK AG NEW YORK BNCH",
+   "Ticker": "-",
+   "Identifier": "25160PAN7",
+   "Weight": "0.3035777578",
+   "Market Value": "1242669.94",
+   "Shares Held": "1239000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NATIONAL BANK OF CANADA",
+   "Ticker": "-",
+   "Identifier": "63307A3D5",
+   "Weight": "0.2881237664",
+   "Market Value": "1179410.33",
+   "Shares Held": "1175000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PACIFIC LIFE GLOBAL FUNDING II",
+   "Ticker": "-",
+   "Identifier": "6944PL2G3",
+   "Weight": "0.0061075743",
+   "Market Value": "25000.84",
+   "Shares Held": "25000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LLOYDS BANKING GROUP PLC",
+   "Ticker": "LYG",
+   "Identifier": "53944YAS2",
+   "Weight": "0.0972642691",
+   "Market Value": "398143.08",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FORD CREDIT AUTO OWNER TRUST 2024-D",
+   "Ticker": "-",
+   "Identifier": "34535VAB0",
+   "Weight": "0.0246270521",
+   "Market Value": "100808.76",
+   "Shares Held": "100740.35",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "SUMISHO AIR LEASE CORP",
+   "Ticker": "-",
+   "Identifier": "873923AA4",
+   "Weight": "0.0508020095",
+   "Market Value": "207953.74",
+   "Shares Held": "209000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GOLDMAN SACHS GROUP INC (THE)",
+   "Ticker": "GS",
+   "Identifier": "38145GAP5",
+   "Weight": "0.346917537",
+   "Market Value": "1420077.67",
+   "Shares Held": "1430000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DLLAD 2024-1 LLC",
+   "Ticker": "-",
+   "Identifier": "23346MAB2",
+   "Weight": "0.0110555741",
+   "Market Value": "45255.06",
+   "Shares Held": "45178.28",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "CITIGROUP INC",
+   "Ticker": "C",
+   "Identifier": "172967LD1",
+   "Weight": "0.1461270351",
+   "Market Value": "598158.69",
+   "Shares Held": "600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GENERAL MTRS FINL CO INC",
+   "Ticker": "-",
+   "Identifier": "37045XFH4",
+   "Weight": "0.1094018321",
+   "Market Value": "447827.17",
+   "Shares Held": "445000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DLLMT 2026-1 LLC",
+   "Ticker": "-",
+   "Identifier": "23347JAB8",
+   "Weight": "0.0585743817",
+   "Market Value": "239769.29",
+   "Shares Held": "240000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "SAMMONS FINANCIAL GROUP GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "79587J2B8",
+   "Weight": "0.1472332091",
+   "Market Value": "602686.72",
+   "Shares Held": "600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UBS COML MTG TR 2017-C7",
+   "Ticker": "-",
+   "Identifier": "90276WAQ0",
+   "Weight": "0.0251211236",
+   "Market Value": "102831.2",
+   "Shares Held": "103343.493",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CMH1",
+   "Weight": "8.7754147681",
+   "Market Value": "35921420.01",
+   "Shares Held": "35850000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UBS GROUP AG",
+   "Ticker": "-",
+   "Identifier": "902613AP3",
+   "Weight": "0.2941102511",
+   "Market Value": "1203915.5",
+   "Shares Held": "1200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MORGAN STANLEY",
+   "Ticker": "MS",
+   "Identifier": "61747YEC5",
+   "Weight": "0.3211988514",
+   "Market Value": "1314800.4",
+   "Shares Held": "1320000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CLEVELAND ELECTRIC ILLUM CO",
+   "Ticker": "-",
+   "Identifier": "186108CK0",
+   "Weight": "0.1677141711",
+   "Market Value": "686523.81",
+   "Shares Held": "700000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CRH AMERICA FINANCE INC",
+   "Ticker": "-",
+   "Identifier": "12636YAC6",
+   "Weight": "0.241908523",
+   "Market Value": "990232.13",
+   "Shares Held": "1000000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "THE TORONTO DOMINION BANK",
+   "Ticker": "TD",
+   "Identifier": "89115A3A8",
+   "Weight": "0.36741869",
+   "Market Value": "1503997.41",
+   "Shares Held": "1500000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SFS AUTO RECEIVABLES SECURITIZATION TRUST 2026-1",
+   "Ticker": "-",
+   "Identifier": "81885FAB2",
+   "Weight": "0.3022085712",
+   "Market Value": "1237065.29",
+   "Shares Held": "1240000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "PNC FINANCIAL SERVICES GRP INC",
+   "Ticker": "-",
+   "Identifier": "693475BV6",
+   "Weight": "0.0982844099",
+   "Market Value": "402318.94",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ELI LILLY and CO",
+   "Ticker": "LLY",
+   "Identifier": "532457DH8",
+   "Weight": "0.3006117653",
+   "Market Value": "1230528.9",
+   "Shares Held": "1230000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BX COML MTG TR 2024-MDHS",
+   "Ticker": "-",
+   "Identifier": "12433BAA5",
+   "Weight": "0.0706633594",
+   "Market Value": "289254.5",
+   "Shares Held": "288983.58",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "DEUTSCHE BANK AG NEW YORK BNCH",
+   "Ticker": "-",
+   "Identifier": "251526CP2",
+   "Weight": "0.2829795636",
+   "Market Value": "1158352.97",
+   "Shares Held": "1170000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "STANDARD CHARTERED PLC",
+   "Ticker": "-",
+   "Identifier": "853254DB3",
+   "Weight": "0.246948148",
+   "Market Value": "1010861.41",
+   "Shares Held": "1000000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ENBRIDGE INC",
+   "Ticker": "ENB",
+   "Identifier": "29250NBH7",
+   "Weight": "0.2130273366",
+   "Market Value": "872009.43",
+   "Shares Held": "880000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PSTAT 2024-2A",
+   "Ticker": "-",
+   "Identifier": "69702WAE5",
+   "Weight": "0.2716951781",
+   "Market Value": "1112161.29",
+   "Shares Held": "1112196.88",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "ABN AMRO BANK NV",
+   "Ticker": "-",
+   "Identifier": "00084DBB5",
+   "Weight": "0.2698116338",
+   "Market Value": "1104451.16",
+   "Shares Held": "1100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OCWEN LOAN INVESTMENT TRUST",
+   "Ticker": "-",
+   "Identifier": "68278FAA6",
+   "Weight": "0.0142763319",
+   "Market Value": "58438.96",
+   "Shares Held": "59796.42",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "GLAXOSMITHKLINE CAP PLC",
+   "Ticker": "-",
+   "Identifier": "377373AN5",
+   "Weight": "0.3059183606",
+   "Market Value": "1252251",
+   "Shares Held": "1250000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CFMT 2024-HB13 LLC",
+   "Ticker": "-",
+   "Identifier": "12530VAA3",
+   "Weight": "0.0162265174",
+   "Market Value": "66421.88",
+   "Shares Held": "66421.88",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "BARINGS EQUIPMENT FINANCE LLC 2026-A",
+   "Ticker": "-",
+   "Identifier": "06764QAA3",
+   "Weight": "0.2204090179",
+   "Market Value": "902225.72",
+   "Shares Held": "905000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "L3HARRIS TECHNOLOGIES INC",
+   "Ticker": "LHX",
+   "Identifier": "502431AL3",
+   "Weight": "0.19504037",
+   "Market Value": "798381.3",
+   "Shares Held": "800000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GOLDMAN SACHS GROUP INC (THE)",
+   "Ticker": "GS",
+   "Identifier": "38141GZT4",
+   "Weight": "0.2271948522",
+   "Market Value": "930002.96",
+   "Shares Held": "930000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VOLKSWAGEN AUTO LOAN ENHANCED TRUST 2024-1",
+   "Ticker": "-",
+   "Identifier": "92868RAB4",
+   "Weight": "0.043537294",
+   "Market Value": "178216.24",
+   "Shares Held": "178042.9",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "AMERICAN HONDA FINANCE CORP",
+   "Ticker": "-",
+   "Identifier": "02665WGV7",
+   "Weight": "0.0510484516",
+   "Market Value": "208962.53",
+   "Shares Held": "209000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "COOPERATIEVE RABOBANK UA",
+   "Ticker": "-",
+   "Identifier": "74977RDL5",
+   "Weight": "0.236355234",
+   "Market Value": "967500.21",
+   "Shares Held": "980000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "REACH ABS TR 2026-2",
+   "Ticker": "-",
+   "Identifier": "754923AA8",
+   "Weight": "0.0537433209",
+   "Market Value": "219993.75",
+   "Shares Held": "220000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "CSAIL 2017-CX10 COML MTG TR",
+   "Ticker": "-",
+   "Identifier": "12595JAL8",
+   "Weight": "0.001815176",
+   "Market Value": "7430.27",
+   "Shares Held": "7451.376",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CAPITAL ONE PRIME AUTO RECEIVABLES TRUST 2025-1",
+   "Ticker": "-",
+   "Identifier": "14043YAB1",
+   "Weight": "0.2538905264",
+   "Market Value": "1039279.45",
+   "Shares Held": "1040290.72",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "WOART 2025-B",
+   "Ticker": "-",
+   "Identifier": "98164TAB8",
+   "Weight": "0.1259043415",
+   "Market Value": "515378.8",
+   "Shares Held": "514870.83",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FLATIRON RR CLO 22 LLC",
+   "Ticker": "-",
+   "Identifier": "33883QAQ8",
+   "Weight": "0.268590414",
+   "Market Value": "1099452.2",
+   "Shares Held": "1100000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "COREBRIDGE GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "00138CBB3",
+   "Weight": "0.1956425273",
+   "Market Value": "800846.18",
+   "Shares Held": "800000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HEALTHCARE REALTY HOLDINGS LP",
+   "Ticker": "-",
+   "Identifier": "42225UAF1",
+   "Weight": "0.1939649967",
+   "Market Value": "793979.35",
+   "Shares Held": "800000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "JPMORGAN CHASE and CO",
+   "Ticker": "JPM",
+   "Identifier": "46647PDW3",
+   "Weight": "0.3936581241",
+   "Market Value": "1611406.32",
+   "Shares Held": "1600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NXP B V/NXP FDG LLC/NXP USA INC",
+   "Ticker": "-",
+   "Identifier": "62954HBE7",
+   "Weight": "0.195613295",
+   "Market Value": "800726.52",
+   "Shares Held": "800000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HSBC HOLDINGS PLC",
+   "Ticker": "HSBC",
+   "Identifier": "404280CX5",
+   "Weight": "0.3698931321",
+   "Market Value": "1514126.33",
+   "Shares Held": "1530000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MERCEDES-BENZ FINANCE NORTH AMERICA LLC",
+   "Ticker": "-",
+   "Identifier": "58769JBK2",
+   "Weight": "0.1564294729",
+   "Market Value": "640330.85",
+   "Shares Held": "640000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SANTANDER DRIVE AUTO RECEIVABLES TRUST 2026-1",
+   "Ticker": "-",
+   "Identifier": "80288FAB7",
+   "Weight": "0.1940815913",
+   "Market Value": "794456.62",
+   "Shares Held": "795000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "COMMERCIAL MORTGAGE CD 2017-CD4 MTG TR",
+   "Ticker": "-",
+   "Identifier": "12515DAP9",
+   "Weight": "0.0038744465",
+   "Market Value": "15859.72",
+   "Shares Held": "15926.409",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GM FINANCIAL AUTOMOBILE LEASING TRUST 2025-1",
+   "Ticker": "-",
+   "Identifier": "36271VAB3",
+   "Weight": "0.0788204812",
+   "Market Value": "322644.99",
+   "Shares Held": "322388.66",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "STANDARD CHARTERED PLC",
+   "Ticker": "-",
+   "Identifier": "853254CW8",
+   "Weight": "0.1958592803",
+   "Market Value": "801733.44",
+   "Shares Held": "790000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CANADIAN NATURAL RESOURCES LTD",
+   "Ticker": "CNQ",
+   "Identifier": "136385AX9",
+   "Weight": "0.1435303894",
+   "Market Value": "587529.54",
+   "Shares Held": "590000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OREILLY AUTOMOTIVE INC",
+   "Ticker": "ORLY",
+   "Identifier": "67103HAM9",
+   "Weight": "0.2960969782",
+   "Market Value": "1212048",
+   "Shares Held": "1205000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ABBVIE INC",
+   "Ticker": "ABBV",
+   "Identifier": "00287YED7",
+   "Weight": "0.2422882596",
+   "Market Value": "991786.55",
+   "Shares Held": "1000000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "JUNIPER VALLEY PARK CLO LLC",
+   "Ticker": "-",
+   "Identifier": "48206KAY2",
+   "Weight": "0.3468795932",
+   "Market Value": "1419922.35",
+   "Shares Held": "1419000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "MORGAN STANLEY BK NA SALT LAKE",
+   "Ticker": "-",
+   "Identifier": "61690U8G8",
+   "Weight": "0.2200053746",
+   "Market Value": "900573.44",
+   "Shares Held": "900000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CITIGROUP INC",
+   "Ticker": "C",
+   "Identifier": "172967NA5",
+   "Weight": "0.1464847608",
+   "Market Value": "599623.01",
+   "Shares Held": "600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BX TRUST 2026-LP3",
+   "Ticker": "-",
+   "Identifier": "05620HAA9",
+   "Weight": "0.1053238148",
+   "Market Value": "431134.15",
+   "Shares Held": "429924.99",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UBS GROUP AG",
+   "Ticker": "-",
+   "Identifier": "902613AS7",
+   "Weight": "0.1466115864",
+   "Market Value": "600142.16",
+   "Shares Held": "600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "JPMDB COML MTG SECS TR 2017-C5",
+   "Ticker": "-",
+   "Identifier": "46590TAF2",
+   "Weight": "0.0518656885",
+   "Market Value": "212307.82",
+   "Shares Held": "212990.516",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "ING GROEP NV",
+   "Ticker": "ING",
+   "Identifier": "456837BF9",
+   "Weight": "0.2698486102",
+   "Market Value": "1104602.52",
+   "Shares Held": "1100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VOYA CLO 2022-1 LTD / VOYA CLO 2022-1 LLC",
+   "Ticker": "-",
+   "Identifier": "92918UAL5",
+   "Weight": "0.170177251",
+   "Market Value": "696606.22",
+   "Shares Held": "696000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "M and T BANK AUTO RECEIVABLES TRUST 2026-1",
+   "Ticker": "-",
+   "Identifier": "551922AB3",
+   "Weight": "0.209106816",
+   "Market Value": "855961.11",
+   "Shares Held": "855000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "VOLKSWAGEN AUTO LEASE TRUST 2026-A",
+   "Ticker": "-",
+   "Identifier": "92868CAB7",
+   "Weight": "0.2442199594",
+   "Market Value": "999693.8",
+   "Shares Held": "1000000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "SVENSKA HANDELSBANKEN AB",
+   "Ticker": "-",
+   "Identifier": "86959LAH6",
+   "Weight": "0.2880530333",
+   "Market Value": "1179120.79",
+   "Shares Held": "1180000",
    "Asset Category": "DBT"
   },
   {
    "Name": "STATE STREET CORP",
    "Ticker": "STT",
    "Identifier": "857477CZ4",
-   "Weight": "0.0540740447",
-   "Market Value": "873674.58",
-   "Shares Held": "870000",
+   "Weight": "0.1354202699",
+   "Market Value": "554331.45",
+   "Shares Held": "552000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WESTERN-SOUTHERN GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "95954A2F9",
+   "Weight": "0.244109201",
+   "Market Value": "999240.42",
+   "Shares Held": "1000000",
    "Asset Category": "DBT"
   },
   {
    "Name": "JACKSON NATL LIFE GLOBAL FDG",
    "Ticker": "-",
    "Identifier": "46849CJN2",
-   "Weight": "0.1235874142",
-   "Market Value": "1996802.4",
-   "Shares Held": "2000000",
+   "Weight": "0.243904184",
+   "Market Value": "998401.2",
+   "Shares Held": "1000000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "SOCIETE GENERALE",
+   "Name": "VOLKSWAGEN GROUP AMER FIN LLC",
    "Ticker": "-",
-   "Identifier": "83368RCM2",
-   "Weight": "0.2478369338",
-   "Market Value": "4004302.44",
-   "Shares Held": "4000000",
+   "Identifier": "928668CF7",
+   "Weight": "0.1070974143",
+   "Market Value": "438394.23",
+   "Shares Held": "435000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "BANQUE FED CRED MUTUEL PARIS",
+   "Name": "SFUEL 25-BA",
    "Ticker": "-",
-   "Identifier": "06675DCH3",
-   "Weight": "0.1033089522",
-   "Market Value": "1669163.2",
-   "Shares Held": "1660000",
-   "Asset Category": "DBT"
+   "Identifier": "858933AB0",
+   "Weight": "0.240735141",
+   "Market Value": "985428.99",
+   "Shares Held": "984496.77",
+   "Asset Category": "ABS-CBDO"
   },
   {
-   "Name": "MACQUARIE BANK LTD",
+   "Name": "EXETER SELECT AUTOMOBILE RECEIVABLES TR 2025-2",
    "Ticker": "-",
-   "Identifier": "55608PBY9",
-   "Weight": "0.5283916831",
-   "Market Value": "8537226.77",
-   "Shares Held": "8498000",
-   "Asset Category": "DBT"
+   "Identifier": "30185EAB9",
+   "Weight": "0.0762661229",
+   "Market Value": "312188.94",
+   "Shares Held": "311680.56",
+   "Asset Category": "ABS-CBDO"
   },
   {
-   "Name": "RABOBANK NEDERLAND NEW YORK BRH",
+   "Name": "DBJPM 2017-C6 MTG TR",
    "Ticker": "-",
-   "Identifier": "21688ABQ4",
-   "Weight": "0.1546099402",
-   "Market Value": "2498033.49",
-   "Shares Held": "2490000",
-   "Asset Category": "DBT"
+   "Identifier": "23312JAD5",
+   "Weight": "0.0083420652",
+   "Market Value": "34147.54",
+   "Shares Held": "34331.27",
+   "Asset Category": "ABS-MBS"
   },
   {
-   "Name": "THE TORONTO DOMINION BANK",
-   "Ticker": "TD",
-   "Identifier": "89115A3D2",
-   "Weight": "0.2842257807",
-   "Market Value": "4592237.2",
-   "Shares Held": "4550000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "ROYAL BANK OF CANADA",
-   "Ticker": "RY",
-   "Identifier": "78017DAB4",
-   "Weight": "0.1135556821",
-   "Market Value": "1834719.66",
-   "Shares Held": "1830000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "SANOFI",
+   "Name": "EQUITABLE FINANCIAL LIFE GLOBAL FUNDING",
    "Ticker": "-",
-   "Identifier": "801060AF1",
-   "Weight": "0.6247800536",
-   "Market Value": "10094574.1",
-   "Shares Held": "10071000",
+   "Identifier": "29449WAL1",
+   "Weight": "0.2412813866",
+   "Market Value": "987665",
+   "Shares Held": "1000000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "BANK OF MONTREAL QUE",
-   "Ticker": "-",
-   "Identifier": "06368MJH8",
-   "Weight": "0.2901873004",
-   "Market Value": "4688557.5",
-   "Shares Held": "4675000",
+   "Name": "BNP PARIBAS",
+   "Ticker": "BNPQY",
+   "Identifier": "09659W2T0",
+   "Weight": "0.2655538888",
+   "Market Value": "1087022.44",
+   "Shares Held": "1100000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NEXTERA ENERGY CAP HLDGS INC",
+   "Name": "NATIONAL BANK OF CANADA",
    "Ticker": "-",
-   "Identifier": "65339KDH0",
-   "Weight": "0.2291189777",
-   "Market Value": "3701876.34",
-   "Shares Held": "3686000",
+   "Identifier": "63307A3K9",
+   "Weight": "0.2675473584",
+   "Market Value": "1095182.54",
+   "Shares Held": "1100000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NEW YORK LIFE GLOBAL FDG",
+   "Name": "MORGAN STANLEY BANK OF AMERICA MERRILL LYNCH TRUST 2017-C34",
    "Ticker": "-",
-   "Identifier": "64952WEE9",
-   "Weight": "0.1114123603",
-   "Market Value": "1800090",
-   "Shares Held": "1800000",
+   "Identifier": "61767EAC8",
+   "Weight": "0.0153755948",
+   "Market Value": "62938.7",
+   "Shares Held": "63351.042",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BANK OF AMERICA CORPORATION",
+   "Ticker": "BAC",
+   "Identifier": "06051GLV9",
+   "Weight": "0.3510505598",
+   "Market Value": "1436995.85",
+   "Shares Held": "1430000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NORDEA BANK ABP",
+   "Name": "BAE SYSTEMS PLC",
    "Ticker": "-",
-   "Identifier": "65558RAH2",
-   "Weight": "0.1850622243",
-   "Market Value": "2990051.18",
-   "Shares Held": "2950000",
-   "Asset Category": "DBT"
-  },
-  {
-   "Name": "BANQUE FED CRED MUTUEL PARIS",
-   "Ticker": "-",
-   "Identifier": "06675DCG5",
-   "Weight": "0.0495802302",
-   "Market Value": "801068",
+   "Identifier": "05523RAH0",
+   "Weight": "0.1966930094",
+   "Market Value": "805146.24",
    "Shares Held": "800000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "NOVARTIS CAP CORP",
+   "Name": "DANSKE BANK A/S",
    "Ticker": "-",
-   "Identifier": "66989HBD9",
-   "Weight": "0.3890338802",
-   "Market Value": "6285622.13",
-   "Shares Held": "6275000",
+   "Identifier": "23636ABB6",
+   "Weight": "0.2169803825",
+   "Market Value": "888190.89",
+   "Shares Held": "895000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "UST NOTES",
-   "Ticker": "-",
-   "Identifier": "91282CHT1",
-   "Weight": "1.1006257353",
-   "Market Value": "17782814.89",
-   "Shares Held": "18260000",
+   "Name": "WELLS FARGO and CO",
+   "Ticker": "WFC",
+   "Identifier": "95000U4H3",
+   "Weight": "0.1953452865",
+   "Market Value": "799629.45",
+   "Shares Held": "800000",
    "Asset Category": "DBT"
+  },
+  {
+   "Name": "DEXT ABS 2025-1 LLC",
+   "Ticker": "-",
+   "Identifier": "252154AB5",
+   "Weight": "0.0239332892",
+   "Market Value": "97968.9",
+   "Shares Held": "97830.49",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "HYUNDAI AUTO LEASE SECURITIZATION TRUST 2025-B",
+   "Ticker": "-",
+   "Identifier": "44935DAB5",
+   "Weight": "0.1449786787",
+   "Market Value": "593457.99",
+   "Shares Held": "592382.22",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "WOART 2025-C",
+   "Ticker": "-",
+   "Identifier": "981936AB3",
+   "Weight": "0.1910196031",
+   "Market Value": "781922.63",
+   "Shares Held": "781625.77",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "WHEELS FLEET LEASE FUNDING 1 LLC",
+   "Ticker": "-",
+   "Identifier": "96328GBU0",
+   "Weight": "0.0693786987",
+   "Market Value": "283995.85",
+   "Shares Held": "282645.62",
+   "Asset Category": "ABS-CBDO"
   }
  ]
 }

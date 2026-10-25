@@ -1,11 +1,11 @@
 {
  "ticker": "FPRO",
- "name": "Fidelity MSCI Real Estate Index ETF",
+ "name": "Fidelity Real Estate Investment ETF",
  "category": "Sector",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPRO",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097239/000141036826097239-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000141036826097239/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006228/000003540226006228-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006228/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FPRO",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$23.75",
-  "value": 23.75,
-  "asOfDate": "Oct 20 2026"
+  "display": "$23.82",
+  "value": 23.815,
+  "asOfDate": "Oct 23 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$1,492.71 M",
-  "value": 1492708146.01,
+  "display": "$16.37 M",
+  "value": 16369551.39,
   "asOfDate": "Jul 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 20 2026",
-   "mo1": -0.29,
-   "mo1Text": "-0.29%",
-   "qtd": 3.13,
-   "qtdText": "3.13%",
-   "ytd": 8.75,
-   "ytdText": "8.75%",
-   "yr1": 5.65,
-   "yr1Text": "5.65%",
-   "yr3": 12.7,
-   "yr3Text": "12.70%",
-   "yr5": 1.51,
-   "yr5Text": "1.51%",
+   "asOfDate": "Oct 23 2026",
+   "mo1": 1.06,
+   "mo1Text": "1.06%",
+   "qtd": 3.43,
+   "qtdText": "3.43%",
+   "ytd": 9.07,
+   "ytdText": "9.07%",
+   "yr1": 5.31,
+   "yr1Text": "5.31%",
+   "yr3": 13.46,
+   "yr3Text": "13.46%",
+   "yr5": 1.46,
+   "yr5Text": "1.46%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 5.72,
-   "sinceInceptionText": "5.72%"
+   "sinceInception": 5.77,
+   "sinceInceptionText": "5.77%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -181,7 +181,7 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 124,
+  "totalRows": 44,
   "asOf": "Jul 31 2026"
  },
  "history": {
@@ -190,14 +190,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1434,
-  "asOf": "Oct 20 2026"
+  "totalRows": 1437,
+  "asOf": "Oct 23 2026"
  },
  "seed": {
-  "seriesId": "S000047984",
-  "seriesName": "Fidelity MSCI Real Estate Index ETF",
+  "seriesId": "S000070235",
+  "seriesName": "Fidelity Real Estate Investment ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0001410368-26-097239"
+  "accession": "0000035402-26-006228"
  }
 }
