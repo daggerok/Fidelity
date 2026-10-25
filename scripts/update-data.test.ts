@@ -45,6 +45,9 @@ import {
   main,
   fetchWithRetry,
   holdingsGuard,
+  FIDELITY_FUNDS,
+  fundNameKey,
+  nportIdentityProblem,
   configureRequestLanes,
   paceRequests,
   setSoftDeadline,
@@ -168,16 +171,18 @@ const world = {
   searchFails: false,
   order: [] as string[],
   onChart: null as null | (() => void),
+  longName: {} as Record<string, string>, // Yahoo longName per ticker; the seed name when absent
 };
+const seedName = (pick: (fund: (typeof FIDELITY_FUNDS)[number]) => boolean, fallback: string): string => FIDELITY_FUNDS.find(pick)?.name ?? fallback;
 
 const nportXml = (series: string, repPd: string): string => `<?xml version="1.0"?>
-<edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>Fidelity ${series}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
+<edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>${seedName((fund) => fund.seriesId === series, `Fidelity ${series}`)}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
 <invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>${(100 / world.positions).toFixed(4)}</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}${Array.from({ length: world.bonds }, (_, i) => `<invstOrSec><name>ACME BOND ${i} LLC</name><cusip>99999${i}</cusip><balance>10</balance><units>PA</units><curCd>USD</curCd><valUSD>10</valUSD><pctVal>1</pctVal><assetCat>${i % 2 ? 'ABS-MBS' : 'DBT'}</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
 
-function worldChart(): Record<string, unknown> {
+function worldChart(ticker: string): Record<string, unknown> {
   const start = Date.UTC(2025, 0, 2) / 1000;
   const days = Array.from({ length: 450 }, (_, i) => ({ t: start + i * day, close: 20 + i / 50, volume: 100 }));
-  return chartFixture({ days, dividends: [{ t: start + 200 * day, amount: 0.12 }, { t: start + 300 * day, amount: 0.13 }], meta: { navPrice: undefined, regularMarketTime: start + 449 * day } });
+  return chartFixture({ days, dividends: [{ t: start + 200 * day, amount: 0.12 }, { t: start + 300 * day, amount: 0.13 }], meta: { navPrice: undefined, regularMarketTime: start + 449 * day, longName: world.longName[ticker] ?? seedName((fund) => fund.ticker === ticker, 'Fidelity Test ETF') } });
 }
 
 function installWorld(): void {
@@ -198,7 +203,7 @@ function installWorld(): void {
         return hit ? new Response(nportXml(hit[1].series, hit[1].repPd)) : new Response('missing', { status: 404 });
       }
       if (url.includes('finance/chart/')) { world.order.push(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '?'); world.onChart?.(); }
-      if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart())) : new Response('down', { status: 404 });
+      if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? ''))) : new Response('down', { status: 404 });
       if (url.includes('finance/search')) {
         world.searches.push(decodeURIComponent(/[?&]q=([^&]*)/.exec(url)![1]));
         return world.searchFails ? new Response('busy', { status: 500 }) : new Response(JSON.stringify({ quoteMatches: [] }));
@@ -241,6 +246,7 @@ const fresh = (): string => {
   world.searchFails = false;
   world.order = [];
   world.onChart = null;
+  world.longName = {};
   setSoftDeadline(25 * 60_000);
   installWorld();
   return root;
@@ -410,6 +416,23 @@ describe('parsing', () => {
     expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
     expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
     expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
+  });
+
+  test('N-PORT identity: the series and its name must be the fund\'s (Yahoo trust prefix, & and case ignored); FPRO, FLDB and FLDR carry their own series', () => {
+    // live names: Yahoo longName of FFLC and FPFD vs their N-PORT seriesName
+    expect(nportIdentityProblem('S000068174', 'Fidelity Covington Trust - Fidelity Fundamental Large Cap Core ETF', { seriesId: 'S000068174', seriesName: 'Fidelity Fundamental Large Cap Core ETF' })).toBeNull();
+    expect(nportIdentityProblem('S000072125', 'Fidelity Preferred Securities & Income ETF', { seriesId: 'S000072125', seriesName: 'Fidelity Preferred Securities and Income ETF' })).toBeNull();
+    // the old seed pairings: FPRO with FREL's series, FLDB with FLDR's
+    expect(nportIdentityProblem('S000047984', 'Fidelity Real Estate Investment ETF', { seriesId: 'S000047984', seriesName: 'Fidelity MSCI Real Estate Index ETF' })).toContain('the fund is "Fidelity Real Estate Investment ETF"');
+    expect(nportIdentityProblem('S000062079', 'Fidelity Low Duration Bond ETF', { seriesId: 'S000062079', seriesName: 'Fidelity Low Duration Bond Factor ETF' })).toContain('Factor');
+    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', { seriesId: 'S000047984', seriesName: 'Fidelity Real Estate Investment ETF' })).toContain('expected S000070235');
+    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', { seriesId: '', seriesName: '' })).not.toBeNull();
+    expect(fundNameKey('Fidelity Covington Trust - Fidelity Fundamental Small-Mid Cap ETF')).toBe('fidelity fundamental small mid cap etf');
+    // the shortName is cut ("Fidelity Real Estate Investment"), so it never stands in for the longName
+    expect(parseChart(chartFixture({ meta: { longName: undefined, shortName: 'Fidelity Real Estate Investment' } })).longName).toBe('');
+    // SEC company_tickers_mf.json: FPRO S000070235/C000223346, FLDB S000084018/C000248144, FLDR S000062079/C000201028
+    const series = (ticker: string) => FIDELITY_FUNDS.find((fund) => fund.ticker === ticker)?.seriesId;
+    expect([series('FPRO'), series('FLDB'), series('FLDR')]).toEqual(['S000070235', 'S000084018', 'S000062079']);
   });
 
   test('N-PORT freshness: only NPORT-P forms, only a strictly newer filing, never an older report period', () => {
@@ -842,6 +865,41 @@ describe('pipeline', () => {
       await quiet(() => main(env({ TICKERS: 'FBND' })));
       expect(snapshot(root)).toEqual(first);
       expect(process.exitCode).toBe(1);
+    });
+  });
+
+  test('a filing whose series name is not the fund\'s is not used; holdings published for another series are no baseline', async () => {
+    await inWorld(async (root) => {
+      const warn = console.warn;
+      const warnings: string[] = [];
+      console.warn = (message: string) => { warnings.push(String(message)); };
+      try {
+        world.positions = 4;
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        const meta = readJson(root, 'funds/FBND/meta.json');
+        expect([meta.name, meta.holdings.totalRows, meta.seed.seriesId]).toEqual(['Fidelity Total Bond ETF', 4, 'S000042567']);
+        // Yahoo names the ticker another fund: the filing is not used, holdings and AUM stay as published, the run says so
+        world.longName.FBND = 'Fidelity Corporate Bond ETF';
+        world.positions = 2;
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        const kept = readJson(root, 'funds/FBND/meta.json');
+        expect([kept.holdings, kept.aum, kept.seed]).toEqual([meta.holdings, meta.aum, meta.seed]);
+        expect(readJson(root, 'funds/FBND/holdings/001.json').totalRows).toBe(4);
+        expect(warnings.some((line) => line.includes('FBND') && line.includes('N-PORT not used'))).toBe(true);
+        // published for another series (a seed fixed since): while the filing is not used, the published series stays the baseline
+        world.positions = 1;
+        writeFileSync(join(root, 'funds/FBND/meta.json'), JSON.stringify({ ...kept, seed: { ...kept.seed, seriesId: 'S000047984' }, holdings: { ...kept.holdings, asOf: 'Jul 31 2026' } }));
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        expect(readJson(root, 'funds/FBND/meta.json').seed.seriesId).toBe('S000047984');
+        // once the filing is the fund's, a smaller, older sheet of the right series replaces the other series' holdings
+        world.longName = {};
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        const fixed = readJson(root, 'funds/FBND/meta.json');
+        expect([fixed.holdings.totalRows, fixed.holdings.asOf, fixed.seed.seriesId]).toEqual([1, 'May 31 2026', 'S000042567']);
+        expect(process.exitCode).toBe(0);
+      } finally {
+        console.warn = warn;
+      }
     });
   });
 
