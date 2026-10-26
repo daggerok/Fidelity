@@ -55,7 +55,7 @@ import {
   publishedAsOf,
   stalestFirst,
 } from './update-data';
-import { readFileSync, mkdtempSync, readdirSync, statSync, rmSync, writeFileSync } from 'node:fs';
+import { readFileSync, mkdirSync, mkdtempSync, readdirSync, statSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -176,7 +176,7 @@ const world = {
 const seedName = (pick: (fund: (typeof FIDELITY_FUNDS)[number]) => boolean, fallback: string): string => FIDELITY_FUNDS.find(pick)?.name ?? fallback;
 
 const nportXml = (series: string, repPd: string): string => `<?xml version="1.0"?>
-<edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>${seedName((fund) => fund.seriesId === series, `Fidelity ${series}`)}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
+<edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>${FIDELITY_FUNDS.find((fund) => fund.seriesId === series)?.shareClassOf ?? seedName((fund) => fund.seriesId === series, `Fidelity ${series}`)}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
 <invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>${(100 / world.positions).toFixed(4)}</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}${Array.from({ length: world.bonds }, (_, i) => `<invstOrSec><name>ACME BOND ${i} LLC</name><cusip>99999${i}</cusip><balance>10</balance><units>PA</units><curCd>USD</curCd><valUSD>10</valUSD><pctVal>1</pctVal><assetCat>${i % 2 ? 'ABS-MBS' : 'DBT'}</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
 
 function worldChart(ticker: string): Record<string, unknown> {
@@ -909,6 +909,27 @@ describe('pipeline', () => {
       } finally {
         console.warn = warn;
       }
+    });
+  });
+
+  test('an ETF share class (FREI) uses its mutual fund series: holdings from the filing, the ETF name, AUM null; stale data of another series is replaced', async () => {
+    await inWorld(async (root) => {
+      const frei = FIDELITY_FUNDS.find((fund) => fund.ticker === 'FREI')!;
+      // SEC company_tickers_mf.json: FREI = class C000276225 of series S000007192, Fidelity Securities Fund (CIK 754510)
+      expect([frei.seriesId, frei.trustCik, frei.shareClassOf, frei.ter]).toEqual(['S000007192', '0000754510', 'Fidelity Real Estate Income Fund', 0.57]);
+      world.accessions['0000035402-26-006222'] = { series: 'S000007192', repPd: '2026-07-31' };
+      world.longName.FREI = 'Fidelity Real Estate Income Fund ETF'; // Yahoo's longName, not the N-PORT series name
+      // published before: FPRO's series and its 44 rows under FREI
+      mkdirSync(join(root, 'funds/FREI'), { recursive: true });
+      writeFileSync(join(root, 'funds/FREI/meta.json'), JSON.stringify({ ticker: 'FREI', name: 'Fidelity Real Estate Investment ETF', seed: { seriesId: 'S000070235' }, holdings: { totalRows: 44, asOf: 'Jul 31 2026' }, aum: { value: 16369551.39 } }));
+      world.positions = 3;
+      await quiet(() => main(env({ TICKERS: 'FREI' })));
+      const meta = readJson(root, 'funds/FREI/meta.json');
+      expect([meta.name, meta.holdings.totalRows, meta.holdings.asOf, meta.seed.seriesId, meta.aum.value, meta.expenseRatio.value]).toEqual(['Fidelity Real Estate Income Fund ETF Class', 3, 'Jul 31 2026', 'S000007192', null, 0.57]);
+      expect(meta.aum.source).toContain('every share class');
+      const row = readJson(root, 'index.json').funds.find((fund: any) => fund.ticker === 'FREI');
+      expect([row.name, row.aumValue, row.terValue]).toEqual(['Fidelity Real Estate Income Fund ETF Class', null, 0.57]);
+      expect(process.exitCode).toBe(0);
     });
   });
 
