@@ -982,13 +982,17 @@ describe('pipeline', () => {
       expect(fbnd.seed.accession).toBe('0000035402-26-009999');
       expect(readJson(root, 'funds/FBCG/meta.json').holdings.asOf).toBe('Apr 30 2026');
 
-      // published holdings are fresher than the seed accession: a rerun must keep them
+      // published holdings are fresher than the seed accession: a rerun without the refresh keeps them and the
+      // filing they came from (never the seed's accession next to the kept holdings)
       const meta = readJson(root, 'funds/FBND/meta.json');
       meta.holdings.asOf = 'Sep 30 2026';
       writeFileSync(join(root, 'funds/FBND/meta.json'), JSON.stringify(meta));
       world.submissions['0001562565'] = [];
       await quiet(() => main(env({ TICKERS: 'FBND' })));
-      expect(readJson(root, 'funds/FBND/meta.json').holdings.asOf).toBe('Sep 30 2026');
+      const kept = readJson(root, 'funds/FBND/meta.json');
+      expect(kept.holdings.asOf).toBe('Sep 30 2026');
+      expect([kept.source.edgarFiling, kept.source.nportDoc, kept.seed.accession]).toEqual([meta.source.edgarFiling, meta.source.nportDoc, '0000035402-26-009999']);
+      expect(kept.source.edgarFiling).toContain('000003540226009999');
     });
   });
 
