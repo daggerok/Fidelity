@@ -45,6 +45,8 @@ import {
   main,
   fetchWithRetry,
   holdingsGuard,
+  CLOSED_FUNDS,
+  closedFund,
   FIDELITY_FUNDS,
   fundNameKey,
   nportIdentityProblem,
@@ -494,7 +496,9 @@ describe('parsing', () => {
     const divs = parseChart(chartFixture({ dividends: [{ t: 1_700_000_000, amount: 0.17 }, { t: 1_600_000_000, amount: 0.15 }, { t: 1_500_000_000, amount: 0 }] }));
     expect(divs.dividends.map((d) => d.amount)).toEqual([0.15, 0.17]);
   });
+});
 
+describe('parsing 2', () => {
   test('number and date text: scientific notation expanded, missing values stay text, EDGAR dates and epochs are UTC', () => {
     expect(normalizeNumberText('2.97057744E8')).toBe('297057744');
     for (const text of ['12.34', 'N/A', '-', '']) expect(normalizeNumberText(text)).toBe(text);
@@ -664,7 +668,9 @@ describe('metrics', () => {
     expect(inferDistributionFrequency(dates([1_700_000_000, 1_700_000_000 + quarter, 1_700_000_000 + 2 * quarter, 1_700_000_000 + 3 * quarter])).frequency).toBe('Quarterly');
     expect(inferDistributionFrequency([]).frequency).toBe('None');
   });
+});
 
+describe('metrics 2', () => {
   test('catalog metrics: CAGRs map directly, TRs derive, SEC yield null, returnsBasis and performanceAsOf travel together', () => {
     const returns = { asOfDate: '2026-06-30', ytd: 9.09, yr1: 20, cagr3y: 10, cagr5y: 8, cagr10y: null, siAnn: 12.5, mo1: 0.85, qtd: 5.26 };
     const metrics = deriveCatalogMetrics(returns, 0.1, 4, 40);
@@ -802,7 +808,9 @@ describe('pipeline', () => {
     expect(keepPublishedAdjClose(fresh(31.56), published)[0].adjClose).toBe(31.56);
     expect(ADJ_CLOSE_NOISE).toBe(1e-4);
   });
+});
 
+describe('pipeline 2', () => {
   test('search misses are remembered: debt rows are never searched, a rerun sends no search and writes nothing, failures leave no state', async () => {
     await inWorld(async (root) => {
       world.positions = 3;
@@ -874,6 +882,96 @@ describe('pipeline', () => {
       await quiet(() => main(env({ TICKERS: 'FBND' })));
       expect(snapshot(root)).toEqual(first);
       expect(process.exitCode).toBe(1);
+    });
+  });
+
+  test('a new fund whose first refresh fails (guard rejection or any other error) is reported failed and gets a catalog-only row: dataFile null, no files, full metrics key set', async () => {
+    await inWorld(async (root) => {
+      world.positions = 4;
+      await quiet(() => main(env({ TICKERS: 'FBCG' })));
+      const fullKeys = Object.keys(readJson(root, 'index.json').funds[0].metrics).sort();
+      const upstream = globalThis.fetch;
+      globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+        const response = await upstream(input, init);
+        return String(input).includes('primary_doc.xml') ? new Response((await response.text()).replace(/<pctVal>[^<]*<\/pctVal>/g, '<pctVal>N/A</pctVal>')) : response;
+      }) as unknown as typeof fetch;
+      const lines: string[] = [];
+      const log = console.log;
+      console.log = (line: unknown) => { lines.push(String(line)); };
+      try { await main(env({ TICKERS: 'FBND' })); } finally { console.log = log; }
+      expect(process.exitCode).toBe(1);
+      process.exitCode = 0;
+      expect(lines.some((line) => /FBND\s+failed .*holdings guard/.test(line))).toBe(true);
+      expect(lines.some((line) => /\[ done\s+\] 1 fund: .*1 failed/.test(line))).toBe(true);
+      const row = readJson(root, 'index.json').funds.find((fund: any) => fund.ticker === 'FBND');
+      expect(row).toMatchObject({ dataFile: null, holdings: 0, history: 0, aumValue: null, terValue: FIDELITY_FUNDS.find((fund) => fund.ticker === 'FBND')!.ter });
+      expect(Object.keys(row.metrics).sort()).toEqual(fullKeys);
+      expect(row.metrics.returnsBasis).toBe(RETURNS_BASIS);
+      expect(readdirSync(join(root, 'funds')).sort()).toEqual(['FBCG']);
+      // any other failure of a first refresh lists the fund the same way (funds/FBCV is a plain file: nothing can be written)
+      globalThis.fetch = upstream;
+      writeFileSync(join(root, 'funds/FBCV'), 'not a folder');
+      await quiet(() => main(env({ TICKERS: 'FBCV' })));
+      expect(process.exitCode).toBe(1);
+      process.exitCode = 0;
+      const rows = readJson(root, 'index.json').funds;
+      expect(rows.map((fund: any) => [fund.ticker, fund.dataFile])).toEqual([['FBCG', './funds/FBCG/meta.json'], ['FBCV', null], ['FBND', null]]);
+      // once the sources work, both get their files and a full row
+      rmSync(join(root, 'funds/FBCV'));
+      await quiet(() => main(env({ TICKERS: 'FBND FBCV' })));
+      expect(process.exitCode).toBe(0);
+      expect(readJson(root, 'index.json').funds.map((fund: any) => fund.dataFile)).toEqual(['./funds/FBCG/meta.json', './funds/FBCV/meta.json', './funds/FBND/meta.json']);
+    });
+  });
+});
+
+describe('pipeline 3', () => {
+  test('a closed fund is never fetched or reported failed: its files stay as published, its index row says closed, a rerun writes nothing', async () => {
+    const entry = { ticker: 'FBND', closed: '2026-10-01', source: 'https://www.sec.gov/Archives/edgar/data/1/notice.htm' };
+    expect(() => closedFund([{ ...entry, closed: 'soon' }], 'FBND')).toThrow('CLOSED_FUNDS');
+    expect(closedFund([entry], 'fbnd')).toEqual(entry);
+    await inWorld(async (root) => {
+      world.positions = 4;
+      await quiet(() => main(env({ TICKERS: 'FBND FBCG FBCV' })));
+      const first = snapshot(root);
+      const upstream = globalThis.fetch;
+      const calls: string[] = [];
+      const recording = (mutate: boolean) => (async (input: RequestInfo | URL, init?: RequestInit) => {
+        calls.push(String(input));
+        const response = await upstream(input, init);
+        // every N-PORT weight N/A: the guard would reject these holdings
+        return mutate && String(input).includes('primary_doc.xml') ? new Response((await response.text()).replace(/<pctVal>[^<]*<\/pctVal>/g, '<pctVal>N/A</pctVal>')) : response;
+      }) as unknown as typeof fetch;
+      const seedAt = FIDELITY_FUNDS.findIndex((fund) => fund.ticker === 'FBND');
+      const seed = FIDELITY_FUNDS[seedAt];
+      CLOSED_FUNDS.push(entry);
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 1100)); // generatedAt has second resolution
+        globalThis.fetch = recording(true);
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        expect(calls).toEqual([]);
+        expect(process.exitCode).not.toBe(1);
+        const closed = snapshot(root);
+        for (const path of Object.keys(first)) if (!path.endsWith('index.json')) expect([path, closed[path]]).toEqual([path, first[path]]);
+        const rows = readJson(root, 'index.json').funds;
+        expect(rows.map((fund: any) => fund.ticker)).toEqual(['FBCG', 'FBCV', 'FBND']);
+        expect(rows.find((fund: any) => fund.ticker === 'FBND')).toMatchObject({ status: 'closed', closedDate: '2026-10-01', closedSource: entry.source, dataFile: './funds/FBND/meta.json' });
+        expect(rows.filter((fund: any) => fund.status === 'closed')).toHaveLength(1);
+        // a rerun over every fund: FBND is still not fetched (no chart, no filing of its series), nothing changes
+        globalThis.fetch = recording(false);
+        await quiet(() => main(env({ TICKERS: 'FBND FBCG FBCV' })));
+        expect(calls.length).toBeGreaterThan(0);
+        expect(calls.filter((url) => /FBND|000003540226004724/.test(url))).toEqual([]);
+        expect(snapshot(root)).toEqual(closed);
+        // the seed dropped the fund: TICKERS still accepts it, its row and files survive every run
+        FIDELITY_FUNDS.splice(seedAt, 1);
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+        await quiet(() => main(env({ TICKERS: 'FBCG' })));
+        expect(snapshot(root)).toEqual(closed);
+      } finally {
+        if (FIDELITY_FUNDS.indexOf(seed) < 0) FIDELITY_FUNDS.splice(seedAt, 0, seed);
+        CLOSED_FUNDS.splice(CLOSED_FUNDS.indexOf(entry), 1);
+      }
     });
   });
 
@@ -963,7 +1061,9 @@ describe('pipeline', () => {
       }
     });
   });
+});
 
+describe('pipeline 4', () => {
   test('REFRESH_CATALOG moves a series to its newer filing; an older filing never replaces fresher holdings', async () => {
     await inWorld(async (root) => {
       world.accessions['0000035402-26-009999'] = { series: 'S000042567', repPd: '2026-07-31' };
