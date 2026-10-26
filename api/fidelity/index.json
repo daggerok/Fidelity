@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T07:59:51Z",
+ "generatedAt": "2026-10-26T19:31:28Z",
  "source": {
   "provider": "Fidelity Investments (ETFs)",
   "market": "us",
@@ -17,8 +17,8 @@
  },
  "counts": {
   "funds": 74,
-  "holdings": 23537,
-  "history": 111250
+  "holdings": 23589,
+  "history": 111251
  },
  "funds": [
   {
@@ -31,13 +31,13 @@
    "terValue": null,
    "nav": "—",
    "navValue": null,
-   "aum": "$45.19 M",
-   "aumValue": 45187974.620000005,
-   "asOfDate": "Oct 23 2026",
+   "aum": "$101.30 M",
+   "aumValue": 101301357.74999997,
+   "asOfDate": "Oct 26 2026",
    "inceptionDate": "Feb 12 2026",
    "exchange": "NasdaqGM",
-   "closePrice": "$50.41",
-   "closePriceValue": 50.405,
+   "closePrice": "$50.38",
+   "closePriceValue": 50.38,
    "premiumDiscount": "—",
    "premiumDiscountValue": null,
    "distributions": {
@@ -47,11 +47,11 @@
    },
    "returns": {
     "monthEnd": {
-     "asOfDate": "Oct 23 2026",
-     "mo1": 0.32,
-     "mo1Text": "0.32%",
-     "qtd": 0.34,
-     "qtdText": "0.34%",
+     "asOfDate": "Oct 26 2026",
+     "mo1": 0.26,
+     "mo1Text": "0.26%",
+     "qtd": 0.28,
+     "qtdText": "0.28%",
      "ytd": null,
      "ytdText": "—",
      "yr1": null,
@@ -101,10 +101,10 @@
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns); Fidelity publishes no machine-readable performance table",
-    "performanceAsOf": "2026-10-23"
+    "performanceAsOf": "2026-10-26"
    },
-   "holdings": 135,
-   "history": 176
+   "holdings": 187,
+   "history": 177
   },
   {
    "ticker": "FBCG",

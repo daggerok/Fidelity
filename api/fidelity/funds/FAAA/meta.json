@@ -4,8 +4,8 @@
  "category": "Bond",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FAAA",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004633/000003540226004633-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004633/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006744/000003540226006744-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006744/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FAAA",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,28 +19,28 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$50.41",
-  "value": 50.405,
-  "asOfDate": "Oct 23 2026"
+  "display": "$50.38",
+  "value": 50.38,
+  "asOfDate": "Oct 26 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$45.19 M",
-  "value": 45187974.620000005,
-  "asOfDate": "May 31 2026",
+  "display": "$101.30 M",
+  "value": 101301357.74999997,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": 0.32,
-   "mo1Text": "0.32%",
-   "qtd": 0.34,
-   "qtdText": "0.34%",
+   "asOfDate": "Oct 26 2026",
+   "mo1": 0.26,
+   "mo1Text": "0.26%",
+   "qtd": 0.28,
+   "qtdText": "0.28%",
    "ytd": null,
    "ytdText": "—",
    "yr1": null,
@@ -121,22 +121,22 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 135,
-  "asOf": "May 31 2026"
+  "totalRows": 187,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 176,
-  "asOf": "Oct 23 2026"
+  "totalRows": 177,
+  "asOf": "Oct 26 2026"
  },
  "seed": {
   "seriesId": "S000099377",
   "seriesName": "Fidelity AAA CLO ETF",
   "trustCik": "0001562565",
   "trustName": "Fidelity Merrimack Street Trust",
-  "accession": "0000035402-26-004633"
+  "accession": "0000035402-26-006744"
  }
 }
