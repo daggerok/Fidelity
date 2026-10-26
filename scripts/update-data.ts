@@ -223,6 +223,7 @@ export const FIDELITY_TRUSTS: Record<string, string> = {
   '0001562565': 'Fidelity Merrimack Street Trust',
   '0001852317': 'Fidelity Wise Origin Bitcoin Fund',
   '0002000046': 'Fidelity Ethereum Fund',
+  '0000754510': 'Fidelity Securities Fund',
 };
 
 export type FidelitySeedFund = {
@@ -239,6 +240,11 @@ export type FidelitySeedFund = {
   ter: number | null;
   fundPage: string;
   catalogOnly?: boolean;
+  /**
+   * ETF share class of a multi-class mutual fund: the N-PORT series name. The filing covers every class, so its
+   * series name (not the ETF's) is checked, the ETF keeps the seed name, and AUM stays null (the net assets are the whole fund's).
+   */
+  shareClassOf?: string;
 };
 
 export const FIDELITY_FUNDS: FidelitySeedFund[] = [
@@ -304,7 +310,9 @@ export const FIDELITY_FUNDS: FidelitySeedFund[] = [
     { ticker: 'FPFD', name: 'Fidelity Preferred Securities and Income ETF', seriesId: 'S000072125', trustCik: '0000945908', category: 'Bond', accession: '0000035402-26-004678', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2021-06-17', exchange: 'Cboe US', ter: 0.59, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPFD' },
     { ticker: 'FPRO', name: 'Fidelity Real Estate Investment ETF', seriesId: 'S000070235', trustCik: '0000945908', category: 'Sector', accession: '0000035402-26-004137', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPRO' },
     { ticker: 'FQAL', name: 'Fidelity Quality Factor ETF', seriesId: 'S000054753', trustCik: '0000945908', category: 'Factor', accession: '0000035402-26-004131', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2016-09-16', exchange: 'NYSEArca', ter: 0.15, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FQAL' },
-    { ticker: 'FREI', name: 'Fidelity Real Estate Investment ETF', seriesId: 'S000070235', trustCik: '0000945908', category: 'Sector', accession: '0000035402-26-004137', filed: '2026-06-26', repPdDate: '2026-04-30', inception: '2021-02-04', exchange: 'Cboe US', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FREI' },
+    // ETF Class (C000276225) of Fidelity Real Estate Income Fund, series S000007192 of Fidelity Securities Fund (SEC company_tickers_mf.json).
+    // TER: net 0.57% after the FMR reimbursement (gross 0.76%), summary prospectus 2026-09-29, EDGAR 497K 0000754510-26-000241.
+    { ticker: 'FREI', name: 'Fidelity Real Estate Income Fund ETF Class', seriesId: 'S000007192', trustCik: '0000754510', category: 'Sector', accession: '0000035402-26-006222', filed: '2026-09-23', repPdDate: '2026-07-31', inception: '2026-06-18', exchange: 'NasdaqGM', ter: 0.57, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FREI', shareClassOf: 'Fidelity Real Estate Income Fund' },
     { ticker: 'FRNW', name: 'Fidelity Clean Energy ETF', seriesId: 'S000073597', trustCik: '0000945908', category: 'Thematic', accession: '0000035402-26-005377', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2021-10-07', exchange: 'Cboe US', ter: 0.39, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FRNW' },
     { ticker: 'FSEC', name: 'Fidelity Investment Grade Securitized ETF', seriesId: 'S000071132', trustCik: '0001562565', category: 'Bond', accession: '0000035402-26-004686', filed: '2026-07-24', repPdDate: '2026-05-31', inception: '2021-03-08', exchange: 'NYSEArca', ter: 0.36, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSEC' },
     { ticker: 'FSEG', name: 'Fidelity Enhanced Small Cap Growth ETF', seriesId: 'S000102552', trustCik: '0000945908', category: 'US Equity', accession: '0000035402-26-005422', filed: '2026-08-24', repPdDate: '2026-06-30', inception: '2026-04-30', exchange: 'NYSEArca', ter: null, fundPage: 'https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSEG' },
@@ -1895,7 +1903,7 @@ async function processFund(
     try {
       const xml = await fetchText(nportUrl, `[nport   ] ${ticker}`, secHeaders(config), config);
       const parsedNport = parseNport(xml);
-      const identity = nportIdentityProblem(seed.seriesId, chart?.longName || seed.name, parsedNport);
+      const identity = nportIdentityProblem(seed.seriesId, seed.shareClassOf || chart?.longName || seed.name, parsedNport);
       if (identity) {
         // Always reported (not only with VERBOSE): the fund keeps its previous holdings and AUM until the seed is fixed.
         console.warn(`[ ${'nport'.padEnd(9)}] ${ticker}: ${identity} — N-PORT not used, keeping previous holdings`);
@@ -1952,7 +1960,7 @@ async function processFund(
       };
   const latestDividend = chart && chart.dividends.length ? chart.dividends[chart.dividends.length - 1] : null;
 
-  const name = nport?.seriesName || seed.name;
+  const name = seed.shareClassOf ? seed.name : (nport?.seriesName || seed.name);
   // Yahoo's chart meta carries no NAV for these funds and Fidelity publishes no
   // machine-readable NAV, so nav and premium stay null (never guessed). When the
   // chart request failed, the previously published quote block is kept as one unit.
@@ -1961,7 +1969,8 @@ async function processFund(
   const premiumDiscount = chart ? (nav && price ? round(((price - nav) / nav) * 100, 2) : null) : numberOrNull(previous.premiumDiscountValue);
   const previousQuoteDate = (key: 'nav' | 'marketPrice'): string => String(((previousMeta?.[key] as JsonRecord | undefined)?.asOfDate as string | undefined) ?? '—');
   const quoteDate = chart?.regularMarketTime ? formatEpochDate(chart.regularMarketTime) : null;
-  const netAssets = nport ? nport.totalValue : numberOrNull(previous.aumValue);
+  // A share class has no AUM of its own in N-PORT: the reported net assets are the whole multi-class fund's.
+  const netAssets = seed.shareClassOf ? null : nport ? nport.totalValue : numberOrNull(previous.aumValue);
   const returns = chart ? priceReturns(chart.days) : null;
   const returnsData = returnsBlock(returns, previous);
 
@@ -1996,8 +2005,10 @@ async function processFund(
     aum: {
       display: netAssets === null ? '—' : formatAumDisplay(netAssets),
       value: netAssets,
-      asOfDate: nport ? formatEdgarDate(nport.repPdDate) : (((previousMeta?.aum as JsonRecord | undefined)?.asOfDate as string) ?? '—'),
-      source: nport ? 'sum of reported N-PORT position values' : ((previousMeta?.aum as JsonRecord | undefined)?.source ?? 'previous run'),
+      asOfDate: seed.shareClassOf ? '—' : nport ? formatEdgarDate(nport.repPdDate) : (((previousMeta?.aum as JsonRecord | undefined)?.asOfDate as string) ?? '—'),
+      source: seed.shareClassOf
+        ? `not published: the N-PORT net assets cover every share class of ${seed.shareClassOf}`
+        : nport ? 'sum of reported N-PORT position values' : ((previousMeta?.aum as JsonRecord | undefined)?.source ?? 'previous run'),
     },
     returns: returnsData,
     distributions: { frequency: frequency.frequency, paymentsPerYear: frequency.paymentsPerYear, headers: ['Ex-Date', 'Amount'], rows: distributions },
@@ -2013,7 +2024,7 @@ async function processFund(
       // The series of the published holdings: kept from before while N-PORT data is not used, so a corrected seed
       // never makes another series' retained holdings the baseline of the next run.
       seriesId: nport || !previousMeta?.seed ? seed.seriesId : (previousMeta.seed.seriesId ?? null),
-      seriesName: nport || !previousMeta?.seed ? seed.name : (previousMeta.seed.seriesName ?? null),
+      seriesName: nport || !previousMeta?.seed ? (seed.shareClassOf || seed.name) : (previousMeta.seed.seriesName ?? null),
       trustCik: seed.trustCik,
       trustName: FIDELITY_TRUSTS[seed.trustCik] || null,
       accession: accession || ((previousMeta?.seed as JsonRecord | undefined)?.accession ?? null),

@@ -50,7 +50,7 @@ Defaults live in `scripts/update-data.config.json` (a flat object with one strin
 
 | Block | Source |
 | --- | --- |
-| Catalog (all US Fidelity ETFs) | SEC EDGAR `company_tickers_mf.json` -> Fidelity Covington Trust (CIK 0000945908) and Merrimack Street Trust |
+| Catalog (all US Fidelity ETFs) | SEC EDGAR `company_tickers_mf.json` -> Fidelity Covington Trust (CIK 0000945908) and Merrimack Street Trust; FREI is the ETF Class of Fidelity Real Estate Income Fund (Fidelity Securities Fund, CIK 0000754510) |
 | Holdings per fund | SEC EDGAR Form N-PORT-P `primary_doc.xml` (positions and net assets) |
 | Daily history, distributions | Yahoo Finance public chart API (`/v8/finance/chart/{TICKER}?interval=1d&events=div`) |
 | Fallback | `company_tickers.json` for ticker resolution of N-PORT positions |
@@ -68,6 +68,7 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `secYield` / `secYieldText` - Fidelity publishes no 30-day SEC yield feed: `null` and `-` (unavailable, not zero)
 - `returnsBasis` - mandatory non-empty label of how the returns are computed; for Fidelity always "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns)"
 - `performanceAsOf` - ISO `YYYY-MM-DD` date the returns are as of: the last Yahoo close date (not the NAV date), or `null` when unknown
+- AUM of an ETF share class of a multi-class mutual fund (FREI) is `null`: its N-PORT net assets cover every class of the fund (about $4.4B for 7 classes), not the ETF
 
 `dividendYieldBasis` for Fidelity (the provider publishes no yield, so the code is never `official-*`):
 
