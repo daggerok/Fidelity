@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
+import { afterEach, beforeEach, describe, expect, setSystemTime, test } from 'bun:test';
 import {
   parseRange,
   parseAumRange,
@@ -56,6 +56,8 @@ import {
   chartUrl,
   publishedAsOf,
   stalestFirst,
+  mergeWindowedChart,
+  nportScanStart,
 } from './update-data';
 import { readFileSync, mkdirSync, mkdtempSync, readdirSync, statSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -76,6 +78,7 @@ afterEach(() => {
   globalThis.fetch = originalFetch;
   process.exitCode = 0;
   setSoftDeadline(25 * 60_000);
+  setSystemTime();
   configureRequestLanes(1, 1);
   for (const key of Object.keys(process.env)) if (!(key in savedEnv)) delete process.env[key];
   Object.assign(process.env, savedEnv);
@@ -174,6 +177,10 @@ const world = {
   order: [] as string[],
   onChart: null as null | (() => void),
   longName: {} as Record<string, string>, // Yahoo longName per ticker; the seed name when absent
+  adjScale: 1, // Yahoo rescales adjusted closes after a new dividend
+  earlyDividend: false,
+  archives: [] as string[], // N-PORT accessions requested
+  onSubmissions: null as null | (() => void),
 };
 const seedName = (pick: (fund: (typeof FIDELITY_FUNDS)[number]) => boolean, fallback: string): string => FIDELITY_FUNDS.find(pick)?.name ?? fallback;
 
@@ -181,10 +188,11 @@ const nportXml = (series: string, repPd: string): string => `<?xml version="1.0"
 <edgarSubmission><formData><genInfo><regName>Trust</regName><seriesName>${FIDELITY_FUNDS.find((fund) => fund.seriesId === series)?.shareClassOf ?? seedName((fund) => fund.seriesId === series, `Fidelity ${series}`)}</seriesName><seriesId>${series}</seriesId><repPdDate>${repPd}</repPdDate></genInfo>
 <invstOrSecs>${Array.from({ length: world.positions }, (_, i) => `<invstOrSec><name>APPLE ${i} INC</name><cusip>03783310${i}</cusip><balance>10</balance><units>SH</units><curCd>USD</curCd><valUSD>1000</valUSD><pctVal>${(100 / world.positions).toFixed(4)}</pctVal><assetCat>EC</assetCat></invstOrSec>`).join('')}${Array.from({ length: world.bonds }, (_, i) => `<invstOrSec><name>ACME BOND ${i} LLC</name><cusip>99999${i}</cusip><balance>10</balance><units>PA</units><curCd>USD</curCd><valUSD>10</valUSD><pctVal>1</pctVal><assetCat>${i % 2 ? 'ABS-MBS' : 'DBT'}</assetCat></invstOrSec>`).join('')}</invstOrSecs></formData></edgarSubmission>`;
 
-function worldChart(ticker: string): Record<string, unknown> {
+function worldChart(ticker: string, period1 = 0): Record<string, unknown> {
   const start = Date.UTC(2025, 0, 2) / 1000;
-  const days = Array.from({ length: 450 }, (_, i) => ({ t: start + i * day, close: 20 + i / 50, volume: 100 }));
-  return chartFixture({ days, dividends: [{ t: start + 200 * day, amount: 0.12 }, { t: start + 300 * day, amount: 0.13 }], meta: { navPrice: undefined, regularMarketTime: start + 449 * day, longName: world.longName[ticker] ?? seedName((fund) => fund.ticker === ticker, 'Fidelity Test ETF') } });
+  const days = Array.from({ length: 450 }, (_, i) => ({ t: start + i * day, close: 20 + i / 50, adj: (20 + i / 50) * world.adjScale, volume: 100 })).filter((d) => d.t >= period1);
+  const dividends = [{ t: start + 30 * day, amount: 0.11 }, { t: start + 200 * day, amount: 0.12 }, { t: start + 300 * day, amount: 0.13 }].filter((d, i) => (i > 0 || world.earlyDividend) && d.t >= period1);
+  return chartFixture({ days, dividends, meta: { navPrice: undefined, regularMarketTime: start + 449 * day, longName: world.longName[ticker] ?? seedName((fund) => fund.ticker === ticker, 'Fidelity Test ETF') } });
 }
 
 function installWorld(): void {
@@ -196,16 +204,18 @@ function installWorld(): void {
       if (world.delayMs) await new Promise((resolve) => setTimeout(resolve, world.delayMs));
       const sub = /data\.sec\.gov\/submissions\/CIK(\d+)\.json/.exec(url);
       if (sub) {
+        world.onSubmissions?.();
         const rows = world.submissions[sub[1]] || [];
         return new Response(JSON.stringify({ filings: { recent: { form: rows.map(() => 'NPORT-P'), accessionNumber: rows.map((r) => r.accession), filingDate: rows.map((r) => r.filed), reportDate: rows.map((r) => r.repPd) } } }));
       }
       const arch = /Archives\/edgar\/data\/\d+\/(\d{18})\/primary_doc\.xml/.exec(url);
       if (arch) {
+        world.archives.push(arch[1]);
         const hit = Object.entries(world.accessions).find(([acc]) => acc.replace(/-/g, '') === arch[1]);
         return hit ? new Response(nportXml(hit[1].series, hit[1].repPd)) : new Response('missing', { status: 404 });
       }
       if (url.includes('finance/chart/')) { world.order.push(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '?'); world.onChart?.(); }
-      if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? ''))) : new Response('down', { status: 404 });
+      if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '', Number(/period1=(\d+)/.exec(url)?.[1] ?? 0)))) : new Response('down', { status: 404 });
       if (url.includes('finance/search')) {
         world.searches.push(decodeURIComponent(/[?&]q=([^&]*)/.exec(url)![1]));
         return world.searchFails ? new Response('busy', { status: 500 }) : new Response(JSON.stringify({ quoteMatches: [] }));
@@ -249,6 +259,10 @@ const fresh = (): string => {
   world.order = [];
   world.onChart = null;
   world.longName = {};
+  world.adjScale = 1;
+  world.earlyDividend = false;
+  world.archives = [];
+  world.onSubmissions = null;
   setSoftDeadline(25 * 60_000);
   installWorld();
   return root;
@@ -649,6 +663,10 @@ describe('metrics', () => {
   test('young funds get null for horizons they are too young for, never 0 or made-up values', () => {
     const returns = priceReturns([mk('2026-06-01', 100), mk('2026-06-30', 101)], new Date('2026-06-30T23:59:00Z'));
     expect([returns.cagr3y, returns.cagr5y, returns.cagr10y, returns.siAnn]).toEqual([null, null, null, null]);
+    // since inception is annualized only from one full year on: at 0.83 years +10% is cumulative, not 12.17% a year
+    const asOf = new Date('2026-06-30T23:59:00Z');
+    expect(priceReturns([mk('2025-09-01', 100), mk('2026-06-30', 110)], asOf).siAnn).toBeNull();
+    expect(priceReturns([mk('2025-06-27', 100), mk('2026-06-30', 110)], asOf).siAnn).toBeCloseTo(((1.1 ** (1 / (368 / 365.25))) - 1) * 100, 2);
     expect(priceReturns([]).asOfDate).toBe('');
     const none = deriveCatalogMetrics(priceReturns([]), null, null, null);
     expect(none.performanceAsOf).toBeNull();
@@ -1061,6 +1079,39 @@ describe('pipeline 3', () => {
       }
     });
   });
+
+  test('a HISTORY_RANGE window never shrinks the published history: older days are rescaled to the new adjusted closes, metrics see them', async () => {
+    setSystemTime(new Date('2026-03-30T12:00:00Z'));
+    await inWorld(async (root) => {
+      world.earlyDividend = true;
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      const full = readJson(root, 'funds/FBND/meta.json');
+      const fullRow = readJson(root, 'index.json').funds.find((f: any) => f.ticker === 'FBND');
+      expect(full.history.totalRows).toBe(450);
+      expect(fullRow.metrics.siAnn).not.toBeNull();
+      // a dividend since the last run: Yahoo rescales every adjusted close by 0.99, and a 1y request starts 2025-03-30
+      world.adjScale = 0.99;
+      await quiet(() => main(env({ TICKERS: 'FBND', HISTORY_RANGE: '1y' })));
+      const meta = readJson(root, 'funds/FBND/meta.json');
+      const row = readJson(root, 'index.json').funds.find((f: any) => f.ticker === 'FBND');
+      expect(meta.history.totalRows).toBe(450);
+      const first = readJson(root, 'funds/FBND/history/001.json').rows[0];
+      expect([first.Date, first.Close, first['Adj Close']]).toEqual(['Jan 02 2025', '20', '19.8']);
+      expect(row.metrics.siAnn).toBeCloseTo(fullRow.metrics.siAnn, 1);
+      expect(row.metrics.performanceAsOf).toBe(fullRow.metrics.performanceAsOf);
+      expect(meta.distributions.rows.map((r: string[]) => r[0])).toEqual(['02/01/2025', '07/21/2025', '10/29/2025']);
+      // the same window again writes nothing
+      const before = snapshot(root);
+      await quiet(() => main(env({ TICKERS: 'FBND', HISTORY_RANGE: '1y' })));
+      expect(snapshot(root)).toEqual(before);
+    });
+    // a split rescales the raw closes too: no honest join, the caller keeps the published history and returns
+    const mkDay = (date: string, close: number) => ({ date, close, adjClose: close, volume: 0 });
+    const published = [{ Date: 'Jan 02 2026', Close: '40', 'Adj Close': '40', Volume: '0' }, { Date: 'Jan 05 2026', Close: '42', 'Adj Close': '42', Volume: '0' }];
+    const chart = { exchangeName: '', longName: '', navPrice: null, regularMarketPrice: null, regularMarketTime: null, firstTradeDate: null, dividends: [] };
+    expect(mergeWindowedChart({ ...chart, days: [mkDay('2026-01-05', 21), mkDay('2026-01-06', 22)] }, published, [])).toBeNull();
+    expect(mergeWindowedChart({ ...chart, days: [mkDay('2026-01-07', 42)] }, published, [])).toBeNull();
+  });
 });
 
 describe('pipeline 4', () => {
@@ -1093,6 +1144,33 @@ describe('pipeline 4', () => {
       expect(kept.holdings.asOf).toBe('Sep 30 2026');
       expect([kept.source.edgarFiling, kept.source.nportDoc, kept.seed.accession]).toEqual([meta.source.edgarFiling, meta.source.nportDoc, '0000035402-26-009999']);
       expect(kept.source.edgarFiling).toContain('000003540226009999');
+    });
+  });
+
+  test('the N-PORT scan is bounded (at most NPORT_SCAN_DAYS back, stops once every tracked series has its newest filing) and the soft deadline counts it', async () => {
+    expect(nportScanStart('2026-06-23', Date.UTC(2026, 9, 1))).toBe('2026-06-23');
+    expect(nportScanStart('2026-06-23', Date.UTC(2027, 9, 1))).toBe('2027-03-15');
+    let now = Date.UTC(2027, 9, 1);
+    setSystemTime(new Date(now));
+    await inWorld(async (root) => {
+      world.accessions['0000035402-27-000001'] = { series: 'S000042567', repPd: '2027-07-31' };
+      world.accessions['0000035402-27-000002'] = { series: 'S000068173', repPd: '2026-11-30' };
+      world.accessions['0000035402-27-000003'] = { series: 'S000007192', repPd: '2027-07-31' };
+      world.accessions['0000035402-27-000004'] = { series: 'S000000002', repPd: '2027-06-30' };
+      world.submissions['0001562565'] = [
+        { accession: '0000035402-27-000001', filed: '2027-09-01', repPd: '2027-07-31' },
+        { accession: '0000035402-27-000002', filed: '2027-01-10', repPd: '2026-11-30' }, // before the window
+      ];
+      world.submissions['0000754510'] = [
+        { accession: '0000035402-27-000003', filed: '2027-09-02', repPd: '2027-07-31' }, // FREI, the trust's only tracked series
+        { accession: '0000035402-27-000004', filed: '2027-08-01', repPd: '2027-06-30' }, // another series: never read
+      ];
+      // every submissions request takes 6 simulated minutes: the scan alone passes the 25 min soft deadline
+      world.onSubmissions = () => { now += 6 * 60_000; setSystemTime(new Date(now)); };
+      await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: 'true' })));
+      expect(world.archives).toEqual(['000003540227000001', '000003540227000003']);
+      expect(world.order).toEqual([]);
+      expect(readJson(root, 'index.json').funds).toEqual([]);
     });
   });
 

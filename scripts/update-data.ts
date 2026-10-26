@@ -1167,6 +1167,13 @@ export function isNewerAccession(current: NportAccession | undefined, candidate:
   return candidate.filed > current.filed || (candidate.filed === current.filed && candidate.reportDate > current.reportDate);
 }
 
+/** Oldest filing date the REFRESH_CATALOG scan reads: the trust's oldest current filing, never more than NPORT_SCAN_DAYS back. */
+export const NPORT_SCAN_DAYS = 200;
+export function nportScanStart(oldestCurrentFiled: string, nowMs: number): string {
+  const floor = new Date(nowMs - NPORT_SCAN_DAYS * 86_400_000).toISOString().slice(0, 10);
+  return oldestCurrentFiled > floor ? oldestCurrentFiled : floor;
+}
+
 function nportUrlFor(trustCik: string, accession: string): string {
   return `${EDGAR_ARCHIVES}/${Number(trustCik)}/${accession.replace(/-/g, '')}/primary_doc.xml`;
 }
@@ -1466,7 +1473,8 @@ export function priceReturns(days: ChartDay[], now = new Date()): PriceReturns {
     cagr3y: year3 && year3.date < last.date ? annualized(year3.adjClose, last.adjClose, 3) : null,
     cagr5y: year5 && year5.date < last.date ? annualized(year5.adjClose, last.adjClose, 5) : null,
     cagr10y: year10 && year10.date < last.date ? annualized(year10.adjClose, last.adjClose, 10) : null,
-    siAnn: siYears >= 0.75 ? annualized(first.adjClose, last.adjClose, siYears) : null,
+    // Annualized only from one full year on: a younger figure is cumulative and would sort and filter as an annual rate.
+    siAnn: siYears >= 1 ? annualized(first.adjClose, last.adjClose, siYears) : null,
     mo1: mo1StartDay && mo1StartDay.date < last.date ? pctChange(mo1StartDay.adjClose, last.adjClose) : null,
     qtd: qtdStartDay && qtdStartDay.date < last.date ? pctChange(qtdStartDay.adjClose, last.adjClose) : null,
   };
@@ -1798,6 +1806,60 @@ export function keepPublishedAdjClose(days: ChartDay[], published: JsonRecord[])
   });
 }
 
+/**
+ * A chart that starts after the published history (a HISTORY_RANGE window, or Yahoo cutting a series) never shrinks it:
+ * the published days before the window are kept and the window's metrics (3y, 5y, 10y, since inception) still see them.
+ * Yahoo rescales every adjusted close before a new dividend, so the kept days are rescaled by the ratio of the fresh to
+ * the published adjusted close on the overlapping days (one factor: a dividend moves every earlier close alike); ratios
+ * within float noise of 1 keep the published cents. Distributions before the window are kept the same way.
+ * Returns null when the two cannot be joined honestly (no overlap, a split moved the raw closes, ratios disagree): the
+ * caller then keeps the fund's published history and returns as one unit, exactly as after a failed chart request.
+ */
+export function mergeWindowedChart(chart: ParsedChart, published: JsonRecord[], publishedDistributions: unknown[]): ParsedChart | null {
+  if (!chart.days.length || !published.length) return chart;
+  const firstFresh = chart.days[0].date;
+  const rows = published
+    .map((row) => ({ date: displayDateToIso(row.Date), close: numberOrNull(row.Close), adjClose: numberOrNull(row['Adj Close']), volume: numberOrNull(row.Volume) ?? 0 }))
+    .filter((row): row is { date: string; close: number; adjClose: number; volume: number } => row.date !== null && row.close !== null && row.adjClose !== null && row.adjClose > 0)
+    .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  const older = rows.filter((row) => row.date < firstFresh);
+  if (!older.length) return chart;
+  const byDate = new Map(rows.map((row) => [row.date, row]));
+  const adjRatios: number[] = [];
+  const closeRatios: number[] = [];
+  for (const day of chart.days) {
+    const prior = byDate.get(day.date);
+    if (!prior) continue;
+    adjRatios.push((day.adjCloseRaw ?? day.adjClose) / prior.adjClose);
+    if (prior.close > 0) closeRatios.push(day.close / prior.close);
+  }
+  if (!adjRatios.length) return null;
+  const mean = (values: number[]): number => values.reduce((sum, value) => sum + value, 0) / values.length;
+  const spread = (values: number[]): number => Math.max(...values) / Math.min(...values) - 1;
+  // A split rescales the raw closes too (the kept raw closes would then be wrong); disagreeing ratios mean the two
+  // series are not the same security or not one adjustment apart.
+  if (closeRatios.length && Math.abs(mean(closeRatios) - 1) > 1e-3) return null;
+  if (spread(adjRatios) > 5e-3) return null;
+  const measured = mean(adjRatios);
+  if (measured < 0.5 || measured > 1.001) return null;
+  const factor = Math.abs(measured - 1) < 1e-4 ? 1 : measured;
+  const days: ChartDay[] = older.map((row) => {
+    const raw = row.adjClose * factor;
+    return { date: row.date, close: row.close, adjClose: factor === 1 ? row.adjClose : round(raw, 2), volume: row.volume, adjCloseRaw: raw };
+  });
+  const firstFreshEpoch = Date.parse(`${firstFresh}T00:00:00Z`) / 1000;
+  const keptDividends = publishedDistributions
+    .map((row) => {
+      const cells = Array.isArray(row) ? row : [];
+      const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(String(cells[0] ?? ''));
+      const amount = numberOrNull(cells[1]);
+      return match && amount !== null && amount > 0 ? { epoch: Date.UTC(Number(match[3]), Number(match[1]) - 1, Number(match[2])) / 1000, amount } : null;
+    })
+    .filter((row): row is { epoch: number; amount: number } => row !== null && row.epoch < firstFreshEpoch)
+    .sort((a, b) => a.epoch - b.epoch);
+  return { ...chart, days: days.concat(chart.days), dividends: keptDividends.concat(chart.dividends.filter((dividend) => dividend.epoch >= firstFreshEpoch)) };
+}
+
 function historyRows(chart: ParsedChart): JsonRecord[] {
   return chart.days.map((day) => ({
     Date: formatEdgarDate(day.date),
@@ -1867,9 +1929,15 @@ async function processFund(
   let chart: ParsedChart | null = null;
   if (!config.skipYahoo) {
     try {
-      chart = parseChart(await fetchJson(chartUrl(ticker, config), `[chart   ] ${ticker}`, yahooHeaders(), config));
+      const fetched = parseChart(await fetchJson(chartUrl(ticker, config), `[chart   ] ${ticker}`, yahooHeaders(), config));
+      const publishedHistory = await readPreviousSheet(ticker, 'history');
+      // A HISTORY_RANGE window never shrinks the published history (and with it 3y, 5y, 10y and since inception).
+      const publishedDistributionRows = ((previousMeta?.distributions as JsonRecord | undefined)?.rows as unknown[] | undefined) ?? [];
+      const merged = mergeWindowedChart(fetched, publishedHistory, publishedDistributionRows);
+      if (!merged) throw new Error(`chart window does not join the published history (${config.historyRange})`);
       // History is rebuilt from the chart on every run: compare with the published rows first.
-      chart.days = keepPublishedAdjClose(chart.days, await readPreviousSheet(ticker, 'history'));
+      merged.days = keepPublishedAdjClose(merged.days, publishedHistory);
+      chart = merged;
     } catch (error) {
       outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
     }
@@ -2294,6 +2362,10 @@ export async function main(env: Record<string, string | undefined> = process.env
         .filter((fund) => fund.trustCik === cik && accessionBySeries.has(seriesKeyOf(fund)))
         .map((fund) => accessionBySeries.get(seriesKeyOf(fund))!.filed);
       const oldestSeed = trustAccessions.length ? trustAccessions.reduce((min, filed) => (filed < min ? filed : min)) : '0000-00-00';
+      // The window is bounded: a live series files N-PORT-P every quarter, so nothing older than NPORT_SCAN_DAYS can be
+      // newer than its current filing (a fixed oldest seed date alone made the window, and the run, grow forever).
+      const scanFrom = nportScanStart(oldestSeed, runStartedAt);
+      const trustSeries = new Set(seedFunds.filter((fund) => fund.trustCik === cik && fund.seriesId && !fund.catalogOnly).map((fund) => fund.seriesId as string));
       let accessions: NportAccession[] = [];
       try {
         const submissions = await fetchJson(
@@ -2308,9 +2380,11 @@ export async function main(env: Record<string, string | undefined> = process.env
         continue;
       }
       const taken = new Set([...accessionBySeries.values()].map((entry) => entry.accession));
-      const fresh = accessions.filter((entry) => entry.filed >= oldestSeed && !taken.has(entry.accession)).sort((a, b) => (a.filed < b.filed ? 1 : -1));
+      const fresh = accessions.filter((entry) => entry.filed >= scanFrom && !taken.has(entry.accession)).sort((a, b) => (a.filed < b.filed ? 1 : -1));
       const resolved = new Set<string>();
       for (const entry of fresh) {
+        // Newest first: once every tracked series of the trust has its newest filing, the rest are older.
+        if (trustSeries.size && Array.from(trustSeries).every((series) => resolved.has(series))) break;
         const url = nportUrlFor(cik, entry.accession);
         try {
           const parsed = parseNport(await fetchText(url, `[nport   ] refresh ${entry.accession}`, secHeaders(config), config));
@@ -2357,7 +2431,8 @@ export async function main(env: Record<string, string | undefined> = process.env
   let processed = 0;
   let lastDispatchedTicker: string | null = cursor;
   let failures = 0;
-  const deadline = Date.now() + softDeadlineMs;
+  // Counted from the start of the run, not after the N-PORT scan: the 30 min workflow timeout counts the scan too.
+  const deadline = runStartedAt + softDeadlineMs;
   let deadlineHit = false;
 
   outputPrintFilter(selected.length, seedFunds.length, outputHasOutputFilters(config));
