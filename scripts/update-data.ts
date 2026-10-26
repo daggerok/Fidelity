@@ -1973,6 +1973,9 @@ async function processFund(
   const netAssets = seed.shareClassOf ? null : nport ? nport.totalValue : numberOrNull(previous.aumValue);
   const returns = chart ? priceReturns(chart.days) : null;
   const returnsData = returnsBlock(returns, previous);
+  // The filing links and the seed accession describe the published holdings: while no N-PORT filing is used (REFRESH_CATALOG=false
+  // with an older seed accession, a filing of another series, a failed request) they stay as published with the holdings.
+  const keptFiling = !nport && previousMeta ? { source: (previousMeta.source as JsonRecord | undefined) ?? {}, seed: (previousMeta.seed as JsonRecord | undefined) ?? {} } : null;
 
   const meta: JsonRecord = {
     ticker,
@@ -1980,10 +1983,10 @@ async function processFund(
     category: seed.category,
     source: {
       fundPage: seed.fundPage,
-      edgarFiling: accession
-        ? `${EDGAR_ARCHIVES}/${Number(seed.trustCik)}/${accession.replace(/-/g, '')}/${accession.replace(/-/g, '')}-index.htm`
-        : ((previousMeta?.source as JsonRecord | undefined)?.edgarFiling ?? null),
-      nportDoc: nportUrl || ((previousMeta?.source as JsonRecord | undefined)?.nportDoc ?? null),
+      edgarFiling: keptFiling
+        ? (keptFiling.source.edgarFiling ?? null)
+        : accession ? `${EDGAR_ARCHIVES}/${Number(seed.trustCik)}/${accession.replace(/-/g, '')}/${accession.replace(/-/g, '')}-index.htm` : null,
+      nportDoc: keptFiling ? (keptFiling.source.nportDoc ?? null) : nportUrl,
       // A stable provenance URL, not the live fetch URL: chartUrl(ticker, config)
       // embeds the current timestamp in period2, which would make this field
       // (and the file's digest) change on every single run.
@@ -2027,7 +2030,7 @@ async function processFund(
       seriesName: nport || !previousMeta?.seed ? (seed.shareClassOf || seed.name) : (previousMeta.seed.seriesName ?? null),
       trustCik: seed.trustCik,
       trustName: FIDELITY_TRUSTS[seed.trustCik] || null,
-      accession: accession || ((previousMeta?.seed as JsonRecord | undefined)?.accession ?? null),
+      accession: keptFiling ? (keptFiling.seed.accession ?? null) : accession,
     },
   };
   // Order: pages first, then meta.json, then stale pages go (a crash in between never leaves meta pointing at removed pages).
