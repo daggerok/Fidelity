@@ -51,9 +51,9 @@ Defaults live in `scripts/update-data.config.json` (a flat object with one strin
 | Block | Source |
 | --- | --- |
 | Catalog (all US Fidelity ETFs) | SEC EDGAR `company_tickers_mf.json` -> Fidelity Covington Trust (CIK 0000945908) and Merrimack Street Trust; FREI is the ETF Class of Fidelity Real Estate Income Fund (Fidelity Securities Fund, CIK 0000754510) |
-| Holdings per fund | SEC EDGAR Form N-PORT-P `primary_doc.xml` (positions and net assets) |
+| Holdings per fund | SEC EDGAR Form N-PORT-P `primary_doc.xml` (positions and net assets) of the fund's series, found through the series' EDGAR filing feed and the trust's submissions |
 | Daily history, distributions | Yahoo Finance public chart API (`/v8/finance/chart/{TICKER}?interval=1d&events=div`) |
-| Fallback | `company_tickers.json` for ticker resolution of N-PORT positions |
+| Holding tickers | SEC EDGAR `company_tickers.json` names, then the `api/fidelity/held-tickers.json` seed and the Yahoo Finance symbol search |
 
 ### Metrics and caveats
 
@@ -82,16 +82,20 @@ The other standard codes (`official-trailing-12m`, `official-distribution-rate`,
 Caveats:
 
 - Holdings and net assets come from SEC N-PORT-P filings; price history, distributions and market-price returns come from Yahoo Finance and are estimates, not official NAV figures
-- N-PORT positions publish no exchange tickers, so the Ticker column is filled from the name -> ticker seed in `api/fidelity/held-tickers.json`; unmapped names are resolved live through Yahoo symbol search with a strict name match, and bond or private positions keep `-`
-- Name searches are only sent for positions that can have a listed ticker (N-PORT asset category equity `EC`, preferred `EP` or unknown); debt, ABS, loans, short-term vehicles, repos and derivatives are never searched (a name the seed already knows still resolves for any category). A search without a strict match is remembered in `api/fidelity/held-ticker-misses.json` (normalized name -> last tried date) and not repeated for 30 days; a failed request is never remembered and a later hit overrides a miss. The file is sorted, written atomically and only when its content changed
+- N-PORT positions publish no exchange tickers, so a ticker is set only for a U.S. equity traded in USD (N-PORT asset category `EC` or `EP`, a CUSIP or a U.S. ISIN): from the SEC `company_tickers.json` names, else the name -> ticker seed in `api/fidelity/held-tickers.json`, else the Yahoo symbol search with a strict name match. Bonds, loans, ABS, funds, derivatives and non-U.S. listings keep `-` and their own identifier (CUSIP, else ISIN, else the filing's other code; a derivative never takes its reference security's identifiers), even when the issuer has a listed stock, and a ticker that would land on two different securities is dropped
+- Name searches are only sent for such U.S. equity rows that neither the SEC names nor the seed know. A search without a strict match is remembered in `api/fidelity/held-ticker-misses.json` (normalized name -> last tried date) and not repeated for 30 days; a failed request is never remembered and a later hit overrides a miss. The file is sorted, written atomically and only when its content changed
 - Funds not selected for a successful update (filters, batch cursor, failures) keep their prior published metadata and data files
 - A published fund is either fully refreshed or fully kept: when the Yahoo chart request fails, price, returns, metrics and distributions of that fund stay at their previous state together; when the N-PORT download fails, holdings and net assets stay with their own as-of dates. The workflow still commits after such a partial run
 - `nav` and `premiumDiscount` are `null` for every fund: Yahoo's chart meta carries no NAV and Fidelity publishes no machine-readable NAV, so none is guessed
-- N-PORT holdings and net assets are as of the filing's report period (shown as the holdings as-of date); `REFRESH_CATALOG` moves each series to its newest filing, never to an older report period than the published one. While no filing is used (`REFRESH_CATALOG=false` with an older seed accession, a filing of another series, a failed request) the holdings keep their published filing links (`source.edgarFiling`, `source.nportDoc`, `seed.accession`)
-- A filing is used only when it is the fund's own and usable: it must carry a series ID, the seed's, a series name equal to the fund name Yahoo gives (`longName`, the seed name when Yahoo has none; case, punctuation, `&` and a leading `<Trust> - ` are ignored) and at least one position. Otherwise (also for an HTML page served instead of the filing) the run prints why and the fund keeps its previous holdings and net assets; a fund with nothing published gets no holdings and a `null` AUM, never 0
+- N-PORT holdings and net assets are as of the filing's report period (shown as the holdings as-of date). With `REFRESH_CATALOG` on, each series' newest filing (newest report period first, read from the trust's own EDGAR folder, never the filing agent's) replaces the published holdings only when its report period is strictly newer than theirs; an equal or older period, or published holdings without a readable date, keep the published sheet. While no filing is used (`REFRESH_CATALOG=false`, no newer filing, a filing of another series, a failed request) the holdings keep their published filing links (`source.edgarFiling`, `source.nportDoc`, `seed.accession`)
+- A filing is used only when it is the fund's own and usable: it must name the fund's series ID (from SEC `company_tickers_mf.json`, the seed's where the table has no row) and list at least one position. Otherwise (also for an HTML page served instead of the filing) the run prints why and the fund keeps its previous holdings and net assets; a fund with nothing published gets no holdings and a `null` AUM, never 0
+- A missing N-PORT weight, value or balance stays empty in the holdings sheet, never `0`
+- A fund younger than one year (calendar anniversary of its first trade date, inclusive) publishes no 1-year or since-inception return, and no 3, 5 or 10-year one before those anniversaries
+- Dates such as `Sep 25 2026` and `09/25/2026` are read as plain calendar text, never through the local time zone, so local runs match CI
+- `NEW FUNDS: ...` is printed (and added to the step summary) when a fund is published for the first time, also when its first read failed and a later run succeeds; `NEW FUNDS (not published yet): ...` names new seed funds whose first read failed. A catalog-only row of a ticker the seed no longer lists is dropped
 - Every request has a 45 s timeout (headers and body) and is retried per `MAX_RETRIES`; files are written through a temp file and a rename; the run stops taking new funds after 25 minutes and still writes the index
 - Unbounded runs (`MAX_FETCHES=0`, and `TICKERS` runs) process the stalest fund first: funds without published data, then the oldest published as-of date, ties alphabetical. A run cut short by the 25 minute deadline therefore leaves the freshest funds for last and the next run starts with the skipped ones, so the tail of the list never starves. The log and the step summary report how many funds were refreshed and the oldest remaining published as-of date. A bounded run (`MAX_FETCHES` > 0) keeps walking the alphabetical cursor
-- `TICKERS` is strict (an unknown ticker is an error), does not count against `MAX_FETCHES` for other funds and never moves the batch cursor
+- `TICKERS` is strict (a ticker that is neither in the seed nor a published fund is an error before any request, nothing is written), does not count against `MAX_FETCHES` for other funds and never moves the batch cursor
 - `TICKERS` combines with the AUM, TER and yield filters using AND logic; it does not override them
 
 ### Update controls
@@ -104,15 +108,15 @@ Caveats:
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Expense ratio range in % (strict `min:max`). |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range. |
-| `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `FTEC FDVV FDIS FCOM`. |
+| `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `FTEC FDVV FDIS FCOM`; a ticker that is neither in the seed nor a published fund is an error before any fund request (nothing is written). |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page. Legacy alias `HISTORICAL_PAGE_SIZE`. |
 | `STORE_RAW_DOWNLOADS` | `false` | Store the source N-PORT XML under `api/fidelity/raw` (`1`/`true`/`yes`/`on`). |
 | `MAX_RETRIES` | `2` | Retries after the initial request (integer >= 1). Only network errors and HTTP 403/408/425/429/5xx are retried with exponential backoff. |
-| `HISTORY_RANGE` | `max` | Yahoo chart range for history rows: `max` or `<N>y`. |
+| `HISTORY_RANGE` | `max` | Yahoo chart range for history rows: `max` or `<N>y`; a window keeps the older published history (rescaled by the overlapping days), and a window that does not join it keeps the fund's history and returns as published. |
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | Override the SEC User-Agent; SEC policy requires automated tools to declare a contact. In CI the protected `SEC_UA` repository variable wins when nonblank. |
 | `SKIP_YAHOO` | `false` | Skip Yahoo Finance requests (EDGAR holdings only, previous history is kept). |
-| `REFRESH_CATALOG` | `1` | Scan EDGAR submissions of every trust for N-PORT filings newer than the accession each series is on (same series, newer report period) and use them for holdings and net assets; `0` skips. |
+| `REFRESH_CATALOG` | `1` | Look up each series' newest N-PORT-P filing on EDGAR (its filing feed and the trust's submissions) and use it for holdings and net assets when its report period is strictly newer than the published holdings; `0` asks EDGAR nothing and keeps holdings, net assets and filing links as published. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 | `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Market-price return ranges (strict `min:max`, colon required; 3Y/5Y/10Y are CAGR). |

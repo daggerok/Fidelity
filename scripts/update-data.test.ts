@@ -2,9 +2,15 @@ import { afterEach, beforeEach, describe, expect, setSystemTime, test } from 'bu
 import {
   parseRange,
   parseAumRange,
-  normalizeNumberText,
-  parseNport,
-  parseNportAccessions,
+  parseNportFiling,
+  nportHoldingsSheet,
+  nportHoldingTickers,
+  nportTickers,
+  parseSecCompanyNames,
+  parseSecFundTickers,
+  nportIsFresh,
+  holdingsWeightCount,
+  HOLDINGS_GUARD_RELAX,
   parseChart,
   priceReturns,
   lastCompletedQuarterEnd,
@@ -34,8 +40,6 @@ import {
   runtimeControls,
   isCertError,
   installSystemCa,
-  isNewerAccession,
-  nportMayReplace,
   emptyReturnRow,
   returnsBlock,
   samePublishedContent,
@@ -48,8 +52,7 @@ import {
   CLOSED_FUNDS,
   closedFund,
   FIDELITY_FUNDS,
-  fundNameKey,
-  nportIdentityProblem,
+  catalogOnlyRow,
   configureRequestLanes,
   paceRequests,
   setSoftDeadline,
@@ -57,7 +60,6 @@ import {
   publishedAsOf,
   stalestFirst,
   mergeWindowedChart,
-  nportScanStart,
 } from './update-data';
 import { readFileSync, mkdirSync, mkdtempSync, readdirSync, statSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -164,7 +166,10 @@ function chartFixture(options: {
 }
 
 const world = {
-  accessions: {} as Record<string, { series: string; repPd: string }>,
+  // accession -> the series its document names, its report period, and the series whose EDGAR feed lists it (default: the same)
+  accessions: {} as Record<string, { series: string; repPd: string; feed?: string }>,
+  companies: {} as Record<string, { ticker: string; title: string }>, // SEC company_tickers.json
+  firstTrade: {} as Record<string, number>, // Yahoo firstTradeDate per ticker
   submissions: {} as Record<string, Array<{ accession: string; filed: string; repPd: string }>>,
   chart: 'ok' as 'ok' | 'down',
   inFlight: 0,
@@ -192,7 +197,7 @@ function worldChart(ticker: string, period1 = 0): Record<string, unknown> {
   const start = Date.UTC(2025, 0, 2) / 1000;
   const days = Array.from({ length: 450 }, (_, i) => ({ t: start + i * day, close: 20 + i / 50, adj: (20 + i / 50) * world.adjScale, volume: 100 })).filter((d) => d.t >= period1);
   const dividends = [{ t: start + 30 * day, amount: 0.11 }, { t: start + 200 * day, amount: 0.12 }, { t: start + 300 * day, amount: 0.13 }].filter((d, i) => (i > 0 || world.earlyDividend) && d.t >= period1);
-  return chartFixture({ days, dividends, meta: { navPrice: undefined, regularMarketTime: start + 449 * day, longName: world.longName[ticker] ?? seedName((fund) => fund.ticker === ticker, 'Fidelity Test ETF') } });
+  return chartFixture({ days, dividends, meta: { navPrice: undefined, regularMarketTime: start + 449 * day, ...(world.firstTrade[ticker] ? { firstTradeDate: world.firstTrade[ticker] } : {}), longName: world.longName[ticker] ?? seedName((fund) => fund.ticker === ticker, 'Fidelity Test ETF') } });
 }
 
 function installWorld(): void {
@@ -206,7 +211,17 @@ function installWorld(): void {
       if (sub) {
         world.onSubmissions?.();
         const rows = world.submissions[sub[1]] || [];
-        return new Response(JSON.stringify({ filings: { recent: { form: rows.map(() => 'NPORT-P'), accessionNumber: rows.map((r) => r.accession), filingDate: rows.map((r) => r.filed), reportDate: rows.map((r) => r.repPd) } } }));
+        return new Response(JSON.stringify({ cik: sub[1], filings: { recent: { form: rows.map(() => 'NPORT-P'), accessionNumber: rows.map((r) => r.accession), filingDate: rows.map((r) => r.filed), reportDate: rows.map((r) => r.repPd) } } }));
+      }
+      // SEC fund ticker table (from the seed) and company name table
+      if (url.endsWith('/files/company_tickers_mf.json')) return new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: FIDELITY_FUNDS.filter((fund) => fund.seriesId).map((fund, i) => [Number(fund.trustCik), fund.seriesId, `C${String(i).padStart(9, '0')}`, fund.ticker]) }));
+      if (url.endsWith('/files/company_tickers.json')) return new Response(JSON.stringify(world.companies));
+      // the browse-edgar Atom feed of one series' NPORT-P filings, in the trust's own archive folder
+      const feed = /browse-edgar\?action=getcompany&CIK=(S\d{9})&type=NPORT-P/.exec(url);
+      if (feed) {
+        const cik = Number(FIDELITY_FUNDS.find((fund) => fund.seriesId === feed[1])?.trustCik ?? 1);
+        const entries = Object.entries(world.accessions).filter(([, filing]) => (filing.feed ?? filing.series) === feed[1]).map(([accession, filing]) => `<entry><content><accession-number>${accession}</accession-number><filing-date>2026-09-01</filing-date><filing-href>https://www.sec.gov/Archives/edgar/data/${cik}/${accession.replace(/-/g, '')}/${accession}-index.htm</filing-href><filing-type>NPORT-P</filing-type><period>${filing.repPd}</period></content></entry>`);
+        return new Response(`<?xml version="1.0"?><feed>${entries.join('')}</feed>`);
       }
       const arch = /Archives\/edgar\/data\/\d+\/(\d{18})\/primary_doc\.xml/.exec(url);
       if (arch) {
@@ -249,6 +264,8 @@ const fresh = (): string => {
     '0000035402-26-004033': { series: 'S000068175', repPd: '2026-04-30' },
   };
   world.submissions = {};
+  world.companies = {};
+  world.firstTrade = {};
   world.chart = 'ok';
   world.delayMs = 0;
   world.peak = 0;
@@ -268,7 +285,15 @@ const fresh = (): string => {
   return root;
 };
 // Explicit control environment per run (never process.env).
-const env = (extra: Record<string, string> = {}): Record<string, string> => ({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', CONCURRENCY: '2', REFRESH_CATALOG: 'false', ...extra });
+const env = (extra: Record<string, string> = {}): Record<string, string> => ({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', CONCURRENCY: '2', ...extra });
+// A newer N-PORT-P filing of a series (the reader uses a filing only when its report period is strictly newer than the published holdings).
+let filings = 0;
+const refile = (series: string, repPd: string, names = series): string => {
+  filings += 1;
+  const accession = `0000035402-26-${String(900000 + filings)}`;
+  world.accessions[accession] = { series: names, repPd, feed: series };
+  return accession;
+};
 const readJson = (root: string, rel: string): any => JSON.parse(readFileSync(join(root, rel), 'utf8'));
 // Runs `fn` in a fresh offline world with a per-test temp dir that is always removed.
 async function inWorld(fn: (root: string) => Promise<void>): Promise<void> {
@@ -381,42 +406,26 @@ describe('controls', () => {
 // ---------------------------------------------------------------------------
 
 describe('parsing', () => {
-  test('N-PORT holdings: weights, values, balances; bond rows fall back to ISIN; empty body gives zero rows', () => {
-    const parsed = parseNport(
-      nportFixture(
-        'Fidelity Metaverse ETF',
-        equityPosition('EQUINIX INC', '29444U700', '4.250000', '12345678.90', '1.97000000e2') +
-          equityPosition('DIGITAL REALTY TRUST INC', '253868103', '3.100000', '8765432.10', '8768.00000000'),
-      ),
-    );
-    expect([parsed.seriesName, parsed.seriesId, parsed.repPdDate]).toEqual(['Fidelity Metaverse ETF', 'S000099999', '2026-06-30']);
-    expect(parsed.holdings).toHaveLength(2);
-    expect(parsed.holdings[0]).toEqual({
-      Name: 'EQUINIX INC',
-      Ticker: '-',
-      Identifier: '29444U700',
-      Weight: '4.25',
-      'Market Value': '12345678.9',
-      'Shares Held': '197',
-      'Asset Category': 'EC',
-    });
-    expect(parsed.totalValue).toBeCloseTo(12345678.9 + 8765432.1, 4);
-
-    const bond = parseNport(
+  test('N-PORT sheet (shared nport-reader): weights, values, balances, empty missing numbers, own identifiers, tickers only for U.S. equities', () => {
+    const filing = parseNportFiling(
       nportFixture(
         'Fidelity Total Bond ETF',
-        `<invstOrSec><name>US TREASURY N/B</name><cusip>N/A</cusip>
-        <identifiers><isin value="US91282CDX75"/><other value="91282CDX7"/></identifiers>
-        <balance>1000000.00000000</balance><curCd>USD</curCd><valUSD>990000.00</valUSD><pctVal>2.500000</pctVal><assetCat>DB</assetCat></invstOrSec>`,
+        equityPosition('EQUINIX INC', '29444U700', '4.250000', '12345678.90', '1.97000000e2') +
+          // a bond of a listed issuer: never the issuer's stock ticker (Fidelity published GS on 597 FBND bond rows)
+          equityPosition('GOLDMAN SACHS GROUP INC (THE)', '38141GXR0', '0.0023816571', '620609.67', '705000', 'DBT') +
+          `<invstOrSec><name>US TREASURY N/B</name><cusip>000000000</cusip><identifiers><isin value="US91282CDX75"/></identifiers>
+          <balance>1000000.00000000</balance><curCd>USD</curCd><valUSD>990000.00</valUSD><pctVal>N/A</pctVal><assetCat>DBT</assetCat></invstOrSec>` +
+          // a foreign listing in EUR: no bare ticker; a future keeps its own id, never its reference security's
+          `<invstOrSec><name>SAP SE</name><cusip>N/A</cusip><identifiers><isin value="DE0007164600"/></identifiers><balance>10</balance><curCd>EUR</curCd><valUSD>2500</valUSD><pctVal>0.5</pctVal><assetCat>EC</assetCat></invstOrSec>` +
+          `<invstOrSec><name>DJIA MINI E-CBOT</name><cusip>000000000</cusip><identifiers><other otherDesc="Bloomberg Identifier" value="BBG01VKPGXL9"/></identifiers><curCd>USD</curCd><valUSD>4913771.74</valUSD><pctVal>0.005</pctVal><assetCat>DE</assetCat><derivativeInfo><futrDeriv derivCat="FUT"><descRefInstrmnt><otherRefInst><identifiers><cusip value="78462F103"/><ticker value="SPY"/></identifiers></otherRefInst></descRefInstrmnt></futrDeriv></derivativeInfo></invstOrSec>`,
       ),
     );
-    expect(bond.holdings[0].Identifier).toBe('US91282CDX75');
-    expect(bond.holdings[0].Ticker).toBe('-');
-    expect(bond.holdings[0]['Asset Category']).toBe('DB');
-
-    const empty = parseNport(nportFixture('Fidelity Test ETF', ''));
-    expect(empty.holdings).toHaveLength(0);
-    expect(empty.totalValue).toBe(0);
+    expect([filing.seriesName, filing.seriesId, filing.repPdDate, filing.positions.length]).toEqual(['Fidelity Total Bond ETF', 'S000099999', '2026-06-30', 5]);
+    const names = parseSecCompanyNames({ 0: { ticker: 'EQIX', title: 'EQUINIX INC' }, 1: { ticker: 'GS', title: 'GOLDMAN SACHS GROUP INC' }, 2: { ticker: 'SAP', title: 'SAP SE' }, 3: { ticker: 'SPY', title: 'SPDR S&P 500 ETF TRUST' } });
+    const rows = nportHoldingsSheet(filing, nportTickers(filing.positions, names));
+    expect(rows[0]).toEqual({ Name: 'EQUINIX INC', Ticker: 'EQIX', Identifier: '29444U700', Weight: '4.25', 'Market Value': '12345678.9', 'Shares Held': '197', 'Asset Category': 'EC' });
+    expect(rows.slice(1).map((row) => [row.Ticker, row.Identifier, row.Weight])).toEqual([['-', '38141GXR0', '0.0023816571'], ['-', 'US91282CDX75', ''], ['-', 'DE0007164600', '0.5'], ['-', 'BBG01VKPGXL9', '0.005']]);
+    expect(parseNportFiling(nportFixture('Fidelity Test ETF', '')).positions).toHaveLength(0);
   });
 
   test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
@@ -434,25 +443,13 @@ describe('parsing', () => {
     expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
   });
 
-  test('N-PORT identity and validity: a series ID, the fund\'s series and name (Yahoo trust prefix, & and case ignored) and >= 1 row; FPRO, FLDB and FLDR carry their own series', () => {
-    const doc = (seriesId: string, seriesName: string, rows = 1) => ({ seriesId, seriesName, holdings: parseNport(nportFixture(seriesName, equityPosition('EQUINIX INC', '29444U700', '100', '10', '1').repeat(rows))).holdings });
-    // live names: Yahoo longName of FFLC and FPFD vs their N-PORT seriesName
-    expect(nportIdentityProblem('S000068174', 'Fidelity Covington Trust - Fidelity Fundamental Large Cap Core ETF', doc('S000068174', 'Fidelity Fundamental Large Cap Core ETF'))).toBeNull();
-    expect(nportIdentityProblem('S000072125', 'Fidelity Preferred Securities & Income ETF', doc('S000072125', 'Fidelity Preferred Securities and Income ETF'))).toBeNull();
-    // the old seed pairings: FPRO with FREL's series, FLDB with FLDR's
-    expect(nportIdentityProblem('S000047984', 'Fidelity Real Estate Investment ETF', doc('S000047984', 'Fidelity MSCI Real Estate Index ETF'))).toContain('the fund is "Fidelity Real Estate Investment ETF"');
-    expect(nportIdentityProblem('S000062079', 'Fidelity Low Duration Bond ETF', doc('S000062079', 'Fidelity Low Duration Bond Factor ETF'))).toContain('Factor');
-    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', doc('S000047984', 'Fidelity Real Estate Investment ETF'))).toContain('expected S000070235');
-    expect(nportIdentityProblem('S000070235', 'Fidelity Real Estate Investment ETF', doc('', ''))).not.toBeNull();
-    // validity: an HTML page parses to no series and no rows (0 holdings, AUM 0); a document without a series ID or positions is no usable filing either
-    const html = parseNport('<html><head><title>SEC.gov | Request Rate Threshold Exceeded</title></head><body><h1>Your request has been blocked</h1></body></html>');
-    expect([html.seriesId, html.seriesName, html.holdings.length, html.totalValue]).toEqual(['', '', 0, 0]);
-    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', html)).toContain('no series ID');
-    const unnamed = parseNport(nportFixture('Fidelity Total Bond ETF', equityPosition('US TREASURY N/B', '91282CDX7', '100', '990000', '1000000')).replace('<seriesId>S000099999</seriesId>', ''));
-    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', unnamed)).toContain('no series ID');
-    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', doc('S000042567', 'Fidelity Total Bond ETF', 0))).toBe('no holdings rows in the filing');
-    expect(nportIdentityProblem('S000042567', 'Fidelity Total Bond ETF', doc('S000042567', 'Fidelity Total Bond ETF', 2))).toBeNull();
-    expect(fundNameKey('Fidelity Covington Trust - Fidelity Fundamental Small-Mid Cap ETF')).toBe('fidelity fundamental small mid cap etf');
+  test('N-PORT identity: the series id and registrant of SEC company_tickers_mf.json (the seed where it has none); an HTML page is no filing; FPRO, FLDB and FLDR carry their own series', () => {
+    const map = parseSecFundTickers({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [[945908, 'S000070235', 'C000223346', 'FPRO'], [754510, 'S000007192', 'C000276225', 'FREI']] });
+    expect(map.get('FPRO')).toEqual({ cik: '0000945908', seriesId: 'S000070235', classId: 'C000223346' });
+    expect(map.get('FREI')).toEqual({ cik: '0000754510', seriesId: 'S000007192', classId: 'C000276225' });
+    // an HTML page parses to no series and no positions: the reader never takes it for the fund's filing
+    const html = parseNportFiling('<html><head><title>SEC.gov | Request Rate Threshold Exceeded</title></head><body><h1>Your request has been blocked</h1></body></html>');
+    expect([html.seriesId, html.seriesName, html.positions.length]).toEqual(['', '', 0]);
     // the shortName is cut ("Fidelity Real Estate Investment"), so it never stands in for the longName
     expect(parseChart(chartFixture({ meta: { longName: undefined, shortName: 'Fidelity Real Estate Investment' } })).longName).toBe('');
     // SEC company_tickers_mf.json: FPRO S000070235/C000223346, FLDB S000084018/C000248144, FLDR S000062079/C000201028
@@ -460,30 +457,13 @@ describe('parsing', () => {
     expect([series('FPRO'), series('FLDB'), series('FLDR')]).toEqual(['S000070235', 'S000084018', 'S000062079']);
   });
 
-  test('N-PORT freshness: only NPORT-P forms, only a strictly newer filing, never an older report period', () => {
-    const accessions = parseNportAccessions({
-      filings: {
-        recent: {
-          form: ['NPORT-P', 'N-CEN', 'NPORT-P', '4'],
-          accessionNumber: ['0000035402-26-001', '0000035402-26-002', '0000035402-26-003', '0000035402-26-004'],
-          filingDate: ['2026-08-24', '2026-08-01', '2026-07-20', '2026-08-25'],
-          reportDate: ['2026-06-30', '', '2026-05-31', ''],
-        },
-      },
-    });
-    expect(accessions.map((a) => a.accession)).toEqual(['0000035402-26-001', '0000035402-26-003']);
-    expect(accessions[1].reportDate).toBe('2026-05-31');
-
-    const seed = { accession: 'A-1', filed: '2026-06-26', reportDate: '2026-04-30', url: '' };
-    expect(isNewerAccession(undefined, { accession: 'A-2', filed: '2026-01-01', reportDate: '' })).toBe(true);
-    expect(isNewerAccession(seed, { accession: 'A-2', filed: '2026-09-25', reportDate: '2026-07-31' })).toBe(true);
-    expect(isNewerAccession(seed, { accession: 'A-1', filed: '2026-09-25', reportDate: '2026-07-31' })).toBe(false);
-    expect(isNewerAccession(seed, { accession: 'A-0', filed: '2026-05-01', reportDate: '2026-03-31' })).toBe(false);
-    expect(isNewerAccession(seed, { accession: 'A-3', filed: '2026-09-25', reportDate: '2026-02-28' })).toBe(false);
-    expect(nportMayReplace('2026-06-30', '2026-05-31')).toBe(false);
-    expect(nportMayReplace('2026-06-30', '2026-06-30')).toBe(true);
-    expect(nportMayReplace('2026-06-30', '2026-07-31')).toBe(true);
-    expect(nportMayReplace(null, '2026-05-31')).toBe(true);
+  test('N-PORT freshness: a report replaces published holdings only when strictly newer; nothing published accepts any report; Fidelity display dates are calendar text', () => {
+    expect(nportIsFresh('2026-06-30', displayDateToIso('Jul 31 2026'), 230)).toBe(false);
+    expect(nportIsFresh('2026-07-31', displayDateToIso('Jul 31 2026'), 230)).toBe(false); // the same period is no update (Fidelity used >= before)
+    expect(nportIsFresh('2026-08-31', displayDateToIso('Jul 31 2026'), 230)).toBe(true);
+    expect(nportIsFresh('', '2026-03-31', 100)).toBe(false);
+    expect(nportIsFresh('2026-06-30', null, 0)).toBe(true);
+    expect(nportIsFresh('2026-06-30', displayDateToIso('—'), 100)).toBe(false); // published rows without a date cannot be compared: keep them
   });
 
   test('Yahoo chart: skips null closes, falls back to raw closes, sorts dividends and drops non-positive ones', () => {
@@ -513,9 +493,13 @@ describe('parsing', () => {
 });
 
 describe('parsing 2', () => {
-  test('number and date text: scientific notation expanded, missing values stay text, EDGAR dates and epochs are UTC', () => {
-    expect(normalizeNumberText('2.97057744E8')).toBe('297057744');
-    for (const text of ['12.34', 'N/A', '-', '']) expect(normalizeNumberText(text)).toBe(text);
+  test('dates: EDGAR display dates and epochs are UTC, display and calendar text dates are the same day in every time zone', () => {
+    for (const tz of ['Asia/Tokyo', 'America/Los_Angeles', 'UTC']) {
+      process.env.TZ = tz;
+      expect(['Oct 24 2026', 'Oct 24, 2026', 'October 24 2026', '24 Oct 2026', '10/24/2026', '2026-10-24'].map((raw) => displayDateToIso(raw))).toEqual(Array(6).fill('2026-10-24'));
+      expect([displayDateToIso('not a date'), displayDateToIso('—'), displayDateToIso('02/30/2026')]).toEqual([null, null, null]);
+    }
+    process.env.TZ = 'UTC';
     expect(formatEdgarDate('2026-06-30')).toBe('Jun 30 2026');
     expect(formatEdgarDate('')).toBe('');
     expect(epochToIsoDate(1_782_000_000)).toBe('2026-06-21');
@@ -590,6 +574,26 @@ describe('parsing 2', () => {
     expect(await failing.resolve('SOME PRIVATE LLC')).toBe('-');
     expect(await failing.resolve('SOME PRIVATE LLC')).toBe('-');
     expect(calls).toBe(1);
+  });
+
+  test('holding tickers: SEC names first, the held-tickers seed and Yahoo search only for U.S. equity rows; a bond of a listed issuer and a foreign listing keep "-"', async () => {
+    const filing = parseNportFiling(nportFixture('Fidelity Total Bond ETF',
+      equityPosition('APPLE INC', '037833100', '5', '500', '10') +
+        equityPosition('ALPHABET INC CL A', '02079K305', '3', '300', '10') +
+        equityPosition('ALPHABET INC CL C', '02079K107', '2', '200', '10') +
+        equityPosition('NEW LISTING INC', '123456789', '1', '100', '10') +
+        equityPosition('GOLDMAN SACHS GROUP INC (THE)', '38141GXR0', '1', '100', '10', 'DBT') +
+        equityPosition('BOEING CO', '097023CY9', '1', '100', '10', 'DBT') +
+        `<invstOrSec><name>TOYOTA MOTOR CORP</name><cusip>J92676113</cusip><identifiers><isin value="JP3633400001"/></identifiers><balance>10</balance><curCd>JPY</curCd><valUSD>100</valUSD><pctVal>1</pctVal><assetCat>EC</assetCat></invstOrSec>` +
+        `<invstOrSec><name>NESTLE SA</name><cusip>H57312649</cusip><identifiers><isin value="CH0038863350"/></identifiers><balance>10</balance><curCd>CHF</curCd><valUSD>100</valUSD><pctVal>1</pctVal><assetCat>EC</assetCat></invstOrSec>`));
+    const searched: string[] = [];
+    // the seed knows every issuer here (the old fill gave GS and BA to the bonds and TM to the Tokyo listing)
+    const resolver = new TickerResolver({ 'ALPHABET INC CL A': 'GOOGL', 'ALPHABET INC CL C': 'GOOG', 'GOLDMAN SACHS GROUP INC': 'GS', 'BOEING CO': 'BA', 'TOYOTA MOTOR CORP': 'TM' }, async (name) => { searched.push(name); return name === 'NEW LISTING INC' ? 'NEWL' : null; });
+    // one SEC title for both Alphabet classes: the duplicate check drops it, the seed's class names fill them
+    const names = parseSecCompanyNames({ 0: { ticker: 'AAPL', title: 'Apple Inc.' }, 1: { ticker: 'GOOGL', title: 'Alphabet Inc.' } });
+    expect(await nportHoldingTickers(filing.positions, names, resolver)).toEqual(['AAPL', 'GOOGL', 'GOOG', 'NEWL', '', '', '', '']);
+    // only the U.S. equity the seed does not know is searched, never the Swiss listing
+    expect(searched).toEqual(['NEW LISTING INC']);
   });
 
   test('search misses: asset category gate, TTL, a hit overrides a miss, failures are never remembered, file is sorted', async () => {
@@ -726,6 +730,22 @@ describe('metrics 2', () => {
     expect(keys(placeholder)).toEqual(keys(fresh));
     expect(keys(none)).toEqual(keys(fresh));
     expect(Object.keys(fresh).indexOf('dividendYieldBasis')).toBe(Object.keys(fresh).indexOf('dividendYieldText') + 1);
+  });
+
+  test('a fund younger than one year publishes no 1-year or since-inception return, a fund past its anniversary does (calendar anniversary of the first trade date)', async () => {
+    setSystemTime(new Date('2026-03-30T12:00:00Z'));
+    await inWorld(async (root) => {
+      // history from 2025-01-02 to 2026-03-27 for both; FBND started trading 2025-06-02 (not one year old on 2026-03-27)
+      world.firstTrade.FBND = Date.UTC(2025, 5, 2, 13, 30) / 1000;
+      await quiet(() => main(env({ TICKERS: 'FBND FBCG' })));
+      const rows = readJson(root, 'index.json').funds;
+      const young = rows.find((row: any) => row.ticker === 'FBND').metrics;
+      const old = rows.find((row: any) => row.ticker === 'FBCG').metrics;
+      expect([young.ytd === null, young.tr1y, young.siAnn, young.performanceAsOf]).toEqual([false, null, null, '2026-03-27']);
+      expect([old.tr1y === null, old.siAnn === null]).toEqual([false, false]);
+      const monthEnd = readJson(root, 'funds/FBND/meta.json').returns.monthEnd;
+      expect([monthEnd.yr1, monthEnd.sinceInception, monthEnd.yr1Text]).toEqual([null, null, '—']);
+    });
   });
 
   test('stored rows gain basis and as-of from the returns table; returns block rows share one key set', () => {
@@ -886,12 +906,14 @@ describe('pipeline 2', () => {
       const first = snapshot(root);
       expect(readJson(root, 'funds/FBND/meta.json').holdings.totalRows).toBe(4);
       await new Promise((resolve) => setTimeout(resolve, 1100)); // generatedAt has second resolution
-      world.positions = 1; // 1 of 4 published rows
+      world.positions = 1; // 1 of 4 published rows, in a newer filing
+      refile('S000042567', '2026-06-30');
       await quiet(() => main(env({ TICKERS: 'FBND' })));
       expect(snapshot(root)).toEqual(first);
       expect(process.exitCode).toBe(1);
       process.exitCode = 0;
       world.positions = 4;
+      refile('S000042567', '2026-07-31');
       const upstream = globalThis.fetch;
       globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
         const response = await upstream(input, init);
@@ -993,38 +1015,27 @@ describe('pipeline 3', () => {
     });
   });
 
-  test('a filing whose series name is not the fund\'s is not used; holdings published for another series are no baseline', async () => {
+  test('a filing that names another series is not used; holdings published for another series are no baseline', async () => {
     await inWorld(async (root) => {
-      const warn = console.warn;
-      const warnings: string[] = [];
-      console.warn = (message: string) => { warnings.push(String(message)); };
-      try {
-        world.positions = 4;
-        await quiet(() => main(env({ TICKERS: 'FBND' })));
-        const meta = readJson(root, 'funds/FBND/meta.json');
-        expect([meta.name, meta.holdings.totalRows, meta.seed.seriesId]).toEqual(['Fidelity Total Bond ETF', 4, 'S000042567']);
-        // Yahoo names the ticker another fund: the filing is not used, holdings and AUM stay as published, the run says so
-        world.longName.FBND = 'Fidelity Corporate Bond ETF';
-        world.positions = 2;
-        await quiet(() => main(env({ TICKERS: 'FBND' })));
-        const kept = readJson(root, 'funds/FBND/meta.json');
-        expect([kept.holdings, kept.aum, kept.seed]).toEqual([meta.holdings, meta.aum, meta.seed]);
-        expect(readJson(root, 'funds/FBND/holdings/001.json').totalRows).toBe(4);
-        expect(warnings.some((line) => line.includes('FBND') && line.includes('N-PORT not used'))).toBe(true);
-        // published for another series (a seed fixed since): while the filing is not used, the published series stays the baseline
-        world.positions = 1;
-        writeFileSync(join(root, 'funds/FBND/meta.json'), JSON.stringify({ ...kept, seed: { ...kept.seed, seriesId: 'S000047984' }, holdings: { ...kept.holdings, asOf: 'Jul 31 2026' } }));
-        await quiet(() => main(env({ TICKERS: 'FBND' })));
-        expect(readJson(root, 'funds/FBND/meta.json').seed.seriesId).toBe('S000047984');
-        // once the filing is the fund's, a smaller, older sheet of the right series replaces the other series' holdings
-        world.longName = {};
-        await quiet(() => main(env({ TICKERS: 'FBND' })));
-        const fixed = readJson(root, 'funds/FBND/meta.json');
-        expect([fixed.holdings.totalRows, fixed.holdings.asOf, fixed.seed.seriesId]).toEqual([1, 'May 31 2026', 'S000042567']);
-        expect(process.exitCode).toBe(0);
-      } finally {
-        console.warn = warn;
-      }
+      world.positions = 4;
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      const meta = readJson(root, 'funds/FBND/meta.json');
+      expect([meta.name, meta.holdings.totalRows, meta.holdings.asOf, meta.seed.seriesId]).toEqual(['Fidelity Total Bond ETF', 4, 'May 31 2026', 'S000042567']);
+      // the newest filing in FBND's feed is FCOR's (S000040431): it is read, never used; the fund's own older filing is not newer
+      const impostor = refile('S000042567', '2026-07-31', 'S000040431');
+      world.positions = 2;
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      expect(world.archives).toContain(impostor.replace(/-/g, ''));
+      const kept = readJson(root, 'funds/FBND/meta.json');
+      expect([kept.holdings, kept.aum, kept.seed, kept.source]).toEqual([meta.holdings, meta.aum, meta.seed, meta.source]);
+      expect(readJson(root, 'funds/FBND/holdings/001.json').totalRows).toBe(4);
+      // published for another series (a seed fixed since): no baseline, so the fund's own filing replaces it even when older
+      world.positions = 1;
+      writeFileSync(join(root, 'funds/FBND/meta.json'), JSON.stringify({ ...kept, seed: { ...kept.seed, seriesId: 'S000047984' }, holdings: { ...kept.holdings, asOf: 'Jul 31 2026' } }));
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      const fixed = readJson(root, 'funds/FBND/meta.json');
+      expect([fixed.holdings.totalRows, fixed.holdings.asOf, fixed.seed.seriesId, fixed.seed.accession]).toEqual([1, 'May 31 2026', 'S000042567', '0000035402-26-004724']);
+      expect(process.exitCode).toBe(0);
     });
   });
 
@@ -1060,7 +1071,7 @@ describe('pipeline 3', () => {
         await quiet(() => main(env({ TICKERS: 'FBND' })));
         const fresh = readJson(root, 'funds/FBND/meta.json');
         expect([fresh.aum.value, fresh.holdings.totalRows, readJson(root, 'index.json').funds[0].aumValue]).toEqual([null, 0, null]);
-        expect(warnings.some((line) => line.includes('FBND') && line.includes('no holdings rows'))).toBe(true);
+        expect(warnings.some((line) => line.includes('FBND') && line.includes('has no positions'))).toBe(true);
         world.positions = 2;
         await quiet(() => main(env({ TICKERS: 'FBND' })));
         const meta = readJson(root, 'funds/FBND/meta.json');
@@ -1073,6 +1084,7 @@ describe('pipeline 3', () => {
         const kept = readJson(root, 'funds/FBND/meta.json');
         expect([kept.aum, kept.holdings, kept.seed]).toEqual([meta.aum, meta.holdings, meta.seed]);
         expect(readJson(root, 'index.json').funds[0].aumValue).toBe(2000);
+        expect(warnings.some((line) => line.includes('FBND') && line.includes('no N-PORT-P filing of its own'))).toBe(true);
         expect(process.exitCode).toBe(0);
       } finally {
         console.warn = warn;
@@ -1089,6 +1101,10 @@ describe('pipeline 3', () => {
       const fullRow = readJson(root, 'index.json').funds.find((f: any) => f.ticker === 'FBND');
       expect(full.history.totalRows).toBe(450);
       expect(fullRow.metrics.siAnn).not.toBeNull();
+      // Q25: the same data through a 1y window writes nothing (the published days before the window are kept as they are)
+      const unchanged = snapshot(root);
+      await quiet(() => main(env({ TICKERS: 'FBND', HISTORY_RANGE: '1y' })));
+      expect(snapshot(root)).toEqual(unchanged);
       // a dividend since the last run: Yahoo rescales every adjusted close by 0.99, and a 1y request starts 2025-03-30
       world.adjScale = 0.99;
       await quiet(() => main(env({ TICKERS: 'FBND', HISTORY_RANGE: '1y' })));
@@ -1115,65 +1131,110 @@ describe('pipeline 3', () => {
 });
 
 describe('pipeline 4', () => {
-  test('REFRESH_CATALOG moves a series to its newer filing; an older filing never replaces fresher holdings', async () => {
+  test('REFRESH_CATALOG: the newest report period of the fund\'s own series is used from the trust\'s folder; an older one keeps the holdings and their filing links; 0 asks EDGAR nothing', async () => {
     await inWorld(async (root) => {
+      // a late filing for an older period never wins over the newest report period
       world.accessions['0000035402-26-009999'] = { series: 'S000042567', repPd: '2026-07-31' };
-      world.accessions['0000035402-26-009998'] = { series: 'S000068173', repPd: '2026-07-31' };
-      world.submissions['0001562565'] = [
-        { accession: '0000035402-26-009999', filed: '2026-09-25', repPd: '2026-07-31' },
-        { accession: '0000035402-26-004724', filed: '2026-07-24', repPd: '2026-05-31' },
-      ];
-      // a filing of an unknown series must be ignored (identity check)
-      world.accessions['0000035402-26-009997'] = { series: 'S000000001', repPd: '2026-08-31' };
-      world.submissions['0000945908'] = [{ accession: '0000035402-26-009997', filed: '2026-09-26', repPd: '2026-08-31' }];
-      await quiet(() => main(env({ TICKERS: 'FBND FBCG', REFRESH_CATALOG: 'true' })));
+      world.accessions['0000035402-26-009990'] = { series: 'S000042567', repPd: '2026-04-30' };
+      await quiet(() => main(env({ TICKERS: 'FBND FBCG' })));
       const fbnd = readJson(root, 'funds/FBND/meta.json');
-      expect(fbnd.holdings.asOf).toBe('Jul 31 2026');
-      expect(fbnd.source.nportDoc).toContain('000003540226009999');
-      expect(fbnd.seed.accession).toBe('0000035402-26-009999');
+      expect([fbnd.holdings.asOf, fbnd.seed.accession]).toEqual(['Jul 31 2026', '0000035402-26-009999']);
+      expect([fbnd.source.nportDoc, fbnd.source.edgarFiling]).toEqual(['https://www.sec.gov/Archives/edgar/data/1562565/000003540226009999/primary_doc.xml', 'https://www.sec.gov/Archives/edgar/data/1562565/000003540226009999/000003540226009999-index.htm']);
       expect(readJson(root, 'funds/FBCG/meta.json').holdings.asOf).toBe('Apr 30 2026');
-
-      // published holdings are fresher than the seed accession: a rerun without the refresh keeps them and the
-      // filing they came from (never the seed's accession next to the kept holdings)
+      // published holdings are fresher than every filing: they stay, with the filing they came from
       const meta = readJson(root, 'funds/FBND/meta.json');
       meta.holdings.asOf = 'Sep 30 2026';
       writeFileSync(join(root, 'funds/FBND/meta.json'), JSON.stringify(meta));
-      world.submissions['0001562565'] = [];
+      world.positions = 3;
       await quiet(() => main(env({ TICKERS: 'FBND' })));
       const kept = readJson(root, 'funds/FBND/meta.json');
-      expect(kept.holdings.asOf).toBe('Sep 30 2026');
-      expect([kept.source.edgarFiling, kept.source.nportDoc, kept.seed.accession]).toEqual([meta.source.edgarFiling, meta.source.nportDoc, '0000035402-26-009999']);
-      expect(kept.source.edgarFiling).toContain('000003540226009999');
+      expect([kept.holdings, kept.source, kept.seed]).toEqual([meta.holdings, meta.source, meta.seed]);
+      // REFRESH_CATALOG=0: no SEC request at all, holdings and links stay as published, the rest of the fund still updates
+      refile('S000042567', '2026-10-31');
+      const calls: string[] = [];
+      const upstream = globalThis.fetch;
+      globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => { calls.push(String(input)); return upstream(input, init); }) as unknown as typeof fetch;
+      await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: '0' })));
+      expect([calls.some((url) => url.includes('finance/chart/FBND')), calls.filter((url) => url.includes('sec.gov'))]).toEqual([true, []]);
+      expect(readJson(root, 'funds/FBND/meta.json').holdings).toEqual(meta.holdings);
     });
   });
 
-  test('the N-PORT scan is bounded (at most NPORT_SCAN_DAYS back, stops once every tracked series has its newest filing) and the soft deadline counts it', async () => {
-    expect(nportScanStart('2026-06-23', Date.UTC(2026, 9, 1))).toBe('2026-06-23');
-    expect(nportScanStart('2026-06-23', Date.UTC(2027, 9, 1))).toBe('2027-03-15');
-    let now = Date.UTC(2027, 9, 1);
-    setSystemTime(new Date(now));
+  test('a relaxed guard still keeps numeric published weights from an all-dash sheet (Q24)', async () => {
     await inWorld(async (root) => {
-      world.accessions['0000035402-27-000001'] = { series: 'S000042567', repPd: '2027-07-31' };
-      world.accessions['0000035402-27-000002'] = { series: 'S000068173', repPd: '2026-11-30' };
-      world.accessions['0000035402-27-000003'] = { series: 'S000007192', repPd: '2027-07-31' };
-      world.accessions['0000035402-27-000004'] = { series: 'S000000002', repPd: '2027-06-30' };
-      world.submissions['0001562565'] = [
-        { accession: '0000035402-27-000001', filed: '2027-09-01', repPd: '2027-07-31' },
-        { accession: '0000035402-27-000002', filed: '2027-01-10', repPd: '2026-11-30' }, // before the window
-      ];
-      world.submissions['0000754510'] = [
-        { accession: '0000035402-27-000003', filed: '2027-09-02', repPd: '2027-07-31' }, // FREI, the trust's only tracked series
-        { accession: '0000035402-27-000004', filed: '2027-08-01', repPd: '2027-06-30' }, // another series: never read
-      ];
-      // every submissions request takes 6 simulated minutes: the scan alone passes the 25 min soft deadline
-      world.onSubmissions = () => { now += 6 * 60_000; setSystemTime(new Date(now)); };
-      await quiet(() => main(env({ TICKERS: 'FBND', REFRESH_CATALOG: 'true' })));
-      expect(world.archives).toEqual(['000003540227000001', '000003540227000003']);
-      expect(world.order).toEqual([]);
-      expect(readJson(root, 'index.json').funds).toEqual([]);
+      world.positions = 4;
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      const first = snapshot(root);
+      await new Promise((resolve) => setTimeout(resolve, 1100)); // generatedAt has second resolution
+      // a newer filing without one numeric weight, for a fund whose relax table would let it through
+      refile('S000042567', '2026-06-30');
+      const upstream = globalThis.fetch;
+      globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+        const response = await upstream(input, init);
+        return String(input).includes('primary_doc.xml') ? new Response((await response.text()).replace(/<pctVal>[^<]*<\/pctVal>/g, '<pctVal>N/A</pctVal>')) : response;
+      }) as unknown as typeof fetch;
+      HOLDINGS_GUARD_RELAX.FBND = ['numeric', 'sum'];
+      try {
+        await quiet(() => main(env({ TICKERS: 'FBND' })));
+      } finally {
+        delete HOLDINGS_GUARD_RELAX.FBND;
+      }
+      expect(snapshot(root)).toEqual(first);
+      expect(process.exitCode).toBe(1);
+      expect(holdingsWeightCount(['Name', 'Weight'], [['A', ''], ['B', '2']])).toBe(1);
     });
   });
 
+  test('TICKERS outside the seed and the published feed stops the run before any request; a stale catalog-only row is dropped (Q27)', async () => {
+    await inWorld(async (root) => {
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      const index = readJson(root, 'index.json');
+      // a catalog-only row left by an old run for a ticker the seed does not list
+      writeFileSync(join(root, 'index.json'), JSON.stringify({ ...index, funds: [...index.funds, { ...catalogOnlyRow(FIDELITY_FUNDS[0]), ticker: 'NOPE' }] }));
+      const before = snapshot(root);
+      const calls: string[] = [];
+      const upstream = globalThis.fetch;
+      globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => { calls.push(String(input)); return upstream(input, init); }) as unknown as typeof fetch;
+      await expect(quiet(() => main(env({ TICKERS: 'NOPE' })))).rejects.toThrow('TICKERS: NOPE not in the Fidelity seed or published feed; nothing was fetched or written');
+      expect(calls).toEqual([]);
+      expect(snapshot(root)).toEqual(before);
+      await quiet(() => main(env({ TICKERS: 'FBND' })));
+      expect(readJson(root, 'index.json').funds.map((fund: any) => fund.ticker)).toEqual(['FBND']);
+    });
+  });
+
+  test('NEW FUNDS announces a fund on its first successful publish, a failed new fund as not published yet (Q28)', async () => {
+    await inWorld(async (root) => {
+      world.positions = 4;
+      await quiet(() => main(env({ TICKERS: 'FBCG' })));
+      process.env.GITHUB_STEP_SUMMARY = join(root, 'summary.md');
+      // FBCV's first filing has no numeric weight: the guard rejects it and FBCV gets a catalog-only row
+      const upstream = globalThis.fetch;
+      globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+        const response = await upstream(input, init);
+        return String(input).includes('000003540226004033') ? new Response((await response.text()).replace(/<pctVal>[^<]*<\/pctVal>/g, '<pctVal>N/A</pctVal>')) : response;
+      }) as unknown as typeof fetch;
+      const lines: string[] = [];
+      const log = console.log;
+      console.log = (line: unknown) => { if (/^NEW FUNDS/.test(String(line))) lines.push(String(line)); };
+      try {
+        await main(env({ TICKERS: 'FBND FBCV' }));
+        expect(lines).toEqual(['NEW FUNDS: FBND', 'NEW FUNDS (not published yet): FBCV']);
+        expect(readFileSync(join(root, 'summary.md'), 'utf8')).toContain('### NEW FUNDS\n\nNEW FUNDS: FBND\nNEW FUNDS (not published yet): FBCV\n');
+        lines.length = 0;
+        await main(env({ TICKERS: 'FBND FBCV' }));
+        expect(lines).toEqual([]);
+        globalThis.fetch = upstream;
+        await main(env({ TICKERS: 'FBCV' }));
+        expect(lines).toEqual(['NEW FUNDS: FBCV']);
+      } finally {
+        console.log = log;
+      }
+    });
+  });
+});
+
+describe('pipeline 5', () => {
   test('MAX_FETCHES cursor advances, TICKERS runs leave it alone, unknown tickers are errors, a past soft deadline keeps all rows', async () => {
     await inWorld(async (root) => {
       await quiet(() => main(env({ MAX_FETCHES: '1' })));
@@ -1244,6 +1305,7 @@ describe('pipeline 4', () => {
       await quiet(() => main(env({ TICKERS: 'FBND', HOLDINGS_PAGE_SIZE: '1' })));
       expect(readdirSync(join(root, 'funds/FBND/holdings')).sort()).toEqual(['001.json', '002.json']);
       world.positions = 1;
+      refile('S000042567', '2026-06-30');
       await quiet(() => main(env({ TICKERS: 'FBND', HOLDINGS_PAGE_SIZE: '1' })));
       expect(readdirSync(join(root, 'funds/FBND/holdings')).sort()).toEqual(['001.json']);
       expect(readJson(root, 'funds/FBND/meta.json').holdings.pages).toEqual(['holdings/001.json']);
