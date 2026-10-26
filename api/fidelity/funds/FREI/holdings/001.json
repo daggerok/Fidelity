@@ -2,7 +2,7 @@
  "ticker": "FREI",
  "page": 1,
  "pageSize": 250,
- "totalRows": 44,
+ "totalRows": 590,
  "headers": [
   "Name",
   "Ticker",
@@ -17,397 +17,2251 @@
    "Name": "ACADIA REALTY TRUST",
    "Ticker": "AKR",
    "Identifier": "004239109",
-   "Weight": "0.3725388115",
-   "Market Value": "61522.86",
-   "Shares Held": "2738",
+   "Weight": "0.0970229929",
+   "Market Value": "4272580.62",
+   "Shares Held": "190146",
    "Asset Category": "EC"
   },
   {
    "Name": "AMERICAN HOMES 4 RENT",
    "Ticker": "AMH",
    "Identifier": "02665T306",
-   "Weight": "1.8721047062",
-   "Market Value": "309168.42",
-   "Shares Held": "9251",
+   "Weight": "0.2470839661",
+   "Market Value": "10880783.34",
+   "Shares Held": "325577",
    "Asset Category": "EC"
   },
   {
    "Name": "AMERICAN TOWER CORP",
    "Ticker": "-",
    "Identifier": "03027X100",
-   "Weight": "8.8084121626",
-   "Market Value": "1454663.76",
-   "Shares Held": "8391",
+   "Weight": "1.8276682732",
+   "Market Value": "80484633.68",
+   "Shares Held": "464263",
    "Asset Category": "EC"
   },
   {
    "Name": "AMERICOLD REALTY TRUST",
    "Ticker": "COLD",
    "Identifier": "03064D108",
-   "Weight": "0.6972272614",
-   "Market Value": "115143.48",
-   "Shares Held": "8172",
+   "Weight": "0.1037687171",
+   "Market Value": "4569640.62",
+   "Shares Held": "324318",
    "Asset Category": "EC"
   },
   {
-   "Name": "CBRE GROUP INC",
-   "Ticker": "CBRE",
-   "Identifier": "12504L109",
-   "Weight": "3.7114800204",
-   "Market Value": "612931.75",
-   "Shares Held": "4175",
+   "Name": "AVALONBAY COMMUNITIES INC",
+   "Ticker": "AVB",
+   "Identifier": "053484101",
+   "Weight": "0.5009644202",
+   "Market Value": "22060862.16",
+   "Shares Held": "118856",
    "Asset Category": "EC"
   },
   {
-   "Name": "CAMDEN PROPERTY TRUST",
-   "Ticker": "CPT",
-   "Identifier": "133131102",
-   "Weight": "1.2487063969",
-   "Market Value": "206217.41",
-   "Shares Held": "1861",
+   "Name": "BRIXMOR PROPERTY GROUP INC",
+   "Ticker": "BRX",
+   "Identifier": "11120U105",
+   "Weight": "0.054010252",
+   "Market Value": "2378437.82",
+   "Shares Held": "75482",
    "Asset Category": "EC"
   },
   {
-   "Name": "COSTAR GROUP INC",
-   "Ticker": "CSGP",
-   "Identifier": "22160N109",
-   "Weight": "0.4369427639",
-   "Market Value": "72158.84",
-   "Shares Held": "2509",
+   "Name": "COMM 2014-UBS2 MTG TR",
+   "Ticker": "-",
+   "Identifier": "12591UAP8",
+   "Weight": "0.0034144214",
+   "Market Value": "150360.14",
+   "Shares Held": "340643.7349",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "COMM 2012-CCRE1 MTG TR",
+   "Ticker": "-",
+   "Identifier": "12624BAL0",
+   "Weight": "0.0163936877",
+   "Market Value": "721925.29",
+   "Shares Held": "769605.9147",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "COMM 2015-DC1 MTG TR",
+   "Ticker": "-",
+   "Identifier": "12629NAL9",
+   "Weight": "0.034971048",
+   "Market Value": "1540012.5",
+   "Shares Held": "1755000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CARETRUST REIT INC",
+   "Ticker": "CTRE",
+   "Identifier": "14174T107",
+   "Weight": "0.1837866141",
+   "Market Value": "8093371.5",
+   "Shares Held": "192975",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "CEDAR REALTY TRUST INC",
+   "Ticker": "-",
+   "Identifier": "150602407",
+   "Weight": "0.0088302299",
+   "Market Value": "388854.93",
+   "Shares Held": "21300",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822V101",
+   "Weight": "0.1003737071",
+   "Market Value": "4420135.3",
+   "Shares Held": "57931",
    "Asset Category": "EC"
   },
   {
    "Name": "CUBESMART",
    "Ticker": "CUBE",
    "Identifier": "229663109",
-   "Weight": "0.7913170351",
-   "Market Value": "130681.92",
-   "Shares Held": "3152",
+   "Weight": "0.1096604811",
+   "Market Value": "4829094.96",
+   "Shares Held": "116476",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SITE CENTERS CORP",
+   "Ticker": "SITC",
+   "Identifier": "82981J851",
+   "Weight": "0.0195233374",
+   "Market Value": "859745",
+   "Shares Held": "200875",
    "Asset Category": "EC"
   },
   {
    "Name": "DIGITAL REALTY TRUST INC",
    "Ticker": "DLR",
    "Identifier": "253868103",
-   "Weight": "3.916635515",
-   "Market Value": "646812.12",
-   "Shares Held": "3431",
+   "Weight": "0.6096096337",
+   "Market Value": "26845248",
+   "Shares Held": "142400",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "DYNEX CAPITAL INC",
+   "Ticker": "DX",
+   "Identifier": "26817Q886",
+   "Weight": "0.2240387664",
+   "Market Value": "9865946.85",
+   "Shares Held": "776235",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EASTGROUP PROPERTIES INC",
+   "Ticker": "EGP",
+   "Identifier": "277276101",
+   "Weight": "0.1604757752",
+   "Market Value": "7066837.11",
+   "Shares Held": "33811",
    "Asset Category": "EC"
   },
   {
    "Name": "EQUINIX INC",
    "Ticker": "EQIX",
    "Identifier": "29444U700",
-   "Weight": "9.2148510356",
-   "Market Value": "1521785.04",
-   "Shares Held": "1493",
+   "Weight": "1.4822533667",
+   "Market Value": "65273671.92",
+   "Shares Held": "64039",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "EQUITY LIFESTYLE PROPERTIES INC",
+   "Ticker": "ELS",
+   "Identifier": "29472R108",
+   "Weight": "1.1970429608",
+   "Market Value": "52713922.77",
+   "Shares Held": "810111",
    "Asset Category": "EC"
   },
   {
    "Name": "EQUITY RESIDENTIAL",
    "Ticker": "EQR",
    "Identifier": "29476L107",
-   "Weight": "2.857660697",
-   "Market Value": "471927.9",
-   "Shares Held": "7102",
+   "Weight": "0.5613654435",
+   "Market Value": "24720729",
+   "Shares Held": "372020",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "ESSEX PROPERTY TRUST INC",
+   "Ticker": "ESS",
+   "Identifier": "297178105",
+   "Weight": "0.3033822484",
+   "Market Value": "13359978.66",
+   "Shares Held": "47019",
    "Asset Category": "EC"
   },
   {
    "Name": "EXTRA SPACE STORAGE INC",
    "Ticker": "EXR",
    "Identifier": "30225T102",
-   "Weight": "0.5154445234",
-   "Market Value": "85123",
-   "Shares Held": "575",
+   "Weight": "0.2891529138",
+   "Market Value": "12733364.52",
+   "Shares Held": "86013",
    "Asset Category": "EC"
   },
   {
-   "Name": "FOUR CORNERS PROPERTY TRUST INC",
-   "Ticker": "FCPT",
-   "Identifier": "35086T109",
-   "Weight": "0.700204769",
-   "Market Value": "115635.2",
-   "Shares Held": "4517",
+   "Name": "FEDERAL REALTY INVESTMENT TR",
+   "Ticker": "-",
+   "Identifier": "313745101",
+   "Weight": "0.1138504625",
+   "Market Value": "5013608.27",
+   "Shares Held": "40403",
    "Asset Category": "EC"
   },
   {
-   "Name": "HEALTHPEAK PROPERTIES INC",
-   "Ticker": "DOC",
-   "Identifier": "42250P103",
-   "Weight": "1.3157893916",
-   "Market Value": "217295.82",
-   "Shares Held": "9954",
+   "Name": "FEDERAL NAT MTG ASN GTD REM PA",
+   "Ticker": "-",
+   "Identifier": "31392CMZ4",
+   "Weight": "0.0001431313",
+   "Market Value": "6303.04",
+   "Shares Held": "15979.9096",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FEDERAL NAT MTG ASN GTD REM PA",
+   "Ticker": "-",
+   "Identifier": "31393DUL3",
+   "Weight": "0.000485778",
+   "Market Value": "21392.1",
+   "Shares Held": "26413.5026",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A105",
+   "Weight": "7.0779932154",
+   "Market Value": "311692061.13",
+   "Shares Held": "311629735.187",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "Fidelity Revere Street Trust",
+   "Ticker": "-",
+   "Identifier": "31635A303",
+   "Weight": "0.0105042356",
+   "Market Value": "462572.76",
+   "Shares Held": "462526.504",
+   "Asset Category": "STIV"
+  },
+  {
+   "Name": "FIRST INDUSTRIAL REALTY TRUST INC",
+   "Ticker": "FR",
+   "Identifier": "32054K103",
+   "Weight": "0.2117888372",
+   "Market Value": "9326499.36",
+   "Shares Held": "141654",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "GS MTG SECS TR 2011-GC5",
+   "Ticker": "-",
+   "Identifier": "36191YAJ7",
+   "Weight": "0.0992045253",
+   "Market Value": "4368648.29",
+   "Shares Held": "4505112.6616",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GS MTG SECS TR 2011-GC5",
+   "Ticker": "-",
+   "Identifier": "36191YAL2",
+   "Weight": "0.0351794547",
+   "Market Value": "1549190.06",
+   "Shares Held": "1852635",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GS MTG SECS TR 2011-GC5",
+   "Ticker": "-",
+   "Identifier": "36191YAN8",
+   "Weight": "0.0398653497",
+   "Market Value": "1755541.81",
+   "Shares Held": "5514000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GS MTG SECS TR 2011-GC5",
+   "Ticker": "-",
+   "Identifier": "36191YAQ1",
+   "Weight": "0.0003645362",
+   "Market Value": "16053",
+   "Shares Held": "5351000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GS MTG SECS TR 2012-GCJ9",
+   "Ticker": "-",
+   "Identifier": "36192PAN6",
+   "Weight": "0.0213032989",
+   "Market Value": "938128.78",
+   "Shares Held": "977329.4664",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GAMING AND LEISURE PROPERTIES INC",
+   "Ticker": "GLPI",
+   "Identifier": "36467J108",
+   "Weight": "0.3453740175",
+   "Market Value": "15209161.14",
+   "Shares Held": "339566",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RITHM PROPERTY TRUST INC",
+   "Ticker": "-",
+   "Identifier": "38983D854",
+   "Weight": "0.0402905168",
+   "Market Value": "1774264.8",
+   "Shares Held": "144015",
    "Asset Category": "EC"
   },
   {
    "Name": "INVENTRUST PROPERTIES CORP",
    "Ticker": "IVT",
    "Identifier": "46124J201",
-   "Weight": "0.3139077312",
-   "Market Value": "51840.24",
-   "Shares Held": "1464",
+   "Weight": "0.1959255177",
+   "Market Value": "8627929.78",
+   "Shares Held": "243658",
    "Asset Category": "EC"
   },
   {
-   "Name": "IRON MOUNTAIN INC",
-   "Ticker": "IRM",
-   "Identifier": "46284V101",
-   "Weight": "2.0746535798",
-   "Market Value": "342618.32",
-   "Shares Held": "2801",
-   "Asset Category": "EC"
+   "Name": "JP MORGAN CHASE COML MTG SECS TR 2012-CIBX",
+   "Ticker": "-",
+   "Identifier": "46637WAQ6",
+   "Weight": "0.0445644869",
+   "Market Value": "1962476.7",
+   "Shares Held": "2018012.4003",
+   "Asset Category": "ABS-MBS"
   },
   {
-   "Name": "JONES LANG LASALLE INC",
-   "Ticker": "JLL",
-   "Identifier": "48020Q107",
-   "Weight": "1.7757429874",
-   "Market Value": "293254.78",
-   "Shares Held": "826",
-   "Asset Category": "EC"
+   "Name": "JP MORGAN CHASE COML MTG SECS TR 2012-CIBX",
+   "Ticker": "-",
+   "Identifier": "46637WAS2",
+   "Weight": "0.1063912337",
+   "Market Value": "4685127.82",
+   "Shares Held": "5551000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "JP MORGAN CHASE COML MTG SECS TR 2012-CIBX",
+   "Ticker": "-",
+   "Identifier": "46637WAU7",
+   "Weight": "0.0074664852",
+   "Market Value": "328800",
+   "Shares Held": "2740000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "J P MORGAN CHASE COML MTG SECS TR 2014-DSTY",
+   "Ticker": "-",
+   "Identifier": "46642MAN8",
+   "Weight": "0.0002498979",
+   "Market Value": "11004.7",
+   "Shares Held": "5530000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "KIMCO REALTY CORP",
    "Ticker": "KIM",
    "Identifier": "49446R109",
-   "Weight": "3.70987446",
-   "Market Value": "612666.6",
-   "Shares Held": "24045",
+   "Weight": "0.3145765776",
+   "Market Value": "13852940.92",
+   "Shares Held": "543679",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "KITE REALTY GROUP TRUST",
+   "Ticker": "KRG",
+   "Identifier": "49803T300",
+   "Weight": "0.4310861082",
+   "Market Value": "18983646",
+   "Shares Held": "663300",
    "Asset Category": "EC"
   },
   {
    "Name": "LAMAR ADVERTISING CO",
    "Ticker": "LAMR",
    "Identifier": "512816109",
-   "Weight": "0.4106882339",
-   "Market Value": "67823.04",
-   "Shares Held": "424",
+   "Weight": "0.2342691544",
+   "Market Value": "10316460.24",
+   "Shares Held": "64494",
    "Asset Category": "EC"
+  },
+  {
+   "Name": "LXP INDUSTRIAL TRUST",
+   "Ticker": "LXP",
+   "Identifier": "529043408",
+   "Weight": "0.3238151618",
+   "Market Value": "14259778.46",
+   "Shares Held": "235582",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "LXP INDUSTRIAL TRUST",
+   "Ticker": "LXP",
+   "Identifier": "529043309",
+   "Weight": "0.3291047383",
+   "Market Value": "14492714.4",
+   "Shares Held": "298204",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "MFA FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "55272X607",
+   "Weight": "0.1590516516",
+   "Market Value": "7004123.29",
+   "Shares Held": "768839",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MFA FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "55272X409",
+   "Weight": "0.0678621417",
+   "Market Value": "2988430.5",
+   "Shares Held": "143330",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "MSJP 2015-HAUL",
+   "Ticker": "-",
+   "Identifier": "553697AN3",
+   "Weight": "0.0191078611",
+   "Market Value": "841448.76",
+   "Shares Held": "1016000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "MACERICH CO",
    "Ticker": "MAC",
    "Identifier": "554382101",
-   "Weight": "0.803466855",
-   "Market Value": "132688.4",
-   "Shares Held": "5135",
+   "Weight": "0.0991562118",
+   "Market Value": "4366520.72",
+   "Shares Held": "168983",
    "Asset Category": "EC"
+  },
+  {
+   "Name": "MID-AMERICA APT CMNTYS INC",
+   "Ticker": "-",
+   "Identifier": "59522J103",
+   "Weight": "0.0285194893",
+   "Market Value": "1255906.6",
+   "Shares Held": "9490",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2011-C2",
+   "Ticker": "-",
+   "Identifier": "617459AF9",
+   "Weight": "0.0014633253",
+   "Market Value": "64440.14",
+   "Shares Held": "17305406.6557",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2011-C2",
+   "Ticker": "-",
+   "Identifier": "617459AJ1",
+   "Weight": "0.0176440521",
+   "Market Value": "776987.32",
+   "Shares Held": "784708.8501",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2011-C2",
+   "Ticker": "-",
+   "Identifier": "617459AL6",
+   "Weight": "0.0339987676",
+   "Market Value": "1497196.4",
+   "Shares Held": "1990000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2011-C3",
+   "Ticker": "-",
+   "Identifier": "61760RAN2",
+   "Weight": "0.0053144532",
+   "Market Value": "234031.43",
+   "Shares Held": "234583.9881",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2011-C3",
+   "Ticker": "-",
+   "Identifier": "61760RAS1",
+   "Weight": "0.0771249129",
+   "Market Value": "3396333.16",
+   "Shares Held": "3421500",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY BK AMER MERRILL LYNCH TR 2012-C6",
+   "Ticker": "-",
+   "Identifier": "61761DAU6",
+   "Weight": "0.0050008193",
+   "Market Value": "220220",
+   "Shares Held": "1694000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY BK AMER MERRILL LYNCH TR 2013-C9",
+   "Ticker": "-",
+   "Identifier": "61762DAG6",
+   "Weight": "0.0315849513",
+   "Market Value": "1390899.69",
+   "Shares Held": "1512000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY BK AMER MERRILL LYNCH TR 2013-C9",
+   "Ticker": "-",
+   "Identifier": "61762DBB6",
+   "Weight": "0.0473538038",
+   "Market Value": "2085309.25",
+   "Shares Held": "2237000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY BK OF AMER MERRILL LYNCH TR 2013-C12",
+   "Ticker": "-",
+   "Identifier": "61762XAC1",
+   "Weight": "0.0831643534",
+   "Market Value": "3662290.7",
+   "Shares Held": "3842988",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2015-MS1",
+   "Ticker": "-",
+   "Identifier": "61765DAC2",
+   "Weight": "0.0639339672",
+   "Market Value": "2815446.33",
+   "Shares Held": "3519000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "NNN REIT INC",
    "Ticker": "NNN",
    "Identifier": "637417106",
-   "Weight": "2.5782168959",
-   "Market Value": "425779.2",
-   "Shares Held": "8960",
+   "Weight": "0.3406096873",
+   "Market Value": "14999355.36",
+   "Shares Held": "315643",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "RITHM CAPITAL CORP",
+   "Ticker": "RITM",
+   "Identifier": "64828T201",
+   "Weight": "0.0586341395",
+   "Market Value": "2582058.96",
+   "Shares Held": "261342",
    "Asset Category": "EC"
   },
   {
    "Name": "PROLOGIS INC",
    "Ticker": "PLD",
    "Identifier": "74340W103",
-   "Weight": "9.9176754446",
-   "Market Value": "1637852.86",
-   "Shares Held": "11326",
+   "Weight": "1.4822983425",
+   "Market Value": "65275652.51",
+   "Shares Held": "451391",
    "Asset Category": "EC"
+  },
+  {
+   "Name": "PROLOGIS INC",
+   "Ticker": "PLD",
+   "Identifier": "74340W202",
+   "Weight": "0.0742235609",
+   "Market Value": "3268566.95",
+   "Shares Held": "63283",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PROVIDENCE PLACE GROUP LTD PARTNERSHIP",
+   "Ticker": "-",
+   "Identifier": "743784AB6",
+   "Weight": "0.019222406",
+   "Market Value": "846492.95",
+   "Shares Held": "838168.9235",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "PUBLIC STORAGE",
    "Ticker": "PSA",
    "Identifier": "74460D109",
-   "Weight": "2.8835642018",
-   "Market Value": "476205.73",
-   "Shares Held": "1469",
+   "Weight": "0.415032679",
+   "Market Value": "18276704.6",
+   "Shares Held": "56380",
    "Asset Category": "EC"
   },
   {
    "Name": "REALTY INCOME CORP",
    "Ticker": "O",
    "Identifier": "756109104",
-   "Weight": "3.1280455407",
-   "Market Value": "516580.56",
-   "Shares Held": "8088",
+   "Weight": "0.1964523012",
+   "Market Value": "8651127.63",
+   "Shares Held": "135449",
    "Asset Category": "EC"
   },
   {
-   "Name": "REGENCY CENTERS CORP(REIT)",
+   "Name": "REXFORD INDL RLTY INC",
    "Ticker": "-",
-   "Identifier": "758849103",
-   "Weight": "0.9806236536",
-   "Market Value": "161944.93",
-   "Shares Held": "2017",
+   "Identifier": "76169C100",
+   "Weight": "0.1368507709",
+   "Market Value": "6026467.89",
+   "Shares Held": "159557",
    "Asset Category": "EC"
   },
   {
    "Name": "SBA COMMUNICATIONS CORP",
    "Ticker": "SBAC",
    "Identifier": "78410G104",
-   "Weight": "1.535337041",
-   "Market Value": "253552.98",
-   "Shares Held": "1401",
+   "Weight": "0.2399639612",
+   "Market Value": "10567241.22",
+   "Shares Held": "58389",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "SABRA HEALTH CARE REIT INC",
+   "Ticker": "SBRA",
+   "Identifier": "78573L106",
+   "Weight": "0.3371285044",
+   "Market Value": "14846055.26",
+   "Shares Held": "701278",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "WILLSCOT HOLDINGS CORP",
+   "Ticker": "WSC",
+   "Identifier": "971378104",
+   "Weight": "0.0220041162",
+   "Market Value": "968990.52",
+   "Shares Held": "39909",
    "Asset Category": "EC"
   },
   {
    "Name": "SIMON PROPERTY GROUP INC",
    "Ticker": "SPG",
    "Identifier": "828806109",
-   "Weight": "5.2694944284",
-   "Market Value": "870229.78",
-   "Shares Held": "3794",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "STAG INDUSTRIAL INC",
-   "Ticker": "STAG",
-   "Identifier": "85254J102",
-   "Weight": "2.5289689732",
-   "Market Value": "417646.16",
-   "Shares Held": "10916",
+   "Weight": "0.3836290239",
+   "Market Value": "16893788.61",
+   "Shares Held": "73653",
    "Asset Category": "EC"
   },
   {
    "Name": "SUN COMMUNITIES INC",
    "Ticker": "SUI",
    "Identifier": "866674104",
-   "Weight": "1.4879375563",
-   "Market Value": "245725.2",
-   "Shares Held": "1990",
-   "Asset Category": "EC"
-  },
-  {
-   "Name": "TANGER INC",
-   "Ticker": "SKT",
-   "Identifier": "875465106",
-   "Weight": "0.8366152127",
-   "Market Value": "138162.68",
-   "Shares Held": "3398",
+   "Weight": "0.5406850507",
+   "Market Value": "23810031",
+   "Shares Held": "192825",
    "Asset Category": "EC"
   },
   {
    "Name": "TERRENO RLTY CORP",
    "Ticker": "-",
    "Identifier": "88146M101",
-   "Weight": "1.1649183685",
-   "Market Value": "192380.25",
-   "Shares Held": "2685",
+   "Weight": "0.0690438185",
+   "Market Value": "3040467.75",
+   "Shares Held": "42435",
    "Asset Category": "EC"
   },
   {
    "Name": "UDR INC",
    "Ticker": "UDR",
    "Identifier": "902653104",
-   "Weight": "3.5025575293",
-   "Market Value": "578429.28",
-   "Shares Held": "15158",
+   "Weight": "0.8316081918",
+   "Market Value": "36621350.64",
+   "Shares Held": "959679",
    "Asset Category": "EC"
   },
   {
-   "Name": "URBAN EDGE PROPERTIES",
-   "Ticker": "UE",
-   "Identifier": "91704F104",
-   "Weight": "1.320262435",
-   "Market Value": "218034.52",
-   "Shares Held": "9622",
+   "Name": "UBS COML MTG TR 2012-C1",
+   "Ticker": "-",
+   "Identifier": "90269GAS0",
+   "Weight": "0.0100059075",
+   "Market Value": "440627.99",
+   "Shares Held": "1505350",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UMH PPTYS INC",
+   "Ticker": "-",
+   "Identifier": "903002103",
+   "Weight": "0.3486976309",
+   "Market Value": "15355522.39",
+   "Shares Held": "1016249",
    "Asset Category": "EC"
   },
   {
    "Name": "VENTAS INC",
    "Ticker": "VTR",
    "Identifier": "92276F100",
-   "Weight": "3.1522037897",
-   "Market Value": "520570.17",
-   "Shares Held": "5567",
+   "Weight": "0.7644767125",
+   "Market Value": "33665096.16",
+   "Shares Held": "360016",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "VENTAS RLTY LTD PARTNERSHIP",
+   "Ticker": "-",
+   "Identifier": "92277GAB3",
+   "Weight": "0.0443945271",
+   "Market Value": "1954992.22",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VENTAS RLTY LTD PARTNERSHIP",
+   "Ticker": "-",
+   "Identifier": "92277GAF4",
+   "Weight": "0.0374727752",
+   "Market Value": "1650180.52",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VORNADO REALTY TRUST",
+   "Ticker": "VNO",
+   "Identifier": "929042844",
+   "Weight": "0.136672583",
+   "Market Value": "6018621.07",
+   "Shares Held": "342551",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "WFRBS COML MTG TR 2011-C3",
+   "Ticker": "-",
+   "Identifier": "92935VAS7",
+   "Weight": "0.0027884379",
+   "Market Value": "122793.84",
+   "Shares Held": "341141.37",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "WFRBS COML MTG TR 2013-C11",
+   "Ticker": "-",
+   "Identifier": "92937EAL8",
+   "Weight": "0.0516408725",
+   "Market Value": "2274097.97",
+   "Shares Held": "3203000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "WFRBS COML MTG TR 2013-C13",
+   "Ticker": "-",
+   "Identifier": "92937UAJ7",
+   "Weight": "0.0415291424",
+   "Market Value": "1828809.89",
+   "Shares Held": "1937852.871",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "ELME COMMUNITIES",
+   "Ticker": "-",
+   "Identifier": "939653101",
+   "Weight": "0.0165665523",
+   "Market Value": "729537.69",
+   "Shares Held": "453129",
    "Asset Category": "EC"
   },
   {
    "Name": "WELLTOWER INC",
    "Ticker": "WELL",
    "Identifier": "95040Q104",
-   "Weight": "7.6147472092",
-   "Market Value": "1257536.16",
-   "Shares Held": "5364",
+   "Weight": "1.5569464645",
+   "Market Value": "68562915.76",
+   "Shares Held": "292454",
    "Asset Category": "EC"
   },
   {
    "Name": "WEYERHAEUSER CO",
    "Ticker": "WY",
    "Identifier": "962166104",
-   "Weight": "1.2149364636",
-   "Market Value": "200640.48",
-   "Shares Held": "8016",
+   "Weight": "0.0466322943",
+   "Market Value": "2053536.29",
+   "Shares Held": "82043",
    "Asset Category": "EC"
   },
   {
    "Name": "ZILLOW GROUP INC",
    "Ticker": "ZG",
    "Identifier": "98954M200",
-   "Weight": "0.2553290897",
-   "Market Value": "42166.28",
-   "Shares Held": "1238",
+   "Weight": "0.2799504857",
+   "Market Value": "12328119.18",
+   "Shares Held": "361953",
    "Asset Category": "EC"
+  },
+  {
+   "Name": "WP GLIMCHER MALL TR 15-WPG",
+   "Ticker": "-",
+   "Identifier": "92939VAN4",
+   "Weight": "0.0066296367",
+   "Market Value": "291947.88",
+   "Shares Held": "1722000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UBS COML MTG TR 2012-C1",
+   "Ticker": "-",
+   "Identifier": "90269GAQ4",
+   "Weight": "0.0686875745",
+   "Market Value": "3024779.91",
+   "Shares Held": "3183945.3368",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BANK AMER MERRILL LYNCH COML MTG TR 2016-UBS10",
+   "Ticker": "-",
+   "Identifier": "06054MAK9",
+   "Weight": "0.0451040299",
+   "Market Value": "1986236.44",
+   "Shares Held": "2053000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "ENBRIDGE INC",
+   "Ticker": "ENB",
+   "Identifier": "29250N717",
+   "Weight": "0.1959632811",
+   "Market Value": "8629592.76",
+   "Shares Held": "337621",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ENBRIDGE INC",
+   "Ticker": "ENB",
+   "Identifier": "29250N790",
+   "Weight": "0.0431259263",
+   "Market Value": "1899127.12",
+   "Shares Held": "75482",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2016-BNK2",
+   "Ticker": "-",
+   "Identifier": "61690YAC6",
+   "Weight": "0.0341696972",
+   "Market Value": "1504723.59",
+   "Shares Held": "2010000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "HILTON USA TR 2016-HHV",
+   "Ticker": "-",
+   "Identifier": "43300LAQ3",
+   "Weight": "0.3096007733",
+   "Market Value": "13633822.5",
+   "Shares Held": "13735000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "DIGITALBRIDGE GROUP INC",
+   "Ticker": "-",
+   "Identifier": "25401T504",
+   "Weight": "0.0350994902",
+   "Market Value": "1545668.68",
+   "Shares Held": "100564",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "JPMBB COML MTG SECS TR 2014-C26",
+   "Ticker": "-",
+   "Identifier": "46643TAL6",
+   "Weight": "0.0324728524",
+   "Market Value": "1430000",
+   "Shares Held": "1625000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "INVITATION HOMES INC",
    "Ticker": "INVH",
    "Identifier": "46187W107",
-   "Weight": "1.4652607343",
-   "Market Value": "241980.24",
-   "Shares Held": "8142",
+   "Weight": "1.2646169264",
+   "Market Value": "55689662.92",
+   "Shares Held": "1873811",
    "Asset Category": "EC"
+  },
+  {
+   "Name": "JPMBB COML MTG SECS TR 2014-C23",
+   "Ticker": "-",
+   "Identifier": "46643AAQ6",
+   "Weight": "0.1153145762",
+   "Market Value": "5078083.13",
+   "Shares Held": "5275131.9926",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CD 2017-CD3 MTG TR",
+   "Ticker": "-",
+   "Identifier": "12515GAM9",
+   "Weight": "0.0011396534",
+   "Market Value": "50186.67",
+   "Shares Held": "1574795.0265",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CHIMERA INVESTMENT CORP",
+   "Ticker": "CIM",
+   "Identifier": "16934Q406",
+   "Weight": "0.2326457475",
+   "Market Value": "10244970.62",
+   "Shares Held": "424574",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PENNYMAC MORTGAGE INVESTMENT TRUST",
+   "Ticker": "PMT",
+   "Identifier": "70931T301",
+   "Weight": "0.066722196",
+   "Market Value": "2938230.96",
+   "Shares Held": "131996",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "TWO HARBORS INVESTMENT COR",
+   "Ticker": "-",
+   "Identifier": "90187B200",
+   "Weight": "0.0720568784",
+   "Market Value": "3173153.22",
+   "Shares Held": "126774",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822VAF8",
+   "Weight": "0.0621508641",
+   "Market Value": "2736924.2",
+   "Shares Held": "3390000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "COMMERCIAL MORTGAGE CD 2017-CD4 MTG TR",
+   "Ticker": "-",
+   "Identifier": "12515DAF1",
+   "Weight": "0.0318777912",
+   "Market Value": "1403795.42",
+   "Shares Held": "1876000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "WP GLIMCHER MALL TR 15-WPG",
+   "Ticker": "-",
+   "Identifier": "92939VAL8",
+   "Weight": "0.04651915",
+   "Market Value": "2048553.78",
+   "Shares Held": "4557000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W685",
+   "Weight": "0.0150075863",
+   "Market Value": "660885.84",
+   "Shares Held": "33177",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "DIGITALBRIDGE GROUP INC",
+   "Ticker": "-",
+   "Identifier": "25401T405",
+   "Weight": "0.033761635",
+   "Market Value": "1486753.84",
+   "Shares Held": "96668",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "COMMERCIAL MORTGAGE CD 2017-CD4 MTG TR",
+   "Ticker": "-",
+   "Identifier": "12515DAV6",
+   "Weight": "0.0425046119",
+   "Market Value": "1871766.43",
+   "Shares Held": "2033000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "TRI POINTE HOMES INC",
+   "Ticker": "TPH",
+   "Identifier": "87265HAF6",
+   "Weight": "0.1760924338",
+   "Market Value": "7754544.54",
+   "Shares Held": "7763000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MORGAN STANLEY CAPITAL I TRUST 2017-H1",
+   "Ticker": "-",
+   "Identifier": "61691JBA1",
+   "Weight": "0.0361388812",
+   "Market Value": "1591440.12",
+   "Shares Held": "1673594",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "PENNYMAC MORTGAGE INVESTMENT TRUST",
+   "Ticker": "PMT",
+   "Identifier": "70931T400",
+   "Weight": "0.1068919356",
+   "Market Value": "4707177.12",
+   "Shares Held": "209394",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AMERICAN HOMES 4 RENT",
+   "Ticker": "AMH",
+   "Identifier": "02665T876",
+   "Weight": "0.1551293487",
+   "Market Value": "6831397.68",
+   "Shares Held": "298054",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "TWO HARBORS INVESTMENT COR",
+   "Ticker": "-",
+   "Identifier": "90187B309",
+   "Weight": "0.1276898029",
+   "Market Value": "5623048.32",
+   "Shares Held": "224832",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ANNALY CAPITAL MANAGEMENT INC",
+   "Ticker": "NLY",
+   "Identifier": "035710870",
+   "Weight": "0.5463609758",
+   "Market Value": "24059980.49",
+   "Shares Held": "931294",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W669",
+   "Weight": "0.0539969126",
+   "Market Value": "2377850.4",
+   "Shares Held": "119370",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "HILTON WORLDWIDE FIN LLC / HILTON WORLDWIDE FIN CORP",
+   "Ticker": "-",
+   "Identifier": "432891AK5",
+   "Weight": "0.0461962511",
+   "Market Value": "2034334.35",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "KIMCO REALTY CORP",
+   "Ticker": "KIM",
+   "Identifier": "49446R737",
+   "Weight": "0.0144831467",
+   "Market Value": "637791.21",
+   "Shares Held": "33201",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AGNC INVESTMENT CORP",
+   "Ticker": "AGNC",
+   "Identifier": "00123Q500",
+   "Weight": "0.2598079483",
+   "Market Value": "11441106.6",
+   "Shares Held": "442596",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "RLJ LODGING TR",
+   "Ticker": "-",
+   "Identifier": "74965L200",
+   "Weight": "0.0122904362",
+   "Market Value": "541231.29",
+   "Shares Held": "21401",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "IRON MOUNTAIN INC",
+   "Ticker": "IRM",
+   "Identifier": "46284VAC5",
+   "Weight": "0.0460600248",
+   "Market Value": "2028335.38",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GLOBAL NET LEASE INC",
+   "Ticker": "GNL",
+   "Identifier": "379378300",
+   "Weight": "0.1965078527",
+   "Market Value": "8653573.94",
+   "Shares Held": "376406",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "MPT OPER PARTNERSHIP LP / MPT FIN CORP",
+   "Ticker": "-",
+   "Identifier": "55342UAH7",
+   "Weight": "0.1791040735",
+   "Market Value": "7887167.47",
+   "Shares Held": "8130000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DIGITAL REALTY TRUST INC",
+   "Ticker": "DLR",
+   "Identifier": "253868855",
+   "Weight": "0.0246035885",
+   "Market Value": "1083462.92",
+   "Shares Held": "54748",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CHIRON REAL ESTATE INC",
+   "Ticker": "XRN",
+   "Identifier": "37957W203",
+   "Weight": "0.0570980655",
+   "Market Value": "2514415.2",
+   "Shares Held": "102212",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "DIGITALBRIDGE GROUP INC",
+   "Ticker": "-",
+   "Identifier": "25401T306",
+   "Weight": "0.0707951696",
+   "Market Value": "3117591.62",
+   "Shares Held": "198194",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "COMM 2017-COR2",
+   "Ticker": "-",
+   "Identifier": "12595EAN5",
+   "Weight": "0.0385829659",
+   "Market Value": "1699069.75",
+   "Shares Held": "1876000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "VICI PPTYS INC",
+   "Ticker": "-",
+   "Identifier": "925652109",
+   "Weight": "0.7353024534",
+   "Market Value": "32380355.6",
+   "Shares Held": "1228856",
+   "Asset Category": "EC"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2011-C3",
+   "Ticker": "-",
+   "Identifier": "61760RAQ5",
+   "Weight": "0.0861222158",
+   "Market Value": "3792545.45",
+   "Shares Held": "3811050",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "COMPASS INC",
    "Ticker": "COMP",
    "Identifier": "20464U100",
-   "Weight": "0.8100498645",
-   "Market Value": "133775.55",
-   "Shares Held": "11745",
+   "Weight": "0.0446722865",
+   "Market Value": "1967223.85",
+   "Shares Held": "172715",
    "Asset Category": "EC"
   },
   {
-   "Name": "PHILLIPS EDISON and CO INC",
-   "Ticker": "PECO",
-   "Identifier": "71844V201",
-   "Weight": "0.8127769253",
-   "Market Value": "134225.91",
-   "Shares Held": "3159",
+   "Name": "SUMMIT HOTEL PROPERTIES INC",
+   "Ticker": "-",
+   "Identifier": "866082605",
+   "Weight": "0.1302580804",
+   "Market Value": "5736147",
+   "Shares Held": "310062",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "REXFORD INDL RLTY INC",
+   "Ticker": "-",
+   "Identifier": "76169C308",
+   "Weight": "0.0518785418",
+   "Market Value": "2284564.16",
+   "Shares Held": "100553",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "EPR PROPERTIES",
+   "Ticker": "EPR",
+   "Identifier": "26884U505",
+   "Weight": "0.0309682012",
+   "Market Value": "1363740",
+   "Shares Held": "64940",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "VORNADO REALTY TRUST",
+   "Ticker": "VNO",
+   "Identifier": "929042828",
+   "Weight": "0.1425746404",
+   "Market Value": "6278528.7",
+   "Shares Held": "359595",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "KIMCO REALTY CORP",
+   "Ticker": "KIM",
+   "Identifier": "49446R711",
+   "Weight": "0.0460626013",
+   "Market Value": "2028448.84",
+   "Shares Held": "103598",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ANNALY CAPITAL MANAGEMENT INC",
+   "Ticker": "NLY",
+   "Identifier": "035710862",
+   "Weight": "0.4153888022",
+   "Market Value": "18292387.12",
+   "Shares Held": "724738",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822VAK7",
+   "Weight": "0.0303045842",
+   "Market Value": "1334516.44",
+   "Shares Held": "1355000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SERITAGE GROWTH PPTYS",
+   "Ticker": "-",
+   "Identifier": "81752R308",
+   "Weight": "0.0323976407",
+   "Market Value": "1426687.92",
+   "Shares Held": "62328",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SAUL CENTERS INC",
+   "Ticker": "BFS",
+   "Identifier": "804395804",
+   "Weight": "0.0186681887",
+   "Market Value": "822087",
+   "Shares Held": "39147",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "UMH PPTYS INC",
+   "Ticker": "-",
+   "Identifier": "903002509",
+   "Weight": "0.3004110201",
+   "Market Value": "13229135.32",
+   "Shares Held": "600233",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ESSEX PORTFOLIO LP",
+   "Ticker": "-",
+   "Identifier": "29717PAS6",
+   "Weight": "0.0462416418",
+   "Market Value": "2036333.21",
+   "Shares Held": "2560000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "EPR PROPERTIES",
+   "Ticker": "EPR",
+   "Identifier": "26884UAE9",
+   "Weight": "0.1227167177",
+   "Market Value": "5404049.64",
+   "Shares Held": "5420000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "J P MORGAN CHASE COML MTG SECS TR 2018-AON",
+   "Ticker": "-",
+   "Identifier": "46649XAU1",
+   "Weight": "0.0110474688",
+   "Market Value": "486495",
+   "Shares Held": "3414000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "RETAIL VALUE INC",
+   "Ticker": "-",
+   "Identifier": "76133Q102",
+   "Weight": "0.0000000622",
+   "Market Value": "2.74",
+   "Shares Held": "274131",
    "Asset Category": "EC"
   },
   {
-   "Name": "FRONTVIEW REIT INC",
-   "Ticker": "FVR",
-   "Identifier": "35922N100",
-   "Weight": "0.4121088051",
-   "Market Value": "68057.64",
-   "Shares Held": "3346",
+   "Name": "GS MTG SECS CORP TR 2018-RIVR",
+   "Ticker": "-",
+   "Identifier": "36255WAN5",
+   "Weight": "0.0000407182",
+   "Market Value": "1793.1",
+   "Shares Held": "2580000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "VENTAS RLTY LTD PARTNERSHIP",
+   "Ticker": "-",
+   "Identifier": "92277GAN7",
+   "Weight": "0.1524343833",
+   "Market Value": "6712720.07",
+   "Shares Held": "6775000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AMERICAN HOMES 4 RENT",
+   "Ticker": "AMH",
+   "Identifier": "02665T868",
+   "Weight": "0.1496697411",
+   "Market Value": "6590974.12",
+   "Shares Held": "278924",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "COMM 2018-HCLV MTG TR",
+   "Ticker": "-",
+   "Identifier": "20048KAL1",
+   "Weight": "0.0045030788",
+   "Market Value": "198301.11",
+   "Shares Held": "2890000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "COMM 2018-HCLV MTG TR",
+   "Ticker": "-",
+   "Identifier": "20048KAN7",
+   "Weight": "0.0023373893",
+   "Market Value": "102931.11",
+   "Shares Held": "2890000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CHIMERA INVESTMENT CORP",
+   "Ticker": "CIM",
+   "Identifier": "16934Q505",
+   "Weight": "0.2711835273",
+   "Market Value": "11942050.52",
+   "Shares Held": "524234",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "GLP CAP LP / GLP FING II INC",
+   "Ticker": "-",
+   "Identifier": "361841AL3",
+   "Weight": "0.2955673113",
+   "Market Value": "13015833.96",
+   "Shares Held": "13003000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BRAEMAR HOTELS and RESORTS INC",
+   "Ticker": "-",
+   "Identifier": "10482B309",
+   "Weight": "0.0200236828",
+   "Market Value": "881778.6",
+   "Shares Held": "51566",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PEBBLEBROOK HOTEL TRUST",
+   "Ticker": "PEB",
+   "Identifier": "70509V704",
+   "Weight": "0.102054301",
+   "Market Value": "4494143.25",
+   "Shares Held": "221933",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PEBBLEBROOK HOTEL TRUST",
+   "Ticker": "PEB",
+   "Identifier": "70509V605",
+   "Weight": "0.1304942012",
+   "Market Value": "5746545",
+   "Shares Held": "283780",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AMERICAN HOMES 4 RENT LP",
+   "Ticker": "-",
+   "Identifier": "02666TAB3",
+   "Weight": "0.200110668",
+   "Market Value": "8812230.34",
+   "Shares Held": "8810000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CUBESMART LP",
+   "Ticker": "-",
+   "Identifier": "22966RAE6",
+   "Weight": "0.1826599029",
+   "Market Value": "8043754.76",
+   "Shares Held": "8130000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822VAM3",
+   "Weight": "0.1968807289",
+   "Market Value": "8669994.21",
+   "Shares Held": "10165000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WELLTOWER OP LLC",
+   "Ticker": "-",
+   "Identifier": "95040QAH7",
+   "Weight": "0.045556226",
+   "Market Value": "2006149.7",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HUDSON PACIFIC PROPERTIES LP",
+   "Ticker": "-",
+   "Identifier": "44409MAB2",
+   "Weight": "0.0867669945",
+   "Market Value": "3820939.43",
+   "Shares Held": "4065000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AGNC INVESTMENT CORP",
+   "Ticker": "AGNC",
+   "Identifier": "00123Q609",
+   "Weight": "0.2593067025",
+   "Market Value": "11419033.35",
+   "Shares Held": "456670",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W644",
+   "Weight": "0.0077001644",
+   "Market Value": "339090.48",
+   "Shares Held": "15695",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "DIGITAL REALTY TRUST INC",
+   "Ticker": "DLR",
+   "Identifier": "253868830",
+   "Weight": "0.0144204444",
+   "Market Value": "635030",
+   "Shares Held": "28865",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BROOKFIELD PROPERTY PARTNERS LP",
+   "Ticker": "-",
+   "Identifier": "BMG162491499",
+   "Weight": "0.0084009767",
+   "Market Value": "369952",
+   "Shares Held": "23122",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BX COMMERCIAL MORTGAGE TRUST 2019-IMC",
+   "Ticker": "-",
+   "Identifier": "05608BAS9",
+   "Weight": "0.0719994042",
+   "Market Value": "3170622.24",
+   "Shares Held": "3511000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "POSTAL REALTY TRUST INC",
+   "Ticker": "PSTL",
+   "Identifier": "73757R102",
+   "Weight": "0.2569712643",
+   "Market Value": "11316188.16",
+   "Shares Held": "491154",
    "Asset Category": "EC"
   },
   {
-   "Name": "CURBLINE PROPERTIES CORP",
-   "Ticker": "CURB",
-   "Identifier": "23128Q101",
-   "Weight": "0.2849803957",
-   "Market Value": "47063.04",
-   "Shares Held": "1536",
-   "Asset Category": "EC"
+   "Name": "BRIXMOR OPERATING PARTNERSHIP LP",
+   "Ticker": "-",
+   "Identifier": "11120VAH6",
+   "Weight": "0.0282210506",
+   "Market Value": "1242764.32",
+   "Shares Held": "1267000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WP CAREY INC",
+   "Ticker": "WPC",
+   "Identifier": "92936UAF6",
+   "Weight": "0.0449876533",
+   "Market Value": "1981111.59",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AMERICAN TOWER CORP",
+   "Ticker": "-",
+   "Identifier": "03027XAW0",
+   "Weight": "0.3433900381",
+   "Market Value": "15121793.07",
+   "Shares Held": "15585000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AH REALTY TRUST INC",
+   "Ticker": "AHRT",
+   "Identifier": "04208T207",
+   "Weight": "0.08770593",
+   "Market Value": "3862287.13",
+   "Shares Held": "172817",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ANNALY CAPITAL MANAGEMENT INC",
+   "Ticker": "NLY",
+   "Identifier": "035710847",
+   "Weight": "0.0763605576",
+   "Market Value": "3362673.41",
+   "Shares Held": "130767",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "RITHM CAPITAL CORP",
+   "Ticker": "RITM",
+   "Identifier": "64828T300",
+   "Weight": "0.1331003989",
+   "Market Value": "5861313.57",
+   "Shares Held": "232214",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "MPT OPER PARTNERSHIP LP / MPT FIN CORP",
+   "Ticker": "-",
+   "Identifier": "55342UAJ3",
+   "Weight": "0.2445779148",
+   "Market Value": "10770424.9",
+   "Shares Held": "13440000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UDR INC",
+   "Ticker": "UDR",
+   "Identifier": "90265EAR1",
+   "Weight": "0.0209402606",
+   "Market Value": "922141.74",
+   "Shares Held": "1015000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "RITHM CAPITAL CORP",
+   "Ticker": "RITM",
+   "Identifier": "64828T409",
+   "Weight": "0.3959245549",
+   "Market Value": "17435244.26",
+   "Shares Held": "693802",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "GLP CAP LP / GLP FING II INC",
+   "Ticker": "-",
+   "Identifier": "361841AP4",
+   "Weight": "0.0441062727",
+   "Market Value": "1942298.42",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WELLS FARGO COML MTG TR 2019-C52",
+   "Ticker": "-",
+   "Identifier": "95002MBC2",
+   "Weight": "0.011691152",
+   "Market Value": "514840.74",
+   "Shares Held": "598000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "SIMON PROPERTY GROUP LP",
+   "Ticker": "-",
+   "Identifier": "828807DH7",
+   "Weight": "0.1219608989",
+   "Market Value": "5370765.81",
+   "Shares Held": "8200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W628",
+   "Weight": "0.0292004529",
+   "Market Value": "1285894.05",
+   "Shares Held": "67501",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SAUL CENTERS INC",
+   "Ticker": "BFS",
+   "Identifier": "804395879",
+   "Weight": "0.0256683787",
+   "Market Value": "1130352.86",
+   "Shares Held": "52066",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "HOME PARTNERS AMER 2019-2 TR",
+   "Ticker": "-",
+   "Identifier": "43732TAL5",
+   "Weight": "0.0411353341",
+   "Market Value": "1811467.84",
+   "Shares Held": "1861925.6498",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "REXFORD INDL RLTY INC",
+   "Ticker": "-",
+   "Identifier": "76169C407",
+   "Weight": "0.1033313459",
+   "Market Value": "4550380.2",
+   "Shares Held": "215148",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "GLADSTONE COMMERCIAL CORP",
+   "Ticker": "-",
+   "Identifier": "376536702",
+   "Weight": "0.0558363558",
+   "Market Value": "2458853.56",
+   "Shares Held": "106837",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SABRA HEALTH CARE LP",
+   "Ticker": "-",
+   "Identifier": "78572XAG6",
+   "Weight": "0.0146475902",
+   "Market Value": "645032.77",
+   "Shares Held": "669000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AGNC INVESTMENT CORP",
+   "Ticker": "AGNC",
+   "Identifier": "00123Q807",
+   "Weight": "0.4522782875",
+   "Market Value": "19916881.43",
+   "Shares Held": "780595",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "DIGITAL REALTY TRUST INC",
+   "Ticker": "DLR",
+   "Identifier": "253868822",
+   "Weight": "0.0539321373",
+   "Market Value": "2374997.9",
+   "Shares Held": "120010",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W594",
+   "Weight": "0.0195171396",
+   "Market Value": "859472.07",
+   "Shares Held": "47669",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BENCHMARK 2019-B14 MTG TR",
+   "Ticker": "-",
+   "Identifier": "08162YBM3",
+   "Weight": "0.0002636432",
+   "Market Value": "11610",
+   "Shares Held": "2322000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BENCHMARK 2019-B14 MTG TR",
+   "Ticker": "-",
+   "Identifier": "08162YBP6",
+   "Weight": "0.0001977324",
+   "Market Value": "8707.5",
+   "Shares Held": "3483000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "VICI PROPERTIES LP / VICI NOTE CO INC",
+   "Ticker": "-",
+   "Identifier": "92564RAB1",
+   "Weight": "0.3908735958",
+   "Market Value": "17212816.26",
+   "Shares Held": "17615000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GLOBAL NET LEASE INC",
+   "Ticker": "GNL",
+   "Identifier": "379378409",
+   "Weight": "0.1284655551",
+   "Market Value": "5657209.95",
+   "Shares Held": "261303",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BX TR 2019-OC11",
+   "Ticker": "-",
+   "Identifier": "05606FAN3",
+   "Weight": "0.4520941446",
+   "Market Value": "19908772.37",
+   "Shares Held": "22036000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "NATIONAL HEALTHCARE PROPERTIES INC",
    "Ticker": "NHP",
-   "Identifier": "42226B501",
-   "Weight": "0.2241492465",
-   "Market Value": "37017.09",
-   "Shares Held": "2421",
-   "Asset Category": "EC"
+   "Identifier": "42226B204",
+   "Weight": "0.1307281076",
+   "Market Value": "5756845.49",
+   "Shares Held": "247181",
+   "Asset Category": "EP"
   },
   {
-   "Name": "CSQUARE INC",
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W578",
+   "Weight": "0.0468188776",
+   "Market Value": "2061752.82",
+   "Shares Held": "111026",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ENERGY TRANSFER LP",
+   "Ticker": "ET",
+   "Identifier": "29273VAM2",
+   "Weight": "0.0947418395",
+   "Market Value": "4172125.96",
+   "Shares Held": "4065000",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "BANK 2017-BNK8",
    "Ticker": "-",
-   "Identifier": "22946R101",
-   "Weight": "0.1939860868",
-   "Market Value": "32035.8",
-   "Shares Held": "1605",
-   "Asset Category": "EC"
+   "Identifier": "06650AAW7",
+   "Weight": "0.0826063059",
+   "Market Value": "3637716.08",
+   "Shares Held": "7707393",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "AGNC INVESTMENT CORP",
+   "Ticker": "AGNC",
+   "Identifier": "00123Q872",
+   "Weight": "0.3587089596",
+   "Market Value": "15796389.11",
+   "Shares Held": "630217",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "ESSEX PORTFOLIO LP",
+   "Ticker": "-",
+   "Identifier": "29717PAV9",
+   "Weight": "0.0405572315",
+   "Market Value": "1786010.06",
+   "Shares Held": "2035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BROOKFIELD PROPERTY PARTNERS LP",
+   "Ticker": "-",
+   "Identifier": "BMG162491648",
+   "Weight": "0.0092231039",
+   "Market Value": "406155.84",
+   "Shares Held": "29136",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "RITHM CAPITAL CORP",
+   "Ticker": "RITM",
+   "Identifier": "64828T508",
+   "Weight": "0.3859144666",
+   "Market Value": "16994432.16",
+   "Shares Held": "694217",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "DYNEX CAPITAL INC",
+   "Ticker": "DX",
+   "Identifier": "26817Q878",
+   "Weight": "0.1173288877",
+   "Market Value": "5166786.93",
+   "Shares Held": "202381",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "FORESTAR GROUP INC",
+   "Ticker": "FOR",
+   "Identifier": "346232AE1",
+   "Weight": "0.076417111",
+   "Market Value": "3365163.84",
+   "Shares Held": "3390000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MFA FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "55272X508",
+   "Weight": "0.2469363045",
+   "Market Value": "10874280.8",
+   "Shares Held": "468719",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "SG COML MTG SECS TR 2020-COVE",
+   "Ticker": "-",
+   "Identifier": "78397FAL7",
+   "Weight": "0.0703367154",
+   "Market Value": "3097402.77",
+   "Shares Held": "3388000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BBCMS MTG TR 2020-C6",
+   "Ticker": "-",
+   "Identifier": "05492TAJ9",
+   "Weight": "0.014285754",
+   "Market Value": "629098.67",
+   "Shares Held": "765000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MORGAN STANLEY CAP I TR 2020-L4",
+   "Ticker": "-",
+   "Identifier": "61770KBC8",
+   "Weight": "0.037325248",
+   "Market Value": "1643683.9",
+   "Shares Held": "1874000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BX COMMERCIAL MORTGAGE TRUST 2020-VIVA",
+   "Ticker": "-",
+   "Identifier": "12433XAJ8",
+   "Weight": "0.28917808",
+   "Market Value": "12734472.76",
+   "Shares Held": "14160990",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822VAQ4",
+   "Weight": "0.1098745105",
+   "Market Value": "4838520.13",
+   "Shares Held": "6600000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BOSTON PROPERTIES LP",
+   "Ticker": "-",
+   "Identifier": "10112RBD5",
+   "Weight": "0.1134327111",
+   "Market Value": "4995211.84",
+   "Shares Held": "5420000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CUSHMAN and WAKEFIELD US BORROWER LLC",
+   "Ticker": "-",
+   "Identifier": "23166MAA1",
+   "Weight": "0.0527958994",
+   "Market Value": "2324961.64",
+   "Shares Held": "2325000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822VAT8",
+   "Weight": "0.1897609811",
+   "Market Value": "8356463.41",
+   "Shares Held": "9485000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BRIXMOR OPERATING PARTNERSHIP LP",
+   "Ticker": "-",
+   "Identifier": "11120VAJ2",
+   "Weight": "0.0593992749",
+   "Market Value": "2615753.06",
+   "Shares Held": "2710000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W552",
+   "Weight": "0.1506408009",
+   "Market Value": "6633736.47",
+   "Shares Held": "373311",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "IRON MOUNTAIN INC",
+   "Ticker": "IRM",
+   "Identifier": "46284VAJ0",
+   "Weight": "0.0752268025",
+   "Market Value": "3312746.48",
+   "Shares Held": "3390000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GLP CAP LP / GLP FING II INC",
+   "Ticker": "-",
+   "Identifier": "361841AQ2",
+   "Weight": "0.0288198561",
+   "Market Value": "1269133.79",
+   "Shares Held": "1355000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "J P MORGAN CHASE COML MTG SECS TR 2020-NNN",
+   "Ticker": "-",
+   "Identifier": "46652BBN8",
+   "Weight": "0.0069238048",
+   "Market Value": "304902.1",
+   "Shares Held": "1355000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "COSTAR GROUP INC",
+   "Ticker": "CSGP",
+   "Identifier": "22160NAA7",
+   "Weight": "0.0275891779",
+   "Market Value": "1214938.68",
+   "Shares Held": "1355000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SIMON PROPERTY GROUP LP",
+   "Ticker": "-",
+   "Identifier": "828807DJ3",
+   "Weight": "0.1325156339",
+   "Market Value": "5835562.4",
+   "Shares Held": "8155000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BBCMS MTG TR 2020-C7",
+   "Ticker": "-",
+   "Identifier": "05492VAL9",
+   "Weight": "0.0269742098",
+   "Market Value": "1187857.46",
+   "Shares Held": "1401000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "TAYLOR MORRISON COMMUNITIES INC",
+   "Ticker": "-",
+   "Identifier": "87724RAJ1",
+   "Weight": "0.0724838465",
+   "Market Value": "3191955.52",
+   "Shares Held": "3200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "IRON MOUNTAIN INC",
+   "Ticker": "IRM",
+   "Identifier": "46284VAN1",
+   "Weight": "0.0655509554",
+   "Market Value": "2886653.29",
+   "Shares Held": "3050000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W537",
+   "Weight": "0.0125248012",
+   "Market Value": "551551.97",
+   "Shares Held": "34667",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AGREE LP",
+   "Ticker": "-",
+   "Identifier": "008513AA1",
+   "Weight": "0.021229539",
+   "Market Value": "934880.63",
+   "Shares Held": "1015000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LXP INDUSTRIAL TRUST",
+   "Ticker": "LXP",
+   "Identifier": "529043AE1",
+   "Weight": "0.061865224",
+   "Market Value": "2724345.53",
+   "Shares Held": "2997000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W511",
+   "Weight": "0.0053104581",
+   "Market Value": "233855.5",
+   "Shares Held": "15695",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "OMEGA HEALTHCARE INVESTORS INC",
+   "Ticker": "OHI",
+   "Identifier": "681936BM1",
+   "Weight": "0.0707722049",
+   "Market Value": "3116580.33",
+   "Shares Held": "3390000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LAMAR MEDIA CORP",
+   "Ticker": "-",
+   "Identifier": "513075BT7",
+   "Weight": "0.0862094345",
+   "Market Value": "3796386.28",
+   "Shares Held": "3980000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "LAMAR MEDIA CORP",
+   "Ticker": "-",
+   "Identifier": "513075BR1",
+   "Weight": "0.0301123417",
+   "Market Value": "1326050.7",
+   "Shares Held": "1355000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUBLIC STORAGE",
+   "Ticker": "PSA",
+   "Identifier": "74460W487",
+   "Weight": "0.0089032482",
+   "Market Value": "392070.42",
+   "Shares Held": "26243",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "HILTON DOMESTIC OPERATING CO INC",
+   "Ticker": "-",
+   "Identifier": "432833AJ0",
+   "Weight": "0.0718165183",
+   "Market Value": "3162568.53",
+   "Shares Held": "3300000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HILTON DOMESTIC OPERATING CO INC",
+   "Ticker": "-",
+   "Identifier": "432833AL5",
+   "Weight": "0.2404780773",
+   "Market Value": "10589881.24",
+   "Shares Held": "11285000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MPT OPER PARTNERSHIP LP / MPT FIN CORP",
+   "Ticker": "-",
+   "Identifier": "55342UAM6",
+   "Weight": "0.1679949516",
+   "Market Value": "7397957.46",
+   "Shares Held": "10840000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VORNADO REALTY TRUST",
+   "Ticker": "VNO",
+   "Identifier": "929042810",
+   "Weight": "0.0906543821",
+   "Market Value": "3992127.48",
+   "Shares Held": "228252",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "GLOBAL NET LEASE INC / GLOBAL NET LEASE OPERATING PARTNERSHIP LP",
+   "Ticker": "-",
+   "Identifier": "37892AAA8",
+   "Weight": "0.0763104427",
+   "Market Value": "3360466.51",
+   "Shares Held": "3440000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BANK 2020-BNK30",
+   "Ticker": "-",
+   "Identifier": "06541UBJ4",
+   "Weight": "0.0190784207",
+   "Market Value": "840152.3",
+   "Shares Held": "1355000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "SBA COMMUNICATIONS CORP",
+   "Ticker": "SBAC",
+   "Identifier": "78410GAD6",
+   "Weight": "0.3056659517",
+   "Market Value": "13460545.61",
+   "Shares Held": "13550000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "REALOGY GROUP LLC / REALOGY CO-ISSUER CORP",
+   "Ticker": "-",
+   "Identifier": "75606DAL5",
+   "Weight": "0.1408363943",
+   "Market Value": "6201981.93",
+   "Shares Held": "6295000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UNITI GROUP LP / UNITI GROUP FINANCE INC / CSL CAPITAL LLC",
+   "Ticker": "-",
+   "Identifier": "91327BAA8",
+   "Weight": "0.1919366152",
+   "Market Value": "8452271.34",
+   "Shares Held": "8570000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HILTON DOMESTIC OPERATING CO INC",
+   "Ticker": "-",
+   "Identifier": "432833AN1",
+   "Weight": "0.2472904121",
+   "Market Value": "10889874.56",
+   "Shares Held": "12035000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822VAX9",
+   "Weight": "0.3441273579",
+   "Market Value": "15154262.26",
+   "Shares Held": "21750000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CROWN CASTLE INC",
+   "Ticker": "CCI",
+   "Identifier": "22822VAW1",
+   "Weight": "0.1206137143",
+   "Market Value": "5311440.13",
+   "Shares Held": "6100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WP CAREY INC",
+   "Ticker": "WPC",
+   "Identifier": "92936UAH2",
+   "Weight": "0.0637531886",
+   "Market Value": "2807485.42",
+   "Shares Held": "3390000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NNN REIT INC",
+   "Ticker": "NNN",
+   "Identifier": "637417AQ9",
+   "Weight": "0.123942347",
+   "Market Value": "5458022.41",
+   "Shares Held": "8130000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OMEGA HEALTHCARE INVESTORS INC",
+   "Ticker": "OHI",
+   "Identifier": "681936BN9",
+   "Weight": "0.2410592276",
+   "Market Value": "10615473.23",
+   "Shares Held": "12195000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AMERICAN TOWER CORP",
+   "Ticker": "-",
+   "Identifier": "03027XBM1",
+   "Weight": "0.0277197111",
+   "Market Value": "1220686.94",
+   "Shares Held": "1355000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VASA TR 2021-VASA",
+   "Ticker": "-",
+   "Identifier": "92230AAN6",
+   "Weight": "0.0102107272",
+   "Market Value": "449647.59",
+   "Shares Held": "542000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "VASA TR 2021-VASA",
+   "Ticker": "-",
+   "Identifier": "92230AAL0",
+   "Weight": "0.0894553212",
+   "Market Value": "3939324.69",
+   "Shares Held": "4530000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "SAFEHOLD GL HOLDINGS LLC",
+   "Ticker": "-",
+   "Identifier": "78646UAA7",
+   "Weight": "0.0963578635",
+   "Market Value": "4243290.46",
+   "Shares Held": "4745000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "EXTRA SPACE STORAGE LP",
+   "Ticker": "-",
+   "Identifier": "30225VAF4",
+   "Weight": "0.0273472951",
+   "Market Value": "1204286.94",
+   "Shares Held": "1355000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PEBBLEBROOK HOTEL TRUST",
+   "Ticker": "PEB",
+   "Identifier": "70509V803",
+   "Weight": "0.2086849784",
+   "Market Value": "9189815.4",
+   "Shares Held": "451810",
+   "Asset Category": "EP"
+  },
+  {
+   "Name": "AGREE LP",
+   "Ticker": "-",
+   "Identifier": "008513AC7",
+   "Weight": "0.0788798489",
+   "Market Value": "3473614.9",
+   "Shares Held": "4135000",
+   "Asset Category": "DBT"
   }
  ]
 }

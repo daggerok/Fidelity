@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T04:37:13Z",
+ "generatedAt": "2026-10-26T03:36:18Z",
  "source": {
   "provider": "Fidelity Investments (ETFs)",
   "market": "us",
@@ -11,12 +11,13 @@
    "0000945908": "Fidelity Covington Trust",
    "0001562565": "Fidelity Merrimack Street Trust",
    "0001852317": "Fidelity Wise Origin Bitcoin Fund",
-   "0002000046": "Fidelity Ethereum Fund"
+   "0002000046": "Fidelity Ethereum Fund",
+   "0000754510": "Fidelity Securities Fund"
   }
  },
  "counts": {
   "funds": 74,
-  "holdings": 22991,
+  "holdings": 23537,
   "history": 111250
  },
  "funds": [
@@ -5292,7 +5293,7 @@
   },
   {
    "ticker": "FREI",
-   "name": "Fidelity Real Estate Investment ETF",
+   "name": "Fidelity Real Estate Income Fund ETF Class",
    "category": "Sector",
    "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FREI",
    "dataFile": "./funds/FREI/meta.json",
@@ -5300,8 +5301,8 @@
    "terValue": 0.57,
    "nav": "—",
    "navValue": null,
-   "aum": "$16.37 M",
-   "aumValue": 16369551.39,
+   "aum": "—",
+   "aumValue": null,
    "asOfDate": "Oct 23 2026",
    "inceptionDate": "Jun 18 2026",
    "exchange": "NasdaqGM",
@@ -5317,8 +5318,8 @@
    "returns": {
     "monthEnd": {
      "asOfDate": "Oct 23 2026",
-     "mo1": 0.63,
-     "mo1Text": "0.63%",
+     "mo1": 0.71,
+     "mo1Text": "0.71%",
      "qtd": 1.39,
      "qtdText": "1.39%",
      "ytd": null,
@@ -5372,7 +5373,7 @@
     "returnsBasis": "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns); Fidelity publishes no machine-readable performance table",
     "performanceAsOf": "2026-10-23"
    },
-   "holdings": 44,
+   "holdings": 590,
    "history": 89
   },
   {

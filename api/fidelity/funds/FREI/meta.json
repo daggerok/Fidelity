@@ -1,11 +1,11 @@
 {
  "ticker": "FREI",
- "name": "Fidelity Real Estate Investment ETF",
+ "name": "Fidelity Real Estate Income Fund ETF Class",
  "category": "Sector",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FREI",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006228/000003540226006228-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006228/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/754510/000003540226006222/000003540226006222-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/754510/000003540226006222/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FREI",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -28,17 +28,17 @@
   "value": null
  },
  "aum": {
-  "display": "$16.37 M",
-  "value": 16369551.39,
-  "asOfDate": "Jul 31 2026",
-  "source": "sum of reported N-PORT position values"
+  "display": "—",
+  "value": null,
+  "asOfDate": "—",
+  "source": "not published: the N-PORT net assets cover every share class of Fidelity Real Estate Income Fund"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
    "asOfDate": "Oct 23 2026",
-   "mo1": 0.63,
-   "mo1Text": "0.63%",
+   "mo1": 0.71,
+   "mo1Text": "0.71%",
    "qtd": 1.39,
    "qtdText": "1.39%",
    "ytd": null,
@@ -94,10 +94,12 @@
  },
  "holdings": {
   "pages": [
-   "holdings/001.json"
+   "holdings/001.json",
+   "holdings/002.json",
+   "holdings/003.json"
   ],
   "pageSize": 250,
-  "totalRows": 44,
+  "totalRows": 590,
   "asOf": "Jul 31 2026"
  },
  "history": {
@@ -109,10 +111,10 @@
   "asOf": "Oct 23 2026"
  },
  "seed": {
-  "seriesId": "S000070235",
-  "seriesName": "Fidelity Real Estate Investment ETF",
-  "trustCik": "0000945908",
-  "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-006228"
+  "seriesId": "S000007192",
+  "seriesName": "Fidelity Real Estate Income Fund",
+  "trustCik": "0000754510",
+  "trustName": "Fidelity Securities Fund",
+  "accession": "0000035402-26-006222"
  }
 }
