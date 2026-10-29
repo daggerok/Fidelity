@@ -131,7 +131,7 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
-  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+  return `[ ${`${String(index).padStart(width)}/${total}`.padEnd(8)} ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
@@ -1147,7 +1147,7 @@ export function resetSecState(): void {
 /** SEC's fund ticker -> registrant CIK + series id table, loaded once per run (a failed load is asked again by the next fund). */
 function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSeriesRef>> {
   if (!secState.funds) {
-    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[edgar   ] fund ticker table', secHeaders(config), config).then((payload) => parseSecFundTickers(payload));
+    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[ edgar    ] fund ticker table', secHeaders(config), config).then((payload) => parseSecFundTickers(payload));
     secState.funds = loading;
     loading.catch(() => { if (secState.funds === loading) secState.funds = null; });
   }
@@ -1157,7 +1157,7 @@ function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSe
 /** SEC's company name -> ticker table for the N-PORT rows, loaded once per run; Yahoo search hits of the run are added to it. */
 function loadCompanyNames(config: UpdaterConfig): Promise<Map<string, string>> {
   if (!secState.names) {
-    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[edgar   ] company ticker table', secHeaders(config), config).then((payload) => parseSecCompanyNames(payload));
+    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[ edgar    ] company ticker table', secHeaders(config), config).then((payload) => parseSecCompanyNames(payload));
     secState.names = loading;
     loading.catch(() => { if (secState.names === loading) secState.names = null; });
   }
@@ -1181,9 +1181,9 @@ async function nportSeriesOf(seed: SeedFund, config: UpdaterConfig): Promise<{ c
   try {
     ref = (await loadFundTickerTable(config)).get(seed.ticker);
   } catch (error) {
-    outputNote(`[ ${'edgar'.padEnd(9)}] fund ticker table: ${error instanceof Error ? error.message : String(error)} — using the seed series`);
+    outputNote(`[ ${'edgar'.padEnd(8)} ] fund ticker table: ${error instanceof Error ? error.message : String(error)} — using the seed series`);
   }
-  if (ref && seed.seriesId && ref.seriesId !== seed.seriesId) console.warn(`[ ${'nport'.padEnd(9)}] ${seed.ticker}: SEC lists series ${ref.seriesId}, the seed ${seed.seriesId}; reading ${ref.seriesId}`);
+  if (ref && seed.seriesId && ref.seriesId !== seed.seriesId) console.warn(`[ ${'nport'.padEnd(8)} ] ${seed.ticker}: SEC lists series ${ref.seriesId}, the seed ${seed.seriesId}; reading ${ref.seriesId}`);
   return ref ? { cik: ref.cik, seriesId: ref.seriesId } : { cik: seed.trustCik, seriesId: seed.seriesId };
 }
 
@@ -1807,7 +1807,7 @@ async function processFund(
   let chart: ParsedChart | null = null;
   if (!config.skipYahoo) {
     try {
-      const fetched = parseChart(await fetchJson(chartUrl(ticker, config), `[chart   ] ${ticker}`, yahooHeaders(), config));
+      const fetched = parseChart(await fetchJson(chartUrl(ticker, config), `[ chart    ] ${ticker}`, yahooHeaders(), config));
       const publishedHistory = await readPreviousSheet(ticker, 'history');
       // A HISTORY_RANGE window never shrinks the published history (and with it 3y, 5y, 10y and since inception).
       const publishedDistributionRows = ((previousMeta?.distributions as JsonRecord | undefined)?.rows as unknown[] | undefined) ?? [];
@@ -1817,7 +1817,7 @@ async function processFund(
       merged.days = keepPublishedAdjClose(merged.days, publishedHistory);
       chart = merged;
     } catch (error) {
-      outputNote(`[ ${'chart'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
+      outputNote(`[ ${'chart'.padEnd(8)} ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous history`);
     }
   }
 
@@ -1863,7 +1863,7 @@ async function processFund(
         { ticker, cik: series.cik, seriesId: series.seriesId, name: seed.shareClassOf || chart?.longName || seed.name },
         { asOf: calendarIso((published?.holdings as JsonRecord | undefined)?.asOf), rows: numberOrNull((published?.holdings as JsonRecord | undefined)?.totalRows) ?? 0 },
         async (url, label) => {
-          const text = await fetchText(url, `[nport   ] ${label}`, secHeaders(config), config);
+          const text = await fetchText(url, `[ nport    ] ${label}`, secHeaders(config), config);
           if (config.storeRawDownloads && url.endsWith('/primary_doc.xml')) raw.set(url, text);
           return text;
         },
@@ -1871,8 +1871,8 @@ async function processFund(
       );
       if ('problem' in read) {
         // An older or equal report period is the normal case (VERBOSE only); a filing of another series or none is always reported.
-        if (/ is not newer than /.test(read.problem)) outputNote(`[ ${'nport'.padEnd(9)}] ${read.problem}; keeping previous holdings`);
-        else console.warn(`[ ${'nport'.padEnd(9)}] ${read.problem} — N-PORT not used, keeping previous holdings`);
+        if (/ is not newer than /.test(read.problem)) outputNote(`[ ${'nport'.padEnd(8)} ] ${read.problem}; keeping previous holdings`);
+        else console.warn(`[ ${'nport'.padEnd(8)} ] ${read.problem} — N-PORT not used, keeping previous holdings`);
       } else {
         const totalValue = read.filing.positions.reduce((sum, position) => sum + (position.value === null ? 0 : position.value), 0);
         nport = { filing: read.filing, accession: read.candidate.accession, cik: Number(read.candidate.cik) ? read.candidate.cik : series.cik, url: read.url, totalValue };
@@ -1884,13 +1884,13 @@ async function processFund(
         }
       }
     } catch (error) {
-      outputNote(`[ ${'nport'.padEnd(9)}] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous holdings`);
+      outputNote(`[ ${'nport'.padEnd(8)} ] ${ticker}: ${error instanceof Error ? error.message : String(error)} — keeping previous holdings`);
     }
   }
 
   const holdingsHeaders = HOLDINGS_HEADERS;
   const holdingsRows: JsonRecord[] = nport
-    ? nportHoldingsSheet(nport.filing, await nportHoldingTickers(nport.filing.positions, await loadCompanyNames(config).catch(() => new Map<string, string>()), resolver, await loadUsListings((url, label) => fetchText(url, `[nport   ] ${label}`, secHeaders(config), config))))
+    ? nportHoldingsSheet(nport.filing, await nportHoldingTickers(nport.filing.positions, await loadCompanyNames(config).catch(() => new Map<string, string>()), resolver, await loadUsListings((url, label) => fetchText(url, `[ nport    ] ${label}`, secHeaders(config), config))))
     : await readPreviousSheet(ticker, 'holdings');
   // A fund is either fully updated or fully kept: fresh N-PORT holdings that look broken (no weight column,
   // non-numeric weights, a bad weight sum, half the rows gone, no numeric weight where the published sheet had them)
@@ -2075,14 +2075,14 @@ export function catalogOnlyRow(seed: SeedFund): JsonRecord {
 async function backfillTickers(): Promise<void> {
   console.log('Fidelity ETF static data updater — holdings ticker backfill (offline, seed only)');
   const resolver = new TickerResolver(await readHeldTickers());
-  console.log(`[ticker  ] ${resolver.size} known holding names in api/fidelity/held-tickers.json`);
+  console.log(`[ ticker   ] ${resolver.size} known holding names in api/fidelity/held-tickers.json`);
 
   const fundsDir = new URL('funds/', API_ROOT);
   let fundDirs: string[] = [];
   try {
     fundDirs = await readdir(fundsDir);
   } catch {
-    console.log('[done    ] no api/fidelity/funds directory yet — nothing to backfill');
+    console.log('[ done     ] no api/fidelity/funds directory yet — nothing to backfill');
     return;
   }
 
@@ -2124,8 +2124,8 @@ async function backfillTickers(): Promise<void> {
   }
 
   console.log('');
-  console.log(`[done    ] ${funds} funds rewritten (${pages} holdings pages), ${rowsFilled} of ${rowsScanned} holding rows gained a ticker`);
-  console.log(`[cursor  ] rows still "-" are no equity or preferred row (bonds, private debt, funds, derivatives) or are not in the seed yet (a live run resolves them via Yahoo search)`);
+  console.log(`[ done     ] ${funds} funds rewritten (${pages} holdings pages), ${rowsFilled} of ${rowsScanned} holding rows gained a ticker`);
+  console.log(`[ cursor   ] rows still "-" are no equity or preferred row (bonds, private debt, funds, derivatives) or are not in the seed yet (a live run resolves them via Yahoo search)`);
 }
 
 // ---------------------------------------------------------------------------
@@ -2213,20 +2213,20 @@ export async function main(env: Record<string, string | undefined> = process.env
   outputPrintConfig('Fidelity', config);
 
   const seedFunds = FIDELITY_FUNDS.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
-  console.log(`[ ${'catalog'.padEnd(9)}] ${seedFunds.length} Fidelity ETFs (built-in seed across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants)`);
+  console.log(`[ ${'catalog'.padEnd(8)} ] ${seedFunds.length} Fidelity ETFs (built-in seed across ${Object.keys(FIDELITY_TRUSTS).length} SEC registrants)`);
   const heldTickers = await readHeldTickers();
-  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(heldTickers).length} known holding names in api/fidelity/held-tickers.json${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
+  console.log(`[ ${'ticker'.padEnd(8)} ] ${Object.keys(heldTickers).length} known holding names in api/fidelity/held-tickers.json${config.skipYahoo ? ' (live Yahoo resolution off: SKIP_YAHOO)' : ''}`);
 
   // Unknown holding names are resolved through the Yahoo symbol search
   // (strict name match). Every search is globally paced like the rest of the
   // run's requests and cached for the whole run.
   const searchHoldingTicker = async (name: string): Promise<string | null> => {
-    const payload = await fetchJson(yahooSearchUrl(name), `[ticker   ] ${name}`, yahooHeaders(), config);
+    const payload = await fetchJson(yahooSearchUrl(name), `[ ticker   ] ${name}`, yahooHeaders(), config);
     return pickSearchTicker(name, payload);
   };
   const persistedMisses = await readMisses();
   const resolver = new TickerResolver(heldTickers, config.skipYahoo ? null : searchHoldingTicker, persistedMisses);
-  console.log(`[ ${'ticker'.padEnd(9)}] ${Object.keys(persistedMisses).length} remembered search misses in api/fidelity/held-ticker-misses.json (retried after ${MISS_TTL_DAYS} days)`);
+  console.log(`[ ${'ticker'.padEnd(8)} ] ${Object.keys(persistedMisses).length} remembered search misses in api/fidelity/held-ticker-misses.json (retried after ${MISS_TTL_DAYS} days)`);
 
   // One run, one SEC state: the SEC ticker tables and the N-PORT reader cache (submissions and documents shared by the funds of a trust).
   resetSecState();
@@ -2294,7 +2294,7 @@ export async function main(env: Record<string, string | undefined> = process.env
 
   await Promise.all(Array.from({ length: Math.max(1, config.concurrency) }, () => worker()));
   const deadlineText = deadlineHit ? deadlineSummary(processed, ordered.length, queue.map((item) => item.seed), previousIndex) : '';
-  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(9)}] soft run deadline reached: ${deadlineText}; the next run starts with them`);
+  if (deadlineHit) console.log(`[ ${'deadline'.padEnd(8)} ] soft run deadline reached: ${deadlineText}; the next run starts with them`);
 
   // Funds not selected for a successful update keep their previously published rows; a fund with published data (a closed
   // fund that left the seed too) keeps its row, a catalog-only row of a ticker the seed no longer lists is dropped.
@@ -2334,25 +2334,25 @@ export async function main(env: Record<string, string | undefined> = process.env
     const merged: Record<string, string> = { ...heldTickers, ...resolver.freshEntries() };
     const seedChanged = await writeTextIfChanged(HELD_TICKERS_FILE, formatHeldTickers(merged));
     if (seedChanged) {
-      console.log(`[ ${'ticker'.padEnd(9)}] ${resolver.fresh.length} new name -> ticker mappings added to api/fidelity/held-tickers.json`);
+      console.log(`[ ${'ticker'.padEnd(8)} ] ${resolver.fresh.length} new name -> ticker mappings added to api/fidelity/held-tickers.json`);
     }
   }
 
   // Remember genuine search misses (sorted, only when the content changed) so the next run does not repeat them.
   if (!config.skipYahoo) {
     const missesChanged = await writeTextIfChanged(MISSES_FILE, formatMisses(resolver.missEntries()), true);
-    if (missesChanged) console.log(`[ ${'ticker'.padEnd(9)}] search misses updated in api/fidelity/held-ticker-misses.json`);
+    if (missesChanged) console.log(`[ ${'ticker'.padEnd(8)} ] search misses updated in api/fidelity/held-ticker-misses.json`);
   }
-  console.log(`[ ${'ticker'.padEnd(9)}] name searches: ${resolver.stats.searches} sent, ${resolver.stats.skippedCategory} skipped (no-ticker asset category), ${resolver.stats.skippedKnownMiss} skipped (remembered miss)`);
+  console.log(`[ ${'ticker'.padEnd(8)} ] name searches: ${resolver.stats.searches} sent, ${resolver.stats.skippedCategory} skipped (no-ticker asset category), ${resolver.stats.skippedKnownMiss} skipped (remembered miss)`);
 
   // Only an unscoped bounded run owns the cursor; full passes reset it, TICKERS runs never touch it.
   if (!config.tickers.length) await writeUpdateState(config.maxFetches > 0 ? lastDispatchedTicker : null);
 
   console.log(output.summary(runStartedAt));
   console.log(outputCounts(counts.funds, counts.holdings, counts.history));
-  console.log(`[ ${'cursor'.padEnd(9)}] ${config.maxFetches > 0 && !config.tickers.length && lastDispatchedTicker ? `next run continues after ${lastDispatchedTicker}` : 'cursor reset'}`);
+  console.log(`[ ${'cursor'.padEnd(8)} ] ${config.maxFetches > 0 && !config.tickers.length && lastDispatchedTicker ? `next run continues after ${lastDispatchedTicker}` : 'cursor reset'}`);
   if (failures > 0 && results.length === 0) {
-    console.error(`[ ${'failed'.padEnd(9)}] every selected fund failed`);
+    console.error(`[ ${'failed'.padEnd(8)} ] every selected fund failed`);
     process.exitCode = 1;
   }
 
