@@ -4,8 +4,8 @@
  "category": "Bond",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLTB",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004685/000003540226004685-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004685/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006809/000003540226006809-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006809/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FLTB",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$49.33",
-  "value": 49.33,
-  "asOfDate": "Oct 23 2026"
+  "display": "$49.22",
+  "value": 49.222,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$402.87 M",
-  "value": 402872458.54000014,
-  "asOfDate": "May 31 2026",
+  "display": "$450.33 M",
+  "value": 450325871.50000036,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": 0.55,
-   "mo1Text": "0.55%",
-   "qtd": 0.53,
-   "qtdText": "0.53%",
-   "ytd": 0.63,
-   "ytdText": "0.63%",
-   "yr1": 1.19,
-   "yr1Text": "1.19%",
-   "yr3": 5.48,
-   "yr3Text": "5.48%",
-   "yr5": 2.34,
-   "yr5Text": "2.34%",
+   "asOfDate": "Oct 29 2026",
+   "mo1": 0.59,
+   "mo1Text": "0.59%",
+   "qtd": 0.31,
+   "qtdText": "0.31%",
+   "ytd": 0.41,
+   "ytdText": "0.41%",
+   "yr1": 1.15,
+   "yr1Text": "1.15%",
+   "yr3": 5.33,
+   "yr3Text": "5.33%",
+   "yr5": 2.29,
+   "yr5Text": "2.29%",
    "yr10": 2.35,
    "yr10Text": "2.35%",
-   "sinceInception": 2.29,
-   "sinceInceptionText": "2.29%"
+   "sinceInception": 2.27,
+   "sinceInceptionText": "2.27%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -661,8 +661,8 @@
    "holdings/005.json"
   ],
   "pageSize": 250,
-  "totalRows": 1050,
-  "asOf": "May 31 2026"
+  "totalRows": 1071,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
@@ -672,14 +672,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3028,
-  "asOf": "Oct 23 2026"
+  "totalRows": 3032,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000042569",
   "seriesName": "Fidelity Limited Term Bond ETF",
   "trustCik": "0001562565",
   "trustName": "Fidelity Merrimack Street Trust",
-  "accession": "0000035402-26-004685"
+  "accession": "0000035402-26-006809"
  }
 }

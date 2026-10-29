@@ -2,7 +2,7 @@
  "ticker": "FDVV",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2541,
+ "totalRows": 2545,
  "headers": [
   "Date",
   "Close",
@@ -3255,6 +3255,30 @@
    "Close": "61.970001",
    "Adj Close": "61.97",
    "Volume": "602500"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "Close": "62.279999",
+   "Adj Close": "62.28",
+   "Volume": "589700"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "Close": "62.529999",
+   "Adj Close": "62.53",
+   "Volume": "520900"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "Close": "62.41",
+   "Adj Close": "62.41",
+   "Volume": "537100"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "Close": "62.790001",
+   "Adj Close": "62.79",
+   "Volume": "400413"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FBCG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1605,
+ "totalRows": 1609,
  "headers": [
   "Date",
   "Close",
@@ -3639,6 +3639,30 @@
    "Close": "59.43",
    "Adj Close": "59.43",
    "Volume": "495600"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "Close": "60.029999",
+   "Adj Close": "60.03",
+   "Volume": "507500"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "Close": "60.810001",
+   "Adj Close": "60.81",
+   "Volume": "662400"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "Close": "61.150002",
+   "Adj Close": "61.15",
+   "Volume": "616700"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "Close": "60.181499",
+   "Adj Close": "60.18",
+   "Volume": "1018404"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FIGB",
  "page": 4,
  "pageSize": 250,
- "totalRows": 847,
+ "totalRows": 998,
  "headers": [
   "Name",
   "Ticker",
@@ -14,56 +14,1172 @@
  ],
  "rows": [
   {
+   "Name": "AASET 2026-1A A1",
+   "Ticker": "-",
+   "Identifier": "00042HAA0",
+   "Weight": "0.0383217111",
+   "Market Value": "246653.11",
+   "Shares Held": "248642.25",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "83368RCC4",
+   "Weight": "0.0619258769",
+   "Market Value": "398578.5",
+   "Shares Held": "396000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MITSUBISHI UFJ FINANCIAL GROUP INC",
+   "Ticker": "-",
+   "Identifier": "606822DU5",
+   "Weight": "0.030797319",
+   "Market Value": "198223.26",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WILLIS ENGINE STRUCTURED TRUST VI",
+   "Ticker": "-",
+   "Identifier": "97064GAA1",
+   "Weight": "0.0284678606",
+   "Market Value": "183229.98",
+   "Shares Held": "195671.411",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CNC1",
+   "Weight": "0.2155986727",
+   "Market Value": "1387675.07",
+   "Shares Held": "1434000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SUBWAY FDG LLC ISSUER",
+   "Ticker": "-",
+   "Identifier": "864300AL2",
+   "Weight": "0.0158489747",
+   "Market Value": "102010.03",
+   "Shares Held": "107092.5",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "UNITED STATES TREASURY BOND",
+   "Ticker": "-",
+   "Identifier": "912810UP1",
+   "Weight": "1.1760953231",
+   "Market Value": "7569796.88",
+   "Shares Held": "8350000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BMP 2024-MF23",
+   "Ticker": "-",
+   "Identifier": "05593JAA8",
+   "Weight": "0.0898579193",
+   "Market Value": "578359.75",
+   "Shares Held": "578000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "DB MASTER FIN LLC",
+   "Ticker": "-",
+   "Identifier": "233046AU5",
+   "Weight": "0.0211920834",
+   "Market Value": "136400.31",
+   "Shares Held": "138950",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "SAMMONS FINANCIAL GROUP INC",
+   "Ticker": "-",
+   "Identifier": "79588TAG5",
+   "Weight": "0.0505625383",
+   "Market Value": "325439.73",
+   "Shares Held": "341000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "COREBRIDGE FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "21871XAK5",
+   "Weight": "0.0002558457",
+   "Market Value": "1646.72",
+   "Shares Held": "2000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DUKE ENERGY CORP NEW",
+   "Ticker": "-",
+   "Identifier": "26441CCE3",
+   "Weight": "0.1079715768",
+   "Market Value": "694946.14",
+   "Shares Held": "695000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SUMISHO AIR LEASE CORP",
+   "Ticker": "-",
+   "Identifier": "873923AE6",
+   "Weight": "0.0857409594",
+   "Market Value": "551861.43",
+   "Shares Held": "564000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "36179WTZ1",
+   "Weight": "0.3653219241",
+   "Market Value": "2351350.87",
+   "Shares Held": "2700000.287",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3142J6DQ3",
+   "Weight": "0.003792293",
+   "Market Value": "24408.64",
+   "Shares Held": "25270.919",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "AMERICAN HOMES 4 RENT LP",
+   "Ticker": "-",
+   "Identifier": "02666TAD9",
+   "Weight": "0.0001999416",
+   "Market Value": "1286.9",
+   "Shares Held": "2000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132A5H40",
+   "Weight": "0.0017121999",
+   "Market Value": "11020.37",
+   "Shares Held": "12206.141",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CHARTER COMMUNICATIONS OPERATING LLC / CHARTER COMMUNICATIONS OPERATING CAPITAL",
+   "Ticker": "-",
+   "Identifier": "161175BR4",
+   "Weight": "0.0030814773",
+   "Market Value": "19833.56",
+   "Shares Held": "20000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CNF4",
+   "Weight": "0.3430318944",
+   "Market Value": "2207883.76",
+   "Shares Held": "2256000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UNITED STATES TREASURY BOND",
+   "Ticker": "-",
+   "Identifier": "912810UK2",
+   "Weight": "0.7980207718",
+   "Market Value": "5136365.25",
+   "Shares Held": "5554000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ARES1 2026-RTL",
+   "Ticker": "-",
+   "Identifier": "00193LAA8",
+   "Weight": "0.0234897164",
+   "Market Value": "151188.75",
+   "Shares Held": "151000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CENTENE CORP DEL",
+   "Ticker": "-",
+   "Identifier": "15135BAZ4",
+   "Weight": "0.0006765122",
+   "Market Value": "4354.29",
+   "Shares Held": "5000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140QD4Y7",
+   "Weight": "0.0405117324",
+   "Market Value": "260748.92",
+   "Shares Held": "312728.868",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MARSH and MCLENNAN COS INC",
+   "Ticker": "-",
+   "Identifier": "571748CA8",
+   "Weight": "0.0601239682",
+   "Market Value": "386980.73",
+   "Shares Held": "390000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140A1SZ1",
+   "Weight": "0.0024420092",
+   "Market Value": "15717.7",
+   "Shares Held": "16048.643",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "OCP AEGIS CLO 2025-47 LTD",
+   "Ticker": "-",
+   "Identifier": "67122UAA3",
+   "Weight": "0.0387126358",
+   "Market Value": "249169.25",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "AT and T INC",
+   "Ticker": "-",
+   "Identifier": "00206RGQ9",
+   "Weight": "0.0206913221",
+   "Market Value": "133177.22",
+   "Shares Held": "136000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "31418DSH6",
+   "Weight": "0.0030285096",
+   "Market Value": "19492.64",
+   "Shares Held": "24639.61",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "AVOLON HOLDINGS FUNDING LTD",
+   "Ticker": "-",
+   "Identifier": "05401AAX9",
+   "Weight": "0.0533516742",
+   "Market Value": "343391.67",
+   "Shares Held": "345000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AES CORP",
+   "Ticker": "-",
+   "Identifier": "00130HCG8",
+   "Weight": "0.0582577096",
+   "Market Value": "374968.78",
+   "Shares Held": "425000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BX TRUST 2020-VIV3 B",
+   "Ticker": "-",
+   "Identifier": "05608EAA2",
+   "Weight": "0.072351193",
+   "Market Value": "465679.8",
+   "Shares Held": "500000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140UHGF1",
+   "Weight": "0.0889544938",
+   "Market Value": "572544.96",
+   "Shares Held": "574942.644",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BANK OF AMERICA CORPORATION",
+   "Ticker": "-",
+   "Identifier": "06051GHZ5",
+   "Weight": "0.1354073682",
+   "Market Value": "871533.33",
+   "Shares Held": "948000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "EQUITABLE HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "054561AN5",
+   "Weight": "0.1209201573",
+   "Market Value": "778288.13",
+   "Shares Held": "790000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FLATIRON CLO 29 LTD",
+   "Ticker": "-",
+   "Identifier": "33884HAA2",
+   "Weight": "0.0601272635",
+   "Market Value": "387001.94",
+   "Shares Held": "387000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "COPT DEFENSE PROPERTIES LP",
+   "Ticker": "-",
+   "Identifier": "12713UAA4",
+   "Weight": "0.0187738034",
+   "Market Value": "120835.34",
+   "Shares Held": "124000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OHA CREDIT FUNDING 18 LTD",
+   "Ticker": "-",
+   "Identifier": "67124RAC4",
+   "Weight": "0.0389275469",
+   "Market Value": "250552.5",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CLW9",
+   "Weight": "0.5932587131",
+   "Market Value": "3818438.75",
+   "Shares Held": "3934000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "36179WTY4",
+   "Weight": "0.0653141928",
+   "Market Value": "420386.99",
+   "Shares Held": "502036.438",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "META PLATFORMS INC",
+   "Ticker": "-",
+   "Identifier": "30303MAH5",
+   "Weight": "0.0557745267",
+   "Market Value": "358986.07",
+   "Shares Held": "373000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SUMISHO AIR LEASE CORP",
+   "Ticker": "-",
+   "Identifier": "873923AA4",
+   "Weight": "0.0253222417",
+   "Market Value": "162983.58",
+   "Shares Held": "164000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132DMSD8",
+   "Weight": "0.0068671998",
+   "Market Value": "44199.91",
+   "Shares Held": "51227.358",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BANK OF AMERICA CORPORATION",
+   "Ticker": "-",
+   "Identifier": "06051GLS6",
+   "Weight": "0.2109692757",
+   "Market Value": "1357878.51",
+   "Shares Held": "1333000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SUN CMNTYS OPER LTD PRTNRSHP",
+   "Ticker": "-",
+   "Identifier": "866677AE7",
+   "Weight": "0.1034599043",
+   "Market Value": "665907.3",
+   "Shares Held": "750000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "TACO BELL FDG LLC",
+   "Ticker": "-",
+   "Identifier": "87342RAK0",
+   "Weight": "0.0856403267",
+   "Market Value": "551213.72",
+   "Shares Held": "565000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140W2AB7",
+   "Weight": "0.0074205185",
+   "Market Value": "47761.28",
+   "Shares Held": "48995.16",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "TARGA RES CORP",
+   "Ticker": "-",
+   "Identifier": "87612GAC5",
+   "Weight": "0.0160979143",
+   "Market Value": "103612.3",
+   "Shares Held": "100000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140W3QE2",
+   "Weight": "0.0255572278",
+   "Market Value": "164496.04",
+   "Shares Held": "183082.666",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "SAMMONS FINANCIAL GROUP GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "79587J2B8",
+   "Weight": "0.0294980437",
+   "Market Value": "189860.63",
+   "Shares Held": "190000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FHLMC MFD HSG COP GTD (FREDMAC",
+   "Ticker": "-",
+   "Identifier": "3142GUPN7",
+   "Weight": "0.0264635835",
+   "Market Value": "170329.69",
+   "Shares Held": "166633.105",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140QNCM2",
+   "Weight": "0.0042086108",
+   "Market Value": "27088.22",
+   "Shares Held": "32549.22",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "VSP OPTICAL GROUP INC",
+   "Ticker": "-",
+   "Identifier": "91836LAA0",
+   "Weight": "0.0330599012",
+   "Market Value": "212786.1",
+   "Shares Held": "218000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VOLOFIN FINANCE DESIGNATED ACTIVITY CO",
+   "Ticker": "-",
+   "Identifier": "92873RAA9",
+   "Weight": "0.0137805295",
+   "Market Value": "88696.73",
+   "Shares Held": "88484.08",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "DELL INTERNATIONAL LLC / EMC CORP",
+   "Ticker": "-",
+   "Identifier": "24703DBL4",
+   "Weight": "0.0317277487",
+   "Market Value": "204211.86",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BARCLAYS PLC",
+   "Ticker": "-",
+   "Identifier": "06738EDM4",
+   "Weight": "0.1603414911",
+   "Market Value": "1032018.83",
+   "Shares Held": "1048000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PUGET ENERGY INC",
+   "Ticker": "-",
+   "Identifier": "745310AN2",
+   "Weight": "0.0375181756",
+   "Market Value": "241481.25",
+   "Shares Held": "255000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ATHENE GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "04685A4C2",
+   "Weight": "0.0716928369",
+   "Market Value": "461442.37",
+   "Shares Held": "470000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132DSA36",
+   "Weight": "0.1185427963",
+   "Market Value": "762986.53",
+   "Shares Held": "976017.097",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "ARES LXX CLO LTD / ARES LXX CLO LLC",
+   "Ticker": "-",
+   "Identifier": "039951AS7",
+   "Weight": "0.0389206331",
+   "Market Value": "250508",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "MORGAN STANLEY",
+   "Ticker": "-",
+   "Identifier": "61747YEU5",
+   "Weight": "0.0607378505",
+   "Market Value": "390931.91",
+   "Shares Held": "400000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140QKLU0",
+   "Weight": "0.0165193763",
+   "Market Value": "106324.99",
+   "Shares Held": "114671.378",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "OMEGA HEALTHCARE INVESTORS INC",
+   "Ticker": "-",
+   "Identifier": "681936BN9",
+   "Weight": "0.0950345322",
+   "Market Value": "611678.4",
+   "Shares Held": "704000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "VOYA CLO 2020-2 LTD / VOYA CLO 2020-2 LLC",
+   "Ticker": "-",
+   "Identifier": "92918HAT7",
+   "Weight": "0.0622789791",
+   "Market Value": "400851.2",
+   "Shares Held": "400000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "JACKSON FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "46817MAL1",
+   "Weight": "0.046242733",
+   "Market Value": "297635.82",
+   "Shares Held": "336000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CHARTER COMMUNICATIONS OPERATING LLC / CHARTER COMMUNICATIONS OPERATING CAPITAL",
+   "Ticker": "-",
+   "Identifier": "161175BX1",
+   "Weight": "0.2021619668",
+   "Market Value": "1301191.32",
+   "Shares Held": "1564000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CONAGRA BRANDS INC",
+   "Ticker": "-",
+   "Identifier": "205887AX0",
+   "Weight": "0.0200450598",
+   "Market Value": "129017.63",
+   "Shares Held": "117000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PLAINS ALL AM PIPELN/PAA FIN C",
+   "Ticker": "-",
+   "Identifier": "72650RBR2",
+   "Weight": "0.1393824627",
+   "Market Value": "897118.55",
+   "Shares Held": "914000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NTT FINANCE CORP",
+   "Ticker": "-",
+   "Identifier": "62954WAQ8",
+   "Weight": "0.030932109",
+   "Market Value": "199090.82",
+   "Shares Held": "200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "DB MASTER FIN LLC",
+   "Ticker": "-",
+   "Identifier": "233046BA8",
+   "Weight": "0.0290061088",
+   "Market Value": "186694.35",
+   "Shares Held": "189000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "RR 16 LTD",
+   "Ticker": "-",
+   "Identifier": "74971CAU7",
+   "Weight": "0.0388199943",
+   "Market Value": "249860.25",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "ATHENE GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "04685A4G3",
+   "Weight": "0.0238228617",
+   "Market Value": "153333",
+   "Shares Held": "154000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BX COML MTG TR 2024-MDHS",
+   "Ticker": "-",
+   "Identifier": "12433BAA5",
+   "Weight": "0.0100132537",
+   "Market Value": "64449.11",
+   "Shares Held": "64348.569",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UNITED STATES TREASURY BOND",
+   "Ticker": "-",
+   "Identifier": "912810TT5",
+   "Weight": "0.6707313374",
+   "Market Value": "4317082.03",
+   "Shares Held": "5175000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "UNITED STATES TREASURY BOND",
+   "Ticker": "-",
+   "Identifier": "912810TR9",
+   "Weight": "0.0355474453",
+   "Market Value": "228796.88",
+   "Shares Held": "300000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "WESTERN GAS PARTNERS LP",
+   "Ticker": "-",
+   "Identifier": "958667AH0",
+   "Weight": "0.0884375309",
+   "Market Value": "569217.59",
+   "Shares Held": "580000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "MORGAN STANLEY",
+   "Ticker": "-",
+   "Identifier": "61747YFT7",
+   "Weight": "0.073437075",
+   "Market Value": "472668.95",
+   "Shares Held": "480000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140W5QL1",
+   "Weight": "0.0125708496",
+   "Market Value": "80910.77",
+   "Shares Held": "97958.084",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "DOMINOS PIZZA MASTER ISSUER LL DOMINOS SPV CDN HLDG CO INC DOMINOS PIZZA DISTR LLC",
+   "Ticker": "-",
+   "Identifier": "25755TAR1",
+   "Weight": "0.1579783462",
+   "Market Value": "1016808.73",
+   "Shares Held": "1040000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FANNIE MAE",
+   "Ticker": "-",
+   "Identifier": "3140W0S97",
+   "Weight": "0.0121887777",
+   "Market Value": "78451.61",
+   "Shares Held": "94055.579",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CENTENE CORP DEL",
+   "Ticker": "-",
+   "Identifier": "15135BAT8",
+   "Weight": "0.0690650991",
+   "Market Value": "444529.25",
+   "Shares Held": "456000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "36179WLQ9",
+   "Weight": "0.053056283",
+   "Market Value": "341490.42",
+   "Shares Held": "392125.333",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "MSCI INC",
+   "Ticker": "-",
+   "Identifier": "55354GAS9",
+   "Weight": "0.012238332",
+   "Market Value": "78770.56",
+   "Shares Held": "83000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "ONEOK INC",
+   "Ticker": "-",
+   "Identifier": "682680CC5",
+   "Weight": "0.0050445154",
+   "Market Value": "32468.42",
+   "Shares Held": "33000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "21H062693",
+   "Weight": "-0.0440379425",
+   "Market Value": "-283444.95",
+   "Shares Held": "-275000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CNT4",
+   "Weight": "3.2960880198",
+   "Market Value": "21214876.31",
+   "Shares Held": "21955000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140X64A6",
+   "Weight": "0.0841043516",
+   "Market Value": "541327.6",
+   "Shares Held": "583427.936",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "36179TEZ4",
+   "Weight": "0.0191451146",
+   "Market Value": "123225.24",
+   "Shares Held": "136204.377",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "SUBWAY FDG LLC ISSUER",
+   "Ticker": "-",
+   "Identifier": "864300AJ7",
+   "Weight": "0.0319269026",
+   "Market Value": "205493.69",
+   "Shares Held": "212220",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FNMA/FHLG TBA ISSUER",
+   "Ticker": "-",
+   "Identifier": "01F022691",
+   "Weight": "-1.195146913",
+   "Market Value": "-7692420.16",
+   "Shares Held": "-9425000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CPF2",
+   "Weight": "1.5105200475",
+   "Market Value": "9722281.62",
+   "Shares Held": "10170000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SIXTH STREET SPECIALTY LENDING INC",
+   "Ticker": "-",
+   "Identifier": "83012AAC3",
+   "Weight": "0.0023520223",
+   "Market Value": "15138.51",
+   "Shares Held": "15000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "AIMCO CLO 11 LTD",
+   "Ticker": "-",
+   "Identifier": "00140NAW0",
+   "Weight": "0.0388563113",
+   "Market Value": "250094",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140XCCN6",
+   "Weight": "0.002108592",
+   "Market Value": "13571.7",
+   "Shares Held": "16980.862",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "36179W2U1",
+   "Weight": "0.2346527796",
+   "Market Value": "1510314.55",
+   "Shares Held": "1803654.622",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GREEN LAKES PARK CLO LLC",
+   "Ticker": "-",
+   "Identifier": "39310AAC4",
+   "Weight": "0.0388417068",
+   "Market Value": "250000",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "ARES STRATEGIC INCOME FUND",
+   "Ticker": "-",
+   "Identifier": "04020EAM9",
+   "Weight": "0.0188832251",
+   "Market Value": "121539.62",
+   "Shares Held": "122000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "CEDAR FUNDING XX CLO LTD",
+   "Ticker": "-",
+   "Identifier": "15032XAA5",
+   "Weight": "0.0495622664",
+   "Market Value": "319001.6",
+   "Shares Held": "319000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "TARGA RES CORP",
+   "Ticker": "-",
+   "Identifier": "87612GAT8",
+   "Weight": "0.0324925746",
+   "Market Value": "209134.57",
+   "Shares Held": "216000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "COLUMBIA PIPELINES HOLDING CO LLC",
+   "Ticker": "-",
+   "Identifier": "19828AAF4",
+   "Weight": "0.0815130769",
+   "Market Value": "524649.17",
+   "Shares Held": "539000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "D2-NATIXIS MULTIFAMILY",
+   "Ticker": "-",
+   "Identifier": "23348GAA5",
+   "Weight": "0.0441303376",
+   "Market Value": "284039.64",
+   "Shares Held": "286000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132DVLQ6",
+   "Weight": "0.0152106951",
+   "Market Value": "97901.82",
+   "Shares Held": "116936.312",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BENEFIT STR PARTNERS CLO XXXIII LTD / BENEFIT STR PARTNERS CLO XXXIII LLC",
+   "Ticker": "-",
+   "Identifier": "08179DAL3",
+   "Weight": "0.0427523675",
+   "Market Value": "275170.5",
+   "Shares Held": "275000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "COREBRIDGE FINANCIAL INC",
+   "Ticker": "-",
+   "Identifier": "21871XAR0",
+   "Weight": "0.0513037312",
+   "Market Value": "330210.33",
+   "Shares Held": "322000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132DVL94",
+   "Weight": "0.0785153128",
+   "Market Value": "505354.42",
+   "Shares Held": "606550.814",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CEDAR FDG XII CLO LTD / CEDAR FDG XII CLO LLC",
+   "Ticker": "-",
+   "Identifier": "15033TBA2",
+   "Weight": "0.0186547209",
+   "Market Value": "120068.88",
+   "Shares Held": "120000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "LPL HOLDINGS INC",
+   "Ticker": "-",
+   "Identifier": "50212YAN4",
+   "Weight": "0.0325964249",
+   "Market Value": "209802.99",
+   "Shares Held": "210000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "SIXTH STREET SPECIALTY LENDING INC",
+   "Ticker": "-",
+   "Identifier": "83012AAD1",
+   "Weight": "0.0752871599",
+   "Market Value": "484576.8",
+   "Shares Held": "490000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA GUARANTEED PASS THRU CERT",
+   "Ticker": "-",
+   "Identifier": "36179XDC7",
+   "Weight": "0.0121662666",
+   "Market Value": "78306.72",
+   "Shares Held": "87583.241",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "CITIZENS FINANCIAL GRP INC",
+   "Ticker": "-",
+   "Identifier": "174610AW5",
+   "Weight": "0.0467749638",
+   "Market Value": "301061.46",
+   "Shares Held": "355000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "BARCLAYS PLC",
+   "Ticker": "-",
+   "Identifier": "06738EDG7",
+   "Weight": "0.0505458829",
+   "Market Value": "325332.53",
+   "Shares Held": "333000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "HASBRO INC",
+   "Ticker": "-",
+   "Identifier": "418056BB2",
+   "Weight": "0.0719295196",
+   "Market Value": "462965.75",
+   "Shares Held": "473000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "21H0526A1",
+   "Weight": "1.4487296847",
+   "Market Value": "9324575.34",
+   "Shares Held": "9400000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BAIN CAP CR CLO 2023-2 LTD / BAIN CAP CR CLO 2023-2 LLC",
+   "Ticker": "-",
+   "Identifier": "05684GAS5",
+   "Weight": "0.0390025891",
+   "Market Value": "251035.5",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "CHARTER COMMUNICATIONS OPERATING LLC / CHARTER COMMUNICATIONS OPERATING CAPITAL",
+   "Ticker": "-",
+   "Identifier": "161175CT9",
+   "Weight": "0.186137656",
+   "Market Value": "1198052.76",
+   "Shares Held": "1320000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "OCP CLO 2018-15 LTD",
+   "Ticker": "-",
+   "Identifier": "67112KAG4",
+   "Weight": "0.0389482107",
+   "Market Value": "250685.5",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CQC8",
+   "Weight": "0.177751789",
+   "Market Value": "1144078.13",
+   "Shares Held": "1200000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140XRMS1",
+   "Weight": "0.0072264995",
+   "Market Value": "46512.5",
+   "Shares Held": "58264.636",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132DVMT9",
+   "Weight": "0.0281920006",
+   "Market Value": "181454.44",
+   "Shares Held": "176706.085",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140QFNP0",
+   "Weight": "0.0022248266",
+   "Market Value": "14319.83",
+   "Shares Held": "17065.738",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "Phillips Edison Grocery Center Operating Partnership I LP",
+   "Ticker": "-",
+   "Identifier": "71845JAC2",
+   "Weight": "0.0302417987",
+   "Market Value": "194647.72",
+   "Shares Held": "204000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132DU5L7",
+   "Weight": "0.0074963267",
+   "Market Value": "48249.21",
+   "Shares Held": "55819.374",
+   "Asset Category": "ABS-MBS"
+  },
+  {
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3132DUHC4",
-   "Weight": "0.0649838009",
-   "Market Value": "324006.07",
-   "Shares Held": "342373.776",
+   "Weight": "0.0475897168",
+   "Market Value": "306305.52",
+   "Shares Held": "331026.586",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "21H0606A4",
+   "Weight": "-0.117928712",
+   "Market Value": "-759034.05",
+   "Shares Held": "-750000",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3132DVL52",
-   "Weight": "0.0105269358",
-   "Market Value": "52486.79",
-   "Shares Held": "61260.835",
+   "Weight": "0.0077533391",
+   "Market Value": "49903.44",
+   "Shares Held": "59695.005",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "OCP CLO 2025-44",
    "Ticker": "-",
    "Identifier": "67570UAA0",
-   "Weight": "0.0502686914",
-   "Market Value": "250637.25",
+   "Weight": "0.0389276246",
+   "Market Value": "250553",
    "Shares Held": "250000",
    "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3142GXVB0",
+   "Weight": "0.0469351967",
+   "Market Value": "302092.78",
+   "Shares Held": "295626.97",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140XSBA0",
+   "Weight": "0.0981223687",
+   "Market Value": "631552.89",
+   "Shares Held": "597031.064",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "COREBRIDGE GLOBAL FUNDING",
    "Ticker": "-",
    "Identifier": "00138CBB3",
-   "Weight": "0.0168651565",
-   "Market Value": "84088.85",
+   "Weight": "0.0130665288",
+   "Market Value": "84101.15",
    "Shares Held": "84000",
    "Asset Category": "DBT"
   },
   {
    "Name": "CENTENE CORP DEL",
-   "Ticker": "CNC",
+   "Ticker": "-",
    "Identifier": "15135BAX9",
-   "Weight": "0.0574831501",
-   "Market Value": "286608.19",
-   "Shares Held": "329000",
+   "Weight": "0.048016365",
+   "Market Value": "309051.59",
+   "Shares Held": "354000",
    "Asset Category": "DBT"
   },
   {
    "Name": "VERIZON COMMUNICATIONS INC",
-   "Ticker": "VZ",
+   "Ticker": "-",
    "Identifier": "92343VGY4",
-   "Weight": "0.0175652155",
-   "Market Value": "87579.31",
+   "Weight": "0.0132028461",
+   "Market Value": "84978.54",
    "Shares Held": "90000",
    "Asset Category": "DBT"
   },
@@ -71,17 +1187,17 @@
    "Name": "WILLIAMS COS INC",
    "Ticker": "-",
    "Identifier": "969457CJ7",
-   "Weight": "0.020734027",
-   "Market Value": "103378.85",
-   "Shares Held": "100000",
+   "Weight": "0.0185540277",
+   "Market Value": "119420.78",
+   "Shares Held": "118000",
    "Asset Category": "DBT"
   },
   {
    "Name": "AMERICAN TOWER CORP",
    "Ticker": "-",
    "Identifier": "03027XCD0",
-   "Weight": "0.020667817",
-   "Market Value": "103048.73",
+   "Weight": "0.0156069458",
+   "Market Value": "100452.24",
    "Shares Held": "100000",
    "Asset Category": "DBT"
   },
@@ -89,62 +1205,98 @@
    "Name": "MORGAN STANLEY PRIVATE BANK NA",
    "Ticker": "-",
    "Identifier": "61776NZW6",
-   "Weight": "0.0651795569",
-   "Market Value": "324982.1",
+   "Weight": "0.0498546466",
+   "Market Value": "320883.47",
    "Shares Held": "330000",
    "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "21H050698",
+   "Weight": "0.556820079",
+   "Market Value": "3583905.84",
+   "Shares Held": "3700000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "BX COML MTG TR 2024-XL4",
    "Ticker": "-",
    "Identifier": "05611VAC5",
-   "Weight": "0.1231706321",
-   "Market Value": "614122.78",
-   "Shares Held": "612973.451",
+   "Weight": "0.083624989",
+   "Market Value": "538242.24",
+   "Shares Held": "536899.991",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "BARCLAYS PLC",
+   "Ticker": "-",
+   "Identifier": "06738ECV5",
+   "Weight": "0.0452576731",
+   "Market Value": "291295.6",
+   "Shares Held": "300000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FNMA/FHLG TBA ISSUER",
+   "Ticker": "-",
+   "Identifier": "01F052698",
+   "Weight": "0.5038175746",
+   "Market Value": "3242761.56",
+   "Shares Held": "3275000",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "HUT 8 DC LLC",
    "Ticker": "-",
    "Identifier": "44813DAA4",
-   "Weight": "0.0665695524",
-   "Market Value": "331912.55",
-   "Shares Held": "328000",
+   "Weight": "0.0574893461",
+   "Market Value": "370023.3",
+   "Shares Held": "381000",
    "Asset Category": "DBT"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140XKEA4",
-   "Weight": "0.0220645735",
-   "Market Value": "110012.89",
-   "Shares Held": "117418.789",
+   "Weight": "0.0163891215",
+   "Market Value": "105486.62",
+   "Shares Held": "114296.919",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "MORGAN STANLEY",
-   "Ticker": "MS",
+   "Ticker": "-",
    "Identifier": "61747YEY7",
-   "Weight": "0.0622716344",
-   "Market Value": "310483.34",
+   "Weight": "0.0472566569",
+   "Market Value": "304161.82",
    "Shares Held": "290000",
    "Asset Category": "DBT"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3142JCDU1",
+   "Weight": "0.007587642",
+   "Market Value": "48836.95",
+   "Shares Held": "50000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "PUGET ENERGY INC",
    "Ticker": "-",
    "Identifier": "745310AK8",
-   "Weight": "0.0777952155",
-   "Market Value": "387883.16",
+   "Weight": "0.0595708545",
+   "Market Value": "383420.68",
    "Shares Held": "400000",
    "Asset Category": "DBT"
   },
   {
    "Name": "WELLS FARGO and CO",
-   "Ticker": "WFC",
+   "Ticker": "-",
    "Identifier": "95000U3K7",
-   "Weight": "0.0491610693",
-   "Market Value": "245114.7",
+   "Weight": "0.037324775",
+   "Market Value": "240236.45",
    "Shares Held": "240000",
    "Asset Category": "DBT"
   },
@@ -152,71 +1304,98 @@
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3142GVEQ0",
-   "Weight": "0.0486049307",
-   "Market Value": "242341.82",
-   "Shares Held": "233205.12",
+   "Weight": "0.0353706689",
+   "Market Value": "227659.08",
+   "Shares Held": "222174.91",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "AMERICAN TOWER TR I",
    "Ticker": "-",
    "Identifier": "03027WAM4",
-   "Weight": "0.0445122714",
-   "Market Value": "221936.02",
+   "Weight": "0.0342887844",
+   "Market Value": "220695.66",
    "Shares Held": "220000",
    "Asset Category": "ABS-CBDO"
   },
   {
+   "Name": "SAMMONS FINANCIAL GROUP GLOBAL FUNDING",
+   "Ticker": "-",
+   "Identifier": "79587J2F9",
+   "Weight": "0.1600334826",
+   "Market Value": "1030036.37",
+   "Shares Held": "1054000",
+   "Asset Category": "DBT"
+  },
+  {
    "Name": "NNN REIT INC",
-   "Ticker": "NNN",
+   "Ticker": "-",
    "Identifier": "637417AT3",
-   "Weight": "0.0349658786",
-   "Market Value": "174338.17",
-   "Shares Held": "171000",
+   "Weight": "0.0302837648",
+   "Market Value": "194917.83",
+   "Shares Held": "195000",
    "Asset Category": "DBT"
   },
   {
    "Name": "GOLDMAN SACHS GROUP INC (THE)",
-   "Ticker": "GS",
+   "Ticker": "-",
    "Identifier": "38141GZM9",
-   "Weight": "0.0727437161",
-   "Market Value": "362696.63",
-   "Shares Held": "400000",
+   "Weight": "0.1387231293",
+   "Market Value": "892874.83",
+   "Shares Held": "1000000",
    "Asset Category": "DBT"
   },
   {
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3132DMX75",
-   "Weight": "0.0032569291",
-   "Market Value": "16238.89",
-   "Shares Held": "18836.693",
+   "Weight": "0.0023857742",
+   "Market Value": "15355.75",
+   "Shares Held": "18259.493",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FEDERAL HOME LOAN MORTGAGE COR PORATION",
+   "Ticker": "-",
+   "Identifier": "31426FRM1",
+   "Weight": "0.0016172117",
+   "Market Value": "10408.99",
+   "Shares Held": "9901.59",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
    "Ticker": "-",
    "Identifier": "36179VZQ6",
-   "Weight": "0.0136599167",
-   "Market Value": "68107.68",
-   "Shares Held": "82864.619",
+   "Weight": "0.0100962771",
+   "Market Value": "64983.48",
+   "Shares Held": "80855.239",
    "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "RIO GRANDE LNG LLC",
+   "Ticker": "-",
+   "Identifier": "76711AAB3",
+   "Weight": "0.0138204619",
+   "Market Value": "88953.75",
+   "Shares Held": "90000",
+   "Asset Category": "DBT"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140XQW29",
-   "Weight": "0.0209537865",
-   "Market Value": "104474.56",
-   "Shares Held": "128080.344",
+   "Weight": "0.0154706798",
+   "Market Value": "99575.18",
+   "Shares Held": "124734.454",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "CELANESE US HLDGS LLC",
    "Ticker": "-",
    "Identifier": "15089QAY0",
-   "Weight": "0.0148617014",
-   "Market Value": "74099.72",
+   "Weight": "0.0114469773",
+   "Market Value": "73677.1",
    "Shares Held": "69000",
    "Asset Category": "DBT"
   },
@@ -224,71 +1403,134 @@
    "Name": "BENEFIT STREET PARTNERS CLO XXIII LTD",
    "Ticker": "-",
    "Identifier": "08186VAW0",
-   "Weight": "0.055646987",
-   "Market Value": "277453.17",
+   "Weight": "0.0431211353",
+   "Market Value": "277544.03",
    "Shares Held": "277000",
    "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3132DNY49",
+   "Weight": "0.0053197835",
+   "Market Value": "34240.15",
+   "Shares Held": "35013.602",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "AIMCO CLO 21 LTD / AIMCO CLO 21 LLC",
    "Ticker": "-",
    "Identifier": "00901WAQ2",
-   "Weight": "0.0757484767",
-   "Market Value": "377678.22",
+   "Weight": "0.0586872197",
+   "Market Value": "377733.27",
    "Shares Held": "377000",
    "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FNMA/FHLG TBA ISSUER",
+   "Ticker": "-",
+   "Identifier": "01F070690",
+   "Weight": "-0.2120002806",
+   "Market Value": "-1364514.45",
+   "Shares Held": "-1300000",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "EXTENDED STAY AMER TR 2026-ESH2",
    "Ticker": "-",
    "Identifier": "30227WAE3",
-   "Weight": "0.0052911326",
-   "Market Value": "26381.33",
-   "Shares Held": "26233.77",
+   "Weight": "0.0741250191",
+   "Market Value": "477096.82",
+   "Shares Held": "475018.616",
    "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "AES CORP",
+   "Ticker": "-",
+   "Identifier": "00130HCN3",
+   "Weight": "0.0107226058",
+   "Market Value": "69014.77",
+   "Shares Held": "69000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "PK ALIFT LOAN FUNDING",
+   "Ticker": "-",
+   "Identifier": "69292GAA4",
+   "Weight": "0.0385814673",
+   "Market Value": "248325",
+   "Shares Held": "250000",
+   "Asset Category": "ABS-CBDO"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140XMUT1",
-   "Weight": "0.0083948192",
-   "Market Value": "41856.16",
-   "Shares Held": "46985.839",
+   "Weight": "0.0061984264",
+   "Market Value": "39895.43",
+   "Shares Held": "45856.501",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3132DWBG7",
-   "Weight": "0.0094714783",
-   "Market Value": "47224.33",
-   "Shares Held": "61701.376",
+   "Weight": "0.0070504783",
+   "Market Value": "45379.56",
+   "Shares Held": "60539.926",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Ticker": "-",
+   "Identifier": "21H0526A1",
+   "Weight": "-0.7243648423",
+   "Market Value": "-4662287.67",
+   "Shares Held": "-4700000",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "MORGAN STANLEY",
-   "Ticker": "MS",
+   "Ticker": "-",
    "Identifier": "61748UAS1",
-   "Weight": "0.053088404",
-   "Market Value": "264696.2",
+   "Weight": "0.0405074318",
+   "Market Value": "260721.24",
    "Shares Held": "269000",
    "Asset Category": "DBT"
+  },
+  {
+   "Name": "OHA CREDIT FUNDING 22-R LTD",
+   "Ticker": "-",
+   "Identifier": "67128TAC6",
+   "Weight": "0.0581074839",
+   "Market Value": "374001.87",
+   "Shares Held": "374000",
+   "Asset Category": "ABS-CBDO"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140Y9MP6",
+   "Weight": "0.048775074",
+   "Market Value": "313934.93",
+   "Shares Held": "299463.505",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "ATHENE GLOBAL FUNDING",
    "Ticker": "-",
    "Identifier": "04685A3Q2",
-   "Weight": "0.1179899197",
-   "Market Value": "588292",
-   "Shares Held": "580000",
+   "Weight": "0.1453666926",
+   "Market Value": "935635.33",
+   "Shares Held": "930000",
    "Asset Category": "DBT"
   },
   {
    "Name": "MAGNETITE XXVIII LTD",
    "Ticker": "-",
    "Identifier": "55955LAS1",
-   "Weight": "0.0501824992",
-   "Market Value": "250207.5",
+   "Weight": "0.0388761594",
+   "Market Value": "250221.75",
    "Shares Held": "250000",
    "Asset Category": "ABS-CBDO"
   },
@@ -296,17 +1538,26 @@
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "31427QSJ2",
-   "Weight": "0.0417975297",
-   "Market Value": "208400.45",
-   "Shares Held": "225959.929",
+   "Weight": "0.0306703547",
+   "Market Value": "197406.07",
+   "Shares Held": "218873.852",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140Y9L69",
+   "Weight": "0.0309842097",
+   "Market Value": "199426.16",
+   "Shares Held": "198836.198",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "UST NOTES",
    "Ticker": "-",
    "Identifier": "91282CNJ6",
-   "Weight": "0.5429323689",
-   "Market Value": "2707034.38",
+   "Weight": "0.4137487775",
+   "Market Value": "2663044.52",
    "Shares Held": "2740000",
    "Asset Category": "DBT"
   },
@@ -314,53 +1565,53 @@
    "Name": "GNMA GUARANTEED PASS THRU CERT",
    "Ticker": "-",
    "Identifier": "36179XBS4",
-   "Weight": "0.033123125",
-   "Market Value": "165150.29",
-   "Shares Held": "181441.682",
+   "Weight": "0.0244170373",
+   "Market Value": "157157.34",
+   "Shares Held": "176144.202",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "AT and T INC",
    "Ticker": "-",
    "Identifier": "00206RNF5",
-   "Weight": "0.0305195156",
-   "Market Value": "152168.82",
+   "Weight": "0.0232627674",
+   "Market Value": "149728.02",
    "Shares Held": "154000",
    "Asset Category": "DBT"
   },
   {
    "Name": "BARCLAYS PLC",
-   "Ticker": "BCS",
+   "Ticker": "-",
    "Identifier": "06738ECR4",
-   "Weight": "0.2019777788",
-   "Market Value": "1007051.38",
-   "Shares Held": "983000",
+   "Weight": "0.1660667463",
+   "Market Value": "1068868.75",
+   "Shares Held": "1053000",
    "Asset Category": "DBT"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140XQC96",
-   "Weight": "0.0118126122",
-   "Market Value": "58897.11",
-   "Shares Held": "72846.662",
+   "Weight": "0.0087693776",
+   "Market Value": "56443.05",
+   "Shares Held": "71431.322",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "BX COMMERCIAL MORTGAGE TRUST 2026-XL6",
    "Ticker": "-",
    "Identifier": "12433NAE1",
-   "Weight": "0.1801050664",
-   "Market Value": "897995.1",
-   "Shares Held": "899954.03",
+   "Weight": "0.172006215",
+   "Market Value": "1107097.43",
+   "Shares Held": "1102961.326",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "AVOLON HOLDINGS FUNDING LTD",
    "Ticker": "-",
    "Identifier": "05401AAW1",
-   "Weight": "0.0773232133",
-   "Market Value": "385529.78",
+   "Weight": "0.0597470218",
+   "Market Value": "384554.56",
    "Shares Held": "384000",
    "Asset Category": "DBT"
   },
@@ -368,17 +1619,17 @@
    "Name": "DELL INTERNATIONAL LLC / EMC CORP",
    "Ticker": "-",
    "Identifier": "24703DBS9",
-   "Weight": "0.0556684172",
-   "Market Value": "277560.02",
+   "Weight": "0.0424006683",
+   "Market Value": "272906.83",
    "Shares Held": "280000",
    "Asset Category": "DBT"
   },
   {
    "Name": "WELLS FARGO and CO",
-   "Ticker": "WFC",
+   "Ticker": "-",
    "Identifier": "95000U2G7",
-   "Weight": "0.0958000682",
-   "Market Value": "477654.48",
+   "Weight": "0.0737435112",
+   "Market Value": "474641.29",
    "Shares Held": "506000",
    "Asset Category": "DBT"
   },
@@ -386,62 +1637,107 @@
    "Name": "T-MOBILE USA INC",
    "Ticker": "-",
    "Identifier": "87264ACY9",
-   "Weight": "0.0242249696",
-   "Market Value": "120784.52",
-   "Shares Held": "120000",
+   "Weight": "0.0219046764",
+   "Market Value": "140986.83",
+   "Shares Held": "144000",
    "Asset Category": "DBT"
   },
   {
    "Name": "CENOVUS ENERGY INC",
-   "Ticker": "CVE",
+   "Ticker": "-",
    "Identifier": "15135UBB4",
-   "Weight": "0.0386454332",
-   "Market Value": "192684.25",
-   "Shares Held": "193000",
+   "Weight": "0.0318945071",
+   "Market Value": "205285.18",
+   "Shares Held": "211000",
    "Asset Category": "DBT"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3132E0EK4",
-   "Weight": "0.0786554004",
-   "Market Value": "392172",
-   "Shares Held": "456232.467",
+   "Weight": "0.0583715562",
+   "Market Value": "375701.54",
+   "Shares Held": "445310.207",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140BGSE4",
+   "Weight": "0.0040795056",
+   "Market Value": "26257.25",
+   "Shares Held": "24781.715",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "CHENIERE ENERGY PARTNERS LP",
-   "Ticker": "CQP",
+   "Ticker": "-",
    "Identifier": "16411QAX9",
-   "Weight": "0.0336973685",
-   "Market Value": "168013.44",
-   "Shares Held": "168000",
+   "Weight": "0.0312771772",
+   "Market Value": "201311.81",
+   "Shares Held": "207000",
    "Asset Category": "DBT"
   },
   {
    "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
    "Ticker": "-",
    "Identifier": "36179VTV2",
-   "Weight": "0.0150033574",
-   "Market Value": "74806.01",
-   "Shares Held": "91014.276",
+   "Weight": "0.0110927285",
+   "Market Value": "71397.02",
+   "Shares Held": "88731.736",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "SPACE EXPLORATION TECHNOLOGIES CORP",
+   "Ticker": "-",
+   "Identifier": "84615QAC7",
+   "Weight": "0.157682377",
+   "Market Value": "1014903.76",
+   "Shares Held": "1052000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "NISOURCE INC",
+   "Ticker": "-",
+   "Identifier": "65473PAX3",
+   "Weight": "0.0027483258",
+   "Market Value": "17689.27",
+   "Shares Held": "18000",
+   "Asset Category": "DBT"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3133KQUT1",
+   "Weight": "0.009402962",
+   "Market Value": "60521.04",
+   "Shares Held": "61740.182",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA/FHLG TBA ISSUER",
+   "Ticker": "-",
+   "Identifier": "01F032690",
+   "Weight": "0.0585895297",
+   "Market Value": "377104.5",
+   "Shares Held": "425000",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "MAGNE 2023-36A",
    "Ticker": "-",
    "Identifier": "559922AL3",
-   "Weight": "0.05021479",
-   "Market Value": "250368.5",
+   "Weight": "0.0389703505",
+   "Market Value": "250828",
    "Shares Held": "250000",
    "Asset Category": "ABS-CBDO"
   },
   {
    "Name": "OCCIDENTAL PETROLEUM CORP",
-   "Ticker": "OXY",
+   "Ticker": "-",
    "Identifier": "674599EK7",
-   "Weight": "0.0315221126",
-   "Market Value": "157167.72",
+   "Weight": "0.0239910074",
+   "Market Value": "154415.25",
    "Shares Held": "153000",
    "Asset Category": "DBT"
   },
@@ -449,26 +1745,35 @@
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140XQHG5",
-   "Weight": "0.0492343732",
-   "Market Value": "245480.19",
-   "Shares Held": "273931.358",
+   "Weight": "0.0363608419",
+   "Market Value": "234032.21",
+   "Shares Held": "266796.558",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "BX TRUST 2026-LP3",
    "Ticker": "-",
    "Identifier": "05620HAA9",
-   "Weight": "0.0976271799",
-   "Market Value": "486764.37",
+   "Weight": "0.0756506018",
+   "Market Value": "486916.05",
    "Shares Held": "485399.18",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
+   "Ticker": "-",
+   "Identifier": "3133CSUR0",
+   "Weight": "0.00235902",
+   "Market Value": "15183.55",
+   "Shares Held": "14379.077",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "LAKESIDE PK CLO LTD / LAKESIDE PK CLO LLC",
    "Ticker": "-",
    "Identifier": "51218YAA4",
-   "Weight": "0.050115511",
-   "Market Value": "249873.5",
+   "Weight": "0.0388037973",
+   "Market Value": "249756",
    "Shares Held": "250000",
    "Asset Category": "ABS-CBDO"
   },
@@ -476,26 +1781,26 @@
    "Name": "AVOLON HOLDINGS FUNDING LTD",
    "Ticker": "-",
    "Identifier": "05401AAZ4",
-   "Weight": "0.030255219",
-   "Market Value": "150851.05",
+   "Weight": "0.0231962471",
+   "Market Value": "149299.87",
    "Shares Held": "149000",
    "Asset Category": "DBT"
   },
   {
    "Name": "PAYCHEX INC",
-   "Ticker": "PAYX",
+   "Ticker": "-",
    "Identifier": "704326AC1",
-   "Weight": "0.0788076883",
-   "Market Value": "392931.3",
-   "Shares Held": "389000",
+   "Weight": "0.0754018066",
+   "Market Value": "485314.71",
+   "Shares Held": "489000",
    "Asset Category": "DBT"
   },
   {
    "Name": "TCO COML MTG TR 2024-DPM",
    "Ticker": "-",
    "Identifier": "87231EAE7",
-   "Weight": "0.1345454824",
-   "Market Value": "670837.23",
+   "Weight": "0.1040957742",
+   "Market Value": "670000",
    "Shares Held": "670000",
    "Asset Category": "ABS-MBS"
   },
@@ -503,8 +1808,8 @@
    "Name": "CIFC FUNDING 2025-VI LTD",
    "Ticker": "-",
    "Identifier": "171933AA2",
-   "Weight": "0.0211565482",
-   "Market Value": "105485.52",
+   "Weight": "0.0163484122",
+   "Market Value": "105224.6",
    "Shares Held": "105000",
    "Asset Category": "ABS-CBDO"
   },
@@ -512,8 +1817,8 @@
    "Name": "AERCAP IRELAND CAPITAL DAC / AERCAP GLOBAL AVIATION TRUST",
    "Ticker": "-",
    "Identifier": "00774MBD6",
-   "Weight": "0.0303657034",
-   "Market Value": "151401.92",
+   "Weight": "0.0234255608",
+   "Market Value": "150775.82",
    "Shares Held": "150000",
    "Asset Category": "DBT"
   },
@@ -521,35 +1826,35 @@
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3133APFE4",
-   "Weight": "0.0029588115",
-   "Market Value": "14752.49",
-   "Shares Held": "18267.743",
+   "Weight": "0.002220164",
+   "Market Value": "14289.82",
+   "Shares Held": "18120.273",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
    "Ticker": "-",
    "Identifier": "3618N5GP8",
-   "Weight": "0.030085478",
-   "Market Value": "150004.73",
-   "Shares Held": "148634.378",
+   "Weight": "0.0219505625",
+   "Market Value": "141282.17",
+   "Shares Held": "141768.298",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "MORGAN STANLEY",
-   "Ticker": "MS",
+   "Ticker": "-",
    "Identifier": "61747YEL5",
-   "Weight": "0.2141004984",
-   "Market Value": "1067494.67",
-   "Shares Held": "1184000",
+   "Weight": "0.1823462627",
+   "Market Value": "1173649.91",
+   "Shares Held": "1324000",
    "Asset Category": "DBT"
   },
   {
    "Name": "BX TR 2025-TAIL",
    "Ticker": "-",
    "Identifier": "123912AA5",
-   "Weight": "0.0200751357",
-   "Market Value": "100093.65",
+   "Weight": "0.015565814",
+   "Market Value": "100187.5",
    "Shares Held": "100000",
    "Asset Category": "ABS-MBS"
   },
@@ -557,17 +1862,17 @@
    "Name": "CHARTER COMMUNICATIONS OPERATING LLC / CHARTER COMMUNICATIONS OPERATING CAPITAL",
    "Ticker": "-",
    "Identifier": "161175CQ5",
-   "Weight": "0.0074288771",
-   "Market Value": "37040.02",
+   "Weight": "0.0056880619",
+   "Market Value": "36610.53",
    "Shares Held": "36000",
    "Asset Category": "DBT"
   },
   {
    "Name": "UNUM GROUP",
-   "Ticker": "UNM",
+   "Ticker": "-",
    "Identifier": "91529YAT3",
-   "Weight": "0.0456041072",
-   "Market Value": "227379.86",
+   "Weight": "0.0335182706",
+   "Market Value": "215736.34",
    "Shares Held": "230000",
    "Asset Category": "DBT"
   },
@@ -575,26 +1880,35 @@
    "Name": "FLATIRON CLO LT",
    "Ticker": "-",
    "Identifier": "33883PAQ0",
-   "Weight": "0.0501868113",
-   "Market Value": "250229",
+   "Weight": "0.0388727801",
+   "Market Value": "250200",
    "Shares Held": "250000",
    "Asset Category": "ABS-CBDO"
   },
   {
-   "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
+   "Name": "LBA TRUST 2026-LBA6",
    "Ticker": "-",
-   "Identifier": "21H052660",
-   "Weight": "-0.8778733763",
-   "Market Value": "-4377033.95",
-   "Shares Held": "-4350000",
+   "Identifier": "50177CAE5",
+   "Weight": "0.0576410929",
+   "Market Value": "371000",
+   "Shares Held": "371000",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "3140XFG21",
+   "Weight": "0.0017518371",
+   "Market Value": "11275.49",
+   "Shares Held": "12410.357",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "MORGAN STANLEY",
-   "Ticker": "MS",
+   "Ticker": "-",
    "Identifier": "61747YFZ3",
-   "Weight": "0.0413160569",
-   "Market Value": "205999.85",
+   "Weight": "0.0315668881",
+   "Market Value": "203176.5",
    "Shares Held": "203000",
    "Asset Category": "DBT"
   },
@@ -602,8 +1916,8 @@
    "Name": "ELP 2025-ELP",
    "Ticker": "-",
    "Identifier": "290154AA1",
-   "Weight": "0.0237979819",
-   "Market Value": "118655.58",
+   "Weight": "0.0181985453",
+   "Market Value": "117132.76",
    "Shares Held": "120000",
    "Asset Category": "ABS-MBS"
   },
@@ -611,26 +1925,35 @@
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140Y8US3",
-   "Weight": "0.0464022016",
-   "Market Value": "231359.12",
-   "Shares Held": "222285.531",
+   "Weight": "0.0352712171",
+   "Market Value": "227018.97",
+   "Shares Held": "221482.681",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3132DPJR0",
-   "Weight": "0.0129269011",
-   "Market Value": "64452.9",
-   "Shares Held": "79167.531",
+   "Weight": "0.00957126",
+   "Market Value": "61604.27",
+   "Shares Held": "77351.261",
    "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "GOLDMAN SACHS GROUP INC (THE)",
+   "Ticker": "-",
+   "Identifier": "38145GAV2",
+   "Weight": "0.0111222031",
+   "Market Value": "71586.73",
+   "Shares Held": "72000",
+   "Asset Category": "DBT"
   },
   {
    "Name": "PALMER SQUARE CLO 2025-5 LTD",
    "Ticker": "-",
    "Identifier": "696914AA8",
-   "Weight": "0.0501556237",
-   "Market Value": "250073.5",
+   "Weight": "0.0389227306",
+   "Market Value": "250521.5",
    "Shares Held": "250000",
    "Asset Category": "ABS-CBDO"
   },
@@ -638,134 +1961,152 @@
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "3140KUKN1",
-   "Weight": "0.0025834147",
-   "Market Value": "12880.78",
-   "Shares Held": "15833.625",
+   "Weight": "0.0019296669",
+   "Market Value": "12420.07",
+   "Shares Held": "15643.935",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "31418FTA5",
-   "Weight": "0.0054973039",
-   "Market Value": "27409.29",
-   "Shares Held": "27835.849",
+   "Weight": "0.0040945871",
+   "Market Value": "26354.32",
+   "Shares Held": "27276.509",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140QMKH6",
-   "Weight": "0.0081735214",
-   "Market Value": "40752.78",
-   "Shares Held": "46563.961",
+   "Weight": "0.0060991299",
+   "Market Value": "39256.32",
+   "Shares Held": "45980.731",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "31418DUA8",
-   "Weight": "0.0034984878",
-   "Market Value": "17443.29",
-   "Shares Held": "19971.516",
+   "Weight": "0.0026050869",
+   "Market Value": "16767.33",
+   "Shares Held": "19435.736",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "DEUTSCHE BANK AG NEW YORK BNCH",
    "Ticker": "-",
    "Identifier": "251526CX5",
-   "Weight": "0.2255650968",
-   "Market Value": "1124656.6",
-   "Shares Held": "1119000",
+   "Weight": "0.2272692026",
+   "Market Value": "1462791.04",
+   "Shares Held": "1469000",
    "Asset Category": "DBT"
   },
   {
    "Name": "DELL INTERNATIONAL LLC / EMC CORP",
    "Ticker": "-",
    "Identifier": "24703DBT7",
-   "Weight": "0.2175234901",
-   "Market Value": "1084561.54",
-   "Shares Held": "1092000",
+   "Weight": "0.1752177172",
+   "Market Value": "1127767.88",
+   "Shares Held": "1162000",
    "Asset Category": "DBT"
   },
   {
    "Name": "WELLS FARGO and CO",
-   "Ticker": "WFC",
+   "Ticker": "-",
    "Identifier": "95000U3B7",
-   "Weight": "0.137783029",
-   "Market Value": "686979.48",
-   "Shares Held": "690000",
+   "Weight": "0.1200701237",
+   "Market Value": "772816.99",
+   "Shares Held": "790000",
    "Asset Category": "DBT"
   },
   {
    "Name": "VICI PROPERTIES LP",
    "Ticker": "-",
    "Identifier": "925650AC7",
-   "Weight": "0.1821457302",
-   "Market Value": "908169.75",
-   "Shares Held": "908000",
+   "Weight": "0.146866043",
+   "Market Value": "945285.72",
+   "Shares Held": "958000",
    "Asset Category": "DBT"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140W6E81",
-   "Weight": "0.1369362117",
-   "Market Value": "682757.29",
-   "Shares Held": "647014.278",
+   "Weight": "0.1013824976",
+   "Market Value": "652536.32",
+   "Shares Held": "624550.883",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA GTD MTG PASS THRU CTF",
+   "Ticker": "-",
+   "Identifier": "31418FVX2",
+   "Weight": "0.0370127176",
+   "Market Value": "238227.93",
+   "Shares Held": "246643.734",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "VERIZON COMMUNICATIONS INC",
-   "Ticker": "VZ",
+   "Ticker": "-",
    "Identifier": "92343VEA8",
-   "Weight": "0.0234074586",
-   "Market Value": "116708.45",
-   "Shares Held": "120000",
+   "Weight": "0.0203444672",
+   "Market Value": "130944.73",
+   "Shares Held": "138000",
    "Asset Category": "DBT"
+  },
+  {
+   "Name": "GNMA GUARANTEED PASS THRU CERT",
+   "Ticker": "-",
+   "Identifier": "3618N6DA2",
+   "Weight": "0.0638090285",
+   "Market Value": "410699.18",
+   "Shares Held": "423573.437",
+   "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FTAI MRE 2026-1 CAYMAN LTD",
    "Ticker": "-",
    "Identifier": "30345KAA4",
-   "Weight": "0.0502311359",
-   "Market Value": "250450",
-   "Shares Held": "250000",
+   "Weight": "0.0378799613",
+   "Market Value": "243809.84",
+   "Shares Held": "244791.67",
    "Asset Category": "ABS-CBDO"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "31418DB92",
-   "Weight": "0.0026401581",
-   "Market Value": "13163.7",
-   "Shares Held": "14311.648",
+   "Weight": "0.0019368945",
+   "Market Value": "12466.59",
+   "Shares Held": "13855.928",
    "Asset Category": "ABS-MBS"
   },
   {
-   "Name": "FNMA/FHLG TBA ISSUER",
+   "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
-   "Identifier": "01F020661",
-   "Weight": "1.8133599221",
-   "Market Value": "9041324.36",
-   "Shares Held": "11300000",
+   "Identifier": "3132CWJE5",
+   "Weight": "0.0102891619",
+   "Market Value": "66224.96",
+   "Shares Held": "71375.435",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "HPS CORPORATE LENDING FUND",
    "Ticker": "-",
    "Identifier": "40440VBD6",
-   "Weight": "0.1613837807",
-   "Market Value": "804651.68",
+   "Weight": "0.1246965236",
+   "Market Value": "802594.26",
    "Shares Held": "830000",
    "Asset Category": "DBT"
   },
   {
    "Name": "ORACLE CORP",
-   "Ticker": "ORCL",
+   "Ticker": "-",
    "Identifier": "68389XDT9",
-   "Weight": "0.0221602282",
-   "Market Value": "110489.82",
+   "Weight": "0.0156989292",
+   "Market Value": "101044.28",
    "Shares Held": "128000",
    "Asset Category": "DBT"
   },
@@ -773,35 +2114,44 @@
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140QT3X5",
-   "Weight": "0.0176028994",
-   "Market Value": "87767.2",
-   "Shares Held": "83345.278",
+   "Weight": "0.0127422938",
+   "Market Value": "82014.25",
+   "Shares Held": "78526.258",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "GNMA II GTD PASS THRU CTF MULTIPLE ISSUER",
    "Ticker": "-",
    "Identifier": "36179W2V9",
-   "Weight": "0.091498859",
-   "Market Value": "456208.86",
-   "Shares Held": "512567.274",
+   "Weight": "0.0673447891",
+   "Market Value": "433456.68",
+   "Shares Held": "497906.664",
    "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "UST NOTES",
+   "Ticker": "-",
+   "Identifier": "91282CRC7",
+   "Weight": "3.063639622",
+   "Market Value": "19718750",
+   "Shares Held": "20000000",
+   "Asset Category": "DBT"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "31418DRS3",
-   "Weight": "0.0713166545",
-   "Market Value": "355581.37",
-   "Shares Held": "419459.57",
+   "Weight": "0.0527241041",
+   "Market Value": "339352.39",
+   "Shares Held": "409920.93",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "UBS GROUP AG",
    "Ticker": "-",
    "Identifier": "225401BE7",
-   "Weight": "0.1757482048",
-   "Market Value": "876272",
+   "Weight": "0.1349615773",
+   "Market Value": "868664.05",
    "Shares Held": "847000",
    "Asset Category": "DBT"
   },
@@ -809,62 +2159,62 @@
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140XMCY0",
-   "Weight": "0.0178211827",
-   "Market Value": "88855.55",
-   "Shares Held": "96702.796",
+   "Weight": "0.0130604245",
+   "Market Value": "84061.86",
+   "Shares Held": "93723.106",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "FED HOME LOAN MTG CORP - GOLD",
    "Ticker": "-",
    "Identifier": "31427RNQ9",
-   "Weight": "0.1200898961",
-   "Market Value": "598762.38",
-   "Shares Held": "587825.476",
+   "Weight": "0.089470046",
+   "Market Value": "575863.25",
+   "Shares Held": "573980.826",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "TCO COML MTG TR 2024-DPM",
    "Ticker": "-",
    "Identifier": "87231EAC1",
-   "Weight": "0.0485363199",
-   "Market Value": "241999.73",
+   "Weight": "0.0375987722",
+   "Market Value": "242000",
    "Shares Held": "242000",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "CITIGROUP INC",
-   "Ticker": "C",
+   "Ticker": "-",
    "Identifier": "172967PA3",
-   "Weight": "0.1855468765",
-   "Market Value": "925127.7",
-   "Shares Held": "865000",
+   "Weight": "0.1487337589",
+   "Market Value": "957307.05",
+   "Shares Held": "913000",
    "Asset Category": "DBT"
   },
   {
    "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
    "Identifier": "3140XNHC1",
-   "Weight": "0.0577353607",
-   "Market Value": "287865.7",
-   "Shares Held": "272876.46",
+   "Weight": "0.0414416184",
+   "Market Value": "266734.02",
+   "Shares Held": "255008.55",
    "Asset Category": "ABS-MBS"
   },
   {
    "Name": "PUGET ENERGY INC",
    "Ticker": "-",
    "Identifier": "745310AQ5",
-   "Weight": "0.1151753896",
-   "Market Value": "574258.89",
-   "Shares Held": "570000",
+   "Weight": "0.1208516934",
+   "Market Value": "777847.47",
+   "Shares Held": "788000",
    "Asset Category": "DBT"
   },
   {
    "Name": "MORGAN STANLEY BK NA SALT LAKE",
    "Ticker": "-",
    "Identifier": "61778EUR0",
-   "Weight": "0.0502830157",
-   "Market Value": "250708.67",
+   "Weight": "0.0386499655",
+   "Market Value": "248765.88",
    "Shares Held": "250000",
    "Asset Category": "DBT"
   },
@@ -872,19 +2222,28 @@
    "Name": "UST NOTES",
    "Ticker": "-",
    "Identifier": "91282CHT1",
-   "Weight": "1.0965390577",
-   "Market Value": "5467290.4",
+   "Weight": "0.8337967617",
+   "Market Value": "5366633.13",
    "Shares Held": "5614000",
    "Asset Category": "DBT"
   },
   {
-   "Name": "DELL INTERNATIONAL LLC / EMC CORP",
+   "Name": "FNMA GTD MTG PASS THRU CTF",
    "Ticker": "-",
-   "Identifier": "24703DBR1",
-   "Weight": "0.0207008718",
-   "Market Value": "103213.54",
-   "Shares Held": "104000",
-   "Asset Category": "DBT"
+   "Identifier": "3140W4JF5",
+   "Weight": "0.0496352453",
+   "Market Value": "319471.32",
+   "Shares Held": "382297.792",
+   "Asset Category": "ABS-MBS"
+  },
+  {
+   "Name": "FNMA/FHLG TBA ISSUER",
+   "Ticker": "-",
+   "Identifier": "01F0206A2",
+   "Weight": "-0.5904864391",
+   "Market Value": "-3800595.34",
+   "Shares Held": "-4875000",
+   "Asset Category": "ABS-MBS"
   }
  ]
 }

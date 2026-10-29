@@ -4,8 +4,8 @@
  "category": "Bond",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FPFD",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004678/000003540226004678-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004678/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006798/000003540226006798-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006798/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FPFD",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$20.43",
-  "value": 20.425,
-  "asOfDate": "Oct 23 2026"
+  "display": "$20.32",
+  "value": 20.32,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$82.41 M",
-  "value": 82412595.70999998,
-  "asOfDate": "May 31 2026",
+  "display": "$78.76 M",
+  "value": 78763424.99000001,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": -1.26,
-   "mo1Text": "-1.26%",
-   "qtd": -0.58,
-   "qtdText": "-0.58%",
-   "ytd": -2.53,
-   "ytdText": "-2.53%",
-   "yr1": -2.9,
-   "yr1Text": "-2.90%",
-   "yr3": 7.15,
-   "yr3Text": "7.15%",
-   "yr5": 0.7,
-   "yr5Text": "0.70%",
+   "asOfDate": "Oct 29 2026",
+   "mo1": -1.31,
+   "mo1Text": "-1.31%",
+   "qtd": -1.07,
+   "qtdText": "-1.07%",
+   "ytd": -3.01,
+   "ytdText": "-3.01%",
+   "yr1": -3.42,
+   "yr1Text": "-3.42%",
+   "yr3": 7.04,
+   "yr3Text": "7.04%",
+   "yr5": 0.59,
+   "yr5Text": "0.59%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 1,
-   "sinceInceptionText": "1.00%"
+   "sinceInception": 0.91,
+   "sinceInceptionText": "0.91%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -346,8 +346,8 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 333,
-  "asOf": "May 31 2026"
+  "totalRows": 332,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
@@ -355,14 +355,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1345,
-  "asOf": "Oct 23 2026"
+  "totalRows": 1349,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000072125",
   "seriesName": "Fidelity Preferred Securities and Income ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004678"
+  "accession": "0000035402-26-006798"
  }
 }

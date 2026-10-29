@@ -2,7 +2,7 @@
  "ticker": "FIDU",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3269,
+ "totalRows": 3273,
  "headers": [
   "Date",
   "Close",
@@ -1623,6 +1623,30 @@
    "Close": "87.099998",
    "Adj Close": "87.1",
    "Volume": "107500"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "Close": "88.239998",
+   "Adj Close": "88.24",
+   "Volume": "165900"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "Close": "88.860001",
+   "Adj Close": "88.86",
+   "Volume": "124300"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "Close": "89.110001",
+   "Adj Close": "89.11",
+   "Volume": "129400"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "Close": "89.800003",
+   "Adj Close": "89.8",
+   "Volume": "74591"
   }
  ]
 }

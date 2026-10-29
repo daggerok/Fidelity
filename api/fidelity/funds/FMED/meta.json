@@ -4,8 +4,8 @@
  "category": "Thematic",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMED",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004621/000003540226004621-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004621/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006771/000003540226006771-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006771/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMED",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$31.54",
-  "value": 31.539,
-  "asOfDate": "Oct 23 2026"
+  "display": "$33.28",
+  "value": 33.279,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$45.19 M",
-  "value": 45191022.73,
-  "asOfDate": "May 31 2026",
+  "display": "$53.84 M",
+  "value": 53837155.38999999,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": -2.17,
-   "mo1Text": "-2.17%",
-   "qtd": -0.38,
-   "qtdText": "-0.38%",
-   "ytd": 16.6,
-   "ytdText": "16.60%",
-   "yr1": 19.2,
-   "yr1Text": "19.20%",
-   "yr3": 15.78,
-   "yr3Text": "15.78%",
+   "asOfDate": "Oct 29 2026",
+   "mo1": 2.56,
+   "mo1Text": "2.56%",
+   "qtd": 5.12,
+   "qtdText": "5.12%",
+   "ytd": 23.03,
+   "ytdText": "23.03%",
+   "yr1": 26.25,
+   "yr1Text": "26.25%",
+   "yr3": 18.68,
+   "yr3Text": "18.68%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 6.95,
-   "sinceInceptionText": "6.95%"
+   "sinceInception": 8.62,
+   "sinceInceptionText": "8.62%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -97,22 +97,22 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 70,
-  "asOf": "May 31 2026"
+  "totalRows": 74,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 846,
-  "asOf": "Oct 23 2026"
+  "totalRows": 850,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000079688",
   "seriesName": "Fidelity Disruptive Medicine ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004621"
+  "accession": "0000035402-26-006771"
  }
 }

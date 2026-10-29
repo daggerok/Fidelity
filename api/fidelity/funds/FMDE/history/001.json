@@ -2,7 +2,7 @@
  "ticker": "FMDE",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 734,
+ "totalRows": 738,
  "headers": [
   "Date",
   "Close",
@@ -4413,6 +4413,30 @@
    "Close": "41.419998",
    "Adj Close": "41.42",
    "Volume": "997900"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "Close": "41.689999",
+   "Adj Close": "41.69",
+   "Volume": "796500"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "Close": "41.779999",
+   "Adj Close": "41.78",
+   "Volume": "771600"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "Close": "41.759998",
+   "Adj Close": "41.76",
+   "Volume": "1141600"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "Close": "41.990002",
+   "Adj Close": "41.99",
+   "Volume": "560114"
   }
  ]
 }

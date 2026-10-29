@@ -4,8 +4,8 @@
  "category": "Bond",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FCOR",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004643/000003540226004643-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004643/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006743/000003540226006743-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006743/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FCOR",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$45.35",
-  "value": 45.35,
-  "asOfDate": "Oct 23 2026"
+  "display": "$45.27",
+  "value": 45.266,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$341.86 M",
-  "value": 341864587.6599999,
-  "asOfDate": "May 31 2026",
+  "display": "$349.54 M",
+  "value": 349544554.75,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": 0.89,
-   "mo1Text": "0.89%",
-   "qtd": 1.45,
-   "qtdText": "1.45%",
-   "ytd": -1.86,
-   "ytdText": "-1.86%",
-   "yr1": -2.37,
-   "yr1Text": "-2.37%",
-   "yr3": 6.54,
-   "yr3Text": "6.54%",
-   "yr5": 0.07,
-   "yr5Text": "0.07%",
-   "yr10": 2.27,
-   "yr10Text": "2.27%",
-   "sinceInception": 2.52,
-   "sinceInceptionText": "2.52%"
+   "asOfDate": "Oct 29 2026",
+   "mo1": 1.21,
+   "mo1Text": "1.21%",
+   "qtd": 1.28,
+   "qtdText": "1.28%",
+   "ytd": -2.03,
+   "ytdText": "-2.03%",
+   "yr1": -2.16,
+   "yr1Text": "-2.16%",
+   "yr3": 6.35,
+   "yr3Text": "6.35%",
+   "yr5": -0.12,
+   "yr5Text": "-0.12%",
+   "yr10": 2.33,
+   "yr10Text": "2.33%",
+   "sinceInception": 2.5,
+   "sinceInceptionText": "2.50%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -659,8 +659,8 @@
    "holdings/003.json"
   ],
   "pageSize": 250,
-  "totalRows": 571,
-  "asOf": "May 31 2026"
+  "totalRows": 574,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
@@ -670,14 +670,14 @@
    "history/004.json"
   ],
   "pageSize": 1000,
-  "totalRows": 3028,
-  "asOf": "Oct 23 2026"
+  "totalRows": 3032,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000040431",
   "seriesName": "Fidelity Corporate Bond ETF",
   "trustCik": "0001562565",
   "trustName": "Fidelity Merrimack Street Trust",
-  "accession": "0000035402-26-004643"
+  "accession": "0000035402-26-006743"
  }
 }

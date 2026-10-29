@@ -4,8 +4,8 @@
  "category": "Thematic",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FBOT",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004640/000003540226004640-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004640/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006780/000003540226006780-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006780/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FBOT",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$37.30",
-  "value": 37.2987,
-  "asOfDate": "Oct 23 2026"
+  "display": "$37.80",
+  "value": 37.8,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$210.88 M",
-  "value": 210876763.03000003,
-  "asOfDate": "May 31 2026",
+  "display": "$217.82 M",
+  "value": 217817529.62000003,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": -3.22,
-   "mo1Text": "-3.22%",
-   "qtd": -4.19,
-   "qtdText": "-4.19%",
-   "ytd": 12.08,
-   "ytdText": "12.08%",
-   "yr1": 11.58,
-   "yr1Text": "11.58%",
-   "yr3": 21.81,
-   "yr3Text": "21.81%",
+   "asOfDate": "Oct 29 2026",
+   "mo1": -2.28,
+   "mo1Text": "-2.28%",
+   "qtd": -2.9,
+   "qtdText": "-2.90%",
+   "ytd": 13.58,
+   "ytdText": "13.58%",
+   "yr1": 10.46,
+   "yr1Text": "10.46%",
+   "yr3": 22.72,
+   "yr3Text": "22.72%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 12.53,
-   "sinceInceptionText": "12.53%"
+   "sinceInception": 12.91,
+   "sinceInceptionText": "12.91%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -133,22 +133,22 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 50,
-  "asOf": "May 31 2026"
+  "totalRows": 51,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 846,
-  "asOf": "Oct 23 2026"
+  "totalRows": 850,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000079685",
   "seriesName": "Fidelity Disruptive Automation ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004640"
+  "accession": "0000035402-26-006780"
  }
 }

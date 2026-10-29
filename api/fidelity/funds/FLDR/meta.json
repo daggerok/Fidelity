@@ -4,8 +4,8 @@
  "category": "Bond",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FLDR",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004687/000003540226004687-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004687/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006794/000003540226006794-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006794/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FLDR",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$50.02",
-  "value": 50.02,
-  "asOfDate": "Oct 23 2026"
+  "display": "$49.88",
+  "value": 49.885,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$1,612.48 M",
-  "value": 1612475076.36,
-  "asOfDate": "May 31 2026",
+  "display": "$2,216.97 M",
+  "value": 2216974146.109999,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": 0.54,
-   "mo1Text": "0.54%",
-   "qtd": 0.52,
-   "qtdText": "0.52%",
-   "ytd": 2.61,
-   "ytdText": "2.61%",
-   "yr1": 3.37,
-   "yr1Text": "3.37%",
-   "yr3": 5.47,
-   "yr3Text": "5.47%",
-   "yr5": 3.99,
-   "yr5Text": "3.99%",
+   "asOfDate": "Oct 29 2026",
+   "mo1": 0.26,
+   "mo1Text": "0.26%",
+   "qtd": 0.24,
+   "qtdText": "0.24%",
+   "ytd": 2.32,
+   "ytdText": "2.32%",
+   "yr1": 3.1,
+   "yr1Text": "3.10%",
+   "yr3": 5.29,
+   "yr3Text": "5.29%",
+   "yr5": 3.94,
+   "yr5Text": "3.94%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 3.24,
-   "sinceInceptionText": "3.24%"
+   "sinceInception": 3.2,
+   "sinceInceptionText": "3.20%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -490,8 +490,8 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 354,
-  "asOf": "May 31 2026"
+  "totalRows": 375,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
@@ -500,14 +500,14 @@
    "history/003.json"
   ],
   "pageSize": 1000,
-  "totalRows": 2100,
-  "asOf": "Oct 23 2026"
+  "totalRows": 2104,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000062079",
   "seriesName": "Fidelity Low Duration Bond Factor ETF",
   "trustCik": "0001562565",
   "trustName": "Fidelity Merrimack Street Trust",
-  "accession": "0000035402-26-004687"
+  "accession": "0000035402-26-006794"
  }
 }

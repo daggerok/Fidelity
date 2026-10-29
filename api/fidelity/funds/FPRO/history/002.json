@@ -2,7 +2,7 @@
  "ticker": "FPRO",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1437,
+ "totalRows": 1441,
  "headers": [
   "Date",
   "Close",
@@ -2631,6 +2631,30 @@
    "Close": "23.815001",
    "Adj Close": "23.82",
    "Volume": "7200"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "Close": "23.889999",
+   "Adj Close": "23.89",
+   "Volume": "15700"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "Close": "23.73",
+   "Adj Close": "23.73",
+   "Volume": "14300"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "Close": "23.58",
+   "Adj Close": "23.58",
+   "Volume": "2800"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "Close": "24",
+   "Adj Close": "24",
+   "Volume": "6886"
   }
  ]
 }

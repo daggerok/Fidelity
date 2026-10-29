@@ -4,8 +4,8 @@
  "category": "Bond",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FSYD",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004717/000003540226004717-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226004717/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006848/000003540226006848-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226006848/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FSYD",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$46.38",
-  "value": 46.38,
-  "asOfDate": "Oct 23 2026"
+  "display": "$46.43",
+  "value": 46.43,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$126.10 M",
-  "value": 126103635.49999993,
-  "asOfDate": "May 31 2026",
+  "display": "$144.61 M",
+  "value": 144605834.0100001,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": -1.49,
-   "mo1Text": "-1.49%",
-   "qtd": -0.47,
-   "qtdText": "-0.47%",
-   "ytd": 0.35,
-   "ytdText": "0.35%",
-   "yr1": 1.2,
-   "yr1Text": "1.20%",
+   "asOfDate": "Oct 29 2026",
+   "mo1": -0.66,
+   "mo1Text": "-0.66%",
+   "qtd": -0.36,
+   "qtdText": "-0.36%",
+   "ytd": 0.45,
+   "ytdText": "0.45%",
+   "yr1": 1.49,
+   "yr1Text": "1.49%",
    "yr3": 9.15,
    "yr3Text": "9.15%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 4.84,
-   "sinceInceptionText": "4.84%"
+   "sinceInception": 4.85,
+   "sinceInceptionText": "4.85%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -310,8 +310,8 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 402,
-  "asOf": "May 31 2026"
+  "totalRows": 372,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
@@ -319,14 +319,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1175,
-  "asOf": "Oct 23 2026"
+  "totalRows": 1179,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000075296",
   "seriesName": "Fidelity Sustainable High Yield ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-004717"
+  "accession": "0000035402-26-006848"
  }
 }

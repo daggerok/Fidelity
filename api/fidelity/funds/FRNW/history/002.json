@@ -2,7 +2,7 @@
  "ticker": "FRNW",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1267,
+ "totalRows": 1271,
  "headers": [
   "Date",
   "Close",
@@ -1611,6 +1611,30 @@
    "Close": "19.73",
    "Adj Close": "19.73",
    "Volume": "13100"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "Close": "19.700001",
+   "Adj Close": "19.7",
+   "Volume": "56100"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "Close": "20.235001",
+   "Adj Close": "20.24",
+   "Volume": "38600"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "Close": "20.08",
+   "Adj Close": "20.08",
+   "Volume": "22000"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "Close": "20.225",
+   "Adj Close": "20.23",
+   "Volume": "22159"
   }
  ]
 }

@@ -4,8 +4,8 @@
  "category": "Bond",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FIGB",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004658/000003540226004658-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226004658/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006795/000003540226006795-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/1562565/000003540226006795/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FIGB",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$41.50",
-  "value": 41.5,
-  "asOfDate": "Oct 23 2026"
+  "display": "$41.52",
+  "value": 41.515,
+  "asOfDate": "Oct 29 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$540.81 M",
-  "value": 540814077.3400002,
-  "asOfDate": "May 31 2026",
+  "display": "$686.82 M",
+  "value": 686823107.5700002,
+  "asOfDate": "Aug 31 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Oct 23 2026",
-   "mo1": 1.12,
-   "mo1Text": "1.12%",
-   "qtd": 1.47,
-   "qtdText": "1.47%",
-   "ytd": -1.54,
-   "ytdText": "-1.54%",
-   "yr1": -1.78,
-   "yr1Text": "-1.78%",
-   "yr3": 5.37,
-   "yr3Text": "5.37%",
-   "yr5": -0.15,
-   "yr5Text": "-0.15%",
+   "asOfDate": "Oct 29 2026",
+   "mo1": 1.74,
+   "mo1Text": "1.74%",
+   "qtd": 1.49,
+   "qtdText": "1.49%",
+   "ytd": -1.52,
+   "ytdText": "-1.52%",
+   "yr1": -1.35,
+   "yr1Text": "-1.35%",
+   "yr3": 5.17,
+   "yr3Text": "5.17%",
+   "yr5": -0.27,
+   "yr5Text": "-0.27%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 0.08,
-   "sinceInceptionText": "0.08%"
+   "sinceInception": 0.09,
+   "sinceInceptionText": "0.09%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -360,8 +360,8 @@
    "holdings/004.json"
   ],
   "pageSize": 250,
-  "totalRows": 847,
-  "asOf": "May 31 2026"
+  "totalRows": 998,
+  "asOf": "Aug 31 2026"
  },
  "history": {
   "pages": [
@@ -369,14 +369,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1418,
-  "asOf": "Oct 23 2026"
+  "totalRows": 1422,
+  "asOf": "Oct 29 2026"
  },
  "seed": {
   "seriesId": "S000071131",
   "seriesName": "Fidelity Investment Grade Bond ETF",
   "trustCik": "0001562565",
   "trustName": "Fidelity Merrimack Street Trust",
-  "accession": "0000035402-26-004658"
+  "accession": "0000035402-26-006795"
  }
 }

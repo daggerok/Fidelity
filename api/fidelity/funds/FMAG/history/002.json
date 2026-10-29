@@ -2,7 +2,7 @@
  "ticker": "FMAG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1437,
+ "totalRows": 1441,
  "headers": [
   "Date",
   "Close",
@@ -2631,6 +2631,30 @@
    "Close": "34.400002",
    "Adj Close": "34.4",
    "Volume": "10500"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "Close": "34.77",
+   "Adj Close": "34.77",
+   "Volume": "5800"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "Close": "35.071999",
+   "Adj Close": "35.07",
+   "Volume": "7000"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "Close": "35.25",
+   "Adj Close": "35.25",
+   "Volume": "8900"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "Close": "35.009998",
+   "Adj Close": "35.01",
+   "Volume": "7950"
   }
  ]
 }
