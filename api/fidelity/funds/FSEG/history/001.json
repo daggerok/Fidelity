@@ -2,7 +2,7 @@
  "ticker": "FSEG",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 127,
+ "totalRows": 128,
  "headers": [
   "Date",
   "Close",
@@ -768,9 +768,15 @@
   },
   {
    "Date": "Oct 29 2026",
-   "Close": "26.49",
-   "Adj Close": "26.49",
-   "Volume": "1136"
+   "Close": "26.389999",
+   "Adj Close": "26.39",
+   "Volume": "1300"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "Close": "25.809999",
+   "Adj Close": "25.81",
+   "Volume": "12400"
   }
  ]
 }

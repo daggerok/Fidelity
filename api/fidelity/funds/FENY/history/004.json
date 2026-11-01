@@ -2,7 +2,7 @@
  "ticker": "FENY",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3273,
+ "totalRows": 3274,
  "headers": [
   "Date",
   "Close",
@@ -1644,9 +1644,15 @@
   },
   {
    "Date": "Oct 29 2026",
-   "Close": "37.6199",
-   "Adj Close": "37.62",
-   "Volume": "810607"
+   "Close": "37.77",
+   "Adj Close": "37.77",
+   "Volume": "953700"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "Close": "38.48",
+   "Adj Close": "38.48",
+   "Volume": "1484600"
   }
  ]
 }

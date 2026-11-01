@@ -2,7 +2,7 @@
  "ticker": "FFLG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1441,
+ "totalRows": 1442,
  "headers": [
   "Date",
   "Close",
@@ -2652,9 +2652,15 @@
   },
   {
    "Date": "Oct 29 2026",
-   "Close": "32.205002",
-   "Adj Close": "32.21",
-   "Volume": "81165"
+   "Close": "32.330002",
+   "Adj Close": "32.33",
+   "Volume": "90600"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "Close": "31.132999",
+   "Adj Close": "31.13",
+   "Volume": "442700"
   }
  ]
 }

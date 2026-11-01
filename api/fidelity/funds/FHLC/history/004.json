@@ -2,7 +2,7 @@
  "ticker": "FHLC",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3273,
+ "totalRows": 3274,
  "headers": [
   "Date",
   "Close",
@@ -1644,9 +1644,15 @@
   },
   {
    "Date": "Oct 29 2026",
-   "Close": "87.949997",
-   "Adj Close": "87.95",
-   "Volume": "235710"
+   "Close": "88.370003",
+   "Adj Close": "88.37",
+   "Volume": "253800"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "Close": "88.559998",
+   "Adj Close": "88.56",
+   "Volume": "410300"
   }
  ]
 }

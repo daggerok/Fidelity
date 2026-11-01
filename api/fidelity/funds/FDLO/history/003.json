@@ -2,7 +2,7 @@
  "ticker": "FDLO",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2545,
+ "totalRows": 2546,
  "headers": [
   "Date",
   "Close",
@@ -3276,9 +3276,15 @@
   },
   {
    "Date": "Oct 29 2026",
-   "Close": "74.559998",
-   "Adj Close": "74.56",
-   "Volume": "97700"
+   "Close": "74.599998",
+   "Adj Close": "74.6",
+   "Volume": "108000"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "Close": "74.529999",
+   "Adj Close": "74.53",
+   "Volume": "83400"
   }
  ]
 }

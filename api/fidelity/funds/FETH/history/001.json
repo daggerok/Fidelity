@@ -2,7 +2,7 @@
  "ticker": "FETH",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 571,
+ "totalRows": 572,
  "headers": [
   "Date",
   "Close",
@@ -3432,9 +3432,15 @@
   },
   {
    "Date": "Oct 29 2026",
-   "Close": "23.16",
-   "Adj Close": "23.16",
-   "Volume": "1560643"
+   "Close": "23.25",
+   "Adj Close": "23.25",
+   "Volume": "2078000"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "Close": "22.23",
+   "Adj Close": "22.23",
+   "Volume": "1658600"
   }
  ]
 }
