@@ -2,7 +2,7 @@
  "ticker": "FFDI",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 486,
+ "totalRows": 491,
  "headers": [
   "Date",
   "Close",
@@ -2925,6 +2925,36 @@
    "Close": "30.584999",
    "Adj Close": "30.58",
    "Volume": "2100"
+  },
+  {
+   "Date": "Nov 02 2026",
+   "Close": "30.766001",
+   "Adj Close": "30.77",
+   "Volume": "3000"
+  },
+  {
+   "Date": "Nov 03 2026",
+   "Close": "30.620001",
+   "Adj Close": "30.62",
+   "Volume": "200"
+  },
+  {
+   "Date": "Nov 04 2026",
+   "Close": "31.226999",
+   "Adj Close": "31.23",
+   "Volume": "1400"
+  },
+  {
+   "Date": "Nov 05 2026",
+   "Close": "30.059999",
+   "Adj Close": "30.06",
+   "Volume": "1100"
+  },
+  {
+   "Date": "Nov 06 2026",
+   "Close": "29.968",
+   "Adj Close": "29.97",
+   "Volume": "1800"
   }
  ]
 }

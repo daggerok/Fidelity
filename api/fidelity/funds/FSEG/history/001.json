@@ -2,7 +2,7 @@
  "ticker": "FSEG",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 128,
+ "totalRows": 133,
  "headers": [
   "Date",
   "Close",
@@ -777,6 +777,36 @@
    "Close": "25.809999",
    "Adj Close": "25.81",
    "Volume": "12400"
+  },
+  {
+   "Date": "Nov 02 2026",
+   "Close": "25.639999",
+   "Adj Close": "25.64",
+   "Volume": "4200"
+  },
+  {
+   "Date": "Nov 03 2026",
+   "Close": "25.879999",
+   "Adj Close": "25.88",
+   "Volume": "1500"
+  },
+  {
+   "Date": "Nov 04 2026",
+   "Close": "26.200001",
+   "Adj Close": "26.2",
+   "Volume": "800"
+  },
+  {
+   "Date": "Nov 05 2026",
+   "Close": "24.77",
+   "Adj Close": "24.77",
+   "Volume": "1200"
+  },
+  {
+   "Date": "Nov 06 2026",
+   "Close": "25.16",
+   "Adj Close": "25.16",
+   "Volume": "1300"
   }
  ]
 }

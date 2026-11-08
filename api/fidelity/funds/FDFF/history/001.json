@@ -2,7 +2,7 @@
  "ticker": "FDFF",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 851,
+ "totalRows": 856,
  "headers": [
   "Date",
   "Close",
@@ -5115,6 +5115,36 @@
    "Close": "35.445",
    "Adj Close": "35.44",
    "Volume": "7800"
+  },
+  {
+   "Date": "Nov 02 2026",
+   "Close": "36.118999",
+   "Adj Close": "36.12",
+   "Volume": "17400"
+  },
+  {
+   "Date": "Nov 03 2026",
+   "Close": "35.819",
+   "Adj Close": "35.82",
+   "Volume": "5300"
+  },
+  {
+   "Date": "Nov 04 2026",
+   "Close": "37.394001",
+   "Adj Close": "37.39",
+   "Volume": "4900"
+  },
+  {
+   "Date": "Nov 05 2026",
+   "Close": "36.409",
+   "Adj Close": "36.41",
+   "Volume": "482500"
+  },
+  {
+   "Date": "Nov 06 2026",
+   "Close": "36.341999",
+   "Adj Close": "36.34",
+   "Volume": "2000"
   }
  ]
 }

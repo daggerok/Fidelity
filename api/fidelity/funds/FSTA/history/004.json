@@ -2,7 +2,7 @@
  "ticker": "FSTA",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3274,
+ "totalRows": 3279,
  "headers": [
   "Date",
   "Close",
@@ -1653,6 +1653,36 @@
    "Close": "56.48",
    "Adj Close": "56.48",
    "Volume": "264600"
+  },
+  {
+   "Date": "Nov 02 2026",
+   "Close": "57.540001",
+   "Adj Close": "57.54",
+   "Volume": "442800"
+  },
+  {
+   "Date": "Nov 03 2026",
+   "Close": "56.450001",
+   "Adj Close": "56.45",
+   "Volume": "263100"
+  },
+  {
+   "Date": "Nov 04 2026",
+   "Close": "58.290001",
+   "Adj Close": "58.29",
+   "Volume": "297200"
+  },
+  {
+   "Date": "Nov 05 2026",
+   "Close": "57.880001",
+   "Adj Close": "57.88",
+   "Volume": "298300"
+  },
+  {
+   "Date": "Nov 06 2026",
+   "Close": "57.23",
+   "Adj Close": "57.23",
+   "Volume": "245400"
   }
  ]
 }

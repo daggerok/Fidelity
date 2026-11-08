@@ -2,7 +2,7 @@
  "ticker": "FDEV",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1929,
+ "totalRows": 1934,
  "headers": [
   "Date",
   "Close",
@@ -5583,6 +5583,36 @@
    "Close": "37.099998",
    "Adj Close": "37.1",
    "Volume": "16800"
+  },
+  {
+   "Date": "Nov 02 2026",
+   "Close": "37.369999",
+   "Adj Close": "37.37",
+   "Volume": "31000"
+  },
+  {
+   "Date": "Nov 03 2026",
+   "Close": "37.049999",
+   "Adj Close": "37.05",
+   "Volume": "11800"
+  },
+  {
+   "Date": "Nov 04 2026",
+   "Close": "37.84",
+   "Adj Close": "37.84",
+   "Volume": "11500"
+  },
+  {
+   "Date": "Nov 05 2026",
+   "Close": "37.25",
+   "Adj Close": "37.25",
+   "Volume": "26500"
+  },
+  {
+   "Date": "Nov 06 2026",
+   "Close": "36.801998",
+   "Adj Close": "36.8",
+   "Volume": "37000"
   }
  ]
 }

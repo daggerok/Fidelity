@@ -2,7 +2,7 @@
  "ticker": "FSEC",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1421,
+ "totalRows": 1426,
  "headers": [
   "Date",
   "Close",
@@ -2535,6 +2535,36 @@
    "Close": "42.759998",
    "Adj Close": "42.76",
    "Volume": "586100"
+  },
+  {
+   "Date": "Nov 02 2026",
+   "Close": "42.709999",
+   "Adj Close": "42.71",
+   "Volume": "435700"
+  },
+  {
+   "Date": "Nov 03 2026",
+   "Close": "42.630001",
+   "Adj Close": "42.63",
+   "Volume": "284200"
+  },
+  {
+   "Date": "Nov 04 2026",
+   "Close": "42.82",
+   "Adj Close": "42.82",
+   "Volume": "197100"
+  },
+  {
+   "Date": "Nov 05 2026",
+   "Close": "42.880001",
+   "Adj Close": "42.88",
+   "Volume": "310300"
+  },
+  {
+   "Date": "Nov 06 2026",
+   "Close": "42.900002",
+   "Adj Close": "42.9",
+   "Volume": "204500"
   }
  ]
 }
