@@ -797,6 +797,11 @@ describe('pipeline', () => {
       // the 52-week keys are in every row, computed from its history pages (range-52w block)
       const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
       for (const fund of index.funds) expect(Object.keys(fund.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
+      // the swing keys from the Close column of the same pages (shared swing block), in front of returnsBasis and performanceAsOf
+      for (const fund of index.funds) {
+        expect(Object.keys(fund.metrics).slice(-11, -2)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
+        expect([typeof fund.metrics.athPrice, fund.metrics.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
+      }
       for (const fund of index.funds) {
         expect(fund.dataFile).toBe(`./funds/${fund.ticker}/meta.json`);
         expect(statSync(join(root, fund.dataFile)).isFile()).toBe(true);

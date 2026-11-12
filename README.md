@@ -66,6 +66,13 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `dividendYield` - indicated yield (latest distribution x frequency / price), not a trailing yield
 - `dividendYieldBasis` - code of the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null`; it travels with the yield it describes (see the table below)
 - `secYield` / `secYieldText` - Fidelity publishes no 30-day SEC yield feed: `null` and `-` (unavailable, not zero)
+- Swing metrics (shared `swing` block, the formulas of the Stocks feed) from the split-adjusted, not dividend-adjusted daily `Close` column of the published history, with the last close as the price; `null` (never `0`) when the history is too short:
+  - `pctFrom52wHigh` - last close against the highest close of the last 52 weeks, in percent
+  - `athPrice`, `athDate`, `athBasis` - highest close of the whole history, its date and the history it covers (`daily closes since <first date>`)
+  - `pctFromAth` - last close against `athPrice`, in percent
+  - `volatility1y` - annualized volatility of the last 252 daily log returns, in percent (needs 253 closes)
+  - `sigmaFromMean60d` - distance of the last close from the mean of the last 60 closes, in sample standard deviations
+  - `high60d`, `low60d` - highest and lowest of the last 60 closes
 - `returnsBasis` - mandatory non-empty label of how the returns are computed; for Fidelity always "derived from Yahoo Finance adjusted market-price closes (estimate, not official NAV returns)"
 - `performanceAsOf` - ISO `YYYY-MM-DD` date the returns are as of: the last Yahoo close date (not the NAV date), or `null` when unknown
 - AUM of an ETF share class of a multi-class mutual fund (FREI) is `null`: its N-PORT net assets cover every class of the fund (about $4.4B for 7 classes), not the ETF
