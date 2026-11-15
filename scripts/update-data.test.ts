@@ -185,6 +185,7 @@ const world = {
   adjScale: 1, // Yahoo rescales adjusted closes after a new dividend
   earlyDividend: false,
   archives: [] as string[], // N-PORT accessions requested
+  dividends: [] as string[], // tickers of the dividends block's own chart requests (includePrePost=false)
   onSubmissions: null as null | (() => void),
 };
 const seedName = (pick: (fund: (typeof FIDELITY_FUNDS)[number]) => boolean, fallback: string): string => FIDELITY_FUNDS.find(pick)?.name ?? fallback;
@@ -197,7 +198,7 @@ function worldChart(ticker: string, period1 = 0): Record<string, unknown> {
   const start = Date.UTC(2025, 0, 2) / 1000;
   const days = Array.from({ length: 450 }, (_, i) => ({ t: start + i * day, close: 20 + i / 50, adj: (20 + i / 50) * world.adjScale, volume: 100 })).filter((d) => d.t >= period1);
   const dividends = [{ t: start + 30 * day, amount: 0.11 }, { t: start + 200 * day, amount: 0.12 }, { t: start + 300 * day, amount: 0.13 }].filter((d, i) => (i > 0 || world.earlyDividend) && d.t >= period1);
-  return chartFixture({ days, dividends, meta: { navPrice: undefined, regularMarketTime: start + 449 * day, ...(world.firstTrade[ticker] ? { firstTradeDate: world.firstTrade[ticker] } : {}), longName: world.longName[ticker] ?? seedName((fund) => fund.ticker === ticker, 'Fidelity Test ETF') } });
+  return chartFixture({ days, dividends, meta: { navPrice: undefined, regularMarketTime: start + 449 * day, dataGranularity: '1d', firstTradeDate: world.firstTrade[ticker] ?? start, longName: world.longName[ticker] ?? seedName((fund) => fund.ticker === ticker, 'Fidelity Test ETF') } });
 }
 
 function installWorld(): void {
@@ -229,7 +230,8 @@ function installWorld(): void {
         const hit = Object.entries(world.accessions).find(([acc]) => acc.replace(/-/g, '') === arch[1]);
         return hit ? new Response(nportXml(hit[1].series, hit[1].repPd)) : new Response('missing', { status: 404 });
       }
-      if (url.includes('finance/chart/')) { world.order.push(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '?'); world.onChart?.(); }
+      if (url.includes('finance/chart/') && url.includes('includePrePost=false')) world.dividends.push(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '?');
+      if (url.includes('finance/chart/') && !url.includes('includePrePost=false')) { world.order.push(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '?'); world.onChart?.(); }
       if (url.includes('finance/chart/')) return world.chart === 'ok' ? new Response(JSON.stringify(worldChart(/finance\/chart\/([A-Z]+)/.exec(url)?.[1] ?? '', Number(/period1=(\d+)/.exec(url)?.[1] ?? 0)))) : new Response('down', { status: 404 });
       if (url.includes('finance/search')) {
         world.searches.push(decodeURIComponent(/[?&]q=([^&]*)/.exec(url)![1]));
@@ -788,7 +790,10 @@ describe('pipeline', () => {
     await inWorld(async (root) => {
       await quiet(() => main(env({ TICKERS: 'FBND FBCG FBCV' })));
       expect(readJson(root, 'index.json').funds).toHaveLength(3);
+      world.dividends.length = 0;
       await quiet(() => main(env({ TICKERS: 'FBND' })));
+      // the dividend chart request is made for the updated fund only
+      expect(world.dividends).toEqual(['FBND']);
       const index = readJson(root, 'index.json');
       expect(index.funds.map((f: any) => f.ticker)).toEqual(['FBCG', 'FBCV', 'FBND']);
       expect(readdirSync(join(root, 'funds')).sort()).toEqual(['FBCG', 'FBCV', 'FBND']);
@@ -799,8 +804,12 @@ describe('pipeline', () => {
       for (const fund of index.funds) expect(Object.keys(fund.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
       // the swing keys from the Close column of the same pages (shared swing block), in front of returnsBasis and performanceAsOf
       for (const fund of index.funds) {
-        expect(Object.keys(fund.metrics).slice(-11, -2)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
+        expect(Object.keys(fund.metrics).slice(-17, -8)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
         expect([typeof fund.metrics.athPrice, fund.metrics.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
+        // the dividend keys from one Yahoo daily chart request per updated fund (shared dividends block)
+        expect(Object.keys(fund.metrics).slice(-8, -2)).toEqual(['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y']);
+        // 0.12 + 0.13 in the last 12 months of the mock, the growth keys null (never 0)
+        expect([fund.metrics.dividendRate, fund.metrics.dividendGrowth, fund.metrics.dividendGrowth3y, fund.metrics.dividendGrowth5y, fund.metrics.dividendStreak, fund.metrics.dividendCut10y]).toEqual([0.25, null, null, null, null, null]);
       }
       for (const fund of index.funds) {
         expect(fund.dataFile).toBe(`./funds/${fund.ticker}/meta.json`);
