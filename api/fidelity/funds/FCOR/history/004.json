@@ -2,7 +2,7 @@
  "ticker": "FCOR",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3038,
+ "totalRows": 3043,
  "headers": [
   "Date",
   "Close",
@@ -237,6 +237,36 @@
    "Close": "45.580002",
    "Adj Close": "45.58",
    "Volume": "713800"
+  },
+  {
+   "Date": "Nov 09 2026",
+   "Close": "45.595001",
+   "Adj Close": "45.6",
+   "Volume": "140300"
+  },
+  {
+   "Date": "Nov 10 2026",
+   "Close": "45.34",
+   "Adj Close": "45.34",
+   "Volume": "64400"
+  },
+  {
+   "Date": "Nov 11 2026",
+   "Close": "45.389999",
+   "Adj Close": "45.39",
+   "Volume": "80300"
+  },
+  {
+   "Date": "Nov 12 2026",
+   "Close": "45.060001",
+   "Adj Close": "45.06",
+   "Volume": "65700"
+  },
+  {
+   "Date": "Nov 13 2026",
+   "Close": "44.983002",
+   "Adj Close": "44.98",
+   "Volume": "68500"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FBCV",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1615,
+ "totalRows": 1620,
  "headers": [
   "Date",
   "Close",
@@ -3699,6 +3699,36 @@
    "Close": "43.720001",
    "Adj Close": "43.72",
    "Volume": "18100"
+  },
+  {
+   "Date": "Nov 09 2026",
+   "Close": "44.450001",
+   "Adj Close": "44.45",
+   "Volume": "42800"
+  },
+  {
+   "Date": "Nov 10 2026",
+   "Close": "44.52",
+   "Adj Close": "44.52",
+   "Volume": "11600"
+  },
+  {
+   "Date": "Nov 11 2026",
+   "Close": "44.450001",
+   "Adj Close": "44.45",
+   "Volume": "140600"
+  },
+  {
+   "Date": "Nov 12 2026",
+   "Close": "43.990002",
+   "Adj Close": "43.99",
+   "Volume": "5500"
+  },
+  {
+   "Date": "Nov 13 2026",
+   "Close": "44.32",
+   "Adj Close": "44.32",
+   "Volume": "8100"
   }
  ]
 }

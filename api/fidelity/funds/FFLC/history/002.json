@@ -2,7 +2,7 @@
  "ticker": "FFLC",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1615,
+ "totalRows": 1620,
  "headers": [
   "Date",
   "Close",
@@ -3699,6 +3699,36 @@
    "Close": "56.82",
    "Adj Close": "56.82",
    "Volume": "72600"
+  },
+  {
+   "Date": "Nov 09 2026",
+   "Close": "58.110001",
+   "Adj Close": "58.11",
+   "Volume": "99700"
+  },
+  {
+   "Date": "Nov 10 2026",
+   "Close": "57.91",
+   "Adj Close": "57.91",
+   "Volume": "67000"
+  },
+  {
+   "Date": "Nov 11 2026",
+   "Close": "58.419998",
+   "Adj Close": "58.42",
+   "Volume": "64700"
+  },
+  {
+   "Date": "Nov 12 2026",
+   "Close": "57.98",
+   "Adj Close": "57.98",
+   "Volume": "92100"
+  },
+  {
+   "Date": "Nov 13 2026",
+   "Close": "57.849998",
+   "Adj Close": "57.85",
+   "Volume": "82600"
   }
  ]
 }

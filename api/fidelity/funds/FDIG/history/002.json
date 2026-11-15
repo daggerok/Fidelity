@@ -2,7 +2,7 @@
  "ticker": "FDIG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1142,
+ "totalRows": 1147,
  "headers": [
   "Date",
   "Close",
@@ -861,6 +861,36 @@
    "Close": "32.556999",
    "Adj Close": "32.56",
    "Volume": "25100"
+  },
+  {
+   "Date": "Nov 09 2026",
+   "Close": "33.610001",
+   "Adj Close": "33.61",
+   "Volume": "16500"
+  },
+  {
+   "Date": "Nov 10 2026",
+   "Close": "33.014",
+   "Adj Close": "33.01",
+   "Volume": "12500"
+  },
+  {
+   "Date": "Nov 11 2026",
+   "Close": "34.087002",
+   "Adj Close": "34.09",
+   "Volume": "19900"
+  },
+  {
+   "Date": "Nov 12 2026",
+   "Close": "33.039001",
+   "Adj Close": "33.04",
+   "Volume": "62200"
+  },
+  {
+   "Date": "Nov 13 2026",
+   "Close": "32.560001",
+   "Adj Close": "32.56",
+   "Volume": "18000"
   }
  ]
 }

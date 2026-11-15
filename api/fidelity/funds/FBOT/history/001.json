@@ -2,7 +2,7 @@
  "ticker": "FBOT",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 856,
+ "totalRows": 861,
  "headers": [
   "Date",
   "Close",
@@ -5145,6 +5145,36 @@
    "Close": "35.09",
    "Adj Close": "35.09",
    "Volume": "60300"
+  },
+  {
+   "Date": "Nov 09 2026",
+   "Close": "36.321999",
+   "Adj Close": "36.32",
+   "Volume": "30100"
+  },
+  {
+   "Date": "Nov 10 2026",
+   "Close": "36.098999",
+   "Adj Close": "36.1",
+   "Volume": "43300"
+  },
+  {
+   "Date": "Nov 11 2026",
+   "Close": "36.872002",
+   "Adj Close": "36.87",
+   "Volume": "52200"
+  },
+  {
+   "Date": "Nov 12 2026",
+   "Close": "36.186001",
+   "Adj Close": "36.19",
+   "Volume": "13500"
+  },
+  {
+   "Date": "Nov 13 2026",
+   "Close": "35.870998",
+   "Adj Close": "35.87",
+   "Volume": "15400"
   }
  ]
 }

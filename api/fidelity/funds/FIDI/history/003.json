@@ -2,7 +2,7 @@
  "ticker": "FIDI",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2209,
+ "totalRows": 2214,
  "headers": [
   "Date",
   "Close",
@@ -1263,6 +1263,36 @@
    "Close": "28.43",
    "Adj Close": "28.43",
    "Volume": "49500"
+  },
+  {
+   "Date": "Nov 09 2026",
+   "Close": "28.879999",
+   "Adj Close": "28.88",
+   "Volume": "64300"
+  },
+  {
+   "Date": "Nov 10 2026",
+   "Close": "28.75",
+   "Adj Close": "28.75",
+   "Volume": "57500"
+  },
+  {
+   "Date": "Nov 11 2026",
+   "Close": "28.698",
+   "Adj Close": "28.7",
+   "Volume": "28000"
+  },
+  {
+   "Date": "Nov 12 2026",
+   "Close": "28.790001",
+   "Adj Close": "28.79",
+   "Volume": "30900"
+  },
+  {
+   "Date": "Nov 13 2026",
+   "Close": "28.969999",
+   "Adj Close": "28.97",
+   "Volume": "78100"
   }
  ]
 }

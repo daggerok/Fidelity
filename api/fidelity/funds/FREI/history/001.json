@@ -2,7 +2,7 @@
  "ticker": "FREI",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 99,
+ "totalRows": 104,
  "headers": [
   "Date",
   "Close",
@@ -603,6 +603,36 @@
    "Close": "24.32",
    "Adj Close": "24.32",
    "Volume": "3200"
+  },
+  {
+   "Date": "Nov 09 2026",
+   "Close": "24.440001",
+   "Adj Close": "24.44",
+   "Volume": "14300"
+  },
+  {
+   "Date": "Nov 10 2026",
+   "Close": "24.32",
+   "Adj Close": "24.32",
+   "Volume": "11700"
+  },
+  {
+   "Date": "Nov 11 2026",
+   "Close": "24.32",
+   "Adj Close": "24.32",
+   "Volume": "19300"
+  },
+  {
+   "Date": "Nov 12 2026",
+   "Close": "24.17",
+   "Adj Close": "24.17",
+   "Volume": "6100"
+  },
+  {
+   "Date": "Nov 13 2026",
+   "Close": "24.15",
+   "Adj Close": "24.15",
+   "Volume": "14500"
   }
  ]
 }
