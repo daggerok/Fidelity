@@ -2,7 +2,7 @@
  "ticker": "FDMO",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2556,
+ "totalRows": 2557,
  "headers": [
   "Date",
   "Close",
@@ -3345,6 +3345,12 @@
    "Close": "88.168999",
    "Adj Close": "88.17",
    "Volume": "44100"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "Close": "86.779999",
+   "Adj Close": "86.78",
+   "Volume": "12928"
   }
  ]
 }

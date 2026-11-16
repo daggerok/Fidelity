@@ -2,7 +2,7 @@
  "ticker": "FCOR",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3043,
+ "totalRows": 3044,
  "headers": [
   "Date",
   "Close",
@@ -267,6 +267,12 @@
    "Close": "44.983002",
    "Adj Close": "44.98",
    "Volume": "68500"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "Close": "44.970001",
+   "Adj Close": "44.97",
+   "Volume": "61681"
   }
  ]
 }

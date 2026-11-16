@@ -2,7 +2,7 @@
  "ticker": "FDIS",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3284,
+ "totalRows": 3285,
  "headers": [
   "Date",
   "Close",
@@ -1713,6 +1713,12 @@
    "Close": "103.779999",
    "Adj Close": "103.78",
    "Volume": "60600"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "Close": "102.639999",
+   "Adj Close": "102.64",
+   "Volume": "35688"
   }
  ]
 }
