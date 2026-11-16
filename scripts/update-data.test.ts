@@ -793,7 +793,8 @@ describe('pipeline', () => {
       world.dividends.length = 0;
       await quiet(() => main(env({ TICKERS: 'FBND' })));
       // the dividend chart request is made for the updated fund only
-      expect(world.dividends).toEqual(['FBND']);
+      // the benchmark block adds exactly the SPY and the QQQ chart (read first), no request per fund
+      expect(world.dividends).toEqual(['SPY', 'QQQ', 'FBND']);
       const index = readJson(root, 'index.json');
       expect(index.funds.map((f: any) => f.ticker)).toEqual(['FBCG', 'FBCV', 'FBND']);
       expect(readdirSync(join(root, 'funds')).sort()).toEqual(['FBCG', 'FBCV', 'FBND']);
@@ -804,12 +805,18 @@ describe('pipeline', () => {
       for (const fund of index.funds) expect(Object.keys(fund.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
       // the swing keys from the Close column of the same pages (shared swing block), in front of returnsBasis and performanceAsOf
       for (const fund of index.funds) {
-        expect(Object.keys(fund.metrics).slice(-17, -8)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
+        expect(Object.keys(fund.metrics).slice(-51, -42)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
         expect([typeof fund.metrics.athPrice, fund.metrics.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
         // the dividend keys from one Yahoo daily chart request per updated fund (shared dividends block)
-        expect(Object.keys(fund.metrics).slice(-8, -2)).toEqual(['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y']);
+        expect(Object.keys(fund.metrics).slice(-42, -34)).toEqual(['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y', 'paymentsPerYear', 'payFrequency']);
+        // the 32 keys of the benchmark block (SPY and QQQ), read from the same chart request, in front of returnsBasis and performanceAsOf
+        expect(Object.keys(fund.metrics).slice(-34, -2)).toEqual(['perf1y', 'perf3y', 'perf5y', 'perf10y', 'perfSi', 'maxDrawdown1y', 'maxDrawdown3y', 'maxDrawdown5y', 'maxDrawdown10y',
+          'vsSpy1y', 'vsSpy3y', 'vsSpy5y', 'vsSpy10y', 'beta1ySpy', 'corr1ySpy', 'upCapture3ySpy', 'downCapture3ySpy', 'relStrength3mSpy', 'stressReturnSpy', 'stressBasisSpy',
+          'vsQqq1y', 'vsQqq3y', 'vsQqq5y', 'vsQqq10y', 'beta1yQqq', 'corr1yQqq', 'upCapture3yQqq', 'downCapture3yQqq', 'relStrength3mQqq', 'stressReturnQqq', 'stressBasisQqq', 'benchmarkAsOf']);
         // 0.12 + 0.13 in the last 12 months of the mock, the growth keys null (never 0)
-        expect([fund.metrics.dividendRate, fund.metrics.dividendGrowth, fund.metrics.dividendGrowth3y, fund.metrics.dividendGrowth5y, fund.metrics.dividendStreak, fund.metrics.dividendCut10y]).toEqual([0.25, null, null, null, null, null]);
+        expect([fund.metrics.dividendRate, fund.metrics.dividendGrowth, fund.metrics.dividendGrowth3y, fund.metrics.dividendGrowth5y, fund.metrics.dividendStreak, fund.metrics.dividendCut10y, fund.metrics.paymentsPerYear, fund.metrics.payFrequency]).toEqual([0.25, null, null, null, null, null, 2, 'semiannual']);
+        // the benchmarks answer the same bars as the fund: no difference, beta 1
+        expect([fund.metrics.vsSpy1y, fund.metrics.beta1ySpy, fund.metrics.corr1yQqq, fund.metrics.perf1y, fund.metrics.benchmarkAsOf]).toEqual([0, 1, 1, 33.67, '2026-03-27']);
       }
       for (const fund of index.funds) {
         expect(fund.dataFile).toBe(`./funds/${fund.ticker}/meta.json`);
@@ -1016,7 +1023,9 @@ describe('pipeline 3', () => {
         await new Promise((resolve) => setTimeout(resolve, 1100)); // generatedAt has second resolution
         globalThis.fetch = recording(true);
         await quiet(() => main(env({ TICKERS: 'FBND' })));
-        expect(calls).toEqual([]);
+        // nothing is fetched for the closed fund; the benchmark block still reads its SPY and QQQ charts once per run
+        expect(calls.filter((url) => !/finance\/chart\/(SPY|QQQ)\?/.test(url))).toEqual([]);
+        expect(calls.filter((url) => /finance\/chart\/(SPY|QQQ)\?/.test(url))).toHaveLength(2);
         expect(process.exitCode).not.toBe(1);
         const closed = snapshot(root);
         for (const path of Object.keys(first)) if (!path.endsWith('index.json')) expect([path, closed[path]]).toEqual([path, first[path]]);
