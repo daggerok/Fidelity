@@ -34,24 +34,25 @@
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
+  "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 12 2026",
-   "mo1": 3.9,
-   "mo1Text": "3.90%",
+   "asOfDate": "Nov 17 2026",
+   "mo1": 5.41,
+   "mo1Text": "5.41%",
    "qtd": 8.27,
    "qtdText": "8.27%",
    "ytd": 4.9,
    "ytdText": "4.90%",
-   "yr1": 9.43,
-   "yr1Text": "9.43%",
-   "yr3": 13.32,
-   "yr3Text": "13.32%",
+   "yr1": 12.69,
+   "yr1Text": "12.69%",
+   "yr3": 13.24,
+   "yr3Text": "13.24%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 12.88,
-   "sinceInceptionText": "12.88%"
+   "sinceInception": 12.82,
+   "sinceInceptionText": "12.82%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -148,8 +149,8 @@
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 860,
-  "asOf": "Nov 12 2026"
+  "totalRows": 862,
+  "asOf": "Nov 17 2026"
  },
  "seed": {
   "seriesId": "S000079687",

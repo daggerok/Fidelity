@@ -2,7 +2,7 @@
  "ticker": "FSMD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1940,
+ "totalRows": 1943,
  "headers": [
   "Date",
   "Close",
@@ -5649,6 +5649,24 @@
    "Close": "50.150002",
    "Adj Close": "50.15",
    "Volume": "76600"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "Close": "49.639999",
+   "Adj Close": "49.64",
+   "Volume": "100300"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "48.98",
+   "Adj Close": "48.98",
+   "Volume": "129400"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "49.240002",
+   "Adj Close": "49.24",
+   "Volume": "126800"
   }
  ]
 }

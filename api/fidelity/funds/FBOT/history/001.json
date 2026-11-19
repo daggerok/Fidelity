@@ -2,7 +2,7 @@
  "ticker": "FBOT",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 862,
+ "totalRows": 864,
  "headers": [
   "Date",
   "Close",
@@ -5178,9 +5178,21 @@
   },
   {
    "Date": "Nov 16 2026",
-   "Close": "34.990002",
-   "Adj Close": "34.99",
-   "Volume": "3919"
+   "Close": "34.542",
+   "Adj Close": "34.54",
+   "Volume": "10100"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "34.009998",
+   "Adj Close": "34.01",
+   "Volume": "17600"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "33.898998",
+   "Adj Close": "33.9",
+   "Volume": "15400"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FAAA",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 192,
+ "totalRows": 194,
  "headers": [
   "Date",
   "Close",
@@ -1158,9 +1158,21 @@
   },
   {
    "Date": "Nov 16 2026",
-   "Close": "50.400002",
-   "Adj Close": "50.4",
-   "Volume": "20500"
+   "Close": "50.48",
+   "Adj Close": "50.48",
+   "Volume": "232700"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "50.43",
+   "Adj Close": "50.43",
+   "Volume": "681100"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "50.439999",
+   "Adj Close": "50.44",
+   "Volume": "50000"
   }
  ]
 }

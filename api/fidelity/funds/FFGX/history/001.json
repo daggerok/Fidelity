@@ -2,7 +2,7 @@
  "ticker": "FFGX",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 497,
+ "totalRows": 499,
  "headers": [
   "Date",
   "Close",
@@ -2988,9 +2988,21 @@
   },
   {
    "Date": "Nov 16 2026",
-   "Close": "32.122299",
-   "Adj Close": "32.12",
-   "Volume": "33"
+   "Close": "31.481001",
+   "Adj Close": "31.48",
+   "Volume": "5500"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "31.055",
+   "Adj Close": "31.06",
+   "Volume": "8100"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "30.76",
+   "Adj Close": "30.76",
+   "Volume": "18900"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FLDR",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2115,
+ "totalRows": 2118,
  "headers": [
   "Date",
   "Close",
@@ -699,6 +699,24 @@
    "Close": "49.869999",
    "Adj Close": "49.87",
    "Volume": "83300"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "Close": "49.880001",
+   "Adj Close": "49.88",
+   "Volume": "115400"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "49.900002",
+   "Adj Close": "49.9",
+   "Volume": "807200"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "49.939999",
+   "Adj Close": "49.94",
+   "Volume": "193700"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FEAC",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 497,
+ "totalRows": 499,
  "headers": [
   "Date",
   "Close",
@@ -2988,9 +2988,21 @@
   },
   {
    "Date": "Nov 16 2026",
-   "Close": "31.98",
-   "Adj Close": "31.98",
-   "Volume": "3280"
+   "Close": "31.663",
+   "Adj Close": "31.66",
+   "Volume": "3400"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "31.347",
+   "Adj Close": "31.35",
+   "Volume": "13100"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "31.281",
+   "Adj Close": "31.28",
+   "Volume": "1300"
   }
  ]
 }

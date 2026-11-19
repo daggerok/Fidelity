@@ -2,7 +2,7 @@
  "ticker": "FDMO",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2557,
+ "totalRows": 2559,
  "headers": [
   "Date",
   "Close",
@@ -3348,9 +3348,21 @@
   },
   {
    "Date": "Nov 16 2026",
-   "Close": "86.779999",
-   "Adj Close": "86.78",
-   "Volume": "12928"
+   "Close": "85.708",
+   "Adj Close": "85.71",
+   "Volume": "63000"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "84.874001",
+   "Adj Close": "84.87",
+   "Volume": "82300"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "84.519997",
+   "Adj Close": "84.52",
+   "Volume": "83100"
   }
  ]
 }

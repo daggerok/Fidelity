@@ -2,7 +2,7 @@
  "ticker": "FCLD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1283,
+ "totalRows": 1285,
  "headers": [
   "Date",
   "Close",
@@ -1704,9 +1704,21 @@
   },
   {
    "Date": "Nov 16 2026",
-   "Close": "38.990101",
-   "Adj Close": "38.99",
-   "Volume": "21149"
+   "Close": "38.700001",
+   "Adj Close": "38.7",
+   "Volume": "39200"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "37.439999",
+   "Adj Close": "37.44",
+   "Volume": "23900"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "37.599998",
+   "Adj Close": "37.6",
+   "Volume": "18500"
   }
  ]
 }

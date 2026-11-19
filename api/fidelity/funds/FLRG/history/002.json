@@ -2,7 +2,7 @@
  "ticker": "FLRG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1547,
+ "totalRows": 1550,
  "headers": [
   "Date",
   "Close",
@@ -3291,6 +3291,24 @@
    "Close": "41.294998",
    "Adj Close": "41.29",
    "Volume": "9300"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "Close": "40.658001",
+   "Adj Close": "40.66",
+   "Volume": "17500"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "Close": "40.282001",
+   "Adj Close": "40.28",
+   "Volume": "34600"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "40.116001",
+   "Adj Close": "40.12",
+   "Volume": "19400"
   }
  ]
 }
