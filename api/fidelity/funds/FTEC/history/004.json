@@ -2,7 +2,7 @@
  "ticker": "FTEC",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3287,
+ "totalRows": 3289,
  "headers": [
   "Date",
   "Close",
@@ -1731,6 +1731,18 @@
    "Close": "255.490005",
    "Adj Close": "255.49",
    "Volume": "332000"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "250.490005",
+   "Adj Close": "250.49",
+   "Volume": "503900"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "233.25",
+   "Adj Close": "233.25",
+   "Volume": "1246963"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FDRV",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1285,
+ "totalRows": 1287,
  "headers": [
   "Date",
   "Close",
@@ -1719,6 +1719,18 @@
    "Close": "14.19",
    "Adj Close": "14.19",
    "Volume": "2000"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "13.86",
+   "Adj Close": "13.86",
+   "Volume": "11400"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "13.03",
+   "Adj Close": "13.03",
+   "Volume": "6567"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FVAL",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2559,
+ "totalRows": 2561,
  "headers": [
   "Date",
   "Close",
@@ -3363,6 +3363,18 @@
    "Close": "78.860001",
    "Adj Close": "78.86",
    "Volume": "112500"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "77.299004",
+   "Adj Close": "77.3",
+   "Volume": "75500"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "75.010002",
+   "Adj Close": "75.01",
+   "Volume": "85174"
   }
  ]
 }

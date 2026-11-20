@@ -2,7 +2,7 @@
  "ticker": "FREI",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 107,
+ "totalRows": 109,
  "headers": [
   "Date",
   "Close",
@@ -651,6 +651,18 @@
    "Close": "24.07",
    "Adj Close": "24.07",
    "Volume": "22100"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "24.01",
+   "Adj Close": "24.01",
+   "Volume": "114800"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "23.9604",
+   "Adj Close": "23.96",
+   "Volume": "30295"
   }
  ]
 }

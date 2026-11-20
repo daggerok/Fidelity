@@ -2,7 +2,7 @@
  "ticker": "FSEV",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 141,
+ "totalRows": 143,
  "headers": [
   "Date",
   "Close",
@@ -855,6 +855,18 @@
    "Close": "25.360001",
    "Adj Close": "25.36",
    "Volume": "3600"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "24.84",
+   "Adj Close": "24.84",
+   "Volume": "300"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "24.306299",
+   "Adj Close": "24.31",
+   "Volume": "432"
   }
  ]
 }

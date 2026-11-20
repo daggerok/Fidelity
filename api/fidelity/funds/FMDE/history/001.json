@@ -2,7 +2,7 @@
  "ticker": "FMDE",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 752,
+ "totalRows": 754,
  "headers": [
   "Date",
   "Close",
@@ -4521,6 +4521,18 @@
    "Close": "40.630001",
    "Adj Close": "40.63",
    "Volume": "927000"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "39.810001",
+   "Adj Close": "39.81",
+   "Volume": "1216600"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "38.889999",
+   "Adj Close": "38.89",
+   "Volume": "1443818"
   }
  ]
 }

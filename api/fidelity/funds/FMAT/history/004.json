@@ -2,7 +2,7 @@
  "ticker": "FMAT",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3287,
+ "totalRows": 3289,
  "headers": [
   "Date",
   "Close",
@@ -1731,6 +1731,18 @@
    "Close": "56.200001",
    "Adj Close": "56.2",
    "Volume": "55000"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "55.099998",
+   "Adj Close": "55.1",
+   "Volume": "25800"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "53.610001",
+   "Adj Close": "53.61",
+   "Volume": "89294"
   }
  ]
 }

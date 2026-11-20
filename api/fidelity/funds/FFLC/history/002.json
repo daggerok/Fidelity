@@ -2,7 +2,7 @@
  "ticker": "FFLC",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1623,
+ "totalRows": 1625,
  "headers": [
   "Date",
   "Close",
@@ -3747,6 +3747,18 @@
    "Close": "55.950001",
    "Adj Close": "55.95",
    "Volume": "200700"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "54.740002",
+   "Adj Close": "54.74",
+   "Volume": "241400"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "52.82",
+   "Adj Close": "52.82",
+   "Volume": "221565"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FSTA",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3287,
+ "totalRows": 3289,
  "headers": [
   "Date",
   "Close",
@@ -1731,6 +1731,18 @@
    "Close": "58.09",
    "Adj Close": "58.09",
    "Volume": "218400"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "Close": "57.310001",
+   "Adj Close": "57.31",
+   "Volume": "342100"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "Close": "57.669998",
+   "Adj Close": "57.67",
+   "Volume": "384212"
   }
  ]
 }

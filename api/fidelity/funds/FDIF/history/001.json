@@ -2,7 +2,7 @@
  "ticker": "FDIF",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 858,
+ "totalRows": 860,
  "headers": [
   "Date",
   "Close",
@@ -5154,6 +5154,18 @@
   },
   {
    "Date": "Nov 17 2026",
+   "Close": "38.869999",
+   "Adj Close": "38.87",
+   "Volume": "0"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "Close": "38.869999",
+   "Adj Close": "38.87",
+   "Volume": "0"
+  },
+  {
+   "Date": "Nov 19 2026",
    "Close": "38.869999",
    "Adj Close": "38.87",
    "Volume": "0"
