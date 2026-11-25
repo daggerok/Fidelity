@@ -2,7 +2,7 @@
  "ticker": "FPFD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1367,
+ "totalRows": 1368,
  "headers": [
   "Date",
   "Close",
@@ -2211,6 +2211,12 @@
    "Close": "20.27",
    "Adj Close": "20.27",
    "Volume": "23600"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "Close": "20.26",
+   "Adj Close": "20.26",
+   "Volume": "11850"
   }
  ]
 }

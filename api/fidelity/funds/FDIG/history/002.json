@@ -2,7 +2,7 @@
  "ticker": "FDIG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1154,
+ "totalRows": 1155,
  "headers": [
   "Date",
   "Close",
@@ -933,6 +933,12 @@
    "Close": "27.882999",
    "Adj Close": "27.88",
    "Volume": "36600"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "Close": "28.200001",
+   "Adj Close": "28.2",
+   "Volume": "43497"
   }
  ]
 }

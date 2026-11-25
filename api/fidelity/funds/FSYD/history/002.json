@@ -2,7 +2,7 @@
  "ticker": "FSYD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1197,
+ "totalRows": 1198,
  "headers": [
   "Date",
   "Close",
@@ -1191,6 +1191,12 @@
    "Close": "46.124001",
    "Adj Close": "46.12",
    "Volume": "6600"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "Close": "46.115002",
+   "Adj Close": "46.12",
+   "Volume": "32112"
   }
  ]
 }

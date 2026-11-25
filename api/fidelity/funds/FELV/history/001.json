@@ -2,7 +2,7 @@
  "ticker": "FELV",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 756,
+ "totalRows": 757,
  "headers": [
   "Date",
   "Close",
@@ -4545,6 +4545,12 @@
    "Close": "42.130001",
    "Adj Close": "42.13",
    "Volume": "342500"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "Close": "42.259998",
+   "Adj Close": "42.26",
+   "Volume": "265596"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "FNCL",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3291,
+ "totalRows": 3292,
  "headers": [
   "Date",
   "Close",
@@ -1755,6 +1755,12 @@
    "Close": "78.970001",
    "Adj Close": "78.97",
    "Volume": "106800"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "Close": "79.57",
+   "Adj Close": "79.57",
+   "Volume": "193481"
   }
  ]
 }

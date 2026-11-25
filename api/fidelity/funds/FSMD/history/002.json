@@ -2,7 +2,7 @@
  "ticker": "FSMD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1947,
+ "totalRows": 1948,
  "headers": [
   "Date",
   "Close",
@@ -5691,6 +5691,12 @@
    "Close": "48.549999",
    "Adj Close": "48.55",
    "Volume": "254200"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "Close": "48.970001",
+   "Adj Close": "48.97",
+   "Volume": "1099635"
   }
  ]
 }

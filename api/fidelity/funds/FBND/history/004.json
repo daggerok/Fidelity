@@ -2,7 +2,7 @@
  "ticker": "FBND",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3050,
+ "totalRows": 3051,
  "headers": [
   "Date",
   "Close",
@@ -309,6 +309,12 @@
    "Close": "44.169998",
    "Adj Close": "44.17",
    "Volume": "4030400"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "Close": "44.32",
+   "Adj Close": "44.32",
+   "Volume": "4145278"
   }
  ]
 }
