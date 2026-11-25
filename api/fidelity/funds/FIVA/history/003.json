@@ -2,7 +2,7 @@
  "ticker": "FIVA",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2219,
+ "totalRows": 2221,
  "headers": [
   "Date",
   "Close",
@@ -1322,7 +1322,19 @@
    "Date": "Nov 20 2026",
    "Close": "35.73",
    "Adj Close": "35.73",
-   "Volume": "85386"
+   "Volume": "85400"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "36.560001",
+   "Adj Close": "36.56",
+   "Volume": "63300"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "36.41",
+   "Adj Close": "36.41",
+   "Volume": "79500"
   }
  ]
 }

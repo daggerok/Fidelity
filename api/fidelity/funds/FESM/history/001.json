@@ -2,7 +2,7 @@
  "ticker": "FESM",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 754,
+ "totalRows": 756,
  "headers": [
   "Date",
   "Close",
@@ -4532,7 +4532,19 @@
    "Date": "Nov 20 2026",
    "Close": "41.849998",
    "Adj Close": "41.85",
-   "Volume": "1832828"
+   "Volume": "1836400"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "43.389999",
+   "Adj Close": "43.39",
+   "Volume": "1099300"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "43.560001",
+   "Adj Close": "43.56",
+   "Volume": "1203700"
   }
  ]
 }

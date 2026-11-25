@@ -2,7 +2,7 @@
  "ticker": "FSYD",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1195,
+ "totalRows": 1197,
  "headers": [
   "Date",
   "Close",
@@ -1176,9 +1176,21 @@
   },
   {
    "Date": "Nov 20 2026",
-   "Close": "46.0149",
+   "Close": "46.014999",
    "Adj Close": "46.01",
-   "Volume": "24657"
+   "Volume": "24700"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "46.200001",
+   "Adj Close": "46.2",
+   "Volume": "12800"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "46.124001",
+   "Adj Close": "46.12",
+   "Volume": "6600"
   }
  ]
 }

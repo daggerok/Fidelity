@@ -2,7 +2,7 @@
  "ticker": "FTBD",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 960,
+ "totalRows": 962,
  "headers": [
   "Date",
   "Close",
@@ -5768,7 +5768,19 @@
    "Date": "Nov 20 2026",
    "Close": "47.32",
    "Adj Close": "47.32",
-   "Volume": "2923"
+   "Volume": "2900"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "47.428001",
+   "Adj Close": "47.43",
+   "Volume": "2300"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "47.449001",
+   "Adj Close": "47.45",
+   "Volume": "1100"
   }
  ]
 }

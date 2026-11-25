@@ -4,8 +4,8 @@
  "category": "Thematic",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FRNW",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005377/000003540226005377-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005377/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007483/000003540226007483-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007483/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FRNW",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$17.88",
-  "value": 17.88,
-  "asOfDate": "Nov 20 2026"
+  "display": "$18.12",
+  "value": 18.12,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$162.10 M",
-  "value": 162102960.78,
-  "asOfDate": "Jun 30 2026",
+  "display": "$99.15 M",
+  "value": 99145424.74,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 20 2026",
-   "mo1": -11,
-   "mo1Text": "-11.00%",
-   "qtd": -14.61,
-   "qtdText": "-14.61%",
-   "ytd": -11.22,
-   "ytdText": "-11.22%",
-   "yr1": -7.93,
-   "yr1Text": "-7.93%",
-   "yr3": 6.43,
-   "yr3Text": "6.43%",
-   "yr5": -7.56,
-   "yr5Text": "-7.56%",
+   "asOfDate": "Nov 24 2026",
+   "mo1": -8.16,
+   "mo1Text": "-8.16%",
+   "qtd": -13.47,
+   "qtdText": "-13.47%",
+   "ytd": -10.03,
+   "ytdText": "-10.03%",
+   "yr1": -8.62,
+   "yr1Text": "-8.62%",
+   "yr3": 7.74,
+   "yr3Text": "7.74%",
+   "yr5": -6.66,
+   "yr5Text": "-6.66%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": -5.66,
-   "sinceInceptionText": "-5.66%"
+   "sinceInception": -5.41,
+   "sinceInceptionText": "-5.41%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -170,7 +170,7 @@
   ],
   "pageSize": 250,
   "totalRows": 53,
-  "asOf": "Jun 30 2026"
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
@@ -178,14 +178,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1287,
-  "asOf": "Nov 20 2026"
+  "totalRows": 1289,
+  "asOf": "Nov 24 2026"
  },
  "seed": {
   "seriesId": "S000073597",
   "seriesName": "Fidelity Clean Energy ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005377"
+  "accession": "0000035402-26-007483"
  }
 }

@@ -4,8 +4,8 @@
  "category": "US Equity",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FEAC",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005417/000003540226005417-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005417/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007575/000003540226007575-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007575/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FEAC",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$29.57",
-  "value": 29.566,
-  "asOfDate": "Nov 20 2026"
+  "display": "$30.76",
+  "value": 30.7551,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$25.85 M",
-  "value": 25845521.1,
-  "asOfDate": "Jun 30 2026",
+  "display": "$16.37 M",
+  "value": 16367155.579999998,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 20 2026",
-   "mo1": -10.45,
-   "mo1Text": "-10.45%",
-   "qtd": -10.12,
-   "qtdText": "-10.12%",
-   "ytd": 2.46,
-   "ytdText": "2.46%",
-   "yr1": 8.51,
-   "yr1Text": "8.51%",
+   "asOfDate": "Nov 24 2026",
+   "mo1": -5.62,
+   "mo1Text": "-5.62%",
+   "qtd": -6.53,
+   "qtdText": "-6.53%",
+   "ytd": 6.55,
+   "ytdText": "6.55%",
+   "yr1": 8.62,
+   "yr1Text": "8.62%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 9.06,
-   "sinceInceptionText": "9.06%"
+   "sinceInception": 11.15,
+   "sinceInceptionText": "11.15%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -126,22 +126,22 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 482,
-  "asOf": "Jun 30 2026"
+  "totalRows": 424,
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 501,
-  "asOf": "Nov 20 2026"
+  "totalRows": 503,
+  "asOf": "Nov 24 2026"
  },
  "seed": {
   "seriesId": "S000087779",
   "seriesName": "Fidelity Enhanced U.S. All-Cap Equity ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005417"
+  "accession": "0000035402-26-007575"
  }
 }

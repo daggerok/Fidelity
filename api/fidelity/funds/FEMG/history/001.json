@@ -2,7 +2,7 @@
  "ticker": "FEMG",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 143,
+ "totalRows": 145,
  "headers": [
   "Date",
   "Close",
@@ -864,9 +864,21 @@
   },
   {
    "Date": "Nov 20 2026",
-   "Close": "22.1416",
+   "Close": "22.139999",
    "Adj Close": "22.14",
-   "Volume": "6011"
+   "Volume": "6000"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "23.42",
+   "Adj Close": "23.42",
+   "Volume": "900"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "23.1926",
+   "Adj Close": "23.19",
+   "Volume": "4219"
   }
  ]
 }

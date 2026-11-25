@@ -2,7 +2,7 @@
  "ticker": "FBCV",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1625,
+ "totalRows": 1627,
  "headers": [
   "Date",
   "Close",
@@ -3758,7 +3758,19 @@
    "Date": "Nov 20 2026",
    "Close": "41.720001",
    "Adj Close": "41.72",
-   "Volume": "29225"
+   "Volume": "29200"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "42.43",
+   "Adj Close": "42.43",
+   "Volume": "16400"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "42.825001",
+   "Adj Close": "42.83",
+   "Volume": "17000"
   }
  ]
 }

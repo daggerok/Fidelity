@@ -4,8 +4,8 @@
  "category": "International",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FENI",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005399/000003540226005399-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005399/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007501/000003540226007501-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007501/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FENI",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$36.79",
-  "value": 36.79,
-  "asOfDate": "Nov 20 2026"
+  "display": "$37.88",
+  "value": 37.88,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$10,386.22 M",
-  "value": 10386219565.60001,
-  "asOfDate": "Jun 30 2026",
+  "display": "$11,558.51 M",
+  "value": 11558511523.240013,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 20 2026",
-   "mo1": -7.54,
-   "mo1Text": "-7.54%",
-   "qtd": -7,
-   "qtdText": "-7.00%",
-   "ytd": 2.79,
-   "ytdText": "2.79%",
-   "yr1": 10.45,
-   "yr1Text": "10.45%",
-   "yr3": 16.7,
-   "yr3Text": "16.70%",
+   "asOfDate": "Nov 24 2026",
+   "mo1": -3.59,
+   "mo1Text": "-3.59%",
+   "qtd": -4.25,
+   "qtdText": "-4.25%",
+   "ytd": 5.84,
+   "ytdText": "5.84%",
+   "yr1": 10.95,
+   "yr1Text": "10.95%",
+   "yr3": 17.79,
+   "yr3Text": "17.79%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 16.69,
-   "sinceInceptionText": "16.69%"
+   "sinceInception": 17.76,
+   "sinceInceptionText": "17.76%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -134,22 +134,22 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 395,
-  "asOf": "Jun 30 2026"
+  "totalRows": 441,
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 754,
-  "asOf": "Nov 20 2026"
+  "totalRows": 756,
+  "asOf": "Nov 24 2026"
  },
  "seed": {
   "seriesId": "S000081802",
   "seriesName": "Fidelity Enhanced International ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005399"
+  "accession": "0000035402-26-007501"
  }
 }

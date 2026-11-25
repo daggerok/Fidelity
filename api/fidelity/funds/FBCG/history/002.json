@@ -2,7 +2,7 @@
  "ticker": "FBCG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1625,
+ "totalRows": 1627,
  "headers": [
   "Date",
   "Close",
@@ -3758,7 +3758,19 @@
    "Date": "Nov 20 2026",
    "Close": "51.029999",
    "Adj Close": "51.03",
-   "Volume": "2839870"
+   "Volume": "2839900"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "54.84",
+   "Adj Close": "54.84",
+   "Volume": "1139100"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "53.959999",
+   "Adj Close": "53.96",
+   "Volume": "1046200"
   }
  ]
 }

@@ -4,8 +4,8 @@
  "category": "US Equity",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMDE",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005387/000003540226005387-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005387/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007509/000003540226007509-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007509/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMDE",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$38.89",
-  "value": 38.89,
-  "asOfDate": "Nov 20 2026"
+  "display": "$40.15",
+  "value": 40.15,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$7,439.42 M",
-  "value": 7439418111.57,
-  "asOfDate": "Jun 30 2026",
+  "display": "$8,162.14 M",
+  "value": 8162143874.450003,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 20 2026",
-   "mo1": -6.31,
-   "mo1Text": "-6.31%",
-   "qtd": -4.45,
-   "qtdText": "-4.45%",
-   "ytd": 7.79,
-   "ytdText": "7.79%",
-   "yr1": 14.58,
-   "yr1Text": "14.58%",
-   "yr3": 17.05,
-   "yr3Text": "17.05%",
+   "asOfDate": "Nov 24 2026",
+   "mo1": -3.07,
+   "mo1Text": "-3.07%",
+   "qtd": -1.35,
+   "qtdText": "-1.35%",
+   "ytd": 11.28,
+   "ytdText": "11.28%",
+   "yr1": 12.94,
+   "yr1Text": "12.94%",
+   "yr3": 18.12,
+   "yr3Text": "18.12%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 17.05,
-   "sinceInceptionText": "17.05%"
+   "sinceInception": 18.22,
+   "sinceInceptionText": "18.22%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -135,25 +135,26 @@
  "holdings": {
   "pages": [
    "holdings/001.json",
-   "holdings/002.json"
+   "holdings/002.json",
+   "holdings/003.json"
   ],
   "pageSize": 250,
-  "totalRows": 427,
-  "asOf": "Jun 30 2026"
+  "totalRows": 509,
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 754,
-  "asOf": "Nov 20 2026"
+  "totalRows": 756,
+  "asOf": "Nov 24 2026"
  },
  "seed": {
   "seriesId": "S000081803",
   "seriesName": "Fidelity Enhanced Mid Cap Core ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005387"
+  "accession": "0000035402-26-007509"
  }
 }

@@ -2,7 +2,7 @@
  "ticker": "FCLO",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 196,
+ "totalRows": 198,
  "headers": [
   "Date",
   "Close",
@@ -1184,7 +1184,19 @@
    "Date": "Nov 20 2026",
    "Close": "50.529999",
    "Adj Close": "50.53",
-   "Volume": "5011"
+   "Volume": "5000"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "50.529999",
+   "Adj Close": "50.53",
+   "Volume": "33400"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "50.529999",
+   "Adj Close": "50.53",
+   "Volume": "2355"
   }
  ]
 }

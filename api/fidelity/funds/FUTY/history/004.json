@@ -2,7 +2,7 @@
  "ticker": "FUTY",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3289,
+ "totalRows": 3291,
  "headers": [
   "Date",
   "Close",
@@ -1742,7 +1742,19 @@
    "Date": "Nov 20 2026",
    "Close": "55",
    "Adj Close": "55",
-   "Volume": "367752"
+   "Volume": "367900"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "55.790001",
+   "Adj Close": "55.79",
+   "Volume": "576800"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "55.889999",
+   "Adj Close": "55.89",
+   "Volume": "380800"
   }
  ]
 }

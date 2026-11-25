@@ -4,8 +4,8 @@
  "category": "International",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FEMR",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005383/000003540226005383-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005383/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007484/000003540226007484-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007484/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FEMR",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$32.67",
-  "value": 32.667,
-  "asOfDate": "Nov 20 2026"
+  "display": "$34.59",
+  "value": 34.591,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$158.00 M",
-  "value": 158001403.36999997,
-  "asOfDate": "Jun 30 2026",
+  "display": "$198.59 M",
+  "value": 198585092.69,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 20 2026",
-   "mo1": -15.78,
-   "mo1Text": "-15.78%",
-   "qtd": -20.9,
-   "qtdText": "-20.90%",
-   "ytd": 1.93,
-   "ytdText": "1.93%",
-   "yr1": 8.21,
-   "yr1Text": "8.21%",
+   "asOfDate": "Nov 24 2026",
+   "mo1": -9.12,
+   "mo1Text": "-9.12%",
+   "qtd": -16.25,
+   "qtdText": "-16.25%",
+   "ytd": 7.93,
+   "ytdText": "7.93%",
+   "yr1": 13.3,
+   "yr1Text": "13.30%",
    "yr3": null,
    "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 16.59,
-   "sinceInceptionText": "16.59%"
+   "sinceInception": 19.85,
+   "sinceInceptionText": "19.85%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -121,22 +121,22 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 144,
-  "asOf": "Jun 30 2026"
+  "totalRows": 170,
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 501,
-  "asOf": "Nov 20 2026"
+  "totalRows": 503,
+  "asOf": "Nov 24 2026"
  },
  "seed": {
   "seriesId": "S000087780",
   "seriesName": "Fidelity Enhanced Emerging Markets ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005383"
+  "accession": "0000035402-26-007484"
  }
 }

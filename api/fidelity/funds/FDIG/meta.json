@@ -4,8 +4,8 @@
  "category": "Thematic",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FDIG",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005394/000003540226005394-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005394/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007495/000003540226007495-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007495/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FDIG",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$26.96",
-  "value": 26.963,
-  "asOfDate": "Nov 20 2026"
+  "display": "$27.88",
+  "value": 27.883,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$300.41 M",
-  "value": 300410908.3000001,
-  "asOfDate": "Jun 30 2026",
+  "display": "$275.41 M",
+  "value": 275407055.4100001,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 20 2026",
-   "mo1": -26.08,
-   "mo1Text": "-26.08%",
-   "qtd": -35.82,
-   "qtdText": "-35.82%",
-   "ytd": -29.68,
-   "ytdText": "-29.68%",
-   "yr1": -27.78,
-   "yr1Text": "-27.78%",
-   "yr3": 15.6,
-   "yr3Text": "15.60%",
+   "asOfDate": "Nov 24 2026",
+   "mo1": -20.25,
+   "mo1Text": "-20.25%",
+   "qtd": -33.63,
+   "qtdText": "-33.63%",
+   "ytd": -27.28,
+   "ytdText": "-27.28%",
+   "yr1": -31.62,
+   "yr1Text": "-31.62%",
+   "yr3": 14.94,
+   "yr3Text": "14.94%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 3.36,
-   "sinceInceptionText": "3.36%"
+   "sinceInception": 4.11,
+   "sinceInceptionText": "4.11%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -121,8 +121,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 62,
-  "asOf": "Jun 30 2026"
+  "totalRows": 61,
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
@@ -130,14 +130,14 @@
    "history/002.json"
   ],
   "pageSize": 1000,
-  "totalRows": 1152,
-  "asOf": "Nov 20 2026"
+  "totalRows": 1154,
+  "asOf": "Nov 24 2026"
  },
  "seed": {
   "seriesId": "S000075902",
   "seriesName": "Fidelity Crypto Industry and Digital Payments ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005394"
+  "accession": "0000035402-26-007495"
  }
 }

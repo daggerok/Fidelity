@@ -2,7 +2,7 @@
  "ticker": "FFLV",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 689,
+ "totalRows": 691,
  "headers": [
   "Date",
   "Close",
@@ -4142,7 +4142,19 @@
    "Date": "Nov 20 2026",
    "Close": "27.41",
    "Adj Close": "27.41",
-   "Volume": "9073"
+   "Volume": "9100"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "28",
+   "Adj Close": "28",
+   "Volume": "8100"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "28.219999",
+   "Adj Close": "28.22",
+   "Volume": "2900"
   }
  ]
 }

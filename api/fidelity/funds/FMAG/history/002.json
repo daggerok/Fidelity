@@ -2,7 +2,7 @@
  "ticker": "FMAG",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1457,
+ "totalRows": 1459,
  "headers": [
   "Date",
   "Close",
@@ -2750,7 +2750,19 @@
    "Date": "Nov 20 2026",
    "Close": "31.028999",
    "Adj Close": "31.03",
-   "Volume": "54037"
+   "Volume": "54000"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "32.799999",
+   "Adj Close": "32.8",
+   "Volume": "19600"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "32.23",
+   "Adj Close": "32.23",
+   "Volume": "22700"
   }
  ]
 }

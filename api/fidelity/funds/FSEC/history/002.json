@@ -2,7 +2,7 @@
  "ticker": "FSEC",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1436,
+ "totalRows": 1438,
  "headers": [
   "Date",
   "Close",
@@ -2624,7 +2624,19 @@
    "Date": "Nov 20 2026",
    "Close": "42.73",
    "Adj Close": "42.73",
-   "Volume": "168726"
+   "Volume": "168700"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "Close": "42.740002",
+   "Adj Close": "42.74",
+   "Volume": "247900"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "Close": "42.709999",
+   "Adj Close": "42.71",
+   "Volume": "398200"
   }
  ]
 }

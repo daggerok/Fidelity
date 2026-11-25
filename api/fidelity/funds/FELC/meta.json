@@ -4,8 +4,8 @@
  "category": "US Equity",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FELC",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005398/000003540226005398-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005398/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007521/000003540226007521-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007521/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FELC",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -19,40 +19,40 @@
   "asOfDate": "—"
  },
  "marketPrice": {
-  "display": "$39.01",
-  "value": 39.01,
-  "asOfDate": "Nov 20 2026"
+  "display": "$40.61",
+  "value": 40.61,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
   "display": "—",
   "value": null
  },
  "aum": {
-  "display": "$7,881.48 M",
-  "value": 7881483705.599998,
-  "asOfDate": "Jun 30 2026",
+  "display": "$8,622.07 M",
+  "value": 8622070254.04,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
-   "asOfDate": "Nov 20 2026",
-   "mo1": -10.49,
-   "mo1Text": "-10.49%",
-   "qtd": -10.16,
-   "qtdText": "-10.16%",
-   "ytd": 2.9,
-   "ytdText": "2.90%",
-   "yr1": 8.39,
-   "yr1Text": "8.39%",
-   "yr3": 16.84,
-   "yr3Text": "16.84%",
+   "asOfDate": "Nov 24 2026",
+   "mo1": -5.51,
+   "mo1Text": "-5.51%",
+   "qtd": -6.47,
+   "qtdText": "-6.47%",
+   "ytd": 7.12,
+   "ytdText": "7.12%",
+   "yr1": 8.87,
+   "yr1Text": "8.87%",
+   "yr3": 18.65,
+   "yr3Text": "18.65%",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 16.83,
-   "sinceInceptionText": "16.83%"
+   "sinceInception": 18.33,
+   "sinceInceptionText": "18.33%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -138,22 +138,22 @@
    "holdings/002.json"
   ],
   "pageSize": 250,
-  "totalRows": 257,
-  "asOf": "Jun 30 2026"
+  "totalRows": 306,
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
    "history/001.json"
   ],
   "pageSize": 1000,
-  "totalRows": 754,
-  "asOf": "Nov 20 2026"
+  "totalRows": 756,
+  "asOf": "Nov 24 2026"
  },
  "seed": {
   "seriesId": "S000081804",
   "seriesName": "Fidelity Enhanced Large Cap Core ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005398"
+  "accession": "0000035402-26-007521"
  }
 }

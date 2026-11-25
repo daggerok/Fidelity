@@ -4,8 +4,8 @@
  "category": "Thematic",
  "source": {
   "fundPage": "https://digital.fidelity.com/prgw/digital/research/quote?stocks=FMET",
-  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005474/000003540226005474-index.htm",
-  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226005474/primary_doc.xml",
+  "edgarFiling": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007613/000003540226007613-index.htm",
+  "nportDoc": "https://www.sec.gov/Archives/edgar/data/945908/000003540226007613/primary_doc.xml",
   "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/FMET",
   "provider": "SEC EDGAR (N-PORT-P) + Yahoo Finance public chart API"
  },
@@ -28,31 +28,31 @@
   "value": null
  },
  "aum": {
-  "display": "$45.66 M",
-  "value": 45662746.61000001,
-  "asOfDate": "Jun 30 2026",
+  "display": "$44.06 M",
+  "value": 44059442.20999999,
+  "asOfDate": "Sep 30 2026",
   "source": "sum of reported N-PORT position values"
  },
  "returns": {
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
    "asOfDate": "Nov 19 2026",
-   "mo1": -0.85,
-   "mo1Text": "-0.85%",
+   "mo1": 0.97,
+   "mo1Text": "0.97%",
    "qtd": -1.26,
    "qtdText": "-1.26%",
    "ytd": 7.45,
    "ytdText": "7.45%",
-   "yr1": 13.07,
-   "yr1Text": "13.07%",
-   "yr3": 13.45,
-   "yr3Text": "13.45%",
+   "yr1": null,
+   "yr1Text": "—",
+   "yr3": null,
+   "yr3Text": "—",
    "yr5": null,
    "yr5Text": "—",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 11.34,
-   "sinceInceptionText": "11.34%"
+   "sinceInception": null,
+   "sinceInceptionText": "—"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -157,8 +157,8 @@
    "holdings/001.json"
   ],
   "pageSize": 250,
-  "totalRows": 53,
-  "asOf": "Jun 30 2026"
+  "totalRows": 54,
+  "asOf": "Sep 30 2026"
  },
  "history": {
   "pages": [
@@ -174,6 +174,6 @@
   "seriesName": "Fidelity Metaverse ETF",
   "trustCik": "0000945908",
   "trustName": "Fidelity Covington Trust",
-  "accession": "0000035402-26-005474"
+  "accession": "0000035402-26-007613"
  }
 }
