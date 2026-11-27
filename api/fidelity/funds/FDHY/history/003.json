@@ -2,7 +2,7 @@
  "ticker": "FDHY",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2125,
+ "totalRows": 2126,
  "headers": [
   "Date",
   "Close",
@@ -759,6 +759,12 @@
    "Close": "47.189999",
    "Adj Close": "47.19",
    "Volume": "43300"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "Close": "47.009998",
+   "Adj Close": "47.01",
+   "Volume": "19856"
   }
  ]
 }

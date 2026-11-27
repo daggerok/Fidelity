@@ -2,7 +2,7 @@
  "ticker": "FCOM",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3292,
+ "totalRows": 3293,
  "headers": [
   "Date",
   "Close",
@@ -1761,6 +1761,12 @@
    "Close": "67.010002",
    "Adj Close": "67.01",
    "Volume": "228300"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "Close": "68.330002",
+   "Adj Close": "68.33",
+   "Volume": "70974"
   }
  ]
 }

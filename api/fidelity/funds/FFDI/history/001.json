@@ -2,7 +2,7 @@
  "ticker": "FFDI",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 504,
+ "totalRows": 505,
  "headers": [
   "Date",
   "Close",
@@ -3033,6 +3033,12 @@
    "Close": "29.055",
    "Adj Close": "29.05",
    "Volume": "400"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "Close": "29.608801",
+   "Adj Close": "29.61",
+   "Volume": "911"
   }
  ]
 }
