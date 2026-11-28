@@ -37,10 +37,10 @@
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
    "asOfDate": "Nov 27 2026",
-   "mo1": 0.16,
-   "mo1Text": "0.16%",
-   "qtd": 0.36,
-   "qtdText": "0.36%",
+   "mo1": 0.62,
+   "mo1Text": "0.62%",
+   "qtd": 0.86,
+   "qtdText": "0.86%",
    "ytd": null,
    "ytdText": "—",
    "yr1": null,
@@ -117,6 +117,10 @@
    [
     "10/29/2026",
     "0.186"
+   ],
+   [
+    "11/27/2026",
+    "0.254"
    ]
   ]
  },

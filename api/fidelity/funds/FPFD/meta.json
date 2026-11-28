@@ -37,22 +37,22 @@
   "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official NAV returns",
   "monthEnd": {
    "asOfDate": "Nov 27 2026",
-   "mo1": -0.44,
-   "mo1Text": "-0.44%",
-   "qtd": -1.08,
-   "qtdText": "-1.08%",
-   "ytd": -3.02,
-   "ytdText": "-3.02%",
-   "yr1": -2.79,
-   "yr1Text": "-2.79%",
-   "yr3": 5.36,
-   "yr3Text": "5.36%",
-   "yr5": 0.91,
-   "yr5Text": "0.91%",
+   "mo1": 0.05,
+   "mo1Text": "0.05%",
+   "qtd": -0.59,
+   "qtdText": "-0.59%",
+   "ytd": -2.56,
+   "ytdText": "-2.56%",
+   "yr1": -2.42,
+   "yr1Text": "-2.42%",
+   "yr3": 5.44,
+   "yr3Text": "5.44%",
+   "yr5": 1.01,
+   "yr5Text": "1.01%",
    "yr10": null,
    "yr10Text": "—",
-   "sinceInception": 0.89,
-   "sinceInceptionText": "0.89%"
+   "sinceInception": 0.98,
+   "sinceInceptionText": "0.98%"
   },
   "quarterEnd": {
    "asOfDate": "Sep 30 2026",
@@ -341,6 +341,10 @@
    [
     "10/29/2026",
     "0.116"
+   ],
+   [
+    "11/27/2026",
+    "0.1"
    ]
   ]
  },
